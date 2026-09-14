@@ -7,7 +7,6 @@ void main() {
     final source = await File(
       'android/app/src/main/kotlin/de/neevel/wyrmtone/UsbConnectionManager.kt',
     ).readAsString();
-
     expect(
       source,
       isNot(matches(RegExp(r'\.(bulkTransfer|controlTransfer)\s*\('))),
@@ -15,13 +14,15 @@ void main() {
     expect(source, isNot(matches(RegExp(r'UsbRequest\s*\('))));
   });
 
-  test('only the compile-gated fixed probe may open input or send', () async {
+  test('only the two compile-gated fixed probes may open input or send', () async {
     final files = Directory('android/app/src/main/kotlin')
         .listSync(recursive: true)
         .whereType<File>();
-    for (final file in files.where((f) => f.path.endsWith('.kt'))) {
+    for (final file in files.where((file) => file.path.endsWith('.kt'))) {
       final source = await file.readAsString();
-      final probeAdapter = file.path.endsWith('VerifiedMatriboxProbePort.kt');
+      final gainAdapter = file.path.endsWith('VerifiedMatriboxProbePort.kt');
+      final p01Adapter = file.path.endsWith('VerifiedPresetP01ProbePort.kt');
+      final probeAdapter = gainAdapter || p01Adapter;
       final manager = file.path.endsWith('MidiDiagnosticsManager.kt');
       if (!manager) {
         expect(
@@ -30,12 +31,18 @@ void main() {
           reason: file.path,
         );
       } else {
-        expect(RegExp(r'openInputPort\s*\(').allMatches(source).length, 1);
+        expect(RegExp(r'openInputPort\s*\(').allMatches(source).length, 2);
         expect(source, contains('probeEligibility().check()'));
         expect(
           source,
           contains(
             'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_WRITE_PROBE',
+          ),
+        );
+        expect(
+          source,
+          contains(
+            'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_PRESET_P01_PROBE',
           ),
         );
       }
@@ -66,11 +73,20 @@ void main() {
       );
       if (probeAdapter) {
         expect(RegExp(r'\.send\s*\(').allMatches(source).length, 1);
-        expect(source, contains('VerifiedGain41Reference.validate(reference)'));
         expect(
           source,
           contains(
-            'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_WRITE_PROBE',
+            gainAdapter
+                ? 'VerifiedGain41Reference.validate(reference)'
+                : 'VerifiedPresetP01Reference.validate(reference)',
+          ),
+        );
+        expect(
+          source,
+          contains(
+            gainAdapter
+                ? 'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_WRITE_PROBE'
+                : 'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_PRESET_P01_PROBE',
           ),
         );
       }
@@ -92,15 +108,13 @@ void main() {
       close.indexOf('stopCapture()'),
       lessThan(close.indexOf('session.close()')),
     );
-    final domain = File('lib/midi/midi_capture_controller.dart')
-        .readAsStringSync();
-    expect(domain, isNot(contains('UsbService')));
-    expect(domain, isNot(matches(RegExp(r'\.send\s*\('))));
+    expect(close, contains('presetP01Probe.cancel()'));
+    expect(native, contains('presetP01Probe.detached(deviceName)'));
     for (final file
         in Directory('lib')
             .listSync(recursive: true)
             .whereType<File>()
-            .where((f) => f.path.endsWith('.dart'))) {
+            .where((file) => file.path.endsWith('.dart'))) {
       final source = file.readAsStringSync();
       expect(
         source,
@@ -123,37 +137,69 @@ void main() {
     expect(source, isNot(contains('forceClaim = true')));
   });
 
-  test(
-    'probe channel is parameterless and release build is always disabled',
-    () {
-      final channels = File(
-        'android/app/src/main/kotlin/de/neevel/wyrmtone/UsbPlatformChannels.kt',
-      ).readAsStringSync();
-      final probeCase = channels.substring(
-        channels.indexOf('"sendVerifiedSol100OdGain41Probe" ->'),
-        channels.indexOf('else -> result.notImplemented()'),
-      );
+  test('probe channels are parameterless and release build is disabled', () {
+    final channels = File(
+      'android/app/src/main/kotlin/de/neevel/wyrmtone/UsbPlatformChannels.kt',
+    ).readAsStringSync();
+    for (final method in [
+      'sendVerifiedSol100OdGain41Probe',
+      'sendVerifiedPresetP01SelectionProbe',
+    ]) {
+      final start = channels.indexOf('"$method" ->');
+      final end = channels.indexOf('\n            }', start);
+      final probeCase = channels.substring(start, end);
       expect(probeCase, contains('if (call.arguments != null)'));
-      expect(
-        probeCase,
-        contains('midiManager.sendVerifiedSol100OdGain41Probe()'),
-      );
+      expect(probeCase, contains('midiManager.$method()'));
       expect(probeCase, isNot(contains('call.argument<')));
-      expect(
-        channels,
-        isNot(matches(RegExp(r'"(sendMidi|sendSysEx|writeUsb|sendCommand)"'))),
-      );
-      final gradle = File('android/app/build.gradle.kts').readAsStringSync();
-      expect(
-        gradle,
-        contains('probeDefines == listOf("ENABLE_MATRIBOX_WRITE_PROBE=true")'),
-      );
+    }
+    expect(
+      channels,
+      isNot(matches(RegExp(r'"(sendMidi|sendSysEx|writeUsb|sendCommand)"'))),
+    );
+    final gradle = File('android/app/build.gradle.kts').readAsStringSync();
+    expect(
+      gradle,
+      contains('requestedGain41Probe && !requestedPresetP01Probe'),
+    );
+    expect(
+      gradle,
+      contains('requestedPresetP01Probe && !requestedGain41Probe'),
+    );
+    for (final flag in [
+      'ENABLE_MATRIBOX_WRITE_PROBE',
+      'ENABLE_MATRIBOX_PRESET_P01_PROBE',
+    ]) {
       expect(
         gradle.substring(gradle.indexOf('release {')),
-        contains(
-          'buildConfigField("boolean", "ENABLE_MATRIBOX_WRITE_PROBE", "false")',
-        ),
+        contains('buildConfigField("boolean", "$flag", "false")'),
       );
-    },
-  );
+    }
+    final p01 = File(
+      'android/app/src/main/kotlin/de/neevel/wyrmtone/VerifiedPresetP01Probe.kt',
+    ).readAsStringSync();
+    expect(
+      RegExp(r'opened\.sendVerifiedPresetP01\(\)').allMatches(p01),
+      hasLength(2),
+    );
+    expect(p01, contains('delay(3)'));
+    final channelMethods = RegExp(r'"([^"]+)"[ ]*->')
+        .allMatches(channels)
+        .map((match) => match.group(1)!);
+    expect(
+      channelMethods.where(
+        (method) => method.contains('P10') || method.contains('P11'),
+      ),
+      isEmpty,
+    );
+    final nativeFunctions = RegExp(r'fun[ ]+([A-Za-z0-9_]+)[ ]*[(]')
+        .allMatches(p01)
+        .map((match) => match.group(1)!);
+    expect(
+      nativeFunctions.where(
+        (method) => method.contains('P10') || method.contains('P11'),
+      ),
+      isEmpty,
+    );
+    expect(p01, isNot(matches(RegExp(r'\b(retry|repeat|for|while)\s*\('))));
+  });
 }

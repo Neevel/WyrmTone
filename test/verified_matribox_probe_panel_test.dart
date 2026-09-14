@@ -86,6 +86,7 @@ void main() {
 
   testWidgets('normal flag hides developer area', (tester) async {
     expect(matriboxWriteProbeEnabled, isFalse);
+    expect(matriboxPresetP01ProbeEnabled, isFalse);
     await show(tester, enabled: false);
     expect(find.text('Verifizierter Matribox-Schreibtest'), findsNothing);
     expect(sends, 0);

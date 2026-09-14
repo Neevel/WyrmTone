@@ -6,11 +6,17 @@ plugins {
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// Fail closed unless Flutter passes exactly one explicit Base64-encoded opt-in.
-val probeDefines = providers.gradleProperty("dart-defines").orNull?.split(",")
+// Fail closed. The two write probes are mutually exclusive in every build.
+val decodedDartDefines = providers.gradleProperty("dart-defines").orNull?.split(",")
     ?.mapNotNull { runCatching { String(Base64.getDecoder().decode(it), Charsets.UTF_8) }.getOrNull() }
-    .orEmpty().filter { it.startsWith("ENABLE_MATRIBOX_WRITE_PROBE=") }
-val enableWriteProbe = probeDefines == listOf("ENABLE_MATRIBOX_WRITE_PROBE=true")
+    .orEmpty()
+fun requestedDefine(name: String): Boolean =
+    decodedDartDefines.count { it.startsWith("$name=") } == 1 &&
+        decodedDartDefines.single { it.startsWith("$name=") } == "$name=true"
+val requestedGain41Probe = requestedDefine("ENABLE_MATRIBOX_WRITE_PROBE")
+val requestedPresetP01Probe = requestedDefine("ENABLE_MATRIBOX_PRESET_P01_PROBE")
+val enableWriteProbe = requestedGain41Probe && !requestedPresetP01Probe
+val enablePresetP01Probe = requestedPresetP01Probe && !requestedGain41Probe
 
 android {
     buildFeatures { buildConfig = true }
@@ -41,9 +47,11 @@ android {
     buildTypes {
         debug {
             buildConfigField("boolean", "ENABLE_MATRIBOX_WRITE_PROBE", enableWriteProbe.toString())
+            buildConfigField("boolean", "ENABLE_MATRIBOX_PRESET_P01_PROBE", enablePresetP01Probe.toString())
         }
         release {
             buildConfigField("boolean", "ENABLE_MATRIBOX_WRITE_PROBE", "false")
+            buildConfigField("boolean", "ENABLE_MATRIBOX_PRESET_P01_PROBE", "false")
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")

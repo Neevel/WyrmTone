@@ -4,6 +4,7 @@ import 'preset_exchange.dart';
 import 'preset_diff.dart';
 import 'preset_validation.dart';
 import 'protocol_evidence.dart';
+import 'preset_selection_codec.dart';
 
 enum PresetSlotSource { manual, officialReference, unknown }
 
@@ -19,6 +20,13 @@ class PresetSlot {
     this.currentPreset,
     this.backupId,
     this.protected = true,
+    this.deviceIndex,
+    this.presetNumber,
+    this.presetName,
+    this.nameConfirmed = false,
+    this.selectionCommandConfirmed = false,
+    this.deviceContentKnown = false,
+    this.overwriteAllowed = false,
   });
   final String id, bank, position, label, currentName;
   final PresetSlotSource source;
@@ -26,8 +34,29 @@ class PresetSlot {
   final CanonicalPreset? currentPreset;
   final String? backupId;
   final bool protected;
-  bool get fullContentKnown => currentPreset != null;
+  final int? deviceIndex, presetNumber;
+  final String? presetName;
+  final bool nameConfirmed,
+      selectionCommandConfirmed,
+      deviceContentKnown,
+      overwriteAllowed;
+  bool get fullContentKnown => currentPreset != null || deviceContentKnown;
   bool get localBackupPresent => backupId != null;
+
+  MatriboxPresetSlotAddress? get address {
+    if (deviceIndex != null) {
+      final value = MatriboxPresetSlotAddress.fromDeviceIndex(deviceIndex!);
+      if (presetNumber != null && presetNumber != value.presetNumber) {
+        throw const FormatException(
+          'Presetindex und Presetnummer widersprechen sich.',
+        );
+      }
+      return value;
+    }
+    return presetNumber == null
+        ? null
+        : MatriboxPresetSlotAddress.fromPresetNumber(presetNumber!);
+  }
 }
 
 class PresetWritePlan {

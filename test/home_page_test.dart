@@ -1,3 +1,4 @@
+import 'package:wyrmtone/screens/verified_matribox_probe_panel.dart';
 import 'package:wyrmtone/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -180,5 +181,18 @@ void main() {
     await tester.tap(find.byKey(const Key('midi-close-button')));
     await tester.pumpAndSettle();
     expect(service.midiCloseCalls, 1);
+  });
+  testWidgets('compile-gated probe is integrated on device page', (
+    tester,
+  ) async {
+    final service = FakeUsbService();
+    addTearDown(service.dispose);
+    await renderApp(tester, service);
+    expect(
+      find.byKey(const Key('verified-probe-panel')),
+      matriboxWriteProbeEnabled != matriboxPresetP01ProbeEnabled
+          ? findsOneWidget
+          : findsNothing,
+    );
   });
 }

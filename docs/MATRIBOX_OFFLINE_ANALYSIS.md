@@ -299,3 +299,75 @@ bestätigt. Nicht bestätigt sind die allgemeine Gültigkeit über weitere Bänk
 die Bedeutung der übrigen Felder und ob die unmittelbar wiederholte zweite
 Nachricht erforderlich ist. Daraus folgt keine allgemeine Schreibfreigabe;
 Presetübertragung durch WyrmTone bleibt gesperrt.
+
+### Gegenprobe P11 → P01 und Abgrenzung zur Matribox II Pro
+
+Die kontrollierte Datei `07_matribox_editor_select_P11_to_P01.pcapng`
+(SHA-256 `BFA1B37FB948B2858B072252F476CD6C5ACB05B77B2241A10D053504BFC0E903`)
+enthält auf OUT 03 erneut zweimal dieselbe vollständige 22-Byte-Nachricht. Der
+Nutzer bestätigte den sichtbaren Wechsel P11 → P01 im PC-Editor.
+
+```text
+P01: f021257f514d453212000200000000000000000000f7
+```
+
+Damit sind für diese drei kontrollierten Ziele folgende Zuordnungen bestätigt:
+
+| sichtbares Preset | Geräteindex an Offset 18 | Wiederholung | Abstand im Mitschnitt |
+|---|---:|---:|---:|
+| P01 | 0 / `00` | 2 identische Nachrichten | 2,881 ms |
+| P10 | 9 / `09` | 2 identische Nachrichten | 2,417 ms |
+| P11 | 10 / `0A` | 2 identische Nachrichten | 1,867 ms |
+
+Die drei Beobachtungen bestätigen die nullbasierte Abbildung
+`Geräteindex = sichtbare Presetnummer - 1` nur für P01, P10 und P11. Sie
+bestätigen außerdem, dass der PC-Editor jeden dieser Wechsel in den untersuchten
+Mitschnitten zweimal sendete. Ob die Wiederholung technisch erforderlich ist,
+bleibt unbekannt; es gab keine MIDI-Nutzdatenantwort auf IN 83. Der Offline-Parser
+behandelt die von TShark gelieferten MIDI-Nutzfelder ebenso wie rohe
+USB-MIDI-Vierergruppen, entfernt CIN-/Kabelbytes und Padding, setzt fragmentierte
+SysEx zusammen und weist unvollständige Nachrichten sowie nicht zuordenbaren
+Geräteverkehr ausdrücklich aus.
+
+### WyrmTone-Hardware-Evidenz für P01
+
+Am 14.09.2026 wurde die separate P01-Debug-Probe über Android MIDI mit einem
+Samsung SM_F946B und echter Matribox-1-Hardware ausgeführt. Nach ausdrücklicher
+Sicherheits- und Testbestätigung sendete WyrmTone zweimal die unveränderte bekannte
+22-Byte-P01-Referenz mit ungefähr 3 ms Abstand. Android akzeptierte beide
+Sendecalls; die Matribox wechselte sichtbar von einem anderen Preset auf P01.
+Der Port wurde danach geschlossen und die Probe für diese Verbindung als
+verbraucht behandelt. Es wurde kein Save/Store oder Überschreiben ausgeführt.
+
+Diese WyrmTone-Hardware-Evidenz gilt ausschließlich für P01 beziehungsweise
+Geräteindex 0. Sie beweist weder, dass zwei Sendecalls oder 3 ms protokollseitig
+notwendig sind, noch eine Geräteantwort. P10 und P11 besitzen weiterhin nur die
+oben dokumentierte PC-Editor-/Display-Evidenz. Eine allgemeine Presetauswahl- oder
+Schreibfreigabe folgt daraus nicht.
+
+Die separate Debug-Probe kann weiterhin ausschließlich die bestätigte
+P01-Referenz zweimal mit festem Abstand senden. Sie ist standardmäßig in Flutter
+und nativ deaktiviert, nicht parametrisierbar und keine allgemeine
+Presetfreigabe. Vollständige Presetübertragung bleibt gesperrt.
+
+Der Offline-Vergleich des öffentlichen Projekts
+`hurricaneabel/Matribox_II_Pro_MidiCon` erfolgte am Commit
+`f76dace6dfb9b19ea55e85e52086a41b4d5ef237`. Im untersuchten Baum war keine
+Lizenzdatei vorhanden; WyrmTone übernimmt daraus keinen Code. Das Projekt
+beschreibt die Matribox II Pro und trennt sich technisch klar von den eigenen
+Matribox-1-Captures:
+
+- Preset- und Banksteuerung wird dort über MIDI CC/Program Change beschrieben.
+- Empfangsdecoder verwenden andere SysEx-Strukturen: Presetdaten ab 40 Byte,
+  Blockstatus ab 48 Byte und Modelle mit 108 oder 128 Byte.
+- Die II-Pro-AMP-Tupel `(1,9)`, `(4,7)` und `(5,9)` stimmen mit den lokal
+  installierten Matribox-1-XML-Codes für Calif Star CL, Sol 100 OD und
+  Sol 100 LD überein. Das ist eine unabhängige Namens-/Codekorrelation, keine
+  Bestätigung gleicher Nachrichten oder Schreibbefehle.
+- Der II-Pro-Listener führt Softwarezustand aus empfangenen Nachrichten; daraus
+  folgt kein bestätigtes Geräte-Readback und keine Matribox-1-Kompatibilität.
+
+Die maschinenlesbare Matrix weist II-Pro-Hinweise deshalb als eigenes
+`sourceTarget` aus. CC/PC-Angaben, empfangene Modell-SysEx und Matribox-1-QME2-
+Nachrichten bleiben getrennte Familien. Für die nächste Matribox-1-Evidenz ist
+je Fähigkeit ein eigener kontrollierter Capture nötig.

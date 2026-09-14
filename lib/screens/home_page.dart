@@ -67,7 +67,8 @@ class HomePage extends StatelessWidget {
                     ),
 
                   MidiCapturePanel(controller: controller.capture),
-                  if (matriboxWriteProbeEnabled)
+                  if (matriboxWriteProbeEnabled ||
+                      matriboxPresetP01ProbeEnabled)
                     VerifiedMatriboxProbePanel(
                       connectionReady:
                           controller.devices

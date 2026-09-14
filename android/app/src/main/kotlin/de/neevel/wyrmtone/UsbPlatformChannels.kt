@@ -83,6 +83,18 @@ class UsbPlatformChannels(
                 catch (error: Exception) { result.error("MIDI_CAPTURE_FAILED", error.message, null) }
             }
             "stopMidiCapture" -> { midiManager.stopCapture(); result.success(null) }
+            "getVerifiedPresetP01ProbeStatus" -> result.success(midiManager.presetP01ProbeStatus())
+            "sendVerifiedPresetP01SelectionProbe" -> {
+                if (call.arguments != null) {
+                    result.error("PROBE_ARGUMENTS_FORBIDDEN", "Der P01-Einmaltest nimmt keine Argumente entgegen.", null)
+                } else {
+                    try { result.success(midiManager.sendVerifiedPresetP01SelectionProbe()) }
+                    catch (error: Exception) {
+                        midiManager.closeDevice()
+                        result.error("P01_PROBE_FAILED", "${error.message} Es wurde kein weiterer Sendeversuch durchgeführt.", null)
+                    }
+                }
+            }
             "getVerifiedMatriboxProbeStatus" -> result.success(midiManager.writeProbeStatus())
             "sendVerifiedSol100OdGain41Probe" -> {
                 if (call.arguments != null) {

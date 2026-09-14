@@ -5,6 +5,12 @@ import 'package:flutter/services.dart';
 const matriboxWriteProbeEnabled =
     kDebugMode &&
     bool.fromEnvironment('ENABLE_MATRIBOX_WRITE_PROBE', defaultValue: false);
+const matriboxPresetP01ProbeEnabled =
+    kDebugMode &&
+    bool.fromEnvironment(
+      'ENABLE_MATRIBOX_PRESET_P01_PROBE',
+      defaultValue: false,
+    );
 
 /// Separate fixed-operation channel client; never accepts a payload or target value.
 class VerifiedMatriboxProbePanel extends StatefulWidget {
@@ -12,11 +18,13 @@ class VerifiedMatriboxProbePanel extends StatefulWidget {
     required this.connectionReady,
     required this.monitoring,
     this.enabled = matriboxWriteProbeEnabled,
+    this.p01Enabled = matriboxPresetP01ProbeEnabled,
     super.key,
   });
   final bool connectionReady;
   final bool monitoring;
   final bool enabled;
+  final bool p01Enabled;
 
   @override
   State<VerifiedMatriboxProbePanel> createState() => _ProbePanelState();
@@ -35,6 +43,15 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
   List<String> _logs = [];
   int _confirmationGeneration = 0;
 
+  bool get _configured => widget.enabled != widget.p01Enabled;
+  bool get _p01 => widget.p01Enabled && !widget.enabled;
+  String get _statusMethod => _p01
+      ? 'getVerifiedPresetP01ProbeStatus'
+      : 'getVerifiedMatriboxProbeStatus';
+  String get _sendMethod => _p01
+      ? 'sendVerifiedPresetP01SelectionProbe'
+      : 'sendVerifiedSol100OdGain41Probe';
+
   @override
   void initState() {
     super.initState();
@@ -51,7 +68,9 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
   void didUpdateWidget(VerifiedMatriboxProbePanel oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (oldWidget.connectionReady != widget.connectionReady ||
-        oldWidget.monitoring != widget.monitoring) {
+        oldWidget.monitoring != widget.monitoring ||
+        oldWidget.enabled != widget.enabled ||
+        oldWidget.p01Enabled != widget.p01Enabled) {
       _checked = false;
       _nativeReady = false;
       ++_confirmationGeneration;
@@ -74,10 +93,7 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
   Future<bool> _refresh() async {
     try {
       final status =
-          await _channel.invokeMapMethod<Object?, Object?>(
-            'getVerifiedMatriboxProbeStatus',
-          ) ??
-          {};
+          await _channel.invokeMapMethod<Object?, Object?>(_statusMethod) ?? {};
       if (!mounted) return false;
       setState(() {
         if (_connection != status['connection'] ||
@@ -114,20 +130,27 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
         widget.monitoring) {
       return;
     }
-    setState(() {
-      _busy = true;
-    });
+    setState(() => _busy = true);
     try {
       if (!await _refresh() || !_checked || !mounted) return;
       final generation = _confirmationGeneration;
       final accepted = await showDialog<bool>(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text('Jetzt einmalig Gain 41 an die Matribox senden?'),
-          content: const Text(
-            'Sonicake Matribox 1 · Sol 100 OD · Gain-Index 0\n'
-            'Manuell bestätigter Ausgangswert 40 → Zielwert 41.\n'
-            'Genau eine Nachricht. Kein Speichern, kein automatisches Zurücksetzen.',
+          title: Text(
+            _p01
+                ? 'Jetzt einmalig P01 an der Matribox auswählen?'
+                : 'Jetzt einmalig Gain 41 an die Matribox senden?',
+          ),
+          content: Text(
+            _p01
+                ? 'Sonicake Matribox 1 · P01\n'
+                      'Es werden exakt zwei identische, kontrollierte Editor-Nachrichten mit ungefähr 3 ms Abstand gesendet.\n'
+                      'Kein Speichern und kein Überschreiben. Keine automatische Wiederholung oder Rücksetzung.\n'
+                      'Ungespeicherte Änderungen am aktuell aktiven Preset können verloren gehen.'
+                : 'Sonicake Matribox 1 · Sol 100 OD · Gain-Index 0\n'
+                      'Manuell bestätigter Ausgangswert 40 → Zielwert 41.\n'
+                      'Genau eine Nachricht. Kein Speichern, kein automatisches Zurücksetzen.',
           ),
           actions: [
             TextButton(
@@ -161,17 +184,16 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
       });
       // Intentionally parameterless. Kotlin owns the immutable verified message.
       final result =
-          await _channel.invokeMapMethod<Object?, Object?>(
-            'sendVerifiedSol100OdGain41Probe',
-          ) ??
-          {};
+          await _channel.invokeMapMethod<Object?, Object?>(_sendMethod) ?? {};
       if (!mounted) return;
       setState(() {
         _logs = (result['logs'] as List<Object?>? ?? [])
             .whereType<String>()
             .toList();
         _message = result['success'] == true
-            ? 'Android hat die Bytes angenommen. Gain 41 jetzt am Matribox-Display manuell prüfen.'
+            ? (_p01
+                  ? 'Android hat beide P01-Nachrichten angenommen. P01 jetzt am Matribox-Display manuell prüfen.'
+                  : 'Android hat die Bytes angenommen. Gain 41 jetzt am Matribox-Display manuell prüfen.')
             : '${result['error'] ?? 'Test fehlgeschlagen.'} Es wurde kein weiterer Sendeversuch durchgeführt.';
       });
     } catch (error) {
@@ -182,17 +204,13 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
         });
       }
     } finally {
-      if (mounted) {
-        setState(() {
-          _busy = false;
-        });
-      }
+      if (mounted) setState(() => _busy = false);
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    if (!widget.enabled) return const SizedBox.shrink();
+    if (!_configured) return const SizedBox.shrink();
     final available =
         widget.connectionReady &&
         !widget.monitoring &&
@@ -211,12 +229,18 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
         },
         childrenPadding: const EdgeInsets.all(12),
         children: [
-          const Text(
-            'ENTWICKLER-TEST · Sonicake Matribox 1 · 0x84EF:0x0054\n'
-            'Sol 100 OD · Gain-Index 0 · 40 → 41\n'
-            'Ändert den aktuellen Geräteparameter einmalig und speichert kein Preset.\n'
-            'Vorher ein unwichtiges Testpreset wählen und Sol 100 OD mit Gain 40 einstellen.\n'
-            'Der aktuelle Gerätezustand kann von WyrmTone noch nicht verifiziert werden.',
+          Text(
+            _p01
+                ? 'ENTWICKLER-TEST · Sonicake Matribox 1 · 0x84EF:0x0054\n'
+                      'Einmalig P01 auswählen\n'
+                      'Kein Speichern und kein Überschreiben\n'
+                      'Ungespeicherte Änderungen am aktuell aktiven Preset können verloren gehen.\n'
+                      'Zwei identische Übertragungen wurden in allen drei Referenzen beobachtet; ihre zwingende Notwendigkeit ist nicht separat bewiesen.'
+                : 'ENTWICKLER-TEST · Sonicake Matribox 1 · 0x84EF:0x0054\n'
+                      'Sol 100 OD · Gain-Index 0 · 40 → 41\n'
+                      'Ändert den aktuellen Geräteparameter einmalig und speichert kein Preset.\n'
+                      'Vorher ein unwichtiges Testpreset wählen und Sol 100 OD mit Gain 40 einstellen.\n'
+                      'Der aktuelle Gerätezustand kann von WyrmTone noch nicht verifiziert werden.',
           ),
           if (!widget.connectionReady)
             const Text('Passende Matribox eindeutig als MIDI-Gerät öffnen.'),
@@ -229,12 +253,12 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
             key: const Key('probe-checkbox'),
             value: _checked,
             onChanged: available
-                ? (value) => setState(() {
-                    _checked = value == true;
-                  })
+                ? (value) => setState(() => _checked = value == true)
                 : null,
-            title: const Text(
-              'Ich habe ein unwichtiges Testpreset gewählt und Sol 100 OD mit Gain 40 eingestellt.',
+            title: Text(
+              _p01
+                  ? 'Ich habe ungespeicherte Änderungen verworfen oder gesichert.'
+                  : 'Ich habe ein unwichtiges Testpreset gewählt und Sol 100 OD mit Gain 40 eingestellt.',
             ),
           ),
           FilledButton(
@@ -243,7 +267,9 @@ class _ProbePanelState extends State<VerifiedMatriboxProbePanel>
             child: Text(
               _attempted
                   ? 'Test in dieser Verbindung bereits ausgeführt'
-                  : 'Einmalig Gain 41 senden',
+                  : (_p01
+                        ? 'Einmalig P01 auswählen'
+                        : 'Einmalig Gain 41 senden'),
             ),
           ),
           if (_message.isNotEmpty) Text(_message),
