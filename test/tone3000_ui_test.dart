@@ -3,6 +3,8 @@ import 'package:wyrmtone/controllers/tone3000_controller.dart';
 import 'package:wyrmtone/models/guitar_profile.dart';
 import 'package:wyrmtone/screens/ir_library_page.dart';
 import 'package:wyrmtone/screens/recommendation_page.dart';
+import 'package:wyrmtone/screens/library_page.dart';
+import 'package:wyrmtone/nam/local_nam_capture.dart';
 import 'package:wyrmtone/services/local_persistence.dart';
 import 'package:wyrmtone/tone3000/local_ir_repository.dart';
 import 'package:wyrmtone/tone3000/tone3000_config.dart';
@@ -17,11 +19,85 @@ import 'support/recommendation_fakes.dart';
 import 'support/tone3000_fakes.dart';
 
 void main() {
+  testWidgets(
+    'combined library preserves NAM search and compatibility metadata',
+    (tester) async {
+      tester.view.physicalSize = const Size(320, 900);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+      final recommendation = _recommendationController();
+      final tone = _toneController(clientId: '');
+      addTearDown(recommendation.dispose);
+      addTearDown(tone.dispose);
+      tone.namCaptures = [
+        LocalNamCapture(
+          localId: 'nam',
+          tone3000ToneId: null,
+          tone3000ModelId: null,
+          toneName: 'Marshall',
+          captureName: 'Test NAM Capture',
+          creatorName: 'Marcel',
+          description: null,
+          make: 'Marshall',
+          gearType: 'amp',
+          tags: [],
+          license: '',
+          source: 'local',
+          architecture: NamArchitecture.a1,
+          fileSize: 100,
+          localUri: 'file:///test.nam',
+          sha256: '',
+          downloadedAt: DateTime.utc(2026),
+          downloadStatus: NamDownloadStatus.imported,
+          compatibility: NamCompatibility.compatible,
+          targetDevice: recommendation.selectedTargetDevice,
+          validationWarnings: [],
+          attribution: 'Marcel',
+          cabinetContent: NamCabinetContent.withoutCabinet,
+        ),
+      ];
+      await tester.pumpWidget(
+        MaterialApp(
+          home: LibraryPage(controller: recommendation, tone3000: tone),
+        ),
+      );
+      await tester.pumpAndSettle();
+      await tester.tap(find.text('NAM'));
+      await tester.pumpAndSettle();
+      final scroll = find
+          .descendant(
+            of: find.byKey(const Key('nam-library-list')),
+            matching: find.byType(Scrollable),
+          )
+          .first;
+      await tester.scrollUntilVisible(
+        find.text('Test NAM Capture'),
+        150,
+        scrollable: scroll,
+      );
+      await tester.pumpAndSettle();
+      expect(find.textContaining('Lizenz: unbekannt'), findsOneWidget);
+      expect(
+        find.textContaining('Zielgerät nicht unterstützt'),
+        findsOneWidget,
+      );
+      final search = find.widgetWithText(TextField, 'NAM durchsuchen');
+      await tester.scrollUntilVisible(search, -150, scrollable: scroll);
+      await tester.pumpAndSettle();
+      await tester.enterText(search, 'does-not-exist');
+      await tester.pumpAndSettle();
+      expect(find.text('Test NAM Capture'), findsNothing);
+      expect(find.text('Noch keine lokalen NAM-Captures.'), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
   testWidgets('missing client key has a visible configuration state', (
     tester,
   ) async {
     final recommendation = _recommendationController();
     final tone3000 = _toneController(clientId: '');
+    tone3000.message = tone3000.config.validationMessage;
     addTearDown(recommendation.dispose);
     addTearDown(tone3000.dispose);
 
@@ -31,9 +107,21 @@ void main() {
       ),
     );
 
-    expect(find.text('TONE3000'), findsOneWidget);
+    expect(find.text('TONE3000 nicht eingerichtet'), findsOneWidget);
     expect(find.byKey(const Key('tone3000-missing-config')), findsOneWidget);
-    expect(find.textContaining('TONE3000_CLIENT_ID'), findsOneWidget);
+    expect(find.textContaining('TONE3000_CLIENT_ID'), findsNothing);
+    await tester.ensureVisible(find.byKey(const Key('tone3000-details')));
+    await tester.tap(find.byKey(const Key('tone3000-details')));
+    await tester.pumpAndSettle();
+    expect(find.text(tone3000.config.validationMessage!), findsOneWidget);
+    tone3000.message = 'Vorgang fehlgeschlagen (USER-DATA)';
+    await tester.pumpWidget(
+      MaterialApp(
+        home: IrLibraryPage(controller: recommendation, tone3000: tone3000),
+      ),
+    );
+    await tester.pump();
+    expect(find.text('Vorgang fehlgeschlagen (USER-DATA)'), findsOneWidget);
   });
 
   testWidgets('selected IR models render with attribution and one download', (
@@ -59,6 +147,9 @@ void main() {
     expect(find.byKey(const Key('tone3000-close-selection')), findsOneWidget);
     expect(find.textContaining('Alle herunterladen'), findsNothing);
 
+    await tester.ensureVisible(
+      find.byKey(const Key('tone3000-close-selection')),
+    );
     await tester.tap(find.byKey(const Key('tone3000-close-selection')));
     await tester.pump();
     expect(find.text('IR Collection'), findsNothing);
@@ -87,7 +178,20 @@ void main() {
       ),
     );
     final browse = find.byKey(const Key('recommendation-tone3000-browse'));
-    await tester.scrollUntilVisible(browse, 300);
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      find.byKey(const Key('legacy-recommendations')),
+      250,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.tap(find.byKey(const Key('legacy-recommendations')));
+    await tester.pumpAndSettle();
+    await tester.scrollUntilVisible(
+      browse,
+      300,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.pumpAndSettle();
     await tester.tap(browse);
     await tester.pump();
 

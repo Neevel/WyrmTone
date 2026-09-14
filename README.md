@@ -2,7 +2,7 @@
 
 Technischer Flutter-Prototyp für eine sichere Android-USB-OTG-Diagnose mit Harley Benton DNAfx GiT Core und Sonicake Matribox 1 / QME-50 sowie lokale IR-/NAM-Verwaltung.
 
-> **Sicherheitsgrenze:** WyrmTone sendet keine MIDI- oder USB-Nutzdaten, schreibt keine Presets, IRs, NAMs oder Firmware und führt keine Handshakes aus. DNAfx bleibt eine Raw-USB-Deskriptordiagnose. Für Matribox verwendet die App Android MIDI und kann nach ausdrücklichem Start ausschließlich den Geräte-Output-Port passiv beobachten. Der Geräte-Input-Port wird niemals geöffnet.
+> **Sicherheitsgrenze:** Normale Builds senden keine MIDI- oder USB-Nutzdaten. Preset-, IR-, NAM- und Firmwaretransfers sowie Handshakes bleiben gesperrt. DNAfx bleibt eine Raw-USB-Deskriptordiagnose; der Matribox-Monitor bleibt ausschließlich passiv. Eine gesondert freigegebene Entwickler-Ausnahme ist in [MIDI_CAPTURE.md](docs/MIDI_CAPTURE.md#separat-freigegebener-entwickler-einmaltest) abgegrenzt.
 
 ## Passive Matribox-MIDI-Diagnose
 
@@ -30,7 +30,7 @@ Das Projekt ist nicht mit Harley Benton oder Thomann verbunden.
 - gibt Interface und Verbindung kontrolliert frei;
 - hält ein lokales, flüchtiges Diagnoseprotokoll, das keine Seriennummer und keine Binärdaten enthält.
 
-Die UI arbeitet mit typisierten Dart-Modellen und kennt keine Channel-Strings. Android-Zugriffe liegen in getrennten Kotlin-Klassen; potenziell blockierende Open-/Close- und Deskriptorarbeiten laufen auf einem einzelnen Hintergrund-Executor.
+Die USB-Diagnose verwendet typisierte Dart-Modelle. Android-Zugriffe liegen in getrennten Kotlin-Klassen; Raw-USB-Open-/Close- und Deskriptorarbeiten laufen auf einem einzelnen Hintergrund-Executor.
 
 Zusätzlich enthält die App jetzt einen deterministischen Empfehlungskern:
 
@@ -203,3 +203,29 @@ Die Seriennummer wird absichtlich nicht in dieser Dokumentation oder in kopierba
 7. Soundgenerator und Presetbibliothek.
 
 Jede spätere Phase benötigt getrennte Protokollvalidierung, explizite Schreibschutzgrenzen und Hardwaretests.
+## Offline-Presets
+
+WyrmTone wandelt den vorhandenen Recommendation-Entwurf in ein versioniertes,
+geräteunabhängiges Preset um. Vorschau, Validierung, Vergleich, lokale Sicherung,
+Testslot-Planung sowie SAF-Import und -Export als menschenlesbare
+`.wyrmtone.json` funktionieren offline. Das Austauschformat enthält nur
+Metadaten und Hash-Referenzen für IR/NAM, niemals Binärdaten, Tokens,
+Seriennummern, private absolute Pfade oder MIDI-Rohdaten.
+
+Die lokale Sicherung ist ausdrücklich kein aus der Matribox gelesenes
+Hardware-Backup. Vollständiges Lesen, Auswählen, Speichern, Übertragen,
+Verifizieren und Wiederherstellen eines Matribox-Presets ist protokollseitig
+nicht bestätigt und bleibt technisch blockiert. Der bestätigte Gain-41-Test
+erteilt dafür keine allgemeine Freigabe.
+
+Der faktische Matribox-Katalog wird reproduzierbar und nur lokal erzeugt:
+
+`dart run tool/generate_preset_catalog.dart <algorithm.xml> assets/catalog/matribox_preset_catalog.json`
+
+Die Hersteller-XML wird weder kopiert noch in die APK aufgenommen. Für einen
+Offline-Vergleich eines exportierten Presets mit passiven Capture-JSON-Dateien:
+
+`dart run tool/preset_compare.dart --preset <preset.wyrmtone.json> --capture <capture.json> [--json-output <report.json>]`
+
+PCAP/PCAPNG wird transparent als noch nicht unterstützt gemeldet; es wird keine
+Unterstützung vorgetäuscht und keine Geräteverbindung geöffnet.

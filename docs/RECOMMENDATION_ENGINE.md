@@ -1,5 +1,60 @@
 # Regelbasierter Empfehlungskern
 
+## Offline-Soundentwurf
+
+Im Bereich „Empfehlung“ ergänzt ein rein lokaler Ablauf den bisherigen DNAfx-Kern:
+bekannte Anfrage/Aliase → versioniertes Soundprofil → Klangziel → begrenzte
+Gitarren-/Stimmungsanpassung → Kandidatenwertung → validierter PresetDraft.
+Es gibt keine KI, kein zusätzliches Konto, kein Backend und keinen Netzwerkzugriff
+aus diesem Ablauf. Weder TONE3000-Aktionen noch Geräteübertragung werden ausgelöst.
+Der isolierte Matribox-Schreibtest wird nicht verwendet.
+
+`sound_profiles.json` unterscheidet Song-, Künstler-, Genre- und allgemeine
+Fallback-Profile. Zunächst enthalten: Children of Bodom – Angels Don't Kill,
+Rhythmus mit gewünschtem Drop C, sowie „Melodic Death Metal – Tight Rhythm“ als
+bewusst auswählbarer Genre-Fallback. Beide sind kuratierte Klangannäherungen,
+keine exakten Studio-Rekonstruktionen. Unbekannte Songs bleiben ohne exakten
+Treffer; bei Mehrdeutigkeit entscheidet die geführte Auswahl. Die Suchzeile
+versteht nur bekannte Aliase, Stimmungen und Rollen, keine beliebige Sprache.
+
+Klangdimensionen reichen von 0 (wenig) bis 100 (viel); Gate-Öffnung beschreibt
+Geschwindigkeit, nicht eine geräteunabhängige Attack-Zeit. Regeln werden in
+fester Reihenfolge angewandt, mit höchstens ±10 je Dimension: tiefere Stimmung
+reduziert Bass und erhöht Straffheit, hoher Pickup-Pegel senkt Gain, heller
+Charakter senkt Höhen/Presence, dunkler Charakter stützt obere Mitten. Singlecoil
+und P90 erhalten vorsichtigeres Gate und moderate Kompression; Rhythmus bleibt
+trocken. Fehlende Mensur/Pickup-Position und unkalibrierte Saitenstärke werden
+transparent angegeben. Die folgenden älteren DNAfx-Regeln bleiben unverändert.
+
+Die Bewertung zeigt Teilpunkte, Gründe, Unsicherheiten und harte Ausschlüsse,
+maximal drei Kandidaten je Kategorie. Interne Amps berücksichtigen Familie,
+Gain, Straffheit und Mitten/Rolle. NAM benötigt nachweisliche lokale Verfügbarkeit,
+passendes Zielgerät, bestätigte A1-Kompatibilität und bekannten Cabinet-Inhalt;
+Amp+Cab/Full Rig oder reale Gitarrenbox deaktivieren zusätzliche CAB/IR. NAM wird
+nicht automatisch ausgewählt. IR-Dateinamen liefern nur technische Suchhinweise:
+SAF-Listing und Referenzmetadaten beweisen nicht die tatsächlichen WAV-Daten.
+Solange Geräte-Importgrenzen unbestätigt sind, bleiben IRs ausdrücklich
+ausgeschlossen, auch nach allgemeiner WAV-Validierung. Ohne geeignete lokale
+Dateien erscheint eine manuelle Suchanforderung, kein automatischer Download.
+
+Der kleine Offline-Gerätekatalog ergänzt für Matribox ausschließlich die lokal
+geprüften Sol 100 OD/LD mit Gain, PRES, Master, Bass, Middle und Treble (0–99;
+Quelle: installiertes Sonicake algorithm.xml, keine XML-Datei eingebettet).
+Die weiteren Effektblöcke sind manuelle Empfehlungen ohne erfundene Modelle
+oder Parameter. Klangdimensionen werden proportional auf bestätigte Bereiche
+abgebildet; Master bleibt 50, nicht eine automatische Lautstärkeanhebung.
+
+Vierzehn semantische Klangkorrekturen zeigen vorab alte/neue Klang- und
+Gerätewerte sowie Änderungen der Kandidatenwertung. Erst „Anwenden“ verändert
+den lokalen Draft. Abbrechen, Rückgängig und Wiederherstellen arbeiten mit
+exakten Sitzungssnapshots; jede Dimension bleibt insgesamt höchstens ±15 vom
+angepassten Ausgangsentwurf entfernt. „Gate frisst Töne“ erhöht nur beim DNAfx
+den bestätigten ATTACK-Wert; Matribox erhält keinen erfundenen Gate-Parameter.
+Der Datenbestand wird pro Entwurf aufgenommen; nach Bibliotheksänderungen ist
+ein neuer Entwurf erforderlich. Es gibt weder langfristiges Lernen noch
+automatisches Preset-Speichern. Die bisherige NAM-Ansicht unten bleibt eine
+allgemeine Option; konkrete, validierte Matribox-Werte stehen im Offline-Draft.
+
 ## Zweck und Sicherheitsgrenze
 
 Der Dienst `RecommendationEngine` berechnet reproduzierbare Startwerte aus strukturierten Eingaben. Er hat keine Abhängigkeit zu Flutter-Widgets, Android oder USB und sendet nichts an das DNAfx. Ergebnisse werden ausschließlich angezeigt.

@@ -5,11 +5,18 @@ import '../controllers/tone3000_controller.dart';
 import '../models/ir_catalog_entry.dart';
 import '../tone3000/local_ir_record.dart';
 import '../tone3000/tone3000_models.dart';
+import '../ui/wyrm_design.dart';
 
 class IrLibraryPage extends StatefulWidget {
-  const IrLibraryPage({required this.controller, this.tone3000, super.key});
+  const IrLibraryPage({
+    required this.controller,
+    this.tone3000,
+    this.embedded = false,
+    super.key,
+  });
   final RecommendationController controller;
   final Tone3000Controller? tone3000;
+  final bool embedded;
 
   @override
   State<IrLibraryPage> createState() => _IrLibraryPageState();
@@ -45,13 +52,30 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
             (value) => value.toLowerCase().contains(normalized),
           );
         }).toList();
-        return Scaffold(
-          appBar: AppBar(title: const Text('IR-Bibliothek')),
+        return WyrmScaffold(
+          title: 'IR-Bibliothek',
+          embedded: widget.embedded,
           body: ListView(
             padding: const EdgeInsets.all(16),
             children: [
+              const WyrmSection(
+                title: 'Impulse Responses',
+                subtitle: 'Cabinet & Mikrofon · WAV · Keine Geräteübertragung',
+                child: SizedBox.shrink(),
+              ),
+              TextField(
+                key: const Key('ir-search-field'),
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  labelText: 'IRs durchsuchen',
+                ),
+                onChanged: (value) => setState(() {
+                  query = value;
+                }),
+              ),
+              const SizedBox(height: 16),
               if (widget.tone3000 case final tone3000?) ...[
-                _Tone3000Section(controller: tone3000),
+                _Tone3000Section(controller: tone3000, query: query),
                 const SizedBox(height: 16),
               ],
               FilledButton.icon(
@@ -64,9 +88,7 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Nur lesender Android-Ordnerzugriff. Die Berechtigung bleibt '
-                'nach einem Neustart erhalten. Es werden keine WAV-Dateien in '
-                'die App kopiert oder zum DNAfx übertragen.',
+                'Nur lesender Zugriff · Ordner bleibt nach Neustart verfügbar · Keine Geräteübertragung.',
               ),
               if (widget.controller.selectedFolderUri != null)
                 Padding(
@@ -99,17 +121,6 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
                   padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Text(message),
                 ),
-              if (entries.isNotEmpty) ...[
-                TextField(
-                  key: const Key('ir-search-field'),
-                  decoration: const InputDecoration(
-                    prefixIcon: Icon(Icons.search),
-                    labelText: 'Gefundene IR-Dateien durchsuchen',
-                  ),
-                  onChanged: (value) => setState(() => query = value),
-                ),
-                const SizedBox(height: 12),
-              ],
               if (entries.isEmpty)
                 Card(
                   child: Padding(
@@ -133,8 +144,9 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
 }
 
 class _Tone3000Section extends StatelessWidget {
-  const _Tone3000Section({required this.controller});
+  const _Tone3000Section({required this.controller, this.query = ''});
   final Tone3000Controller controller;
+  final String query;
 
   @override
   Widget build(BuildContext context) {
@@ -146,32 +158,61 @@ class _Tone3000Section extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('TONE3000', style: Theme.of(context).textTheme.headlineSmall),
-            const SizedBox(height: 6),
-            const Text(
-              'Offizielle TONE3000-Integration. Anmeldung und Auswahl finden '
-              'im Systembrowser bei TONE3000 statt. Die App erhält erst nach '
-              'deiner Auswahl Zugriff; es gibt keine Massendownloads.',
-            ),
-            const SizedBox(height: 6),
-            const Text(
-              'Datenschutz: OAuth-Tokens werden verschlüsselt gespeichert und '
-              'weder protokolliert noch an eigene Server übertragen.',
-            ),
-            const SizedBox(height: 12),
-            if (!controller.isConfigured)
+            if (controller.localRecords.isNotEmpty) ...[
+              const Divider(height: 24),
               Text(
-                controller.config.validationMessage!,
-                key: const Key('tone3000-missing-config'),
-              )
-            else if (!controller.isConnected)
+                'Lokal gespeicherte TONE3000-IRs',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              const SizedBox(height: 6),
+              const Text(
+                'Diese Dateien liegen geschützt in der App. Mit Exportieren '
+                'kannst du eine sichtbare Kopie in einem Ordner deiner Wahl speichern.',
+              ),
+              for (final record in controller.localRecords.where(
+                (r) => '${r.fileName} ${r.creatorName} ${r.toneName}'
+                    .toLowerCase()
+                    .contains(query.toLowerCase()),
+              ))
+                ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: const Icon(Icons.audio_file_outlined),
+                  title: Text(record.fileName),
+                  subtitle: Text(
+                    'IR · TONE3000 · ${record.creatorName} · Lizenz: ${record.license.isEmpty ? 'unbekannt' : record.license}\n'
+                    '${_availabilityLabel(record.availability)} · '
+                    '${record.channels == 1 ? 'Mono' : 'Stereo'} · '
+                    '${record.sampleRateHz} Hz · ${record.bitsPerSample} Bit · '
+                    '${record.fileSize} Byte\nGerätekompatibilität: manuell prüfen',
+                  ),
+                  trailing: Wrap(
+                    spacing: 2,
+                    children: [
+                      IconButton(
+                        key: Key('tone3000-open-${record.tone3000ModelId}'),
+                        onPressed: () => controller.openLocalIr(record),
+                        tooltip: 'IR öffnen',
+                        icon: const Icon(Icons.play_arrow),
+                      ),
+                      IconButton(
+                        key: Key('tone3000-export-${record.tone3000ModelId}'),
+                        onPressed: () => controller.exportLocalIr(record),
+                        tooltip: 'IR exportieren',
+                        icon: const Icon(Icons.save_alt),
+                      ),
+                    ],
+                  ),
+                ),
+            ],
+            WyrmTone3000Header(controller: controller),
+            if (controller.isConfigured && !controller.isConnected)
               FilledButton.icon(
                 key: const Key('tone3000-connect'),
                 onPressed: controller.busy ? null : controller.connectOrBrowse,
                 icon: const Icon(Icons.login),
                 label: const Text('Mit TONE3000 verbinden'),
               )
-            else ...[
+            else if (controller.isConnected) ...[
               Text('Angemeldet als ${controller.user!.username}'),
               const SizedBox(height: 8),
               Wrap(
@@ -194,7 +235,7 @@ class _Tone3000Section extends StatelessWidget {
                 ],
               ),
             ],
-            if (controller.message case final message?)
+            if (tone3000VisibleMessage(controller) case final message?)
               Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: Text(
@@ -236,48 +277,6 @@ class _Tone3000Section extends StatelessWidget {
                   tone: selection.tone,
                   model: model,
                   controller: controller,
-                ),
-            ],
-            if (controller.localRecords.isNotEmpty) ...[
-              const Divider(height: 24),
-              Text(
-                'Lokal gespeicherte TONE3000-IRs',
-                style: Theme.of(context).textTheme.titleMedium,
-              ),
-              const SizedBox(height: 6),
-              const Text(
-                'Diese Dateien liegen geschützt in der App. Mit Exportieren '
-                'kannst du eine sichtbare Kopie in einem Ordner deiner Wahl speichern.',
-              ),
-              for (final record in controller.localRecords)
-                ListTile(
-                  contentPadding: EdgeInsets.zero,
-                  leading: const Icon(Icons.audio_file_outlined),
-                  title: Text(record.fileName),
-                  subtitle: Text(
-                    '${record.creatorName} · Lizenz: ${record.license}\n'
-                    '${_availabilityLabel(record.availability)} · '
-                    '${record.channels == 1 ? 'Mono' : 'Stereo'} · '
-                    '${record.sampleRateHz} Hz · ${record.bitsPerSample} Bit · '
-                    '${record.fileSize} Byte',
-                  ),
-                  trailing: Wrap(
-                    spacing: 2,
-                    children: [
-                      IconButton(
-                        key: Key('tone3000-open-${record.tone3000ModelId}'),
-                        onPressed: () => controller.openLocalIr(record),
-                        tooltip: 'IR öffnen',
-                        icon: const Icon(Icons.play_arrow),
-                      ),
-                      IconButton(
-                        key: Key('tone3000-export-${record.tone3000ModelId}'),
-                        onPressed: () => controller.exportLocalIr(record),
-                        tooltip: 'IR exportieren',
-                        icon: const Icon(Icons.save_alt),
-                      ),
-                    ],
-                  ),
                 ),
             ],
           ],
@@ -382,10 +381,10 @@ class _IrCard extends StatelessWidget {
     final reference = entry.reference;
     String value(String? item) => item ?? 'unbekannt';
     final color = switch (entry.status) {
-      IrAvailabilityStatus.present => Colors.green,
+      IrAvailabilityStatus.present => WyrmTokens.success,
       IrAvailabilityStatus.missing => Colors.grey,
-      IrAvailabilityStatus.unknown => Colors.orange,
-      IrAvailabilityStatus.duplicate => Colors.amber,
+      IrAvailabilityStatus.unknown => WyrmTokens.ember,
+      IrAvailabilityStatus.duplicate => WyrmTokens.muted,
     };
     return Card(
       child: ExpansionTile(
@@ -401,7 +400,7 @@ class _IrCard extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              'Status: ${entry.status.label}${entry.status == IrAvailabilityStatus.present ? ' · lokal importiert' : ''}\n'
+              'Quelle: Externer Ordner · Urheber: unbekannt · Lizenz: unbekannt\nGerätekompatibilität: unbestätigt\nStatus: ${entry.status.label}${entry.status == IrAvailabilityStatus.present ? ' · lokal importiert' : ''}\n'
               'Treffer im Ordner: ${entry.matchedFiles.length}\n'
               'Format: ${_format(reference?.format)}\n'
               'Sammlung/Hersteller: ${value(metadata.manufacturerOrCollection)}\n'

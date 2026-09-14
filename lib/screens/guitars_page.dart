@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../controllers/recommendation_controller.dart';
 import '../models/guitar_profile.dart';
+import '../ui/wyrm_design.dart';
 
 class GuitarsPage extends StatelessWidget {
   const GuitarsPage({required this.controller, super.key});
@@ -11,18 +12,31 @@ class GuitarsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: controller,
-      builder: (context, _) => Scaffold(
-        appBar: AppBar(title: const Text('Gitarrenprofile')),
+      builder: (context, _) => WyrmScaffold(
+        title: 'Profil',
         body: controller.profiles.isEmpty
             ? const Center(
                 child: Padding(
                   padding: EdgeInsets.all(24),
-                  child: Text('Lege zuerst ein Gitarrenprofil an.'),
+                  child: WyrmEmptyState(
+                    title: 'Deine Gitarre macht den Unterschied',
+                    message: 'Lege zuerst ein Gitarrenprofil an. Pickup-Pegel, Klangcharakter und Stimmung helfen bei passenden Startwerten.',
+                  ),
                 ),
               )
             : ListView(
-                padding: const EdgeInsets.all(16),
+                padding: const EdgeInsets.fromLTRB(
+                  16,
+                  16,
+                  16,
+                  kMinInteractiveDimension + WyrmTokens.gap * 2,
+                ),
                 children: [
+                  const WyrmSection(
+                    title: 'Deine Gitarren',
+                    subtitle: 'Pickup-Pegel, Stimmung und Klangcharakter passen den Offline-Entwurf an. Unbestätigte Eigenschaften bleiben Hinweise.',
+                    child: SizedBox.shrink(),
+                  ),
                   for (final profile in controller.profiles)
                     Card(
                       child: ListTile(
@@ -36,7 +50,9 @@ class GuitarsPage extends StatelessWidget {
                         title: Text(profile.name),
                         subtitle: Text(
                           '${profile.guitarType.label} · ${profile.pickupType.label} · '
-                          '${profile.tuning.label} · ${profile.playbackPath.label}',
+                          '${profile.tuning.label} · ${profile.playbackPath.label}\n'
+                          '${profile.stringGauge == null ? '' : 'Saiten: ${profile.stringGauge} · '}Klang: ${profile.toneCharacter.label}\n'
+                          '${controller.selectedProfileId == profile.id ? 'Aktuell ausgewählt' : 'Zum Auswählen antippen'}',
                         ),
                         trailing: IconButton(
                           tooltip: 'Bearbeiten',
@@ -194,7 +210,7 @@ class _GuitarProfileFormState extends State<GuitarProfileForm> {
             ),
             if (playback == PlaybackPath.powerAmpAndGuitarCab)
               const Card(
-                color: Colors.deepOrange,
+                color: WyrmTokens.raised,
                 child: Padding(
                   padding: EdgeInsets.all(12),
                   child: Text(
@@ -219,6 +235,7 @@ class _GuitarProfileFormState extends State<GuitarProfileForm> {
       padding: const EdgeInsets.only(top: 12),
       child: DropdownButtonFormField<T>(
         initialValue: value,
+        isExpanded: true,
         decoration: InputDecoration(labelText: label),
         items: values
             .map(

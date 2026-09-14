@@ -16,7 +16,7 @@ Der Samsung-Test vom 12. September 2026 bestätigte `SONICAKE AUDIO`, `SONICAKE 
 
 ## Bevorzugter Android-MIDI-Weg
 
-Geräte-Output bedeutet **Matribox → App**, Geräte-Input **App → Matribox**. Nur `openOutputPort` wird für den ausdrücklich gestarteten passiven Monitor verwendet. Ein empfangender Receiver verarbeitet `onSend`-Callbacks; WyrmTone ruft niemals `send`/`flush` oder `openInputPort` auf. Es gibt keine Anfrage, Initialisierung oder Antwort. Alle Protokollbedeutungen bleiben unbekannt.
+Geräte-Output bedeutet **Matribox → App**, Geräte-Input **App → Matribox**. Nur `openOutputPort` wird für den ausdrücklich gestarteten passiven Monitor verwendet. Ein empfangender Receiver verarbeitet `onSend`-Callbacks; der Monitor sendet niemals und beantwortet keine Empfangsnachrichten. Der gesonderte Entwickler-Einmaltest ist in [MIDI_CAPTURE.md](MIDI_CAPTURE.md#separat-freigegebener-entwickler-einmaltest) abgegrenzt. Kontrolliert belegte Parameterfelder stehen im [Offline-Analysebericht](MATRIBOX_OFFLINE_ANALYSIS.md); andere Protokollbedeutungen bleiben offen.
 
 Stop löst den Receiver und schließt den Output-Port. App-Pause, MIDI-Removal, USB-Detach und Geräteschließen beenden zuerst den Monitor und schließen anschließend das Gerät. Wiederanschließen oder Resume starten nichts automatisch. Limits, SysEx und Export: [MIDI_CAPTURE.md](MIDI_CAPTURE.md).
 
@@ -45,6 +45,6 @@ Eine Übertragungsschaltfläche existiert absichtlich nicht.
 - Slotgrenzen, Dateigrößen und Cabinet-/Full-Rig-Semantik;
 - vor jedem späteren Schreibtest ein vollständiges Backup und ein explizit freigegebener Testslot.
 
-Schreibtransfers sind in diesem Entwicklungsstand ausdrücklich verboten und werden erst nach separater Protokollprüfung und ausdrücklicher Bestätigung erwogen.
+Schreibtransfers außerhalb des gesondert freigegebenen Entwickler-Einmaltests bleiben verboten und benötigen weiterhin separate Protokollprüfung und ausdrückliche Freigabe.
 
 Quelle, geprüft am 10. September 2026: [Sonicake Matribox Produktseite](https://www.sonicake.com/products/matribox).

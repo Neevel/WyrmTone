@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 
+import 'dart:io';
+
 import '../data/dnafx_capabilities.dart';
 import '../data/target_sounds.dart';
 import '../devices/device_profile.dart';
@@ -15,6 +17,9 @@ import '../services/local_persistence.dart';
 import '../nam/local_nam_capture.dart';
 import '../services/recommendation_engine.dart';
 import '../services/nam_recommendation_engine.dart';
+import '../services/offline_sound_profiles.dart';
+import '../models/tone_target.dart';
+import '../tone3000/local_ir_record.dart';
 
 class RecommendationController extends ChangeNotifier {
   RecommendationController({
@@ -47,6 +52,160 @@ class RecommendationController extends ChangeNotifier {
   String selectedSoundId = targetSounds.first.id;
   bool busy = false;
   String? message;
+  List<TargetSound> offlineProfiles = const [];
+  PresetDraft? offlineDraft, offlinePreview, _originalDraft;
+  PresetDraft? get offlineOriginalDraft => _originalDraft;
+  final List<PresetDraft> _draftHistory = [];
+  PresetDraft Function(ToneTarget, List<String>)? _draftFactory;
+  bool offlineBusy = false;
+  String? offlineMessage;
+  int _offlineGeneration = 0;
+
+  Future<void> loadOfflineProfiles() async {
+    if (offlineProfiles.isNotEmpty || offlineBusy) return;
+    offlineBusy = true;
+    notifyListeners();
+    try {
+      offlineProfiles = await OfflineSoundProfiles.load();
+    } catch (error) {
+      offlineMessage = 'Offline-Profile konnten nicht geladen werden: $error';
+    } finally {
+      offlineBusy = false;
+      notifyListeners();
+    }
+  }
+
+  void clearOfflineDraft() {
+    ++_offlineGeneration;
+    offlineDraft = null;
+    offlinePreview = null;
+    _originalDraft = null;
+    _draftHistory.clear();
+    _draftFactory = null;
+  }
+
+  Future<void> createOfflineSound({
+    required TargetSound sound,
+    required GuitarTuning tuning,
+    required SoundRole role,
+    required List<LocalNamCapture> nams,
+    required List<LocalIrRecord> irs,
+    String? selectedNamId,
+  }) async {
+    if (offlineBusy) return;
+    final guitar = selectedProfile;
+    if (guitar == null) {
+      offlineMessage = 'Bitte zuerst ein Gitarrenprofil wählen.';
+      notifyListeners();
+      return;
+    }
+    clearOfflineDraft();
+    final generation = _offlineGeneration;
+    final device = selectedTargetDevice;
+    final namSnapshot = List<LocalNamCapture>.unmodifiable(nams);
+    final irSnapshot = List<LocalIrRecord>.unmodifiable(irs);
+    final folderSnapshot = List<IrLibraryEntry>.unmodifiable(libraryEntries);
+    offlineBusy = true;
+    offlineMessage = null;
+    notifyListeners();
+    try {
+      final available = <String>{...folderFiles.map((f) => f.uri)};
+      for (final path in [
+        ...namSnapshot.map((n) => n.localUri),
+        ...irSnapshot.map((i) => i.localUri),
+      ]) {
+        final uri = Uri.tryParse(path);
+        if (uri?.scheme == 'file' && await File.fromUri(uri!).exists()) {
+          available.add(path);
+        }
+      }
+      if (generation != _offlineGeneration) {
+        offlineMessage = 'Auswahl geändert; bitte neu erstellen.';
+        return;
+      }
+      final first = engine.offline.create(
+        device: device,
+        profile: sound,
+        guitar: guitar,
+        tuning: tuning,
+        role: role,
+        nams: namSnapshot,
+        irs: irSnapshot,
+        folderIrs: folderSnapshot,
+        availableUris: Set.unmodifiable(available),
+        selectedNamId: selectedNamId,
+      );
+      _draftFactory = (tone, history) => engine.offline.create(
+        device: device,
+        profile: sound,
+        guitar: guitar,
+        tuning: tuning,
+        role: role,
+        nams: namSnapshot,
+        irs: irSnapshot,
+        folderIrs: folderSnapshot,
+        availableUris: Set.unmodifiable(available),
+        selectedNamId: selectedNamId,
+        toneOverride: tone,
+        history: history,
+      );
+      offlineDraft = first;
+      _originalDraft = first;
+      offlineMessage = 'Offline erstellt · Keine KI verwendet · Noch keine Übertragung an die Matribox.';
+    } catch (error) {
+      offlineMessage = 'Kein Draft erstellt: $error';
+    } finally {
+      offlineBusy = false;
+      notifyListeners();
+    }
+  }
+
+  void previewCorrection(RecommendationFeedback feedback) {
+    final current = offlineDraft,
+        baseline = _originalDraft,
+        factory = _draftFactory;
+    if (current == null || baseline == null || factory == null) return;
+    final corrected = engine.offline.corrected(
+      current.tone,
+      baseline.tone,
+      feedback,
+    );
+    offlinePreview = factory(corrected, [
+      ...current.history,
+      '${feedback.label}: begrenzte, manuell bestätigte Klangkorrektur.',
+    ]);
+    notifyListeners();
+  }
+
+  void applyCorrection() {
+    final current = offlineDraft, preview = offlinePreview;
+    if (current == null || preview == null) return;
+    _draftHistory.add(current);
+    offlineDraft = preview;
+    offlinePreview = null;
+    notifyListeners();
+  }
+
+  void cancelCorrection() {
+    offlinePreview = null;
+    notifyListeners();
+  }
+
+  void undoCorrection() {
+    if (_draftHistory.isEmpty) return;
+    offlineDraft = _draftHistory.removeLast();
+    offlinePreview = null;
+    notifyListeners();
+  }
+
+  void resetCorrections() {
+    offlineDraft = _originalDraft;
+    offlinePreview = null;
+    _draftHistory.clear();
+    notifyListeners();
+  }
+
+  bool get canUndoCorrection => _draftHistory.isNotEmpty;
 
   int countFor(IrAvailabilityStatus status) =>
       libraryEntries.where((entry) => entry.status == status).length;
@@ -103,6 +262,7 @@ class RecommendationController extends ChangeNotifier {
   }
 
   void selectProfile(String id) {
+    clearOfflineDraft();
     selectedProfileId = id;
     notifyListeners();
   }
@@ -113,6 +273,7 @@ class RecommendationController extends ChangeNotifier {
   }
 
   void selectTargetDevice(TargetDeviceId id) {
+    clearOfflineDraft();
     selectedTargetDevice = id;
     notifyListeners();
   }

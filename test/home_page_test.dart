@@ -11,6 +11,11 @@ void main() {
     await tester.binding.setSurfaceSize(const Size(1200, 8000));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     await tester.pumpWidget(WyrmToneApp(usbService: service));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Gerät'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('advanced-diagnostics')));
+    await tester.pumpAndSettle();
   }
 
   testWidgets('renders safely without an attached USB device', (tester) async {
@@ -20,7 +25,7 @@ void main() {
     await renderApp(tester, service);
     await tester.pumpAndSettle();
 
-    expect(find.text('Kein unterstütztes Gerät verbunden'), findsOneWidget);
+    expect(find.text('Kein unterstütztes Gerät erkannt'), findsOneWidget);
     expect(find.byKey(const Key('no-devices')), findsOneWidget);
     expect(find.byKey(const Key('search-button')), findsOneWidget);
     expect(find.byKey(const Key('permission-button')), findsNothing);
@@ -34,10 +39,13 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(
-      find.textContaining('USB-Berechtigung erforderlich'),
+      find.textContaining('USB-Zugriff noch nicht erlaubt'),
       findsOneWidget,
     );
-    expect(find.textContaining('DNAfx GiT Core erkannt'), findsWidgets);
+    expect(
+      find.textContaining('Harley Benton DNAfx GiT Core erkannt'),
+      findsWidgets,
+    );
     expect(find.byKey(const Key('permission-button')), findsOneWidget);
     expect(find.byKey(const Key('open-button')), findsNothing);
   });
@@ -52,7 +60,7 @@ void main() {
     await renderApp(tester, service);
     await tester.pumpAndSettle();
 
-    expect(find.text('DNAfx GiT Core erkannt'), findsOneWidget);
+    expect(find.text('Harley Benton DNAfx GiT Core erkannt'), findsOneWidget);
     expect(find.textContaining('Interface 0'), findsOneWidget);
     expect(find.textContaining('0x81 · IN · Interrupt'), findsOneWidget);
     expect(find.textContaining('0x02 · OUT · Interrupt'), findsOneWidget);
@@ -69,12 +77,12 @@ void main() {
     await tester.tap(find.byKey(const Key('open-button')));
     await tester.pumpAndSettle();
 
-    expect(find.text('DNAfx GiT Core verbunden (read-only)'), findsOneWidget);
+    expect(find.text('USB-Verbindung geöffnet'), findsOneWidget);
     expect(find.byKey(const Key('close-button')), findsOneWidget);
 
     await tester.tap(find.byKey(const Key('close-button')));
     await tester.pumpAndSettle();
-    expect(find.text('DNAfx GiT Core erkannt'), findsOneWidget);
+    expect(find.text('Harley Benton DNAfx GiT Core erkannt'), findsOneWidget);
     expect(service.closeCalls, 1);
   });
 
@@ -89,7 +97,7 @@ void main() {
     await service.emit({'type': 'detached'});
     await tester.pumpAndSettle();
 
-    expect(find.text('Kein unterstütztes Gerät verbunden'), findsOneWidget);
+    expect(find.text('Kein unterstütztes Gerät erkannt'), findsOneWidget);
     expect(find.byKey(const Key('no-devices')), findsOneWidget);
   });
 
@@ -102,8 +110,11 @@ void main() {
     await renderApp(tester, service);
     await tester.pumpAndSettle();
 
-    expect(find.text('WyrmTone'), findsOneWidget);
-    expect(find.textContaining('Sonicake Matribox 1 erkannt'), findsOneWidget);
+    expect(find.text('Gerät'), findsWidgets);
+    expect(
+      find.textContaining('Sonicake Matribox 1 / QME-50 erkannt'),
+      findsOneWidget,
+    );
     expect(find.textContaining('Kandidat erkannt'), findsOneWidget);
     expect(find.byKey(const Key('permission-button')), findsOneWidget);
     expect(find.byKey(const Key('open-button')), findsNothing);
@@ -119,7 +130,7 @@ void main() {
     await renderApp(tester, service);
     await tester.pumpAndSettle();
 
-    expect(find.text('Sonicake Matribox 1 erkannt'), findsOneWidget);
+    expect(find.text('Sonicake Matribox 1 / QME-50 erkannt'), findsOneWidget);
     expect(
       find.textContaining('Interface 3 (Alt 0) · relevante'),
       findsOneWidget,
@@ -127,7 +138,7 @@ void main() {
     expect(find.textContaining('0x83 · IN · Bulk'), findsOneWidget);
     expect(find.textContaining('0x03 · OUT · Bulk'), findsOneWidget);
     expect(find.byKey(const Key('open-button')), findsNothing);
-    await tester.tap(find.byKey(const Key('advanced-diagnostics')));
+    await tester.tap(find.byKey(const Key('raw-usb-diagnostics')));
     await tester.pumpAndSettle();
     expect(find.byKey(const Key('open-button')), findsOneWidget);
   });

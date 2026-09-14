@@ -16,8 +16,9 @@ void main() {
       await tester.pumpWidget(WyrmToneApp(usbService: usb));
       await tester.pumpAndSettle();
 
-      expect(find.byKey(const Key('search-button')), findsOneWidget);
-      await tester.tap(find.text('Gitarren'));
+      expect(find.byKey(const Key('dashboard-create')), findsOneWidget);
+      expect(find.byType(NavigationDestination), findsNWidgets(5));
+      await tester.tap(find.text('Profil'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const Key('add-profile-button')));
       await tester.pumpAndSettle();
@@ -49,6 +50,7 @@ void main() {
 
     expect(find.textContaining('CKY'), findsOneWidget);
     expect(find.textContaining('Children of Bodom'), findsOneWidget);
+    await tester.scrollUntilVisible(find.textContaining('Nirvana'), 200);
     expect(find.textContaining('Nirvana'), findsOneWidget);
   });
 }

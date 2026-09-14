@@ -83,6 +83,18 @@ class UsbPlatformChannels(
                 catch (error: Exception) { result.error("MIDI_CAPTURE_FAILED", error.message, null) }
             }
             "stopMidiCapture" -> { midiManager.stopCapture(); result.success(null) }
+            "getVerifiedMatriboxProbeStatus" -> result.success(midiManager.writeProbeStatus())
+            "sendVerifiedSol100OdGain41Probe" -> {
+                if (call.arguments != null) {
+                    result.error("PROBE_ARGUMENTS_FORBIDDEN", "Der Einmaltest nimmt keine Argumente entgegen.", null)
+                } else {
+                    try { result.success(midiManager.sendVerifiedSol100OdGain41Probe()) }
+                    catch (error: Exception) {
+                        midiManager.closeDevice()
+                        result.error("PROBE_FAILED", "${error.message} Es wurde kein weiterer Sendeversuch durchgeführt.", null)
+                    }
+                }
+            }
             else -> result.notImplemented()
         }
     }
@@ -119,4 +131,5 @@ class UsbPlatformChannels(
     }
 
     fun pause() = midiManager.pause()
+    fun resume() = midiManager.resume()
 }

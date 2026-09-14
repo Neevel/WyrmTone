@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "profiles": [
+    {
+      "id": "cob-angels-dont-kill", "baseId": "cob-angels-dont-kill", "version": 1,
+      "kind": "song", "artist": "Children of Bodom", "song": "Angels Don't Kill",
+      "artistAliases": ["COB"], "aliases": ["Angels Dont Kill"],
+      "genre": "Melodic Death Metal", "roles": ["rhythm"], "tunings": ["dStandard", "dropC"],
+      "source": "Kuratierte Klangannäherung aus vorhandenen WyrmTone-Ausgangspunkten",
+      "confidence": 60, "reason": "Straffer, obermittenbetonter Rhythmus; keine bestätigte Studioausrüstung.",
+      "uncertainties": ["Drop C ist die Nutzer-Zielstimmung, keine Behauptung über die Originalaufnahme.", "Matribox-Ampzuordnung ist eine klangliche Alternative, keine JCM900-Gleichsetzung."],
+      "ampFamilies": ["british", "high gain"], "namTags": ["jcm900", "marshall", "high gain"],
+      "cabinet": "4x12", "speaker": "V30", "microphone": "SM57",
+      "tone": {"gain": 68, "saturation": 70, "tightness": 84, "attack": 80, "sustain": 65, "bass": 48, "lowMids": 45, "mids": 60, "upperMids": 65, "treble": 62, "presence": 60, "compression": 30, "gateStrength": 55, "gateOpening": 86, "space": 12, "delay": 0, "reverb": 8, "modulation": 0, "irBrightness": 60}
+    },
+    {
+      "id": "melodic-death-tight-rhythm", "baseId": "cob-angels-dont-kill", "version": 1,
+      "kind": "genre", "artist": "Melodic Death Metal", "song": "Tight Rhythm",
+      "artistAliases": [], "aliases": ["Melodic Death Metal Tight Rhythm"],
+      "genre": "Melodic Death Metal", "roles": ["rhythm"], "tunings": ["dStandard", "dropC", "dropB"],
+      "source": "Allgemeines kuratiertes Genre-Fallback", "confidence": 45,
+      "reason": "Bewusst gewählter Genre-Startpunkt, kein exaktes Songprofil.",
+      "uncertainties": ["Kein Songtreffer; Geräte- und Hörwegabhängigkeit manuell prüfen."],
+      "ampFamilies": ["high gain"], "namTags": ["high gain", "rhythm"],
+      "cabinet": "4x12", "speaker": "V30", "microphone": "SM57",
+      "tone": {"gain": 65, "saturation": 65, "tightness": 85, "attack": 78, "sustain": 60, "bass": 45, "lowMids": 45, "mids": 58, "upperMids": 65, "treble": 58, "presence": 58, "compression": 25, "gateStrength": 50, "gateOpening": 85, "space": 10, "delay": 0, "reverb": 5, "modulation": 0, "irBrightness": 55}
+    }
+  ]
+}

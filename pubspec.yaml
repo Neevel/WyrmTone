@@ -63,6 +63,8 @@ flutter:
 
   assets:
     - assets/catalog/ir_catalog.json
+    - assets/catalog/sound_profiles.json
+    - assets/catalog/matribox_preset_catalog.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

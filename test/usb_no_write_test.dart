@@ -15,18 +15,33 @@ void main() {
     expect(source, isNot(matches(RegExp(r'UsbRequest\s*\('))));
   });
 
-  test('entire productive native tree has no input port or MIDI send', () async {
+  test('only the compile-gated fixed probe may open input or send', () async {
     final files = Directory('android/app/src/main/kotlin')
         .listSync(recursive: true)
         .whereType<File>();
     for (final file in files.where((f) => f.path.endsWith('.kt'))) {
       final source = await file.readAsString();
-      expect(
-        source,
-        isNot(matches(RegExp(r'openInputPort\s*\('))),
-        reason: file.path,
-      );
-      expect(source, isNot(contains('MidiInputPort')), reason: file.path);
+      final probeAdapter = file.path.endsWith('VerifiedMatriboxProbePort.kt');
+      final manager = file.path.endsWith('MidiDiagnosticsManager.kt');
+      if (!manager) {
+        expect(
+          source,
+          isNot(matches(RegExp(r'openInputPort\s*\('))),
+          reason: file.path,
+        );
+      } else {
+        expect(RegExp(r'openInputPort\s*\(').allMatches(source).length, 1);
+        expect(source, contains('probeEligibility().check()'));
+        expect(
+          source,
+          contains(
+            'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_WRITE_PROBE',
+          ),
+        );
+      }
+      if (!probeAdapter) {
+        expect(source, isNot(contains('MidiInputPort')), reason: file.path);
+      }
       expect(
         source,
         isNot(
@@ -41,12 +56,24 @@ void main() {
         isNot(
           matches(
             RegExp(
-              r'\.(send|flush|connectPorts|bulkTransfer|controlTransfer)\s*\(',
+              probeAdapter
+                  ? r'\.(flush|connectPorts|bulkTransfer|controlTransfer)\s*\('
+                  : r'\.(send|flush|connectPorts|bulkTransfer|controlTransfer)\s*\(',
             ),
           ),
         ),
         reason: file.path,
       );
+      if (probeAdapter) {
+        expect(RegExp(r'\.send\s*\(').allMatches(source).length, 1);
+        expect(source, contains('VerifiedGain41Reference.validate(reference)'));
+        expect(
+          source,
+          contains(
+            'BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_WRITE_PROBE',
+          ),
+        );
+      }
       expect(
         source,
         isNot(matches(RegExp(r'UsbRequest\s*\('))),
@@ -95,4 +122,38 @@ void main() {
     ).readAsString();
     expect(source, isNot(contains('forceClaim = true')));
   });
+
+  test(
+    'probe channel is parameterless and release build is always disabled',
+    () {
+      final channels = File(
+        'android/app/src/main/kotlin/de/neevel/wyrmtone/UsbPlatformChannels.kt',
+      ).readAsStringSync();
+      final probeCase = channels.substring(
+        channels.indexOf('"sendVerifiedSol100OdGain41Probe" ->'),
+        channels.indexOf('else -> result.notImplemented()'),
+      );
+      expect(probeCase, contains('if (call.arguments != null)'));
+      expect(
+        probeCase,
+        contains('midiManager.sendVerifiedSol100OdGain41Probe()'),
+      );
+      expect(probeCase, isNot(contains('call.argument<')));
+      expect(
+        channels,
+        isNot(matches(RegExp(r'"(sendMidi|sendSysEx|writeUsb|sendCommand)"'))),
+      );
+      final gradle = File('android/app/build.gradle.kts').readAsStringSync();
+      expect(
+        gradle,
+        contains('probeDefines == listOf("ENABLE_MATRIBOX_WRITE_PROBE=true")'),
+      );
+      expect(
+        gradle.substring(gradle.indexOf('release {')),
+        contains(
+          'buildConfigField("boolean", "ENABLE_MATRIBOX_WRITE_PROBE", "false")',
+        ),
+      );
+    },
+  );
 }

@@ -3,6 +3,7 @@ import '../models/guitar_profile.dart';
 import '../models/ir_metadata.dart';
 import '../models/recommendation.dart';
 import '../models/target_sound.dart';
+import 'offline_sound_engine.dart';
 
 class IrScoreWeights {
   static const cabinetAndSpeaker = 0.30;
@@ -14,6 +15,7 @@ class IrScoreWeights {
 
 class RecommendationEngine {
   const RecommendationEngine();
+  OfflineSoundEngine get offline => const OfflineSoundEngine();
 
   SoundRecommendation recommend({
     required TargetSound target,

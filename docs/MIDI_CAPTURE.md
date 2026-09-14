@@ -6,7 +6,7 @@ Marcel bestätigte auf seinem Samsung am 12. September 2026: Matribox 1 / QME-50
 
 ## Architektur und Richtung
 
-Android-Portnamen gelten aus Sicht des Geräts. Geräte-Output liefert Matribox → App, Geräte-Input würde App → Matribox senden. Produktionscode verwendet nur `openOutputPort` und verbindet einen `MidiReceiver` mit `onSend` als Empfangs-Callback. Kein produktiver Aufruf von `send`, `flush`, `openInputPort`, keine USB-Transfers und kein Force-Claim.
+Android-Portnamen gelten aus Sicht des Geräts. Geräte-Output liefert Matribox → App, Geräte-Input würde App → Matribox senden. Der passive Monitor verwendet nur `openOutputPort` und verbindet einen `MidiReceiver` mit `onSend` als Empfangs-Callback. Dieser Empfangspfad enthält keinen Send-/Flush-Aufruf und löst niemals Antworten aus. Keine USB-Transfers und kein Force-Claim. Der separat freigegebene Entwickler-Einmaltest ist unten abgegrenzt.
 
 `MidiReceiveSource` kennt nur Empfangsstream, Unterbrechungen und Start/Stop. `MidiCaptureController` kennt keine USB-/Sendeschnittstelle. Kotlin kapselt einen `ReceiveOnlyMidiPort` und weist alte Callback-Generationen nach Stop ab. Native Batches gehen über einen eigenen EventChannel an Flutter. Der Parser klassifiziert lokal Struktur, niemals proprietäre Bedeutung.
 
@@ -45,7 +45,15 @@ Bitte diese JSON-Dateien und eine kurze Liste der manuellen Aktionen bereitstell
 
 ## Verifikation
 
-Flutter-/Kotlin-Tests verwenden ausschließlich Empfangs-/Port-Fakes. Der Sicherheitstest prüft den gesamten produktiven Kotlin-Baum auf Input-Port-, Send-/Flush-, USB-Transfer- und Force-Claim-Verwendungen. Ein empfangender onSend-Override wird erlaubt; ein `.send(...)`-Aufruf nicht. DNAfx-Raw-USB bleibt separat, Matribox-Raw-USB ist eingeklappt und während MIDI-Open gesperrt.
+Flutter-/Kotlin-Tests verwenden ausschließlich Port-Fakes. Der Sicherheitstest erlaubt genau eine Input-Port-Öffnungsstelle im isolierten Probe-Pfad und genau einen bytefesten, compile-gated Android-Send-Aufruf im Probe-Adapter. Alle anderen produktiven Klassen bleiben ohne Send-/Flush-Aufrufe; USB-Transfers und Force-Claim bleiben verboten. DNAfx-Raw-USB bleibt separat, Matribox-Raw-USB ist eingeklappt und während MIDI-Open gesperrt.
+
+## Separat freigegebener Entwickler-Einmaltest
+
+Nur Debug-Builds mit `--dart-define=ENABLE_MATRIBOX_WRITE_PROBE=true` aktivieren Flutter-Oberfläche und native BuildConfig-Freigabe. Normale Debug- und sämtliche Release-Builds bleiben deaktiviert. Die parameterlose Methode `sendVerifiedSol100OdGain41Probe()` akzeptiert keine Flutter-Nutzdaten. Sie enthält ausschließlich die bytegenau verifizierte Editor-Referenz für Sol 100 OD / Gain-Index 0 / 41; kein Rücksetzen, Retry, Handshake, Presetspeichern oder NAM-/IR-Transfer.
+
+Vorher PC-Editor vollständig schließen, Matribox vom PC trennen, unwichtiges Testpreset mit Sol 100 OD und Gain 40 wählen (nicht speichern), per OTG ans Samsung anschließen und als MIDI-Gerät öffnen. Passiven Monitor stoppen. Den eingeklappten Warnbereich „Verifizierter Matribox-Schreibtest“ öffnen und Teststatus prüfen. Checkbox und danach Bestätigungsdialog bewusst bestätigen. Anschließend nichts weiter in WyrmTone betätigen, Gain 41 direkt am Gerät prüfen, Schreibtest-Protokoll kopieren, MIDI-Gerät schließen und Gain manuell auf 40 zurücksetzen; nicht speichern. Bei unerwarteter Reaktion nichts weiter senden, MIDI-Gerät schließen, OTG trennen, gegebenenfalls normal neu starten und Protokoll bereitstellen.
+
+Nativ erforderlich sind exakt ein angeschlossenes 84EF:0054-Gerät, direkte eindeutige Android-USB/MIDI-Zuordnung, geöffnetes Gerät im Vordergrund und eindeutiger Input-Port 0. Vor Öffnen und nochmals unmittelbar vor Senden werden Zustand, vollständige Referenz und SHA-256 geprüft. Ein atomarer In-Progress-Schutz und ein verbindungsgebundener Latch verhindern Mehrfachaufrufe; bereits ein Portöffnungsversuch verbraucht den Test. MIDI-Schließen/Öffnen setzt ihn nicht zurück, USB-Detach beendet die Verbindung. Nach Wiederanschließen sind beide Bestätigungen erneut nötig. Portschluss erfolgt in `finally`; Pause/Removal/Detach schließen das Gerät. `SEND_SUCCESS` bedeutet nur Android-Annahme, keine bestätigte Geräteänderung. Der tatsächliche Gerätezustand ist weiterhin ausschließlich manuell zu prüfen.
 
 Abschlussprüfung am 12.09.2026: Formatierung durchgeführt, `flutter analyze` ohne Probleme, alle 120 Flutter-/Dart-Tests und alle 18 App-Kotlin-Tests erfolgreich. Debug-APK erfolgreich gebaut; Archivprüfung: 0 WAV-, NAM- oder ZIP-Dateien. Anzeigename WyrmTone, Paket-ID de.neevel.wyrmtone. APK: `D:\Develop\dnafx_bridge\build\app\outputs\flutter-apk\app-debug.apk`, 200312613 Byte / 191,03 MiB. Kein Commit, kein Push, keine Installation und kein neuer Hardware-Empfangstest durch diesen Task.
 

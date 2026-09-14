@@ -1,10 +1,19 @@
+import java.util.Base64
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
+// Fail closed unless Flutter passes exactly one explicit Base64-encoded opt-in.
+val probeDefines = providers.gradleProperty("dart-defines").orNull?.split(",")
+    ?.mapNotNull { runCatching { String(Base64.getDecoder().decode(it), Charsets.UTF_8) }.getOrNull() }
+    .orEmpty().filter { it.startsWith("ENABLE_MATRIBOX_WRITE_PROBE=") }
+val enableWriteProbe = probeDefines == listOf("ENABLE_MATRIBOX_WRITE_PROBE=true")
+
 android {
+    buildFeatures { buildConfig = true }
     namespace = "de.neevel.wyrmtone"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
@@ -30,7 +39,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("boolean", "ENABLE_MATRIBOX_WRITE_PROBE", enableWriteProbe.toString())
+        }
         release {
+            buildConfigField("boolean", "ENABLE_MATRIBOX_WRITE_PROBE", "false")
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")

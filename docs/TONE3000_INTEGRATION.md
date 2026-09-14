@@ -63,7 +63,7 @@ Der lokale Metadatensatz speichert URI, Tone-/Modell-ID, Namen, Creator, Lizenz,
 ## Manueller Android-Test
 
 1. Mit registrierter Redirect-URI und `TONE3000_CLIENT_ID` bauen und installieren.
-2. Unter **IR-Bibliothek** auf **Mit TONE3000 verbinden** tippen und prüfen, dass der Systembrowser die TONE3000-Domain öffnet.
+2. Unter **Bibliothek → IRs** auf **Mit TONE3000 verbinden** tippen und prüfen, dass der Systembrowser die TONE3000-Domain öffnet. NAM-Auswahl und lokaler Import liegen unter **Bibliothek → NAM**.
 3. Anmeldung einmal abbrechen; die App muss ohne Download zurückkehren und „Auswahl abgebrochen“ anzeigen.
 4. Erneut öffnen, einen IR-Tone wählen und prüfen, dass Titel, Creator, Lizenz und nur dessen Modelle erscheinen.
 5. Ein Modell antippen, Fortschritt prüfen und einmal abbrechen. Es darf keine `.part`-Datei verbleiben.

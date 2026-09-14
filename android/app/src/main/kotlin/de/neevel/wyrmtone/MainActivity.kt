@@ -9,6 +9,7 @@ class MainActivity : FlutterActivity() {
     private var irFilePicker: IrFilePickerChannel? = null
     private var tone3000OAuth: Tone3000OAuthChannel? = null
     private var midiExport: MidiCaptureExportChannel? = null
+    private var presetExchange: PresetExchangeChannel? = null
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
@@ -20,11 +21,14 @@ class MainActivity : FlutterActivity() {
             .also { it.start(intent) }
         midiExport = MidiCaptureExportChannel(this, flutterEngine.dartExecutor.binaryMessenger)
             .also { it.start() }
+        presetExchange = PresetExchangeChannel(this, flutterEngine.dartExecutor.binaryMessenger)
+            .also { it.start() }
     }
 
     @Deprecated("Legacy callback required by the FlutterActivity integration used here")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (midiExport?.onActivityResult(requestCode, resultCode, data) == true) return
+        if (presetExchange?.onActivityResult(requestCode, resultCode, data) == true) return
         if (irFilePicker?.onActivityResult(requestCode, resultCode, data) == true) return
         super.onActivityResult(requestCode, resultCode, data)
     }
@@ -38,6 +42,8 @@ class MainActivity : FlutterActivity() {
     override fun onDestroy() {
         midiExport?.dispose()
         midiExport = null
+        presetExchange?.dispose()
+        presetExchange = null
         usbChannels?.dispose()
         usbChannels = null
         irFilePicker?.dispose()
@@ -50,5 +56,10 @@ class MainActivity : FlutterActivity() {
     override fun onPause() {
         usbChannels?.pause()
         super.onPause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        usbChannels?.resume()
     }
 }

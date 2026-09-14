@@ -5,10 +5,10 @@ import '../controllers/usb_controller.dart';
 import '../controllers/tone3000_controller.dart';
 import 'guitars_page.dart';
 import 'home_page.dart';
-import 'ir_library_page.dart';
+import 'library_page.dart';
 import 'recommendation_page.dart';
 import 'sounds_page.dart';
-import 'nam_library_page.dart';
+import 'dashboard_page.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({
@@ -28,47 +28,75 @@ class AppShell extends StatefulWidget {
 
 class _AppShellState extends State<AppShell> {
   int index = 0;
+  bool creating = false;
+
+  void _createSound() => setState(() {
+    index = 1;
+    creating = true;
+  });
+  void _navigate(int value) => setState(() {
+    index = value;
+  });
 
   @override
   Widget build(BuildContext context) {
     final pages = [
+      DashboardPage(
+        usb: widget.usbController,
+        recommendations: widget.recommendationController,
+        library: widget.tone3000Controller,
+        openDevice: () => _navigate(2),
+        openProfile: () => _navigate(4),
+        openLibrary: () => _navigate(3),
+        createSound: _createSound,
+      ),
+      creating
+          ? RecommendationPage(
+              controller: widget.recommendationController,
+              tone3000: widget.tone3000Controller,
+              openProfile: () => _navigate(4),
+              close: () => setState(() {
+                creating = false;
+              }),
+            )
+          : SoundsPage(
+              controller: widget.recommendationController,
+              createSound: _createSound,
+            ),
       HomePage(controller: widget.usbController),
+      LibraryPage(
+        controller: widget.recommendationController,
+        tone3000: widget.tone3000Controller,
+      ),
       GuitarsPage(controller: widget.recommendationController),
-      SoundsPage(controller: widget.recommendationController),
-      IrLibraryPage(
-        controller: widget.recommendationController,
-        tone3000: widget.tone3000Controller,
-      ),
-      if (widget.tone3000Controller case final controller?)
-        NamLibraryPage(controller: controller)
-      else
-        const Scaffold(body: Center(child: Text('NAM nicht verfügbar'))),
-      RecommendationPage(
-        controller: widget.recommendationController,
-        tone3000: widget.tone3000Controller,
-      ),
     ];
     return Scaffold(
-      body: IndexedStack(index: index, children: pages),
+      body: MediaQuery.removeViewInsets(
+        context: context,
+        removeBottom: true,
+        child: IndexedStack(
+          index: index,
+          children: [
+            for (var i = 0; i < pages.length; i++)
+              TickerMode(enabled: i == index, child: pages[i]),
+          ],
+        ),
+      ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: index,
         onDestinationSelected: (value) => setState(() => index = value),
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.usb), label: 'Verbindung'),
           NavigationDestination(
-            icon: Icon(Icons.graphic_eq),
-            label: 'Gitarren',
+            icon: Icon(Icons.home_outlined),
+            label: 'Start',
           ),
           NavigationDestination(icon: Icon(Icons.music_note), label: 'Sounds'),
+          NavigationDestination(icon: Icon(Icons.usb), label: 'Gerät'),
           NavigationDestination(
-            icon: Icon(Icons.library_music),
-            label: 'IR-Bibliothek',
+            icon: Icon(Icons.library_music_outlined),
+            label: 'Bibliothek',
           ),
-          NavigationDestination(
-            icon: Icon(Icons.memory),
-            label: 'NAM-Bibliothek',
-          ),
-          NavigationDestination(icon: Icon(Icons.tune), label: 'Empfehlung'),
+          NavigationDestination(icon: Icon(Icons.graphic_eq), label: 'Profil'),
         ],
       ),
     );

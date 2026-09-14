@@ -3,10 +3,17 @@ import 'package:flutter/material.dart';
 import '../controllers/tone3000_controller.dart';
 import '../nam/local_nam_capture.dart';
 import '../tone3000/tone3000_models.dart';
+import '../ui/wyrm_design.dart';
 
 class NamLibraryPage extends StatefulWidget {
-  const NamLibraryPage({required this.controller, super.key});
+  const NamLibraryPage({
+    required this.controller,
+    this.embedded = false,
+    this.targetSupportsNam = true,
+    super.key,
+  });
   final Tone3000Controller controller;
+  final bool embedded, targetSupportsNam;
   @override
   State<NamLibraryPage> createState() => _NamLibraryPageState();
 }
@@ -29,28 +36,116 @@ class _NamLibraryPageState extends State<NamLibraryPage> {
             (architecture == null || c.architecture == architecture) &&
             (compatibility == null || c.compatibility == compatibility);
       }).toList();
-      return Scaffold(
-        appBar: AppBar(title: const Text('NAM-Bibliothek')),
+      return WyrmScaffold(
+        title: 'NAM-Bibliothek',
+        embedded: widget.embedded,
         body: ListView(
+          key: const Key('nam-library-list'),
           padding: const EdgeInsets.all(16),
           children: [
+            const WyrmSection(
+              title: 'Neural Amp Models',
+              subtitle: 'Amp-Captures · NAM · Keine Geräteübertragung',
+              child: SizedBox.shrink(),
+            ),
+            if (!widget.targetSupportsNam)
+              const WyrmStatusBadge(
+                'Gewähltes Zielgerät unterstützt kein NAM',
+                warning: true,
+              ),
+            const SizedBox(height: 8),
+            TextField(
+              decoration: const InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                labelText: 'NAM durchsuchen',
+              ),
+              onChanged: (v) => setState(() => query = v),
+            ),
+            Wrap(
+              spacing: 8,
+              children: [
+                SizedBox(
+                  width: double.infinity,
+                  child: DropdownButton<NamArchitecture?>(
+                    isExpanded: true,
+                    value: architecture,
+                    hint: const Text('Architektur'),
+                    items: [
+                      const DropdownMenuItem(
+                        value: null,
+                        child: Text('Alle Architekturen'),
+                      ),
+                      ...NamArchitecture.values.map(
+                        (v) => DropdownMenuItem(
+                          value: v,
+                          child: Text(
+                            v == NamArchitecture.unknown
+                                ? 'Unbekannt'
+                                : v.name.toUpperCase(),
+                          ),
+                        ),
+                      ),
+                    ],
+                    onChanged: (v) => setState(() => architecture = v),
+                  ),
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: DropdownButton<NamCompatibility?>(
+                    isExpanded: true,
+                    value: compatibility,
+                    hint: const Text('Kompatibilität'),
+                    items: [
+                      const DropdownMenuItem(
+                        value: null,
+                        child: Text('Alle Status'),
+                      ),
+                      ...NamCompatibility.values.map(
+                        (v) => DropdownMenuItem(
+                          value: v,
+                          child: Text(compatibilityLabel(v)),
+                        ),
+                      ),
+                    ],
+                    onChanged: (v) => setState(() => compatibility = v),
+                  ),
+                ),
+              ],
+            ),
+            if (captures.isEmpty)
+              const WyrmEmptyState(
+                title: 'Noch keine lokalen NAM-Captures.',
+                message: 'Importiere eine vorhandene .nam-Datei oder wähle bei TONE3000 gezielt ein A1-Modell.',
+              )
+            else
+              for (final capture in captures)
+                Card(
+                  child: ListTile(
+                    title: Text(capture.captureName),
+                    subtitle: Text(
+                      'NAM · ${capture.source == 'local' ? 'Lokaler Import' : capture.source} · ${capture.creatorName} · Lizenz: ${capture.license.isEmpty ? 'unbekannt' : capture.license}\n${capture.architecture.name.toUpperCase()} · ${widget.targetSupportsNam ? compatibilityLabel(capture.compatibility) : 'Zielgerät nicht unterstützt'} · ${capture.fileSize} Byte\nZiel: Matribox 1 · ${capture.compatibility == NamCompatibility.missingLocalFile ? 'lokale Datei fehlt' : 'lokal vorhanden'}\n${capture.attribution}',
+                    ),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.delete_outline),
+                      tooltip: 'Lokales NAM löschen',
+                      onPressed: () => _confirmDelete(context, capture),
+                    ),
+                  ),
+                ),
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Sonicake Matribox 1',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
+                    WyrmTone3000Header(controller: controller),
                     const Text(
-                      'NAM A1: kompatibel\nNAM A2/A2-Lite: Geräteunterstützung noch nicht bestätigt\nÜbertragung zur Matribox: noch nicht verfügbar\nUSB-Protokoll: unbestätigt',
+                      'Matribox 1: NAM A1 kompatibel · A2 unbestätigt · Keine Geräteübertragung.',
                     ),
                     const SizedBox(height: 12),
                     FilledButton.icon(
                       key: const Key('tone3000-browse-nam'),
-                      onPressed: controller.busy
+                      onPressed: controller.busy || !controller.isConfigured
                           ? null
                           : () => controller.connectOrBrowse(
                               mode: Tone3000SelectionMode.namA1,
@@ -68,10 +163,10 @@ class _NamLibraryPageState extends State<NamLibraryPage> {
                 ),
               ),
             ),
-            if (controller.message != null)
+            if (tone3000VisibleMessage(controller) != null)
               Padding(
                 padding: const EdgeInsets.all(8),
-                child: Text(controller.message!),
+                child: Text(tone3000VisibleMessage(controller)!),
               ),
             if (selection != null) ...[
               Card(
@@ -106,69 +201,6 @@ class _NamLibraryPageState extends State<NamLibraryPage> {
                 ),
               ),
             ],
-            const SizedBox(height: 8),
-            TextField(
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                labelText: 'NAM durchsuchen',
-              ),
-              onChanged: (v) => setState(() => query = v),
-            ),
-            Wrap(
-              spacing: 8,
-              children: [
-                DropdownButton<NamArchitecture?>(
-                  value: architecture,
-                  hint: const Text('Architektur'),
-                  items: [
-                    const DropdownMenuItem(
-                      value: null,
-                      child: Text('Alle Architekturen'),
-                    ),
-                    ...NamArchitecture.values.map(
-                      (v) => DropdownMenuItem(value: v, child: Text(v.name)),
-                    ),
-                  ],
-                  onChanged: (v) => setState(() => architecture = v),
-                ),
-                DropdownButton<NamCompatibility?>(
-                  value: compatibility,
-                  hint: const Text('Kompatibilität'),
-                  items: [
-                    const DropdownMenuItem(
-                      value: null,
-                      child: Text('Alle Status'),
-                    ),
-                    ...NamCompatibility.values.map(
-                      (v) => DropdownMenuItem(value: v, child: Text(v.name)),
-                    ),
-                  ],
-                  onChanged: (v) => setState(() => compatibility = v),
-                ),
-              ],
-            ),
-            if (captures.isEmpty)
-              const Card(
-                child: Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Text('Noch keine lokalen NAM-Captures.'),
-                ),
-              )
-            else
-              for (final capture in captures)
-                Card(
-                  child: ListTile(
-                    title: Text(capture.captureName),
-                    subtitle: Text(
-                      '${capture.creatorName} · Lizenz: ${capture.license}\n${capture.architecture.name.toUpperCase()} · ${capture.compatibility.name} · ${capture.fileSize} Byte\nZiel: Matribox 1 · ${capture.compatibility == NamCompatibility.missingLocalFile ? 'lokale Datei fehlt' : 'lokal vorhanden'}\n${capture.attribution}',
-                    ),
-                    trailing: IconButton(
-                      icon: const Icon(Icons.delete_outline),
-                      tooltip: 'Lokales NAM löschen',
-                      onPressed: () => _confirmDelete(context, capture),
-                    ),
-                  ),
-                ),
           ],
         ),
       );

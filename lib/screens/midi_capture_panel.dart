@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 
 import '../midi/midi_capture_controller.dart';
 import '../midi/midi_receive_source.dart';
+import '../ui/wyrm_design.dart';
 
 class MidiCapturePanel extends StatelessWidget {
   const MidiCapturePanel({required this.controller, this.exporter, super.key});
@@ -28,7 +29,7 @@ class MidiCapturePanel extends StatelessWidget {
               const SizedBox(height: 8),
               Text(c.deviceName ?? 'Keine eindeutig zugeordnete Matribox'),
               Text(
-                'Status: ${c.state.name} · Output-Port: ${c.outputPort ?? 'geschlossen'}',
+                'Status: ${midiCaptureStatusLabel(c.state)} · Output-Port: ${c.outputPort ?? 'geschlossen'}',
               ),
               if (c.error != null) Text(c.error!),
               const Text('Nur Empfang – WyrmTone sendet keine MIDI-Daten'),

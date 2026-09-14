@@ -4,6 +4,9 @@ import 'package:flutter/services.dart';
 import '../controllers/usb_controller.dart';
 import '../models/usb_models.dart';
 import 'midi_capture_panel.dart';
+import 'verified_matribox_probe_panel.dart';
+import '../midi/midi_capture_controller.dart';
+import '../ui/wyrm_design.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({required this.controller, super.key});
@@ -14,8 +17,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnimatedBuilder(
       animation: controller,
-      builder: (context, _) => Scaffold(
-        appBar: AppBar(title: const Text('WyrmTone')),
+      builder: (context, _) => WyrmScaffold(
+        title: 'Gerät',
         body: RefreshIndicator(
           onRefresh: controller.refresh,
           child: ListView(
@@ -24,45 +27,101 @@ class HomePage extends StatelessWidget {
               _StatusCard(controller: controller),
               const SizedBox(height: 12),
               _Actions(controller: controller),
-              if (controller.supportedDevice?.isMatriboxOneCandidate == true)
-                _RawUsbAdvanced(controller: controller),
-              const SizedBox(height: 12),
-              MidiCapturePanel(controller: controller.capture),
-              const SizedBox(height: 20),
-              Text('USB-Geräte', style: Theme.of(context).textTheme.titleLarge),
-              const SizedBox(height: 8),
-              if (controller.devices.isEmpty)
-                const Card(
-                  key: Key('no-devices'),
-                  child: Padding(
-                    padding: EdgeInsets.all(16),
-                    child: Text('Keine USB-Geräte gefunden.'),
-                  ),
-                )
-              else
-                ...controller.devices.map(
-                  (device) => _DeviceCard(device: device),
+              WyrmCard(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Sichere Möglichkeiten',
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    const Text(
+                      'Geräteerkennung und Verbindungsdiagnose. Soundentwürfe werden nur lokal erstellt.',
+                    ),
+                    const SizedBox(height: 8),
+                    const WyrmStatusBadge(
+                      'Preset-, IR- und NAM-Übertragung nicht allgemein verfügbar',
+                    ),
+                  ],
                 ),
-              const SizedBox(height: 20),
-              Text(
-                'Android MIDI-Geräte',
-                style: Theme.of(context).textTheme.titleLarge,
               ),
-              const SizedBox(height: 8),
-              if (controller.midiDevices.isEmpty)
-                const Card(
-                  key: Key('no-midi-devices'),
-                  child: Padding(
-                    padding: EdgeInsets.all(16),
-                    child: Text('Keine Android-MIDI-Geräte gefunden.'),
+              ExpansionTile(
+                key: const Key('advanced-diagnostics'),
+                title: const Text('Erweiterte Diagnose'),
+                subtitle: const Text('Für Entwicklung und Fehlersuche'),
+                initiallyExpanded: false,
+                maintainState: true,
+                children: [
+                  if (controller.supportedDevice?.isMatriboxOneCandidate ==
+                      true)
+                    _RawUsbAdvanced(controller: controller),
+                  const SizedBox(height: 12),
+                  if (controller.supportedDevice?.hasPermission == true &&
+                      !controller.supportedDevice!.isMatriboxOneCandidate &&
+                      !controller.connection.isOpen)
+                    FilledButton.tonalIcon(
+                      key: const Key('open-button'),
+                      onPressed: controller.busy ? null : controller.open,
+                      icon: const Icon(Icons.link),
+                      label: const Text('Raw-USB-Diagnose öffnen'),
+                    ),
+
+                  MidiCapturePanel(controller: controller.capture),
+                  if (matriboxWriteProbeEnabled)
+                    VerifiedMatriboxProbePanel(
+                      connectionReady:
+                          controller.devices
+                                  .where((d) => d.isMatriboxOneCandidate)
+                                  .length ==
+                              1 &&
+                          controller.matriboxMidiDevice != null &&
+                          controller.midiConnection.isOpen &&
+                          controller.midiConnection.deviceId ==
+                              controller.matriboxMidiDevice?.id,
+                      monitoring:
+                          controller.capture.state ==
+                          MidiCaptureState.monitoring,
+                    ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'USB-Geräte',
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
-                )
-              else
-                ...controller.midiDevices.map(
-                  (device) => _MidiDeviceCard(device: device),
-                ),
-              const SizedBox(height: 20),
-              _LogCard(controller: controller),
+                  const SizedBox(height: 8),
+                  if (controller.devices.isEmpty)
+                    const Card(
+                      key: Key('no-devices'),
+                      child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Text('Keine USB-Geräte gefunden.'),
+                      ),
+                    )
+                  else
+                    ...controller.devices.map(
+                      (device) => _DeviceCard(device: device),
+                    ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'Android MIDI-Geräte',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                  const SizedBox(height: 8),
+                  if (controller.midiDevices.isEmpty)
+                    const Card(
+                      key: Key('no-midi-devices'),
+                      child: Padding(
+                        padding: EdgeInsets.all(16),
+                        child: Text('Keine Android-MIDI-Geräte gefunden.'),
+                      ),
+                    )
+                  else
+                    ...controller.midiDevices.map(
+                      (device) => _MidiDeviceCard(device: device),
+                    ),
+                  const SizedBox(height: 20),
+                  _LogCard(controller: controller),
+                ],
+              ),
             ],
           ),
         ),
@@ -79,9 +138,9 @@ class _StatusCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final state = controller.state;
     final color = switch (state) {
-      UsbConnectionState.open => Colors.green,
-      UsbConnectionState.detected => Colors.lightGreen,
-      UsbConnectionState.permissionRequired => Colors.orange,
+      UsbConnectionState.open => WyrmTokens.success,
+      UsbConnectionState.detected => WyrmTokens.muted,
+      UsbConnectionState.permissionRequired => WyrmTokens.ember,
       UsbConnectionState.unknownDevice => Colors.blueGrey,
       UsbConnectionState.noDevice => Colors.grey,
     };
@@ -89,9 +148,9 @@ class _StatusCard extends StatelessWidget {
       child: ListTile(
         key: const Key('connection-status'),
         leading: Icon(Icons.usb, color: color),
-        title: Text(controller.stateLabel),
+        title: Text(deviceStatusLabel(controller)),
         subtitle: const Text(
-          'Read-only: Dieser Prototyp sendet keine USB-Nutzdaten.',
+          'WyrmTone erkennt unterstützte Geräte und erstellt Soundentwürfe. Eine allgemeine Presetübertragung ist noch nicht verfügbar.',
         ),
       ),
     );
@@ -113,7 +172,7 @@ class _Actions extends StatelessWidget {
           key: const Key('search-button'),
           onPressed: controller.busy ? null : controller.refresh,
           icon: const Icon(Icons.search),
-          label: const Text('USB-Geräte suchen'),
+          label: const Text('Geräte suchen'),
         ),
         if (device != null && !device.hasPermission)
           FilledButton.icon(
@@ -121,15 +180,6 @@ class _Actions extends StatelessWidget {
             onPressed: controller.busy ? null : controller.requestPermission,
             icon: const Icon(Icons.lock_open),
             label: const Text('USB-Zugriff erlauben'),
-          ),
-        if (device?.hasPermission == true &&
-            !device!.isMatriboxOneCandidate &&
-            !controller.connection.isOpen)
-          FilledButton.tonalIcon(
-            key: const Key('open-button'),
-            onPressed: controller.busy ? null : controller.open,
-            icon: const Icon(Icons.link),
-            label: const Text('Raw-USB-Diagnose öffnen'),
           ),
         if (controller.connection.isOpen)
           FilledButton.icon(
@@ -163,8 +213,8 @@ class _RawUsbAdvanced extends StatelessWidget {
   final UsbController controller;
   @override
   Widget build(BuildContext context) => ExpansionTile(
-    key: const Key('advanced-diagnostics'),
-    title: const Text('Erweiterte Diagnose'),
+    key: const Key('raw-usb-diagnostics'),
+    title: const Text('Raw-USB-Test'),
     children: [
       const Padding(
         padding: EdgeInsets.all(12),
@@ -232,7 +282,7 @@ class _MidiDeviceCard extends StatelessWidget {
             const SizedBox(height: 8),
             const Text(
               'Geräte-Output liefert Daten zur App. Geräte-Input würde zum Gerät senden '
-              'und wird niemals geöffnet. Empfang startet nur ausdrücklich im Diagnosebereich.',
+              'und bleibt im passiven Monitor geschlossen. Nur der ausdrücklich freigegebene Entwickler-Einmaltest darf ihn öffnen.',
             ),
           ],
         ),

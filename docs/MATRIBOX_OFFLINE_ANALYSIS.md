@@ -248,3 +248,54 @@ Die rekonstruierten Hin-/Rücknachrichten unterscheiden sich ausschließlich an 
 Damit ist Host→Gerät-Parameteränderung für diese zwei Editor-Aktionen belegt. Allgemeine Schreibfreigabe, universelle Feldbedeutung oder ein notwendiger Handshake folgen daraus nicht. Kein Echo/ACK im MIDI-Endpunktfilter der beiden kurzen Editor-Captures sichtbar; USB-Transferstatus und proprietäre Bestätigung sind zu unterscheiden. Der Initialisierungsmitschnitt ist noch nicht vollständig semantisch ausgewertet. Die Rohdateien enthalten zusätzlich USB-Audio und möglicherweise Deskriptoren/Seriennummern und bleiben außerhalb des Repositorys; keine ungeprüfte Veröffentlichung.
 
 Nur bestehender Bericht angepasst, kein Parser-/App-Code verändert; keine Tests erforderlich. Ausschließlich Offline-Auswertung in diesem Schritt, keine Gerätekommunikation durch WyrmTone oder eigene Sender, kein App-Build, Commit oder Push.
+
+### Bytegenauer Vorvergleich für den freigegebenen Einmaltest
+
+Erneut offline aus den Original-URBs extrahiert: 02 / Host → Gerät / OUT 03 / Frames 779–780 und 03 / Host → Gerät / OUT 03 / Frame 683. Neue Gegenprobe `04_matribox_device_gain_41_to_40.pcapng`: SHA-256 `9B536567D03F4EF0E1CAA7B681220930F545AF21DA7947F11F27856686B76033`, Deskriptor 84EF:0054, Bus 1 / Adresse 13, Gerät → Host / IN 83 / Frame 775. Die aktuelle 04-Datei ersetzt frühere Fehlversuche mit DualSense beziehungsweise Sol 100 LD.
+
+Vollständige 34-Byte-MIDI-Nachrichten (ohne USB-MIDI-CIN und Padding):
+
+```text
+41: f021257f514d453212100300020407000000000007000000000000000002040402f7
+40: f021257f514d453212100300020407000000000007000000000000000002000402f7
+```
+
+Beide: F0…F7, QME2 an 4–7, Algorithmuscode 07000047 an 13–20 (Nibble → UInt32 LE), Gain-Index 0 an 21–24, Float32 LE 41 beziehungsweise 40 an 25–32. Die 40-Nachricht der Gegenprobe ist bytegleich mit der 40-Nachricht des Editors. Einziger Unterschied zur 41-Nachricht: Offset 30 = 00 statt 04. Keine weiteren variablen Bytes, Sequenz-/Zeitfelder oder variable zusätzliche Prüfsumme in diesen drei Referenznachrichten erkennbar; keine universelle Aussage über andere Befehle. SHA-256 der 41-Nachricht: `00A5945FC81C6345E37E9662314490E675B5D7080B76C285E09C339F2A2A57ED`. Die exakte 41-Originalnachricht ist die maßgebliche Referenz, keine aus Feldannahmen erzeugte Nachricht.
+## Maschinenlesbare Freigabematrix
+
+Die aktuelle Quelle der Laufzeitentscheidung ist
+`lib/presets/protocol_evidence.dart`. Sie trennt `observed`,
+`correlated`, `confirmed` und `unknown` sowie Lesen, Schreiben,
+Produktionsfreigabe und nötige Hardwaretests. Bestätigt sind Identität,
+Android-MIDI-Öffnen/Schließen und der eng begrenzte Sol-100-OD-Gain-Versuch.
+Sol 100 LD, Calif Star CL sowie Bass-/Middle-Indizes bleiben Korrelationen.
+Alle vollständigen Presetoperationen bleiben unbekannt und gesperrt.
+
+Das öffentliche Projekt `hurricaneabel/Matribox_II_Pro_MidiCon` wurde nur
+vergleichend gelesen. Im Repository-Baum war keine Lizenzdatei vorhanden; es
+wurde deshalb weder Code noch Architektur oder Zuordnung übernommen. Seine
+Angaben betreffen zudem die Matribox II Pro und sind kein Beleg für Matribox 1.
+
+### Bestätigte Presetauswahl im PC-Editor
+
+Die kontrollierten Mitschnitte `05_matribox_editor_select_test_A_to_test_B.pcapng`
+(SHA-256 `010CF51A124F5B6A0F3AFE1D4A61EBC06DBCDB1B858D4E3A8630F5D2A305C042`)
+und `06_matribox_editor_select_test_B_to_test_A.pcapng` (SHA-256
+`E074073A18DDD7E96A8C538D331C7B97DB9D6646F331087C7005BEC73BDAF6EF`)
+enthalten jeweils zweimal dieselbe 22-Byte-SysEx vom PC-Editor über OUT 03.
+Es ist keine MIDI-Antwort über IN 83 enthalten. Der Nutzer bestätigte den
+sichtbar erfolgreichen Wechsel P10 „Baby Cry“ → P11 „Cream OD“ sowie die
+Gegenprobe P11 → P10.
+
+```text
+P11: f021257f514d4532120002000000000000000a0000f7
+P10: f021257f514d453212000200000000000000090000f7
+```
+
+Die Nachrichten unterscheiden sich ausschließlich an Offset 18 (nullbasiert
+einschließlich F0): `0A` für P11 und `09` für P10. Damit ist Offset 18 für diese
+beiden kontrollierten Editorwechsel als nullbasierter Ziel-Presetindex
+bestätigt. Nicht bestätigt sind die allgemeine Gültigkeit über weitere Bänke,
+die Bedeutung der übrigen Felder und ob die unmittelbar wiederholte zweite
+Nachricht erforderlich ist. Daraus folgt keine allgemeine Schreibfreigabe;
+Presetübertragung durch WyrmTone bleibt gesperrt.

@@ -57,6 +57,9 @@ void main() {
       MaterialApp(home: RecommendationPage(controller: controller)),
     );
     await tester.pumpAndSettle();
+    await tester.ensureVisible(find.byKey(const Key('legacy-recommendations')));
+    await tester.tap(find.byKey(const Key('legacy-recommendations')));
+    await tester.pumpAndSettle();
 
     expect(find.textContaining('PURE BOOST'), findsWidgets);
     expect(find.textContaining('GAIN: 64'), findsOneWidget);

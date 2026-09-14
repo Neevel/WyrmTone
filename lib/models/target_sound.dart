@@ -1,4 +1,5 @@
 import 'guitar_profile.dart';
+import 'tone_target.dart';
 
 class TargetSound {
   const TargetSound({
@@ -20,6 +21,13 @@ class TargetSound {
     required this.baseParameters,
     required this.confirmedFacts,
     required this.approximations,
+    this.profileKind = SoundProfileKind.song,
+    this.profileVersion = 1,
+    this.aliases = const [],
+    this.artistAliases = const [],
+    this.roles = const [SoundRole.rhythm],
+    this.supportedTunings = const [],
+    this.toneTarget,
   });
 
   final String id;
@@ -40,6 +48,12 @@ class TargetSound {
   final Map<String, int> baseParameters;
   final List<String> confirmedFacts;
   final List<String> approximations;
+  final SoundProfileKind profileKind;
+  final int profileVersion;
+  final List<String> aliases, artistAliases;
+  final List<SoundRole> roles;
+  final List<GuitarTuning> supportedTunings;
+  final ToneTarget? toneTarget;
 
   String get displayName => '$artist – $song';
 }

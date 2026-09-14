@@ -8,6 +8,7 @@ import 'services/ir_file_picker_service.dart';
 import 'services/ir_reference_catalog_service.dart';
 import 'services/local_persistence.dart';
 import 'services/usb_service.dart';
+import 'ui/wyrm_design.dart';
 
 class WyrmToneApp extends StatefulWidget {
   const WyrmToneApp({
@@ -69,13 +70,7 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
     return MaterialApp(
       title: 'WyrmTone',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xffe65100),
-          brightness: Brightness.dark,
-        ),
-        useMaterial3: true,
-      ),
+      theme: WyrmTokens.theme(),
       home: AppShell(
         usbController: controller,
         recommendationController: recommendationController,

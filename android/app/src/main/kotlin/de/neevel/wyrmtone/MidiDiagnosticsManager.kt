@@ -13,7 +13,7 @@ import android.os.Looper
 
 /**
  * Receive-only diagnostics: only device Output-Port -> app receiver is allowed.
- * There is no input-port, transmitter or device-write operation.
+ * The passive monitor never writes. An isolated compile-gated probe owns its input port.
  */
 class MidiDiagnosticsManager(
     context: Context,
@@ -33,6 +33,16 @@ class MidiDiagnosticsManager(
     private var openedInfo: MidiDeviceInfo? = null
     private var openGeneration = 0
     private var disposed = false
+    private var foreground = false
+    private val writeProbe = VerifiedMatriboxProbe(
+        eligibility = ::probeEligibility,
+        openPort = {
+            probeEligibility().check()
+            VerifiedMatriboxProbePort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+    )
     private val batchBuffer = MidiCaptureBatchBuffer()
     private val monitor = PassiveMidiMonitor(
         openOutput = { number ->
@@ -160,6 +170,7 @@ class MidiDiagnosticsManager(
 
     fun closeDevice() {
         ++openGeneration
+        writeProbe.cancel()
         stopCapture()
         session.close()
         openedMidiDevice = null
@@ -191,6 +202,7 @@ class MidiDiagnosticsManager(
     }
 
     fun pause() {
+        foreground = false
         closeDevice()
         emitCapture(mapOf("type" to "stopped", "reason" to "appPause"))
         connectionClosed("appPause")
@@ -204,10 +216,50 @@ class MidiDiagnosticsManager(
     )
 
     fun onUsbDetached(deviceName: String?) {
+        writeProbe.detached(deviceName)
         ++openGeneration
         if (deviceName != null && session.usbDeviceName == deviceName) {
             closeDevice(); connectionClosed("usbDetached")
         }
+    }
+
+    fun resume() { foreground = true }
+
+    fun writeProbeStatus(): Map<String, Any?> = writeProbe.status() + mapOf("sessionToken" to openGeneration)
+
+    fun sendVerifiedSol100OdGain41Probe(): Map<String, Any?> {
+        val result = writeProbe.sendVerifiedSol100OdGain41Probe()
+        if (result["success"] != true) {
+            closeDevice()
+            connectionClosed("probeFailed")
+        }
+        return result
+    }
+
+    private fun probeEligibility(): ProbeEligibility {
+        val info = openedInfo
+        val attached = usbManager.deviceList.values.filter { it.vendorId == 0x84ef && it.productId == 0x0054 }
+        val usb = attached.singleOrNull()
+        @Suppress("DEPRECATION")
+        fun directUsb(candidate: MidiDeviceInfo): UsbDevice? =
+            candidate.properties.getParcelable(MidiDeviceInfo.PROPERTY_USB_DEVICE) as? UsbDevice
+        val matchingMidi = midiManager?.devices.orEmpty().filter {
+            val direct = directUsb(it)
+            it.type == MidiDeviceInfo.TYPE_USB && direct != null && usb != null &&
+                direct.deviceName == usb.deviceName && direct.vendorId == 0x84ef && direct.productId == 0x0054
+        }
+        val direct = info?.let(::directUsb)
+        val input = info?.ports?.filter { it.type == MidiDeviceInfo.PortInfo.TYPE_INPUT }.orEmpty()
+        return ProbeEligibility(
+            enabled = BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_WRITE_PROBE,
+            connection = usb?.deviceName, vendor = usb?.vendorId, product = usb?.productId,
+            uniqueUsb = attached.size == 1, uniqueMidi = matchingMidi.size == 1,
+            directlyMapped = info != null && matchingMidi.singleOrNull()?.id == info.id &&
+                direct?.deviceName == session.usbDeviceName && direct?.deviceName == usb?.deviceName,
+            deviceOpen = foreground && !disposed && session.isOpen && openedMidiDevice != null,
+            expectedInput = input.size == 1 && input.single().portNumber == 0,
+            monitoring = monitor.monitoring,
+        )
     }
 
     private fun deviceToMap(info: MidiDeviceInfo): Map<String, Any?> {
