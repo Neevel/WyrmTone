@@ -182,7 +182,7 @@ class _ToneTransferPageState extends State<ToneTransferPage> {
   /// The page's slot, only when it may be written (P11..P99). Null otherwise -- never a default.
   MatriboxUserSlot? get _slot {
     final slot = MatriboxUserSlot.tryPreset(widget.targetSlot);
-    return slot != null && slot.isProductWritable ? slot : null;
+    return slot != null && MatriboxSlotPolicy.isProductWritable(slot.presetNumber) ? slot : null;
   }
 
   String get _slotLabel => MatriboxUserSlot.tryPreset(widget.targetSlot)?.label ?? '—';
@@ -223,7 +223,7 @@ class _ToneTransferPageState extends State<ToneTransferPage> {
   /// not product-writable, so nothing is ever stored or loaded for P01..P10.
   Future<MatriboxToneTransferStore?> _storeFor(int? presetNumber) async {
     final slot = MatriboxUserSlot.tryPreset(presetNumber);
-    if (slot == null || !slot.isProductWritable) return null;
+    if (slot == null || !MatriboxSlotPolicy.isProductWritable(slot.presetNumber)) return null;
     return MatriboxToneTransferStore(
       File('${(await widget.backupDirectory()).path}/${toneTransferStateFileName(slot)}'),
       slot: slot,

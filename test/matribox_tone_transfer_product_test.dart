@@ -1,11 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:wyrmtone/presets/matribox_angels_product_plan.dart';
 import 'package:wyrmtone/presets/matribox_chain_slot.dart';
 import 'package:wyrmtone/presets/matribox_evidence_v2.dart';
-import 'package:wyrmtone/presets/matribox_family_expansion_certification.dart';
-import 'package:wyrmtone/presets/matribox_full_live_session.dart';
 import 'package:wyrmtone/presets/matribox_hardware_evidence.dart';
 import 'package:wyrmtone/presets/matribox_model_library.dart';
 import 'package:wyrmtone/presets/matribox_raw_backup_service.dart';
@@ -15,6 +12,7 @@ import 'package:wyrmtone/presets/matribox_transfer_catalog.dart';
 
 import '../tool/native_manufacturer_catalog.dart';
 import 'support/matribox_big_capture_snapshots.dart';
+import 'support/matribox_certified_runs.dart';
 import 'support/matribox_full_live_helpers.dart';
 import 'support/matribox_tone_transfer_support.dart';
 
@@ -64,24 +62,6 @@ void main() {
       );
 
   group('evidence ledger of the productive transport', () {
-    test('exactly the real CERTIFIED operations of Angels and FAMILY_EXPANSION, equal to what the certification plans derive', () {
-      MatriboxFullLiveRecord certified(String planId, int n) => MatriboxFullLiveRecord(
-        planId: planId, beforeBackupPath: 'x', beforeBackupSha256: 'x', runOutcome: 'success',
-        completed: n, total: n, sentAt: DateTime.utc(2026),
-      ).withReadback('certified', DateTime.utc(2026), 'y');
-      final angelsPlan = AngelsProductPlan(library: library);
-      final familyPlan = FamilyExpansionP01Plan(library);
-      final derived = MatriboxHardwareLedger.baseline()
-          .withCertification(angelsPlan, certified(AngelsProductPlan.planIdValue, 11))
-          .withCertification(familyPlan, certified(FamilyExpansionP01Plan.planIdValue, 23));
-      final product = MatriboxHardwareLedger.product();
-      expect(product.exact, derived.exact);
-      expect(product.exactModels, derived.exactModels);
-      expect(product.exactToggles, derived.exactToggles);
-      expect(product.modelSlots, isEmpty); // no Full Live generalization in the productive ledger
-      expect(product.toggleConfirmed, isFalse);
-    });
-
     test('after the promotion: families are FAMILY_CONFIRMED, everything structurally unsafe stays BLOCKED', () {
       final v2 = MatriboxEvidenceV2(library: library, samples: ActiveSamples.fromLedger(MatriboxHardwareLedger.product(), library));
       MatriboxTransferModel m(MatriboxChainSlot s, String n) => library.byName(s, n)!;
@@ -140,10 +120,9 @@ void main() {
         'CAB BLOCK ON',
         'EQ BLOCK OFF',
       ]);
-      // the same list as the certified hardware run
-      final certified = AngelsProductPlan(library: library, target: rec.target);
-      expect(certified.blockers(beforeLayout()), isEmpty);
-      expect(plan.operations.map((e) => e.bytes!.join(',')), certified.operations.map((o) => o.bytes.join(',')));
+      // byte for byte the messages of the CERTIFIED hardware run (frozen evidence)
+      String hex(List<int> b) => b.map((x) => x.toRadixString(16).padLeft(2, '0')).join(' ');
+      expect(plan.operations.map((e) => hex(e.bytes!)), angelsDontKillP01V1.operations.map((o) => o.hex));
     });
 
     test('the same request against a different current P01: same TARGET, different DIFF', () {
@@ -332,12 +311,6 @@ void main() {
   });
 
   group('single send path and product/certification separation', () {
-    test('certification panels are not the productive path', () {
-      final page = File('lib/screens/tone_transfer_page.dart').readAsStringSync();
-      expect(page, isNot(contains('runFullLiveP01Certification')));
-      expect(page, isNot(contains('matribox_angels_certification_panel')));
-      expect(page, isNot(contains('matribox_full_live_panel')));
-    });
   });
 }
 

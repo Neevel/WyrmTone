@@ -3,10 +3,9 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wyrmtone/presets/matribox_chain_slot.dart';
-import 'package:wyrmtone/presets/matribox_full_live_plan.dart';
-import 'package:wyrmtone/presets/matribox_full_live_session.dart';
 import 'package:wyrmtone/presets/matribox_full_live_verifier.dart';
 import 'package:wyrmtone/presets/matribox_hardware_evidence.dart';
+import 'package:wyrmtone/presets/matribox_model_library.dart';
 import 'package:wyrmtone/presets/matribox_preset_layout.dart';
 import 'package:wyrmtone/presets/matribox_raw_backup_service.dart';
 import 'package:wyrmtone/presets/matribox_target_preset.dart';
@@ -24,16 +23,21 @@ MatriboxToneTransferPlan planFor(
   MatriboxHardwareLedger? ledger,
   bool transport = true,
   MatriboxPresetLayoutModel? current,
+  MatriboxModelLibrary? library,
 }) => MatriboxToneTransferPlan.build(
   current: current ?? beforeLayout(),
   target: target,
-  ledger: ledger ?? certifiedLedger,
+  ledger: ledger ?? MatriboxHardwareLedger.product(),
   backupSha256: 'abc123',
   presetNumber: 11,
   isUserBank: true,
   transportAvailable: transport,
   nameCatalog: toneCatalog,
+  library: library ?? productLibrary,
 );
+
+/// The library the product uses (vendor catalog); the productive ledger names its models.
+final productLibrary = MatriboxModelLibrary.fromVendor(toneCatalog);
 
 MatriboxTargetPreset targetOf(Map<MatriboxChainSlot, MatriboxTargetBlock> blocks) =>
     MatriboxTargetPreset(blocks: blocks);
@@ -61,9 +65,10 @@ void main() {
     MatriboxToneTransferChannel? channel,
   }) => MatriboxToneTransferSession(
     backupService: service(read),
-    ledger: ledger ?? certifiedLedger,
+    ledger: ledger ?? MatriboxHardwareLedger.product(),
     channel: channel ?? RecordingTransfer(),
     nameCatalog: toneCatalog,
+    library: productLibrary,
   );
 
   group('current device state', () {
@@ -107,11 +112,12 @@ void main() {
       final wrongHash = MatriboxToneTransferPlan.build(
         current: prepared.current!,
         target: prepared.target,
-        ledger: certifiedLedger,
+        ledger: MatriboxHardwareLedger.product(),
         backupSha256: 'deadbeef',
         presetNumber: 11,
         isUserBank: true,
         transportAvailable: true,
+        library: productLibrary,
       );
       final mismatch = await MatriboxToneTransferExecutor(channel: channel, store: store).execute(
         PreparedToneTransfer(target: prepared.target, read: prepared.read, plan: wrongHash, targetSlot: 11),
@@ -187,14 +193,14 @@ void main() {
       final target = targetOf({
         MatriboxChainSlot.fx1: MatriboxTargetBlock(
           slot: MatriboxChainSlot.fx1,
-          parameters: {'sustain': tv(30)}, // current FX1 model is not in the transfer catalog
+          parameters: {'sustain': tv(30)}, // the current FX1 model is not in this (capture-only) library
         ),
         MatriboxChainSlot.amp: MatriboxTargetBlock(
           slot: MatriboxChainSlot.amp,
           parameters: {'gain': tv(120), 'nonexistent': tv(1)},
         ),
       });
-      final plan = planFor(target);
+      final plan = planFor(target, library: MatriboxModelLibrary.base);
       Iterable<ToneSendEligibility> of(MatriboxChainSlot s) =>
           plan.entries.where((e) => e.slot == s && e.specified && e.isChange).map((e) => e.eligibility);
       expect(of(MatriboxChainSlot.fx1), [ToneSendEligibility.unknownCurrent]);
@@ -223,49 +229,7 @@ void main() {
       expect(plan.summary.blocked, 3);
     });
 
-    test('a non-certified Full Live record grants nothing', () {
-      MatriboxFullLiveRecord record({String? outcome, int completed = 25, FullLiveRecordState? state}) {
-        final r = MatriboxFullLiveRecord(
-          planId: MatriboxFullLivePlan.planId,
-          beforeBackupPath: 'x',
-          beforeBackupSha256: 'x',
-          runOutcome: 'success',
-          completed: completed,
-          total: 25,
-          sentAt: DateTime.utc(2026),
-        );
-        return state == FullLiveRecordState.sent ? r : r.withReadback(outcome ?? 'certified', DateTime.utc(2026), 'y');
-      }
-
-      for (final r in [
-        null,
-        record(state: FullLiveRecordState.sent),
-        record(outcome: 'expectedChangeMissing'),
-        record(outcome: 'unknownRawChange'),
-        record(completed: 12),
-      ]) {
-        final ledger = MatriboxHardwareLedger.fromFullLive(r);
-        expect(ledger.modelSlots, isEmpty);
-        expect(ledger.toggleConfirmed, isFalse);
-      }
-      expect(MatriboxHardwareLedger.fromFullLive(certifiedFullLiveRecord()).modelSlots.length, 9);
-    });
-
-    test('generalization is limited to what was certified (G1/G2/G3)', () {
-      final ledger = certifiedLedger;
-      final skreamer = MatriboxTransferCatalog.byName('Skreamer')!;
-      final flanger = MatriboxTransferCatalog.byName('Flanger')!;
-      expect(ledger.model(MatriboxChainSlot.mod, flanger).confirmed, isTrue); // G1
-      expect(ledger.parameter(MatriboxChainSlot.fx1, skreamer, skreamer.parameter('gain')!).confirmed, isTrue); // G2
-      // (MOD, number) was never certified: Flanger only tested decimal + flag.
-      expect(ledger.parameter(MatriboxChainSlot.mod, flanger, flanger.parameter('depth')!).confirmed, isFalse);
-      expect(ledger.parameter(MatriboxChainSlot.mod, flanger, flanger.parameter('rate')!).confirmed, isTrue);
-      expect(ledger.toggle(MatriboxChainSlot.dly, false).confirmed, isTrue); // G3
-      expect(baselineLedger.toggle(MatriboxChainSlot.dly, false).confirmed, isFalse);
-      expect(MatriboxHardwareLedger.generalizationRules, hasLength(3));
-    });
-
-    test('with a CERTIFIED Full Live the transfer mechanics plan is READY: 1 model, 5 parameter, 2 block operations', () {
+    test('with the productive ledger the transfer mechanics plan is READY: 1 model, 5 parameter, 2 block operations', () {
       final plan = planFor(readyTarget());
       expect(plan.overall, ToneTransferOverall.ready);
       final s = plan.summary;
@@ -291,9 +255,9 @@ void main() {
       expect(plan.sendable, isFalse);
     });
 
-    test('selecting a model without a captured select message, an observed model or a User IR is blocked', () {
+    test('a model select needs hardware samples, not only protocol evidence; User IR is never selectable', () {
       final brit = beforeLayoutWithAmp(0x07000035);
-      MatriboxToneTransferPlan planWith(String name) => planFor(
+      MatriboxToneTransferPlan planWith(String name, {MatriboxHardwareLedger? ledger}) => planFor(
         targetOf({
           MatriboxChainSlot.amp: MatriboxTargetBlock(
             slot: MatriboxChainSlot.amp,
@@ -301,13 +265,17 @@ void main() {
           ),
         }),
         current: brit,
+        ledger: ledger,
       );
       ToneTransferEntry ampModel(MatriboxToneTransferPlan p) =>
           p.entries.firstWhere((e) => e.slot == MatriboxChainSlot.amp && e.subject == 'MODEL');
-      final od = ampModel(planWith('Sol 100 OD'));
+      // without select samples (baseline ledger) a select is blocked, whatever its protocol evidence
+      final od = ampModel(planWith('Sol 100 OD', ledger: baselineLedger));
       expect(od.eligibility, ToneSendEligibility.blockedByEvidence);
       expect(od.protocolEvidence, TransferProtocolEvidence.correlated);
-      expect(ampModel(planWith('Sol 100 LD')).eligibility, ToneSendEligibility.blockedByEvidence);
+      expect(ampModel(planWith('Sol 100 LD', ledger: baselineLedger)).eligibility, ToneSendEligibility.blockedByEvidence);
+      // the productive samples make AMP select a confirmed family (Sol 100 OD was selected in a certified run)
+      expect(ampModel(planWith('Sol 100 OD')).eligibility, ToneSendEligibility.eligible);
       final ir = planFor(
         targetOf({
           MatriboxChainSlot.cab: MatriboxTargetBlock(
@@ -540,12 +508,6 @@ void main() {
       final invoked = RegExp(r"invokeMapMethod<[^>]*>\(\s*'([A-Za-z0-9]+)'").allMatches(clients).map((m) => m.group(1)).toSet();
       expect(invoked, containsAll({'readMatriboxUserP01', 'executeToneTransfer', 'getToneTransferStatus'}));
       expect(page, contains('UnavailableToneTransferChannel'));
-    });
-
-    test('Full Live evidence: the generalization rules are the documented ones', () {
-      final evidence = code('lib/presets/matribox_hardware_evidence.dart');
-      expect(evidence, contains('MatriboxFullLivePlan.operations'));
-      expect(evidence, contains("record.readbackOutcome == 'certified'"));
     });
   });
 }

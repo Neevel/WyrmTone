@@ -12,25 +12,38 @@
 /// (MatriboxSlotPolicy.kt); this file is the Dart half of that boundary, every Dart layer asks it
 /// instead of repeating its own `>= 11` check.
 ///
-/// Evidence status of P11..P99: PRODUCT_WRITABLE / SOFTWARE_VALIDATED. The slot addressing
-/// (read Bank/Slot bytes, preset-select index = preset number - 1) is protocol evidence; a hardware
-/// run per slot range is still outstanding, so no slot is claimed as HARDWARE_CERTIFIED here.
+/// Evidence status: P11 is HARDWARE_CERTIFIED (real multi-slot transfer 2026-09-23: fresh read,
+/// preset select, live write, manual save, same-slot readback CERTIFIED). P12..P99 are
+/// PRODUCT_WRITABLE / SOFTWARE_VALIDATED: the slot addressing is protocol evidence, but the P11
+/// run is not generalized to them.
 library;
 
+import 'matribox_user_slot.dart';
+
+export 'matribox_user_slot.dart';
+
 abstract final class MatriboxSlotPolicy {
-  static const firstUserPreset = 1;
-  static const lastUserPreset = 99;
+  static const firstUserPreset = MatriboxUserSlot.firstPresetNumber;
+  static const lastUserPreset = MatriboxUserSlot.lastPresetNumber;
   static const lastProtectedPreset = 10;
   static const firstWritablePreset = 11;
 
-  /// Honest status of every writable slot after the software milestone.
+  /// Status of every writable slot without its own hardware run.
   static const writableEvidenceStatus = 'PRODUCT_WRITABLE / SOFTWARE_VALIDATED';
+
+  /// Writable slots with their own CERTIFIED hardware run (never generalized to other slots).
+  static const hardwareCertifiedPresets = {11};
+
+  static String evidenceStatus(int presetNumber) => hardwareCertifiedPresets.contains(presetNumber)
+      ? 'PRODUCT_WRITABLE / HARDWARE_CERTIFIED'
+      : isProductWritable(presetNumber)
+      ? writableEvidenceStatus
+      : 'PROTECTED';
 
   static const protectedExplanation = 'P01–P10 sind geschützt.';
   static const writableExplanation = 'Für Übertragungen stehen P11–P99 zur Verfügung.';
 
-  static bool isUserPreset(int? presetNumber) =>
-      presetNumber != null && presetNumber >= firstUserPreset && presetNumber <= lastUserPreset;
+  static bool isUserPreset(int? presetNumber) => MatriboxUserSlot.tryPreset(presetNumber) != null;
 
   static bool isProtected(int? presetNumber) =>
       presetNumber != null && presetNumber >= firstUserPreset && presetNumber <= lastProtectedPreset;
@@ -47,41 +60,6 @@ abstract final class MatriboxSlotPolicy {
     if (!isUserPreset(presetNumber)) return 'Ungültiger Speicherplatz. $writableExplanation';
     return null;
   }
-}
-
-/// A User-bank preset P01..P99. Only ever built from a valid number; never a default.
-final class MatriboxUserSlot {
-  const MatriboxUserSlot._(this.presetNumber);
-
-  /// Null for anything outside P01..P99 (including a missing number).
-  static MatriboxUserSlot? tryPreset(int? presetNumber) =>
-      MatriboxSlotPolicy.isUserPreset(presetNumber) ? MatriboxUserSlot._(presetNumber!) : null;
-
-  factory MatriboxUserSlot.preset(int presetNumber) =>
-      tryPreset(presetNumber) ?? (throw ArgumentError.value(presetNumber, 'presetNumber', 'kein User-Preset P01–P99'));
-
-  /// Inverse of [deviceIndex]: 0..98.
-  factory MatriboxUserSlot.fromDeviceIndex(int deviceIndex) => MatriboxUserSlot.preset(deviceIndex + 1);
-
-  /// 1..99.
-  final int presetNumber;
-
-  /// 0..98: the Bank/Slot byte of the read and the preset-select index.
-  int get deviceIndex => presetNumber - 1;
-
-  bool get isProtected => MatriboxSlotPolicy.isProtected(presetNumber);
-  bool get isProductWritable => MatriboxSlotPolicy.isProductWritable(presetNumber);
-
-  String get label => 'P${presetNumber.toString().padLeft(2, '0')}';
-
-  @override
-  bool operator ==(Object other) => other is MatriboxUserSlot && other.presetNumber == presetNumber;
-
-  @override
-  int get hashCode => presetNumber.hashCode;
-
-  @override
-  String toString() => label;
 }
 
 /// What is released for one slot, split by pipeline step. Derived from [MatriboxSlotPolicy] only.
@@ -114,7 +92,7 @@ class SlotCapability {
   /// Every step above is released TOGETHER: the only flag the UI may use to enable a transfer.
   final bool productiveTransferSupported;
 
-  /// A real hardware run for this slot exists. False for every slot after the software milestone.
+  /// A real, CERTIFIED hardware run exists for exactly this slot.
   final bool hardwareCertified;
 
   /// P01..P10: shown, but never a transfer target.
@@ -127,7 +105,7 @@ class SlotCapability {
     productiveTransferSupported: false,
   );
 
-  /// P11..P99: PRODUCT_WRITABLE / SOFTWARE_VALIDATED.
+  /// P12..P99: PRODUCT_WRITABLE / SOFTWARE_VALIDATED.
   static const productWritable = SlotCapability(
     selectable: true,
     readable: true,
@@ -135,6 +113,17 @@ class SlotCapability {
     writeSupported: true,
     verifySupported: true,
     productiveTransferSupported: true,
+  );
+
+  /// P11: PRODUCT_WRITABLE / HARDWARE_CERTIFIED.
+  static const productWritableHardwareCertified = SlotCapability(
+    selectable: true,
+    readable: true,
+    backupSupported: true,
+    writeSupported: true,
+    verifySupported: true,
+    productiveTransferSupported: true,
+    hardwareCertified: true,
   );
 }
 
@@ -159,7 +148,11 @@ abstract final class MatriboxTransferSlots {
     for (var n = MatriboxSlotPolicy.firstUserPreset; n <= MatriboxSlotPolicy.lastUserPreset; n++)
       MatriboxTransferSlot(
         n,
-        MatriboxSlotPolicy.isProductWritable(n) ? SlotCapability.productWritable : SlotCapability.protectedPlay,
+        !MatriboxSlotPolicy.isProductWritable(n)
+            ? SlotCapability.protectedPlay
+            : MatriboxSlotPolicy.hardwareCertifiedPresets.contains(n)
+            ? SlotCapability.productWritableHardwareCertified
+            : SlotCapability.productWritable,
       ),
   ]);
 

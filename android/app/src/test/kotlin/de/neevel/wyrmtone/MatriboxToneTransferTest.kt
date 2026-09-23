@@ -84,7 +84,6 @@ class MatriboxToneTransferTest {
             MatriboxAngelsGolden.messages,
             plan.operations.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } },
         )
-        assertEquals(MatriboxAngelsPlan.operations, plan.operations)
     }
 
     @Test fun `every operation of an accepted plan is natively hardware-confirmed`() {
@@ -208,7 +207,7 @@ class MatriboxToneTransferTest {
             assertEquals("SENT", result["presetSelect"])
             assertEquals(listOf(preset, preset), port.selected.map { it.presetNumber })
             assertEquals(List(2) { "SELECT ${MatriboxWritableUserPreset.of(preset).label}" }, port.wire.take(2))
-            assertEquals(MatriboxAngelsPlan.operations, port.sent)
+            assertEquals(MatriboxAngelsGolden.messages, port.sent.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } })
             assertEquals(11, result["completed"])
             val message = MatriboxPresetSelectReference.message(MatriboxWritableUserPreset.of(preset))
             assertEquals(index.toByte(), message[MatriboxPresetSelectReference.INDEX_OFFSET])
@@ -303,7 +302,7 @@ class MatriboxToneTransferTest {
         val port = Port()
         val result = session(port).execute(request(angels))
         assertEquals(ToneTransferOutcome.SUCCESS.name, result["outcome"])
-        assertEquals(MatriboxAngelsPlan.operations, port.sent)
+        assertEquals(MatriboxAngelsGolden.messages, port.sent.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } })
         assertEquals(11, result["completed"])
         assertEquals(1, port.closes)
     }
@@ -318,7 +317,7 @@ class MatriboxToneTransferTest {
         @Suppress("UNCHECKED_CAST")
         val statuses = (result["operations"] as List<Map<String, Any?>>).map { it["status"] }
         assertEquals(List(4) { "SENT" } + "FAILED" + List(6) { "NOT_SENT" }, statuses)
-        assertEquals(MatriboxAngelsPlan.operations.take(4), port.sent)
+        assertEquals(MatriboxAngelsGolden.messages.take(4), port.sent.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } })
         // the same plan in the same connection is never executed again
         val again = s.execute(request(angels))
         assertEquals(ToneTransferOutcome.SAFETY_REJECTED.name, again["outcome"])

@@ -5,10 +5,7 @@ import 'package:wyrmtone/models/guitar_profile.dart';
 import 'package:wyrmtone/models/tone_target.dart';
 import 'package:wyrmtone/presets/canonical_preset.dart';
 import 'package:wyrmtone/presets/device_catalog.dart';
-import 'package:wyrmtone/presets/matribox_certification_plan.dart';
 import 'package:wyrmtone/presets/matribox_chain_slot.dart';
-import 'package:wyrmtone/presets/matribox_full_live_plan.dart';
-import 'package:wyrmtone/presets/matribox_full_live_session.dart';
 import 'package:wyrmtone/presets/matribox_hardware_evidence.dart';
 import 'package:wyrmtone/presets/matribox_preset_layout.dart';
 import 'package:wyrmtone/presets/matribox_raw_backup_service.dart';
@@ -53,18 +50,6 @@ ToneTransferRecommendation angelsRecommendation() => MatriboxToneTransferPipelin
   createdAt: DateTime.utc(2026),
 );
 
-/// A Full Live record as the certified hardware run would leave it.
-MatriboxFullLiveRecord certifiedFullLiveRecord() => MatriboxFullLiveRecord(
-  planId: MatriboxFullLivePlan.planId,
-  beforeBackupPath: 'x',
-  beforeBackupSha256: 'x',
-  runOutcome: 'success',
-  completed: MatriboxFullLivePlan.operations.length,
-  total: MatriboxFullLivePlan.operations.length,
-  sentAt: DateTime.utc(2026),
-).withReadback('certified', DateTime.utc(2026), 'y');
-
-final certifiedLedger = MatriboxHardwareLedger.fromFullLive(certifiedFullLiveRecord());
 final baselineLedger = MatriboxHardwareLedger.baseline();
 
 RawPresetSnapshot beforeSnapshot() => RawPresetSnapshot.capture(
@@ -229,9 +214,9 @@ MatriboxPresetLayoutModel beforeLayoutWithAmp(int code) {
 }
 
 /// A hand-built target from capture-confirmed pieces only (Skreamer, Sol 100
-/// OD parameters, BritGN 4x12): the one target that can be fully hardware
-/// eligible once a Full Live run is CERTIFIED. Used to test the transfer
-/// mechanics independently of what the recommendation currently produces.
+/// OD parameters, BritGN 4x12), eligible under the productive ledger. Used to
+/// test the transfer mechanics independently of what the recommendation
+/// currently produces.
 MatriboxTargetPreset readyTarget() {
   TargetValue<double> v(double x) => TargetValue(x, ToneOrigin.songProfile, 'test');
   return MatriboxTargetPreset(
@@ -262,57 +247,3 @@ MatriboxTargetPreset readyTarget() {
   );
 }
 
-ToneTransferRecommendation readyRecommendation() => angelsRecommendation().withTarget(readyTarget());
-
-/// Applies certification-plan operations to (a copy of) the real BEFORE
-/// state like the device would (a model change resets that block's params).
-List<List<int>> afterFromCertificationOps(List<FullLiveOperation> operations, {List<List<int>>? from}) {
-  final parts = from ?? hexParts(bigBeforeRawPartsHex);
-  for (final o in operations) {
-    switch (o.kind) {
-      case FullLiveOperationKind.modelSelect:
-        setDecoded(parts, MatriboxPresetLayout.codeOffset(o.slot), u32(o.algorithm!.code));
-        setDecoded(parts, MatriboxPresetLayout.parametersBase(o.slot), List.filled(60, 0));
-        if (o.slot == MatriboxChainSlot.fx1) {
-          setDecoded(parts, MatriboxPresetLayout.fx1CodeCopyOffset, u32(o.algorithm!.code));
-        }
-      case FullLiveOperationKind.parameter:
-        setDecoded(
-          parts,
-          MatriboxPresetLayout.parametersBase(o.slot) + 4 * o.parameter!.wireIndex,
-          f32(o.value!),
-        );
-      case FullLiveOperationKind.blockToggle:
-        setDecoded(parts, MatriboxPresetLayout.stateOffset(o.slot), u16(o.enabled! ? 1 : 0));
-    }
-  }
-  for (var i = 37; i < 45; i++) {
-    parts[8][i] = (parts[8][i] + 1) & 15;
-  }
-  return parts;
-}
-
-/// Plan-aware fake of the closed certification transport.
-class PlanRunChannel implements MatriboxFullLiveChannel {
-  PlanRunChannel(this.plan, {this.failAt});
-  final CertificationPlan plan;
-  final int? failAt;
-  final planIds = <String>[];
-  @override
-  Future<Map<Object?, Object?>> runFullLiveP01Certification(String planId) async {
-    planIds.add(planId);
-    final ops = plan.operations;
-    final done = failAt ?? ops.length;
-    return {
-      'outcome': failAt == null ? 'SUCCESS' : 'SEND_FAILED',
-      'error': failAt == null ? null : 'Transport-Fehler.',
-      'total': ops.length,
-      'completed': done,
-      'failedIndex': failAt,
-      'operations': [
-        for (var i = 0; i < ops.length; i++)
-          {'index': i, 'label': ops[i].label, 'status': i < done ? 'SENT' : (i == failAt ? 'FAILED' : 'NOT_SENT')},
-      ],
-    };
-  }
-}

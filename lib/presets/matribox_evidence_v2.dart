@@ -27,7 +27,6 @@ library;
 
 import 'matribox_chain_catalog.dart';
 import 'matribox_chain_slot.dart';
-import 'matribox_full_live_plan.dart';
 import 'matribox_hardware_evidence.dart';
 import 'matribox_model_library.dart';
 import 'matribox_transfer_catalog.dart';
@@ -131,27 +130,6 @@ class ActiveSamples {
 
   static SampleSource _source(TransferProtocolEvidence e) =>
       e == TransferProtocolEvidence.captureConfirmed ? SampleSource.capture : SampleSource.catalogOnly;
-
-  /// The samples a SUCCESSFUL run of [operations] would add (projection only).
-  ActiveSamples projected(List<FullLiveOperation> operations, MatriboxModelLibrary library) {
-    final s = [...selects];
-    final p = [...parameters];
-    final t = [...toggles];
-    for (final op in operations) {
-      final model = library.byCode(op.slot, op.algorithm?.code ?? -1);
-      switch (op.kind) {
-        case FullLiveOperationKind.modelSelect:
-          if (model != null) s.add(SelectSample(op.slot, model.algorithm.id, _source(model.selectEvidence)));
-        case FullLiveOperationKind.parameter:
-          if (model != null) {
-            p.add(ParameterSample(op.slot, model.algorithm.id, op.parameter!.name, op.parameter!.kind, _source(model.parameterEvidence)));
-          }
-        case FullLiveOperationKind.blockToggle:
-          t.add(ToggleSample(op.slot, op.enabled!));
-      }
-    }
-    return ActiveSamples(selects: s, parameters: p, toggles: t);
-  }
 }
 
 /// Message families and their fixed status, independent of any sample.

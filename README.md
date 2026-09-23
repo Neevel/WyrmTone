@@ -2,7 +2,7 @@
 
 Technischer Flutter-Prototyp für eine sichere Android-USB-OTG-Diagnose mit Harley Benton DNAfx GiT Core und Sonicake Matribox 1 / QME-50 sowie lokale IR-/NAM-Verwaltung.
 
-> **Sicherheitsgrenze:** Normale Builds senden keine MIDI- oder USB-Nutzdaten. Preset-, IR-, NAM- und Firmwaretransfers sowie Handshakes bleiben gesperrt. DNAfx bleibt eine Raw-USB-Deskriptordiagnose; der Matribox-Monitor bleibt ausschließlich passiv. Eine gesondert freigegebene Entwickler-Ausnahme ist in [MIDI_CAPTURE.md](docs/MIDI_CAPTURE.md#separat-freigegebener-entwickler-einmaltest) abgegrenzt.
+> **Sicherheitsgrenze:** Release-Builds senden keine MIDI- oder USB-Nutzdaten. IR-, NAM- und Firmwaretransfers sowie Handshakes bleiben gesperrt. DNAfx bleibt eine Raw-USB-Deskriptordiagnose; der Matribox-Monitor bleibt ausschließlich passiv. Einziger Sendepfad ist der compile-gated Matribox-Presettransfer für die Speicherplätze P11–P99 (P01–P10 sind geschützt), siehe [DIRECT_PRESET_TRANSFER.md](docs/DIRECT_PRESET_TRANSFER.md#zielplätze).
 
 ## Passive Matribox-MIDI-Diagnose
 

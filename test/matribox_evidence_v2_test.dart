@@ -2,14 +2,10 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wyrmtone/presets/canonical_tone_recipe.dart';
-import 'package:wyrmtone/presets/matribox_angels_product_plan.dart';
 import 'package:wyrmtone/presets/matribox_chain_catalog.dart';
 import 'package:wyrmtone/presets/matribox_chain_encoder.dart';
 import 'package:wyrmtone/presets/matribox_chain_slot.dart';
 import 'package:wyrmtone/presets/matribox_evidence_v2.dart';
-import 'package:wyrmtone/presets/matribox_family_expansion_plan.dart';
-import 'package:wyrmtone/presets/matribox_full_live_plan.dart';
-import 'package:wyrmtone/presets/matribox_full_live_session.dart';
 import 'package:wyrmtone/presets/matribox_hardware_evidence.dart';
 import 'package:wyrmtone/presets/matribox_model_library.dart';
 import 'package:wyrmtone/presets/matribox_target_preset.dart';
@@ -18,6 +14,7 @@ import 'package:wyrmtone/presets/matribox_transfer_catalog.dart';
 import 'package:wyrmtone/presets/tone_intent.dart';
 
 import 'support/matribox_big_capture_groups.dart';
+import 'support/matribox_certified_runs.dart';
 import 'support/matribox_tone_transfer_support.dart';
 
 String hex(List<int> bytes) => bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
@@ -27,27 +24,28 @@ const nowNumbers = (63, 12, 0);
 
 void main() {
   final library = MatriboxModelLibrary.fromVendor(toneCatalog);
-  // The state BEFORE FAMILY_EXPANSION_P01_V1: the certified Angels run only. `projected` is what the
-  // family run added; the productive ledger (MatriboxHardwareLedger.product) must equal that projection.
-  final ledger = MatriboxHardwareLedger.baseline().withCertification(
-    AngelsProductPlan(library: library),
-    MatriboxFullLiveRecord(
-      planId: AngelsProductPlan.planIdValue,
-      beforeBackupPath: 'x',
-      beforeBackupSha256: 'x',
-      runOutcome: 'success',
-      completed: 11,
-      total: 11,
-      sentAt: DateTime.utc(2026),
-    ).withReadback('certified', DateTime.utc(2026), 'y'),
+  MatriboxTransferModel certifiedModel(CertifiedOperation o) => library.byName(o.slot, o.model!)!;
+  SampleSource sourceOf(TransferProtocolEvidence e) =>
+      e == TransferProtocolEvidence.captureConfirmed ? SampleSource.capture : SampleSource.catalogOnly;
+  // The historical state BEFORE FAMILY_EXPANSION_P01_V1: only the certified Angels run (frozen evidence,
+  // its Gain/Presence include the older baseline sends). The family rules are pinned at this state.
+  final angels = angelsDontKillP01V1.operations;
+  final angelsToggles = {for (final o in angels.where((o) => o.kind == CertifiedKind.blockToggle)) '${o.slot.name}:${o.enabled}'};
+  final samples = ActiveSamples(
+    selects: [
+      for (final o in angels.where((o) => o.kind == CertifiedKind.modelSelect))
+        SelectSample(o.slot, o.algorithmId!, sourceOf(certifiedModel(o).selectEvidence)),
+    ],
+    parameters: [
+      for (final o in angels.where((o) => o.kind == CertifiedKind.parameter))
+        ParameterSample(o.slot, o.algorithmId!, o.parameter!, certifiedModel(o).algorithm.parameter(o.parameter!).kind,
+            sourceOf(certifiedModel(o).parameterEvidence)),
+    ],
+    toggles: [for (final o in angels.where((o) => o.kind == CertifiedKind.blockToggle)) ToggleSample(o.slot, o.enabled!)],
   );
-  final samples = ActiveSamples.fromLedger(ledger, library);
   final v2 = MatriboxEvidenceV2(library: library, samples: samples);
-  final plan = FamilyExpansionPlan(library);
-  final projected = MatriboxEvidenceV2(
-    library: library,
-    samples: samples.projected(plan.operations(includeOptional: true), library),
-  );
+  // The productive state: Angels + FAMILY_EXPANSION_P01_V1 (MatriboxHardwareLedger.product).
+  final projected = MatriboxEvidenceV2(library: library, samples: ActiveSamples.fromLedger(MatriboxHardwareLedger.product(), library));
   final catalogEntries = [
     for (final a in toneCatalog.algorithms)
       (
@@ -275,7 +273,7 @@ void main() {
       for (final slot in MatriboxChainSlot.values) {
         for (final enabled in [true, false]) {
           final d = v2.blockToggle(slot, enabled);
-          final exact = ledger.exactToggles.contains('${slot.name}:$enabled');
+          final exact = angelsToggles.contains('${slot.name}:$enabled');
           expect(d.level, exact ? EvidenceLevel.exactOperationConfirmed : EvidenceLevel.familyConfirmed, reason: '${slot.label} $enabled');
         }
       }
@@ -296,16 +294,14 @@ void main() {
 
   group('Angels golden path regression', () {
     test('the 11 certified operations are all EXACT under evidence V2', () {
-      final ops = AngelsProductPlan(library: library).operations;
-      expect(ops, hasLength(11));
-      for (final op in ops) {
-        final m = op.algorithm == null ? null : library.byCode(op.slot, op.algorithm!.code);
-        final d = switch (op.kind) {
-          FullLiveOperationKind.modelSelect => v2.modelSelect(op.slot, m!),
-          FullLiveOperationKind.parameter => v2.parameter(op.slot, m!, op.parameter!, op.value!),
-          FullLiveOperationKind.blockToggle => v2.blockToggle(op.slot, op.enabled!),
+      expect(angels, hasLength(11));
+      for (final o in angels) {
+        final d = switch (o.kind) {
+          CertifiedKind.modelSelect => v2.modelSelect(o.slot, certifiedModel(o)),
+          CertifiedKind.parameter => v2.parameter(o.slot, certifiedModel(o), certifiedModel(o).algorithm.parameter(o.parameter!), o.value!),
+          CertifiedKind.blockToggle => v2.blockToggle(o.slot, o.enabled!),
         };
-        expect(d.level, EvidenceLevel.exactOperationConfirmed, reason: op.label);
+        expect(d.level, EvidenceLevel.exactOperationConfirmed, reason: '${o.slot.label} ${o.kind.name} ${o.parameter ?? ''}');
       }
     });
   });
@@ -400,67 +396,8 @@ void main() {
     });
   });
 
-  group('FAMILY_EXPANSION_P01_V1 offline plan data (evidence projection)', () {
-    test('no store, metadata, name, P02+; only closed encoder output', () {
-      for (final op in plan.operations(includeOptional: true)) {
-        if (op.bytes.length > 3) {
-          expect(op.bytes.sublist(8, 10), [0x12, 0x10], reason: op.label);
-        }
-        expect(op.bytes.length, anyOf(3, 22, 34));
-      }
-      expect(FamilyExpansionPlan.planId, 'FAMILY_EXPANSION_P01_V1');
-    });
-
-    test('every value is one the editor itself wrote in the big capture; none is extreme', () {
-      final seen = <double>{for (final g in bigCaptureGroups) ...[g.firstValue, g.lastValue]};
-      for (final op in plan.operations(includeOptional: true)) {
-        if (op.value == null) continue;
-        expect(seen, contains(op.value), reason: op.label);
-      }
-    });
-
-    test('every operation names an evidence purpose', () {
-      for (final s in plan.steps) {
-        expect(s.purpose.length, greaterThan(20), reason: s.operation.label);
-      }
-    });
-
-    test('before the test, none of the new operations is sendable except the exactly certified ones', () {
-      final sendableNow = <String>[];
-      for (final op in plan.operations()) {
-        final m = op.algorithm == null ? null : library.byCode(op.slot, op.algorithm!.code);
-        final d = switch (op.kind) {
-          FullLiveOperationKind.modelSelect => v2.modelSelect(op.slot, m!),
-          FullLiveOperationKind.parameter => v2.parameter(op.slot, m!, op.parameter!, op.value!),
-          FullLiveOperationKind.blockToggle => v2.blockToggle(op.slot, op.enabled!),
-        };
-        if (op.parameter?.bind != null) {
-          expect(d.level, EvidenceLevel.blocked, reason: op.label); // bound to Sync: BLOCKED productively
-          expect(d.basis, startsWith('BIND_UNRESOLVED'));
-          continue;
-        }
-        expect(d.level, isNot(EvidenceLevel.blocked), reason: op.label);
-        if (d.sendable) sendableNow.add('${op.slot.label} ${op.label}');
-      }
-      // exactly certified selects/toggles plus what the block CC family already covers
-      expect(sendableNow, containsAll(['FX2 MODEL Boost', 'CAB MODEL Sol 4x12']));
-      expect(sendableNow.where((e) => e.contains('MODEL') && !e.startsWith('FX2') && !e.startsWith('CAB')), isEmpty);
-    });
-
-    test('after a successful run every operation of the plan is sendable and the family reaches follow', () {
-      for (final op in plan.operations(includeOptional: true)) {
-        final m = op.algorithm == null ? null : library.byCode(op.slot, op.algorithm!.code);
-        final d = switch (op.kind) {
-          FullLiveOperationKind.modelSelect => projected.modelSelect(op.slot, m!),
-          FullLiveOperationKind.parameter => projected.parameter(op.slot, m!, op.parameter!, op.value!),
-          FullLiveOperationKind.blockToggle => projected.blockToggle(op.slot, op.enabled!),
-        };
-        if (op.parameter?.bind != null) {
-          expect(d.level, EvidenceLevel.blocked, reason: op.label);
-          continue;
-        }
-        expect(d.level, EvidenceLevel.exactOperationConfirmed, reason: op.label);
-      }
+  group('the productive samples (Angels + FAMILY_EXPANSION_P01_V1)', () {
+    test('model select is a family in every slot; number, signed and flag families reach other models; Sync stays BLOCKED', () {
       // model select becomes a family in every slot (one sample per slot)
       for (final slot in MatriboxChainSlot.values) {
         expect(evidenceCoverage(catalogEntries, projected).perSlotSelectable[slot], isTrue, reason: slot.label);
@@ -476,16 +413,6 @@ void main() {
       // decimal Rate is bound to Sync: stays BLOCKED even though the certification run wrote it
       final flanger = library.forSlot(MatriboxChainSlot.mod).firstWhere((m) => m.name == 'Flanger');
       expect(projected.parameter(MatriboxChainSlot.mod, flanger, flanger.algorithm.parameter('Rate'), 1.5).level, EvidenceLevel.blocked);
-    });
-
-    test('the productive ledger equals the projection of the two certified runs (no hand-typed drift)', () {
-      final product = ActiveSamples.fromLedger(MatriboxHardwareLedger.product(), library);
-      String sel(SelectSample x) => '${x.slot.name}:${x.algorithmId}';
-      String par(ParameterSample x) => '${x.slot.name}:${x.algorithmId}:${x.parameter}';
-      String tog(ToggleSample x) => '${x.slot.name}:${x.enabled}';
-      expect({...product.selects.map(sel)}, {...projected.samples.selects.map(sel)});
-      expect({...product.parameters.map(par)}, {...projected.samples.parameters.map(par)});
-      expect({...product.toggles.map(tog)}, {...projected.samples.toggles.map(tog)});
     });
 
     test('coverage over the 181 algorithms / 631 parameters grows and never claims musical suitability', () {
@@ -511,15 +438,13 @@ void main() {
       final source = File('lib/presets/matribox_evidence_v2.dart').readAsStringSync();
       expect(source, isNot(contains('invokeMethod')));
       expect(source, isNot(contains('.send(')));
-      final plan = File('lib/presets/matribox_family_expansion_plan.dart').readAsStringSync();
-      expect(plan, isNot(contains('invokeMethod')));
       // The productive PLAN uses it as its decision model; the transport layers never import it.
       for (final f in ['matribox_tone_transfer_session.dart', 'matribox_channel_clients.dart']) {
         final path = f.startsWith('matribox_channel') ? 'lib/screens/$f' : 'lib/presets/$f';
         expect(File(path).readAsStringSync(), isNot(contains('matribox_evidence_v2')), reason: f);
       }
       expect(File('lib/presets/matribox_tone_transfer_plan.dart').readAsStringSync(), isNot(contains('invokeMethod')));
-      // The native table is generated data, and the productive native files never reference the certification plan.
+      // The native table is generated data; the productive native files carry no certification plan.
       for (final f in [
         'MatriboxToneTransferCatalog.kt',
         'MatriboxToneTransferPlanValidator.kt',

@@ -114,7 +114,7 @@ void main() {
       }
       expect(MatriboxSlotPolicy.isProductWritable(11, isUserBank: false), isFalse);
       expect(MatriboxSlotPolicy.writeRejection(50, isUserBank: false), 'Die Factory-Bank wird nie beschrieben.');
-      // the UI capability table is derived from the same policy; no slot claims hardware certification
+      // the UI capability table is derived from the same policy
       expect(MatriboxTransferSlots.userSlots, hasLength(99));
       for (final slot in MatriboxTransferSlots.userSlots) {
         final writable = slot.number >= 11;
@@ -125,12 +125,19 @@ void main() {
           everyElement(writable),
           reason: slot.label,
         );
-        expect(slot.capability.hardwareCertified, isFalse, reason: slot.label);
+        // only P11 has its own CERTIFIED hardware run; it is never generalized to other slots
+        expect(slot.capability.hardwareCertified, slot.number == 11, reason: slot.label);
       }
       for (final n in [null, 0, 100]) {
         expect(MatriboxTransferSlots.slot(n), isNull);
       }
-      expect(MatriboxSlotPolicy.writableEvidenceStatus, 'PRODUCT_WRITABLE / SOFTWARE_VALIDATED');
+      expect(MatriboxSlotPolicy.evidenceStatus(11), 'PRODUCT_WRITABLE / HARDWARE_CERTIFIED');
+      for (final n in [12, 50, 99]) {
+        expect(MatriboxSlotPolicy.evidenceStatus(n), 'PRODUCT_WRITABLE / SOFTWARE_VALIDATED');
+      }
+      for (final n in [1, 5, 10]) {
+        expect(MatriboxSlotPolicy.evidenceStatus(n), 'PROTECTED');
+      }
     });
 
     test('off-by-one: P11 -> 10, P12 -> 11, P20 -> 19, P50 -> 49, P99 -> 98 and back', () {
@@ -286,8 +293,9 @@ void main() {
       final mixed = PreparedToneTransfer(target: p11.target, targetSlot: 12, read: p11.read, plan: p12Plan);
       expect((await MatriboxToneTransferExecutor(channel: channel, store: storeFor(12)).execute(mixed)).outcome,
           ToneTransferRunOutcome.rejected);
-      // the historical P01 read has no slot identity and is never a transfer read
-      final legacyRead = await readVerifiedP01(service(ToneReadChannel(before())));
+      // a read without slot identity (e.g. a plain P01 backup read) is never a transfer read
+      final r = p11.read!;
+      final legacyRead = VerifiedPresetRead(backup: r.backup, snapshot: r.snapshot, layout: r.layout);
       final legacy = PreparedToneTransfer(target: p11.target, targetSlot: 11, read: legacyRead, plan: p11.plan);
       expect((await MatriboxToneTransferExecutor(channel: channel, store: storeFor(11)).execute(legacy)).outcome,
           ToneTransferRunOutcome.rejected);

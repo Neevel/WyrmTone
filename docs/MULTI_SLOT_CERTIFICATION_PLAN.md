@@ -1,4 +1,4 @@
-# Multi-Slot Hardware Certification Plan (P11–P99) – NOT executed
+# Multi-Slot Hardware Certification Plan (P11–P99)
 
 Product rule (`lib/presets/matribox_transfer_slots.dart`, natively `MatriboxSlotPolicy.kt`):
 P01–P10 are protected play presets and never a transfer target; P11–P99 are product writable
@@ -6,14 +6,19 @@ P01–P10 are protected play presets and never a transfer target; P11–P99 are 
 backup of the chosen slot, plan, native preflight (`targetSlot` 11..99 only), preset select
 (index = preset number − 1), live write, manual save, readback of the same slot, verification.
 
-Status of P11–P99: **PRODUCT_WRITABLE / SOFTWARE_VALIDATED**. `SlotCapability.hardwareCertified`
-stays `false` for every slot until the hardware steps below have been run.
+Status:
+* **P11: PRODUCT_WRITABLE / HARDWARE_CERTIFIED** – real productive transfer on 2026-09-23
+  ("96 Quite Bitter Beings", 10 operations sent, 0 failed/not sent, manual save, same-slot readback
+  CERTIFIED, P11 visibly updated on the device). `MatriboxSlotPolicy.hardwareCertifiedPresets = {11}`.
+* **P12–P99: PRODUCT_WRITABLE / SOFTWARE_VALIDATED** – the P11 run is not generalized to them.
+* P01–P10: protected, never written.
 
-## What is still unproven on hardware
+## What the P11 run proved, and what is still unproven for other slots
 
 The addressing comes from protocol evidence (read Bank/Slot bytes seen for all 199 slots of the
 editor enumeration; preset select index confirmed for 0x00/0x09/0x0A, `index = number − 1` via
-Program Change for P01/P02/P10/P50/P99). Not yet observed with WyrmTone itself:
+Program Change for P01/P02/P10/P50/P99). Observed with WyrmTone for P11 on 2026-09-23; still
+unobserved for every other slot:
 
 * the isolated Phase-D announce/ack + ten-part read for a slot other than P01,
 * that the device has finished loading the selected preset after the preset select before the
@@ -30,5 +35,6 @@ Program Change for P01/P02/P10/P50/P99). Not yet observed with WyrmTone itself:
 5. **Readback** – fresh read of the same slot, compared against the target.
 6. **Verify** – `ToneReadbackOutcome.certified`.
 
-P01–P10 are never touched by these steps. Only after they pass for a slot range may its
-`hardwareCertified` flag change. No hardware communication has happened for this plan yet.
+All six steps passed for P11. P01–P10 are never touched by these steps. Only a slot that passes
+them on its own may be added to `hardwareCertifiedPresets`; next candidates: a spread such as P12,
+P50, P99.

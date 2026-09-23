@@ -4,7 +4,6 @@ import 'preset_exchange.dart';
 import 'preset_diff.dart';
 import 'preset_validation.dart';
 import 'protocol_evidence.dart';
-import 'preset_selection_codec.dart';
 
 enum PresetSlotSource { manual, officialReference, unknown }
 
@@ -42,21 +41,6 @@ class PresetSlot {
       overwriteAllowed;
   bool get fullContentKnown => currentPreset != null || deviceContentKnown;
   bool get localBackupPresent => backupId != null;
-
-  MatriboxPresetSlotAddress? get address {
-    if (deviceIndex != null) {
-      final value = MatriboxPresetSlotAddress.fromDeviceIndex(deviceIndex!);
-      if (presetNumber != null && presetNumber != value.presetNumber) {
-        throw const FormatException(
-          'Presetindex und Presetnummer widersprechen sich.',
-        );
-      }
-      return value;
-    }
-    return presetNumber == null
-        ? null
-        : MatriboxPresetSlotAddress.fromPresetNumber(presetNumber!);
-  }
 }
 
 class PresetWritePlan {

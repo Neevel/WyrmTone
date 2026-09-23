@@ -14,6 +14,7 @@ import 'package:wyrmtone/presets/matribox_tone_transfer_plan.dart';
 import 'package:wyrmtone/presets/matribox_tone_translator.dart';
 import 'package:wyrmtone/presets/tone_intent.dart';
 import 'package:wyrmtone/presets/tone_recipe_builder.dart';
+import 'package:wyrmtone/presets/matribox_hardware_evidence.dart';
 
 import 'support/matribox_tone_transfer_support.dart';
 
@@ -112,7 +113,7 @@ void main() {
       MatriboxToneTransferPlan.build(
         current: current ?? beforeLayout(),
         target: target,
-        ledger: certifiedLedger,
+        ledger: MatriboxHardwareLedger.product(),
         backupSha256: 'abc',
         presetNumber: 1,
         isUserBank: true,

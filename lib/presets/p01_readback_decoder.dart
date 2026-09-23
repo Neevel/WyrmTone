@@ -10,9 +10,8 @@ import 'preset_selection_codec.dart'
 /// captured bytes; it never opens a MIDI port, sends anything or touches a
 /// USB device. It is used both by the offline CLI tool
 /// (`tool/matribox_p01_readback_decoder.dart`, reading PCAP/PCAPNG files)
-/// and by the in-app, compile-gated one-shot read probe
-/// (`lib/screens/verified_p01_read_probe_panel.dart`, reading live-received
-/// MIDI bytes). Every field decoded here is the exact field mapping
+/// and by the productive raw preset snapshot (reading live-received MIDI
+/// bytes). Every field decoded here is the exact field mapping
 /// confirmed in docs/MATRIBOX_OFFLINE_ANALYSIS.md ("Vollständiger
 /// Device→Host-Readback und Persistenzbeweis"); everything else in the
 /// 768-byte preset payload stays unclassified on purpose and is never

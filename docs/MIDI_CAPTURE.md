@@ -45,9 +45,11 @@ Bitte diese JSON-Dateien und eine kurze Liste der manuellen Aktionen bereitstell
 
 ## Verifikation
 
-Flutter-/Kotlin-Tests verwenden ausschließlich Port-Fakes. Der Sicherheitstest erlaubt genau eine Input-Port-Öffnungsstelle im isolierten Probe-Pfad und genau einen bytefesten, compile-gated Android-Send-Aufruf im Probe-Adapter. Alle anderen produktiven Klassen bleiben ohne Send-/Flush-Aufrufe; USB-Transfers und Force-Claim bleiben verboten. DNAfx-Raw-USB bleibt separat, Matribox-Raw-USB ist eingeklappt und während MIDI-Open gesperrt.
+Flutter-/Kotlin-Tests verwenden ausschließlich Port-Fakes. Der Sicherheitstest (`test/native_safety_static_test.dart`) erlaubt genau zwei compile-gated Sender mit je einem Send-Aufruf: den lesenden Preset-Reader und den produktiven Transfer (P11–P99). Alle anderen Klassen bleiben ohne Send-/Flush-Aufrufe; USB-Transfers und Force-Claim bleiben verboten. DNAfx-Raw-USB bleibt separat, Matribox-Raw-USB ist eingeklappt und während MIDI-Open gesperrt.
 
-## Separat freigegebener Entwickler-Einmaltest
+## Separat freigegebener Entwickler-Einmaltest (historisch)
+
+> Historisch: Dieser Gain-41-Einmaltest samt Gate `ENABLE_MATRIBOX_WRITE_PROBE` wurde am 2026-09-23 entfernt. Die bestätigte Gain-Nachricht bleibt als Evidence in `test/confirmed_parameter_codec_test.dart` und `test/matribox_sol100od_capture_evidence_test.dart` erhalten.
 
 Nur Debug-Builds mit `--dart-define=ENABLE_MATRIBOX_WRITE_PROBE=true` aktivieren Flutter-Oberfläche und native BuildConfig-Freigabe. Normale Debug- und sämtliche Release-Builds bleiben deaktiviert. Die parameterlose Methode `sendVerifiedSol100OdGain41Probe()` akzeptiert keine Flutter-Nutzdaten. Sie enthält ausschließlich die bytegenau verifizierte Editor-Referenz für Sol 100 OD / Gain-Index 0 / 41; kein Rücksetzen, Retry, Handshake, Presetspeichern oder NAM-/IR-Transfer.
 
@@ -57,7 +59,9 @@ Nativ erforderlich sind exakt ein angeschlossenes 84EF:0054-Gerät, direkte eind
 
 Abschlussprüfung am 12.09.2026: Formatierung durchgeführt, `flutter analyze` ohne Probleme, alle 120 Flutter-/Dart-Tests und alle 18 App-Kotlin-Tests erfolgreich. Debug-APK erfolgreich gebaut; Archivprüfung: 0 WAV-, NAM- oder ZIP-Dateien. Anzeigename WyrmTone, Paket-ID de.neevel.wyrmtone. APK: `D:\Develop\dnafx_bridge\build\app\outputs\flutter-apk\app-debug.apk`, 200312613 Byte / 191,03 MiB. Kein Commit, kein Push, keine Installation und kein neuer Hardware-Empfangstest durch diesen Task.
 
-## Experimenteller P01-Read-Einmaltest (15.09.2026)
+## Experimenteller P01-Read-Einmaltest (15.09.2026, historisch)
+
+> Historisch: Read-Probe V1 (und die späteren V2/V3A) samt Gates und Panels wurden am 2026-09-23 entfernt. Ihre bestätigten Referenzen (Phase-D, zehn Part-Requests, Antwortformen) nutzt der produktive Reader weiter; sie sind in `MatriboxProtocolReferencesTest.kt` byte-genau gepinnt.
 
 Dritter, separater compile-gated Einmaltest neben Gain-41 und P01-Auswahl:
 `--dart-define=ENABLE_MATRIBOX_P01_READ_PROBE=true`. Alle drei Freigaben

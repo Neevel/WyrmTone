@@ -1,4 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:wyrmtone/presets/matribox_user_slot.dart';
 import 'package:wyrmtone/presets/preset_selection_codec.dart';
 
 void main() {
@@ -8,26 +9,16 @@ void main() {
     KnownMatriboxPresetSelectionTarget.p11: 'P11',
   };
 
-  test('slot mapping is central and reversible', () {
+  test('the confirmed selection indices map to the canonical user slot address and back', () {
     for (final entry in references.entries) {
-      final fromIndex = MatriboxPresetSlotAddress.fromDeviceIndex(
-        entry.key.deviceIndex,
-      );
-      expect(fromIndex.label, entry.value);
-      expect(
-        MatriboxPresetSlotAddress.fromPresetNumber(fromIndex.presetNumber)
-            .deviceIndex,
-        entry.key.deviceIndex,
-      );
+      final slot = MatriboxUserSlot.fromDeviceIndex(entry.key.deviceIndex);
+      expect(slot.label, entry.value);
+      expect(slot.presetNumber, entry.key.presetNumber);
+      expect(MatriboxUserSlot.preset(slot.presetNumber).deviceIndex, entry.key.deviceIndex);
+      expect(OfflinePresetSelectionMessage(entry.key).slot, slot);
     }
-    expect(
-      () => MatriboxPresetSlotAddress.fromDeviceIndex(-1),
-      throwsFormatException,
-    );
-    expect(
-      () => MatriboxPresetSlotAddress.fromPresetNumber(0),
-      throwsFormatException,
-    );
+    expect(() => MatriboxUserSlot.fromDeviceIndex(-1), throwsArgumentError);
+    expect(() => MatriboxUserSlot.preset(0), throwsArgumentError);
   });
 
   test('P01 P10 and P11 golden bytes round-trip offline', () {

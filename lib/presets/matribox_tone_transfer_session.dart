@@ -26,9 +26,7 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'device_catalog.dart';
-import 'matribox_angels_product_plan.dart';
 import 'matribox_chain_slot.dart';
-import 'matribox_full_live_session.dart';
 import 'matribox_full_live_verifier.dart';
 import 'matribox_hardware_evidence.dart';
 import 'matribox_model_library.dart';
@@ -119,24 +117,6 @@ class UnavailableToneTransferChannel implements MatriboxToneTransferChannel {
       );
   @override
   Future<String?> connectionToken() async => null;
-}
-
-/// Hardware evidence from the Full Live record in [backupDirectory] (if any).
-Future<MatriboxHardwareLedger> loadHardwareLedger(
-  Directory backupDirectory, {
-  MatriboxModelLibrary? library,
-}) async {
-  final record = await MatriboxFullLiveStore(
-    File('${backupDirectory.path}/$matriboxFullLiveStateFileName'),
-  ).load();
-  var ledger = MatriboxHardwareLedger.fromFullLive(record);
-  if (library != null) {
-    final angels = await MatriboxFullLiveStore(
-      File('${backupDirectory.path}/$matriboxAngelsStateFileName'),
-    ).load();
-    ledger = ledger.withCertification(AngelsProductPlan(library: library), angels);
-  }
-  return ledger;
 }
 
 /// One persisted session per target slot: a VERIFIED P11 record lives in a
@@ -801,7 +781,7 @@ abstract final class MatriboxToneTransferReadback {
     }
     // The readback reads the slot the transfer is BOUND to -- never P01, never the UI's selection.
     final slot = MatriboxUserSlot.tryPreset(record.targetSlot);
-    if (slot == null || !slot.isProductWritable || record.writtenSlot != record.targetSlot) {
+    if (slot == null || !MatriboxSlotPolicy.isProductWritable(slot.presetNumber) || record.writtenSlot != record.targetSlot) {
       return const ToneReadbackResult(
         outcome: ToneReadbackOutcome.readFailed,
         detail: 'Der Transfer ist an keinen bestätigt beschriebenen Speicherplatz P11–P99 gebunden.',
@@ -918,7 +898,7 @@ abstract final class MatriboxToneTransferPersistence {
       );
     }
     final slot = MatriboxUserSlot.tryPreset(record.targetSlot);
-    if (slot == null || !slot.isProductWritable) {
+    if (slot == null || !MatriboxSlotPolicy.isProductWritable(slot.presetNumber)) {
       return const TonePersistenceResult(TonePersistenceOutcome.readFailed, detail: 'Kein Speicherplatz P11–P99.');
     }
     final read = await readVerifiedUserSlot(backupService, slot);

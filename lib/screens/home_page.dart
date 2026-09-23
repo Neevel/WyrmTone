@@ -5,16 +5,7 @@ import '../controllers/usb_controller.dart';
 import '../models/usb_models.dart';
 import 'matribox_backup_library_panel.dart';
 import 'matribox_raw_backup_panel.dart';
-import 'matribox_amp_certification_panel.dart';
-import 'matribox_angels_certification_panel.dart';
-import 'matribox_family_expansion_panel.dart';
-import 'matribox_full_live_panel.dart';
-import 'matribox_safe_write_lab_panel.dart';
 import 'midi_capture_panel.dart';
-import 'verified_matribox_probe_panel.dart';
-import 'verified_p01_read_probe_panel.dart';
-import 'verified_p01_full_read_probe_panel.dart';
-import 'verified_p01_full_read_probe_v3a_panel.dart';
 import '../midi/midi_capture_controller.dart';
 import '../ui/wyrm_design.dart';
 
@@ -54,86 +45,6 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 12),
                 const MatriboxBackupLibraryPanel(),
-              ],
-              if (matriboxSafeWriteLabEnabled) ...[
-                const SizedBox(height: 12),
-                MatriboxSafeWriteLabPanel(
-                  connectionReady:
-                      controller.devices
-                              .where((d) => d.isMatriboxOneCandidate)
-                              .length ==
-                          1 &&
-                      controller.matriboxMidiDevice != null &&
-                      controller.midiConnection.isOpen &&
-                      controller.midiConnection.deviceId ==
-                          controller.matriboxMidiDevice?.id,
-                  monitoring:
-                      controller.capture.state == MidiCaptureState.monitoring,
-                ),
-              ],
-              if (matriboxAmpCertificationEnabled) ...[
-                const SizedBox(height: 12),
-                MatriboxAmpCertificationPanel(
-                  connectionReady:
-                      controller.devices
-                              .where((d) => d.isMatriboxOneCandidate)
-                              .length ==
-                          1 &&
-                      controller.matriboxMidiDevice != null &&
-                      controller.midiConnection.isOpen &&
-                      controller.midiConnection.deviceId ==
-                          controller.matriboxMidiDevice?.id,
-                  monitoring:
-                      controller.capture.state == MidiCaptureState.monitoring,
-                ),
-              ],
-              if (matriboxAngelsCertificationEnabled) ...[
-                const SizedBox(height: 12),
-                MatriboxAngelsCertificationPanel(
-                  connectionReady:
-                      controller.devices
-                              .where((d) => d.isMatriboxOneCandidate)
-                              .length ==
-                          1 &&
-                      controller.matriboxMidiDevice != null &&
-                      controller.midiConnection.isOpen &&
-                      controller.midiConnection.deviceId ==
-                          controller.matriboxMidiDevice?.id,
-                  monitoring:
-                      controller.capture.state == MidiCaptureState.monitoring,
-                ),
-              ],
-              if (matriboxFamilyExpansionEnabled) ...[
-                const SizedBox(height: 12),
-                MatriboxFamilyExpansionPanel(
-                  connectionReady:
-                      controller.devices
-                              .where((d) => d.isMatriboxOneCandidate)
-                              .length ==
-                          1 &&
-                      controller.matriboxMidiDevice != null &&
-                      controller.midiConnection.isOpen &&
-                      controller.midiConnection.deviceId ==
-                          controller.matriboxMidiDevice?.id,
-                  monitoring:
-                      controller.capture.state == MidiCaptureState.monitoring,
-                ),
-              ],
-              if (matriboxFullLiveEnabled) ...[
-                const SizedBox(height: 12),
-                MatriboxFullLivePanel(
-                  connectionReady:
-                      controller.devices
-                              .where((d) => d.isMatriboxOneCandidate)
-                              .length ==
-                          1 &&
-                      controller.matriboxMidiDevice != null &&
-                      controller.midiConnection.isOpen &&
-                      controller.midiConnection.deviceId ==
-                          controller.matriboxMidiDevice?.id,
-                  monitoring:
-                      controller.capture.state == MidiCaptureState.monitoring,
-                ),
               ],
               const SizedBox(height: 12),
               WyrmCard(
@@ -176,67 +87,6 @@ class HomePage extends StatelessWidget {
                     ),
 
                   MidiCapturePanel(controller: controller.capture),
-                  if (matriboxWriteProbeEnabled ||
-                      matriboxPresetP01ProbeEnabled)
-                    VerifiedMatriboxProbePanel(
-                      connectionReady:
-                          controller.devices
-                                  .where((d) => d.isMatriboxOneCandidate)
-                                  .length ==
-                              1 &&
-                          controller.matriboxMidiDevice != null &&
-                          controller.midiConnection.isOpen &&
-                          controller.midiConnection.deviceId ==
-                              controller.matriboxMidiDevice?.id,
-                      monitoring:
-                          controller.capture.state ==
-                          MidiCaptureState.monitoring,
-                    ),
-                  if (matriboxP01ReadProbeEnabled)
-                    VerifiedP01ReadProbePanel(
-                      connectionReady:
-                          controller.devices
-                                  .where((d) => d.isMatriboxOneCandidate)
-                                  .length ==
-                              1 &&
-                          controller.matriboxMidiDevice != null &&
-                          controller.midiConnection.isOpen &&
-                          controller.midiConnection.deviceId ==
-                              controller.matriboxMidiDevice?.id,
-                      monitoring:
-                          controller.capture.state ==
-                          MidiCaptureState.monitoring,
-                    ),
-                  if (matriboxP01FullReadProbeEnabled)
-                    VerifiedP01FullReadProbePanel(
-                      connectionReady:
-                          controller.devices
-                                  .where((d) => d.isMatriboxOneCandidate)
-                                  .length ==
-                              1 &&
-                          controller.matriboxMidiDevice != null &&
-                          controller.midiConnection.isOpen &&
-                          controller.midiConnection.deviceId ==
-                              controller.matriboxMidiDevice?.id,
-                      monitoring:
-                          controller.capture.state ==
-                          MidiCaptureState.monitoring,
-                    ),
-                  if (matriboxP01FullReadProbeV3AEnabled)
-                    VerifiedP01FullReadProbeV3APanel(
-                      connectionReady:
-                          controller.devices
-                                  .where((d) => d.isMatriboxOneCandidate)
-                                  .length ==
-                              1 &&
-                          controller.matriboxMidiDevice != null &&
-                          controller.midiConnection.isOpen &&
-                          controller.midiConnection.deviceId ==
-                              controller.matriboxMidiDevice?.id,
-                      monitoring:
-                          controller.capture.state ==
-                          MidiCaptureState.monitoring,
-                    ),
                   const SizedBox(height: 20),
                   Text(
                     'USB-Geräte',
@@ -437,7 +287,7 @@ class _MidiDeviceCard extends StatelessWidget {
             const SizedBox(height: 8),
             const Text(
               'Geräte-Output liefert Daten zur App. Geräte-Input würde zum Gerät senden '
-              'und bleibt im passiven Monitor geschlossen. Nur der ausdrücklich freigegebene Entwickler-Einmaltest darf ihn öffnen.',
+              'und bleibt im passiven Monitor geschlossen. Nur das Presetlesen und die bestätigte Übertragung öffnen ihn.',
             ),
           ],
         ),

@@ -179,7 +179,7 @@ internal class MatriboxToneTransferSession(
                     statuses[index] = "SENT"
                     log("SEND_SUCCESS", "#$index gesendet")
                 }
-                pause(MatriboxFullLivePlan.pauseAfterMillis(operation))
+                pause(pauseAfterMillis(operation))
             }
             outcome = ToneTransferOutcome.SUCCESS
         } catch (guard: ToneTransferGuard) {
@@ -220,5 +220,9 @@ internal class MatriboxToneTransferSession(
 
         /** Time for the device to load the selected preset before the first live edit. */
         const val PRESET_SELECT_SETTLE_MILLIS = 500L
+
+        /** Pacing of the confirmed live-edit messages: a model select needs longer to settle. */
+        fun pauseAfterMillis(operation: FullLiveOperation): Long =
+            if (operation is FullLiveOperation.ModelSelect) 200L else 60L
     }
 }

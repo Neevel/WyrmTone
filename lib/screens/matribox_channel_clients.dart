@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-import '../presets/matribox_family_expansion_certification.dart';
-import '../presets/matribox_full_live_session.dart';
 import '../presets/matribox_raw_backup_service.dart';
 import '../presets/matribox_tone_transfer_session.dart';
 import '../presets/matribox_transfer_slots.dart';
@@ -11,7 +9,7 @@ const _usbChannel = MethodChannel('de.neevel.wyrmtone/usb_methods');
 
 /// Debug/experimental gate of the PRODUCTIVE Tone Transfer transport. Must be
 /// enabled at compile time on both sides (dart-define here, BuildConfig in
-/// Kotlin); exclusive with every certification sender. Default false.
+/// Kotlin). Default false; release builds never send.
 const matriboxToneTransferEnabled =
     kDebugMode && bool.fromEnvironment('ENABLE_MATRIBOX_TONE_TRANSFER', defaultValue: false);
 
@@ -34,36 +32,6 @@ class MethodChannelPresetReadChannel implements MatriboxUserSlotReadChannel {
         ) ??
         {};
   }
-}
-
-/// The closed certification transport: only a plan id leaves Dart; the
-/// operation lists are native constants.
-class MethodChannelFullLiveChannel implements MatriboxFullLiveChannel {
-  const MethodChannelFullLiveChannel();
-  @override
-  Future<Map<Object?, Object?>> runFullLiveP01Certification(String planId) async =>
-      await _usbChannel.invokeMapMethod<Object?, Object?>(
-        'runFullLiveP01Certification',
-        {'planId': planId},
-      ) ??
-      {};
-}
-
-/// The closed FAMILY_EXPANSION_P01_V1 certification call: plan id, User P01 and
-/// the verified backup hash. The operation list is a native constant; no
-/// bytes, wire id, index or operation list ever leaves Dart.
-class MethodChannelFamilyExpansionChannel implements MatriboxFamilyExpansionChannel {
-  const MethodChannelFamilyExpansionChannel();
-  @override
-  Future<Map<Object?, Object?>> runFamilyExpansionP01Certification({
-    required String planId,
-    required String backupSha256,
-  }) async =>
-      await _usbChannel.invokeMapMethod<Object?, Object?>(
-        'runFamilyExpansionP01Certification',
-        {'planId': planId, 'targetBank': 'USER', 'targetSlot': 1, 'backupHash': backupSha256},
-      ) ??
-      {};
 }
 
 /// The productive transport: ONE call with the closed contract map of a

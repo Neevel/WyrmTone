@@ -1,5 +1,14 @@
 # Matribox: lokale Offline-Analyse
 
+> **Stand 2026-09-23:** Dies ist das historische Forschungsprotokoll. Die hier beschriebenen Probe-,
+> Safe-Write-Lab-, AMP-, Full-Live-, Angels- und Family-Expansion-Werkzeuge samt ihrer Gates und Panels
+> wurden entfernt; heute ausführbar ist nur der produktive Reader/Transfer (P11–P99, P01–P10 geschützt).
+> Die Evidence-Einstufungen (CONFIRMED / CORRELATED / HYPOTHESIS / UNKNOWN) bleiben unverändert gültig.
+> Erhalten und in Tests gepinnt: Referenz-Bytes (`MatriboxProtocolReferencesTest.kt`), zertifizierte Läufe
+> ANGELS_DONT_KILL_P01_V1 und FAMILY_EXPANSION_P01_V1 (`test/matribox_certified_evidence_test.dart`,
+> native Goldens), Sol-100-OD-Captures (`test/matribox_sol100od_capture_evidence_test.dart`), Layout und
+> Rohänderungs-Klassifikation (`test/matribox_preset_layout_test.dart`).
+
 ## Zweck und Aufruf
 
 Entwicklerwerkzeug außerhalb der App; keine Build-Abhängigkeit auf Editor-Ressourcen. `dart run tool/matribox_analyzer.dart --algorithm "<algorithm.xml>" --preset "<preset.xml>" --capture "<capture.json>" [--capture "<weiterer.json>"] --output "<bericht.md>"`. Fehlende Capture-Pfade werden ausgewiesen; ungültige Captures abgelehnt. Ausgabe enthält nur abgeleitete kompakte Erkenntnisse, keine Originalressourcen. Originaldateien bleiben unverändert.

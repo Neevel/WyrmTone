@@ -107,33 +107,6 @@ class MatriboxFullLiveCodecTest {
         "b13800",
     )
 
-    private val plannedMessages = listOf(
-        "f021257f514d453212100100010000000000000003f7",
-        "f021257f514d45321210010002000000000000000300000000000000000b080401f7",
-        "f021257f514d453212100200010009000000000003f7",
-        "f021257f514d453212100200020009000000000003000100000000000007040402f7",
-        "f021257f514d453212100300010305000000000007f7",
-        "f021257f514d453212100300020305000000000007000000000000000008080401f7",
-        "f021257f514d453212100300020305000000000007000100000000000008060402f7",
-        "f021257f514d45321210040001010d000000000000f7",
-        "f021257f514d45321210040002010d00000000000000000000000000000f080401f7",
-        "f021257f514d45321210050001020200000000000af7",
-        "f021257f514d45321210050002020200000000000a0001000000000000020c0402f7",
-        "f021257f514d45321210060001030a000000000001f7",
-        "f021257f514d45321210060002030a000000000001000000000000000008080401f7",
-        "f021257f514d45321210060002030a00000000000100010000000000000b080c01f7",
-        "f021257f514d453212100700010101000000000004f7",
-        "f021257f514d453212100700020101000000000004000100000c0d0c0c060c0400f7",
-        "f021257f514d45321210070002010100000000000400040000000000000800030ff7",
-        "f021257f514d45321210080001000600000000000bf7",
-        "f021257f514d45321210080002000600000000000b000000000000000008080401f7",
-        "f021257f514d45321210080002000600000000000b00070000000000000800030ff7",
-        "f021257f514d45321210090001000800000000000cf7",
-        "f021257f514d45321210090002000800000000000c00000000000000000b080401f7",
-        "f021257f514d45321210090002000800000000000c00050000000000000800030ff7",
-        "b1307f",
-        "b13100",
-    )
 
     @Test fun `parameter writes reproduce first and last captured message of all groups`() {
         assertEquals(46, groups.size)
@@ -164,24 +137,6 @@ class MatriboxFullLiveCodecTest {
         assertEquals(listOf(0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38), slots.map { it.controller })
     }
 
-    @Test fun `the fixed plan equals exactly the 25 captured messages, in order (Kotlin == Dart == capture)`() {
-        assertEquals(25, MatriboxFullLivePlan.operations.size)
-        assertEquals(plannedMessages, MatriboxFullLivePlan.operations.map { hex(MatriboxFullLiveCodec.encode(it)) })
-    }
-
-    @Test fun `plan composition is 9 model selects, 14 parameter writes, 2 toggles, no store or metadata`() {
-        val ops = MatriboxFullLivePlan.operations
-        assertEquals(9, ops.count { it is FullLiveOperation.ModelSelect })
-        assertEquals(14, ops.count { it is FullLiveOperation.Parameter })
-        assertEquals(2, ops.count { it is FullLiveOperation.BlockToggle })
-        assertEquals(setOf(ChainSlot.FX1, ChainSlot.FX2), ops.filterIsInstance<FullLiveOperation.BlockToggle>().map { it.slot }.toSet())
-        for (op in ops) {
-            val message = MatriboxFullLiveCodec.encode(op)
-            MatriboxFullLiveCodec.validate(message)
-            if (message.size > 3) assertEquals(0x10, message[9].toInt()) // never 12 11 / 12 12
-        }
-    }
-
     @Test fun `validate refuses metadata, commit and malformed messages`() {
         val store = bytes("f021257f514d45321212000002000000000000f7")
         assertThrows(IllegalArgumentException::class.java) { MatriboxFullLiveCodec.validate(store) }
@@ -196,6 +151,6 @@ class MatriboxFullLiveCodecTest {
         assertThrows(IllegalArgumentException::class.java) {
             MatriboxFullLiveCodec.encode(FullLiveOperation.Parameter(ChainSlot.FX1, 0x03000000, 0, Float.NaN, "x"))
         }
-        assertFalse(hex(MatriboxFullLiveCodec.encode(MatriboxFullLivePlan.operations[0])).isEmpty())
+        assertFalse(hex(MatriboxFullLiveCodec.encode(FullLiveOperation.ModelSelect(ChainSlot.FX1, 0x03000000, "x"))).isEmpty())
     }
 }

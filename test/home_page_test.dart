@@ -1,8 +1,4 @@
 import 'package:wyrmtone/screens/matribox_raw_backup_panel.dart';
-import 'package:wyrmtone/screens/verified_matribox_probe_panel.dart';
-import 'package:wyrmtone/screens/verified_p01_read_probe_panel.dart';
-import 'package:wyrmtone/screens/verified_p01_full_read_probe_panel.dart';
-import 'package:wyrmtone/screens/verified_p01_full_read_probe_v3a_panel.dart';
 import 'package:wyrmtone/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -191,30 +187,12 @@ void main() {
     await tester.pumpAndSettle();
     expect(service.midiCloseCalls, 1);
   });
-  testWidgets('compile-gated probe is integrated on device page', (
+  testWidgets('only the read-only backup diagnostics are compile-gated on the device page', (
     tester,
   ) async {
     final service = FakeUsbService();
     addTearDown(service.dispose);
     await renderApp(tester, service);
-    expect(
-      find.byKey(const Key('verified-probe-panel')),
-      matriboxWriteProbeEnabled != matriboxPresetP01ProbeEnabled
-          ? findsOneWidget
-          : findsNothing,
-    );
-    expect(
-      find.byKey(const Key('verified-p01-read-probe-panel')),
-      matriboxP01ReadProbeEnabled ? findsOneWidget : findsNothing,
-    );
-    expect(
-      find.byKey(const Key('verified-p01-full-read-probe-panel')),
-      matriboxP01FullReadProbeEnabled ? findsOneWidget : findsNothing,
-    );
-    expect(
-      find.byKey(const Key('verified-p01-full-read-probe-v3a-panel')),
-      matriboxP01FullReadProbeV3AEnabled ? findsOneWidget : findsNothing,
-    );
     expect(
       find.byKey(const Key('matribox-raw-backup-panel')),
       matriboxP01RawBackupEnabled ? findsOneWidget : findsNothing,

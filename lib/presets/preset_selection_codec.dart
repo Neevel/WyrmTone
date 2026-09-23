@@ -1,3 +1,5 @@
+import 'matribox_user_slot.dart';
+
 enum PresetSelectionDirection { hostToDevice, deviceToHost }
 
 enum MidiObservationState { completeSysEx, incompleteSysEx, otherMidi }
@@ -24,31 +26,6 @@ enum KnownMatriboxPresetSelectionTarget {
         10 => p11,
         _ => null,
       };
-}
-
-class MatriboxPresetSlotAddress {
-  const MatriboxPresetSlotAddress._(this.deviceIndex, this.presetNumber);
-
-  factory MatriboxPresetSlotAddress.fromDeviceIndex(int deviceIndex) {
-    if (deviceIndex < 0) {
-      throw const FormatException(
-        'Preset-Geräteindex darf nicht negativ sein.',
-      );
-    }
-    return MatriboxPresetSlotAddress._(deviceIndex, deviceIndex + 1);
-  }
-
-  factory MatriboxPresetSlotAddress.fromPresetNumber(int presetNumber) {
-    if (presetNumber < 1) {
-      throw const FormatException('Presetnummer muss mindestens P01 sein.');
-    }
-    return MatriboxPresetSlotAddress._(presetNumber - 1, presetNumber);
-  }
-
-  final int deviceIndex;
-  final int presetNumber;
-
-  String get label => 'P${presetNumber.toString().padLeft(2, '0')}';
 }
 
 class PresetSelectionReferenceEvidence {
@@ -86,8 +63,7 @@ class OfflinePresetSelectionMessage {
   const OfflinePresetSelectionMessage(this.target);
 
   final KnownMatriboxPresetSelectionTarget target;
-  MatriboxPresetSlotAddress get slot =>
-      MatriboxPresetSlotAddress.fromDeviceIndex(target.deviceIndex);
+  MatriboxUserSlot get slot => MatriboxUserSlot.fromDeviceIndex(target.deviceIndex);
   int get targetIndex => target.deviceIndex;
   int get targetPreset => target.presetNumber;
   String get presetLabel => target.label;

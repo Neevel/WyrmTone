@@ -20,21 +20,22 @@ class MatriboxToneTransferGoldenTest {
         "operations" to MatriboxToneTransferGolden.operations,
     )
 
-    @Test fun `the production contract validates as a whole plan and equals the certified operations`() {
+    @Test fun `the production contract validates as a whole plan and encodes to exactly the certified hardware messages`() {
         val plan = MatriboxToneTransferPlanValidator.validate(request())
-        assertEquals(MatriboxAngelsPlan.operations, plan.operations)
+        assertEquals(MatriboxAngelsGolden.messages, plan.operations.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } })
         assertEquals(11, plan.operations.size)
         assertEquals(2, plan.operations.count { it is FullLiveOperation.ModelSelect })
         assertEquals(5, plan.operations.count { it is FullLiveOperation.Parameter })
         assertEquals(4, plan.operations.count { it is FullLiveOperation.BlockToggle })
     }
 
-    @Test fun `the production contract encodes to exactly the certified hardware messages`() {
-        val plan = MatriboxToneTransferPlanValidator.validate(request())
-        assertEquals(
-            MatriboxAngelsGolden.messages,
-            plan.operations.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } },
-        )
+    @Test fun `the frozen FAMILY_EXPANSION_P01_V1 messages are valid closed live-edit messages`() {
+        // CERTIFIED hardware run (frozen evidence); the Dart side proves the productive encoder and ledger.
+        assertEquals(23, MatriboxFamilyExpansionGolden.messages.size)
+        for (hex in MatriboxFamilyExpansionGolden.messages) {
+            val message = hex.split(" ").map { it.toInt(16).toByte() }.toByteArray()
+            MatriboxFullLiveCodec.validate(message)
+        }
     }
 
     @Test fun `the production contract runs through the session with the productive port contract`() {
@@ -58,7 +59,7 @@ class MatriboxToneTransferGoldenTest {
         val result = session.execute(request())
         assertEquals("SUCCESS", result["outcome"])
         assertEquals(listOf(11, 11), selected)
-        assertEquals(MatriboxAngelsPlan.operations, sent)
+        assertEquals(MatriboxAngelsGolden.messages, sent.map { MatriboxFullLiveCodec.encode(it).joinToString(" ") { b -> "%02x".format(b) } })
         assertTrue(sent.all { MatriboxToneTransferCatalog.isConfirmed(it) })
     }
 }

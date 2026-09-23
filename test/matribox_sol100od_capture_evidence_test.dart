@@ -1,10 +1,14 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wyrmtone/presets/confirmed_parameter_codec.dart';
-import 'package:wyrmtone/presets/matribox_amp_field_evidence.dart';
-import 'package:wyrmtone/presets/matribox_sol100od_encoder.dart';
+import 'package:wyrmtone/presets/matribox_chain_encoder.dart';
+import 'package:wyrmtone/presets/matribox_chain_slot.dart';
+import 'package:wyrmtone/presets/matribox_transfer_catalog.dart';
 
 import 'support/matribox_sol100od_write_fixtures.dart';
 
+/// CONFIRMED protocol evidence: the six Sol 100 OD AMP parameter writes of the original editor store
+/// capture (real host->device messages). They are decoded independently and reproduced byte-exact by
+/// the PRODUCTIVE chain encoder -- no separate legacy encoder.
 String _hex(List<int> bytes) =>
     bytes.map((b) => b.toRadixString(16).padLeft(2, '0')).join();
 
@@ -32,17 +36,14 @@ void main() {
       expect(decoded.algorithmCode, f.algorithmCode, reason: f.field);
       expect(decoded.parameterIndex, f.parameterIndex, reason: f.field);
       expect(decoded.value, f.value, reason: f.field);
-      expect(
-        MatriboxAmpFieldEvidenceRegistry.forField(f.field)!.catalogIndex,
-        f.parameterIndex,
-      );
     }
   });
 
-  test('encoder reproduces EXACT real capture bytes for all six fields', () {
+  test('the productive encoder reproduces EXACT real capture bytes for all six fields', () {
     for (final f in sol100OdCaptureFixtures) {
+      final parameter = matriboxSol100Od.parameters.singleWhere((p) => p.wireIndex == f.parameterIndex);
       expect(
-        _hex(MatriboxSol100OdEncoder.encode(f.field, f.value)),
+        _hex(MatriboxChainEncoder.parameterWrite(MatriboxChainSlot.amp, matriboxSol100Od, parameter, f.value)),
         f.hex,
         reason: '${f.field}=${f.value} seq ${f.sequence}',
       );
@@ -55,31 +56,5 @@ void main() {
       final last = sol100OdCaptureFixtures.lastWhere((f) => f.field == entry.key);
       expect(last.value, entry.value, reason: entry.key);
     }
-  });
-
-  test('the six formats differ only in the index nibble and the value nibbles', () {
-    final a = _bytes(sol100OdCaptureFixtures.first.hex);
-    for (final f in sol100OdCaptureFixtures) {
-      final b = _bytes(f.hex);
-      for (var i = 0; i < 34; i++) {
-        if (i == 22 || (i >= 25 && i <= 32)) continue;
-        expect(b[i], a[i], reason: 'byte $i of ${f.field} must be constant');
-      }
-    }
-  });
-
-  test('ENCODABLE is not HARDWARE_WRITABLE: only Gain may be sent', () {
-    for (final e in MatriboxAmpFieldEvidenceRegistry.all) {
-      expect(e.encodable, isTrue, reason: e.field);
-      expect(e.rawWriteCaptureEvidence.name, 'confirmed', reason: e.field);
-      expect(e.hardwareWritable, e.field == 'gain', reason: e.field);
-    }
-  });
-
-  test('encoder rejects unknown fields and out-of-range values', () {
-    expect(() => MatriboxSol100OdEncoder.encode('reverb', 10), throwsA(isA<UnencodableMatriboxField>()));
-    expect(() => MatriboxSol100OdEncoder.encode('presence', -1), throwsA(isA<UnencodableMatriboxField>()));
-    expect(() => MatriboxSol100OdEncoder.encode('presence', 100), throwsA(isA<UnencodableMatriboxField>()));
-    expect(() => MatriboxSol100OdEncoder.encode('presence', double.nan), throwsA(isA<UnencodableMatriboxField>()));
   });
 }

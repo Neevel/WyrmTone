@@ -62,8 +62,8 @@ Zentrale Regel (`MatriboxSlotPolicy` in `matribox_transfer_slots.dart`, nativ un
 
 * **P01–P10 = geschützte Spiel-Presets.** Der produktive Transfer liest, plant und schreibt sie nie
   (Dart-Session, Plan, Contract, MethodChannel-Client und Kotlin-Validator lehnen ab, null Sends).
-* **P11–P99 = produktiv beschreibbar** (Status `PRODUCT_WRITABLE / SOFTWARE_VALIDATED`, noch keine
-  Hardware-Zertifizierung je Slot). Factory-Bank nie.
+* **P11–P99 = produktiv beschreibbar**: P11 `HARDWARE_CERTIFIED` (2026-09-23), P12–P99
+  `SOFTWARE_VALIDATED` (keine Übertragung der P11-Evidenz auf andere Slots). Factory-Bank nie.
 * Kein Default-Slot: fehlend/ungültig wird abgelehnt, es gibt keinen Rückfall auf P01 oder P11.
 * Adressierung `Geräteindex = Presetnummer − 1` (P11 → 0x0A, P99 → 0x62): Read (Bank/Slot-Byte an Offset
   13/14 der bestätigten Requests) und Preset-Select (22-Byte-Editor-Nachricht, Index an Offset 18).
@@ -96,11 +96,13 @@ bestätigten Transferfluss (`ToneTransferPage`, deutsche Texte, technische Kürz
   FX1/FX2-Konflikt "Tape Mod Output/VOL" fehlt), B produktiv sendbar 548 (Sync/Bind, Enum, User IR, Vendor-only bleiben
   gesperrt), 166 von 167 Modell-Slots wählbar (User IR gesperrt). C (semantisch belegte Regel) ist eine eigene, kleinere Menge.
 
-## Späterer Hardware-Test (Build-Kommando, hier NICHT ausgeführt)
+## Build für Hardware-Tests
 
-Gates (aus `android/app/build.gradle.kts`, per `generateDebugBuildConfig` geprüft): `ENABLE_MATRIBOX_TONE_TRANSFER=true`
-schaltet nativ `ENABLE_MATRIBOX_TONE_TRANSFER` UND `ENABLE_MATRIBOX_P01_RAW_BACKUP` (Lesen/Backup) ein; alle
-Certification-/Probe-Gates bleiben false. Weitere Defines sind nicht nötig; Certification-/Probe-Defines wären mit dem Tone-Transfer-Gate exklusiv und sperren ihn.
+Es gibt nur noch zwei Gates (`android/app/build.gradle.kts`, beide nur Debug, Release immer `false`):
+`ENABLE_MATRIBOX_P01_RAW_BACKUP` (lesender Reader/Backup) und `ENABLE_MATRIBOX_TONE_TRANSFER` (produktiver
+Transfer P11–P99, schaltet den Reader mit ein). Die früheren Probe-/Certification-Gates und -Werkzeuge sind
+entfernt; ein alter Define schaltet nichts frei. Hardware-Stand: P11 zertifiziert (2026-09-23), P12–P99
+software-validiert (siehe `MULTI_SLOT_CERTIFICATION_PLAN.md`).
 
 ```
 flutter build apk --debug --dart-define=ENABLE_MATRIBOX_TONE_TRANSFER=true
