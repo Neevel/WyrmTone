@@ -10,9 +10,12 @@ enum GuitarTuning {
   eStandard,
   ebStandard,
   dStandard,
+  cSharpStandard,
   dropD,
+  dropCSharp,
   dropC,
   dropB,
+  dropA,
   custom,
 }
 
@@ -120,9 +123,12 @@ extension GuitarTuningLabel on GuitarTuning {
     GuitarTuning.eStandard => 'E Standard',
     GuitarTuning.ebStandard => 'Eb Standard',
     GuitarTuning.dStandard => 'D Standard',
+    GuitarTuning.cSharpStandard => 'C# Standard',
     GuitarTuning.dropD => 'Drop D',
+    GuitarTuning.dropCSharp => 'Drop C#',
     GuitarTuning.dropC => 'Drop C',
     GuitarTuning.dropB => 'Drop B',
+    GuitarTuning.dropA => 'Drop A',
     GuitarTuning.custom => 'Benutzerdefiniert',
   };
 
@@ -130,8 +136,10 @@ extension GuitarTuningLabel on GuitarTuning {
     GuitarTuning.eStandard => 0,
     GuitarTuning.ebStandard || GuitarTuning.dropD => 1,
     GuitarTuning.dStandard => 2,
+    GuitarTuning.cSharpStandard || GuitarTuning.dropCSharp => 3,
     GuitarTuning.dropC => 4,
     GuitarTuning.dropB => 6,
+    GuitarTuning.dropA => 7,
     GuitarTuning.custom => 2,
   };
 }

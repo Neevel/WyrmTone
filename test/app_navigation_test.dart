@@ -17,7 +17,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.byKey(const Key('dashboard-create')), findsOneWidget);
-      expect(find.byType(NavigationDestination), findsNWidgets(5));
+      expect(find.byType(NavigationDestination), findsNWidgets(4));
       await tester.tap(find.text('Profil'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const Key('add-profile-button')));
@@ -38,19 +38,18 @@ void main() {
     },
   );
 
-  testWidgets('all three supplied sounds are selectable in navigation', (
-    tester,
-  ) async {
+  testWidgets('Sounds tab is the search-first entry, without the retired reference list', (tester) async {
     final usb = FakeUsbService();
     addTearDown(usb.dispose);
     await tester.pumpWidget(WyrmToneApp(usbService: usb));
     await tester.pumpAndSettle();
     await tester.tap(find.text('Sounds'));
-    await tester.pumpAndSettle();
+    // the sound library is still loading through the asset bundle (a busy indicator never settles): pump, do not settle
+    await tester.pump(const Duration(milliseconds: 300));
 
-    expect(find.textContaining('CKY'), findsOneWidget);
-    expect(find.textContaining('Children of Bodom'), findsOneWidget);
-    await tester.scrollUntilVisible(find.textContaining('Nirvana'), 200);
-    expect(find.textContaining('Nirvana'), findsOneWidget);
+    expect(find.text('Was möchtest du spielen?'), findsOneWidget);
+    expect(find.byKey(const Key('sound-search')), findsOneWidget);
+    expect(find.textContaining('Referenz-Sounds'), findsNothing);
+    expect(find.text('Schritt 1 von 7'), findsNothing);
   });
 }

@@ -1,0 +1,3487 @@
+{
+ "pack": {
+  "id": "artist_eras",
+  "name": "Artist-Ären und Alben",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Era- und Album-Signaturen: Klangphasen bekannter Acts (Suche und Unterscheidung).",
+  "entryCount": 106,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "era.metallica.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Metallica – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "era": "modern",
+   "genres": [
+    "thrash_metal",
+    "heavy_metal"
+   ],
+   "tags": [
+    "modern",
+    "thick",
+    "heavy"
+   ],
+   "parents": [
+    "artist.metallica"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 76,
+     "bass": 50
+    },
+    "character": {
+     "clarity": 70
+    }
+   }
+  },
+  {
+   "id": "era.megadeth.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Megadeth – 80er Thrash-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Megadeth",
+   "era": "1980s",
+   "genres": [
+    "thrash_metal"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "sharp"
+   ],
+   "parents": [
+    "artist.megadeth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "era.megadeth.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Megadeth – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Megadeth",
+   "era": "1990s",
+   "genres": [
+    "thrash_metal",
+    "heavy_metal"
+   ],
+   "tags": [
+    "polished",
+    "tight",
+    "clear"
+   ],
+   "parents": [
+    "artist.megadeth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 80
+    },
+    "character": {
+     "clarity": 74
+    }
+   }
+  },
+  {
+   "id": "era.slayer.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Slayer – 80er Thrash-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slayer",
+   "era": "1980s",
+   "genres": [
+    "thrash_metal"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "aggressive"
+   ],
+   "parents": [
+    "artist.slayer"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 78,
+     "tightness": 84,
+     "saturation": 76
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "era.iron_maiden.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Iron Maiden – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Iron Maiden",
+   "era": "1980s",
+   "genres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "melodic",
+    "twin-lead",
+    "bright",
+    "galloping"
+   ],
+   "parents": [
+    "artist.iron_maiden"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "treble": 60,
+     "sustain": 68
+    }
+   }
+  },
+  {
+   "id": "era.iron_maiden.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Iron Maiden – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Iron Maiden",
+   "era": "modern",
+   "genres": [
+    "heavy_metal",
+    "progressive_metal"
+   ],
+   "tags": [
+    "modern",
+    "layered",
+    "wide"
+   ],
+   "parents": [
+    "artist.iron_maiden"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "reverb": 16,
+     "delay": 12
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "era.black_sabbath.1970s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Black Sabbath – 70er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Black Sabbath",
+   "era": "1970s",
+   "genres": [
+    "doom_metal",
+    "heavy_metal"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "fuzzy",
+    "heavy"
+   ],
+   "parents": [
+    "artist.black_sabbath"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    },
+    "character": {
+     "vintage": 85,
+     "warmth": 68,
+     "fuzziness": 35
+    }
+   }
+  },
+  {
+   "id": "era.judas_priest.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Judas Priest – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Judas Priest",
+   "era": "1980s",
+   "genres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "sharp",
+    "precise",
+    "twin-lead"
+   ],
+   "parents": [
+    "artist.judas_priest"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 68,
+     "presence": 62
+    }
+   }
+  },
+  {
+   "id": "era.in_flames.classic",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "In Flames – Klassische Melodic-Death-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "In Flames",
+   "era": "1990s",
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "melodic",
+    "twin-lead",
+    "raw"
+   ],
+   "parents": [
+    "artist.in_flames"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 78,
+     "sustain": 68
+    },
+    "character": {
+     "clarity": 62
+    }
+   }
+  },
+  {
+   "id": "era.in_flames.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "In Flames – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "In Flames",
+   "era": "modern",
+   "genres": [
+    "alternative_metal",
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "modern",
+    "polished",
+    "dense"
+   ],
+   "parents": [
+    "artist.in_flames"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 76,
+     "modulation": 8,
+     "reverb": 14
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "era.bring_me_the_horizon.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Bring Me the Horizon – Frühe Metalcore-/Deathcore-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bring Me the Horizon",
+   "era": "2000s",
+   "genres": [
+    "deathcore",
+    "metalcore"
+   ],
+   "tags": [
+    "brutal",
+    "tight",
+    "raw"
+   ],
+   "parents": [
+    "artist.bring_me_the_horizon"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 88,
+     "reverb": 6
+    }
+   }
+  },
+  {
+   "id": "era.bring_me_the_horizon.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Bring Me the Horizon – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bring Me the Horizon",
+   "era": "modern",
+   "genres": [
+    "alternative_rock",
+    "alternative_metal"
+   ],
+   "tags": [
+    "modern",
+    "polished",
+    "dynamic",
+    "electronic-tinged"
+   ],
+   "parents": [
+    "artist.bring_me_the_horizon"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 70,
+     "reverb": 20,
+     "delay": 14,
+     "modulation": 10
+    }
+   }
+  },
+  {
+   "id": "era.opeth.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Opeth – Frühe Death-/Prog-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Opeth",
+   "era": "1990s",
+   "genres": [
+    "death_metal",
+    "progressive_metal"
+   ],
+   "tags": [
+    "dark",
+    "dynamic",
+    "heavy"
+   ],
+   "parents": [
+    "artist.opeth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 72
+    },
+    "character": {
+     "darkness": 60
+    }
+   }
+  },
+  {
+   "id": "era.opeth.prog",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Opeth – Progressive-Rock-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Opeth",
+   "era": "2010s",
+   "genres": [
+    "progressive_rock"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "dynamic"
+   ],
+   "parents": [
+    "artist.opeth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "reverb": 22
+    },
+    "character": {
+     "vintage": 72,
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "era.death.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Death – Frühe Death-Metal-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Death",
+   "era": "1980s",
+   "genres": [
+    "death_metal"
+   ],
+   "tags": [
+    "raw",
+    "brutal",
+    "fast"
+   ],
+   "parents": [
+    "artist.death"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 80
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "era.death.progressive",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Death – Progressive/Technical-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Death",
+   "era": "1990s",
+   "genres": [
+    "technical_death_metal"
+   ],
+   "tags": [
+    "technical",
+    "clear",
+    "precise"
+   ],
+   "parents": [
+    "artist.death"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 88
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "era.sepultura.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Sepultura – Thrash-/Death-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sepultura",
+   "era": "1980s",
+   "genres": [
+    "thrash_metal",
+    "death_metal"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "dirty"
+   ],
+   "parents": [
+    "artist.sepultura"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 80,
+     "saturation": 74
+    },
+    "character": {
+     "loFi": 25
+    }
+   }
+  },
+  {
+   "id": "era.sepultura.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Sepultura – Groove-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sepultura",
+   "era": "1990s",
+   "genres": [
+    "groove_metal"
+   ],
+   "tags": [
+    "tribal",
+    "heavy",
+    "groovy"
+   ],
+   "parents": [
+    "artist.sepultura"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 76,
+     "bass": 60
+    }
+   }
+  },
+  {
+   "id": "era.linkin_park.hybrid",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Linkin Park – Hybrid-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Linkin Park",
+   "era": "2000s",
+   "genres": [
+    "nu_metal",
+    "alternative_rock"
+   ],
+   "tags": [
+    "modern",
+    "tight",
+    "polished"
+   ],
+   "parents": [
+    "artist.linkin_park"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 72
+    },
+    "character": {
+     "clarity": 70
+    }
+   }
+  },
+  {
+   "id": "era.linkin_park.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Linkin Park – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Linkin Park",
+   "era": "modern",
+   "genres": [
+    "alternative_rock"
+   ],
+   "tags": [
+    "modern",
+    "dynamic",
+    "electronic-tinged"
+   ],
+   "parents": [
+    "artist.linkin_park"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "reverb": 18,
+     "delay": 12
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "era.avenged_sevenfold.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Avenged Sevenfold – Frühe Metalcore-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Avenged Sevenfold",
+   "era": "2000s",
+   "genres": [
+    "metalcore"
+   ],
+   "tags": [
+    "raw",
+    "tight",
+    "aggressive"
+   ],
+   "parents": [
+    "artist.avenged_sevenfold"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "era.avenged_sevenfold.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Avenged Sevenfold – Moderne Hard-Rock-/Metal-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Avenged Sevenfold",
+   "era": "2010s",
+   "genres": [
+    "heavy_metal",
+    "hard_rock"
+   ],
+   "tags": [
+    "polished",
+    "thick",
+    "melodic"
+   ],
+   "parents": [
+    "artist.avenged_sevenfold"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 68,
+     "sustain": 72
+    }
+   }
+  },
+  {
+   "id": "era.trivium.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Trivium – Frühe Metalcore-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Trivium",
+   "era": "2000s",
+   "genres": [
+    "metalcore",
+    "thrash_metal"
+   ],
+   "tags": [
+    "tight",
+    "melodic",
+    "aggressive"
+   ],
+   "parents": [
+    "artist.trivium"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 88
+    }
+   }
+  },
+  {
+   "id": "era.trivium.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Trivium – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Trivium",
+   "era": "2010s",
+   "genres": [
+    "heavy_metal",
+    "metalcore"
+   ],
+   "tags": [
+    "polished",
+    "thick",
+    "melodic"
+   ],
+   "parents": [
+    "artist.trivium"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 80,
+     "sustain": 72
+    }
+   }
+  },
+  {
+   "id": "era.green_day.punk",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Green Day – Punk-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Green Day",
+   "era": "1990s",
+   "genres": [
+    "punk_rock",
+    "pop_punk"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "bright"
+   ],
+   "parents": [
+    "artist.green_day"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 64,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "era.green_day.rock_opera",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Green Day – Rock-Opern-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Green Day",
+   "era": "2000s",
+   "genres": [
+    "alternative_rock",
+    "punk_rock"
+   ],
+   "tags": [
+    "polished",
+    "layered",
+    "anthemic"
+   ],
+   "parents": [
+    "artist.green_day"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "tightness": 60,
+     "reverb": 10,
+     "delay": 8
+    }
+   }
+  },
+  {
+   "id": "era.radiohead.guitar",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Radiohead – Gitarrenbetonte Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Radiohead",
+   "era": "1990s",
+   "genres": [
+    "alternative_rock"
+   ],
+   "tags": [
+    "dynamic",
+    "angular",
+    "fuzzy"
+   ],
+   "parents": [
+    "artist.radiohead"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "saturation": 60
+    },
+    "character": {
+     "fuzziness": 30
+    }
+   }
+  },
+  {
+   "id": "era.radiohead.experimental",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Radiohead – Experimentelle Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Radiohead",
+   "era": "2000s",
+   "genres": [
+    "alternative_rock",
+    "experimental"
+   ],
+   "tags": [
+    "clean",
+    "atmospheric",
+    "sparse"
+   ],
+   "parents": [
+    "artist.radiohead"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "reverb": 34,
+     "delay": 26,
+     "modulation": 20
+    }
+   }
+  },
+  {
+   "id": "era.muse.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Muse – Frühe Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Muse",
+   "era": "2000s",
+   "genres": [
+    "alternative_rock",
+    "progressive_rock"
+   ],
+   "tags": [
+    "fuzzy",
+    "dramatic",
+    "tight"
+   ],
+   "parents": [
+    "artist.muse"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "saturation": 68,
+     "tightness": 64
+    },
+    "character": {
+     "fuzziness": 50
+    }
+   }
+  },
+  {
+   "id": "era.muse.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Muse – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Muse",
+   "era": "2010s",
+   "genres": [
+    "alternative_rock"
+   ],
+   "tags": [
+    "modern",
+    "polished",
+    "synth-tinged"
+   ],
+   "parents": [
+    "artist.muse"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "modulation": 14,
+     "delay": 16
+    },
+    "character": {
+     "clarity": 74
+    }
+   }
+  },
+  {
+   "id": "era.arctic_monkeys.garage",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Arctic Monkeys – Garage-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Arctic Monkeys",
+   "era": "2000s",
+   "genres": [
+    "garage_rock",
+    "indie_rock"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "bright"
+   ],
+   "parents": [
+    "artist.arctic_monkeys"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "treble": 60
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "era.arctic_monkeys.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Arctic Monkeys – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Arctic Monkeys",
+   "era": "2010s",
+   "genres": [
+    "alternative_rock",
+    "hard_rock"
+   ],
+   "tags": [
+    "slick",
+    "heavy",
+    "riff-driven"
+   ],
+   "parents": [
+    "artist.arctic_monkeys"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "bass": 54,
+     "mids": 62,
+     "reverb": 14
+    }
+   }
+  },
+  {
+   "id": "era.red_hot_chili_peppers.funk",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Red Hot Chili Peppers – Funk-Rock-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Red Hot Chili Peppers",
+   "era": "1990s",
+   "genres": [
+    "funk",
+    "alternative_rock"
+   ],
+   "tags": [
+    "funky",
+    "dry",
+    "punchy"
+   ],
+   "parents": [
+    "artist.red_hot_chili_peppers"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "attack": 74,
+     "reverb": 8
+    }
+   }
+  },
+  {
+   "id": "era.red_hot_chili_peppers.melodic",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Red Hot Chili Peppers – Melodische Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Red Hot Chili Peppers",
+   "era": "2000s",
+   "genres": [
+    "alternative_rock"
+   ],
+   "tags": [
+    "clean",
+    "melodic",
+    "layered"
+   ],
+   "parents": [
+    "artist.red_hot_chili_peppers"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "delay": 14,
+     "modulation": 14
+    }
+   }
+  },
+  {
+   "id": "era.u2.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "U2 – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "U2",
+   "era": "1980s",
+   "genres": [
+    "alternative_rock",
+    "post_punk"
+   ],
+   "tags": [
+    "delay-driven",
+    "shimmering",
+    "anthemic"
+   ],
+   "parents": [
+    "artist.u2"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "delay": 50,
+     "reverb": 32
+    }
+   }
+  },
+  {
+   "id": "era.u2.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "U2 – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "U2",
+   "era": "1990s",
+   "genres": [
+    "alternative_rock"
+   ],
+   "tags": [
+    "fuzzy",
+    "electronic-tinged",
+    "dark"
+   ],
+   "parents": [
+    "artist.u2"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "saturation": 54,
+     "modulation": 14
+    }
+   }
+  },
+  {
+   "id": "era.acdc.1970s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "AC/DC – 70er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "AC/DC",
+   "era": "1970s",
+   "genres": [
+    "hard_rock"
+   ],
+   "tags": [
+    "raw",
+    "vintage",
+    "loose"
+   ],
+   "parents": [
+    "artist.acdc"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50
+    },
+    "character": {
+     "vintage": 78,
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "era.acdc.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "AC/DC – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "AC/DC",
+   "era": "1980s",
+   "genres": [
+    "hard_rock"
+   ],
+   "tags": [
+    "punchy",
+    "tight",
+    "polished"
+   ],
+   "parents": [
+    "artist.acdc"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 58,
+     "compression": 20
+    }
+   }
+  },
+  {
+   "id": "era.guns_n_roses.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Guns N' Roses – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Guns N' Roses",
+   "era": "1980s",
+   "genres": [
+    "hard_rock",
+    "glam_metal"
+   ],
+   "tags": [
+    "raw",
+    "gritty",
+    "bluesy"
+   ],
+   "parents": [
+    "artist.guns_n_roses"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "saturation": 60
+    }
+   }
+  },
+  {
+   "id": "era.guns_n_roses.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Guns N' Roses – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Guns N' Roses",
+   "era": "1990s",
+   "genres": [
+    "hard_rock"
+   ],
+   "tags": [
+    "polished",
+    "layered",
+    "thick"
+   ],
+   "parents": [
+    "artist.guns_n_roses"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "reverb": 16,
+     "delay": 10,
+     "compression": 28
+    }
+   }
+  },
+  {
+   "id": "era.aerosmith.1970s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Aerosmith – 70er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Aerosmith",
+   "era": "1970s",
+   "genres": [
+    "hard_rock",
+    "blues_rock"
+   ],
+   "tags": [
+    "raw",
+    "vintage",
+    "bluesy"
+   ],
+   "parents": [
+    "artist.aerosmith"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "vintage": 76,
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "era.aerosmith.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Aerosmith – 80er/90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Aerosmith",
+   "era": "1980s",
+   "genres": [
+    "hard_rock"
+   ],
+   "tags": [
+    "polished",
+    "punchy",
+    "radio"
+   ],
+   "parents": [
+    "artist.aerosmith"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "compression": 26,
+     "treble": 58
+    }
+   }
+  },
+  {
+   "id": "era.rush.1970s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Rush – 70er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rush",
+   "era": "1970s",
+   "genres": [
+    "progressive_rock",
+    "hard_rock"
+   ],
+   "tags": [
+    "raw",
+    "heavy",
+    "fast"
+   ],
+   "parents": [
+    "artist.rush"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 56,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "era.rush.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Rush – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rush",
+   "era": "1980s",
+   "genres": [
+    "progressive_rock"
+   ],
+   "tags": [
+    "chorused",
+    "clean-crunch",
+    "precise"
+   ],
+   "parents": [
+    "artist.rush"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "modulation": 30,
+     "reverb": 14
+    },
+    "character": {
+     "clarity": 82
+    }
+   }
+  },
+  {
+   "id": "era.deftones.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Deftones – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Deftones",
+   "era": "1990s",
+   "genres": [
+    "alternative_metal",
+    "nu_metal"
+   ],
+   "tags": [
+    "heavy",
+    "raw",
+    "groovy"
+   ],
+   "parents": [
+    "artist.deftones"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 70,
+     "bass": 62
+    }
+   }
+  },
+  {
+   "id": "era.deftones.2000s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Deftones – 2000er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Deftones",
+   "era": "2000s",
+   "genres": [
+    "alternative_metal",
+    "shoegaze"
+   ],
+   "tags": [
+    "dreamy",
+    "wide",
+    "dark"
+   ],
+   "parents": [
+    "artist.deftones"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "modulation": 20,
+     "reverb": 32,
+     "delay": 20
+    },
+    "character": {
+     "width": 80
+    }
+   }
+  },
+  {
+   "id": "era.mastodon.early",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Mastodon – Frühe Sludge-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mastodon",
+   "era": "2000s",
+   "genres": [
+    "sludge_metal"
+   ],
+   "tags": [
+    "thick",
+    "aggressive",
+    "gritty"
+   ],
+   "parents": [
+    "artist.mastodon"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "saturation": 72,
+     "tightness": 52
+    }
+   }
+  },
+  {
+   "id": "era.mastodon.modern",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Mastodon – Moderne Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mastodon",
+   "era": "2010s",
+   "genres": [
+    "progressive_metal",
+    "alternative_metal"
+   ],
+   "tags": [
+    "melodic",
+    "dynamic",
+    "polished"
+   ],
+   "parents": [
+    "artist.mastodon"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 62,
+     "sustain": 68
+    }
+   }
+  },
+  {
+   "id": "era.nine_inch_nails.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Nine Inch Nails – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nine Inch Nails",
+   "era": "1990s",
+   "genres": [
+    "industrial_metal"
+   ],
+   "tags": [
+    "noisy",
+    "aggressive",
+    "dense"
+   ],
+   "parents": [
+    "artist.nine_inch_nails"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "saturation": 76
+    },
+    "character": {
+     "loFi": 35
+    }
+   }
+  },
+  {
+   "id": "era.nine_inch_nails.2000s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Nine Inch Nails – 2000er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nine Inch Nails",
+   "era": "2000s",
+   "genres": [
+    "industrial_metal",
+    "alternative_rock"
+   ],
+   "tags": [
+    "polished",
+    "layered",
+    "sparse"
+   ],
+   "parents": [
+    "artist.nine_inch_nails"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 62
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "era.ozzy_osbourne.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Ozzy Osbourne – 80er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ozzy Osbourne",
+   "era": "1980s",
+   "genres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "neoclassical",
+    "sharp",
+    "melodic"
+   ],
+   "parents": [
+    "artist.ozzy_osbourne"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 64,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "era.ozzy_osbourne.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Ozzy Osbourne – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ozzy Osbourne",
+   "era": "1990s",
+   "genres": [
+    "heavy_metal",
+    "hard_rock"
+   ],
+   "tags": [
+    "thick",
+    "modern",
+    "dark"
+   ],
+   "parents": [
+    "artist.ozzy_osbourne"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 56,
+     "tightness": 62
+    }
+   }
+  },
+  {
+   "id": "era.eric_clapton.1960s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Eric Clapton – 60er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eric Clapton",
+   "era": "1960s",
+   "genres": [
+    "blues_rock",
+    "classic_rock"
+   ],
+   "tags": [
+    "woody",
+    "singing",
+    "vintage"
+   ],
+   "parents": [
+    "artist.eric_clapton"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "sustain": 76
+    },
+    "character": {
+     "vintage": 85
+    }
+   }
+  },
+  {
+   "id": "era.eric_clapton.1970s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Eric Clapton – 70er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eric Clapton",
+   "era": "1970s",
+   "genres": [
+    "blues_rock"
+   ],
+   "tags": [
+    "clean",
+    "warm",
+    "relaxed"
+   ],
+   "parents": [
+    "artist.eric_clapton"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "sustain": 62
+    },
+    "character": {
+     "warmth": 76
+    }
+   }
+  },
+  {
+   "id": "era.pearl_jam.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Pearl Jam – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pearl Jam",
+   "era": "1990s",
+   "genres": [
+    "grunge"
+   ],
+   "tags": [
+    "raw",
+    "dynamic",
+    "warm"
+   ],
+   "parents": [
+    "artist.pearl_jam"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "saturation": 60
+    },
+    "character": {
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "era.pearl_jam.2000s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Pearl Jam – 2000er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pearl Jam",
+   "era": "2000s",
+   "genres": [
+    "alternative_rock"
+   ],
+   "tags": [
+    "clean",
+    "dynamic",
+    "polished"
+   ],
+   "parents": [
+    "artist.pearl_jam"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40
+    },
+    "character": {
+     "clarity": 68
+    }
+   }
+  },
+  {
+   "id": "era.stevie_ray_vaughan.texas",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Stevie Ray Vaughan – Texas-Blues-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stevie Ray Vaughan",
+   "era": "1980s",
+   "genres": [
+    "texas_blues"
+   ],
+   "tags": [
+    "fat",
+    "punchy",
+    "spring-reverb"
+   ],
+   "parents": [
+    "artist.stevie_ray_vaughan"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "bass": 54
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "era.paramore.pop_punk",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Paramore – Pop-Punk-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Paramore",
+   "era": "2000s",
+   "genres": [
+    "pop_punk"
+   ],
+   "tags": [
+    "bright",
+    "tight",
+    "dynamic"
+   ],
+   "parents": [
+    "artist.paramore"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "era.paramore.new_wave",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Paramore – New-Wave-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Paramore",
+   "era": "2010s",
+   "genres": [
+    "alternative_rock",
+    "post_punk"
+   ],
+   "tags": [
+    "clean",
+    "chorused",
+    "bright"
+   ],
+   "parents": [
+    "artist.paramore"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "modulation": 22,
+     "delay": 18
+    },
+    "character": {
+     "clarity": 78
+    }
+   }
+  },
+  {
+   "id": "album.metallica.ride_the_lightning",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Metallica – Ride the Lightning (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "album": "Ride the Lightning",
+   "year": 1984,
+   "era": "1980s",
+   "parents": [
+    "era.metallica.1980s"
+   ],
+   "tags": [
+    "raw",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "album.metallica.black_album",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Metallica – Metallica (The Black Album) (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "album": "Metallica (The Black Album)",
+   "year": 1991,
+   "era": "1990s",
+   "parents": [
+    "era.metallica.1990s"
+   ],
+   "tags": [
+    "thick",
+    "polished"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 68,
+     "bass": 52
+    }
+   }
+  },
+  {
+   "id": "album.megadeth.rust_in_peace",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Megadeth – Rust in Peace (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Megadeth",
+   "album": "Rust in Peace",
+   "year": 1990,
+   "era": "1990s",
+   "parents": [
+    "era.megadeth.1990s"
+   ],
+   "tags": [
+    "technical",
+    "precise"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 86
+    }
+   }
+  },
+  {
+   "id": "album.slayer.reign_in_blood",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Slayer – Reign in Blood (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slayer",
+   "album": "Reign in Blood",
+   "year": 1986,
+   "era": "1980s",
+   "parents": [
+    "era.slayer.1980s"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "brutal"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 80,
+     "tightness": 86
+    }
+   }
+  },
+  {
+   "id": "album.pantera.vulgar_display_of_power",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Pantera – Vulgar Display of Power (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pantera",
+   "album": "Vulgar Display of Power",
+   "year": 1992,
+   "era": "1990s",
+   "parents": [
+    "artist.pantera"
+   ],
+   "tags": [
+    "heavy",
+    "sharp",
+    "scooped"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 80,
+     "mids": 38
+    }
+   }
+  },
+  {
+   "id": "album.iron_maiden.number_of_the_beast",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Iron Maiden – The Number of the Beast (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Iron Maiden",
+   "album": "The Number of the Beast",
+   "year": 1982,
+   "era": "1980s",
+   "parents": [
+    "era.iron_maiden.1980s"
+   ],
+   "tags": [
+    "galloping",
+    "melodic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    }
+   }
+  },
+  {
+   "id": "album.judas_priest.british_steel",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Judas Priest – British Steel (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Judas Priest",
+   "album": "British Steel",
+   "year": 1980,
+   "era": "1980s",
+   "parents": [
+    "era.judas_priest.1980s"
+   ],
+   "tags": [
+    "sharp",
+    "direct"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "album.black_sabbath.paranoid",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Black Sabbath – Paranoid (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Black Sabbath",
+   "album": "Paranoid",
+   "year": 1970,
+   "era": "1970s",
+   "parents": [
+    "era.black_sabbath.1970s"
+   ],
+   "tags": [
+    "heavy",
+    "vintage"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.nirvana.nevermind",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Nirvana – Nevermind (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nirvana",
+   "album": "Nevermind",
+   "year": 1991,
+   "era": "1990s",
+   "parents": [
+    "artist.nirvana"
+   ],
+   "tags": [
+    "polished-raw",
+    "dynamic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 44,
+     "compression": 30
+    }
+   }
+  },
+  {
+   "id": "album.pearl_jam.ten",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Pearl Jam – Ten (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pearl Jam",
+   "album": "Ten",
+   "year": 1991,
+   "era": "1990s",
+   "parents": [
+    "era.pearl_jam.1990s"
+   ],
+   "tags": [
+    "warm",
+    "dynamic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  },
+  {
+   "id": "album.soundgarden.superunknown",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Soundgarden – Superunknown (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Soundgarden",
+   "album": "Superunknown",
+   "year": 1994,
+   "era": "1990s",
+   "parents": [
+    "artist.soundgarden"
+   ],
+   "tags": [
+    "heavy",
+    "dark",
+    "dense"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "bass": 58
+    },
+    "character": {
+     "darkness": 55
+    }
+   }
+  },
+  {
+   "id": "album.alice_in_chains.dirt",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Alice in Chains – Dirt (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Alice in Chains",
+   "album": "Dirt",
+   "year": 1992,
+   "era": "1990s",
+   "parents": [
+    "artist.alice_in_chains"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "harmonized"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 48
+    },
+    "character": {
+     "darkness": 62
+    }
+   }
+  },
+  {
+   "id": "album.radiohead.ok_computer",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Radiohead – OK Computer (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Radiohead",
+   "album": "OK Computer",
+   "year": 1997,
+   "era": "1990s",
+   "parents": [
+    "era.radiohead.guitar"
+   ],
+   "tags": [
+    "dynamic",
+    "layered"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "reverb": 24
+    }
+   }
+  },
+  {
+   "id": "album.green_day.dookie",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Green Day – Dookie (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Green Day",
+   "album": "Dookie",
+   "year": 1994,
+   "era": "1990s",
+   "parents": [
+    "era.green_day.punk"
+   ],
+   "tags": [
+    "bright",
+    "fast"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.blink_182.enema_of_the_state",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Blink-182 – Enema of the State (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Blink-182",
+   "album": "Enema of the State",
+   "year": 1999,
+   "era": "1990s",
+   "parents": [
+    "artist.blink_182"
+   ],
+   "tags": [
+    "polished",
+    "bright",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 68,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "album.def_leppard.hysteria",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Def Leppard – Hysteria (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Def Leppard",
+   "album": "Hysteria",
+   "year": 1987,
+   "era": "1980s",
+   "parents": [
+    "artist.def_leppard"
+   ],
+   "tags": [
+    "layered",
+    "polished"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 66,
+     "compression": 36
+    }
+   }
+  },
+  {
+   "id": "album.guns_n_roses.appetite_for_destruction",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Guns N' Roses – Appetite for Destruction (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Guns N' Roses",
+   "album": "Appetite for Destruction",
+   "year": 1987,
+   "era": "1980s",
+   "parents": [
+    "era.guns_n_roses.1980s"
+   ],
+   "tags": [
+    "raw",
+    "gritty"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60
+    }
+   }
+  },
+  {
+   "id": "album.acdc.back_in_black",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "AC/DC – Back in Black (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "AC/DC",
+   "album": "Back in Black",
+   "year": 1980,
+   "era": "1980s",
+   "parents": [
+    "era.acdc.1980s"
+   ],
+   "tags": [
+    "punchy",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.led_zeppelin.led_zeppelin_iv",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Led Zeppelin – Led Zeppelin IV (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Led Zeppelin",
+   "album": "Led Zeppelin IV",
+   "year": 1971,
+   "era": "1970s",
+   "parents": [
+    "artist.led_zeppelin"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "dynamic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 42
+    },
+    "character": {
+     "vintage": 85
+    }
+   }
+  },
+  {
+   "id": "album.pink_floyd.dark_side_of_the_moon",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Pink Floyd – The Dark Side of the Moon (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pink Floyd",
+   "album": "The Dark Side of the Moon",
+   "year": 1973,
+   "era": "1970s",
+   "parents": [
+    "artist.pink_floyd"
+   ],
+   "tags": [
+    "spacious",
+    "warm",
+    "clean"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "delay": 26,
+     "reverb": 32
+    }
+   }
+  },
+  {
+   "id": "album.queen.a_night_at_the_opera",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Queen – A Night at the Opera (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Queen",
+   "album": "A Night at the Opera",
+   "year": 1975,
+   "era": "1970s",
+   "parents": [
+    "artist.queen"
+   ],
+   "tags": [
+    "layered",
+    "singing"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 80
+    }
+   }
+  },
+  {
+   "id": "album.stevie_ray_vaughan.texas_flood",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Stevie Ray Vaughan – Texas Flood (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stevie Ray Vaughan",
+   "album": "Texas Flood",
+   "year": 1983,
+   "era": "1980s",
+   "parents": [
+    "era.stevie_ray_vaughan.texas"
+   ],
+   "tags": [
+    "fat",
+    "punchy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44
+    }
+   }
+  },
+  {
+   "id": "album.dire_straits.brothers_in_arms",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Dire Straits – Brothers in Arms (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dire Straits",
+   "album": "Brothers in Arms",
+   "year": 1985,
+   "era": "1980s",
+   "parents": [
+    "artist.dire_straits"
+   ],
+   "tags": [
+    "clean",
+    "polished",
+    "articulate"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 18
+    },
+    "character": {
+     "clarity": 84
+    }
+   }
+  },
+  {
+   "id": "album.opeth.blackwater_park",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Opeth – Blackwater Park (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Opeth",
+   "album": "Blackwater Park",
+   "year": 2001,
+   "era": "2000s",
+   "parents": [
+    "era.opeth.early"
+   ],
+   "tags": [
+    "dynamic",
+    "dark"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64
+    },
+    "character": {
+     "darkness": 58
+    }
+   }
+  },
+  {
+   "id": "album.in_flames.the_jester_race",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "In Flames – The Jester Race (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "In Flames",
+   "album": "The Jester Race",
+   "year": 1996,
+   "era": "1990s",
+   "parents": [
+    "era.in_flames.classic"
+   ],
+   "tags": [
+    "melodic",
+    "raw"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.in_flames.clayman",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "In Flames – Clayman (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "In Flames",
+   "album": "Clayman",
+   "year": 2000,
+   "era": "2000s",
+   "parents": [
+    "era.in_flames.classic"
+   ],
+   "tags": [
+    "melodic",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 80
+    }
+   }
+  },
+  {
+   "id": "album.children_of_bodom.hatebreeder",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Children of Bodom – Hatebreeder (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Children of Bodom",
+   "album": "Hatebreeder",
+   "year": 1999,
+   "era": "1990s",
+   "parents": [
+    "artist.cob"
+   ],
+   "tags": [
+    "neoclassical",
+    "fast"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "sustain": 72
+    }
+   }
+  },
+  {
+   "id": "album.slipknot.iowa",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Slipknot – Iowa (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slipknot",
+   "album": "Iowa",
+   "year": 2001,
+   "era": "2000s",
+   "parents": [
+    "artist.slipknot"
+   ],
+   "tags": [
+    "brutal",
+    "heavy",
+    "downtuned"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 76
+    }
+   }
+  },
+  {
+   "id": "album.korn.korn_debut",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Korn – Korn (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Korn",
+   "album": "Korn",
+   "year": 1994,
+   "era": "1990s",
+   "parents": [
+    "artist.korn"
+   ],
+   "tags": [
+    "downtuned",
+    "low",
+    "rhythmic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 68
+    }
+   }
+  },
+  {
+   "id": "album.deftones.white_pony",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Deftones – White Pony (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Deftones",
+   "album": "White Pony",
+   "year": 2000,
+   "era": "2000s",
+   "parents": [
+    "era.deftones.2000s"
+   ],
+   "tags": [
+    "dreamy",
+    "heavy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "reverb": 30
+    }
+   }
+  },
+  {
+   "id": "album.system_of_a_down.toxicity",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "System of a Down – Toxicity (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "System of a Down",
+   "album": "Toxicity",
+   "year": 2001,
+   "era": "2000s",
+   "parents": [
+    "artist.system_of_a_down"
+   ],
+   "tags": [
+    "dynamic",
+    "tight",
+    "punchy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 70
+    }
+   }
+  },
+  {
+   "id": "album.rammstein.mutter",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Rammstein – Mutter (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rammstein",
+   "album": "Mutter",
+   "year": 2001,
+   "era": "2000s",
+   "parents": [
+    "artist.rammstein"
+   ],
+   "tags": [
+    "mechanical",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "album.gojira.from_mars_to_sirius",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Gojira – From Mars to Sirius (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gojira",
+   "album": "From Mars to Sirius",
+   "year": 2005,
+   "era": "2000s",
+   "parents": [
+    "artist.gojira"
+   ],
+   "tags": [
+    "heavy",
+    "tight",
+    "pick-scrape"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 78
+    }
+   }
+  },
+  {
+   "id": "album.meshuggah.destroy_erase_improve",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Meshuggah – Destroy Erase Improve (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Meshuggah",
+   "album": "Destroy Erase Improve",
+   "year": 1995,
+   "era": "1990s",
+   "parents": [
+    "artist.meshuggah"
+   ],
+   "tags": [
+    "polyrhythmic",
+    "tight",
+    "heavy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 90
+    }
+   }
+  },
+  {
+   "id": "album.trivium.ascendancy",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Trivium – Ascendancy (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Trivium",
+   "album": "Ascendancy",
+   "year": 2005,
+   "era": "2000s",
+   "parents": [
+    "era.trivium.early"
+   ],
+   "tags": [
+    "melodic",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.killswitch_engage.the_end_of_heartache",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Killswitch Engage – The End of Heartache (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Killswitch Engage",
+   "album": "The End of Heartache",
+   "year": 2004,
+   "era": "2000s",
+   "parents": [
+    "artist.killswitch_engage"
+   ],
+   "tags": [
+    "melodic",
+    "tight"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 86
+    }
+   }
+  },
+  {
+   "id": "album.bring_me_the_horizon.sempiternal",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Bring Me the Horizon – Sempiternal (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bring Me the Horizon",
+   "album": "Sempiternal",
+   "year": 2013,
+   "era": "2010s",
+   "parents": [
+    "era.bring_me_the_horizon.modern"
+   ],
+   "tags": [
+    "polished",
+    "dynamic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "reverb": 16
+    }
+   }
+  },
+  {
+   "id": "album.muse.origin_of_symmetry",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Muse – Origin of Symmetry (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Muse",
+   "album": "Origin of Symmetry",
+   "year": 2001,
+   "era": "2000s",
+   "parents": [
+    "era.muse.early"
+   ],
+   "tags": [
+    "fuzzy",
+    "dramatic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64
+    },
+    "character": {
+     "fuzziness": 52
+    }
+   }
+  },
+  {
+   "id": "album.arctic_monkeys.am",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Arctic Monkeys – AM (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Arctic Monkeys",
+   "album": "AM",
+   "year": 2013,
+   "era": "2010s",
+   "parents": [
+    "era.arctic_monkeys.modern"
+   ],
+   "tags": [
+    "slick",
+    "heavy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.red_hot_chili_peppers.blood_sugar_sex_magik",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Red Hot Chili Peppers – Blood Sugar Sex Magik (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Red Hot Chili Peppers",
+   "album": "Blood Sugar Sex Magik",
+   "year": 1991,
+   "era": "1990s",
+   "parents": [
+    "era.red_hot_chili_peppers.funk"
+   ],
+   "tags": [
+    "funky",
+    "dry"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.foo_fighters.the_colour_and_the_shape",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Foo Fighters – The Colour and the Shape (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Foo Fighters",
+   "album": "The Colour and the Shape",
+   "year": 1997,
+   "era": "1990s",
+   "parents": [
+    "artist.foo_fighters"
+   ],
+   "tags": [
+    "dynamic",
+    "thick",
+    "direct"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 56
+    }
+   }
+  },
+  {
+   "id": "album.queens_of_the_stone_age.songs_for_the_deaf",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Queens of the Stone Age – Songs for the Deaf (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Queens of the Stone Age",
+   "album": "Songs for the Deaf",
+   "year": 2002,
+   "era": "2000s",
+   "parents": [
+    "artist.queens_of_the_stone_age"
+   ],
+   "tags": [
+    "fuzzy",
+    "heavy",
+    "groovy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    },
+    "character": {
+     "fuzziness": 40
+    }
+   }
+  },
+  {
+   "id": "album.my_bloody_valentine.loveless",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "My Bloody Valentine – Loveless (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "My Bloody Valentine",
+   "album": "Loveless",
+   "year": 1991,
+   "era": "1990s",
+   "parents": [
+    "artist.my_bloody_valentine"
+   ],
+   "tags": [
+    "wall-of-sound",
+    "washy"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "reverb": 66,
+     "modulation": 52
+    }
+   }
+  },
+  {
+   "id": "album.slowdive.souvlaki",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Slowdive – Souvlaki (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slowdive",
+   "album": "Souvlaki",
+   "year": 1993,
+   "era": "1990s",
+   "parents": [
+    "artist.slowdive"
+   ],
+   "tags": [
+    "dreamy",
+    "shimmering"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38
+    }
+   }
+  },
+  {
+   "id": "album.explosions_in_the_sky.the_earth_is_not_a_cold_dead_place",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Explosions in the Sky – The Earth Is Not a Cold Dead Place (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Explosions in the Sky",
+   "album": "The Earth Is Not a Cold Dead Place",
+   "year": 2003,
+   "era": "2000s",
+   "parents": [
+    "artist.explosions_in_the_sky"
+   ],
+   "tags": [
+    "swelling",
+    "dynamic"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "delay": 48,
+     "reverb": 54
+    }
+   }
+  },
+  {
+   "id": "album.mogwai.young_team",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Mogwai – Mogwai Young Team (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mogwai",
+   "album": "Mogwai Young Team",
+   "year": 1997,
+   "era": "1990s",
+   "parents": [
+    "artist.mogwai"
+   ],
+   "tags": [
+    "dynamic",
+    "loud-quiet"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "album.dream_theater.images_and_words",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Dream Theater – Images and Words (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dream Theater",
+   "album": "Images and Words",
+   "year": 1992,
+   "era": "1990s",
+   "parents": [
+    "artist.dream_theater"
+   ],
+   "tags": [
+    "virtuosic",
+    "clear"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 76
+    }
+   }
+  }
+ ]
+}

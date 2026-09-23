@@ -1,0 +1,20 @@
+[
+  {
+    "id": "II-PRO-A-model-change-128",
+    "source": "MATRIBOX_II_PRO_REFERENCE: hurricaneabel/Matribox_II_Pro_MidiCon @f76dace, matribox_sysex.py:312, device->host, passive capture",
+    "length": 130,
+    "headerHex": "f0 21 25 4d 50 00 00"
+  },
+  {
+    "id": "II-PRO-B-dyn-model-change-108",
+    "source": "MATRIBOX_II_PRO_REFERENCE: same repo, matribox_sysex.py:300, device->host, passive capture",
+    "length": 110,
+    "headerHex": "f0 21 25 4d 50 00 00"
+  },
+  {
+    "id": "II-PRO-C-chain-update-126",
+    "source": "MATRIBOX_II_PRO_REFERENCE: same repo, descobrindo/descobrindo.txt:7, device->host, 93 identical samples, content unexplained",
+    "length": 128,
+    "headerHex": "f0 21 25 4d 50 00 00"
+  }
+]

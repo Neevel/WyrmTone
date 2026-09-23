@@ -52,6 +52,214 @@ class MidiDiagnosticsManager(
             })
         },
     )
+    private val p01ReadProbe = VerifiedPresetP01ReadProbe(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_READ_PROBE) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_READ_PROBE).check()
+            VerifiedPresetP01ReadProbePort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+        openReceivePort = {
+            val info = requireNotNull(openedInfo)
+            val output = requireNotNull(
+                info.ports.singleOrNull { it.type == MidiDeviceInfo.PortInfo.TYPE_OUTPUT },
+            ) { "Kein eindeutiger Matribox-Output-Port vorhanden." }
+            val port = requireNotNull(openedMidiDevice?.openOutputPort(output.portNumber)) {
+                "Matribox-Output-Port konnte nicht geöffnet werden."
+            }
+            object : ReceiveOnlyMidiPort {
+                private var receiver: MidiReceiver? = null
+                override fun connect(receive: (ByteArray, Long) -> Unit) {
+                    val receiving = object : MidiReceiver() {
+                        override fun onSend(data: ByteArray, offset: Int, count: Int, timestamp: Long) {
+                            // Callback only: no call to send or flush is made.
+                            if (count > 4096) {
+                                receive(ByteArray(0), timestamp)
+                                return
+                            }
+                            if (count > 0 && offset >= 0 && offset <= data.size - count) {
+                                receive(data.copyOfRange(offset, offset + count), timestamp)
+                            }
+                        }
+                    }
+                    receiver = receiving
+                    port.connect(receiving)
+                }
+                override fun disconnect() { receiver?.let { port.disconnect(it) }; receiver = null }
+                override fun close() { port.close() }
+            }
+        },
+    )
+    private val p01FullReadProbe = VerifiedPresetP01FullReadProbe(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_FULL_READ_PROBE) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_FULL_READ_PROBE).check()
+            VerifiedPresetP01FullReadProbePort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+        openReceivePort = {
+            val info = requireNotNull(openedInfo)
+            val output = requireNotNull(
+                info.ports.singleOrNull { it.type == MidiDeviceInfo.PortInfo.TYPE_OUTPUT },
+            ) { "Kein eindeutiger Matribox-Output-Port vorhanden." }
+            val port = requireNotNull(openedMidiDevice?.openOutputPort(output.portNumber)) {
+                "Matribox-Output-Port konnte nicht geöffnet werden."
+            }
+            object : ReceiveOnlyMidiPort {
+                private var receiver: MidiReceiver? = null
+                override fun connect(receive: (ByteArray, Long) -> Unit) {
+                    val receiving = object : MidiReceiver() {
+                        override fun onSend(data: ByteArray, offset: Int, count: Int, timestamp: Long) {
+                            // Callback only: no call to send or flush is made.
+                            if (count > 4096) {
+                                receive(ByteArray(0), timestamp)
+                                return
+                            }
+                            if (count > 0 && offset >= 0 && offset <= data.size - count) {
+                                receive(data.copyOfRange(offset, offset + count), timestamp)
+                            }
+                        }
+                    }
+                    receiver = receiving
+                    port.connect(receiving)
+                }
+                override fun disconnect() { receiver?.let { port.disconnect(it) }; receiver = null }
+                override fun close() { port.close() }
+            }
+        },
+    )
+    private val p01FullReadProbeV3A = VerifiedPresetP01FullReadProbeV3A(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_FULL_READ_PROBE_V3A) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_FULL_READ_PROBE_V3A).check()
+            VerifiedPresetP01FullReadProbeV3APort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+        openReceivePort = {
+            val info = requireNotNull(openedInfo)
+            val output = requireNotNull(
+                info.ports.singleOrNull { it.type == MidiDeviceInfo.PortInfo.TYPE_OUTPUT },
+            ) { "Kein eindeutiger Matribox-Output-Port vorhanden." }
+            val port = requireNotNull(openedMidiDevice?.openOutputPort(output.portNumber)) {
+                "Matribox-Output-Port konnte nicht geöffnet werden."
+            }
+            object : ReceiveOnlyMidiPort {
+                private var receiver: MidiReceiver? = null
+                override fun connect(receive: (ByteArray, Long) -> Unit) {
+                    val receiving = object : MidiReceiver() {
+                        override fun onSend(data: ByteArray, offset: Int, count: Int, timestamp: Long) {
+                            // Callback only: no call to send or flush is made.
+                            if (count > 4096) {
+                                receive(ByteArray(0), timestamp)
+                                return
+                            }
+                            if (count > 0 && offset >= 0 && offset <= data.size - count) {
+                                receive(data.copyOfRange(offset, offset + count), timestamp)
+                            }
+                        }
+                    }
+                    receiver = receiving
+                    port.connect(receiving)
+                }
+                override fun disconnect() { receiver?.let { port.disconnect(it) }; receiver = null }
+                override fun close() { port.close() }
+            }
+        },
+    )
+    private val presetReader = MatriboxPresetReader(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_RAW_BACKUP) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_RAW_BACKUP).check()
+            MatriboxPresetReaderPort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+        openReceivePort = {
+            val info = requireNotNull(openedInfo)
+            val output = requireNotNull(
+                info.ports.singleOrNull { it.type == MidiDeviceInfo.PortInfo.TYPE_OUTPUT },
+            ) { "Kein eindeutiger Matribox-Output-Port vorhanden." }
+            val port = requireNotNull(openedMidiDevice?.openOutputPort(output.portNumber)) {
+                "Matribox-Output-Port konnte nicht geöffnet werden."
+            }
+            object : ReceiveOnlyMidiPort {
+                private var receiver: MidiReceiver? = null
+                override fun connect(receive: (ByteArray, Long) -> Unit) {
+                    val receiving = object : MidiReceiver() {
+                        override fun onSend(data: ByteArray, offset: Int, count: Int, timestamp: Long) {
+                            // Callback only: no call to send or flush is made.
+                            if (count > 4096) {
+                                receive(ByteArray(0), timestamp)
+                                return
+                            }
+                            if (count > 0 && offset >= 0 && offset <= data.size - count) {
+                                receive(data.copyOfRange(offset, offset + count), timestamp)
+                            }
+                        }
+                    }
+                    receiver = receiving
+                    port.connect(receiving)
+                }
+                override fun disconnect() { receiver?.let { port.disconnect(it) }; receiver = null }
+                override fun close() { port.close() }
+            }
+        },
+    )
+    private val gainWriteSession = MatriboxConfirmedGainWriteSession(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_GAIN_WRITE) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_P01_GAIN_WRITE).check()
+            MatriboxConfirmedGainWriterPort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+    )
+    private val certificationSession = MatriboxSol100OdCertificationSession(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_SOL100OD_AMP_CERTIFICATION) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_SOL100OD_AMP_CERTIFICATION).check()
+            MatriboxSol100OdAmpWriterPort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+    )
+    // Three mutually exclusive compile gates share the one closed Full Live transport.
+    private fun fullLiveOrAngelsGate(): Boolean =
+        (BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_FULL_LIVE_CERTIFICATION) ||
+            (BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_ANGELS_PRODUCT_CERTIFICATION) ||
+            (BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_FAMILY_EXPANSION_P01_V1)
+
+    private val fullLiveSession = MatriboxFullLiveCertificationSession(
+        eligibility = { probeEligibility(fullLiveOrAngelsGate()) },
+        planResolver = { planId ->
+            MatriboxCertificationPlans.operations(
+                planId,
+                fullLiveEnabled = BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_FULL_LIVE_CERTIFICATION,
+                angelsEnabled = BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_ANGELS_PRODUCT_CERTIFICATION,
+                familyExpansionEnabled = BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_FAMILY_EXPANSION_P01_V1,
+            )
+        },
+        preflight = MatriboxFamilyExpansionValidator::preflightMessage,
+        openSendPort = {
+            probeEligibility(fullLiveOrAngelsGate()).check()
+            MatriboxFullLiveWriterPort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+    )
+    // Productive Tone Transfer: own debug gate (exclusive with every certification sender).
+    private val toneTransferSession = MatriboxToneTransferSession(
+        eligibility = { probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_TONE_TRANSFER) },
+        openSendPort = {
+            probeEligibility(BuildConfig.DEBUG && BuildConfig.ENABLE_MATRIBOX_TONE_TRANSFER).check()
+            MatriboxToneTransferWriterPort(requireNotNull(openedMidiDevice?.openInputPort(0)) {
+                "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+            })
+        },
+    )
     private val batchBuffer = MidiCaptureBatchBuffer()
     private val monitor = PassiveMidiMonitor(
         openOutput = { number ->
@@ -181,6 +389,14 @@ class MidiDiagnosticsManager(
         ++openGeneration
         writeProbe.cancel()
         presetP01Probe.cancel()
+        p01ReadProbe.cancel()
+        p01FullReadProbe.cancel()
+        p01FullReadProbeV3A.cancel()
+        presetReader.cancel()
+        gainWriteSession.cancel()
+        certificationSession.cancel()
+        fullLiveSession.cancel()
+        toneTransferSession.cancel()
         stopCapture()
         session.close()
         openedMidiDevice = null
@@ -228,6 +444,14 @@ class MidiDiagnosticsManager(
     fun onUsbDetached(deviceName: String?) {
         writeProbe.detached(deviceName)
         presetP01Probe.detached(deviceName)
+        p01ReadProbe.detached(deviceName)
+        p01FullReadProbe.detached(deviceName)
+        p01FullReadProbeV3A.detached(deviceName)
+        presetReader.cancel()
+        gainWriteSession.detached(deviceName)
+        certificationSession.detached(deviceName)
+        fullLiveSession.detached(deviceName)
+        toneTransferSession.detached(deviceName)
         ++openGeneration
         if (deviceName != null && session.usbDeviceName == deviceName) {
             closeDevice(); connectionClosed("usbDetached")
@@ -255,6 +479,168 @@ class MidiDiagnosticsManager(
         if (result["success"] != true) {
             closeDevice()
             connectionClosed("presetP01ProbeFailed")
+        }
+        return result
+    }
+
+    fun p01ReadProbeStatus(): Map<String, Any?> =
+        p01ReadProbe.status() + mapOf("sessionToken" to openGeneration)
+
+    /** Runs on the caller's thread; the caller must not invoke this on the UI/main thread. */
+    fun sendVerifiedPresetP01ReadProbe(): Map<String, Any?> {
+        val result = p01ReadProbe.sendVerifiedPresetP01ReadProbe()
+        if (result["success"] != true) {
+            closeDevice()
+            connectionClosed("p01ReadProbeFailed")
+        }
+        return result
+    }
+
+    fun p01FullReadProbeStatus(): Map<String, Any?> =
+        p01FullReadProbe.status() + mapOf("sessionToken" to openGeneration)
+
+    /** Runs on the caller's thread; the caller must not invoke this on the UI/main thread. */
+    fun sendVerifiedPresetP01FullReadProbe(): Map<String, Any?> {
+        val result = p01FullReadProbe.sendVerifiedPresetP01FullReadProbe()
+        if (result["success"] != true) {
+            closeDevice()
+            connectionClosed("p01FullReadProbeFailed")
+        }
+        return result
+    }
+
+    fun p01FullReadProbeV3AStatus(): Map<String, Any?> =
+        p01FullReadProbeV3A.status() + mapOf("sessionToken" to openGeneration)
+
+    /** Runs on the caller's thread; the caller must not invoke this on the UI/main thread. */
+    fun sendVerifiedPresetP01FullReadProbeV3A(): Map<String, Any?> {
+        val result = p01FullReadProbeV3A.sendVerifiedPresetP01FullReadProbeV3A()
+        if (result["success"] != true) {
+            closeDevice()
+            connectionClosed("p01FullReadProbeV3AFailed")
+        }
+        return result
+    }
+
+    fun presetReaderStatus(): Map<String, Any?> =
+        presetReader.status() + mapOf("sessionToken" to openGeneration)
+
+    /**
+     * Runs on the caller's thread; the caller must not invoke this on the
+     * UI/main thread. Unlike the probes above, [MatriboxPresetReadOutcome]
+     * distinguishes genuine transport failures from expected, informational
+     * outcomes (timeouts, structural mismatches): only TRANSPORT_ERROR
+     * force-closes the device connection, mirroring the fix already applied
+     * to V2/V3A's `success` semantics -- a Phase-D or part timeout is not a
+     * native error and must not disconnect a device the user can simply
+     * try reading again.
+     */
+    fun readMatriboxUserP01(): Map<String, Any?> = readResult(presetReader.readVerifiedUserP01())
+
+    /**
+     * The productive transfer's fresh read of exactly [target] (P11..P99; the type cannot exist for
+     * a protected slot). Same outcome/closing semantics as [readMatriboxUserP01].
+     */
+    internal fun readMatriboxUserSlot(target: MatriboxWritableUserPreset): Map<String, Any?> =
+        readResult(presetReader.readVerifiedUserSlot(target.preset)) + mapOf("targetSlot" to target.presetNumber)
+
+    private fun readResult(result: MatriboxPresetReadResult): Map<String, Any?> {
+        if (result.outcome == MatriboxPresetReadOutcome.TRANSPORT_ERROR) {
+            closeDevice()
+            connectionClosed("presetReaderTransportError")
+        }
+        return mapOf(
+            "outcome" to result.outcome.name,
+            "phaseDResponse" to result.phaseDResponse,
+            "parts" to result.parts,
+            "error" to result.error,
+        )
+    }
+
+    fun fullLiveStatus(): Map<String, Any?> =
+        fullLiveSession.status() + mapOf("sessionToken" to openGeneration)
+
+    fun toneTransferStatus(): Map<String, Any?> =
+        toneTransferSession.status() + mapOf("sessionToken" to openGeneration)
+
+    /**
+     * Productive Tone Transfer. Only the closed contract map is accepted; the
+     * whole plan is validated natively before the first send. A transport
+     * failure closes the device connection. No retry, no rollback, no store.
+     */
+    fun executeToneTransfer(request: Any?): Map<String, Any?> {
+        val token = openGeneration
+        val result = toneTransferSession.execute(request)
+        if (result["outcome"] == ToneTransferOutcome.SEND_FAILED.name) {
+            closeDevice()
+            connectionClosed("toneTransferFailed")
+        }
+        return result + mapOf("sessionToken" to token)
+    }
+
+    /**
+     * Runs on the caller's thread (never the UI thread). Runs the fixed plan;
+     * only SEND_FAILED (a genuine native/transport exception) closes the
+     * device connection. No retry, no rollback, no store.
+     */
+    fun runFullLiveP01Certification(planId: String): Map<String, Any?> {
+        val result = fullLiveSession.run(planId)
+        if (result["outcome"] == MatriboxFullLiveOutcome.SEND_FAILED.name) {
+            closeDevice()
+            connectionClosed("fullLiveFailed")
+        }
+        return result
+    }
+
+    /**
+     * FAMILY_EXPANSION_P01_V1: the same closed Full Live transport, but bound
+     * to User P01 and the verified backup hash and preflighted as a whole
+     * before the first send. Runs on the caller's thread (never the UI
+     * thread). Only SEND_FAILED closes the connection. No retry, no store.
+     */
+    internal fun runFamilyExpansionP01Certification(planId: String, target: CertificationTarget): Map<String, Any?> {
+        val result = fullLiveSession.run(planId, target)
+        if (result["outcome"] == MatriboxFullLiveOutcome.SEND_FAILED.name) {
+            closeDevice()
+            connectionClosed("familyExpansionFailed")
+        }
+        return result
+    }
+
+    fun certificationStatus(): Map<String, Any?> =
+        certificationSession.status() + mapOf("sessionToken" to openGeneration)
+
+    /**
+     * Runs on the caller's thread (never the UI thread). Only SEND_FAILED
+     * (a genuine native/transport exception) closes the device connection;
+     * every other outcome means nothing was attempted. No retry.
+     */
+    fun writeCertificationAmpField(fieldName: String, targetValue: Double): Map<String, Any?> {
+        val result = certificationSession.writeCertificationAmpField(fieldName, targetValue)
+        if (result["outcome"] == MatriboxCertificationWriteOutcome.SEND_FAILED.name) {
+            closeDevice()
+            connectionClosed("certificationWriteFailed")
+        }
+        return result
+    }
+
+    fun gainWriteStatus(): Map<String, Any?> =
+        gainWriteSession.status() + mapOf("sessionToken" to openGeneration)
+
+    /**
+     * Runs on the caller's thread; the caller must not invoke this on the
+     * UI/main thread. Only SEND_FAILED (a genuine native/transport
+     * exception) closes the device connection -- every other outcome
+     * (DEVICE_NOT_CONNECTED, MIDI_NOT_AVAILABLE, INVALID_VALUE,
+     * SAFETY_REJECTED) means the write was never attempted at all and
+     * must not disconnect a device the user may simply need to prepare
+     * again.
+     */
+    fun writeConfirmedSol100OdGain(targetGain: Double): Map<String, Any?> {
+        val result = gainWriteSession.writeConfirmedSol100OdGain(targetGain)
+        if (result["outcome"] == MatriboxGainWriteOutcome.SEND_FAILED.name) {
+            closeDevice()
+            connectionClosed("gainWriteFailed")
         }
         return result
     }

@@ -15,7 +15,9 @@ class LibraryPage extends StatelessWidget {
   Widget build(BuildContext context) => DefaultTabController(
     length: 2,
     child: Scaffold(
+      backgroundColor: Colors.transparent,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         title: const Text('Bibliothek'),
         bottom: const TabBar(
           tabs: [
@@ -24,32 +26,35 @@ class LibraryPage extends StatelessWidget {
           ],
         ),
       ),
-      body: TabBarView(
+      body: Stack(
         children: [
-          IrLibraryPage(
-            controller: controller,
-            tone3000: tone3000,
-            embedded: true,
-          ),
-          if (tone3000 != null)
-            AnimatedBuilder(
-              animation: controller,
-              builder: (context, _) => NamLibraryPage(
-                controller: tone3000!,
+          const Positioned.fill(child: WyrmBackground(intensity: WyrmBackgroundIntensity.dim)),
+          TabBarView(
+            children: [
+              IrLibraryPage(
+                controller: controller,
+                tone3000: tone3000,
                 embedded: true,
-                targetSupportsNam:
-                    controller.selectedTargetDevice ==
-                    TargetDeviceId.matriboxOne,
               ),
-            )
-          else
-            const Padding(
-              padding: WyrmTokens.pagePadding,
-              child: WyrmEmptyState(
-                title: 'NAM-Bibliothek nicht eingerichtet',
-                message: 'Die lokale Sound-Erstellung mit internen Amp-Modellen bleibt verfügbar.',
-              ),
-            ),
+              if (tone3000 != null)
+                AnimatedBuilder(
+                  animation: controller,
+                  builder: (context, _) => NamLibraryPage(
+                    controller: tone3000!,
+                    embedded: true,
+                    targetSupportsNam: controller.selectedTargetDevice == TargetDeviceId.matriboxOne,
+                  ),
+                )
+              else
+                const Padding(
+                  padding: WyrmTokens.pagePadding,
+                  child: WyrmEmptyState(
+                    title: 'NAM-Bibliothek nicht eingerichtet',
+                    message: 'Die lokale Sound-Erstellung mit internen Amp-Modellen bleibt verfügbar.',
+                  ),
+                ),
+            ],
+          ),
         ],
       ),
     ),

@@ -1,0 +1,1323 @@
+{
+ "pack": {
+  "id": "rock_classic",
+  "name": "Rock: Classic",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Classic-, Blues-, Southern- und Psychedelic-Rock-Acts.",
+  "entryCount": 29,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.the_who",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Who – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Who",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1960s",
+    "1970s"
+   ],
+   "tags": [
+    "punchy",
+    "power-chords",
+    "raw"
+   ],
+   "parents": [
+    "tpl.style.classic_rock_early"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 48,
+     "mids": 64,
+     "presence": 56
+    }
+   }
+  },
+  {
+   "id": "artist.the_rolling_stones",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Rolling Stones – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Rolling Stones",
+   "artistAliases": [
+    "Rolling Stones"
+   ],
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1960s",
+    "1970s"
+   ],
+   "tags": [
+    "raw",
+    "loose",
+    "riff-driven",
+    "open-tunings"
+   ],
+   "parents": [
+    "tpl.style.classic_rock_early"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "tightness": 32
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "artist.cream",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Cream – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Cream",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "woody",
+    "singing",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.style.classic_rock_early"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "sustain": 74,
+     "mids": 64
+    },
+    "character": {
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "artist.eric_clapton",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Eric Clapton – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eric Clapton",
+   "artistAliases": [
+    "Clapton"
+   ],
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1960s",
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "smooth",
+    "singing",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 66
+    },
+    "character": {
+     "warmth": 72
+    }
+   }
+  },
+  {
+   "id": "artist.dire_straits",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dire Straits – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dire Straits",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "clean-crunch",
+    "articulate",
+    "snappy"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "tightness": 40,
+     "attack": 70
+    },
+    "character": {
+     "clarity": 82
+    }
+   }
+  },
+  {
+   "id": "artist.zz_top",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "ZZ Top – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "ZZ Top",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "gritty",
+    "texas",
+    "boogie"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "saturation": 52
+    },
+    "character": {
+     "fuzziness": 25
+    }
+   }
+  },
+  {
+   "id": "artist.aerosmith",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Aerosmith – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Aerosmith",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "gritty",
+    "bluesy",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 64,
+     "treble": 54
+    }
+   }
+  },
+  {
+   "id": "artist.fleetwood_mac",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Fleetwood Mac – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Fleetwood Mac",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "clean-warm",
+    "melodic",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "tightness": 36
+    },
+    "character": {
+     "warmth": 68,
+     "clarity": 72
+    }
+   }
+  },
+  {
+   "id": "artist.eagles",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Eagles – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eagles",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "country"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "clean-crunch",
+    "layered",
+    "twin-lead"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 28,
+     "tightness": 40
+    },
+    "character": {
+     "clarity": 78,
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.lynyrd_skynyrd",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lynyrd Skynyrd – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lynyrd Skynyrd",
+   "genres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "triple-lead",
+    "warm",
+    "singing"
+   ],
+   "parents": [
+    "tpl.genre.southern_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "sustain": 72
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  },
+  {
+   "id": "artist.allman_brothers_band",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Allman Brothers Band – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Allman Brothers Band",
+   "artistAliases": [
+    "Allman Brothers"
+   ],
+   "genres": [
+    "southern_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "singing",
+    "warm",
+    "twin-lead",
+    "slide"
+   ],
+   "parents": [
+    "tpl.genre.southern_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "sustain": 78
+    },
+    "character": {
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "artist.creedence_clearwater_revival",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Creedence Clearwater Revival – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Creedence Clearwater Revival",
+   "artistAliases": [
+    "CCR"
+   ],
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "1960s",
+    "1970s"
+   ],
+   "tags": [
+    "swampy",
+    "twangy",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.southern_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "treble": 58,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.the_doors",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Doors – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Doors",
+   "artistAliases": [
+    "Doors"
+   ],
+   "genres": [
+    "psychedelic_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "dark",
+    "swirling",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.psychedelic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "sustain": 60
+    },
+    "character": {
+     "darkness": 45
+    }
+   }
+  },
+  {
+   "id": "artist.the_kinks",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Kinks – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Kinks",
+   "artistAliases": [
+    "Kinks"
+   ],
+   "genres": [
+    "garage_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "raw",
+    "crunchy",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 64
+    },
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.the_beatles",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Beatles – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Beatles",
+   "artistAliases": [
+    "Beatles"
+   ],
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "psychedelic_rock"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "jangly",
+    "varied",
+    "warm"
+   ],
+   "parents": [
+    "tpl.style.classic_rock_early"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "tightness": 30,
+     "treble": 58,
+     "modulation": 16
+    }
+   }
+  },
+  {
+   "id": "artist.santana",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Santana – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Santana",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "psychedelic_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "singing",
+    "sustaining",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.psychedelic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "sustain": 86,
+     "mids": 64
+    },
+    "character": {
+     "warmth": 68
+    }
+   }
+  },
+  {
+   "id": "artist.bad_company",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bad Company – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bad Company",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "bluesy",
+    "direct",
+    "solid"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.free",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Free – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Free",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "raw",
+    "bluesy",
+    "minimal"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "tightness": 38,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.thin_lizzy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Thin Lizzy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Thin Lizzy",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "twin-lead",
+    "melodic",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "artist.boston",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Boston – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Boston",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "polished",
+    "layered",
+    "sustaining"
+   ],
+   "parents": [
+    "tpl.style.hard_rock_80s"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "sustain": 74,
+     "compression": 32
+    }
+   }
+  },
+  {
+   "id": "artist.journey",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Journey – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Journey",
+   "genres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "polished",
+    "melodic",
+    "singing"
+   ],
+   "parents": [
+    "tpl.style.hard_rock_80s"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "sustain": 76,
+     "reverb": 20
+    }
+   }
+  },
+  {
+   "id": "artist.kansas",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kansas – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kansas",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "melodic",
+    "layered",
+    "clean-crunch"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38
+    },
+    "character": {
+     "clarity": 74
+    }
+   }
+  },
+  {
+   "id": "artist.foreigner",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Foreigner – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Foreigner",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "polished",
+    "punchy",
+    "radio"
+   ],
+   "parents": [
+    "tpl.style.hard_rock_80s"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "compression": 30
+    }
+   }
+  },
+  {
+   "id": "artist.bruce_springsteen",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bruce Springsteen – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bruce Springsteen",
+   "artistAliases": [
+    "Springsteen"
+   ],
+   "genres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "warm",
+    "anthemic",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "tightness": 38
+    }
+   }
+  },
+  {
+   "id": "artist.tom_petty",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tom Petty – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tom Petty",
+   "artistAliases": [
+    "Tom Petty and the Heartbreakers"
+   ],
+   "genres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "jangly",
+    "bright",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 28,
+     "treble": 60,
+     "attack": 64
+    }
+   }
+  },
+  {
+   "id": "artist.neil_young",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Neil Young – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Neil Young",
+   "artistAliases": [
+    "Neil Young and Crazy Horse"
+   ],
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "garage_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1990s"
+   ],
+   "tags": [
+    "raw",
+    "fuzzy",
+    "loose"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "saturation": 64
+    },
+    "character": {
+     "fuzziness": 45,
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "artist.steve_miller_band",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Steve Miller Band – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Steve Miller Band",
+   "genres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "smooth",
+    "clean-crunch",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 26
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.steppenwolf",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Steppenwolf – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Steppenwolf",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "gritty",
+    "raw",
+    "bluesy"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.grand_funk_railroad",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Grand Funk Railroad – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Grand Funk Railroad",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "loud",
+    "raw",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54
+    }
+   }
+  }
+ ]
+}

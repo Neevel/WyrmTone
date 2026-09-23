@@ -28,6 +28,7 @@ class TargetSound {
     this.roles = const [SoundRole.rhythm],
     this.supportedTunings = const [],
     this.toneTarget,
+    this.templateFallback = true,
   });
 
   final String id;
@@ -54,6 +55,11 @@ class TargetSound {
   final List<SoundRole> roles;
   final List<GuitarTuning> supportedTunings;
   final ToneTarget? toneTarget;
+
+  /// True (default): the legacy genre templates may fill dimensions this profile
+  /// is silent about. ToneVault profiles set false: an unspecified dimension
+  /// stays unspecified and the recipe builder switches its block off.
+  final bool templateFallback;
 
   String get displayName => '$artist – $song';
 }

@@ -175,7 +175,11 @@ class MatriboxOneAdapter implements ToneDeviceAdapter {
     customIrSlotCount: 15,
     supportsNam: true,
     supportedNamArchitectures: {'A1'},
-    supportsPresetTransfer: CapabilityVerification.notImplemented,
+    // Preset PARAMETERS: productively transferable for User P01 (see docs/DIRECT_PRESET_TRANSFER.md).
+    // IR/NAM FILE upload is a different protocol: selecting a User IR slot, or the device supporting
+    // NAM at all, is not evidence of a file-upload command -- both stay notImplemented until that
+    // is belegt (see docs/IR_NAM_DEVICE_TRANSFER.md).
+    supportsPresetTransfer: CapabilityVerification.confirmed,
     supportsIrTransfer: CapabilityVerification.notImplemented,
     supportsNamTransfer: CapabilityVerification.notImplemented,
     connectionStatus: CapabilityVerification.unverified,

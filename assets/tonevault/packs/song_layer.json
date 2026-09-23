@@ -1,0 +1,4615 @@
+{
+ "pack": {
+  "id": "song_layer",
+  "name": "Ausgewählte Songs",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Kuratierte, bekannte Songs; minimale Einträge, die vom Artist/Album/Era erben.",
+  "entryCount": 226,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "song.metallica.enter_sandman",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Enter Sandman",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Metallica",
+   "song": "Enter Sandman",
+   "parents": [
+    "album.metallica.black_album"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.metallica.fade_to_black",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Fade to Black",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Metallica",
+   "song": "Fade to Black",
+   "parents": [
+    "album.metallica.ride_the_lightning"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.metallica.battery",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Battery",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Metallica",
+   "song": "Battery",
+   "parents": [
+    "album.metallica.master_of_puppets"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.metallica.one",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "One",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Metallica",
+   "song": "One",
+   "parents": [
+    "artist.metallica"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.megadeth.holy_wars",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Holy Wars... The Punishment Due",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Megadeth",
+   "song": "Holy Wars... The Punishment Due",
+   "songAliases": [
+    "Holy Wars"
+   ],
+   "parents": [
+    "album.megadeth.rust_in_peace"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.megadeth.hangar_18",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Hangar 18",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Megadeth",
+   "song": "Hangar 18",
+   "parents": [
+    "album.megadeth.rust_in_peace"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.megadeth.symphony_of_destruction",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Symphony of Destruction",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Megadeth",
+   "song": "Symphony of Destruction",
+   "parents": [
+    "artist.megadeth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slayer.raining_blood",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Raining Blood",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slayer",
+   "song": "Raining Blood",
+   "parents": [
+    "album.slayer.reign_in_blood"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slayer.angel_of_death",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Angel of Death",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slayer",
+   "song": "Angel of Death",
+   "parents": [
+    "album.slayer.reign_in_blood"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slayer.south_of_heaven",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "South of Heaven",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slayer",
+   "song": "South of Heaven",
+   "parents": [
+    "artist.slayer"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.anthrax.caught_in_a_mosh",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Caught in a Mosh",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Anthrax",
+   "song": "Caught in a Mosh",
+   "parents": [
+    "artist.anthrax"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.anthrax.indians",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Indians",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Anthrax",
+   "song": "Indians",
+   "parents": [
+    "artist.anthrax"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.testament.the_new_order",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "The New Order",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Testament",
+   "song": "The New Order",
+   "parents": [
+    "artist.testament"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.kreator.pleasure_to_kill",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Pleasure to Kill",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Kreator",
+   "song": "Pleasure to Kill",
+   "parents": [
+    "artist.kreator"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.sepultura.roots_bloody_roots",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Roots Bloody Roots",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Sepultura",
+   "song": "Roots Bloody Roots",
+   "parents": [
+    "era.sepultura.1990s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.sepultura.refuse_resist",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Refuse/Resist",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Sepultura",
+   "song": "Refuse/Resist",
+   "songAliases": [
+    "Refuse Resist"
+   ],
+   "parents": [
+    "era.sepultura.1990s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pantera.walk",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Walk",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pantera",
+   "song": "Walk",
+   "parents": [
+    "album.pantera.vulgar_display_of_power"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pantera.cowboys_from_hell",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cowboys from Hell",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pantera",
+   "song": "Cowboys from Hell",
+   "parents": [
+    "artist.pantera"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pantera.cemetery_gates",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cemetery Gates",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pantera",
+   "song": "Cemetery Gates",
+   "parents": [
+    "artist.pantera"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.lamb_of_god.redneck",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Redneck",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Lamb of God",
+   "song": "Redneck",
+   "parents": [
+    "artist.lamb_of_god"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.lamb_of_god.laid_to_rest",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Laid to Rest",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Lamb of God",
+   "song": "Laid to Rest",
+   "parents": [
+    "artist.lamb_of_god"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.gojira.flying_whales",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Flying Whales",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Gojira",
+   "song": "Flying Whales",
+   "parents": [
+    "album.gojira.from_mars_to_sirius"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.gojira.stranded",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Stranded",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Gojira",
+   "song": "Stranded",
+   "parents": [
+    "artist.gojira"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.meshuggah.bleed",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Bleed",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Meshuggah",
+   "song": "Bleed",
+   "parents": [
+    "artist.meshuggah"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.meshuggah.future_breed_machine",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Future Breed Machine",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Meshuggah",
+   "song": "Future Breed Machine",
+   "parents": [
+    "artist.meshuggah"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.tool.schism",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Schism",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Tool",
+   "song": "Schism",
+   "parents": [
+    "artist.tool"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.tool.sober",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sober",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Tool",
+   "song": "Sober",
+   "parents": [
+    "artist.tool"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.tool.forty_six_and_2",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Forty Six & 2",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Tool",
+   "song": "Forty Six & 2",
+   "songAliases": [
+    "Forty Six and 2"
+   ],
+   "parents": [
+    "artist.tool"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dream_theater.pull_me_under",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Pull Me Under",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dream Theater",
+   "song": "Pull Me Under",
+   "parents": [
+    "album.dream_theater.images_and_words"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dream_theater.metropolis",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Metropolis Pt. 1: The Miracle and the Sleeper",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dream Theater",
+   "song": "Metropolis Pt. 1: The Miracle and the Sleeper",
+   "songAliases": [
+    "Metropolis"
+   ],
+   "parents": [
+    "artist.dream_theater"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.opeth.blackwater_park",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Blackwater Park",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Opeth",
+   "song": "Blackwater Park",
+   "parents": [
+    "album.opeth.blackwater_park"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.opeth.ghost_of_perdition",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Ghost of Perdition",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Opeth",
+   "song": "Ghost of Perdition",
+   "parents": [
+    "artist.opeth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.mastodon.blood_and_thunder",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Blood and Thunder",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Mastodon",
+   "song": "Blood and Thunder",
+   "parents": [
+    "era.mastodon.early"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.black_sabbath.paranoid",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Paranoid",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Black Sabbath",
+   "song": "Paranoid",
+   "parents": [
+    "album.black_sabbath.paranoid"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.black_sabbath.iron_man",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Iron Man",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Black Sabbath",
+   "song": "Iron Man",
+   "parents": [
+    "album.black_sabbath.paranoid"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.black_sabbath.war_pigs",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "War Pigs",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Black Sabbath",
+   "song": "War Pigs",
+   "parents": [
+    "album.black_sabbath.paranoid"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.ozzy_osbourne.crazy_train",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Crazy Train",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Ozzy Osbourne",
+   "song": "Crazy Train",
+   "parents": [
+    "era.ozzy_osbourne.1980s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.ozzy_osbourne.mr_crowley",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Mr. Crowley",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Ozzy Osbourne",
+   "song": "Mr. Crowley",
+   "songAliases": [
+    "Mr Crowley"
+   ],
+   "parents": [
+    "era.ozzy_osbourne.1980s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.ozzy_osbourne.no_more_tears",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "No More Tears",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Ozzy Osbourne",
+   "song": "No More Tears",
+   "parents": [
+    "era.ozzy_osbourne.1990s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dio.holy_diver",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Holy Diver",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dio",
+   "song": "Holy Diver",
+   "parents": [
+    "artist.dio"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dio.rainbow_in_the_dark",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Rainbow in the Dark",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dio",
+   "song": "Rainbow in the Dark",
+   "parents": [
+    "artist.dio"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.iron_maiden.the_trooper",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "The Trooper",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Iron Maiden",
+   "song": "The Trooper",
+   "parents": [
+    "era.iron_maiden.1980s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.iron_maiden.run_to_the_hills",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Run to the Hills",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Iron Maiden",
+   "song": "Run to the Hills",
+   "parents": [
+    "album.iron_maiden.number_of_the_beast"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.iron_maiden.hallowed_be_thy_name",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Hallowed Be Thy Name",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Iron Maiden",
+   "song": "Hallowed Be Thy Name",
+   "parents": [
+    "album.iron_maiden.number_of_the_beast"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.iron_maiden.fear_of_the_dark",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Fear of the Dark",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Iron Maiden",
+   "song": "Fear of the Dark",
+   "parents": [
+    "artist.iron_maiden"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.judas_priest.breaking_the_law",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Breaking the Law",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Judas Priest",
+   "song": "Breaking the Law",
+   "parents": [
+    "album.judas_priest.british_steel"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.judas_priest.painkiller",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Painkiller",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Judas Priest",
+   "song": "Painkiller",
+   "parents": [
+    "artist.judas_priest"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.accept.balls_to_the_wall",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Balls to the Wall",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Accept",
+   "song": "Balls to the Wall",
+   "parents": [
+    "artist.accept"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.motorhead.ace_of_spades",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Ace of Spades",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Motörhead",
+   "song": "Ace of Spades",
+   "parents": [
+    "artist.motorhead"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.motorhead.overkill",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Overkill",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Motörhead",
+   "song": "Overkill",
+   "parents": [
+    "artist.motorhead"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.manowar.kings_of_metal",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Kings of Metal",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Manowar",
+   "song": "Kings of Metal",
+   "parents": [
+    "artist.manowar"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.helloween.eagle_fly_free",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Eagle Fly Free",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Helloween",
+   "song": "Eagle Fly Free",
+   "parents": [
+    "artist.helloween"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.helloween.i_want_out",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "I Want Out",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Helloween",
+   "song": "I Want Out",
+   "parents": [
+    "artist.helloween"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.blind_guardian.valhalla",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Valhalla",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Blind Guardian",
+   "song": "Valhalla",
+   "parents": [
+    "artist.blind_guardian"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.hammerfall.hearts_on_fire",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Hearts on Fire",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "HammerFall",
+   "song": "Hearts on Fire",
+   "parents": [
+    "artist.hammerfall"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.sabaton.primo_victoria",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Primo Victoria",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Sabaton",
+   "song": "Primo Victoria",
+   "parents": [
+    "artist.sabaton"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.nightwish.nemo",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Nemo",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Nightwish",
+   "song": "Nemo",
+   "parents": [
+    "artist.nightwish"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.nightwish.ghost_love_score",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Ghost Love Score",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Nightwish",
+   "song": "Ghost Love Score",
+   "parents": [
+    "artist.nightwish"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.within_temptation.mother_earth",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Mother Earth",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Within Temptation",
+   "song": "Mother Earth",
+   "parents": [
+    "artist.within_temptation"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.children_of_bodom.hate_me",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Hate Me!",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Children of Bodom",
+   "song": "Hate Me!",
+   "songAliases": [
+    "Hate Me"
+   ],
+   "parents": [
+    "album.children_of_bodom.hatebreeder"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.children_of_bodom.everytime_i_die",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Everytime I Die",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Children of Bodom",
+   "song": "Everytime I Die",
+   "parents": [
+    "artist.cob"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.children_of_bodom.in_your_face",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "In Your Face",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Children of Bodom",
+   "song": "In Your Face",
+   "parents": [
+    "artist.cob"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.children_of_bodom.are_you_dead_yet",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Are You Dead Yet?",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Children of Bodom",
+   "song": "Are You Dead Yet?",
+   "parents": [
+    "artist.cob"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.in_flames.only_for_the_weak",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Only for the Weak",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "In Flames",
+   "song": "Only for the Weak",
+   "parents": [
+    "album.in_flames.clayman"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.in_flames.cloud_connected",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cloud Connected",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "In Flames",
+   "song": "Cloud Connected",
+   "parents": [
+    "era.in_flames.classic"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.at_the_gates.slaughter_of_the_soul",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Slaughter of the Soul",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "At the Gates",
+   "song": "Slaughter of the Soul",
+   "parents": [
+    "artist.at_the_gates"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.arch_enemy.nemesis",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Nemesis",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Arch Enemy",
+   "song": "Nemesis",
+   "parents": [
+    "artist.arch_enemy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.arch_enemy.we_will_rise",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "We Will Rise",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Arch Enemy",
+   "song": "We Will Rise",
+   "parents": [
+    "artist.arch_enemy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.amon_amarth.twilight_of_the_thunder_god",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Twilight of the Thunder God",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Amon Amarth",
+   "song": "Twilight of the Thunder God",
+   "parents": [
+    "artist.amon_amarth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.soilwork.stabbing_the_drama",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Stabbing the Drama",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Soilwork",
+   "song": "Stabbing the Drama",
+   "parents": [
+    "artist.soilwork"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.death.crystal_mountain",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Crystal Mountain",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Death",
+   "song": "Crystal Mountain",
+   "parents": [
+    "era.death.progressive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.cannibal_corpse.hammer_smashed_face",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Hammer Smashed Face",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Cannibal Corpse",
+   "song": "Hammer Smashed Face",
+   "parents": [
+    "artist.cannibal_corpse"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.morbid_angel.chapel_of_ghouls",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Chapel of Ghouls",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Morbid Angel",
+   "song": "Chapel of Ghouls",
+   "parents": [
+    "artist.morbid_angel"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.obituary.slowly_we_rot",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Slowly We Rot",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Obituary",
+   "song": "Slowly We Rot",
+   "parents": [
+    "artist.obituary"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.carcass.heartwork",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Heartwork",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Carcass",
+   "song": "Heartwork",
+   "parents": [
+    "artist.carcass"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.behemoth.conquer_all",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Conquer All",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Behemoth",
+   "song": "Conquer All",
+   "parents": [
+    "artist.behemoth"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.mayhem.freezing_moon",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Freezing Moon",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Mayhem",
+   "song": "Freezing Moon",
+   "parents": [
+    "artist.mayhem"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.immortal.sons_of_northern_darkness",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sons of Northern Darkness",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Immortal",
+   "song": "Sons of Northern Darkness",
+   "parents": [
+    "artist.immortal"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dimmu_borgir.progenies_of_the_great_apocalypse",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Progenies of the Great Apocalypse",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dimmu Borgir",
+   "song": "Progenies of the Great Apocalypse",
+   "parents": [
+    "artist.dimmu_borgir"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.electric_wizard.dopethrone",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Dopethrone",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Electric Wizard",
+   "song": "Dopethrone",
+   "parents": [
+    "artist.electric_wizard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.sleep.dopesmoker",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Dopesmoker",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Sleep",
+   "song": "Dopesmoker",
+   "parents": [
+    "artist.sleep"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.kyuss.green_machine",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Green Machine",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Kyuss",
+   "song": "Green Machine",
+   "parents": [
+    "artist.kyuss"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.down.stone_the_crow",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Stone the Crow",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Down",
+   "song": "Stone the Crow",
+   "parents": [
+    "artist.down"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slipknot.duality",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Duality",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slipknot",
+   "song": "Duality",
+   "parents": [
+    "artist.slipknot"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slipknot.wait_and_bleed",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Wait and Bleed",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slipknot",
+   "song": "Wait and Bleed",
+   "parents": [
+    "artist.slipknot"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slipknot.psychosocial",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Psychosocial",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slipknot",
+   "song": "Psychosocial",
+   "parents": [
+    "artist.slipknot"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.korn.freak_on_a_leash",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Freak on a Leash",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Korn",
+   "song": "Freak on a Leash",
+   "parents": [
+    "artist.korn"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.korn.blind",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Blind",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Korn",
+   "song": "Blind",
+   "parents": [
+    "album.korn.korn_debut"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.system_of_a_down.chop_suey",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Chop Suey!",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "System of a Down",
+   "song": "Chop Suey!",
+   "songAliases": [
+    "Chop Suey"
+   ],
+   "parents": [
+    "album.system_of_a_down.toxicity"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.system_of_a_down.toxicity",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Toxicity",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "System of a Down",
+   "song": "Toxicity",
+   "parents": [
+    "album.system_of_a_down.toxicity"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.system_of_a_down.byob",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "B.Y.O.B.",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "System of a Down",
+   "song": "B.Y.O.B.",
+   "songAliases": [
+    "BYOB"
+   ],
+   "parents": [
+    "artist.system_of_a_down"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.deftones.my_own_summer",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "My Own Summer (Shove It)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Deftones",
+   "song": "My Own Summer (Shove It)",
+   "songAliases": [
+    "My Own Summer"
+   ],
+   "parents": [
+    "era.deftones.1990s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.deftones.change",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Change (In the House of Flies)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Deftones",
+   "song": "Change (In the House of Flies)",
+   "songAliases": [
+    "Change"
+   ],
+   "parents": [
+    "album.deftones.white_pony"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.linkin_park.in_the_end",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "In the End",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Linkin Park",
+   "song": "In the End",
+   "parents": [
+    "era.linkin_park.hybrid"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.linkin_park.numb",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Numb",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Linkin Park",
+   "song": "Numb",
+   "parents": [
+    "artist.linkin_park"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.linkin_park.one_step_closer",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "One Step Closer",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Linkin Park",
+   "song": "One Step Closer",
+   "parents": [
+    "era.linkin_park.hybrid"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rammstein.du_hast",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Du Hast",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rammstein",
+   "song": "Du Hast",
+   "parents": [
+    "artist.rammstein"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rammstein.sonne",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sonne",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rammstein",
+   "song": "Sonne",
+   "parents": [
+    "album.rammstein.mutter"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.fear_factory.replica",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Replica",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Fear Factory",
+   "song": "Replica",
+   "parents": [
+    "artist.fear_factory"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.static_x.push_it",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Push It",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Static-X",
+   "song": "Push It",
+   "parents": [
+    "artist.static_x"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.disturbed.down_with_the_sickness",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Down with the Sickness",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Disturbed",
+   "song": "Down with the Sickness",
+   "parents": [
+    "artist.disturbed"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.avenged_sevenfold.bat_country",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Bat Country",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Avenged Sevenfold",
+   "song": "Bat Country",
+   "parents": [
+    "artist.avenged_sevenfold"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.avenged_sevenfold.nightmare",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Nightmare",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Avenged Sevenfold",
+   "song": "Nightmare",
+   "parents": [
+    "artist.avenged_sevenfold"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.trivium.pull_harder_on_the_strings_of_your_martyr",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Pull Harder on the Strings of Your Martyr",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Trivium",
+   "song": "Pull Harder on the Strings of Your Martyr",
+   "parents": [
+    "album.trivium.ascendancy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.trivium.strife",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Strife",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Trivium",
+   "song": "Strife",
+   "parents": [
+    "artist.trivium"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.killswitch_engage.my_curse",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "My Curse",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Killswitch Engage",
+   "song": "My Curse",
+   "parents": [
+    "artist.killswitch_engage"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.killswitch_engage.the_end_of_heartache",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "The End of Heartache",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Killswitch Engage",
+   "song": "The End of Heartache",
+   "parents": [
+    "album.killswitch_engage.the_end_of_heartache"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.as_i_lay_dying.nothing_left",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Nothing Left",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "As I Lay Dying",
+   "song": "Nothing Left",
+   "parents": [
+    "artist.as_i_lay_dying"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.parkway_drive.carrion",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Carrion",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Parkway Drive",
+   "song": "Carrion",
+   "parents": [
+    "artist.parkway_drive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.parkway_drive.wild_eyes",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Wild Eyes",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Parkway Drive",
+   "song": "Wild Eyes",
+   "parents": [
+    "artist.parkway_drive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.architects.doomsday",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Doomsday",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Architects",
+   "song": "Doomsday",
+   "parents": [
+    "artist.architects"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.bring_me_the_horizon.shadow_moses",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Shadow Moses",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Bring Me the Horizon",
+   "song": "Shadow Moses",
+   "parents": [
+    "album.bring_me_the_horizon.sempiternal"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.bring_me_the_horizon.can_you_feel_my_heart",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Can You Feel My Heart",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Bring Me the Horizon",
+   "song": "Can You Feel My Heart",
+   "parents": [
+    "album.bring_me_the_horizon.sempiternal"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.bring_me_the_horizon.throne",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Throne",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Bring Me the Horizon",
+   "song": "Throne",
+   "parents": [
+    "era.bring_me_the_horizon.modern"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.august_burns_red.marianas_trench",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Marianas Trench",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "August Burns Red",
+   "song": "Marianas Trench",
+   "parents": [
+    "artist.august_burns_red"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.periphery.icarus_lives",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Icarus Lives!",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Periphery",
+   "song": "Icarus Lives!",
+   "songAliases": [
+    "Icarus Lives"
+   ],
+   "parents": [
+    "artist.periphery"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.spiritbox.holy_roller",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Holy Roller",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Spiritbox",
+   "song": "Holy Roller",
+   "parents": [
+    "artist.spiritbox"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.lorna_shore.to_the_hellfire",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "To the Hellfire",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Lorna Shore",
+   "song": "To the Hellfire",
+   "parents": [
+    "artist.lorna_shore"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.acdc.back_in_black",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Back in Black",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "AC/DC",
+   "song": "Back in Black",
+   "parents": [
+    "album.acdc.back_in_black"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.acdc.thunderstruck",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Thunderstruck",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "AC/DC",
+   "song": "Thunderstruck",
+   "parents": [
+    "era.acdc.1980s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.acdc.highway_to_hell",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Highway to Hell",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "AC/DC",
+   "song": "Highway to Hell",
+   "parents": [
+    "era.acdc.1970s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.led_zeppelin.black_dog",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Black Dog",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Led Zeppelin",
+   "song": "Black Dog",
+   "parents": [
+    "album.led_zeppelin.led_zeppelin_iv"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.led_zeppelin.stairway_to_heaven",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Stairway to Heaven",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Led Zeppelin",
+   "song": "Stairway to Heaven",
+   "parents": [
+    "album.led_zeppelin.led_zeppelin_iv"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.led_zeppelin.whole_lotta_love",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Whole Lotta Love",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Led Zeppelin",
+   "song": "Whole Lotta Love",
+   "parents": [
+    "artist.led_zeppelin"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.deep_purple.smoke_on_the_water",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Smoke on the Water",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Deep Purple",
+   "song": "Smoke on the Water",
+   "parents": [
+    "artist.deep_purple"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.deep_purple.highway_star",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Highway Star",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Deep Purple",
+   "song": "Highway Star",
+   "parents": [
+    "artist.deep_purple"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.queen.bohemian_rhapsody",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Bohemian Rhapsody",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Queen",
+   "song": "Bohemian Rhapsody",
+   "parents": [
+    "album.queen.a_night_at_the_opera"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.queen.we_will_rock_you",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "We Will Rock You",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Queen",
+   "song": "We Will Rock You",
+   "parents": [
+    "artist.queen"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pink_floyd.money",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Money",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pink Floyd",
+   "song": "Money",
+   "parents": [
+    "album.pink_floyd.dark_side_of_the_moon"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pink_floyd.comfortably_numb",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Comfortably Numb",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pink Floyd",
+   "song": "Comfortably Numb",
+   "parents": [
+    "artist.pink_floyd"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_who.baba_oriley",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Baba O'Riley",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Who",
+   "song": "Baba O'Riley",
+   "songAliases": [
+    "Baba ORiley"
+   ],
+   "parents": [
+    "artist.the_who"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_rolling_stones.satisfaction",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "(I Can't Get No) Satisfaction",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Rolling Stones",
+   "song": "(I Can't Get No) Satisfaction",
+   "songAliases": [
+    "Satisfaction"
+   ],
+   "parents": [
+    "artist.the_rolling_stones"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.jimi_hendrix.purple_haze",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Purple Haze",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Jimi Hendrix",
+   "song": "Purple Haze",
+   "parents": [
+    "artist.jimi_hendrix"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.jimi_hendrix.voodoo_child",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Voodoo Child (Slight Return)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Jimi Hendrix",
+   "song": "Voodoo Child (Slight Return)",
+   "songAliases": [
+    "Voodoo Child"
+   ],
+   "parents": [
+    "artist.jimi_hendrix"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.cream.sunshine_of_your_love",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sunshine of Your Love",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Cream",
+   "song": "Sunshine of Your Love",
+   "parents": [
+    "artist.cream"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.eric_clapton.layla",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Layla",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Eric Clapton",
+   "song": "Layla",
+   "parents": [
+    "artist.eric_clapton"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.eric_clapton.cocaine",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cocaine",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Eric Clapton",
+   "song": "Cocaine",
+   "parents": [
+    "era.eric_clapton.1970s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dire_straits.sultans_of_swing",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sultans of Swing",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dire Straits",
+   "song": "Sultans of Swing",
+   "parents": [
+    "artist.dire_straits"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dire_straits.money_for_nothing",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Money for Nothing",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dire Straits",
+   "song": "Money for Nothing",
+   "parents": [
+    "album.dire_straits.brothers_in_arms"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.zz_top.la_grange",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "La Grange",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "ZZ Top",
+   "song": "La Grange",
+   "parents": [
+    "artist.zz_top"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.zz_top.sharp_dressed_man",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sharp Dressed Man",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "ZZ Top",
+   "song": "Sharp Dressed Man",
+   "parents": [
+    "artist.zz_top"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.aerosmith.sweet_emotion",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sweet Emotion",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Aerosmith",
+   "song": "Sweet Emotion",
+   "parents": [
+    "era.aerosmith.1970s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.aerosmith.walk_this_way",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Walk This Way",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Aerosmith",
+   "song": "Walk This Way",
+   "parents": [
+    "era.aerosmith.1970s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.guns_n_roses.sweet_child_o_mine",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Sweet Child o' Mine",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Guns N' Roses",
+   "song": "Sweet Child o' Mine",
+   "songAliases": [
+    "Sweet Child of Mine"
+   ],
+   "parents": [
+    "album.guns_n_roses.appetite_for_destruction"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.guns_n_roses.welcome_to_the_jungle",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Welcome to the Jungle",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Guns N' Roses",
+   "song": "Welcome to the Jungle",
+   "parents": [
+    "album.guns_n_roses.appetite_for_destruction"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.guns_n_roses.november_rain",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "November Rain",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Guns N' Roses",
+   "song": "November Rain",
+   "parents": [
+    "era.guns_n_roses.1990s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.van_halen.eruption",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Eruption",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Van Halen",
+   "song": "Eruption",
+   "parents": [
+    "artist.van_halen"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.van_halen.panama",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Panama",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Van Halen",
+   "song": "Panama",
+   "parents": [
+    "artist.van_halen"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.bon_jovi.livin_on_a_prayer",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Livin' on a Prayer",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Bon Jovi",
+   "song": "Livin' on a Prayer",
+   "songAliases": [
+    "Livin on a Prayer"
+   ],
+   "parents": [
+    "artist.bon_jovi"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.def_leppard.pour_some_sugar_on_me",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Pour Some Sugar on Me",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Def Leppard",
+   "song": "Pour Some Sugar on Me",
+   "parents": [
+    "album.def_leppard.hysteria"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.motley_crue.kickstart_my_heart",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Kickstart My Heart",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Mötley Crüe",
+   "song": "Kickstart My Heart",
+   "parents": [
+    "artist.motley_crue"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.whitesnake.here_i_go_again",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Here I Go Again",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Whitesnake",
+   "song": "Here I Go Again",
+   "parents": [
+    "artist.whitesnake"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.scorpions.rock_you_like_a_hurricane",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Rock You Like a Hurricane",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Scorpions",
+   "song": "Rock You Like a Hurricane",
+   "parents": [
+    "artist.scorpions"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.europe.the_final_countdown",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "The Final Countdown",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Europe",
+   "song": "The Final Countdown",
+   "parents": [
+    "artist.europe"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.journey.dont_stop_believin",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Don't Stop Believin'",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Journey",
+   "song": "Don't Stop Believin'",
+   "songAliases": [
+    "Dont Stop Believin"
+   ],
+   "parents": [
+    "artist.journey"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.boston.more_than_a_feeling",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "More Than a Feeling",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Boston",
+   "song": "More Than a Feeling",
+   "parents": [
+    "artist.boston"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rush.tom_sawyer",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Tom Sawyer",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rush",
+   "song": "Tom Sawyer",
+   "parents": [
+    "era.rush.1980s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rush.yyz",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "YYZ",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rush",
+   "song": "YYZ",
+   "parents": [
+    "era.rush.1980s"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.yes.roundabout",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Roundabout",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Yes",
+   "song": "Roundabout",
+   "parents": [
+    "artist.yes"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.king_crimson.twenty_first_century_schizoid_man",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "21st Century Schizoid Man",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "King Crimson",
+   "song": "21st Century Schizoid Man",
+   "songAliases": [
+    "Twenty First Century Schizoid Man"
+   ],
+   "parents": [
+    "artist.king_crimson"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.porcupine_tree.trains",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Trains",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Porcupine Tree",
+   "song": "Trains",
+   "parents": [
+    "artist.porcupine_tree"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.nirvana.smells_like_teen_spirit",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Smells Like Teen Spirit",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Nirvana",
+   "song": "Smells Like Teen Spirit",
+   "parents": [
+    "album.nirvana.nevermind"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.nirvana.lithium",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Lithium",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Nirvana",
+   "song": "Lithium",
+   "parents": [
+    "album.nirvana.nevermind"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.alice_in_chains.rooster",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Rooster",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Alice in Chains",
+   "song": "Rooster",
+   "parents": [
+    "album.alice_in_chains.dirt"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.alice_in_chains.would",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Would?",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Alice in Chains",
+   "song": "Would?",
+   "songAliases": [
+    "Would"
+   ],
+   "parents": [
+    "album.alice_in_chains.dirt"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.soundgarden.black_hole_sun",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Black Hole Sun",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Soundgarden",
+   "song": "Black Hole Sun",
+   "parents": [
+    "album.soundgarden.superunknown"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.soundgarden.spoonman",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Spoonman",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Soundgarden",
+   "song": "Spoonman",
+   "parents": [
+    "album.soundgarden.superunknown"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pearl_jam.alive",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Alive",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pearl Jam",
+   "song": "Alive",
+   "parents": [
+    "album.pearl_jam.ten"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pearl_jam.jeremy",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Jeremy",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pearl Jam",
+   "song": "Jeremy",
+   "parents": [
+    "album.pearl_jam.ten"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.stone_temple_pilots.plush",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Plush",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Stone Temple Pilots",
+   "song": "Plush",
+   "parents": [
+    "artist.stone_temple_pilots"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.foo_fighters.everlong",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Everlong",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Foo Fighters",
+   "song": "Everlong",
+   "parents": [
+    "album.foo_fighters.the_colour_and_the_shape"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.foo_fighters.monkey_wrench",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Monkey Wrench",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Foo Fighters",
+   "song": "Monkey Wrench",
+   "parents": [
+    "album.foo_fighters.the_colour_and_the_shape"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.queens_of_the_stone_age.no_one_knows",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "No One Knows",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Queens of the Stone Age",
+   "song": "No One Knows",
+   "parents": [
+    "album.queens_of_the_stone_age.songs_for_the_deaf"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.muse.plug_in_baby",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Plug In Baby",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Muse",
+   "song": "Plug In Baby",
+   "parents": [
+    "album.muse.origin_of_symmetry"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.muse.knights_of_cydonia",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Knights of Cydonia",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Muse",
+   "song": "Knights of Cydonia",
+   "parents": [
+    "artist.muse"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.muse.hysteria",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Hysteria",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Muse",
+   "song": "Hysteria",
+   "parents": [
+    "era.muse.early"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.radiohead.creep",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Creep",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Radiohead",
+   "song": "Creep",
+   "parents": [
+    "era.radiohead.guitar"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.radiohead.paranoid_android",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Paranoid Android",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Radiohead",
+   "song": "Paranoid Android",
+   "parents": [
+    "album.radiohead.ok_computer"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.arctic_monkeys.do_i_wanna_know",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Do I Wanna Know?",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Arctic Monkeys",
+   "song": "Do I Wanna Know?",
+   "songAliases": [
+    "Do I Wanna Know"
+   ],
+   "parents": [
+    "album.arctic_monkeys.am"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.arctic_monkeys.r_u_mine",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "R U Mine?",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Arctic Monkeys",
+   "song": "R U Mine?",
+   "songAliases": [
+    "R U Mine"
+   ],
+   "parents": [
+    "album.arctic_monkeys.am"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_strokes.last_nite",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Last Nite",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Strokes",
+   "song": "Last Nite",
+   "parents": [
+    "artist.the_strokes"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_white_stripes.seven_nation_army",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Seven Nation Army",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The White Stripes",
+   "song": "Seven Nation Army",
+   "parents": [
+    "artist.the_white_stripes"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.smashing_pumpkins.cherub_rock",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cherub Rock",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Smashing Pumpkins",
+   "song": "Cherub Rock",
+   "parents": [
+    "artist.smashing_pumpkins"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.smashing_pumpkins.today",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Today",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Smashing Pumpkins",
+   "song": "Today",
+   "parents": [
+    "artist.smashing_pumpkins"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.red_hot_chili_peppers.under_the_bridge",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Under the Bridge",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Red Hot Chili Peppers",
+   "song": "Under the Bridge",
+   "parents": [
+    "album.red_hot_chili_peppers.blood_sugar_sex_magik"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.red_hot_chili_peppers.give_it_away",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Give It Away",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Red Hot Chili Peppers",
+   "song": "Give It Away",
+   "parents": [
+    "album.red_hot_chili_peppers.blood_sugar_sex_magik"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.red_hot_chili_peppers.scar_tissue",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Scar Tissue",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Red Hot Chili Peppers",
+   "song": "Scar Tissue",
+   "parents": [
+    "era.red_hot_chili_peppers.melodic"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rage_against_the_machine.killing_in_the_name",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Killing in the Name",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rage Against the Machine",
+   "song": "Killing in the Name",
+   "parents": [
+    "artist.rage_against_the_machine"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rage_against_the_machine.bulls_on_parade",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Bulls on Parade",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rage Against the Machine",
+   "song": "Bulls on Parade",
+   "parents": [
+    "artist.rage_against_the_machine"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.audioslave.cochise",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cochise",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Audioslave",
+   "song": "Cochise",
+   "parents": [
+    "artist.audioslave"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.green_day.basket_case",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Basket Case",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Green Day",
+   "song": "Basket Case",
+   "parents": [
+    "album.green_day.dookie"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.green_day.american_idiot",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "American Idiot",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Green Day",
+   "song": "American Idiot",
+   "parents": [
+    "era.green_day.rock_opera"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.blink_182.all_the_small_things",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "All the Small Things",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Blink-182",
+   "song": "All the Small Things",
+   "parents": [
+    "album.blink_182.enema_of_the_state"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.sum_41.fat_lip",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Fat Lip",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Sum 41",
+   "song": "Fat Lip",
+   "parents": [
+    "artist.sum_41"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_offspring.come_out_and_play",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Come Out and Play",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Offspring",
+   "song": "Come Out and Play",
+   "parents": [
+    "artist.the_offspring"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.rise_against.savior",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Savior",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Rise Against",
+   "song": "Savior",
+   "parents": [
+    "artist.rise_against"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.my_chemical_romance.welcome_to_the_black_parade",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Welcome to the Black Parade",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "My Chemical Romance",
+   "song": "Welcome to the Black Parade",
+   "parents": [
+    "artist.my_chemical_romance"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.paramore.misery_business",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Misery Business",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Paramore",
+   "song": "Misery Business",
+   "parents": [
+    "era.paramore.pop_punk"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.ramones.blitzkrieg_bop",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Blitzkrieg Bop",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Ramones",
+   "song": "Blitzkrieg Bop",
+   "parents": [
+    "artist.ramones"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.sex_pistols.anarchy_in_the_uk",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Anarchy in the U.K.",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Sex Pistols",
+   "song": "Anarchy in the U.K.",
+   "songAliases": [
+    "Anarchy in the UK"
+   ],
+   "parents": [
+    "artist.sex_pistols"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_clash.london_calling",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "London Calling",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Clash",
+   "song": "London Calling",
+   "parents": [
+    "artist.the_clash"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_cure.just_like_heaven",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Just Like Heaven",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Cure",
+   "song": "Just Like Heaven",
+   "parents": [
+    "artist.the_cure"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.my_bloody_valentine.only_shallow",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Only Shallow",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "My Bloody Valentine",
+   "song": "Only Shallow",
+   "parents": [
+    "album.my_bloody_valentine.loveless"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.slowdive.alison",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Alison",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Slowdive",
+   "song": "Alison",
+   "parents": [
+    "album.slowdive.souvlaki"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.explosions_in_the_sky.first_breath_after_coma",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "First Breath After Coma",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Explosions in the Sky",
+   "song": "First Breath After Coma",
+   "parents": [
+    "album.explosions_in_the_sky.the_earth_is_not_a_cold_dead_place"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.mogwai.mogwai_fear_satan",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Mogwai Fear Satan",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Mogwai",
+   "song": "Mogwai Fear Satan",
+   "parents": [
+    "album.mogwai.young_team"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.bb_king.the_thrill_is_gone",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "The Thrill Is Gone",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "B.B. King",
+   "song": "The Thrill Is Gone",
+   "parents": [
+    "artist.bb_king"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.stevie_ray_vaughan.pride_and_joy",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Pride and Joy",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Stevie Ray Vaughan",
+   "song": "Pride and Joy",
+   "parents": [
+    "album.stevie_ray_vaughan.texas_flood"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.stevie_ray_vaughan.texas_flood",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Texas Flood",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Stevie Ray Vaughan",
+   "song": "Texas Flood",
+   "parents": [
+    "album.stevie_ray_vaughan.texas_flood"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.gary_moore.still_got_the_blues",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Still Got the Blues",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Gary Moore",
+   "song": "Still Got the Blues",
+   "parents": [
+    "artist.gary_moore"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.john_mayer.gravity",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Gravity",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "John Mayer",
+   "song": "Gravity",
+   "parents": [
+    "artist.john_mayer"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.prince.purple_rain",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Purple Rain",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Prince",
+   "song": "Purple Rain",
+   "parents": [
+    "artist.prince"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.nile_rodgers.le_freak",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Le Freak",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Nile Rodgers",
+   "song": "Le Freak",
+   "parents": [
+    "artist.nile_rodgers"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.johnny_cash.ring_of_fire",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Ring of Fire",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Johnny Cash",
+   "song": "Ring of Fire",
+   "parents": [
+    "artist.johnny_cash"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.johnny_cash.folsom_prison_blues",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Folsom Prison Blues",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Johnny Cash",
+   "song": "Folsom Prison Blues",
+   "parents": [
+    "artist.johnny_cash"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.chet_atkins.mr_sandman",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Mr. Sandman",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Chet Atkins",
+   "song": "Mr. Sandman",
+   "songAliases": [
+    "Mr Sandman"
+   ],
+   "parents": [
+    "artist.chet_atkins"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.wes_montgomery.four_on_six",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Four on Six",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Wes Montgomery",
+   "song": "Four on Six",
+   "parents": [
+    "artist.wes_montgomery"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.george_benson.breezin",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Breezin'",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "George Benson",
+   "song": "Breezin'",
+   "songAliases": [
+    "Breezin"
+   ],
+   "parents": [
+    "artist.george_benson"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.pat_metheny.are_you_going_with_me",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Are You Going with Me?",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Pat Metheny",
+   "song": "Are You Going with Me?",
+   "songAliases": [
+    "Are You Going with Me"
+   ],
+   "parents": [
+    "artist.pat_metheny"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.joe_satriani.surfing_with_the_alien",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Surfing with the Alien",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Joe Satriani",
+   "song": "Surfing with the Alien",
+   "parents": [
+    "artist.joe_satriani"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.steve_vai.for_the_love_of_god",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "For the Love of God",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Steve Vai",
+   "song": "For the Love of God",
+   "parents": [
+    "artist.steve_vai"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.eric_johnson.cliffs_of_dover",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Cliffs of Dover",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Eric Johnson",
+   "song": "Cliffs of Dover",
+   "parents": [
+    "artist.eric_johnson"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.dick_dale.misirlou",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Misirlou",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Dick Dale",
+   "song": "Misirlou",
+   "parents": [
+    "artist.dick_dale"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.the_ventures.walk_dont_run",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Walk, Don't Run",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "The Ventures",
+   "song": "Walk, Don't Run",
+   "songAliases": [
+    "Walk Dont Run"
+   ],
+   "parents": [
+    "artist.the_ventures"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.stray_cats.stray_cat_strut",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Stray Cat Strut",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Stray Cats",
+   "song": "Stray Cat Strut",
+   "parents": [
+    "artist.stray_cats"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "song.yngwie_malmsteen.far_beyond_the_sun",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Far Beyond the Sun",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Yngwie Malmsteen",
+   "song": "Far Beyond the Sun",
+   "parents": [
+    "artist.yngwie_malmsteen"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  }
+ ]
+}

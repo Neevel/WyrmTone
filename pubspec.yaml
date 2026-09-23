@@ -65,6 +65,9 @@ flutter:
     - assets/catalog/ir_catalog.json
     - assets/catalog/sound_profiles.json
     - assets/catalog/matribox_preset_catalog.json
+    - assets/tonevault/
+    - assets/tonevault/packs/
+    - assets/images/wyrmtone_amp_wall.webp
 
   # To add assets to your application, add an assets section, like this:
   # assets:

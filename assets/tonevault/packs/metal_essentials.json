@@ -1,0 +1,556 @@
+{
+ "pack": {
+  "id": "metal_essentials",
+  "name": "Metal Essentials",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Klassischer und Thrash-Metal.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.metallica",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Metallica – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "genres": [
+    "thrash_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "tight",
+    "aggressive",
+    "rhythm-focused"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (straff, aggressiv, kontrollierte Tiefen, rhythmusbetont); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 86,
+     "mids": 40,
+     "lowMids": 40
+    }
+   }
+  },
+  {
+   "id": "artist.black_sabbath",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Black Sabbath – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Black Sabbath",
+   "artistAliases": [
+    "Sabbath"
+   ],
+   "genres": [
+    "doom_metal",
+    "heavy_metal"
+   ],
+   "tags": [
+    "heavy",
+    "slow",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "ebStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (schwer, langsam, warm-fuzzig, vintage); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 38,
+     "sustain": 78
+    },
+    "character": {
+     "vintage": 80
+    }
+   }
+  },
+  {
+   "id": "artist.iron_maiden",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Iron Maiden – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Iron Maiden",
+   "artistAliases": [
+    "Maiden"
+   ],
+   "genres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "galloping",
+    "twin-lead",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (galoppierende Rhythmen, melodische Twin-Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 62,
+     "mids": 62
+    }
+   }
+  },
+  {
+   "id": "artist.judas_priest",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Judas Priest – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Judas Priest",
+   "artistAliases": [
+    "Priest"
+   ],
+   "genres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "sharp",
+    "precise",
+    "twin-lead"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (scharf, präzise, klassischer Heavy Metal); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 66,
+     "treble": 58
+    }
+   }
+  },
+  {
+   "id": "artist.megadeth",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Megadeth – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Megadeth",
+   "genres": [
+    "thrash_metal"
+   ],
+   "subgenres": [
+    "speed_metal"
+   ],
+   "tags": [
+    "precise",
+    "technical",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (präzise, technisch, aggressiv); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 86,
+     "upperMids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.slayer",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Slayer – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slayer",
+   "genres": [
+    "thrash_metal"
+   ],
+   "subgenres": [
+    "speed_metal"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (roh, schnell, sehr aggressiv); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 82,
+     "mids": 38,
+     "saturation": 74
+    }
+   }
+  },
+  {
+   "id": "artist.pantera",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pantera – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pantera",
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "groove",
+    "sharp",
+    "scooped"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (Groove, scharfe Attacke, ausgehöhlte Mitten); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 78,
+     "mids": 40,
+     "bass": 55
+    }
+   }
+  },
+  {
+   "id": "artist.lamb_of_god",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lamb of God – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lamb of God",
+   "artistAliases": [
+    "LoG"
+   ],
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "tags": [
+    "groove",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "dropD",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (Groove, aggressiv, präzise); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 80,
+     "bass": 48
+    }
+   }
+  },
+  {
+   "id": "artist.rammstein",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rammstein – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rammstein",
+   "genres": [
+    "industrial_metal"
+   ],
+   "tags": [
+    "mechanical",
+    "tight",
+    "mid-forward"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (maschinell, straff, mittenbetont); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 78,
+     "mids": 52,
+     "bass": 52
+    }
+   }
+  },
+  {
+   "id": "era.metallica.1980s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Metallica – 80er Thrash-Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "era": "1980s",
+   "year": 1986,
+   "genres": [
+    "thrash_metal"
+   ],
+   "parents": [
+    "artist.metallica"
+   ],
+   "tags": [
+    "tight",
+    "aggressive",
+    "thrash"
+   ],
+   "notes": "Stilorientierte Beschreibung (straffer 80er-Thrash-Rhythmus); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "tightness": 88,
+     "gain": 68,
+     "mids": 38
+    }
+   }
+  },
+  {
+   "id": "era.metallica.1990s",
+   "schemaVersion": 1,
+   "type": "ERA_SIGNATURE",
+   "title": "Metallica – 90er Ära",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "LOW",
+   "artist": "Metallica",
+   "era": "1990s",
+   "year": 1991,
+   "genres": [
+    "heavy_metal",
+    "hard_rock"
+   ],
+   "parents": [
+    "artist.metallica"
+   ],
+   "tags": [
+    "thick",
+    "groovy"
+   ],
+   "notes": "Stilorientierte Beschreibung (dickerer, groovigerer Heavy-Sound); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 62,
+     "bass": 54,
+     "mids": 46
+    }
+   }
+  },
+  {
+   "id": "album.metallica.master_of_puppets",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Metallica – Master of Puppets (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "album": "Master of Puppets",
+   "year": 1986,
+   "era": "1980s",
+   "genres": [
+    "thrash_metal"
+   ],
+   "parents": [
+    "era.metallica.1980s"
+   ],
+   "tags": [
+    "tight",
+    "aggressive"
+   ],
+   "notes": "Stilorientierte Beschreibung (Album-Ära: präzise Thrash-Rhythmen); keine Aussage über Originalequipment oder Studioeinstellungen."
+  },
+  {
+   "id": "song.metallica.master_of_puppets",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Master of Puppets",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Metallica",
+   "song": "Master of Puppets",
+   "album": "Master of Puppets",
+   "year": 1986,
+   "era": "1980s",
+   "genres": [
+    "thrash_metal"
+   ],
+   "parents": [
+    "album.metallica.master_of_puppets"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD",
+    "SOLO"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "tags": [
+    "tight",
+    "aggressive"
+   ],
+   "notes": "Stilorientierte Beschreibung (straffer Thrash-Rhythmus, klare Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "tightness": 90,
+     "gain": 70
+    }
+   },
+   "variants": [
+    {
+     "kind": "RHYTHM",
+     "tone": {
+      "dimensions": {
+       "gateStrength": 48
+      }
+     },
+     "notes": "Rhythmusarbeit: straffe Palm-Mutes."
+    },
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 68,
+       "sustain": 68,
+       "delay": 12,
+       "reverb": 12
+      },
+      "kinds": {
+       "delay": "digital"
+      }
+     }
+    },
+    {
+     "kind": "SOLO",
+     "tone": {
+      "dimensions": {
+       "gain": 70,
+       "sustain": 76,
+       "delay": 16,
+       "reverb": 14
+      },
+      "kinds": {
+       "delay": "digital"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

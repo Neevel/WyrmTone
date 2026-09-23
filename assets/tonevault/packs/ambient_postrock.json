@@ -1,0 +1,1619 @@
+{
+ "pack": {
+  "id": "ambient_postrock",
+  "name": "Shoegaze, Post-Rock, Ambient",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Shoegaze-, Dream-Pop-, Post-Rock- und Ambient-Gitarren-Acts.",
+  "entryCount": 37,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.my_bloody_valentine",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "My Bloody Valentine – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "My Bloody Valentine",
+   "genres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "wall-of-sound",
+    "washy",
+    "pitch-bent"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "saturation": 66,
+     "modulation": 50,
+     "reverb": 64
+    },
+    "character": {
+     "width": 95
+    }
+   }
+  },
+  {
+   "id": "artist.slowdive",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Slowdive – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slowdive",
+   "genres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "1990s",
+    "2010s"
+   ],
+   "tags": [
+    "dreamy",
+    "washy",
+    "shimmering"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "modulation": 48,
+     "reverb": 64,
+     "delay": 38
+    }
+   }
+  },
+  {
+   "id": "artist.ride",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ride – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ride",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "jangly",
+    "washy",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "treble": 58,
+     "modulation": 32
+    }
+   }
+  },
+  {
+   "id": "artist.cocteau_twins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Cocteau Twins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Cocteau Twins",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "ambient"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "ethereal",
+    "chorused",
+    "shimmering"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "modulation": 52,
+     "reverb": 66,
+     "delay": 44
+    }
+   }
+  },
+  {
+   "id": "artist.lush",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lush – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lush",
+   "genres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dreamy",
+    "chorused",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "modulation": 46,
+     "reverb": 48
+    }
+   }
+  },
+  {
+   "id": "artist.swervedriver",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Swervedriver – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Swervedriver",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "driving",
+    "heavy",
+    "washy"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "reverb": 40
+    }
+   }
+  },
+  {
+   "id": "artist.deafheaven",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Deafheaven – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Deafheaven",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "black_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "wall-of-sound",
+    "tremolo-picking",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "saturation": 70,
+     "reverb": 54,
+     "treble": 64
+    }
+   }
+  },
+  {
+   "id": "artist.beach_house",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Beach House – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Beach House",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "ambient"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "dreamy",
+    "shimmering",
+    "soft"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "reverb": 60,
+     "modulation": 38
+    }
+   }
+  },
+  {
+   "id": "artist.alcest",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Alcest – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Alcest",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "black_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dreamy",
+    "bright",
+    "washy"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "reverb": 54,
+     "modulation": 40,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.diiv",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "DIIV – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "DIIV",
+   "genres": [
+    "shoegaze"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "chorused",
+    "bright",
+    "jangly"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "modulation": 52,
+     "reverb": 36,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.nothing",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nothing – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nothing",
+   "genres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "heavy",
+    "washy",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 68,
+     "reverb": 50
+    }
+   }
+  },
+  {
+   "id": "artist.explosions_in_the_sky",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Explosions in the Sky – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Explosions in the Sky",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "swelling",
+    "dynamic",
+    "shimmering"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "delay": 46
+    },
+    "character": {
+     "clarity": 68
+    }
+   }
+  },
+  {
+   "id": "artist.mogwai",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mogwai – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mogwai",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "loud-quiet",
+    "fuzzy"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "saturation": 58
+    },
+    "character": {
+     "fuzziness": 35
+    }
+   }
+  },
+  {
+   "id": "artist.godspeed_you_black_emperor",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Godspeed You! Black Emperor – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Godspeed You! Black Emperor",
+   "artistAliases": [
+    "GY!BE"
+   ],
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "drone",
+    "dark",
+    "swelling"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44
+    },
+    "character": {
+     "darkness": 52,
+     "loFi": 25
+    }
+   }
+  },
+  {
+   "id": "artist.sigur_ros",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sigur Rós – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sigur Rós",
+   "artistAliases": [
+    "Sigur Ros"
+   ],
+   "genres": [
+    "post_rock"
+   ],
+   "subgenres": [
+    "ambient"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "bowed",
+    "ethereal",
+    "vast"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 18,
+     "reverb": 68,
+     "delay": 50
+    },
+    "character": {
+     "width": 90
+    }
+   }
+  },
+  {
+   "id": "artist.this_will_destroy_you",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "This Will Destroy You – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "This Will Destroy You",
+   "genres": [
+    "post_rock"
+   ],
+   "subgenres": [
+    "ambient"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "ambient",
+    "swelling",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "reverb": 62,
+     "delay": 50
+    }
+   }
+  },
+  {
+   "id": "artist.toe",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "toe – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "toe",
+   "genres": [
+    "post_rock"
+   ],
+   "subgenres": [
+    "fusion"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "clean",
+    "intricate",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "reverb": 28
+    },
+    "character": {
+     "clarity": 82
+    }
+   }
+  },
+  {
+   "id": "artist.caspian",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Caspian – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Caspian",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "epic",
+    "swelling",
+    "wide"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "reverb": 54,
+     "delay": 44
+    }
+   }
+  },
+  {
+   "id": "artist.tortoise",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tortoise – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tortoise",
+   "genres": [
+    "post_rock"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "clean",
+    "dry",
+    "intricate"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "reverb": 18
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "artist.slint",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Slint – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slint",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dynamic",
+    "dry",
+    "angular"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "reverb": 10
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "artist.god_is_an_astronaut",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "God Is an Astronaut – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "God Is an Astronaut",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "epic",
+    "delay-driven",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "delay": 48,
+     "reverb": 54
+    }
+   }
+  },
+  {
+   "id": "artist.sixtyfive_days_of_static",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "65daysofstatic – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "65daysofstatic",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "electronic-tinged",
+    "dynamic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "delay": 36
+    }
+   }
+  },
+  {
+   "id": "artist.mono",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mono – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mono",
+   "genres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "orchestral",
+    "swelling",
+    "intense"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48
+    }
+   }
+  },
+  {
+   "id": "artist.do_make_say_think",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Do Make Say Think – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Do Make Say Think",
+   "genres": [
+    "post_rock"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "dynamic",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.post_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 26,
+     "reverb": 36
+    },
+    "character": {
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "artist.robert_fripp",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Robert Fripp – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Robert Fripp",
+   "genres": [
+    "ambient"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "soundscape",
+    "sustaining",
+    "drone"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "sustain": 92,
+     "delay": 56
+    }
+   }
+  },
+  {
+   "id": "artist.daniel_lanois",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Daniel Lanois – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Daniel Lanois",
+   "genres": [
+    "ambient"
+   ],
+   "subgenres": [
+    "clean_pop"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "atmospheric",
+    "steel-tinged",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "reverb": 58,
+     "delay": 44
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  },
+  {
+   "id": "artist.hammock",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Hammock – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Hammock",
+   "genres": [
+    "ambient"
+   ],
+   "subgenres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "drone",
+    "vast",
+    "soft"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "reverb": 74,
+     "delay": 52
+    }
+   }
+  },
+  {
+   "id": "artist.stars_of_the_lid",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Stars of the Lid – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stars of the Lid",
+   "genres": [
+    "ambient"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "drone",
+    "slow",
+    "vast"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "reverb": 78,
+     "delay": 56
+    }
+   }
+  },
+  {
+   "id": "artist.the_edge",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Edge – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Edge",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "clean_pop"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "delay-driven",
+    "rhythmic",
+    "shimmering"
+   ],
+   "parents": [
+    "tpl.genre.clean_pop"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 20,
+     "delay": 48,
+     "reverb": 30
+    },
+    "character": {
+     "clarity": 82
+    }
+   }
+  },
+  {
+   "id": "artist.the_police",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Police – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Police",
+   "artistAliases": [
+    "Police"
+   ],
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "post_punk"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "chorused",
+    "clean",
+    "sparse"
+   ],
+   "parents": [
+    "tpl.genre.clean_pop"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "modulation": 38,
+     "reverb": 22
+    }
+   }
+  },
+  {
+   "id": "artist.mac_demarco",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mac DeMarco – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mac DeMarco",
+   "genres": [
+    "lo_fi"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "wobbly",
+    "chorused",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 16,
+     "modulation": 50
+    },
+    "character": {
+     "loFi": 75
+    }
+   }
+  },
+  {
+   "id": "artist.pavement",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pavement – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pavement",
+   "genres": [
+    "lo_fi"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "scrappy",
+    "jangly",
+    "lo-fi"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "treble": 58
+    },
+    "character": {
+     "loFi": 70
+    }
+   }
+  },
+  {
+   "id": "artist.guided_by_voices",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Guided by Voices – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Guided by Voices",
+   "genres": [
+    "lo_fi"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "scrappy",
+    "raw",
+    "tape"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44
+    }
+   }
+  },
+  {
+   "id": "artist.sebadoh",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sebadoh – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sebadoh",
+   "genres": [
+    "lo_fi"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "scrappy",
+    "lo-fi",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44
+    },
+    "character": {
+     "loFi": 78
+    }
+   }
+  },
+  {
+   "id": "artist.real_estate",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Real Estate – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Real Estate",
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "clean_pop"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "shimmering",
+    "jangly",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.clean_pop"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "delay": 26,
+     "reverb": 32,
+     "modulation": 20
+    }
+   }
+  },
+  {
+   "id": "artist.wavves",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Wavves – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Wavves",
+   "genres": [
+    "lo_fi"
+   ],
+   "subgenres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "fuzzy",
+    "lo-fi",
+    "noisy"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "loFi": 72,
+     "fuzziness": 40
+    }
+   }
+  },
+  {
+   "id": "artist.snail_mail",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Snail Mail – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Snail Mail",
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "lo_fi"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "clean",
+    "dry",
+    "twinkly"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "reverb": 16
+    },
+    "character": {
+     "loFi": 40
+    }
+   }
+  }
+ ]
+}

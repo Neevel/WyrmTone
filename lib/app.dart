@@ -8,6 +8,8 @@ import 'services/ir_file_picker_service.dart';
 import 'services/ir_reference_catalog_service.dart';
 import 'services/local_persistence.dart';
 import 'services/usb_service.dart';
+import 'sounds/sound_selection.dart';
+import 'sounds/sound_session.dart';
 import 'ui/wyrm_design.dart';
 
 class WyrmToneApp extends StatefulWidget {
@@ -31,6 +33,7 @@ class WyrmToneApp extends StatefulWidget {
 class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
   late final UsbController controller;
   late final RecommendationController recommendationController;
+  late final SoundSession soundSession;
 
   @override
   void initState() {
@@ -44,6 +47,11 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
       filePicker: widget.irFilePickerService,
       referenceCatalogService: widget.irReferenceCatalogService,
     )..initialize();
+    soundSession = SoundSession(
+      controller: recommendationController,
+      repository: SoundSelectionRepository(store),
+      tone3000: widget.tone3000Controller,
+    )..ensureLoaded();
     widget.tone3000Controller?.initialize();
   }
 
@@ -51,6 +59,7 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     controller.dispose();
+    soundSession.dispose();
     recommendationController.dispose();
     widget.tone3000Controller?.dispose();
     super.dispose();
@@ -75,6 +84,7 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
         usbController: controller,
         recommendationController: recommendationController,
         tone3000Controller: widget.tone3000Controller,
+        soundSession: soundSession,
       ),
     );
   }

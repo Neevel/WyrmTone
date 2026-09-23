@@ -77,8 +77,21 @@ void main() {
       addTearDown(service.dispose);
       await tester.pumpWidget(WyrmToneApp(usbService: service));
       await tester.pumpAndSettle();
+      // Reach the diagnostics the same way a person does: Profil -> Geräte -> Erweiterte Diagnose
+      // (the "Gerät" bottom-navigation tab was retired; see docs of the V2 navigation restructure).
+      await tester.tap(find.text('Profil'));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('open-device-settings')), 300, scrollable: find.byType(Scrollable).first);
+      await tester.tap(find.byKey(const Key('open-device-settings')));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('open-advanced-diagnostics')), 300, scrollable: find.byType(Scrollable).first);
+      await tester.tap(find.byKey(const Key('open-advanced-diagnostics')));
+      await tester.pumpAndSettle();
       expect(find.byKey(const Key('open-button')), findsNothing);
       await tester.tap(find.byKey(const Key('advanced-diagnostics')));
+      await tester.pumpAndSettle();
+      await tester.scrollUntilVisible(find.byKey(const Key('raw-usb-diagnostics')), 300, scrollable: find.byType(Scrollable).first);
+      await tester.tap(find.byKey(const Key('raw-usb-diagnostics')));
       await tester.pumpAndSettle();
       expect(
         tester

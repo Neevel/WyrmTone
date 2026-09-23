@@ -1,0 +1,513 @@
+{
+ "pack": {
+  "id": "roots_surf_rockabilly",
+  "name": "Surf, Rockabilly und Roots",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Surf-, Rockabilly- und Roots-Gitarrenacts.",
+  "entryCount": 12,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.dick_dale",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dick Dale – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dick Dale",
+   "genres": [
+    "surf"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "fast",
+    "reverb-drenched",
+    "tremolo-picking"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 26,
+     "reverb": 76,
+     "modulation": 24
+    }
+   }
+  },
+  {
+   "id": "artist.the_ventures",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Ventures – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Ventures",
+   "genres": [
+    "surf"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "twangy",
+    "clean",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 18,
+     "reverb": 60
+    }
+   }
+  },
+  {
+   "id": "artist.the_surfaris",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Surfaris – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Surfaris",
+   "genres": [
+    "surf"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "bright",
+    "twangy",
+    "splashy"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "reverb": 64
+    }
+   }
+  },
+  {
+   "id": "artist.the_shadows",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Shadows – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Shadows",
+   "genres": [
+    "surf"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "echoey",
+    "melodic",
+    "twangy"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "delay": 30,
+     "reverb": 48
+    }
+   }
+  },
+  {
+   "id": "artist.link_wray",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Link Wray – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Link Wray",
+   "genres": [
+    "garage_rock"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "fuzzy",
+    "raw",
+    "menacing"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 66
+    },
+    "character": {
+     "fuzziness": 55,
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.brian_setzer",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Brian Setzer – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Brian Setzer",
+   "genres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "slapback",
+    "twangy",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.rockabilly"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 26,
+     "delay": 34
+    }
+   }
+  },
+  {
+   "id": "artist.stray_cats",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Stray Cats – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stray Cats",
+   "genres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "slapback",
+    "twangy",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.rockabilly"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "delay": 34
+    }
+   }
+  },
+  {
+   "id": "artist.carl_perkins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Carl Perkins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Carl Perkins",
+   "genres": [
+    "rockabilly"
+   ],
+   "subgenres": [
+    "country"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "slapback",
+    "twangy",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.rockabilly"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 20,
+     "delay": 32
+    }
+   }
+  },
+  {
+   "id": "artist.scotty_moore",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Scotty Moore – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Scotty Moore",
+   "genres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "slapback",
+    "twangy",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.rockabilly"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 18,
+     "delay": 34
+    },
+    "character": {
+     "vintage": 92
+    }
+   }
+  },
+  {
+   "id": "artist.duane_eddy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Duane Eddy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Duane Eddy",
+   "genres": [
+    "surf"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "twangy",
+    "low-string-melody",
+    "reverb-soaked"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 16,
+     "bass": 52,
+     "reverb": 60
+    }
+   }
+  },
+  {
+   "id": "artist.chris_isaak",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Chris Isaak – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Chris Isaak",
+   "genres": [
+    "rockabilly"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dreamy",
+    "tremolo-tinged",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.rockabilly"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 18,
+     "modulation": 26,
+     "reverb": 40
+    }
+   }
+  },
+  {
+   "id": "artist.reverend_horton_heat",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Reverend Horton Heat – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Reverend Horton Heat",
+   "genres": [
+    "rockabilly"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "fast",
+    "twangy",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.rockabilly"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "delay": 28
+    }
+   }
+  }
+ ]
+}

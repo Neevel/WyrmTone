@@ -1,0 +1,918 @@
+{
+ "pack": {
+  "id": "jazz_fusion",
+  "name": "Jazz und Jazz Fusion",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Jazz-, Fusion- und Instrumental-Gitarrenacts.",
+  "entryCount": 21,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.wes_montgomery",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Wes Montgomery – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Wes Montgomery",
+   "genres": [
+    "jazz"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "warm",
+    "round",
+    "octave-melodies"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 4,
+     "treble": 24
+    },
+    "character": {
+     "warmth": 88
+    }
+   }
+  },
+  {
+   "id": "artist.george_benson",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "George Benson – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "George Benson",
+   "genres": [
+    "jazz"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "smooth",
+    "warm",
+    "fluid"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 60
+    },
+    "character": {
+     "warmth": 80
+    }
+   }
+  },
+  {
+   "id": "artist.pat_metheny",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pat Metheny – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pat Metheny",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "warm",
+    "singing",
+    "chorused"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "modulation": 26,
+     "delay": 20
+    },
+    "character": {
+     "warmth": 68
+    }
+   }
+  },
+  {
+   "id": "artist.john_scofield",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "John Scofield – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "John Scofield",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "dirty-jazz",
+    "funky",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "saturation": 36,
+     "mids": 58
+    }
+   }
+  },
+  {
+   "id": "artist.joe_pass",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Joe Pass – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Joe Pass",
+   "genres": [
+    "jazz"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "warm",
+    "clean",
+    "articulate"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 4
+    },
+    "character": {
+     "warmth": 84
+    }
+   }
+  },
+  {
+   "id": "artist.kenny_burrell",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kenny Burrell – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kenny Burrell",
+   "genres": [
+    "jazz"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "warm",
+    "round",
+    "bluesy"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 4
+    },
+    "character": {
+     "warmth": 86
+    }
+   }
+  },
+  {
+   "id": "artist.grant_green",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Grant Green – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Grant Green",
+   "genres": [
+    "jazz"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "warm",
+    "single-note",
+    "soulful"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 4
+    },
+    "character": {
+     "warmth": 82
+    }
+   }
+  },
+  {
+   "id": "artist.jim_hall",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jim Hall – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jim Hall",
+   "genres": [
+    "jazz"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "warm",
+    "subtle",
+    "dark"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 4
+    },
+    "character": {
+     "darkness": 62
+    }
+   }
+  },
+  {
+   "id": "artist.charlie_christian",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Charlie Christian – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Charlie Christian",
+   "genres": [
+    "jazz"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "warm",
+    "vintage",
+    "horn-like"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "vintage": 88,
+     "loFi": 25
+    }
+   }
+  },
+  {
+   "id": "artist.bill_frisell",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bill Frisell – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bill Frisell",
+   "genres": [
+    "jazz"
+   ],
+   "subgenres": [
+    "fusion",
+    "country"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "atmospheric",
+    "twangy",
+    "delay-tinged"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "delay": 30,
+     "reverb": 32,
+     "modulation": 16
+    }
+   }
+  },
+  {
+   "id": "artist.julian_lage",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Julian Lage – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Julian Lage",
+   "genres": [
+    "jazz"
+   ],
+   "subgenres": [
+    "country"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "articulate",
+    "warm",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 8,
+     "treble": 42
+    }
+   }
+  },
+  {
+   "id": "artist.mike_stern",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mike Stern – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mike Stern",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "chorused",
+    "singing",
+    "driving"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "modulation": 30,
+     "sustain": 74
+    }
+   }
+  },
+  {
+   "id": "artist.larry_carlton",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Larry Carlton – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Larry Carlton",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "warm",
+    "singing",
+    "smooth"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "sustain": 70
+    },
+    "character": {
+     "warmth": 72
+    }
+   }
+  },
+  {
+   "id": "artist.lee_ritenour",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lee Ritenour – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lee Ritenour",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "smooth",
+    "polished",
+    "clear"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 16
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "artist.al_di_meola",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Al Di Meola – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Al Di Meola",
+   "genres": [
+    "fusion"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "fast",
+    "precise",
+    "bright"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "tightness": 60,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "artist.john_mclaughlin",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "John McLaughlin – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "John McLaughlin",
+   "genres": [
+    "fusion"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "fiery",
+    "fast",
+    "intense"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "sustain": 78,
+     "tightness": 56
+    }
+   }
+  },
+  {
+   "id": "artist.allan_holdsworth",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Allan Holdsworth – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Allan Holdsworth",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "legato",
+    "singing",
+    "synth-like"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "sustain": 90,
+     "delay": 20,
+     "modulation": 20
+    }
+   }
+  },
+  {
+   "id": "artist.scott_henderson",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Scott Henderson – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Scott Henderson",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "fiery",
+    "bluesy",
+    "expressive"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "sustain": 78
+    }
+   }
+  },
+  {
+   "id": "artist.pat_martino",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pat Martino – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pat Martino",
+   "genres": [
+    "jazz"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "articulate",
+    "warm",
+    "fast"
+   ],
+   "parents": [
+    "tpl.genre.jazz_guitar"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 4
+    },
+    "character": {
+     "warmth": 80
+    }
+   }
+  },
+  {
+   "id": "artist.jeff_beck",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jeff Beck – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jeff Beck",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "blues_rock",
+    "classic_rock"
+   ],
+   "eras": [
+    "1970s",
+    "2000s"
+   ],
+   "tags": [
+    "expressive",
+    "whammy",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "sustain": 76
+    },
+    "character": {
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.guthrie_govan",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Guthrie Govan – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Guthrie Govan",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "versatile",
+    "articulate",
+    "fluid"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "sustain": 76
+    },
+    "character": {
+     "clarity": 78
+    }
+   }
+  }
+ ]
+}

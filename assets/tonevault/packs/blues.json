@@ -1,0 +1,1469 @@
+{
+ "pack": {
+  "id": "blues",
+  "name": "Blues und Blues Rock",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Blues-, Texas-Blues-, Chicago-Blues- und Blues-Rock-Acts.",
+  "entryCount": 34,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.bb_king",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "B.B. King – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "B.B. King",
+   "artistAliases": [
+    "BB King"
+   ],
+   "genres": [
+    "blues"
+   ],
+   "eras": [
+    "1960s",
+    "1970s"
+   ],
+   "tags": [
+    "singing",
+    "vibrato",
+    "warm",
+    "round"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "sustain": 64,
+     "treble": 46
+    },
+    "character": {
+     "warmth": 80
+    }
+   }
+  },
+  {
+   "id": "artist.albert_king",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Albert King – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Albert King",
+   "genres": [
+    "blues"
+   ],
+   "subgenres": [
+    "texas_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "biting",
+    "bent-notes",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 62
+    }
+   }
+  },
+  {
+   "id": "artist.freddie_king",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Freddie King – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Freddie King",
+   "genres": [
+    "texas_blues"
+   ],
+   "subgenres": [
+    "blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "punchy",
+    "bright",
+    "instrumental"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "treble": 58
+    }
+   }
+  },
+  {
+   "id": "artist.buddy_guy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Buddy Guy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Buddy Guy",
+   "genres": [
+    "chicago_blues"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1960s",
+    "1990s"
+   ],
+   "tags": [
+    "raw",
+    "dynamic",
+    "searing"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "attack": 64,
+     "treble": 58
+    }
+   }
+  },
+  {
+   "id": "artist.muddy_waters",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Muddy Waters – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Muddy Waters",
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "gritty",
+    "slide",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "saturation": 44
+    },
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.howlin_wolf",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Howlin' Wolf – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Howlin' Wolf",
+   "artistAliases": [
+    "Howlin Wolf"
+   ],
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "raw",
+    "gritty",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40
+    },
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.john_lee_hooker",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "John Lee Hooker – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "John Lee Hooker",
+   "genres": [
+    "blues"
+   ],
+   "subgenres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "droning",
+    "raw",
+    "minimal"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "reverb": 10
+    },
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.tbone_walker",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "T-Bone Walker – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "T-Bone Walker",
+   "genres": [
+    "blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "jazzy",
+    "warm",
+    "clean"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 16
+    },
+    "character": {
+     "warmth": 76
+    }
+   }
+  },
+  {
+   "id": "artist.stevie_ray_vaughan",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Stevie Ray Vaughan – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stevie Ray Vaughan",
+   "artistAliases": [
+    "SRV"
+   ],
+   "genres": [
+    "texas_blues"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "fat",
+    "punchy",
+    "singing",
+    "spring-reverb"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "ebStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "saturation": 48,
+     "bass": 52,
+     "sustain": 66
+    },
+    "character": {
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "artist.gary_moore",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Gary Moore – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gary Moore",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "singing",
+    "sustaining",
+    "thick"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "sustain": 84,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.joe_bonamassa",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Joe Bonamassa – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Joe Bonamassa",
+   "artistAliases": [
+    "Bonamassa"
+   ],
+   "genres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "thick",
+    "singing",
+    "polished"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "sustain": 76
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.john_mayer",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "John Mayer – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "John Mayer",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "clean_pop"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "smooth",
+    "warm",
+    "dynamic",
+    "clean"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 64,
+     "reverb": 24
+    },
+    "character": {
+     "warmth": 74
+    }
+   }
+  },
+  {
+   "id": "artist.robert_cray",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Robert Cray – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Robert Cray",
+   "genres": [
+    "blues"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "smooth",
+    "clean",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "attack": 62,
+     "treble": 54
+    }
+   }
+  },
+  {
+   "id": "artist.kenny_wayne_shepherd",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kenny Wayne Shepherd – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kenny Wayne Shepherd",
+   "genres": [
+    "texas_blues"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "punchy",
+    "vintage",
+    "singing"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "sustain": 64
+    }
+   }
+  },
+  {
+   "id": "artist.derek_trucks",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Derek Trucks – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Derek Trucks",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "slide",
+    "singing",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.southern_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 84
+    },
+    "character": {
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "artist.susan_tedeschi",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Susan Tedeschi – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Susan Tedeschi",
+   "genres": [
+    "blues"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "soulful",
+    "clean"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "warmth": 72
+    }
+   }
+  },
+  {
+   "id": "artist.rory_gallagher",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rory Gallagher – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rory Gallagher",
+   "genres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "raw",
+    "gritty",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "saturation": 52
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "artist.peter_green",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Peter Green – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Peter Green",
+   "genres": [
+    "blues"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "singing",
+    "vibrato",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "artist.johnny_winter",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Johnny Winter – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Johnny Winter",
+   "genres": [
+    "texas_blues"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "raw",
+    "fiery",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "saturation": 52
+    }
+   }
+  },
+  {
+   "id": "artist.warren_haynes",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Warren Haynes – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Warren Haynes",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "singing",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.southern_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "sustain": 74
+    }
+   }
+  },
+  {
+   "id": "artist.walter_trout",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Walter Trout – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Walter Trout",
+   "genres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "thick",
+    "singing",
+    "intense"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "sustain": 76
+    }
+   }
+  },
+  {
+   "id": "artist.eric_gales",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Eric Gales – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eric Gales",
+   "genres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "fiery",
+    "expressive",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "sustain": 72
+    }
+   }
+  },
+  {
+   "id": "artist.larkin_poe",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Larkin Poe – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Larkin Poe",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "slide",
+    "gritty",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46
+    },
+    "character": {
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "artist.gary_clark_jr",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Gary Clark Jr. – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gary Clark Jr.",
+   "artistAliases": [
+    "Gary Clark Junior"
+   ],
+   "genres": [
+    "texas_blues"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "fuzzy",
+    "raw",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "fuzziness": 30
+    }
+   }
+  },
+  {
+   "id": "artist.robben_ford",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Robben Ford – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Robben Ford",
+   "genres": [
+    "blues"
+   ],
+   "subgenres": [
+    "fusion"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "smooth",
+    "jazzy",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.blues_clean"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 66
+    },
+    "character": {
+     "warmth": 72
+    }
+   }
+  },
+  {
+   "id": "artist.jimmie_vaughan",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jimmie Vaughan – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jimmie Vaughan",
+   "genres": [
+    "texas_blues"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "clean",
+    "twangy",
+    "minimal"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 26,
+     "treble": 58
+    }
+   }
+  },
+  {
+   "id": "artist.albert_collins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Albert Collins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Albert Collins",
+   "genres": [
+    "texas_blues"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "icy",
+    "biting",
+    "twangy"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "treble": 64,
+     "presence": 60
+    }
+   }
+  },
+  {
+   "id": "artist.magic_sam",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Magic Sam – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Magic Sam",
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "tremolo-tinged",
+    "warm",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "modulation": 24
+    },
+    "character": {
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "artist.otis_rush",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Otis Rush – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Otis Rush",
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "intense",
+    "dark",
+    "expressive"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "darkness": 45
+    }
+   }
+  },
+  {
+   "id": "artist.elmore_james",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Elmore James – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Elmore James",
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "slide",
+    "raw",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "saturation": 50
+    }
+   }
+  },
+  {
+   "id": "artist.hound_dog_taylor",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Hound Dog Taylor – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Hound Dog Taylor",
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "raw",
+    "slide",
+    "dirty"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 56
+    },
+    "character": {
+     "loFi": 35
+    }
+   }
+  },
+  {
+   "id": "artist.junior_wells",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Junior Wells – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Junior Wells",
+   "genres": [
+    "chicago_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "raw",
+    "vintage",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.style.chicago_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.lightnin_hopkins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lightnin' Hopkins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lightnin' Hopkins",
+   "artistAliases": [
+    "Lightnin Hopkins"
+   ],
+   "genres": [
+    "texas_blues"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "raw",
+    "minimal",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.style.texas_blues"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 28
+    },
+    "character": {
+     "loFi": 35
+    }
+   }
+  },
+  {
+   "id": "artist.ana_popovic",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ana Popovic – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ana Popovic",
+   "genres": [
+    "blues_rock"
+   ],
+   "subgenres": [
+    "funk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "funky",
+    "warm",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "warmth": 62
+    }
+   }
+  }
+ ]
+}

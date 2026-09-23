@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../controllers/recommendation_controller.dart';
+import '../controllers/usb_controller.dart';
 import '../models/guitar_profile.dart';
 import '../ui/wyrm_design.dart';
+import '../ui/wyrm_components.dart';
+import 'device_settings_page.dart';
 
 class GuitarsPage extends StatelessWidget {
-  const GuitarsPage({required this.controller, super.key});
+  const GuitarsPage({required this.controller, this.usbController, super.key});
   final RecommendationController controller;
+
+  /// Settings → Geräte lives here; null only in tests that do not exercise it.
+  final UsbController? usbController;
 
   @override
   Widget build(BuildContext context) {
@@ -14,55 +20,80 @@ class GuitarsPage extends StatelessWidget {
       animation: controller,
       builder: (context, _) => WyrmScaffold(
         title: 'Profil',
-        body: controller.profiles.isEmpty
-            ? const Center(
-                child: Padding(
-                  padding: EdgeInsets.all(24),
-                  child: WyrmEmptyState(
-                    title: 'Deine Gitarre macht den Unterschied',
-                    message: 'Lege zuerst ein Gitarrenprofil an. Pickup-Pegel, Klangcharakter und Stimmung helfen bei passenden Startwerten.',
+        background: true,
+        backgroundIntensity: WyrmBackgroundIntensity.dim,
+        body: ListView(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, kMinInteractiveDimension + WyrmTokens.gap * 2),
+          children: [
+            if (usbController != null) ...[
+              const WyrmSectionHeader('Geräte'),
+              AnimatedBuilder(
+                animation: usbController!,
+                builder: (context, _) => WyrmCard(
+                  key: const Key('open-device-settings'),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (_) => DeviceSettingsPage(controller: usbController!)),
                   ),
-                ),
-              )
-            : ListView(
-                padding: const EdgeInsets.fromLTRB(
-                  16,
-                  16,
-                  16,
-                  kMinInteractiveDimension + WyrmTokens.gap * 2,
-                ),
-                children: [
-                  const WyrmSection(
-                    title: 'Deine Gitarren',
-                    subtitle: 'Pickup-Pegel, Stimmung und Klangcharakter passen den Offline-Entwurf an. Unbestätigte Eigenschaften bleiben Hinweise.',
-                    child: SizedBox.shrink(),
-                  ),
-                  for (final profile in controller.profiles)
-                    Card(
-                      child: ListTile(
-                        key: Key('profile-${profile.id}'),
-                        onTap: () => controller.selectProfile(profile.id),
-                        leading: Icon(
-                          controller.selectedProfileId == profile.id
-                              ? Icons.radio_button_checked
-                              : Icons.radio_button_unchecked,
-                        ),
-                        title: Text(profile.name),
-                        subtitle: Text(
-                          '${profile.guitarType.label} · ${profile.pickupType.label} · '
-                          '${profile.tuning.label} · ${profile.playbackPath.label}\n'
-                          '${profile.stringGauge == null ? '' : 'Saiten: ${profile.stringGauge} · '}Klang: ${profile.toneCharacter.label}\n'
-                          '${controller.selectedProfileId == profile.id ? 'Aktuell ausgewählt' : 'Zum Auswählen antippen'}',
-                        ),
-                        trailing: IconButton(
-                          tooltip: 'Bearbeiten',
-                          onPressed: () => _openForm(context, profile),
-                          icon: const Icon(Icons.edit),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.usb, color: WyrmTokens.ember),
+                      const SizedBox(width: WyrmTokens.space12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Matribox 1', style: Theme.of(context).textTheme.titleMedium),
+                            Text(usbController!.primaryDeviceStatusLabel),
+                          ],
                         ),
                       ),
-                    ),
-                ],
+                      const Icon(Icons.chevron_right),
+                    ],
+                  ),
+                ),
               ),
+            ],
+            if (controller.profiles.isEmpty)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 24),
+                child: WyrmEmptyState(
+                  title: 'Deine Gitarre macht den Unterschied',
+                  message: 'Lege zuerst ein Gitarrenprofil an. Pickup-Pegel, Klangcharakter und Stimmung helfen bei passenden Startwerten.',
+                ),
+              )
+            else ...[
+              const WyrmSection(
+                title: 'Deine Gitarren',
+                subtitle: 'Pickup-Pegel, Stimmung und Klangcharakter passen den Offline-Entwurf an. Unbestätigte Eigenschaften bleiben Hinweise.',
+                child: SizedBox.shrink(),
+              ),
+              for (final profile in controller.profiles)
+                Card(
+                  child: ListTile(
+                    key: Key('profile-${profile.id}'),
+                    onTap: () => controller.selectProfile(profile.id),
+                    leading: Icon(
+                      controller.selectedProfileId == profile.id
+                          ? Icons.radio_button_checked
+                          : Icons.radio_button_unchecked,
+                    ),
+                    title: Text(profile.name),
+                    subtitle: Text(
+                      '${profile.guitarType.label} · ${profile.pickupType.label} · '
+                      '${profile.tuning.label} · ${profile.playbackPath.label}\n'
+                      '${profile.stringGauge == null ? '' : 'Saiten: ${profile.stringGauge} · '}Klang: ${profile.toneCharacter.label}\n'
+                      '${controller.selectedProfileId == profile.id ? 'Aktuell ausgewählt' : 'Zum Auswählen antippen'}',
+                    ),
+                    trailing: IconButton(
+                      tooltip: 'Bearbeiten',
+                      onPressed: () => _openForm(context, profile),
+                      icon: const Icon(Icons.edit),
+                    ),
+                  ),
+                ),
+            ],
+          ],
+        ),
         floatingActionButton: FloatingActionButton.extended(
           key: const Key('add-profile-button'),
           onPressed: () => _openForm(context, null),

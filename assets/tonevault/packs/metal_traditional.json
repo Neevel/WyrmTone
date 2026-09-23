@@ -1,0 +1,1126 @@
+{
+ "pack": {
+  "id": "metal_traditional",
+  "name": "Metal: Heavy, NWOBHM, Speed, Power",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Traditioneller Metal: Heavy, NWOBHM, Speed und Power Metal.",
+  "entryCount": 26,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.ozzy_osbourne",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ozzy Osbourne – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ozzy Osbourne",
+   "artistAliases": [
+    "Ozzy"
+   ],
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "dark",
+    "melodic",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "bass": 54,
+     "mids": 62,
+     "sustain": 64
+    }
+   }
+  },
+  {
+   "id": "artist.dio",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dio – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dio",
+   "artistAliases": [
+    "Ronnie James Dio"
+   ],
+   "genres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "epic",
+    "melodic",
+    "mid-forward"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "mids": 64,
+     "treble": 58,
+     "sustain": 66
+    }
+   }
+  },
+  {
+   "id": "artist.accept",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Accept – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Accept",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "speed_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "tight",
+    "sharp",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 70,
+     "mids": 58,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "artist.motorhead",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Motörhead – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Motörhead",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "loud",
+    "driving",
+    "punky"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "saturation": 64,
+     "bass": 56,
+     "mids": 64,
+     "tightness": 52
+    }
+   }
+  },
+  {
+   "id": "artist.manowar",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Manowar – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Manowar",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "power_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "epic",
+    "loud",
+    "bombastic"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 56,
+     "sustain": 66
+    }
+   }
+  },
+  {
+   "id": "artist.saxon",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Saxon – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Saxon",
+   "genres": [
+    "nwobhm"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "driving",
+    "raw",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.nwobhm"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 54
+    }
+   }
+  },
+  {
+   "id": "artist.diamond_head",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Diamond Head – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Diamond Head",
+   "genres": [
+    "nwobhm"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "riff-driven",
+    "raw",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.nwobhm"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 50,
+     "mids": 66
+    }
+   }
+  },
+  {
+   "id": "artist.angel_witch",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Angel Witch – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Angel Witch",
+   "genres": [
+    "nwobhm"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "dark",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.nwobhm"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "treble": 54
+    }
+   }
+  },
+  {
+   "id": "artist.tygers_of_pan_tang",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tygers of Pan Tang – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tygers of Pan Tang",
+   "genres": [
+    "nwobhm"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "melodic",
+    "twin-lead",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.nwobhm"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 62
+    }
+   }
+  },
+  {
+   "id": "artist.rainbow",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rainbow – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rainbow",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "neoclassical",
+    "vintage",
+    "mid-forward"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 66,
+     "sustain": 68
+    }
+   }
+  },
+  {
+   "id": "artist.venom",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Venom – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Venom",
+   "genres": [
+    "nwobhm"
+   ],
+   "subgenres": [
+    "black_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "dirty",
+    "lo-fi"
+   ],
+   "parents": [
+    "tpl.genre.nwobhm"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "saturation": 68,
+     "tightness": 44
+    }
+   }
+  },
+  {
+   "id": "artist.queensryche",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Queensrÿche – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Queensrÿche",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "precise",
+    "dramatic",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.heavy_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 62,
+     "sustain": 70,
+     "delay": 14
+    }
+   }
+  },
+  {
+   "id": "artist.helloween",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Helloween – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Helloween",
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "speed_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "melodic",
+    "fast",
+    "twin-lead"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 72,
+     "sustain": 72
+    }
+   }
+  },
+  {
+   "id": "artist.blind_guardian",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Blind Guardian – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Blind Guardian",
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "speed_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "layered",
+    "epic",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 74,
+     "reverb": 18
+    }
+   }
+  },
+  {
+   "id": "artist.hammerfall",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "HammerFall – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "HammerFall",
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "polished",
+    "anthemic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "treble": 66
+    }
+   }
+  },
+  {
+   "id": "artist.sabaton",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sabaton – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sabaton",
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "anthemic",
+    "punchy",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 68,
+     "bass": 50,
+     "reverb": 10
+    }
+   }
+  },
+  {
+   "id": "artist.stratovarius",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Stratovarius – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stratovarius",
+   "genres": [
+    "power_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "neoclassical",
+    "bright",
+    "fast"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "treble": 66,
+     "sustain": 78
+    }
+   }
+  },
+  {
+   "id": "artist.gamma_ray",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Gamma Ray – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gamma Ray",
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "speed_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "melodic",
+    "driving",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 72
+    }
+   }
+  },
+  {
+   "id": "artist.dragonforce",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "DragonForce – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "DragonForce",
+   "genres": [
+    "power_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "ultra-fast",
+    "bright",
+    "clean-definition"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 76,
+     "treble": 68,
+     "presence": 64,
+     "sustain": 80
+    }
+   }
+  },
+  {
+   "id": "artist.rhapsody_of_fire",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rhapsody of Fire – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rhapsody of Fire",
+   "artistAliases": [
+    "Rhapsody"
+   ],
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "epic",
+    "neoclassical",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "sustain": 76,
+     "reverb": 20
+    }
+   }
+  },
+  {
+   "id": "artist.sonata_arctica",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sonata Arctica – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sonata Arctica",
+   "genres": [
+    "power_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "bright",
+    "keyboard-like"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "sustain": 78
+    }
+   }
+  },
+  {
+   "id": "artist.edguy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Edguy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Edguy",
+   "genres": [
+    "power_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "catchy",
+    "bright",
+    "punchy"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "mids": 60
+    }
+   }
+  },
+  {
+   "id": "artist.powerwolf",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Powerwolf – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Powerwolf",
+   "genres": [
+    "power_metal"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "dramatic",
+    "punchy",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.power_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 68,
+     "mids": 58
+    }
+   }
+  },
+  {
+   "id": "artist.exciter",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Exciter – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Exciter",
+   "genres": [
+    "speed_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "dirty"
+   ],
+   "parents": [
+    "tpl.genre.speed_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 70,
+     "saturation": 64
+    }
+   }
+  },
+  {
+   "id": "artist.running_wild",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Running Wild – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Running Wild",
+   "genres": [
+    "speed_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "driving",
+    "melodic",
+    "galloping"
+   ],
+   "parents": [
+    "tpl.genre.speed_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.bathory",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bathory – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bathory",
+   "genres": [
+    "black_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "lo-fi",
+    "primitive"
+   ],
+   "parents": [
+    "tpl.genre.black_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,173 @@
+{
+ "pack": {
+  "id": "punk_pop_punk",
+  "name": "Punk & Pop Punk",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Punk und Pop Punk.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.green_day",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Green Day – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Green Day",
+   "genres": [
+    "pop_punk",
+    "punk_rock"
+   ],
+   "tags": [
+    "bright",
+    "punchy"
+   ],
+   "parents": [
+    "tpl.genre.punk_pop_punk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (hell, punchy, Powerchords); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.blink_182",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Blink-182 – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Blink-182",
+   "artistAliases": [
+    "Blink"
+   ],
+   "genres": [
+    "pop_punk"
+   ],
+   "tags": [
+    "bright",
+    "fast",
+    "clean-ish"
+   ],
+   "parents": [
+    "tpl.genre.punk_pop_punk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (hell, schnell, klarer Punk); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "treble": 62,
+     "tightness": 64
+    }
+   }
+  },
+  {
+   "id": "artist.sum_41",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sum 41 – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sum 41",
+   "artistAliases": [
+    "Sum Forty One"
+   ],
+   "genres": [
+    "pop_punk"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "tags": [
+    "fast",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.punk_pop_punk"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (schnell, straff, punk-metallisch); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.my_chemical_romance",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "My Chemical Romance – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "My Chemical Romance",
+   "artistAliases": [
+    "MCR"
+   ],
+   "genres": [
+    "alternative_rock",
+    "pop_punk"
+   ],
+   "tags": [
+    "dramatic",
+    "wide"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (dramatisch, breit, dicht); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 60,
+     "space": 22
+    }
+   }
+  }
+ ]
+}

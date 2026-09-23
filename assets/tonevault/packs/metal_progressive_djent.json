@@ -1,0 +1,689 @@
+{
+ "pack": {
+  "id": "metal_progressive_djent",
+  "name": "Metal: Progressive und Djent",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Progressive-Metal- und Djent-Acts.",
+  "entryCount": 16,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.dream_theater",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dream Theater – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dream Theater",
+   "genres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "virtuosic",
+    "clear",
+    "layered"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 74,
+     "delay": 16
+    },
+    "character": {
+     "clarity": 86
+    }
+   }
+  },
+  {
+   "id": "artist.symphony_x",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Symphony X – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Symphony X",
+   "genres": [
+    "progressive_metal"
+   ],
+   "subgenres": [
+    "power_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "neoclassical",
+    "precise",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 76,
+     "sustain": 76
+    }
+   }
+  },
+  {
+   "id": "artist.fates_warning",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Fates Warning – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Fates Warning",
+   "genres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dynamic",
+    "melodic",
+    "clean-definition"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 62
+    }
+   }
+  },
+  {
+   "id": "artist.haken",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Haken – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Haken",
+   "genres": [
+    "progressive_metal"
+   ],
+   "subgenres": [
+    "djent"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "dynamic",
+    "modern",
+    "layered"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 74
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "artist.leprous",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Leprous – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Leprous",
+   "genres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "moody",
+    "dynamic",
+    "dark"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "darkness": 50
+    }
+   }
+  },
+  {
+   "id": "artist.between_the_buried_and_me",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Between the Buried and Me – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Between the Buried and Me",
+   "artistAliases": [
+    "BTBAM"
+   ],
+   "genres": [
+    "progressive_metal"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "complex",
+    "heavy",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 78
+    }
+   }
+  },
+  {
+   "id": "artist.pain_of_salvation",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pain of Salvation – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pain of Salvation",
+   "genres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "emotional",
+    "varied"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 62
+    }
+   }
+  },
+  {
+   "id": "artist.periphery",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Periphery – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Periphery",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "precise",
+    "melodic",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "sustain": 64,
+     "delay": 12
+    }
+   }
+  },
+  {
+   "id": "artist.tesseract",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "TesseracT – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "TesseracT",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "atmospheric",
+    "precise",
+    "wide"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "sustain": 68,
+     "delay": 20,
+     "reverb": 18
+    }
+   }
+  },
+  {
+   "id": "artist.animals_as_leaders",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Animals as Leaders – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Animals as Leaders",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "virtuosic",
+    "clear",
+    "instrumental"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "delay": 14
+    },
+    "character": {
+     "clarity": 90
+    }
+   }
+  },
+  {
+   "id": "artist.vildhjarta",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Vildhjärta – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vildhjärta",
+   "genres": [
+    "djent"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "extreme",
+    "downtuned",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 96,
+     "bass": 54
+    }
+   }
+  },
+  {
+   "id": "artist.monuments",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Monuments – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Monuments",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "groovy",
+    "precise",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72
+    }
+   }
+  },
+  {
+   "id": "artist.textures",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Textures – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Textures",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "technical",
+    "tight",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.northlane",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Northlane – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Northlane",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "atmospheric",
+    "heavy",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "reverb": 14,
+     "delay": 10
+    }
+   }
+  },
+  {
+   "id": "artist.intervals",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Intervals – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Intervals",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "melodic",
+    "clear",
+    "instrumental"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62
+    },
+    "character": {
+     "clarity": 88
+    }
+   }
+  },
+  {
+   "id": "artist.volumes",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Volumes – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Volumes",
+   "genres": [
+    "djent"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "groovy",
+    "modern",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.style.modern_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72
+    }
+   }
+  }
+ ]
+}

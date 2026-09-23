@@ -1,0 +1,649 @@
+{
+ "pack": {
+  "id": "modern_metal",
+  "name": "Modern Metal",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Metalcore, Nu Metal, Djent und Progressive.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.bfmv",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bullet for My Valentine – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bullet for My Valentine",
+   "artistAliases": [
+    "BFMV",
+    "Bullet"
+   ],
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "modern",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (modern, straff, präzise Palm-Mutes); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.trivium",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Trivium – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Trivium",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "tags": [
+    "modern",
+    "technical"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dropD",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (modern, technisch, straff); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.killswitch_engage",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Killswitch Engage – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Killswitch Engage",
+   "artistAliases": [
+    "KSE"
+   ],
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (straff, melodische Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84,
+     "upperMids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.avenged_sevenfold",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Avenged Sevenfold – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Avenged Sevenfold",
+   "artistAliases": [
+    "A7X"
+   ],
+   "genres": [
+    "heavy_metal",
+    "metalcore"
+   ],
+   "tags": [
+    "melodic",
+    "theatrical"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (melodisch, theatralisch, klar); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 72,
+     "mids": 54
+    }
+   }
+  },
+  {
+   "id": "artist.slipknot",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Slipknot – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slipknot",
+   "genres": [
+    "nu_metal"
+   ],
+   "subgenres": [
+    "groove_metal"
+   ],
+   "tags": [
+    "heavy",
+    "downtuned",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (schwer, tiefgestimmt, aggressiv); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 74,
+     "bass": 60
+    }
+   }
+  },
+  {
+   "id": "artist.korn",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Korn – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Korn",
+   "artistAliases": [
+    "KoRn"
+   ],
+   "genres": [
+    "nu_metal"
+   ],
+   "tags": [
+    "downtuned",
+    "rhythmic",
+    "low"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (tief, rhythmisch, perkussiv); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 62,
+     "bass": 66
+    }
+   }
+  },
+  {
+   "id": "artist.linkin_park",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Linkin Park – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Linkin Park",
+   "artistAliases": [
+    "LP"
+   ],
+   "genres": [
+    "nu_metal",
+    "alternative_rock"
+   ],
+   "tags": [
+    "modern",
+    "polished"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (modern, sauber produziert, straff); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 70,
+     "mids": 44
+    }
+   }
+  },
+  {
+   "id": "artist.system_of_a_down",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "System of a Down – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "System of a Down",
+   "artistAliases": [
+    "SOAD",
+    "System of a Down"
+   ],
+   "genres": [
+    "alternative_metal"
+   ],
+   "subgenres": [
+    "nu_metal"
+   ],
+   "tags": [
+    "rhythmic",
+    "quirky"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (rhythmisch, sprunghaft, mittig); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 68,
+     "mids": 48
+    }
+   }
+  },
+  {
+   "id": "artist.cky",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "CKY – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "CKY",
+   "artistAliases": [
+    "Camp Kill Yourself"
+   ],
+   "genres": [
+    "alternative_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "tags": [
+    "riff-driven",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (riffbetont, körnig, direkt); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 68,
+     "bass": 58,
+     "irBrightness": 55
+    }
+   }
+  },
+  {
+   "id": "artist.meshuggah",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Meshuggah – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Meshuggah",
+   "genres": [
+    "djent",
+    "progressive_metal"
+   ],
+   "tags": [
+    "polyrhythmic",
+    "tight",
+    "low"
+   ],
+   "parents": [
+    "tpl.genre.progressive_djent"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (polyrhythmisch, extrem straff, sehr tief); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 94,
+     "bass": 48
+    }
+   }
+  },
+  {
+   "id": "artist.gojira",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Gojira – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gojira",
+   "genres": [
+    "progressive_metal",
+    "groove_metal"
+   ],
+   "tags": [
+    "heavy",
+    "atmospheric",
+    "rhythmic"
+   ],
+   "parents": [
+    "tpl.genre.progressive_djent"
+   ],
+   "tuningHints": [
+    "dropD",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (schwer, rhythmisch, atmosphärisch); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.tool",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tool – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tool",
+   "genres": [
+    "progressive_metal",
+    "alternative_metal"
+   ],
+   "tags": [
+    "dark",
+    "progressive",
+    "bass-forward"
+   ],
+   "parents": [
+    "tpl.genre.progressive_djent"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (dunkel, progressiv, basslastig); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 70,
+     "bass": 54,
+     "mids": 50
+    }
+   }
+  },
+  {
+   "id": "song.bullet_for_my_valentine.scream_aim_fire",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Scream Aim Fire",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bullet for My Valentine",
+   "artistAliases": [
+    "BFMV",
+    "Bullet"
+   ],
+   "song": "Scream Aim Fire",
+   "genres": [
+    "metalcore"
+   ],
+   "parents": [
+    "artist.bfmv"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropD"
+   ],
+   "tags": [
+    "modern",
+    "tight"
+   ],
+   "notes": "Stilorientierte Beschreibung (modern, straff, aggressiv); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 88
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 70,
+       "sustain": 72,
+       "delay": 16,
+       "reverb": 14
+      },
+      "kinds": {
+       "delay": "digital"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "song.cky.96_quite_bitter_beings",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "96 Quite Bitter Beings",
+   "source": {
+    "classification": "CURATED",
+    "references": [
+     {
+      "title": "\"The story behind CKY's 96 Quite Bitter Beings\" (Louder Sound)",
+      "url": "https://www.loudersound.com/features/the-story-behind-cky-96-quite-bitter-beings",
+      "note": "Music-journalism feature with direct Deron Miller quotes: the riff is the song's entire hook (\"not well crafted, with no real chorus beyond the guitar riff\"), and the band's stated influences at the time spanned death metal, blues, punk and grunge. Used for SOUND CHARACTER (riff-centric, unpolished, eclectic-heavy), not as a gear/equipment source."
+     },
+     {
+      "title": "96 Quite Bitter Beings -- genre classification (Wikipedia / AOTY aggregation)",
+      "url": "https://en.wikipedia.org/wiki/96_Quite_Bitter_Beings",
+      "note": "Independently classifies the song as stoner rock and alternative metal. Used to justify a light, explicitly modest stoner-rock character coloring (fuzziness/warmth), interpolated between the existing tpl.genre.hard_rock (no coloring) and tpl.genre.doom_stoner (60/60/60) templates -- not a precise measurement, a curated approximation of a real dual-genre classification."
+     },
+     {
+      "title": "Deron Miller gear list (Equipboard, community-sourced)",
+      "url": "https://equipboard.com/pros/deron-miller",
+      "note": "Crowd-sourced gear list, not a primary interview; corroborates a Marshall JCM900/JCM2000-family British high-gain amp lineage (already reflected below). Also lists a Boss OC-2 octave pedal as the band's \"main sub-octave sound... on early albums\" -- era-wide, not confirmed for this specific recording."
+     },
+     {
+      "title": "CKY Rises with 'The Phoenix' (Glide Magazine)",
+      "url": "https://glidemagazine.com/187038/cky-the-phoenix-review/",
+      "note": "Editorial secondary source: describes Deron Miller's signature CKY guitar tone as octave-pedal-driven and separately connects the classic octave sound with Volume One-era gear. Strong era/sound-identity support, not song-session documentation."
+     },
+     {
+      "title": "Octave effect -- CKY example (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Octave_effect",
+      "note": "Community-edited secondary corroboration naming 96 Quite Bitter Beings specifically as CKY's notable octave-effect example. Used only as corroboration, not promoted to RESEARCHED fact."
+     },
+     {
+      "title": "Real hardware preset export \"CKY 96 STUD\" (device backup, local file ckySound.prst)",
+      "note": "CONFIRMED, the strongest evidence for this entry: a real, hand-programmed preset on the actual test hardware (the same preset used as the raw-byte BEFORE fixture across the whole native transfer test suite). It confirms FX-slot Octaver ON, NR Gate 2 ON, RVB Room ON, DLY/MOD OFF -- all already reflected below. It ALSO reveals two things the entry does NOT and cannot currently reflect: (1) EQ is genuinely ON with specific values in this preset, while WyrmTone's recipe builder hardcodes EQ off for every song (a real, now hardware-confirmed domain-model gap, not CKY-specific -- not fixed here, flagged for a dedicated follow-up); (2) the AMP block uses a 'Clone 2' amp-profile slot, i.e. a user-loaded captured amp profile, not one of the fixed catalog models WyrmTone's matcher can choose from -- so this preset cannot validate or invalidate any specific built-in AMP model (Brit 800 or otherwise), only the pedal/effect chain around it. The preselected (but disabled) CAB model in the preset is a 1x12, differing from the legacy profile's '4x12' assumption -- treated as weak/ambiguous evidence (a disabled slot's preselection is not necessarily a deliberate choice) and NOT applied to the cabinet field."
+     }
+    ]
+   },
+   "confidence": "MEDIUM",
+   "artist": "CKY",
+   "song": "96 Quite Bitter Beings",
+   "songAliases": [
+    "96 QBB"
+   ],
+   "genres": [
+    "alternative_metal",
+    "stoner_metal"
+   ],
+   "tags": [
+    "riff-driven"
+   ],
+   "parents": [
+    "artist.cky"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "legacyProfileId": "cky-96-qbb",
+   "goldReference": true,
+   "notes": "GOLD REFERENCE (hand-curated, research-backed): Evidence ledger -- CONFIRMED (real hardware preset export \"CKY 96 STUD\", the same preset used as the raw-byte BEFORE fixture across the native transfer test suite): FX-slot Octaver ON, NR Gate 2 ON, RVB Room ON, DLY/MOD OFF -- all reflected below; also reveals EQ genuinely ON (a hardware-confirmed but currently unexpressable domain-model gap, not fixed here) and an AMP built from a user-loaded 'Clone' profile slot, which cannot validate or invalidate any specific built-in AMP model. RESEARCHED (Louder Sound, direct Miller quotes): riff-centric, unpolished songwriting, eclectic death-metal/blues/punk/grunge influence. RESEARCHED (Wikipedia/AOTY): dual genre stoner rock + alternative metal. CURATED (prior WyrmTone profile cky-96-qbb, migrated): gain/tightness/bass/irBrightness core values, britischer High-Gain-Stil -- CONFIRMED by the research above, left unchanged. OCTAVE INTENT (now CONFIRMED by the real preset, previously CURATED/era+community from Glide/Equipboard/Wikipedia's octave-effect article naming this exact song): kinds.drive=octave is the only source of the Octaver decision; it does not depend on tightness or any other threshold. CABINET: the real preset's disabled CAB slot shows a 1x12, differing from the legacy '4x12' assumption; treated as weak/ambiguous (a disabled slot's preselection is not necessarily deliberate) and deliberately NOT applied -- cabinet stays 4x12. CHARACTER: fuzziness/warmth are interpreted by ToneRecipeBuilder with 50 as the neutral midpoint (same scale as ToneVault's existing warmer/colder and dirtier/cleaner modifiers) -- 58/55 encode a LIGHT amount of stoner-rock warmth/fuzz (above neutral, well below doom_stoner's 60 template value), not a precise measurement; this shapes amp-intent dimensions only (gain/saturation/tightness/treble/presence/lowMids/irBrightness) and never itself implies a fuzz pedal or any other explicit effect. UNKNOWN: original studio equipment/settings for this exact 1999 recording -- never claimed. Stilistische Annäherung, keine Aussage über das Originalequipment dieser konkreten Aufnahme.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 68,
+     "bass": 58,
+     "irBrightness": 55
+    },
+    "character": {
+     "fuzziness": 58,
+     "warmth": 55
+    },
+    "kinds": {
+     "drive": "octave"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "namTags": [
+     "marshall",
+     "jcm",
+     "mid",
+     "alternative"
+    ],
+    "cabinet": "4x12"
+   }
+  }
+ ]
+}

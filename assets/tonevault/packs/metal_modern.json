@@ -1,0 +1,1188 @@
+{
+ "pack": {
+  "id": "metal_modern",
+  "name": "Metal: Metalcore, Deathcore, Modern",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Metalcore-, Deathcore- und moderne Metal-Acts.",
+  "entryCount": 28,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.as_i_lay_dying",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "As I Lay Dying – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "As I Lay Dying",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "melodic_metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "tight",
+    "clear"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 88
+    }
+   }
+  },
+  {
+   "id": "artist.parkway_drive",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Parkway Drive – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Parkway Drive",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "melodic_metalcore"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "aggressive",
+    "tight",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 86,
+     "bass": 48
+    }
+   }
+  },
+  {
+   "id": "artist.architects",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Architects – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Architects",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "djent"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "reverb": 14
+    }
+   }
+  },
+  {
+   "id": "artist.bring_me_the_horizon",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bring Me the Horizon – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bring Me the Horizon",
+   "artistAliases": [
+    "BMTH"
+   ],
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "deathcore",
+    "alternative_rock"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "dynamic",
+    "polished",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 82,
+     "reverb": 12
+    }
+   }
+  },
+  {
+   "id": "artist.august_burns_red",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "August Burns Red – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "August Burns Red",
+   "genres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "technical",
+    "bright-leads",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 86,
+     "upperMids": 66
+    }
+   }
+  },
+  {
+   "id": "artist.unearth",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Unearth – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Unearth",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "melodic_metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "thrashy",
+    "tight",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropD",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 86
+    }
+   }
+  },
+  {
+   "id": "artist.shadows_fall",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Shadows Fall – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Shadows Fall",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "thrashy",
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.atreyu",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Atreyu – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Atreyu",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "emotional",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66
+    }
+   }
+  },
+  {
+   "id": "artist.all_that_remains",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "All That Remains – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "All That Remains",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "melodic_death_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "polished",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.underoath",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Underoath – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Underoath",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "wide",
+    "emotional"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 78,
+     "reverb": 14
+    }
+   }
+  },
+  {
+   "id": "artist.asking_alexandria",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Asking Alexandria – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Asking Alexandria",
+   "genres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "polished",
+    "heavy",
+    "modern"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.miss_may_i",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Miss May I – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Miss May I",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "deathcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "aggressive",
+    "tight",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 88
+    }
+   }
+  },
+  {
+   "id": "artist.while_she_sleeps",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "While She Sleeps – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "While She Sleeps",
+   "genres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "aggressive",
+    "anthemic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 86
+    }
+   }
+  },
+  {
+   "id": "artist.bury_tomorrow",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bury Tomorrow – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bury Tomorrow",
+   "genres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "anthemic",
+    "tight",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.caliban",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Caliban – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Caliban",
+   "genres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "german-metalcore",
+    "tight",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.heaven_shall_burn",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Heaven Shall Burn – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Heaven Shall Burn",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "melodic_death_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "aggressive",
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.melodic_metalcore"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "tightness": 86
+    }
+   }
+  },
+  {
+   "id": "artist.whitechapel",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Whitechapel – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Whitechapel",
+   "genres": [
+    "deathcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "brutal",
+    "downtuned",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.suicide_silence",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Suicide Silence – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Suicide Silence",
+   "genres": [
+    "deathcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "brutal",
+    "downtuned",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 90,
+     "bass": 54
+    }
+   }
+  },
+  {
+   "id": "artist.lorna_shore",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lorna Shore – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lorna Shore",
+   "genres": [
+    "deathcore"
+   ],
+   "subgenres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "2010s",
+    "2020s"
+   ],
+   "tags": [
+    "extreme",
+    "dramatic",
+    "polished"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropA",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "reverb": 10
+    }
+   }
+  },
+  {
+   "id": "artist.carnifex",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Carnifex – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Carnifex",
+   "genres": [
+    "deathcore"
+   ],
+   "subgenres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "dramatic"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 90
+    }
+   }
+  },
+  {
+   "id": "artist.thy_art_is_murder",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Thy Art Is Murder – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Thy Art Is Murder",
+   "genres": [
+    "deathcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "brutal",
+    "heavy",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.job_for_a_cowboy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Job for a Cowboy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Job for a Cowboy",
+   "genres": [
+    "deathcore"
+   ],
+   "subgenres": [
+    "death_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "brutal",
+    "dense",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 90
+    }
+   }
+  },
+  {
+   "id": "artist.despised_icon",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Despised Icon – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Despised Icon",
+   "genres": [
+    "deathcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "brutal",
+    "fast",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "tightness": 90
+    }
+   }
+  },
+  {
+   "id": "artist.chelsea_grin",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Chelsea Grin – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Chelsea Grin",
+   "genres": [
+    "deathcore"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "brutal",
+    "heavy",
+    "downtuned"
+   ],
+   "parents": [
+    "tpl.style.deathcore"
+   ],
+   "tuningHints": [
+    "dropA"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 90
+    }
+   }
+  },
+  {
+   "id": "artist.spiritbox",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Spiritbox – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Spiritbox",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "djent",
+    "alternative_metal"
+   ],
+   "eras": [
+    "2010s",
+    "2020s"
+   ],
+   "tags": [
+    "dark",
+    "dynamic",
+    "atmospheric",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 84
+    },
+    "character": {
+     "darkness": 60
+    }
+   }
+  },
+  {
+   "id": "artist.bad_omens",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bad Omens – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bad Omens",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "alternative_metal"
+   ],
+   "eras": [
+    "2010s",
+    "2020s"
+   ],
+   "tags": [
+    "dark",
+    "polished",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 78
+    },
+    "character": {
+     "darkness": 58
+    }
+   }
+  },
+  {
+   "id": "artist.sleep_token",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sleep Token – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sleep Token",
+   "genres": [
+    "alternative_metal"
+   ],
+   "subgenres": [
+    "djent"
+   ],
+   "eras": [
+    "2010s",
+    "2020s"
+   ],
+   "tags": [
+    "dynamic",
+    "atmospheric",
+    "polished"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 72,
+     "reverb": 22,
+     "delay": 16
+    }
+   }
+  },
+  {
+   "id": "artist.motionless_in_white",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Motionless in White – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Motionless in White",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "industrial_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "polished"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dropB",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 84
+    }
+   }
+  }
+ ]
+}

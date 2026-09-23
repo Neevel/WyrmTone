@@ -1,0 +1,564 @@
+{
+ "pack": {
+  "id": "electronic_reimagined",
+  "name": "Electronic Reimagined",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Gitarreninterpretationen elektronischer Stile und WyrmTone-Originale.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "reimagined.darude_sandstorm",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Sandstorm – Guitar Reimagined",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Darude",
+   "song": "Sandstorm",
+   "songAliases": [
+    "Sandstorm Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "synth_like_guitar"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "synth-like",
+    "trance",
+    "octave-lead"
+   ],
+   "roles": [
+    "LEAD",
+    "SPECIAL"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 55,
+     "sustain": 80,
+     "delay": 30,
+     "reverb": 25,
+     "modulation": 20
+    },
+    "character": {
+     "width": 65
+    },
+    "kinds": {
+     "drive": "octave",
+     "modulation": "chorus"
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "sustain": 84
+      }
+     }
+    },
+    {
+     "kind": "SPECIAL",
+     "tone": {
+      "dimensions": {
+       "gain": 38,
+       "delay": 40
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "reimagined.robert_miles_children",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Children – Guitar Reimagined",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Robert Miles",
+   "song": "Children",
+   "songAliases": [
+    "Children Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.style.ambient_wash"
+   ],
+   "tags": [
+    "dreamy",
+    "clean-arpeggio",
+    "atmospheric"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "sustain": 76,
+     "delay": 48,
+     "reverb": 58,
+     "modulation": 24
+    },
+    "character": {
+     "width": 80
+    },
+    "kinds": {
+     "delay": "analogWarm",
+     "reverb": "hall"
+    }
+   },
+   "variants": [
+    {
+     "kind": "CLEAN"
+    },
+    {
+     "kind": "AMBIENT",
+     "tone": {
+      "dimensions": {
+       "reverb": 66,
+       "delay": 52
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "reimagined.alice_deejay_better_off_alone",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Better Off Alone – Guitar Reimagined",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Alice Deejay",
+   "song": "Better Off Alone",
+   "songAliases": [
+    "Better Off Alone Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "synth_like_guitar"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "synth-like",
+    "trance",
+    "bright-lead"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "sustain": 80,
+     "delay": 30,
+     "reverb": 28,
+     "treble": 64
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD"
+    }
+   ]
+  },
+  {
+   "id": "reimagined.faithless_insomnia",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Insomnia – Guitar Reimagined",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Faithless",
+   "song": "Insomnia",
+   "songAliases": [
+    "Insomnia Guitar"
+   ],
+   "genres": [
+    "techno_inspired",
+    "dnb_inspired"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "dark",
+    "rhythmic",
+    "pulsing"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "tightness": 70,
+     "sustain": 60,
+     "delay": 28,
+     "reverb": 22,
+     "treble": 52
+    },
+    "character": {
+     "darkness": 65
+    },
+    "kinds": {
+     "drive": "distortion",
+     "delay": "digital"
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD"
+    },
+    {
+     "kind": "RHYTHM",
+     "tone": {
+      "dimensions": {
+       "tightness": 76,
+       "sustain": 40
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "reimagined.zombie_nation_kernkraft_400",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Kernkraft 400 – Guitar Reimagined",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Zombie Nation",
+   "song": "Kernkraft 400",
+   "songAliases": [
+    "Kernkraft 400 Guitar"
+   ],
+   "genres": [
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "riff",
+    "techno",
+    "repetitive"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 55,
+     "tightness": 75,
+     "sustain": 62,
+     "delay": 20,
+     "reverb": 16
+    },
+    "kinds": {
+     "drive": "distortion"
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD"
+    },
+    {
+     "kind": "RHYTHM",
+     "tone": {
+      "dimensions": {
+       "sustain": 42
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "original.neon_outrun_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Neon Outrun Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synthwave",
+    "retrowave"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "neon",
+    "outrun",
+    "lead"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Neon Outrun"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "sustain": 86,
+     "delay": 36,
+     "reverb": 40,
+     "modulation": 30
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD"
+    }
+   ]
+  },
+  {
+   "id": "original.vhs_chorus_clean",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "VHS Chorus Clean",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "retrowave",
+    "synthwave",
+    "clean"
+   ],
+   "parents": [
+    "tpl.genre.synthwave"
+   ],
+   "tags": [
+    "vhs",
+    "chorus",
+    "clean",
+    "retro"
+   ],
+   "roles": [
+    "CLEAN"
+   ],
+   "searchAliases": [
+    "VHS Clean"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "saturation": 16,
+     "modulation": 48,
+     "reverb": 34
+    },
+    "character": {
+     "vintage": 75,
+     "loFi": 40
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   },
+   "variants": [
+    {
+     "kind": "CLEAN"
+    }
+   ]
+  },
+  {
+   "id": "original.cyberpunk_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Cyberpunk Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "cyberpunk",
+    "synth_like_guitar"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "cyberpunk",
+    "dark",
+    "lead"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Cyberpunk Lead Guitar"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 62,
+     "treble": 52,
+     "presence": 54,
+     "delay": 38,
+     "reverb": 32
+    },
+    "character": {
+     "darkness": 70
+    },
+    "kinds": {
+     "drive": "distortion",
+     "delay": "digital"
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD"
+    }
+   ]
+  },
+  {
+   "id": "original.darkwave_ambient",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Darkwave Ambient",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "darkwave",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.style.ambient_wash"
+   ],
+   "tags": [
+    "dark",
+    "ambient",
+    "cold"
+   ],
+   "roles": [
+    "AMBIENT",
+    "CLEAN"
+   ],
+   "searchAliases": [
+    "Darkwave"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "treble": 44,
+     "presence": 40,
+     "reverb": 68,
+     "delay": 46,
+     "modulation": 28
+    },
+    "character": {
+     "darkness": 75,
+     "width": 85
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "reverb": "hall"
+    }
+   },
+   "variants": [
+    {
+     "kind": "AMBIENT"
+    }
+   ]
+  },
+  {
+   "id": "original.synth_bass_guitar",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Synth Bass Guitar",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synth_like_guitar"
+   ],
+   "parents": [
+    "tpl.genre.synthwave"
+   ],
+   "tags": [
+    "bass",
+    "synth-like",
+    "low"
+   ],
+   "roles": [
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Synth Bass"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original.",
+   "tone": {
+    "dimensions": {
+     "gain": 28,
+     "bass": 68,
+     "lowMids": 60,
+     "treble": 38,
+     "presence": 34,
+     "space": 20,
+     "delay": 10,
+     "reverb": 14
+    },
+    "character": {
+     "body": 80
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   },
+   "variants": [
+    {
+     "kind": "SPECIAL"
+    }
+   ]
+  }
+ ]
+}

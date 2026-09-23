@@ -1,0 +1,782 @@
+{
+ "pack": {
+  "id": "metal_symphonic_folk_gothic",
+  "name": "Metal: Symphonic, Gothic, Folk, Viking",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Symphonic-, Gothic-, Folk- und Viking-Metal-Acts.",
+  "entryCount": 18,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.nightwish",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nightwish – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nightwish",
+   "genres": [
+    "symphonic_metal"
+   ],
+   "subgenres": [
+    "power_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "epic",
+    "layered",
+    "polished"
+   ],
+   "parents": [
+    "tpl.genre.symphonic_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 76
+    }
+   }
+  },
+  {
+   "id": "artist.within_temptation",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Within Temptation – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Within Temptation",
+   "genres": [
+    "symphonic_metal"
+   ],
+   "subgenres": [
+    "gothic_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "polished",
+    "smooth",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.symphonic_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "modulation": 12,
+     "reverb": 20
+    }
+   }
+  },
+  {
+   "id": "artist.epica",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Epica – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Epica",
+   "genres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dense",
+    "precise",
+    "orchestral"
+   ],
+   "parents": [
+    "tpl.genre.symphonic_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 80
+    }
+   }
+  },
+  {
+   "id": "artist.kamelot",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kamelot – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kamelot",
+   "genres": [
+    "symphonic_metal"
+   ],
+   "subgenres": [
+    "power_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dramatic",
+    "polished",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.symphonic_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 72,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "artist.delain",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Delain – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Delain",
+   "genres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "polished",
+    "smooth",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.symphonic_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 72
+    }
+   }
+  },
+  {
+   "id": "artist.therion",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Therion – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Therion",
+   "genres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "orchestral",
+    "dramatic",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.symphonic_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 70
+    }
+   }
+  },
+  {
+   "id": "artist.type_o_negative",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Type O Negative – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Type O Negative",
+   "genres": [
+    "gothic_metal"
+   ],
+   "subgenres": [
+    "doom_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "fuzzy-warm"
+   ],
+   "parents": [
+    "tpl.genre.gothic_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 64,
+     "treble": 42
+    },
+    "character": {
+     "darkness": 78
+    }
+   }
+  },
+  {
+   "id": "artist.paradise_lost",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Paradise Lost – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Paradise Lost",
+   "genres": [
+    "gothic_metal"
+   ],
+   "subgenres": [
+    "doom_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "melancholic",
+    "dark",
+    "chorused"
+   ],
+   "parents": [
+    "tpl.genre.gothic_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 52,
+     "sustain": 72
+    }
+   }
+  },
+  {
+   "id": "artist.my_dying_bride",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "My Dying Bride – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "My Dying Bride",
+   "genres": [
+    "doom_metal"
+   ],
+   "subgenres": [
+    "gothic_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "mournful",
+    "slow",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 36,
+     "sustain": 78,
+     "reverb": 22
+    }
+   }
+  },
+  {
+   "id": "artist.anathema",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Anathema – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Anathema",
+   "genres": [
+    "gothic_metal"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "emotional",
+    "dynamic",
+    "atmospheric"
+   ],
+   "parents": [
+    "tpl.genre.gothic_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "reverb": 30,
+     "modulation": 26
+    }
+   }
+  },
+  {
+   "id": "artist.lacuna_coil",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lacuna Coil – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lacuna Coil",
+   "genres": [
+    "gothic_metal"
+   ],
+   "subgenres": [
+    "alternative_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "modern",
+    "dark",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.gothic_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 70,
+     "bass": 54
+    }
+   }
+  },
+  {
+   "id": "artist.moonspell",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Moonspell – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Moonspell",
+   "genres": [
+    "gothic_metal"
+   ],
+   "subgenres": [
+    "black_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dark",
+    "dramatic",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.gothic_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 64,
+     "reverb": 24
+    }
+   }
+  },
+  {
+   "id": "artist.ensiferum",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ensiferum – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ensiferum",
+   "genres": [
+    "folk_metal"
+   ],
+   "subgenres": [
+    "melodic_death_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "epic",
+    "fast",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.folk_viking_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 78
+    }
+   }
+  },
+  {
+   "id": "artist.finntroll",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Finntroll – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Finntroll",
+   "genres": [
+    "folk_metal"
+   ],
+   "subgenres": [
+    "black_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bouncy",
+    "dark",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.folk_viking_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 74
+    }
+   }
+  },
+  {
+   "id": "artist.eluveitie",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Eluveitie – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eluveitie",
+   "genres": [
+    "folk_metal"
+   ],
+   "subgenres": [
+    "melodic_death_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "tight",
+    "modern"
+   ],
+   "parents": [
+    "tpl.genre.folk_viking_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 80
+    },
+    "character": {
+     "clarity": 72
+    }
+   }
+  },
+  {
+   "id": "artist.korpiklaani",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Korpiklaani – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Korpiklaani",
+   "genres": [
+    "folk_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bouncy",
+    "fun",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.folk_viking_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.turisas",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Turisas – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Turisas",
+   "genres": [
+    "folk_metal"
+   ],
+   "subgenres": [
+    "symphonic_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "epic",
+    "cinematic",
+    "polished"
+   ],
+   "parents": [
+    "tpl.genre.folk_viking_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 72,
+     "reverb": 18
+    }
+   }
+  },
+  {
+   "id": "artist.tyr",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Týr – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Týr",
+   "genres": [
+    "viking_metal"
+   ],
+   "subgenres": [
+    "power_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "driving",
+    "epic"
+   ],
+   "parents": [
+    "tpl.genre.folk_viking_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 72,
+     "sustain": 70
+    }
+   }
+  }
+ ]
+}

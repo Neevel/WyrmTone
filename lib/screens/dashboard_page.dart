@@ -4,6 +4,8 @@ import '../controllers/recommendation_controller.dart';
 import '../controllers/usb_controller.dart';
 import '../controllers/tone3000_controller.dart';
 import '../models/guitar_profile.dart';
+import '../sounds/sound_labels.dart';
+import '../sounds/sound_session.dart';
 import '../ui/wyrm_design.dart';
 
 class DashboardPage extends StatelessWidget {
@@ -15,18 +17,25 @@ class DashboardPage extends StatelessWidget {
     required this.openProfile,
     required this.openLibrary,
     required this.createSound,
+    this.sounds,
+    this.openSound,
     super.key,
   });
   final UsbController usb;
   final RecommendationController recommendations;
   final Tone3000Controller? library;
   final VoidCallback openDevice, openProfile, openLibrary, createSound;
+
+  /// Sound flow state and the action that opens the current sound ("Dein Sound").
+  final SoundSession? sounds;
+  final void Function(BuildContext context)? openSound;
   @override
   Widget build(BuildContext context) => AnimatedBuilder(
-    animation: Listenable.merge([usb, recommendations, ?library]),
+    animation: Listenable.merge([usb, recommendations, ?library, ?sounds]),
     builder: (context, _) {
       final guitar = recommendations.selectedProfile;
-      final draft = recommendations.offlineDraft;
+      final current = sounds?.current;
+      final currentDefinition = current == null ? null : sounds!.definitionOf(current);
       final connected = usb.connection.isOpen || usb.midiConnection.isOpen;
       final rigCards = [
         WyrmCard(
@@ -88,6 +97,8 @@ class DashboardPage extends StatelessWidget {
       ];
       return WyrmScaffold(
         title: 'WyrmTone',
+        background: true,
+        backgroundIntensity: WyrmBackgroundIntensity.strong,
         body: ListView(
           key: const PageStorageKey('dashboard'),
           padding: WyrmTokens.pagePadding,
@@ -113,7 +124,7 @@ class DashboardPage extends StatelessWidget {
               key: const Key('dashboard-create'),
               onPressed: createSound,
               icon: const Icon(Icons.add),
-              label: const Text('Neuen Sound erstellen'),
+              label: const Text('Sound finden'),
             ),
             const SizedBox(height: 16),
             LayoutBuilder(
@@ -132,35 +143,28 @@ class DashboardPage extends StatelessWidget {
                     ),
             ),
             WyrmSection(
-              title: 'Letzter Sound',
-              child: draft == null
-                  ? const Text(
-                      'Noch kein Entwurf. Wähle oben „Neuen Sound erstellen“.',
-                    )
+              title: 'Dein Sound',
+              child: currentDefinition == null || current == null
+                  ? const Text('Noch kein Sound. Tippe oben auf „Sound finden“.')
                   : WyrmCard(
+                      key: const Key('dashboard-current-sound'),
                       accent: true,
+                      onTap: openSound == null ? null : () => openSound!(context),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            draft.profile.displayName,
+                            entryDisplayTitle(currentDefinition.entry),
                             style: Theme.of(context).textTheme.titleLarge,
                           ),
                           Text(
-                            '${roleLabel(draft.role)} · ${draft.tuning.label}',
+                            [
+                              if (current.variant != null) variantLabel(current.variant!),
+                              current.tuning.label,
+                            ].join(' · '),
                           ),
-                          Text(
-                            draft.selectedNamId != null
-                                ? 'NAM-Klangquelle vorgemerkt'
-                                : 'Amp: ${draft.blocks.firstWhere((b) => b.slot == 'AMP').model}',
-                          ),
-                          const WyrmStatusBadge(
-                            'Lokaler Entwurf · nicht übertragen',
-                          ),
-                          TextButton(
-                            onPressed: createSound,
-                            child: const Text('Entwurf öffnen'),
-                          ),
+                          const SizedBox(height: WyrmTokens.space8),
+                          const WyrmStatusBadge('Vorbereitet · nicht übertragen'),
                         ],
                       ),
                     ),

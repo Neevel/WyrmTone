@@ -1,0 +1,218 @@
+{
+ "schemaVersion": 1,
+ "roles": {
+  "RHYTHM": [
+   "rhythm",
+   "rhythmus",
+   "rhythm guitar",
+   "rhythmusgitarre",
+   "riff",
+   "riffs"
+  ],
+  "LEAD": [
+   "lead",
+   "lead guitar",
+   "leadgitarre"
+  ],
+  "SOLO": [
+   "solo",
+   "soli"
+  ],
+  "CLEAN": [
+   "clean",
+   "sauber"
+  ],
+  "CRUNCH": [
+   "crunch",
+   "angezerrt"
+  ],
+  "AMBIENT": [
+   "ambient",
+   "atmospheric",
+   "atmospharisch"
+  ],
+  "SPECIAL": [
+   "special",
+   "spezial"
+  ]
+ },
+ "modifiers": {
+  "MORE_GAIN": [
+   "more gain",
+   "mehr gain",
+   "mehr zerre",
+   "more distortion",
+   "mehr verzerrung"
+  ],
+  "LESS_GAIN": [
+   "less gain",
+   "weniger gain",
+   "weniger zerre",
+   "less distortion",
+   "weniger verzerrung"
+  ],
+  "MORE_MIDS": [
+   "more mids",
+   "mehr mids",
+   "mehr mitten",
+   "more midrange"
+  ],
+  "LESS_MIDS": [
+   "less mids",
+   "weniger mids",
+   "weniger mitten"
+  ],
+  "MORE_BASS": [
+   "more bass",
+   "mehr bass",
+   "mehr tiefen"
+  ],
+  "LESS_BASS": [
+   "less bass",
+   "weniger bass",
+   "weniger tiefen"
+  ],
+  "BRIGHTER": [
+   "brighter",
+   "heller"
+  ],
+  "DARKER": [
+   "darker",
+   "dunkler"
+  ],
+  "TIGHTER": [
+   "tighter",
+   "straffer",
+   "more tight"
+  ],
+  "LOOSER": [
+   "looser",
+   "lockerer",
+   "less tight"
+  ],
+  "MORE_REVERB": [
+   "more reverb",
+   "mehr reverb",
+   "mehr hall",
+   "more space"
+  ],
+  "LESS_REVERB": [
+   "less reverb",
+   "weniger reverb",
+   "weniger hall"
+  ],
+  "MORE_DELAY": [
+   "more delay",
+   "mehr delay",
+   "mehr echo"
+  ],
+  "LESS_DELAY": [
+   "less delay",
+   "weniger delay",
+   "weniger echo"
+  ],
+  "MORE_AGGRESSIVE": [
+   "more aggressive",
+   "aggressiver",
+   "mehr aggressiv"
+  ],
+  "MORE_VINTAGE": [
+   "more vintage",
+   "vintager",
+   "mehr vintage",
+   "more retro"
+  ],
+  "MORE_MODERN": [
+   "more modern",
+   "moderner",
+   "mehr modern"
+  ],
+  "MORE_CLARITY": [
+   "more clarity",
+   "mehr klarheit",
+   "klarer"
+  ],
+  "MORE_BODY": [
+   "more body",
+   "mehr body",
+   "mehr druck",
+   "druckvoller",
+   "fetter"
+  ]
+ },
+ "descriptors": {
+  "dark": [
+   "dark",
+   "dunkel"
+  ],
+  "bright": [
+   "bright",
+   "hell"
+  ],
+  "warm": [
+   "warm"
+  ],
+  "aggressive": [
+   "aggressive",
+   "aggressiv"
+  ],
+  "modern": [
+   "modern"
+  ],
+  "vintage": [
+   "vintage"
+  ],
+  "tight": [
+   "tight",
+   "straff"
+  ],
+  "heavy": [
+   "heavy",
+   "druckvoll",
+   "fett"
+  ]
+ },
+ "stopwords": [
+  "sound",
+  "sounds",
+  "ton",
+  "klang",
+  "typical",
+  "typischer",
+  "typische",
+  "typisches",
+  "typisch",
+  "the",
+  "der",
+  "die",
+  "das",
+  "ein",
+  "eine",
+  "von",
+  "mit",
+  "ohne",
+  "style",
+  "stil",
+  "and",
+  "und",
+  "aber",
+  "but",
+  "im",
+  "in",
+  "fuer",
+  "for",
+  "fur",
+  "auf",
+  "on",
+  "gitarre",
+  "guitar",
+  "tone",
+  "preset",
+  "of",
+  "a",
+  "an",
+  "to",
+  "zu",
+  "song"
+ ]
+}

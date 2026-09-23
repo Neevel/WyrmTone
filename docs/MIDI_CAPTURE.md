@@ -57,6 +57,56 @@ Nativ erforderlich sind exakt ein angeschlossenes 84EF:0054-Gerät, direkte eind
 
 Abschlussprüfung am 12.09.2026: Formatierung durchgeführt, `flutter analyze` ohne Probleme, alle 120 Flutter-/Dart-Tests und alle 18 App-Kotlin-Tests erfolgreich. Debug-APK erfolgreich gebaut; Archivprüfung: 0 WAV-, NAM- oder ZIP-Dateien. Anzeigename WyrmTone, Paket-ID de.neevel.wyrmtone. APK: `D:\Develop\dnafx_bridge\build\app\outputs\flutter-apk\app-debug.apk`, 200312613 Byte / 191,03 MiB. Kein Commit, kein Push, keine Installation und kein neuer Hardware-Empfangstest durch diesen Task.
 
+## Experimenteller P01-Read-Einmaltest (15.09.2026)
+
+Dritter, separater compile-gated Einmaltest neben Gain-41 und P01-Auswahl:
+`--dart-define=ENABLE_MATRIBOX_P01_READ_PROBE=true`. Alle drei Freigaben
+sind gegenseitig ausschließend auf Gradle-Ebene (`android/app/build.gradle.kts`);
+ist mehr als eine gleichzeitig gesetzt, bleiben alle drei aus. Release-Builds
+haben alle drei fest auf `false`.
+
+Der Test sendet einmalig und ausschließlich den in
+[MATRIBOX_OFFLINE_ANALYSIS.md](MATRIBOX_OFFLINE_ANALYSIS.md#minimaler-read-request-kandidat)
+dokumentierten, in zwei unabhängigen Sessions bytegleichen Connect-Sync-
+Trigger für User-Bank Slot 0 (`F0 21 25 7F 51 4D 45 32 12 13 01 00 02 00 00
+01 F7`), fest in `VerifiedPresetP01ReadRequestReference` (Kotlin) einprogrammiert.
+Weder Bank noch Slot noch Rohbytes sind von Flutter aus veränderbar. Danach
+öffnet der native Probe zusätzlich den Matribox-Output-Port (nur Empfang,
+kein Send-Aufruf) und sammelt für ein festes Zeitfenster von 3 Sekunden
+eintreffende Rohbytes; maximal ein Sendeversuch pro Geräteverbindung, kein
+Retry. Bei Timeout wird nichts erneut gesendet.
+
+Die empfangenen Rohbytes werden ausschließlich in Dart ausgewertet, mit dem
+bereits vorhandenen `MidiParser` (SysEx-Reassembly) und dem gemeinsamen
+Decoder aus `lib/presets/p01_readback_decoder.dart` (auch vom Offline-CLI-
+Tool `tool/matribox_p01_readback_decoder.dart` genutzt). `lib/midi/p01_read_probe_evaluator.dart`
+liefert eines von fünf Ergebnissen: `READBACK_CONFIRMED` (Presetname und alle
+sechs Sol-100-OD-AMP-Marker stimmen exakt), `READBACK_RECEIVED_BUT_MISMATCH`
+(Name passt, mindestens ein Wert weicht ab — meldet die tatsächlich
+dekodierten Werte, behauptet nicht automatisch einen falschen Request),
+`READBACK_INCOMPLETE` (Bytes kamen an, aber kein vollständiger namensgleicher
+Zyklus), `READBACK_TIMEOUT` (keine Bytes) oder `READBACK_PARSE_ERROR`
+(unvollständige/fehlerhafte SysEx-Framing).
+
+UI: `lib/screens/verified_p01_read_probe_panel.dart`, bewusst eigenständig
+und nicht in `VerifiedMatriboxProbePanel` integriert, damit kein
+gemeinsamer, potenziell frei missbrauchbarer SysEx-Helfer entsteht. Checkbox
+und Bestätigungsdialog wie bei den bestehenden Probes; nach einem
+Sendeversuch für die laufende Verbindung gesperrt.
+
+Der projekteigene Sicherheitstest `test/usb_no_write_test.dart` wurde von
+zwei auf drei erlaubte Probe-Adapter verallgemeinert (`_ProbeDescriptor`-
+Liste) und um eine eigene Prüfung ergänzt, dass der Read-Probe keine
+Bank-/Slot-Parameter, keine Schleifen und keine P10/P11-Funktionen enthält.
+
+Build/Test-Stand vom 15.09.2026: `flutter analyze` ohne neue Probleme,
+gezielte Flutter-/Dart-Tests (Decoder, Evaluator, Panel, `home_page_test`,
+`usb_no_write_test`) sowie der volle App-Kotlin-Testlauf erfolgreich. Ein
+Debug-APK mit `ENABLE_MATRIBOX_P01_READ_PROBE=true` wurde gebaut und auf
+dem angeschlossenen Gerät installiert, aber in diesem Schritt nicht
+gestartet; der eigentliche Hardware-Einmaltest steht noch aus und wird
+separat dokumentiert, sobald er durchgeführt wurde.
+
 ## Neue und geänderte Dateien dieses Tasks
 
 Neue Dateien:

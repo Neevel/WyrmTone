@@ -16,13 +16,45 @@ abstract final class WyrmTokens {
   static const outline = Color(0xff41454e);
   static const success = Color(0xff80cbb4);
   static const danger = Color(0xffffb4ab);
+
+  // --- spacing / shape / size tokens (use these instead of ad-hoc numbers)
+  static const space4 = 4.0;
+  static const space8 = 8.0;
+  static const space12 = 12.0;
   static const gap = 16.0;
+  static const space16 = gap;
+  static const space24 = 24.0;
+  static const space32 = 32.0;
   static const radius = 18.0;
+  static const radiusSmall = 12.0;
+  static const radiusChip = 10.0;
+  static const iconSmall = 20.0;
+  static const iconMedium = 24.0;
+  static const minTouch = 48.0;
   static const maxWidth = 1040.0;
+
+  /// Reading width of content pages: cards do not stretch across a whole foldable display.
+  static const contentWidth = 720.0;
   static const pagePadding = EdgeInsets.all(gap);
-  static ThemeData theme() => ThemeData(
-    useMaterial3: true,
-    brightness: Brightness.dark,
+  static const cardPadding = EdgeInsets.all(gap);
+
+  static TextTheme _textTheme(TextTheme base) => base
+      .copyWith(
+        headlineSmall: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, height: 1.2),
+        titleLarge: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600, height: 1.25),
+        titleMedium: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, height: 1.3),
+        bodyLarge: const TextStyle(fontSize: 16, height: 1.4),
+        bodyMedium: const TextStyle(fontSize: 15, height: 1.4),
+        bodySmall: const TextStyle(fontSize: 13, height: 1.35, color: muted),
+        labelLarge: const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+        labelMedium: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+      )
+      .apply(bodyColor: text, displayColor: text);
+
+  static ThemeData theme() => _themeFrom(ThemeData(useMaterial3: true, brightness: Brightness.dark));
+
+  static ThemeData _themeFrom(ThemeData base) => base.copyWith(
+    textTheme: _textTheme(base.textTheme),
     scaffoldBackgroundColor: background,
     colorScheme: const ColorScheme.dark(
       primary: ember,
@@ -102,6 +134,54 @@ abstract final class WyrmTokens {
   );
 }
 
+/// How strongly the amp-wall photo shows through on a given screen (see [WyrmScaffold.background]).
+/// Not every screen should look equally dramatic: Start/Sounds are the "hero" screens, detail pages
+/// are quieter, and forms/settings/transfer need the calmest, most legible background.
+enum WyrmBackgroundIntensity { strong, medium, dim }
+
+/// The dark amp-wall photo behind the whole app: atmosphere, never content. `BoxFit.cover` with a
+/// top-center focus keeps the pedals/racks in frame on a phone; a gradient fades it into
+/// [WyrmTokens.background] so every card and every line of text stays fully readable, and no card
+/// needs its own extra scrim. No blur: a gradient overlay costs nothing extra per frame. Flutter's
+/// image cache decodes the (single) asset once and reuses it across every screen that shows it.
+class WyrmBackground extends StatelessWidget {
+  const WyrmBackground({this.intensity = WyrmBackgroundIntensity.medium, super.key});
+
+  static const assetPath = 'assets/images/wyrmtone_amp_wall.webp';
+
+  final WyrmBackgroundIntensity intensity;
+
+  static const _stops = {
+    WyrmBackgroundIntensity.strong: [Color(0x700d0f12), Color(0xb80d0f12), WyrmTokens.background],
+    WyrmBackgroundIntensity.medium: [Color(0x9d0d0f12), Color(0xd90d0f12), WyrmTokens.background],
+    WyrmBackgroundIntensity.dim: [Color(0xc80d0f12), Color(0xec0d0f12), WyrmTokens.background],
+  };
+
+  @override
+  Widget build(BuildContext context) => Stack(
+    fit: StackFit.expand,
+    children: [
+      const ColoredBox(color: WyrmTokens.background),
+      Image.asset(
+        assetPath,
+        fit: BoxFit.cover,
+        alignment: Alignment.topCenter,
+        errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
+      ),
+      DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: _stops[intensity]!,
+            stops: const [0.0, 0.45, 0.85],
+          ),
+        ),
+      ),
+    ],
+  );
+}
+
 class WyrmScaffold extends StatelessWidget {
   const WyrmScaffold({
     required this.title,
@@ -109,6 +189,8 @@ class WyrmScaffold extends StatelessWidget {
     this.actions,
     this.floatingActionButton,
     this.embedded = false,
+    this.background = false,
+    this.backgroundIntensity = WyrmBackgroundIntensity.medium,
     super.key,
   });
   final String title;
@@ -116,39 +198,58 @@ class WyrmScaffold extends StatelessWidget {
   final List<Widget>? actions;
   final Widget? floatingActionButton;
   final bool embedded;
+
+  /// True on every screen that is part of the normal journey (see docs): shows the amp-wall
+  /// atmosphere behind this page's own content, dosed by [backgroundIntensity].
+  final bool background;
+  final WyrmBackgroundIntensity backgroundIntensity;
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: embedded ? null : AppBar(title: Text(title), actions: actions),
-    body: SafeArea(
-      top: false,
-      minimum: const EdgeInsets.only(bottom: 8),
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: WyrmTokens.maxWidth),
-          child: body,
+    backgroundColor: background ? Colors.transparent : null,
+    appBar: embedded ? null : AppBar(title: Text(title), actions: actions, backgroundColor: background ? Colors.transparent : null),
+    body: Stack(
+      children: [
+        if (background) Positioned.fill(child: WyrmBackground(intensity: backgroundIntensity)),
+        SafeArea(
+          top: false,
+          minimum: const EdgeInsets.only(bottom: 8),
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: WyrmTokens.maxWidth),
+              child: body,
+            ),
+          ),
         ),
-      ),
+      ],
     ),
     floatingActionButton: floatingActionButton,
   );
 }
 
 class WyrmCard extends StatelessWidget {
-  const WyrmCard({required this.child, this.accent = false, super.key});
+  const WyrmCard({required this.child, this.accent = false, this.onTap, this.padding = WyrmTokens.cardPadding, super.key});
   final Widget child;
   final bool accent;
+
+  /// Makes the whole card one touch target.
+  final VoidCallback? onTap;
+  final EdgeInsetsGeometry padding;
   @override
   Widget build(BuildContext context) => Card(
+    clipBehavior: Clip.antiAlias,
     shape: accent
         ? RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(WyrmTokens.radius),
             side: const BorderSide(color: WyrmTokens.ember),
           )
         : null,
-    child: SizedBox(
-      width: double.infinity,
-      child: Padding(padding: WyrmTokens.pagePadding, child: child),
+    child: InkWell(
+      onTap: onTap,
+      child: SizedBox(
+        width: double.infinity,
+        child: Padding(padding: padding, child: child),
+      ),
     ),
   );
 }

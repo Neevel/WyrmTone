@@ -55,12 +55,14 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
         return WyrmScaffold(
           title: 'IR-Bibliothek',
           embedded: widget.embedded,
+          background: true,
+          backgroundIntensity: WyrmBackgroundIntensity.dim,
           body: ListView(
             padding: const EdgeInsets.all(16),
             children: [
               const WyrmSection(
                 title: 'Impulse Responses',
-                subtitle: 'Cabinet & Mikrofon · WAV · Keine Geräteübertragung',
+                subtitle: 'Cabinet & Mikrofon · WAV · Geräteübertragung noch nicht verfügbar',
                 child: SizedBox.shrink(),
               ),
               TextField(
@@ -88,7 +90,7 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Nur lesender Zugriff · Ordner bleibt nach Neustart verfügbar · Keine Geräteübertragung.',
+                'Nur lesender Zugriff · Ordner bleibt nach Neustart verfügbar · Geräteübertragung noch nicht verfügbar.',
               ),
               if (widget.controller.selectedFolderUri != null)
                 Padding(

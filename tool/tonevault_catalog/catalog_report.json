@@ -1,0 +1,4249 @@
+{
+ "stats": {
+  "packs": [
+   {
+    "id": "core_genres",
+    "title": "Core Genres",
+    "version": 1,
+    "entries": 22,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_essentials",
+    "title": "Metal Essentials",
+    "version": 1,
+    "entries": 13,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "modern_metal",
+    "title": "Modern Metal",
+    "version": 1,
+    "entries": 14,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "extreme_metal",
+    "title": "Extreme Metal",
+    "version": 1,
+    "entries": 6,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "rock_essentials",
+    "title": "Rock Essentials",
+    "version": 1,
+    "entries": 8,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "alternative_grunge",
+    "title": "Alternative & Grunge",
+    "version": 1,
+    "entries": 10,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "punk_pop_punk",
+    "title": "Punk & Pop Punk",
+    "version": 1,
+    "entries": 4,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "electronic_reimagined",
+    "title": "Electronic Reimagined",
+    "version": 1,
+    "entries": 10,
+    "declaredEntryCount": null,
+    "sourceClassification": null,
+    "license": "WyrmTone Seed (eigene Beschreibungen)"
+   },
+   {
+    "id": "core_genres_ext",
+    "title": "Genre-Templates (Erweiterung)",
+    "version": 1,
+    "entries": 57,
+    "declaredEntryCount": 57,
+    "sourceClassification": "CURATED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_traditional",
+    "title": "Metal: Heavy, NWOBHM, Speed, Power",
+    "version": 1,
+    "entries": 26,
+    "declaredEntryCount": 26,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_thrash_groove",
+    "title": "Metal: Thrash und Groove",
+    "version": 1,
+    "entries": 23,
+    "declaredEntryCount": 23,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_death_black",
+    "title": "Metal: Death, Black, Melodic Death",
+    "version": 1,
+    "entries": 42,
+    "declaredEntryCount": 42,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_symphonic_folk_gothic",
+    "title": "Metal: Symphonic, Gothic, Folk, Viking",
+    "version": 1,
+    "entries": 18,
+    "declaredEntryCount": 18,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_doom_sludge_post",
+    "title": "Metal: Doom, Stoner, Sludge, Post",
+    "version": 1,
+    "entries": 20,
+    "declaredEntryCount": 20,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_progressive_djent",
+    "title": "Metal: Progressive und Djent",
+    "version": 1,
+    "entries": 16,
+    "declaredEntryCount": 16,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_nu_alt_industrial",
+    "title": "Metal: Nu, Alternative, Industrial",
+    "version": 1,
+    "entries": 20,
+    "declaredEntryCount": 20,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "metal_modern",
+    "title": "Metal: Metalcore, Deathcore, Modern",
+    "version": 1,
+    "entries": 28,
+    "declaredEntryCount": 28,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "rock_classic",
+    "title": "Rock: Classic",
+    "version": 1,
+    "entries": 29,
+    "declaredEntryCount": 29,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "rock_hard_glam",
+    "title": "Rock: Hard Rock und Glam",
+    "version": 1,
+    "entries": 25,
+    "declaredEntryCount": 25,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "rock_progressive",
+    "title": "Rock: Progressive",
+    "version": 1,
+    "entries": 9,
+    "declaredEntryCount": 9,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "rock_grunge_alt",
+    "title": "Rock: Grunge, Post-Grunge, Alternative, Indie",
+    "version": 1,
+    "entries": 43,
+    "declaredEntryCount": 43,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "punk_emo_posthardcore",
+    "title": "Punk, Pop Punk, Emo, Post-Hardcore",
+    "version": 1,
+    "entries": 52,
+    "declaredEntryCount": 52,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "ambient_postrock",
+    "title": "Shoegaze, Post-Rock, Ambient",
+    "version": 1,
+    "entries": 37,
+    "declaredEntryCount": 37,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "blues",
+    "title": "Blues und Blues Rock",
+    "version": 1,
+    "entries": 34,
+    "declaredEntryCount": 34,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "funk_soul",
+    "title": "Funk und Soul",
+    "version": 1,
+    "entries": 17,
+    "declaredEntryCount": 17,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "country",
+    "title": "Country",
+    "version": 1,
+    "entries": 16,
+    "declaredEntryCount": 16,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "jazz_fusion",
+    "title": "Jazz und Jazz Fusion",
+    "version": 1,
+    "entries": 21,
+    "declaredEntryCount": 21,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "instrumental_shred",
+    "title": "Instrumental Rock und Shred",
+    "version": 1,
+    "entries": 19,
+    "declaredEntryCount": 19,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "roots_surf_rockabilly",
+    "title": "Surf, Rockabilly und Roots",
+    "version": 1,
+    "entries": 12,
+    "declaredEntryCount": 12,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "artist_eras",
+    "title": "Artist-Ären und Alben",
+    "version": 1,
+    "entries": 106,
+    "declaredEntryCount": 106,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "song_layer",
+    "title": "Ausgewählte Songs",
+    "version": 1,
+    "entries": 226,
+    "declaredEntryCount": 226,
+    "sourceClassification": "STYLE_INSPIRED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "electronic_reimagined_ext",
+    "title": "Guitar Reimagined (Erweiterung)",
+    "version": 1,
+    "entries": 26,
+    "declaredEntryCount": 26,
+    "sourceClassification": "GUITAR_REIMAGINED",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "wyrm_originals",
+    "title": "WyrmTone Originals",
+    "version": 1,
+    "entries": 12,
+    "declaredEntryCount": 12,
+    "sourceClassification": "WYRM_ORIGINAL",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   },
+   {
+    "id": "wyrm_fun_sounds",
+    "title": "WyrmTone Special- und Fun-Sounds",
+    "version": 1,
+    "entries": 18,
+    "declaredEntryCount": 18,
+    "sourceClassification": "WYRM_ORIGINAL",
+    "license": "WyrmTone Katalog (eigene Beschreibungen)"
+   }
+  ],
+  "entriesTotal": 1039,
+  "byType": {
+   "ALBUM_SIGNATURE": 49,
+   "ARTIST_SIGNATURE": 552,
+   "ERA_SIGNATURE": 61,
+   "GENRE_TEMPLATE": 60,
+   "GUITAR_REIMAGINED": 31,
+   "ORIGINAL_WYRMTONE": 35,
+   "SONG": 232,
+   "STYLE_TEMPLATE": 19
+  },
+  "artists": 552,
+  "songs": 232,
+  "albums": 49,
+  "eraSignatures": 61,
+  "templates": 79,
+  "guitarReimagined": 31,
+  "wyrmOriginals": 35,
+  "explicitVariants": 100,
+  "declaredRoleVariants": 2020,
+  "resolvableVariants": 2020,
+  "variantsWithOwnOverrideInChain": 630,
+  "genresUsed": 75,
+  "sourceClassification": {
+   "CURATED": 82,
+   "GUITAR_REIMAGINED": 31,
+   "STYLE_INSPIRED": 891,
+   "WYRM_ORIGINAL": 35
+  },
+  "confidence": {
+   "LOW": 228,
+   "MEDIUM": 811
+  },
+  "inheritanceDepth": {
+   "1": 60,
+   "2": 525,
+   "3": 317,
+   "4": 99,
+   "5": 35,
+   "6": 3
+  },
+  "aliases": {
+   "artist": 75,
+   "song": 66,
+   "album": 0,
+   "search": 37
+  },
+  "searchableTerms": {
+   "phrases": {
+    "artist": 651,
+    "song": 329,
+    "album": 49,
+    "title": 1076,
+    "tag": 328
+   },
+   "distinctTokens": 2179
+  }
+ },
+ "coverage": {
+  "genres": {
+   "metal": {
+    "root": true,
+    "template": true,
+    "entries": 465,
+    "artists": 241,
+    "songs": 133,
+    "variants": 880,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "2020s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "heavy_metal": {
+    "root": false,
+    "template": true,
+    "entries": 85,
+    "artists": 34,
+    "songs": 32,
+    "variants": 156,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "thrash_metal": {
+    "root": false,
+    "template": true,
+    "entries": 61,
+    "artists": 29,
+    "songs": 18,
+    "variants": 110,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "speed_metal": {
+    "root": false,
+    "template": true,
+    "entries": 15,
+    "artists": 8,
+    "songs": 6,
+    "variants": 30,
+    "eras": [
+     "1980s",
+     "1990s"
+    ],
+    "weak": []
+   },
+   "power_metal": {
+    "root": false,
+    "template": true,
+    "entries": 26,
+    "artists": 17,
+    "songs": 8,
+    "variants": 52,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "progressive_metal": {
+    "root": false,
+    "template": true,
+    "entries": 45,
+    "artists": 24,
+    "songs": 12,
+    "variants": 84,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "groove_metal": {
+    "root": false,
+    "template": true,
+    "entries": 33,
+    "artists": 14,
+    "songs": 14,
+    "variants": 60,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "nu_metal": {
+    "root": false,
+    "template": true,
+    "entries": 33,
+    "artists": 12,
+    "songs": 14,
+    "variants": 59,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "alternative_metal": {
+    "root": false,
+    "template": true,
+    "entries": 44,
+    "artists": 14,
+    "songs": 17,
+    "variants": 81,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "2020s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "industrial_metal": {
+    "root": false,
+    "template": true,
+    "entries": 20,
+    "artists": 11,
+    "songs": 4,
+    "variants": 39,
+    "eras": [
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "melodic_death_metal": {
+    "root": false,
+    "template": true,
+    "entries": 40,
+    "artists": 17,
+    "songs": 16,
+    "variants": 71,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "death_metal": {
+    "root": false,
+    "template": true,
+    "entries": 35,
+    "artists": 20,
+    "songs": 9,
+    "variants": 67,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "black_metal": {
+    "root": false,
+    "template": true,
+    "entries": 22,
+    "artists": 17,
+    "songs": 4,
+    "variants": 45,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "doom_metal": {
+    "root": false,
+    "template": true,
+    "entries": 21,
+    "artists": 11,
+    "songs": 5,
+    "variants": 39,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "stoner_metal": {
+    "root": false,
+    "template": true,
+    "entries": 17,
+    "artists": 7,
+    "songs": 7,
+    "variants": 29,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "metalcore": {
+    "root": false,
+    "template": true,
+    "entries": 58,
+    "artists": 33,
+    "songs": 15,
+    "variants": 114,
+    "eras": [
+     "2000s",
+     "2010s",
+     "2020s"
+    ],
+    "weak": []
+   },
+   "deathcore": {
+    "root": false,
+    "template": true,
+    "entries": 13,
+    "artists": 10,
+    "songs": 1,
+    "variants": 26,
+    "eras": [
+     "2000s",
+     "2010s",
+     "2020s"
+    ],
+    "weak": []
+   },
+   "djent": {
+    "root": false,
+    "template": true,
+    "entries": 22,
+    "artists": 14,
+    "songs": 5,
+    "variants": 43,
+    "eras": [
+     "1990s",
+     "2000s",
+     "2010s",
+     "2020s"
+    ],
+    "weak": []
+   },
+   "post_metal": {
+    "root": false,
+    "template": true,
+    "entries": 8,
+    "artists": 7,
+    "songs": 0,
+    "variants": 18,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "rock": {
+    "root": true,
+    "template": true,
+    "entries": 411,
+    "artists": 233,
+    "songs": 98,
+    "variants": 788,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "classic_rock": {
+    "root": false,
+    "template": true,
+    "entries": 58,
+    "artists": 35,
+    "songs": 15,
+    "variants": 113,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "hard_rock": {
+    "root": false,
+    "template": true,
+    "entries": 104,
+    "artists": 48,
+    "songs": 36,
+    "variants": 194,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "alternative_rock": {
+    "root": false,
+    "template": true,
+    "entries": 90,
+    "artists": 36,
+    "songs": 29,
+    "variants": 168,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s",
+     "modern"
+    ],
+    "weak": []
+   },
+   "grunge": {
+    "root": false,
+    "template": true,
+    "entries": 35,
+    "artists": 14,
+    "songs": 12,
+    "variants": 57,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "punk_rock": {
+    "root": false,
+    "template": true,
+    "entries": 40,
+    "artists": 25,
+    "songs": 9,
+    "variants": 76,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "pop_punk": {
+    "root": false,
+    "template": true,
+    "entries": 32,
+    "artists": 19,
+    "songs": 7,
+    "variants": 60,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "indie_rock": {
+    "root": false,
+    "template": true,
+    "entries": 28,
+    "artists": 24,
+    "songs": 1,
+    "variants": 58,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "progressive_rock": {
+    "root": false,
+    "template": true,
+    "entries": 38,
+    "artists": 21,
+    "songs": 10,
+    "variants": 75,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "psychedelic_rock": {
+    "root": false,
+    "template": true,
+    "entries": 15,
+    "artists": 9,
+    "songs": 4,
+    "variants": 28,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1990s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "garage_rock": {
+    "root": false,
+    "template": true,
+    "entries": 14,
+    "artists": 9,
+    "songs": 2,
+    "variants": 28,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "southern_rock": {
+    "root": false,
+    "template": true,
+    "entries": 12,
+    "artists": 11,
+    "songs": 0,
+    "variants": 25,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "glam_metal": {
+    "root": false,
+    "template": true,
+    "entries": 30,
+    "artists": 18,
+    "songs": 8,
+    "variants": 57,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s"
+    ],
+    "weak": []
+   },
+   "other_guitar": {
+    "root": true,
+    "template": true,
+    "entries": 284,
+    "artists": 178,
+    "songs": 46,
+    "variants": 577,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "blues": {
+    "root": false,
+    "template": true,
+    "entries": 92,
+    "artists": 57,
+    "songs": 23,
+    "variants": 183,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "blues_rock": {
+    "root": false,
+    "template": true,
+    "entries": 66,
+    "artists": 39,
+    "songs": 20,
+    "variants": 131,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "funk": {
+    "root": false,
+    "template": true,
+    "entries": 23,
+    "artists": 16,
+    "songs": 4,
+    "variants": 45,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "soul": {
+    "root": false,
+    "template": true,
+    "entries": 18,
+    "artists": 14,
+    "songs": 3,
+    "variants": 37,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "country": {
+    "root": false,
+    "template": true,
+    "entries": 25,
+    "artists": 20,
+    "songs": 3,
+    "variants": 52,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "jazz": {
+    "root": false,
+    "template": true,
+    "entries": 23,
+    "artists": 18,
+    "songs": 4,
+    "variants": 47,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "fusion": {
+    "root": false,
+    "template": true,
+    "entries": 18,
+    "artists": 16,
+    "songs": 1,
+    "variants": 38,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "surf": {
+    "root": false,
+    "template": true,
+    "entries": 10,
+    "artists": 5,
+    "songs": 2,
+    "variants": 22,
+    "eras": [
+     "1960s"
+    ],
+    "weak": [
+     "thin-era-coverage"
+    ]
+   },
+   "shoegaze": {
+    "root": false,
+    "template": true,
+    "entries": 26,
+    "artists": 14,
+    "songs": 5,
+    "variants": 48,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "post_rock": {
+    "root": false,
+    "template": true,
+    "entries": 23,
+    "artists": 15,
+    "songs": 2,
+    "variants": 44,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "ambient": {
+    "root": false,
+    "template": true,
+    "entries": 23,
+    "artists": 8,
+    "songs": 0,
+    "variants": 50,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "clean": {
+    "root": false,
+    "template": true,
+    "entries": 2,
+    "artists": 0,
+    "songs": 0,
+    "variants": 3,
+    "eras": [],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "crunch": {
+    "root": false,
+    "template": true,
+    "entries": 1,
+    "artists": 0,
+    "songs": 0,
+    "variants": 2,
+    "eras": [],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "lo_fi": {
+    "root": false,
+    "template": true,
+    "entries": 14,
+    "artists": 6,
+    "songs": 0,
+    "variants": 31,
+    "eras": [
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "experimental": {
+    "root": false,
+    "template": false,
+    "entries": 7,
+    "artists": 1,
+    "songs": 0,
+    "variants": 16,
+    "eras": [
+     "2000s"
+    ],
+    "weak": [
+     "no-template",
+     "few-artists"
+    ]
+   },
+   "electronic_guitar": {
+    "root": true,
+    "template": true,
+    "entries": 63,
+    "artists": 0,
+    "songs": 0,
+    "variants": 126,
+    "eras": [
+     "1980s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "synthwave": {
+    "root": false,
+    "template": true,
+    "entries": 10,
+    "artists": 0,
+    "songs": 0,
+    "variants": 13,
+    "eras": [],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "retrowave": {
+    "root": false,
+    "template": true,
+    "entries": 7,
+    "artists": 0,
+    "songs": 0,
+    "variants": 10,
+    "eras": [],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "darkwave": {
+    "root": false,
+    "template": true,
+    "entries": 3,
+    "artists": 0,
+    "songs": 0,
+    "variants": 8,
+    "eras": [
+     "1980s"
+    ],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "cyberpunk": {
+    "root": false,
+    "template": true,
+    "entries": 4,
+    "artists": 0,
+    "songs": 0,
+    "variants": 7,
+    "eras": [
+     "1980s",
+     "2010s"
+    ],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "techno_inspired": {
+    "root": false,
+    "template": true,
+    "entries": 12,
+    "artists": 0,
+    "songs": 0,
+    "variants": 25,
+    "eras": [],
+    "weak": []
+   },
+   "trance_inspired": {
+    "root": false,
+    "template": true,
+    "entries": 17,
+    "artists": 0,
+    "songs": 0,
+    "variants": 33,
+    "eras": [],
+    "weak": []
+   },
+   "dnb_inspired": {
+    "root": false,
+    "template": false,
+    "entries": 1,
+    "artists": 0,
+    "songs": 0,
+    "variants": 2,
+    "eras": [],
+    "weak": [
+     "no-template"
+    ]
+   },
+   "industrial_electronic": {
+    "root": false,
+    "template": true,
+    "entries": 5,
+    "artists": 0,
+    "songs": 0,
+    "variants": 12,
+    "eras": [],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "synth_like_guitar": {
+    "root": false,
+    "template": true,
+    "entries": 7,
+    "artists": 0,
+    "songs": 0,
+    "variants": 10,
+    "eras": [
+     "1980s",
+     "2010s"
+    ],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "nwobhm": {
+    "root": false,
+    "template": true,
+    "entries": 6,
+    "artists": 5,
+    "songs": 0,
+    "variants": 12,
+    "eras": [
+     "1980s"
+    ],
+    "weak": [
+     "thin-era-coverage"
+    ]
+   },
+   "technical_death_metal": {
+    "root": false,
+    "template": true,
+    "entries": 14,
+    "artists": 11,
+    "songs": 1,
+    "variants": 28,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "symphonic_metal": {
+    "root": false,
+    "template": true,
+    "entries": 19,
+    "artists": 13,
+    "songs": 5,
+    "variants": 39,
+    "eras": [
+     "1990s",
+     "2000s",
+     "2010s",
+     "2020s"
+    ],
+    "weak": []
+   },
+   "sludge_metal": {
+    "root": false,
+    "template": true,
+    "entries": 16,
+    "artists": 11,
+    "songs": 2,
+    "variants": 32,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "melodic_metalcore": {
+    "root": false,
+    "template": true,
+    "entries": 7,
+    "artists": 3,
+    "songs": 3,
+    "variants": 15,
+    "eras": [
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "folk_metal": {
+    "root": false,
+    "template": true,
+    "entries": 7,
+    "artists": 6,
+    "songs": 0,
+    "variants": 14,
+    "eras": [
+     "2000s"
+    ],
+    "weak": [
+     "thin-era-coverage"
+    ]
+   },
+   "viking_metal": {
+    "root": false,
+    "template": true,
+    "entries": 3,
+    "artists": 2,
+    "songs": 0,
+    "variants": 6,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": [
+     "few-artists"
+    ]
+   },
+   "gothic_metal": {
+    "root": false,
+    "template": true,
+    "entries": 10,
+    "artists": 8,
+    "songs": 1,
+    "variants": 21,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "post_grunge": {
+    "root": false,
+    "template": true,
+    "entries": 10,
+    "artists": 9,
+    "songs": 0,
+    "variants": 20,
+    "eras": [
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "post_punk": {
+    "root": false,
+    "template": true,
+    "entries": 13,
+    "artists": 7,
+    "songs": 2,
+    "variants": 27,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "emo": {
+    "root": false,
+    "template": true,
+    "entries": 17,
+    "artists": 16,
+    "songs": 0,
+    "variants": 35,
+    "eras": [
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "post_hardcore": {
+    "root": false,
+    "template": true,
+    "entries": 24,
+    "artists": 23,
+    "songs": 0,
+    "variants": 49,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "texas_blues": {
+    "root": false,
+    "template": true,
+    "entries": 14,
+    "artists": 9,
+    "songs": 2,
+    "variants": 26,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "chicago_blues": {
+    "root": false,
+    "template": true,
+    "entries": 10,
+    "artists": 9,
+    "songs": 0,
+    "variants": 20,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1990s"
+    ],
+    "weak": []
+   },
+   "rockabilly": {
+    "root": false,
+    "template": true,
+    "entries": 19,
+    "artists": 15,
+    "songs": 3,
+    "variants": 38,
+    "eras": [
+     "1960s",
+     "1970s",
+     "1980s",
+     "1990s",
+     "2000s"
+    ],
+    "weak": []
+   },
+   "clean_pop": {
+    "root": false,
+    "template": true,
+    "entries": 9,
+    "artists": 6,
+    "songs": 1,
+    "variants": 19,
+    "eras": [
+     "1980s",
+     "1990s",
+     "2000s",
+     "2010s"
+    ],
+    "weak": []
+   },
+   "instrumental_rock": {
+    "root": false,
+    "template": true,
+    "entries": 18,
+    "artists": 12,
+    "songs": 4,
+    "variants": 38,
+    "eras": [
+     "1970s",
+     "1980s",
+     "1990s"
+    ],
+    "weak": []
+   },
+   "eurodance_inspired": {
+    "root": false,
+    "template": true,
+    "entries": 10,
+    "artists": 0,
+    "songs": 0,
+    "variants": 19,
+    "eras": [],
+    "weak": []
+   },
+   "house_inspired": {
+    "root": false,
+    "template": true,
+    "entries": 6,
+    "artists": 0,
+    "songs": 0,
+    "variants": 14,
+    "eras": [],
+    "weak": []
+   },
+   "chiptune_inspired": {
+    "root": false,
+    "template": true,
+    "entries": 3,
+    "artists": 0,
+    "songs": 0,
+    "variants": 7,
+    "eras": [],
+    "weak": []
+   },
+   "cinematic": {
+    "root": false,
+    "template": true,
+    "entries": 6,
+    "artists": 0,
+    "songs": 0,
+    "variants": 13,
+    "eras": [],
+    "weak": [
+     "few-artists"
+    ]
+   }
+  },
+  "weakAreas": [
+   "cinematic: few-artists",
+   "clean: few-artists",
+   "crunch: few-artists",
+   "cyberpunk: few-artists",
+   "darkwave: few-artists",
+   "dnb_inspired: no-template",
+   "experimental: no-template, few-artists",
+   "folk_metal: thin-era-coverage",
+   "industrial_electronic: few-artists",
+   "nwobhm: thin-era-coverage",
+   "retrowave: few-artists",
+   "surf: thin-era-coverage",
+   "synth_like_guitar: few-artists",
+   "synthwave: few-artists",
+   "viking_metal: few-artists"
+  ]
+ },
+ "duplicates": {
+  "identicalDefinitions": [
+   [
+    "artist.alexisonfire",
+    "artist.funeral_for_a_friend",
+    "artist.thursday"
+   ],
+   [
+    "artist.all_that_remains",
+    "artist.bury_tomorrow"
+   ],
+   [
+    "artist.as_i_lay_dying",
+    "artist.miss_may_i"
+   ],
+   [
+    "artist.bfmv",
+    "artist.trivium"
+   ],
+   [
+    "artist.bush",
+    "artist.silverchair"
+   ],
+   [
+    "artist.carnifex",
+    "artist.despised_icon",
+    "artist.job_for_a_cowboy"
+   ],
+   [
+    "artist.death_angel",
+    "artist.megadeth"
+   ],
+   [
+    "artist.def_leppard",
+    "artist.extreme"
+   ],
+   [
+    "artist.devildriver",
+    "artist.machine_head"
+   ],
+   [
+    "artist.exodus",
+    "artist.power_trip"
+   ],
+   [
+    "artist.fall_out_boy",
+    "artist.neck_deep",
+    "artist.simple_plan"
+   ],
+   [
+    "artist.good_charlotte",
+    "artist.the_wonder_years"
+   ],
+   [
+    "artist.monuments",
+    "artist.volumes"
+   ],
+   [
+    "artist.saosin",
+    "artist.sleeping_with_sirens"
+   ],
+   [
+    "artist.thy_art_is_murder",
+    "artist.whitechapel"
+   ],
+   [
+    "artist.unearth",
+    "artist.while_she_sleeps"
+   ],
+   [
+    "song.acdc.back_in_black",
+    "song.acdc.thunderstruck"
+   ],
+   [
+    "song.aerosmith.sweet_emotion",
+    "song.aerosmith.walk_this_way"
+   ],
+   [
+    "song.alice_in_chains.rooster",
+    "song.alice_in_chains.would"
+   ],
+   [
+    "song.anthrax.caught_in_a_mosh",
+    "song.anthrax.indians"
+   ],
+   [
+    "song.arch_enemy.nemesis",
+    "song.arch_enemy.we_will_rise"
+   ],
+   [
+    "song.arctic_monkeys.do_i_wanna_know",
+    "song.arctic_monkeys.r_u_mine"
+   ],
+   [
+    "song.avenged_sevenfold.bat_country",
+    "song.avenged_sevenfold.nightmare"
+   ],
+   [
+    "song.black_sabbath.iron_man",
+    "song.black_sabbath.paranoid",
+    "song.black_sabbath.war_pigs"
+   ],
+   [
+    "song.bring_me_the_horizon.can_you_feel_my_heart",
+    "song.bring_me_the_horizon.shadow_moses"
+   ],
+   [
+    "song.children_of_bodom.are_you_dead_yet",
+    "song.children_of_bodom.everytime_i_die",
+    "song.children_of_bodom.in_your_face"
+   ],
+   [
+    "song.deep_purple.highway_star",
+    "song.deep_purple.smoke_on_the_water"
+   ],
+   [
+    "song.dio.holy_diver",
+    "song.dio.rainbow_in_the_dark"
+   ],
+   [
+    "song.foo_fighters.everlong",
+    "song.foo_fighters.monkey_wrench"
+   ],
+   [
+    "song.guns_n_roses.sweet_child_o_mine",
+    "song.guns_n_roses.welcome_to_the_jungle"
+   ],
+   [
+    "song.helloween.eagle_fly_free",
+    "song.helloween.i_want_out"
+   ],
+   [
+    "song.iron_maiden.hallowed_be_thy_name",
+    "song.iron_maiden.run_to_the_hills"
+   ],
+   [
+    "song.jimi_hendrix.purple_haze",
+    "song.jimi_hendrix.voodoo_child"
+   ],
+   [
+    "song.johnny_cash.folsom_prison_blues",
+    "song.johnny_cash.ring_of_fire"
+   ],
+   [
+    "song.lamb_of_god.laid_to_rest",
+    "song.lamb_of_god.redneck"
+   ],
+   [
+    "song.led_zeppelin.black_dog",
+    "song.led_zeppelin.stairway_to_heaven"
+   ],
+   [
+    "song.linkin_park.in_the_end",
+    "song.linkin_park.one_step_closer"
+   ],
+   [
+    "song.megadeth.hangar_18",
+    "song.megadeth.holy_wars"
+   ],
+   [
+    "song.meshuggah.bleed",
+    "song.meshuggah.future_breed_machine"
+   ],
+   [
+    "song.motorhead.ace_of_spades",
+    "song.motorhead.overkill"
+   ],
+   [
+    "song.nightwish.ghost_love_score",
+    "song.nightwish.nemo"
+   ],
+   [
+    "song.nirvana.lithium",
+    "song.nirvana.smells_like_teen_spirit"
+   ],
+   [
+    "song.ozzy_osbourne.crazy_train",
+    "song.ozzy_osbourne.mr_crowley"
+   ],
+   [
+    "song.pantera.cemetery_gates",
+    "song.pantera.cowboys_from_hell"
+   ],
+   [
+    "song.parkway_drive.carrion",
+    "song.parkway_drive.wild_eyes"
+   ],
+   [
+    "song.pearl_jam.alive",
+    "song.pearl_jam.jeremy"
+   ],
+   [
+    "song.rage_against_the_machine.bulls_on_parade",
+    "song.rage_against_the_machine.killing_in_the_name"
+   ],
+   [
+    "song.red_hot_chili_peppers.give_it_away",
+    "song.red_hot_chili_peppers.under_the_bridge"
+   ],
+   [
+    "song.rush.tom_sawyer",
+    "song.rush.yyz"
+   ],
+   [
+    "song.sepultura.refuse_resist",
+    "song.sepultura.roots_bloody_roots"
+   ],
+   [
+    "song.slayer.angel_of_death",
+    "song.slayer.raining_blood"
+   ],
+   [
+    "song.slipknot.duality",
+    "song.slipknot.psychosocial",
+    "song.slipknot.wait_and_bleed"
+   ],
+   [
+    "song.smashing_pumpkins.cherub_rock",
+    "song.smashing_pumpkins.today"
+   ],
+   [
+    "song.soundgarden.black_hole_sun",
+    "song.soundgarden.spoonman"
+   ],
+   [
+    "song.stevie_ray_vaughan.pride_and_joy",
+    "song.stevie_ray_vaughan.texas_flood"
+   ],
+   [
+    "song.system_of_a_down.chop_suey",
+    "song.system_of_a_down.toxicity"
+   ],
+   [
+    "song.tool.forty_six_and_2",
+    "song.tool.schism",
+    "song.tool.sober"
+   ],
+   [
+    "song.van_halen.eruption",
+    "song.van_halen.panama"
+   ],
+   [
+    "song.zz_top.la_grange",
+    "song.zz_top.sharp_dressed_man"
+   ]
+  ],
+  "nearIdenticalArtists": [
+   {
+    "a": "artist.metallica",
+    "b": "artist.megadeth",
+    "distance": 6
+   },
+   {
+    "a": "artist.metallica",
+    "b": "artist.death_angel",
+    "distance": 6
+   },
+   {
+    "a": "artist.metallica",
+    "b": "artist.havok",
+    "distance": 4
+   },
+   {
+    "a": "artist.black_sabbath",
+    "b": "artist.candlemass",
+    "distance": 4
+   },
+   {
+    "a": "artist.megadeth",
+    "b": "artist.testament",
+    "distance": 4
+   },
+   {
+    "a": "artist.megadeth",
+    "b": "artist.death_angel",
+    "distance": 0
+   },
+   {
+    "a": "artist.megadeth",
+    "b": "artist.havok",
+    "distance": 2
+   },
+   {
+    "a": "artist.bfmv",
+    "b": "artist.trivium",
+    "distance": 0
+   },
+   {
+    "a": "artist.bfmv",
+    "b": "artist.killswitch_engage",
+    "distance": 4
+   },
+   {
+    "a": "artist.bfmv",
+    "b": "artist.asking_alexandria",
+    "distance": 4
+   },
+   {
+    "a": "artist.trivium",
+    "b": "artist.killswitch_engage",
+    "distance": 4
+   },
+   {
+    "a": "artist.trivium",
+    "b": "artist.asking_alexandria",
+    "distance": 4
+   },
+   {
+    "a": "artist.cob",
+    "b": "artist.in_flames",
+    "distance": 3
+   },
+   {
+    "a": "artist.cob",
+    "b": "artist.soilwork",
+    "distance": 4
+   },
+   {
+    "a": "artist.in_flames",
+    "b": "artist.soilwork",
+    "distance": 5
+   },
+   {
+    "a": "artist.acdc",
+    "b": "artist.deep_purple",
+    "distance": 4
+   },
+   {
+    "a": "artist.acdc",
+    "b": "artist.kiss",
+    "distance": 5
+   },
+   {
+    "a": "artist.acdc",
+    "b": "artist.alice_cooper",
+    "distance": 5
+   },
+   {
+    "a": "artist.led_zeppelin",
+    "b": "artist.bad_company",
+    "distance": 2
+   },
+   {
+    "a": "artist.led_zeppelin",
+    "b": "artist.steppenwolf",
+    "distance": 6
+   },
+   {
+    "a": "artist.led_zeppelin",
+    "b": "artist.lenny_kravitz",
+    "distance": 2
+   },
+   {
+    "a": "artist.deep_purple",
+    "b": "artist.alice_cooper",
+    "distance": 5
+   },
+   {
+    "a": "artist.nirvana",
+    "b": "artist.stone_temple_pilots",
+    "distance": 6
+   },
+   {
+    "a": "artist.nirvana",
+    "b": "artist.hole",
+    "distance": 2
+   },
+   {
+    "a": "artist.soundgarden",
+    "b": "artist.hole",
+    "distance": 6
+   },
+   {
+    "a": "artist.foo_fighters",
+    "b": "artist.biffy_clyro",
+    "distance": 4
+   },
+   {
+    "a": "artist.green_day",
+    "b": "artist.blink_182",
+    "distance": 6
+   },
+   {
+    "a": "artist.my_chemical_romance",
+    "b": "artist.biffy_clyro",
+    "distance": 6
+   },
+   {
+    "a": "artist.helloween",
+    "b": "artist.gamma_ray",
+    "distance": 4
+   },
+   {
+    "a": "artist.hammerfall",
+    "b": "artist.stratovarius",
+    "distance": 6
+   },
+   {
+    "a": "artist.hammerfall",
+    "b": "artist.gamma_ray",
+    "distance": 4
+   },
+   {
+    "a": "artist.stratovarius",
+    "b": "artist.sonata_arctica",
+    "distance": 4
+   },
+   {
+    "a": "artist.bathory",
+    "b": "artist.satyricon",
+    "distance": 6
+   },
+   {
+    "a": "artist.anthrax",
+    "b": "artist.havok",
+    "distance": 6
+   },
+   {
+    "a": "artist.testament",
+    "b": "artist.death_angel",
+    "distance": 4
+   },
+   {
+    "a": "artist.testament",
+    "b": "artist.havok",
+    "distance": 6
+   },
+   {
+    "a": "artist.exodus",
+    "b": "artist.violence",
+    "distance": 2
+   },
+   {
+    "a": "artist.exodus",
+    "b": "artist.municipal_waste",
+    "distance": 6
+   },
+   {
+    "a": "artist.exodus",
+    "b": "artist.power_trip",
+    "distance": 0
+   },
+   {
+    "a": "artist.kreator",
+    "b": "artist.violence",
+    "distance": 6
+   },
+   {
+    "a": "artist.destruction",
+    "b": "artist.violence",
+    "distance": 6
+   },
+   {
+    "a": "artist.destruction",
+    "b": "artist.municipal_waste",
+    "distance": 6
+   },
+   {
+    "a": "artist.overkill",
+    "b": "artist.sacred_reich",
+    "distance": 6
+   },
+   {
+    "a": "artist.sepultura",
+    "b": "artist.machine_head",
+    "distance": 6
+   },
+   {
+    "a": "artist.sepultura",
+    "b": "artist.devildriver",
+    "distance": 6
+   },
+   {
+    "a": "artist.sepultura",
+    "b": "artist.dimebag_darrell",
+    "distance": 6
+   },
+   {
+    "a": "artist.death_angel",
+    "b": "artist.havok",
+    "distance": 2
+   },
+   {
+    "a": "artist.violence",
+    "b": "artist.municipal_waste",
+    "distance": 4
+   },
+   {
+    "a": "artist.violence",
+    "b": "artist.havok",
+    "distance": 6
+   },
+   {
+    "a": "artist.violence",
+    "b": "artist.power_trip",
+    "distance": 2
+   },
+   {
+    "a": "artist.nuclear_assault",
+    "b": "artist.municipal_waste",
+    "distance": 4
+   },
+   {
+    "a": "artist.municipal_waste",
+    "b": "artist.havok",
+    "distance": 6
+   },
+   {
+    "a": "artist.municipal_waste",
+    "b": "artist.power_trip",
+    "distance": 6
+   },
+   {
+    "a": "artist.municipal_waste",
+    "b": "artist.flotsam_and_jetsam",
+    "distance": 6
+   },
+   {
+    "a": "artist.machine_head",
+    "b": "artist.chimaira",
+    "distance": 4
+   },
+   {
+    "a": "artist.machine_head",
+    "b": "artist.devildriver",
+    "distance": 0
+   },
+   {
+    "a": "artist.machine_head",
+    "b": "artist.dimebag_darrell",
+    "distance": 4
+   },
+   {
+    "a": "artist.chimaira",
+    "b": "artist.devildriver",
+    "distance": 4
+   },
+   {
+    "a": "artist.devildriver",
+    "b": "artist.dimebag_darrell",
+    "distance": 4
+   },
+   {
+    "a": "artist.crowbar",
+    "b": "artist.melvins",
+    "distance": 6
+   },
+   {
+    "a": "artist.death",
+    "b": "artist.vader",
+    "distance": 4
+   },
+   {
+    "a": "artist.cannibal_corpse",
+    "b": "artist.deicide",
+    "distance": 4
+   },
+   {
+    "a": "artist.cannibal_corpse",
+    "b": "artist.vader",
+    "distance": 6
+   },
+   {
+    "a": "artist.morbid_angel",
+    "b": "artist.napalm_death",
+    "distance": 6
+   },
+   {
+    "a": "artist.morbid_angel",
+    "b": "artist.immolation",
+    "distance": 6
+   },
+   {
+    "a": "artist.entombed",
+    "b": "artist.dismember",
+    "distance": 2
+   },
+   {
+    "a": "artist.deicide",
+    "b": "artist.vader",
+    "distance": 6
+   },
+   {
+    "a": "artist.suffocation",
+    "b": "artist.origin",
+    "distance": 4
+   },
+   {
+    "a": "artist.necrophagist",
+    "b": "artist.obscura",
+    "distance": 4
+   },
+   {
+    "a": "artist.necrophagist",
+    "b": "artist.beyond_creation",
+    "distance": 2
+   },
+   {
+    "a": "artist.necrophagist",
+    "b": "artist.origin",
+    "distance": 6
+   },
+   {
+    "a": "artist.necrophagist",
+    "b": "artist.revocation",
+    "distance": 6
+   },
+   {
+    "a": "artist.necrophagist",
+    "b": "artist.archspire",
+    "distance": 4
+   },
+   {
+    "a": "artist.gorguts",
+    "b": "artist.revocation",
+    "distance": 6
+   },
+   {
+    "a": "artist.obscura",
+    "b": "artist.beyond_creation",
+    "distance": 2
+   },
+   {
+    "a": "artist.obscura",
+    "b": "artist.revocation",
+    "distance": 2
+   },
+   {
+    "a": "artist.beyond_creation",
+    "b": "artist.revocation",
+    "distance": 4
+   },
+   {
+    "a": "artist.beyond_creation",
+    "b": "artist.archspire",
+    "distance": 6
+   },
+   {
+    "a": "artist.origin",
+    "b": "artist.archspire",
+    "distance": 6
+   },
+   {
+    "a": "artist.revocation",
+    "b": "artist.archspire",
+    "distance": 6
+   },
+   {
+    "a": "artist.mayhem",
+    "b": "artist.emperor",
+    "distance": 4
+   },
+   {
+    "a": "artist.mayhem",
+    "b": "artist.immortal",
+    "distance": 0
+   },
+   {
+    "a": "artist.mayhem",
+    "b": "artist.darkthrone",
+    "distance": 2
+   },
+   {
+    "a": "artist.mayhem",
+    "b": "artist.satyricon",
+    "distance": 6
+   },
+   {
+    "a": "artist.mayhem",
+    "b": "artist.watain",
+    "distance": 0
+   },
+   {
+    "a": "artist.emperor",
+    "b": "artist.immortal",
+    "distance": 4
+   },
+   {
+    "a": "artist.emperor",
+    "b": "artist.darkthrone",
+    "distance": 2
+   },
+   {
+    "a": "artist.emperor",
+    "b": "artist.satyricon",
+    "distance": 6
+   },
+   {
+    "a": "artist.emperor",
+    "b": "artist.watain",
+    "distance": 4
+   },
+   {
+    "a": "artist.immortal",
+    "b": "artist.darkthrone",
+    "distance": 2
+   },
+   {
+    "a": "artist.immortal",
+    "b": "artist.satyricon",
+    "distance": 6
+   },
+   {
+    "a": "artist.immortal",
+    "b": "artist.watain",
+    "distance": 0
+   },
+   {
+    "a": "artist.dimmu_borgir",
+    "b": "artist.cradle_of_filth",
+    "distance": 4
+   },
+   {
+    "a": "artist.behemoth",
+    "b": "artist.marduk",
+    "distance": 6
+   },
+   {
+    "a": "artist.darkthrone",
+    "b": "artist.watain",
+    "distance": 2
+   },
+   {
+    "a": "artist.satyricon",
+    "b": "artist.watain",
+    "distance": 6
+   },
+   {
+    "a": "artist.opeth",
+    "b": "artist.haken",
+    "distance": 6
+   },
+   {
+    "a": "artist.nightwish",
+    "b": "artist.kamelot",
+    "distance": 6
+   },
+   {
+    "a": "artist.kamelot",
+    "b": "artist.delain",
+    "distance": 6
+   },
+   {
+    "a": "artist.kamelot",
+    "b": "artist.therion",
+    "distance": 6
+   },
+   {
+    "a": "artist.ensiferum",
+    "b": "artist.eluveitie",
+    "distance": 4
+   },
+   {
+    "a": "artist.candlemass",
+    "b": "artist.kyuss",
+    "distance": 5
+   },
+   {
+    "a": "artist.kyuss",
+    "b": "artist.monster_magnet",
+    "distance": 6
+   },
+   {
+    "a": "artist.melvins",
+    "b": "artist.acid_bath",
+    "distance": 6
+   },
+   {
+    "a": "artist.neurosis",
+    "b": "artist.isis",
+    "distance": 6
+   },
+   {
+    "a": "artist.symphony_x",
+    "b": "artist.michael_romeo",
+    "distance": 6
+   },
+   {
+    "a": "artist.fates_warning",
+    "b": "artist.pain_of_salvation",
+    "distance": 2
+   },
+   {
+    "a": "artist.haken",
+    "b": "artist.michael_romeo",
+    "distance": 4
+   },
+   {
+    "a": "artist.leprous",
+    "b": "artist.pain_of_salvation",
+    "distance": 6
+   },
+   {
+    "a": "artist.between_the_buried_and_me",
+    "b": "artist.michael_romeo",
+    "distance": 4
+   },
+   {
+    "a": "artist.monuments",
+    "b": "artist.textures",
+    "distance": 2
+   },
+   {
+    "a": "artist.monuments",
+    "b": "artist.volumes",
+    "distance": 0
+   },
+   {
+    "a": "artist.textures",
+    "b": "artist.volumes",
+    "distance": 2
+   },
+   {
+    "a": "artist.drowning_pool",
+    "b": "artist.coal_chamber",
+    "distance": 2
+   },
+   {
+    "a": "artist.jinjer",
+    "b": "artist.architects",
+    "distance": 4
+   },
+   {
+    "a": "artist.jinjer",
+    "b": "artist.spiritbox",
+    "distance": 2
+   },
+   {
+    "a": "artist.jinjer",
+    "b": "artist.motionless_in_white",
+    "distance": 2
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.parkway_drive",
+    "distance": 4
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.unearth",
+    "distance": 2
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.shadows_fall",
+    "distance": 6
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.miss_may_i",
+    "distance": 0
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.while_she_sleeps",
+    "distance": 2
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.caliban",
+    "distance": 4
+   },
+   {
+    "a": "artist.as_i_lay_dying",
+    "b": "artist.heaven_shall_burn",
+    "distance": 4
+   },
+   {
+    "a": "artist.parkway_drive",
+    "b": "artist.unearth",
+    "distance": 2
+   },
+   {
+    "a": "artist.parkway_drive",
+    "b": "artist.shadows_fall",
+    "distance": 6
+   },
+   {
+    "a": "artist.parkway_drive",
+    "b": "artist.miss_may_i",
+    "distance": 4
+   },
+   {
+    "a": "artist.parkway_drive",
+    "b": "artist.while_she_sleeps",
+    "distance": 2
+   },
+   {
+    "a": "artist.parkway_drive",
+    "b": "artist.caliban",
+    "distance": 4
+   },
+   {
+    "a": "artist.parkway_drive",
+    "b": "artist.heaven_shall_burn",
+    "distance": 4
+   },
+   {
+    "a": "artist.architects",
+    "b": "artist.spiritbox",
+    "distance": 6
+   },
+   {
+    "a": "artist.architects",
+    "b": "artist.motionless_in_white",
+    "distance": 6
+   },
+   {
+    "a": "artist.august_burns_red",
+    "b": "artist.unearth",
+    "distance": 6
+   },
+   {
+    "a": "artist.august_burns_red",
+    "b": "artist.shadows_fall",
+    "distance": 6
+   },
+   {
+    "a": "artist.august_burns_red",
+    "b": "artist.all_that_remains",
+    "distance": 4
+   },
+   {
+    "a": "artist.august_burns_red",
+    "b": "artist.while_she_sleeps",
+    "distance": 6
+   },
+   {
+    "a": "artist.august_burns_red",
+    "b": "artist.bury_tomorrow",
+    "distance": 4
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.shadows_fall",
+    "distance": 4
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.all_that_remains",
+    "distance": 6
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.miss_may_i",
+    "distance": 2
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.while_she_sleeps",
+    "distance": 0
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.bury_tomorrow",
+    "distance": 6
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.caliban",
+    "distance": 2
+   },
+   {
+    "a": "artist.unearth",
+    "b": "artist.heaven_shall_burn",
+    "distance": 2
+   },
+   {
+    "a": "artist.shadows_fall",
+    "b": "artist.all_that_remains",
+    "distance": 2
+   },
+   {
+    "a": "artist.shadows_fall",
+    "b": "artist.miss_may_i",
+    "distance": 6
+   },
+   {
+    "a": "artist.shadows_fall",
+    "b": "artist.while_she_sleeps",
+    "distance": 4
+   },
+   {
+    "a": "artist.shadows_fall",
+    "b": "artist.bury_tomorrow",
+    "distance": 2
+   },
+   {
+    "a": "artist.shadows_fall",
+    "b": "artist.caliban",
+    "distance": 2
+   },
+   {
+    "a": "artist.shadows_fall",
+    "b": "artist.heaven_shall_burn",
+    "distance": 6
+   },
+   {
+    "a": "artist.atreyu",
+    "b": "artist.all_that_remains",
+    "distance": 6
+   },
+   {
+    "a": "artist.atreyu",
+    "b": "artist.bury_tomorrow",
+    "distance": 6
+   },
+   {
+    "a": "artist.all_that_remains",
+    "b": "artist.while_she_sleeps",
+    "distance": 6
+   },
+   {
+    "a": "artist.all_that_remains",
+    "b": "artist.bury_tomorrow",
+    "distance": 0
+   },
+   {
+    "a": "artist.all_that_remains",
+    "b": "artist.caliban",
+    "distance": 4
+   },
+   {
+    "a": "artist.miss_may_i",
+    "b": "artist.while_she_sleeps",
+    "distance": 2
+   },
+   {
+    "a": "artist.miss_may_i",
+    "b": "artist.caliban",
+    "distance": 4
+   },
+   {
+    "a": "artist.miss_may_i",
+    "b": "artist.heaven_shall_burn",
+    "distance": 4
+   },
+   {
+    "a": "artist.while_she_sleeps",
+    "b": "artist.bury_tomorrow",
+    "distance": 6
+   },
+   {
+    "a": "artist.while_she_sleeps",
+    "b": "artist.caliban",
+    "distance": 2
+   },
+   {
+    "a": "artist.while_she_sleeps",
+    "b": "artist.heaven_shall_burn",
+    "distance": 2
+   },
+   {
+    "a": "artist.bury_tomorrow",
+    "b": "artist.caliban",
+    "distance": 4
+   },
+   {
+    "a": "artist.caliban",
+    "b": "artist.heaven_shall_burn",
+    "distance": 4
+   },
+   {
+    "a": "artist.whitechapel",
+    "b": "artist.suicide_silence",
+    "distance": 4
+   },
+   {
+    "a": "artist.whitechapel",
+    "b": "artist.carnifex",
+    "distance": 4
+   },
+   {
+    "a": "artist.whitechapel",
+    "b": "artist.thy_art_is_murder",
+    "distance": 0
+   },
+   {
+    "a": "artist.whitechapel",
+    "b": "artist.job_for_a_cowboy",
+    "distance": 4
+   },
+   {
+    "a": "artist.whitechapel",
+    "b": "artist.despised_icon",
+    "distance": 4
+   },
+   {
+    "a": "artist.whitechapel",
+    "b": "artist.chelsea_grin",
+    "distance": 2
+   },
+   {
+    "a": "artist.suicide_silence",
+    "b": "artist.carnifex",
+    "distance": 4
+   },
+   {
+    "a": "artist.suicide_silence",
+    "b": "artist.thy_art_is_murder",
+    "distance": 4
+   },
+   {
+    "a": "artist.suicide_silence",
+    "b": "artist.job_for_a_cowboy",
+    "distance": 4
+   },
+   {
+    "a": "artist.suicide_silence",
+    "b": "artist.despised_icon",
+    "distance": 4
+   },
+   {
+    "a": "artist.suicide_silence",
+    "b": "artist.chelsea_grin",
+    "distance": 2
+   },
+   {
+    "a": "artist.carnifex",
+    "b": "artist.thy_art_is_murder",
+    "distance": 4
+   },
+   {
+    "a": "artist.carnifex",
+    "b": "artist.job_for_a_cowboy",
+    "distance": 0
+   },
+   {
+    "a": "artist.carnifex",
+    "b": "artist.despised_icon",
+    "distance": 0
+   },
+   {
+    "a": "artist.carnifex",
+    "b": "artist.chelsea_grin",
+    "distance": 2
+   },
+   {
+    "a": "artist.thy_art_is_murder",
+    "b": "artist.job_for_a_cowboy",
+    "distance": 4
+   },
+   {
+    "a": "artist.thy_art_is_murder",
+    "b": "artist.despised_icon",
+    "distance": 4
+   },
+   {
+    "a": "artist.thy_art_is_murder",
+    "b": "artist.chelsea_grin",
+    "distance": 2
+   },
+   {
+    "a": "artist.job_for_a_cowboy",
+    "b": "artist.despised_icon",
+    "distance": 0
+   },
+   {
+    "a": "artist.job_for_a_cowboy",
+    "b": "artist.chelsea_grin",
+    "distance": 2
+   },
+   {
+    "a": "artist.despised_icon",
+    "b": "artist.chelsea_grin",
+    "distance": 2
+   },
+   {
+    "a": "artist.spiritbox",
+    "b": "artist.motionless_in_white",
+    "distance": 0
+   },
+   {
+    "a": "artist.dire_straits",
+    "b": "artist.mark_knopfler",
+    "distance": 5
+   },
+   {
+    "a": "artist.zz_top",
+    "b": "artist.rory_gallagher",
+    "distance": 0
+   },
+   {
+    "a": "artist.aerosmith",
+    "b": "artist.grand_funk_railroad",
+    "distance": 4
+   },
+   {
+    "a": "artist.aerosmith",
+    "b": "artist.kiss",
+    "distance": 6
+   },
+   {
+    "a": "artist.aerosmith",
+    "b": "artist.alice_cooper",
+    "distance": 2
+   },
+   {
+    "a": "artist.aerosmith",
+    "b": "artist.airbourne",
+    "distance": 4
+   },
+   {
+    "a": "artist.aerosmith",
+    "b": "artist.volbeat",
+    "distance": 6
+   },
+   {
+    "a": "artist.eagles",
+    "b": "artist.bruce_springsteen",
+    "distance": 6
+   },
+   {
+    "a": "artist.eagles",
+    "b": "artist.steve_miller_band",
+    "distance": 4
+   },
+   {
+    "a": "artist.lynyrd_skynyrd",
+    "b": "artist.warren_haynes",
+    "distance": 4
+   },
+   {
+    "a": "artist.bad_company",
+    "b": "artist.steppenwolf",
+    "distance": 4
+   },
+   {
+    "a": "artist.bad_company",
+    "b": "artist.lenny_kravitz",
+    "distance": 4
+   },
+   {
+    "a": "artist.thin_lizzy",
+    "b": "artist.whitesnake",
+    "distance": 0
+   },
+   {
+    "a": "artist.thin_lizzy",
+    "b": "artist.ufo",
+    "distance": 6
+   },
+   {
+    "a": "artist.kansas",
+    "b": "artist.lenny_kravitz",
+    "distance": 6
+   },
+   {
+    "a": "artist.neil_young",
+    "b": "artist.the_white_stripes",
+    "distance": 4
+   },
+   {
+    "a": "artist.neil_young",
+    "b": "artist.the_black_keys",
+    "distance": 4
+   },
+   {
+    "a": "artist.neil_young",
+    "b": "artist.link_wray",
+    "distance": 4
+   },
+   {
+    "a": "artist.grand_funk_railroad",
+    "b": "artist.kiss",
+    "distance": 6
+   },
+   {
+    "a": "artist.grand_funk_railroad",
+    "b": "artist.alice_cooper",
+    "distance": 2
+   },
+   {
+    "a": "artist.grand_funk_railroad",
+    "b": "artist.airbourne",
+    "distance": 4
+   },
+   {
+    "a": "artist.grand_funk_railroad",
+    "b": "artist.rival_sons",
+    "distance": 6
+   },
+   {
+    "a": "artist.grand_funk_railroad",
+    "b": "artist.greta_van_fleet",
+    "distance": 4
+   },
+   {
+    "a": "artist.grand_funk_railroad",
+    "b": "artist.volbeat",
+    "distance": 2
+   },
+   {
+    "a": "artist.bon_jovi",
+    "b": "artist.poison",
+    "distance": 6
+   },
+   {
+    "a": "artist.bon_jovi",
+    "b": "artist.cinderella",
+    "distance": 4
+   },
+   {
+    "a": "artist.bon_jovi",
+    "b": "artist.warrant",
+    "distance": 6
+   },
+   {
+    "a": "artist.bon_jovi",
+    "b": "artist.quiet_riot",
+    "distance": 6
+   },
+   {
+    "a": "artist.bon_jovi",
+    "b": "artist.winger",
+    "distance": 4
+   },
+   {
+    "a": "artist.def_leppard",
+    "b": "artist.ratt",
+    "distance": 6
+   },
+   {
+    "a": "artist.def_leppard",
+    "b": "artist.extreme",
+    "distance": 0
+   },
+   {
+    "a": "artist.def_leppard",
+    "b": "artist.winger",
+    "distance": 6
+   },
+   {
+    "a": "artist.motley_crue",
+    "b": "artist.skid_row",
+    "distance": 6
+   },
+   {
+    "a": "artist.motley_crue",
+    "b": "artist.twisted_sister",
+    "distance": 6
+   },
+   {
+    "a": "artist.whitesnake",
+    "b": "artist.ufo",
+    "distance": 6
+   },
+   {
+    "a": "artist.poison",
+    "b": "artist.cinderella",
+    "distance": 6
+   },
+   {
+    "a": "artist.poison",
+    "b": "artist.warrant",
+    "distance": 4
+   },
+   {
+    "a": "artist.poison",
+    "b": "artist.quiet_riot",
+    "distance": 4
+   },
+   {
+    "a": "artist.poison",
+    "b": "artist.winger",
+    "distance": 2
+   },
+   {
+    "a": "artist.skid_row",
+    "b": "artist.twisted_sister",
+    "distance": 4
+   },
+   {
+    "a": "artist.ratt",
+    "b": "artist.twisted_sister",
+    "distance": 6
+   },
+   {
+    "a": "artist.ratt",
+    "b": "artist.quiet_riot",
+    "distance": 6
+   },
+   {
+    "a": "artist.ratt",
+    "b": "artist.extreme",
+    "distance": 6
+   },
+   {
+    "a": "artist.twisted_sister",
+    "b": "artist.cinderella",
+    "distance": 6
+   },
+   {
+    "a": "artist.twisted_sister",
+    "b": "artist.quiet_riot",
+    "distance": 4
+   },
+   {
+    "a": "artist.twisted_sister",
+    "b": "artist.winger",
+    "distance": 6
+   },
+   {
+    "a": "artist.kiss",
+    "b": "artist.alice_cooper",
+    "distance": 4
+   },
+   {
+    "a": "artist.kiss",
+    "b": "artist.airbourne",
+    "distance": 6
+   },
+   {
+    "a": "artist.kiss",
+    "b": "artist.rival_sons",
+    "distance": 4
+   },
+   {
+    "a": "artist.kiss",
+    "b": "artist.greta_van_fleet",
+    "distance": 2
+   },
+   {
+    "a": "artist.alice_cooper",
+    "b": "artist.airbourne",
+    "distance": 2
+   },
+   {
+    "a": "artist.alice_cooper",
+    "b": "artist.greta_van_fleet",
+    "distance": 6
+   },
+   {
+    "a": "artist.alice_cooper",
+    "b": "artist.volbeat",
+    "distance": 4
+   },
+   {
+    "a": "artist.cinderella",
+    "b": "artist.quiet_riot",
+    "distance": 2
+   },
+   {
+    "a": "artist.cinderella",
+    "b": "artist.winger",
+    "distance": 4
+   },
+   {
+    "a": "artist.warrant",
+    "b": "artist.winger",
+    "distance": 6
+   },
+   {
+    "a": "artist.quiet_riot",
+    "b": "artist.winger",
+    "distance": 2
+   },
+   {
+    "a": "artist.extreme",
+    "b": "artist.winger",
+    "distance": 6
+   },
+   {
+    "a": "artist.black_stone_cherry",
+    "b": "artist.volbeat",
+    "distance": 6
+   },
+   {
+    "a": "artist.airbourne",
+    "b": "artist.volbeat",
+    "distance": 2
+   },
+   {
+    "a": "artist.rival_sons",
+    "b": "artist.greta_van_fleet",
+    "distance": 2
+   },
+   {
+    "a": "artist.greta_van_fleet",
+    "b": "artist.volbeat",
+    "distance": 6
+   },
+   {
+    "a": "artist.porcupine_tree",
+    "b": "artist.steven_wilson",
+    "distance": 4
+   },
+   {
+    "a": "artist.stone_temple_pilots",
+    "b": "artist.screaming_trees",
+    "distance": 6
+   },
+   {
+    "a": "artist.stone_temple_pilots",
+    "b": "artist.hole",
+    "distance": 4
+   },
+   {
+    "a": "artist.screaming_trees",
+    "b": "artist.temple_of_the_dog",
+    "distance": 2
+   },
+   {
+    "a": "artist.screaming_trees",
+    "b": "artist.hole",
+    "distance": 6
+   },
+   {
+    "a": "artist.bush",
+    "b": "artist.silverchair",
+    "distance": 0
+   },
+   {
+    "a": "artist.bush",
+    "b": "artist.creed",
+    "distance": 2
+   },
+   {
+    "a": "artist.bush",
+    "b": "artist.staind",
+    "distance": 4
+   },
+   {
+    "a": "artist.bush",
+    "b": "artist.puddle_of_mudd",
+    "distance": 4
+   },
+   {
+    "a": "artist.silverchair",
+    "b": "artist.creed",
+    "distance": 2
+   },
+   {
+    "a": "artist.silverchair",
+    "b": "artist.staind",
+    "distance": 4
+   },
+   {
+    "a": "artist.silverchair",
+    "b": "artist.puddle_of_mudd",
+    "distance": 4
+   },
+   {
+    "a": "artist.candlebox",
+    "b": "artist.creed",
+    "distance": 6
+   },
+   {
+    "a": "artist.candlebox",
+    "b": "artist.three_doors_down",
+    "distance": 4
+   },
+   {
+    "a": "artist.candlebox",
+    "b": "artist.puddle_of_mudd",
+    "distance": 4
+   },
+   {
+    "a": "artist.creed",
+    "b": "artist.staind",
+    "distance": 2
+   },
+   {
+    "a": "artist.creed",
+    "b": "artist.puddle_of_mudd",
+    "distance": 2
+   },
+   {
+    "a": "artist.staind",
+    "b": "artist.puddle_of_mudd",
+    "distance": 4
+   },
+   {
+    "a": "artist.audioslave",
+    "b": "artist.pixies",
+    "distance": 0
+   },
+   {
+    "a": "artist.audioslave",
+    "b": "artist.weezer",
+    "distance": 6
+   },
+   {
+    "a": "artist.audioslave",
+    "b": "artist.placebo",
+    "distance": 0
+   },
+   {
+    "a": "artist.the_white_stripes",
+    "b": "artist.the_black_keys",
+    "distance": 0
+   },
+   {
+    "a": "artist.the_white_stripes",
+    "b": "artist.link_wray",
+    "distance": 0
+   },
+   {
+    "a": "artist.blur",
+    "b": "artist.kings_of_leon",
+    "distance": 4
+   },
+   {
+    "a": "artist.pixies",
+    "b": "artist.weezer",
+    "distance": 6
+   },
+   {
+    "a": "artist.pixies",
+    "b": "artist.placebo",
+    "distance": 0
+   },
+   {
+    "a": "artist.weezer",
+    "b": "artist.placebo",
+    "distance": 6
+   },
+   {
+    "a": "artist.the_black_keys",
+    "b": "artist.link_wray",
+    "distance": 0
+   },
+   {
+    "a": "artist.ramones",
+    "b": "artist.rancid",
+    "distance": 4
+   },
+   {
+    "a": "artist.ramones",
+    "b": "artist.pennywise",
+    "distance": 6
+   },
+   {
+    "a": "artist.ramones",
+    "b": "artist.anti_flag",
+    "distance": 6
+   },
+   {
+    "a": "artist.the_clash",
+    "b": "artist.dead_kennedys",
+    "distance": 4
+   },
+   {
+    "a": "artist.the_clash",
+    "b": "artist.descendents",
+    "distance": 2
+   },
+   {
+    "a": "artist.the_clash",
+    "b": "artist.social_distortion",
+    "distance": 2
+   },
+   {
+    "a": "artist.the_clash",
+    "b": "artist.against_me",
+    "distance": 6
+   },
+   {
+    "a": "artist.dead_kennedys",
+    "b": "artist.descendents",
+    "distance": 2
+   },
+   {
+    "a": "artist.dead_kennedys",
+    "b": "artist.social_distortion",
+    "distance": 6
+   },
+   {
+    "a": "artist.dead_kennedys",
+    "b": "artist.against_me",
+    "distance": 6
+   },
+   {
+    "a": "artist.bad_religion",
+    "b": "artist.nofx",
+    "distance": 4
+   },
+   {
+    "a": "artist.bad_religion",
+    "b": "artist.rancid",
+    "distance": 4
+   },
+   {
+    "a": "artist.bad_religion",
+    "b": "artist.pennywise",
+    "distance": 2
+   },
+   {
+    "a": "artist.bad_religion",
+    "b": "artist.anti_flag",
+    "distance": 2
+   },
+   {
+    "a": "artist.nofx",
+    "b": "artist.rancid",
+    "distance": 4
+   },
+   {
+    "a": "artist.nofx",
+    "b": "artist.pennywise",
+    "distance": 6
+   },
+   {
+    "a": "artist.nofx",
+    "b": "artist.anti_flag",
+    "distance": 2
+   },
+   {
+    "a": "artist.descendents",
+    "b": "artist.social_distortion",
+    "distance": 4
+   },
+   {
+    "a": "artist.descendents",
+    "b": "artist.against_me",
+    "distance": 4
+   },
+   {
+    "a": "artist.misfits",
+    "b": "artist.minor_threat",
+    "distance": 0
+   },
+   {
+    "a": "artist.misfits",
+    "b": "artist.against_me",
+    "distance": 4
+   },
+   {
+    "a": "artist.social_distortion",
+    "b": "artist.against_me",
+    "distance": 4
+   },
+   {
+    "a": "artist.rancid",
+    "b": "artist.pennywise",
+    "distance": 6
+   },
+   {
+    "a": "artist.rancid",
+    "b": "artist.anti_flag",
+    "distance": 2
+   },
+   {
+    "a": "artist.the_offspring",
+    "b": "artist.rise_against",
+    "distance": 4
+   },
+   {
+    "a": "artist.rise_against",
+    "b": "artist.new_found_glory",
+    "distance": 4
+   },
+   {
+    "a": "artist.pennywise",
+    "b": "artist.anti_flag",
+    "distance": 4
+   },
+   {
+    "a": "artist.minor_threat",
+    "b": "artist.against_me",
+    "distance": 4
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.good_charlotte",
+    "distance": 6
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.simple_plan",
+    "distance": 0
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.all_time_low",
+    "distance": 6
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.yellowcard",
+    "distance": 4
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.new_found_glory",
+    "distance": 4
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.neck_deep",
+    "distance": 0
+   },
+   {
+    "a": "artist.fall_out_boy",
+    "b": "artist.the_wonder_years",
+    "distance": 6
+   },
+   {
+    "a": "artist.good_charlotte",
+    "b": "artist.simple_plan",
+    "distance": 6
+   },
+   {
+    "a": "artist.good_charlotte",
+    "b": "artist.all_time_low",
+    "distance": 4
+   },
+   {
+    "a": "artist.good_charlotte",
+    "b": "artist.yellowcard",
+    "distance": 2
+   },
+   {
+    "a": "artist.good_charlotte",
+    "b": "artist.new_found_glory",
+    "distance": 6
+   },
+   {
+    "a": "artist.good_charlotte",
+    "b": "artist.neck_deep",
+    "distance": 6
+   },
+   {
+    "a": "artist.good_charlotte",
+    "b": "artist.the_wonder_years",
+    "distance": 0
+   },
+   {
+    "a": "artist.simple_plan",
+    "b": "artist.all_time_low",
+    "distance": 6
+   },
+   {
+    "a": "artist.simple_plan",
+    "b": "artist.yellowcard",
+    "distance": 4
+   },
+   {
+    "a": "artist.simple_plan",
+    "b": "artist.new_found_glory",
+    "distance": 4
+   },
+   {
+    "a": "artist.simple_plan",
+    "b": "artist.neck_deep",
+    "distance": 0
+   },
+   {
+    "a": "artist.simple_plan",
+    "b": "artist.the_wonder_years",
+    "distance": 6
+   },
+   {
+    "a": "artist.all_time_low",
+    "b": "artist.yellowcard",
+    "distance": 2
+   },
+   {
+    "a": "artist.all_time_low",
+    "b": "artist.neck_deep",
+    "distance": 6
+   },
+   {
+    "a": "artist.all_time_low",
+    "b": "artist.the_wonder_years",
+    "distance": 4
+   },
+   {
+    "a": "artist.yellowcard",
+    "b": "artist.neck_deep",
+    "distance": 4
+   },
+   {
+    "a": "artist.yellowcard",
+    "b": "artist.the_wonder_years",
+    "distance": 2
+   },
+   {
+    "a": "artist.new_found_glory",
+    "b": "artist.neck_deep",
+    "distance": 4
+   },
+   {
+    "a": "artist.new_found_glory",
+    "b": "artist.the_wonder_years",
+    "distance": 6
+   },
+   {
+    "a": "artist.neck_deep",
+    "b": "artist.the_wonder_years",
+    "distance": 6
+   },
+   {
+    "a": "artist.jimmy_eat_world",
+    "b": "artist.sunny_day_real_estate",
+    "distance": 4
+   },
+   {
+    "a": "artist.taking_back_sunday",
+    "b": "artist.sunny_day_real_estate",
+    "distance": 4
+   },
+   {
+    "a": "artist.taking_back_sunday",
+    "b": "artist.hawthorne_heights",
+    "distance": 4
+   },
+   {
+    "a": "artist.the_used",
+    "b": "artist.senses_fail",
+    "distance": 2
+   },
+   {
+    "a": "artist.the_used",
+    "b": "artist.hawthorne_heights",
+    "distance": 6
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.thursday",
+    "distance": 2
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.saosin",
+    "distance": 4
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.funeral_for_a_friend",
+    "distance": 2
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.at_the_drive_in",
+    "distance": 0
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.the_mars_volta",
+    "distance": 2
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.thrice",
+    "distance": 0
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.coheed_and_cambria",
+    "distance": 6
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.title_fight",
+    "distance": 6
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.alexisonfire",
+    "distance": 2
+   },
+   {
+    "a": "artist.afi",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 4
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.saosin",
+    "distance": 2
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.funeral_for_a_friend",
+    "distance": 0
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.at_the_drive_in",
+    "distance": 2
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.the_mars_volta",
+    "distance": 4
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.thrice",
+    "distance": 2
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.coheed_and_cambria",
+    "distance": 4
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.title_fight",
+    "distance": 4
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.alexisonfire",
+    "distance": 0
+   },
+   {
+    "a": "artist.thursday",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 2
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.funeral_for_a_friend",
+    "distance": 2
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.at_the_drive_in",
+    "distance": 4
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.the_mars_volta",
+    "distance": 6
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.thrice",
+    "distance": 4
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.coheed_and_cambria",
+    "distance": 2
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.title_fight",
+    "distance": 2
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.alexisonfire",
+    "distance": 2
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.pierce_the_veil",
+    "distance": 6
+   },
+   {
+    "a": "artist.saosin",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 0
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.at_the_drive_in",
+    "distance": 2
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.the_mars_volta",
+    "distance": 4
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.thrice",
+    "distance": 2
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.coheed_and_cambria",
+    "distance": 4
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.title_fight",
+    "distance": 4
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.alexisonfire",
+    "distance": 0
+   },
+   {
+    "a": "artist.funeral_for_a_friend",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 2
+   },
+   {
+    "a": "artist.at_the_drive_in",
+    "b": "artist.the_mars_volta",
+    "distance": 2
+   },
+   {
+    "a": "artist.at_the_drive_in",
+    "b": "artist.thrice",
+    "distance": 0
+   },
+   {
+    "a": "artist.at_the_drive_in",
+    "b": "artist.coheed_and_cambria",
+    "distance": 6
+   },
+   {
+    "a": "artist.at_the_drive_in",
+    "b": "artist.title_fight",
+    "distance": 6
+   },
+   {
+    "a": "artist.at_the_drive_in",
+    "b": "artist.alexisonfire",
+    "distance": 2
+   },
+   {
+    "a": "artist.at_the_drive_in",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 4
+   },
+   {
+    "a": "artist.the_mars_volta",
+    "b": "artist.refused",
+    "distance": 6
+   },
+   {
+    "a": "artist.the_mars_volta",
+    "b": "artist.thrice",
+    "distance": 2
+   },
+   {
+    "a": "artist.the_mars_volta",
+    "b": "artist.alexisonfire",
+    "distance": 4
+   },
+   {
+    "a": "artist.the_mars_volta",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 6
+   },
+   {
+    "a": "artist.refused",
+    "b": "artist.pierce_the_veil",
+    "distance": 6
+   },
+   {
+    "a": "artist.thrice",
+    "b": "artist.coheed_and_cambria",
+    "distance": 6
+   },
+   {
+    "a": "artist.thrice",
+    "b": "artist.title_fight",
+    "distance": 6
+   },
+   {
+    "a": "artist.thrice",
+    "b": "artist.alexisonfire",
+    "distance": 2
+   },
+   {
+    "a": "artist.thrice",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 4
+   },
+   {
+    "a": "artist.coheed_and_cambria",
+    "b": "artist.title_fight",
+    "distance": 0
+   },
+   {
+    "a": "artist.coheed_and_cambria",
+    "b": "artist.alexisonfire",
+    "distance": 4
+   },
+   {
+    "a": "artist.coheed_and_cambria",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 2
+   },
+   {
+    "a": "artist.title_fight",
+    "b": "artist.alexisonfire",
+    "distance": 4
+   },
+   {
+    "a": "artist.title_fight",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 2
+   },
+   {
+    "a": "artist.alexisonfire",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 2
+   },
+   {
+    "a": "artist.senses_fail",
+    "b": "artist.hawthorne_heights",
+    "distance": 4
+   },
+   {
+    "a": "artist.pierce_the_veil",
+    "b": "artist.sleeping_with_sirens",
+    "distance": 6
+   },
+   {
+    "a": "artist.godspeed_you_black_emperor",
+    "b": "artist.caspian",
+    "distance": 4
+   },
+   {
+    "a": "artist.godspeed_you_black_emperor",
+    "b": "artist.sixtyfive_days_of_static",
+    "distance": 6
+   },
+   {
+    "a": "artist.godspeed_you_black_emperor",
+    "b": "artist.mono",
+    "distance": 4
+   },
+   {
+    "a": "artist.guided_by_voices",
+    "b": "artist.sebadoh",
+    "distance": 0
+   },
+   {
+    "a": "artist.freddie_king",
+    "b": "artist.jimmie_vaughan",
+    "distance": 6
+   },
+   {
+    "a": "artist.freddie_king",
+    "b": "artist.lightnin_hopkins",
+    "distance": 6
+   },
+   {
+    "a": "artist.muddy_waters",
+    "b": "artist.howlin_wolf",
+    "distance": 6
+   },
+   {
+    "a": "artist.howlin_wolf",
+    "b": "artist.otis_rush",
+    "distance": 6
+   },
+   {
+    "a": "artist.howlin_wolf",
+    "b": "artist.junior_wells",
+    "distance": 6
+   },
+   {
+    "a": "artist.john_lee_hooker",
+    "b": "artist.otis_rush",
+    "distance": 6
+   },
+   {
+    "a": "artist.john_lee_hooker",
+    "b": "artist.junior_wells",
+    "distance": 6
+   },
+   {
+    "a": "artist.joe_bonamassa",
+    "b": "artist.walter_trout",
+    "distance": 2
+   },
+   {
+    "a": "artist.joe_bonamassa",
+    "b": "artist.eric_gales",
+    "distance": 4
+   },
+   {
+    "a": "artist.john_mayer",
+    "b": "artist.robben_ford",
+    "distance": 4
+   },
+   {
+    "a": "artist.walter_trout",
+    "b": "artist.eric_gales",
+    "distance": 6
+   },
+   {
+    "a": "artist.jimmie_vaughan",
+    "b": "artist.lightnin_hopkins",
+    "distance": 4
+   },
+   {
+    "a": "artist.otis_rush",
+    "b": "artist.junior_wells",
+    "distance": 0
+   },
+   {
+    "a": "artist.curtis_mayfield",
+    "b": "artist.al_green_band",
+    "distance": 4
+   },
+   {
+    "a": "artist.curtis_mayfield",
+    "b": "artist.motown_funk_brothers",
+    "distance": 4
+   },
+   {
+    "a": "artist.sly_and_the_family_stone",
+    "b": "artist.earth_wind_and_fire",
+    "distance": 2
+   },
+   {
+    "a": "artist.sly_and_the_family_stone",
+    "b": "artist.tower_of_power",
+    "distance": 6
+   },
+   {
+    "a": "artist.sly_and_the_family_stone",
+    "b": "artist.jamiroquai",
+    "distance": 4
+   },
+   {
+    "a": "artist.sly_and_the_family_stone",
+    "b": "artist.tom_misch",
+    "distance": 4
+   },
+   {
+    "a": "artist.earth_wind_and_fire",
+    "b": "artist.tower_of_power",
+    "distance": 4
+   },
+   {
+    "a": "artist.earth_wind_and_fire",
+    "b": "artist.jamiroquai",
+    "distance": 6
+   },
+   {
+    "a": "artist.earth_wind_and_fire",
+    "b": "artist.tom_misch",
+    "distance": 2
+   },
+   {
+    "a": "artist.tower_of_power",
+    "b": "artist.tom_misch",
+    "distance": 6
+   },
+   {
+    "a": "artist.al_green_band",
+    "b": "artist.motown_funk_brothers",
+    "distance": 0
+   },
+   {
+    "a": "artist.merle_haggard",
+    "b": "artist.vince_gill",
+    "distance": 0
+   },
+   {
+    "a": "artist.merle_haggard",
+    "b": "artist.buck_owens",
+    "distance": 2
+   },
+   {
+    "a": "artist.merle_haggard",
+    "b": "artist.waylon_jennings",
+    "distance": 2
+   },
+   {
+    "a": "artist.merle_haggard",
+    "b": "artist.marty_stuart",
+    "distance": 2
+   },
+   {
+    "a": "artist.merle_haggard",
+    "b": "artist.dwight_yoakam",
+    "distance": 4
+   },
+   {
+    "a": "artist.vince_gill",
+    "b": "artist.buck_owens",
+    "distance": 2
+   },
+   {
+    "a": "artist.vince_gill",
+    "b": "artist.waylon_jennings",
+    "distance": 2
+   },
+   {
+    "a": "artist.vince_gill",
+    "b": "artist.marty_stuart",
+    "distance": 2
+   },
+   {
+    "a": "artist.vince_gill",
+    "b": "artist.dwight_yoakam",
+    "distance": 4
+   },
+   {
+    "a": "artist.albert_lee",
+    "b": "artist.james_burton",
+    "distance": 2
+   },
+   {
+    "a": "artist.buck_owens",
+    "b": "artist.waylon_jennings",
+    "distance": 4
+   },
+   {
+    "a": "artist.buck_owens",
+    "b": "artist.marty_stuart",
+    "distance": 4
+   },
+   {
+    "a": "artist.buck_owens",
+    "b": "artist.dwight_yoakam",
+    "distance": 2
+   },
+   {
+    "a": "artist.waylon_jennings",
+    "b": "artist.zac_brown_band",
+    "distance": 6
+   },
+   {
+    "a": "artist.waylon_jennings",
+    "b": "artist.marty_stuart",
+    "distance": 0
+   },
+   {
+    "a": "artist.waylon_jennings",
+    "b": "artist.dwight_yoakam",
+    "distance": 2
+   },
+   {
+    "a": "artist.zac_brown_band",
+    "b": "artist.marty_stuart",
+    "distance": 6
+   },
+   {
+    "a": "artist.marty_stuart",
+    "b": "artist.dwight_yoakam",
+    "distance": 2
+   },
+   {
+    "a": "artist.wes_montgomery",
+    "b": "artist.joe_pass",
+    "distance": 6
+   },
+   {
+    "a": "artist.wes_montgomery",
+    "b": "artist.kenny_burrell",
+    "distance": 6
+   },
+   {
+    "a": "artist.wes_montgomery",
+    "b": "artist.grant_green",
+    "distance": 6
+   },
+   {
+    "a": "artist.wes_montgomery",
+    "b": "artist.jim_hall",
+    "distance": 6
+   },
+   {
+    "a": "artist.wes_montgomery",
+    "b": "artist.pat_martino",
+    "distance": 6
+   },
+   {
+    "a": "artist.joe_pass",
+    "b": "artist.kenny_burrell",
+    "distance": 0
+   },
+   {
+    "a": "artist.joe_pass",
+    "b": "artist.grant_green",
+    "distance": 0
+   },
+   {
+    "a": "artist.joe_pass",
+    "b": "artist.jim_hall",
+    "distance": 0
+   },
+   {
+    "a": "artist.joe_pass",
+    "b": "artist.charlie_christian",
+    "distance": 2
+   },
+   {
+    "a": "artist.joe_pass",
+    "b": "artist.pat_martino",
+    "distance": 0
+   },
+   {
+    "a": "artist.kenny_burrell",
+    "b": "artist.grant_green",
+    "distance": 0
+   },
+   {
+    "a": "artist.kenny_burrell",
+    "b": "artist.jim_hall",
+    "distance": 0
+   },
+   {
+    "a": "artist.kenny_burrell",
+    "b": "artist.charlie_christian",
+    "distance": 2
+   },
+   {
+    "a": "artist.kenny_burrell",
+    "b": "artist.pat_martino",
+    "distance": 0
+   },
+   {
+    "a": "artist.grant_green",
+    "b": "artist.jim_hall",
+    "distance": 0
+   },
+   {
+    "a": "artist.grant_green",
+    "b": "artist.charlie_christian",
+    "distance": 2
+   },
+   {
+    "a": "artist.grant_green",
+    "b": "artist.pat_martino",
+    "distance": 0
+   },
+   {
+    "a": "artist.jim_hall",
+    "b": "artist.charlie_christian",
+    "distance": 2
+   },
+   {
+    "a": "artist.jim_hall",
+    "b": "artist.pat_martino",
+    "distance": 0
+   },
+   {
+    "a": "artist.charlie_christian",
+    "b": "artist.pat_martino",
+    "distance": 2
+   },
+   {
+    "a": "artist.scott_henderson",
+    "b": "artist.jeff_beck",
+    "distance": 6
+   },
+   {
+    "a": "artist.scott_henderson",
+    "b": "artist.guthrie_govan",
+    "distance": 6
+   },
+   {
+    "a": "artist.jeff_beck",
+    "b": "artist.guthrie_govan",
+    "distance": 0
+   },
+   {
+    "a": "artist.paul_gilbert",
+    "b": "artist.randy_rhoads",
+    "distance": 4
+   },
+   {
+    "a": "artist.paul_gilbert",
+    "b": "artist.vinnie_moore",
+    "distance": 6
+   },
+   {
+    "a": "artist.paul_gilbert",
+    "b": "artist.tony_macalpine",
+    "distance": 4
+   },
+   {
+    "a": "artist.jason_becker",
+    "b": "artist.marty_friedman",
+    "distance": 4
+   },
+   {
+    "a": "artist.jason_becker",
+    "b": "artist.vinnie_moore",
+    "distance": 6
+   },
+   {
+    "a": "artist.marty_friedman",
+    "b": "artist.vinnie_moore",
+    "distance": 2
+   },
+   {
+    "a": "artist.marty_friedman",
+    "b": "artist.tony_macalpine",
+    "distance": 4
+   },
+   {
+    "a": "artist.randy_rhoads",
+    "b": "artist.steve_morse",
+    "distance": 6
+   },
+   {
+    "a": "artist.randy_rhoads",
+    "b": "artist.vinnie_moore",
+    "distance": 6
+   },
+   {
+    "a": "artist.randy_rhoads",
+    "b": "artist.tony_macalpine",
+    "distance": 4
+   },
+   {
+    "a": "artist.vinnie_moore",
+    "b": "artist.tony_macalpine",
+    "distance": 2
+   },
+   {
+    "a": "artist.brian_setzer",
+    "b": "artist.stray_cats",
+    "distance": 2
+   },
+   {
+    "a": "artist.stray_cats",
+    "b": "artist.carl_perkins",
+    "distance": 6
+   },
+   {
+    "a": "artist.stray_cats",
+    "b": "artist.scotty_moore",
+    "distance": 6
+   },
+   {
+    "a": "artist.carl_perkins",
+    "b": "artist.scotty_moore",
+    "distance": 4
+   }
+  ],
+  "artistAliasCollisions": {},
+  "songTitleCollisions": {},
+  "albumTitleCollisions": {},
+  "crossKindCollisions": {
+   "korn": [
+    "artist",
+    "album"
+   ],
+   "overkill": [
+    "artist",
+    "song"
+   ]
+  },
+  "parentsWithoutChildren": [
+   "album.in_flames.the_jester_race",
+   "album.meshuggah.destroy_erase_improve",
+   "album.nirvana.in_utero",
+   "album.slipknot.iowa",
+   "era.aerosmith.1980s",
+   "era.arctic_monkeys.garage",
+   "era.avenged_sevenfold.early",
+   "era.avenged_sevenfold.modern",
+   "era.bring_me_the_horizon.early",
+   "era.death.early",
+   "era.eric_clapton.1960s",
+   "era.in_flames.modern",
+   "era.iron_maiden.modern",
+   "era.linkin_park.modern",
+   "era.mastodon.modern",
+   "era.megadeth.1980s",
+   "era.metallica.modern",
+   "era.muse.modern",
+   "era.nine_inch_nails.1990s",
+   "era.nine_inch_nails.2000s",
+   "era.opeth.prog",
+   "era.paramore.new_wave",
+   "era.pearl_jam.2000s",
+   "era.radiohead.experimental",
+   "era.rush.1970s",
+   "era.sepultura.1980s",
+   "era.trivium.modern",
+   "era.u2.1980s",
+   "era.u2.1990s",
+   "tpl.style.fuzz_wall",
+   "tpl.style.scooped_modern",
+   "tpl.style.tight_downtuned_rhythm",
+   "tpl.style.vintage_crunch"
+  ],
+  "deadTemplates": [
+   "tpl.style.fuzz_wall",
+   "tpl.style.scooped_modern",
+   "tpl.style.tight_downtuned_rhythm",
+   "tpl.style.vintage_crunch"
+  ],
+  "deepInheritance": [],
+  "redundantOverrides": {
+   "artist.rammstein": [
+    "bass"
+   ],
+   "artist.linkin_park": [
+    "tightness"
+   ],
+   "artist.tool": [
+    "mids"
+   ],
+   "song.cky.96_quite_bitter_beings": [
+    "bass",
+    "gain",
+    "irBrightness",
+    "tightness"
+   ],
+   "song.children_of_bodom.downfall": [
+    "tightness"
+   ],
+   "song.children_of_bodom.angels_dont_kill": [
+    "lowMids",
+    "tightness"
+   ],
+   "artist.nirvana": [
+    "bass"
+   ],
+   "artist.red_hot_chili_peppers": [
+    "treble"
+   ]
+  }
+ }
+}

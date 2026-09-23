@@ -1,0 +1,867 @@
+{
+ "pack": {
+  "id": "metal_nu_alt_industrial",
+  "name": "Metal: Nu, Alternative, Industrial",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Nu-, Alternative- und Industrial-Metal-Acts.",
+  "entryCount": 20,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.limp_bizkit",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Limp Bizkit – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Limp Bizkit",
+   "genres": [
+    "nu_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "groovy",
+    "bouncy",
+    "scooped"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "bass": 66,
+     "mids": 34
+    }
+   }
+  },
+  {
+   "id": "artist.deftones",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Deftones – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Deftones",
+   "genres": [
+    "alternative_metal"
+   ],
+   "subgenres": [
+    "post_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "dark",
+    "wide",
+    "heavy",
+    "dreamy"
+   ],
+   "parents": [
+    "tpl.genre.alt_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "cSharpStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 60,
+     "modulation": 18,
+     "reverb": 26
+    },
+    "character": {
+     "darkness": 62,
+     "width": 70
+    }
+   }
+  },
+  {
+   "id": "artist.disturbed",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Disturbed – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Disturbed",
+   "genres": [
+    "nu_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "tight",
+    "punchy",
+    "mid-forward"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 78,
+     "mids": 44
+    }
+   }
+  },
+  {
+   "id": "artist.godsmack",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Godsmack – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Godsmack",
+   "genres": [
+    "nu_metal"
+   ],
+   "subgenres": [
+    "alternative_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "groovy",
+    "dark",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 60,
+     "tightness": 58
+    }
+   }
+  },
+  {
+   "id": "artist.papa_roach",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Papa Roach – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Papa Roach",
+   "genres": [
+    "nu_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bouncy",
+    "punchy",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.mudvayne",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mudvayne – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mudvayne",
+   "genres": [
+    "nu_metal"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "technical",
+    "scooped",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 76,
+     "mids": 36
+    }
+   }
+  },
+  {
+   "id": "artist.drowning_pool",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Drowning Pool – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Drowning Pool",
+   "genres": [
+    "nu_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "aggressive",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.stone_sour",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Stone Sour – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stone Sour",
+   "genres": [
+    "alternative_metal"
+   ],
+   "subgenres": [
+    "post_grunge"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "melodic",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.alt_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.coal_chamber",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Coal Chamber – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Coal Chamber",
+   "genres": [
+    "nu_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "groovy",
+    "dark",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tuningHints": [
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64
+    }
+   }
+  },
+  {
+   "id": "artist.faith_no_more",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Faith No More – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Faith No More",
+   "genres": [
+    "alternative_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "varied",
+    "dynamic",
+    "funky"
+   ],
+   "parents": [
+    "tpl.genre.alt_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "bass": 58,
+     "tightness": 62
+    }
+   }
+  },
+  {
+   "id": "artist.ghost",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ghost – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ghost",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "theatrical",
+    "melodic",
+    "polished"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 66,
+     "sustain": 68,
+     "reverb": 20
+    }
+   }
+  },
+  {
+   "id": "artist.jinjer",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jinjer – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jinjer",
+   "genres": [
+    "metalcore"
+   ],
+   "subgenres": [
+    "groove_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "tight",
+    "precise",
+    "modern"
+   ],
+   "parents": [
+    "tpl.style.dark_modern_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.fear_factory",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Fear Factory – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Fear Factory",
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "groove_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "machine",
+    "tight",
+    "gated"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 92,
+     "gateStrength": 80
+    }
+   }
+  },
+  {
+   "id": "artist.ministry",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ministry – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ministry",
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "aggressive",
+    "mechanical",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "saturation": 76,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.nine_inch_nails",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nine Inch Nails – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nine Inch Nails",
+   "artistAliases": [
+    "NIN"
+   ],
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "noisy",
+    "layered",
+    "distorted"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "saturation": 72,
+     "tightness": 70
+    },
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.static_x",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Static-X – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Static-X",
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "nu_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "mechanical",
+    "chugging",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68
+    }
+   }
+  },
+  {
+   "id": "artist.marilyn_manson",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Marilyn Manson – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Marilyn Manson",
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dark",
+    "gritty",
+    "theatrical"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "saturation": 66,
+     "tightness": 60
+    },
+    "character": {
+     "darkness": 60
+    }
+   }
+  },
+  {
+   "id": "artist.godflesh",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Godflesh – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Godflesh",
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "post_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "crushing",
+    "mechanical",
+    "slow"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 60,
+     "bass": 64
+    }
+   }
+  },
+  {
+   "id": "artist.kmfdm",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "KMFDM – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "KMFDM",
+   "genres": [
+    "industrial_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "rhythmic",
+    "synthetic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 82
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "artist.rob_zombie",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rob Zombie – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rob Zombie",
+   "genres": [
+    "industrial_metal"
+   ],
+   "subgenres": [
+    "groove_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "groovy",
+    "fuzzy",
+    "dark"
+   ],
+   "parents": [
+    "tpl.genre.industrial_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 68
+    },
+    "character": {
+     "fuzziness": 30
+    }
+   }
+  }
+ ]
+}

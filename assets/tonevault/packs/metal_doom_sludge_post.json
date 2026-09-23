@@ -1,0 +1,875 @@
+{
+ "pack": {
+  "id": "metal_doom_sludge_post",
+  "name": "Metal: Doom, Stoner, Sludge, Post",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Doom-, Stoner-, Sludge- und Post-Metal-Acts.",
+  "entryCount": 20,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.candlemass",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Candlemass – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Candlemass",
+   "genres": [
+    "doom_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "epic",
+    "slow",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "sustain": 76
+    }
+   }
+  },
+  {
+   "id": "artist.saint_vitus",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Saint Vitus – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Saint Vitus",
+   "genres": [
+    "doom_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "slow",
+    "raw",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 32
+    },
+    "character": {
+     "loFi": 25,
+     "vintage": 70
+    }
+   }
+  },
+  {
+   "id": "artist.pentagram",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pentagram – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pentagram",
+   "genres": [
+    "doom_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "vintage",
+    "raw",
+    "bluesy"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 36
+    },
+    "character": {
+     "vintage": 80
+    }
+   }
+  },
+  {
+   "id": "artist.electric_wizard",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Electric Wizard – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Electric Wizard",
+   "genres": [
+    "doom_metal"
+   ],
+   "subgenres": [
+    "stoner_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "fuzzy",
+    "wall-of-sound",
+    "murky"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "dropC",
+    "cSharpStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "saturation": 84,
+     "tightness": 26
+    },
+    "character": {
+     "fuzziness": 80
+    }
+   }
+  },
+  {
+   "id": "artist.sleep",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sleep – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sleep",
+   "genres": [
+    "stoner_metal"
+   ],
+   "subgenres": [
+    "doom_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "heavy",
+    "fuzzy",
+    "hypnotic"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "saturation": 78,
+     "bass": 70
+    },
+    "character": {
+     "fuzziness": 70
+    }
+   }
+  },
+  {
+   "id": "artist.kyuss",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kyuss – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kyuss",
+   "genres": [
+    "stoner_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "desert",
+    "fuzzy",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "fuzziness": 65,
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "artist.monster_magnet",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Monster Magnet – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Monster Magnet",
+   "genres": [
+    "stoner_metal"
+   ],
+   "subgenres": [
+    "psychedelic_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "spacey",
+    "fuzzy",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "modulation": 16
+    },
+    "character": {
+     "fuzziness": 55
+    }
+   }
+  },
+  {
+   "id": "artist.clutch",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Clutch – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Clutch",
+   "genres": [
+    "stoner_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "groovy",
+    "bluesy",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 60
+    },
+    "character": {
+     "fuzziness": 30
+    }
+   }
+  },
+  {
+   "id": "artist.high_on_fire",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "High on Fire – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "High on Fire",
+   "genres": [
+    "sludge_metal"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "aggressive",
+    "thick",
+    "fast-heavy"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 54
+    }
+   }
+  },
+  {
+   "id": "artist.melvins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Melvins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Melvins",
+   "genres": [
+    "sludge_metal"
+   ],
+   "subgenres": [
+    "grunge"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "sludgy",
+    "noisy",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "loFi": 25
+    }
+   }
+  },
+  {
+   "id": "artist.eyehategod",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Eyehategod – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eyehategod",
+   "genres": [
+    "sludge_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dirty",
+    "feedback",
+    "murky"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "saturation": 80
+    },
+    "character": {
+     "loFi": 30,
+     "fuzziness": 50
+    }
+   }
+  },
+  {
+   "id": "artist.acid_bath",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Acid Bath – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Acid Bath",
+   "genres": [
+    "sludge_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dark",
+    "murky",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 38
+    }
+   }
+  },
+  {
+   "id": "artist.baroness",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Baroness – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Baroness",
+   "genres": [
+    "sludge_metal"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "dynamic",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 52,
+     "sustain": 70,
+     "mids": 58
+    }
+   }
+  },
+  {
+   "id": "artist.corrosion_of_conformity",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Corrosion of Conformity – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Corrosion of Conformity",
+   "genres": [
+    "sludge_metal"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "groovy",
+    "southern",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 48,
+     "mids": 60
+    }
+   }
+  },
+  {
+   "id": "artist.neurosis",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Neurosis – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Neurosis",
+   "genres": [
+    "post_metal"
+   ],
+   "subgenres": [
+    "sludge_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "heavy",
+    "dynamic",
+    "tribal"
+   ],
+   "parents": [
+    "tpl.genre.post_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 44,
+     "sustain": 76
+    }
+   }
+  },
+  {
+   "id": "artist.isis",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Isis – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Isis",
+   "genres": [
+    "post_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "wide",
+    "heavy",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "sustain": 78
+    },
+    "character": {
+     "width": 85
+    }
+   }
+  },
+  {
+   "id": "artist.cult_of_luna",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Cult of Luna – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Cult of Luna",
+   "genres": [
+    "post_metal"
+   ],
+   "subgenres": [
+    "sludge_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "heavy",
+    "atmospheric",
+    "slow"
+   ],
+   "parents": [
+    "tpl.genre.post_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "reverb": 40
+    }
+   }
+  },
+  {
+   "id": "artist.pelican",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pelican – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pelican",
+   "genres": [
+    "post_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "instrumental",
+    "heavy",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.post_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 46,
+     "sustain": 74
+    }
+   }
+  },
+  {
+   "id": "artist.russian_circles",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Russian Circles – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Russian Circles",
+   "genres": [
+    "post_metal"
+   ],
+   "subgenres": [
+    "post_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "instrumental",
+    "dynamic",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.post_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "sustain": 78,
+     "delay": 30,
+     "reverb": 44
+    }
+   }
+  },
+  {
+   "id": "artist.mastodon",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mastodon – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mastodon",
+   "genres": [
+    "sludge_metal"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "technical",
+    "thick",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 58,
+     "mids": 54,
+     "sustain": 70
+    }
+   }
+  }
+ ]
+}

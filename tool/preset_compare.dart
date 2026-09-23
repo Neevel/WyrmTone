@@ -147,6 +147,8 @@ List<TimedMidiObservation> readPcapMidiObservations(String path) {
     'usb.data_len',
     '-e',
     'usbaudio.midi.event',
+    '-e',
+    'usb.capdata',
   ]);
   if (result.exitCode != 0) {
     throw FormatException('TShark failed: ${result.stderr}'.trim());
@@ -220,7 +222,11 @@ List<TimedMidiObservation> parseTsharkMidiFields(String output) {
     final timestampSeconds = double.tryParse(fields[0]);
     final endpoint = fields[1].toLowerCase();
     final dataLength = int.tryParse(fields[2]);
-    final eventField = fields.sublist(3).join(',').trim();
+    final dissectedEvent = fields[3].trim();
+    final rawCapture = fields.length >= 5
+        ? fields.sublist(4).join(',').trim()
+        : '';
+    final eventField = dissectedEvent.isNotEmpty ? dissectedEvent : rawCapture;
     // Empty completion URBs carry no MIDI bytes and are not device responses.
     if (dataLength == 0 || eventField.isEmpty) continue;
     final direction = endpoint == '0x03'

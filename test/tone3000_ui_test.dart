@@ -1,8 +1,6 @@
 import 'package:wyrmtone/controllers/recommendation_controller.dart';
 import 'package:wyrmtone/controllers/tone3000_controller.dart';
-import 'package:wyrmtone/models/guitar_profile.dart';
 import 'package:wyrmtone/screens/ir_library_page.dart';
-import 'package:wyrmtone/screens/recommendation_page.dart';
 import 'package:wyrmtone/screens/library_page.dart';
 import 'package:wyrmtone/nam/local_nam_capture.dart';
 import 'package:wyrmtone/services/local_persistence.dart';
@@ -154,51 +152,6 @@ void main() {
     await tester.pump();
     expect(find.text('IR Collection'), findsNothing);
   });
-
-  testWidgets('recommendation without a local IR opens TONE3000 selection', (
-    tester,
-  ) async {
-    final recommendation = _recommendationController();
-    await recommendation.saveProfile(_profile);
-    final browser = FakeTone3000Browser();
-    final tone3000 = _toneController(
-      clientId: 'publishable-test',
-      browser: browser,
-    );
-    addTearDown(recommendation.dispose);
-    addTearDown(tone3000.dispose);
-    addTearDown(browser.dispose);
-
-    await tester.pumpWidget(
-      MaterialApp(
-        home: RecommendationPage(
-          controller: recommendation,
-          tone3000: tone3000,
-        ),
-      ),
-    );
-    final browse = find.byKey(const Key('recommendation-tone3000-browse'));
-    await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(
-      find.byKey(const Key('legacy-recommendations')),
-      250,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.tap(find.byKey(const Key('legacy-recommendations')));
-    await tester.pumpAndSettle();
-    await tester.scrollUntilVisible(
-      browse,
-      300,
-      scrollable: find.byType(Scrollable).first,
-    );
-    await tester.pumpAndSettle();
-    await tester.tap(browse);
-    await tester.pump();
-
-    expect(browser.opened, hasLength(1));
-    expect(browser.opened.single.queryParameters['prompt'], 'select_tone');
-    expect(browser.opened.single.queryParameters['format'], 'ir');
-  });
 }
 
 RecommendationController _recommendationController() {
@@ -277,13 +230,3 @@ final _model = Tone3000Model(
   modelUrl: Uri.parse('https://files.tone3000.com/models/10.wav'),
 );
 
-const _profile = GuitarProfile(
-  id: 'guitar-1',
-  name: 'Testgitarre',
-  guitarType: GuitarType.superstrat,
-  pickupType: PickupType.passiveHumbucker,
-  outputLevel: OutputLevel.medium,
-  toneCharacter: ToneCharacter.neutral,
-  tuning: GuitarTuning.dStandard,
-  playbackPath: PlaybackPath.headphones,
-);

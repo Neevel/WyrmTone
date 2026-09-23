@@ -1,0 +1,746 @@
+{
+ "pack": {
+  "id": "funk_soul",
+  "name": "Funk und Soul",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Funk-, Soul- und R&B-Gitarrenacts.",
+  "entryCount": 17,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.nile_rodgers",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nile Rodgers – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nile Rodgers",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "scratchy",
+    "percussive",
+    "clean",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 6,
+     "compression": 56,
+     "attack": 82,
+     "reverb": 8
+    }
+   }
+  },
+  {
+   "id": "artist.cory_wong",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Cory Wong – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Cory Wong",
+   "genres": [
+    "funk"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "percussive",
+    "clean",
+    "compressed",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 6,
+     "compression": 54,
+     "attack": 80
+    }
+   }
+  },
+  {
+   "id": "artist.prince",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Prince – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Prince",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "soul",
+    "classic_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "funky",
+    "expressive",
+    "chorused"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24,
+     "modulation": 22,
+     "attack": 72
+    }
+   }
+  },
+  {
+   "id": "artist.curtis_mayfield",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Curtis Mayfield – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Curtis Mayfield",
+   "genres": [
+    "soul"
+   ],
+   "subgenres": [
+    "funk"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "clean",
+    "wah-tinged",
+    "sweet"
+   ],
+   "parents": [
+    "tpl.genre.blues_soul_rnb"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "modulation": 14
+    },
+    "character": {
+     "warmth": 72
+    }
+   }
+  },
+  {
+   "id": "artist.steve_cropper",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Steve Cropper – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Steve Cropper",
+   "genres": [
+    "soul"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "twangy",
+    "tight",
+    "dry"
+   ],
+   "parents": [
+    "tpl.genre.blues_soul_rnb"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "treble": 60,
+     "reverb": 10
+    }
+   }
+  },
+  {
+   "id": "artist.funkadelic",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Funkadelic – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Funkadelic",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "psychedelic_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "fuzzy",
+    "psychedelic",
+    "heavy-groove"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "modulation": 22
+    },
+    "character": {
+     "fuzziness": 40
+    }
+   }
+  },
+  {
+   "id": "artist.sly_and_the_family_stone",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sly and the Family Stone – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sly and the Family Stone",
+   "artistAliases": [
+    "Sly Stone"
+   ],
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "percussive",
+    "clean",
+    "groovy"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.earth_wind_and_fire",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Earth, Wind & Fire – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Earth, Wind & Fire",
+   "artistAliases": [
+    "Earth Wind and Fire"
+   ],
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "bright",
+    "tight",
+    "polished"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 8
+    },
+    "character": {
+     "clarity": 84
+    }
+   }
+  },
+  {
+   "id": "artist.vulfpeck",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Vulfpeck – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vulfpeck",
+   "genres": [
+    "funk"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "dry",
+    "tight",
+    "compressed"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 6,
+     "compression": 56,
+     "reverb": 6
+    }
+   }
+  },
+  {
+   "id": "artist.tower_of_power",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tower of Power – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tower of Power",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "tight",
+    "clean",
+    "percussive"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 8,
+     "attack": 80
+    }
+   }
+  },
+  {
+   "id": "artist.jamiroquai",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jamiroquai – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jamiroquai",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "soul"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "wah-driven",
+    "smooth",
+    "groovy"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "modulation": 18
+    }
+   }
+  },
+  {
+   "id": "artist.lenny_kravitz",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Lenny Kravitz – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Lenny Kravitz",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "funk"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "fuzzy"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44
+    },
+    "character": {
+     "vintage": 78,
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.john_frusciante",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "John Frusciante – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "John Frusciante",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "clean-to-fuzz",
+    "expressive"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "attack": 72
+    }
+   }
+  },
+  {
+   "id": "artist.al_green_band",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Al Green – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Al Green",
+   "genres": [
+    "soul"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "warm",
+    "sparse",
+    "clean"
+   ],
+   "parents": [
+    "tpl.genre.blues_soul_rnb"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10
+    },
+    "character": {
+     "warmth": 76
+    }
+   }
+  },
+  {
+   "id": "artist.motown_funk_brothers",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Funk Brothers – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Funk Brothers",
+   "artistAliases": [
+    "Funk Brothers"
+   ],
+   "genres": [
+    "soul"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "tight",
+    "warm",
+    "rhythmic"
+   ],
+   "parents": [
+    "tpl.genre.blues_soul_rnb"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10
+    }
+   }
+  },
+  {
+   "id": "artist.snarky_puppy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Snarky Puppy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Snarky Puppy",
+   "genres": [
+    "fusion"
+   ],
+   "subgenres": [
+    "funk"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "clean",
+    "tight",
+    "precise"
+   ],
+   "parents": [
+    "tpl.style.jazz_fusion"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 8
+    },
+    "character": {
+     "clarity": 84
+    }
+   }
+  },
+  {
+   "id": "artist.tom_misch",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tom Misch – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tom Misch",
+   "genres": [
+    "funk"
+   ],
+   "subgenres": [
+    "clean_pop"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "smooth",
+    "warm",
+    "compressed"
+   ],
+   "parents": [
+    "tpl.genre.funk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 8,
+     "compression": 50
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  }
+ ]
+}

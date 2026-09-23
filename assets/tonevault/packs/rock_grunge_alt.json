@@ -1,0 +1,1919 @@
+{
+ "pack": {
+  "id": "rock_grunge_alt",
+  "name": "Rock: Grunge, Post-Grunge, Alternative, Indie",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Grunge-, Post-Grunge-, Alternative- und Indie-Rock-Acts.",
+  "entryCount": 43,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.pearl_jam",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pearl Jam – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pearl Jam",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "warm",
+    "dynamic",
+    "organic"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "mids": 58
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.stone_temple_pilots",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Stone Temple Pilots – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Stone Temple Pilots",
+   "artistAliases": [
+    "STP"
+   ],
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "fuzzy",
+    "layered",
+    "thick"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "bass": 56
+    },
+    "character": {
+     "fuzziness": 35
+    }
+   }
+  },
+  {
+   "id": "artist.mudhoney",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mudhoney – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mudhoney",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "garage_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "fuzzy",
+    "raw",
+    "lo-fi"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "saturation": 74
+    },
+    "character": {
+     "fuzziness": 55,
+     "loFi": 40
+    }
+   }
+  },
+  {
+   "id": "artist.screaming_trees",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Screaming Trees – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Screaming Trees",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "psychedelic_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "warm",
+    "psychedelic",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    },
+    "character": {
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "artist.temple_of_the_dog",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Temple of the Dog – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Temple of the Dog",
+   "genres": [
+    "grunge"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "warm",
+    "melodic",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.hole",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Hole – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Hole",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "raw",
+    "noisy",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62
+    },
+    "character": {
+     "loFi": 35
+    }
+   }
+  },
+  {
+   "id": "artist.l7",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "L7 – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "L7",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "raw",
+    "heavy",
+    "punky"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 50
+    }
+   }
+  },
+  {
+   "id": "artist.bush",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bush – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bush",
+   "genres": [
+    "post_grunge"
+   ],
+   "subgenres": [
+    "grunge"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dense",
+    "polished",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "bass": 56
+    }
+   }
+  },
+  {
+   "id": "artist.silverchair",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Silverchair – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Silverchair",
+   "genres": [
+    "post_grunge"
+   ],
+   "subgenres": [
+    "grunge"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "heavy",
+    "dynamic",
+    "thick"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "bass": 56
+    }
+   }
+  },
+  {
+   "id": "artist.candlebox",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Candlebox – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Candlebox",
+   "genres": [
+    "post_grunge"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "warm",
+    "radio",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.creed",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Creed – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Creed",
+   "genres": [
+    "post_grunge"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "thick",
+    "polished",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "bass": 56
+    }
+   }
+  },
+  {
+   "id": "artist.nickelback",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nickelback – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nickelback",
+   "genres": [
+    "post_grunge"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "polished",
+    "heavy",
+    "radio"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 58
+    }
+   }
+  },
+  {
+   "id": "artist.three_doors_down",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Three Doors Down – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Three Doors Down",
+   "genres": [
+    "post_grunge"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "radio",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "modulation": 10
+    }
+   }
+  },
+  {
+   "id": "artist.staind",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Staind – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Staind",
+   "genres": [
+    "post_grunge"
+   ],
+   "subgenres": [
+    "alternative_metal"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "emotional"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "bass": 58
+    },
+    "character": {
+     "darkness": 55
+    }
+   }
+  },
+  {
+   "id": "artist.puddle_of_mudd",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Puddle of Mudd – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Puddle of Mudd",
+   "genres": [
+    "post_grunge"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "thick",
+    "radio",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.post_grunge"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.queens_of_the_stone_age",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Queens of the Stone Age – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Queens of the Stone Age",
+   "artistAliases": [
+    "QOTSA"
+   ],
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "stoner_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "desert",
+    "groovy",
+    "fuzzy"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "bass": 56
+    },
+    "character": {
+     "fuzziness": 35
+    }
+   }
+  },
+  {
+   "id": "artist.smashing_pumpkins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Smashing Pumpkins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Smashing Pumpkins",
+   "artistAliases": [
+    "Pumpkins"
+   ],
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "wall-of-fuzz",
+    "layered",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 70
+    },
+    "character": {
+     "fuzziness": 55,
+     "width": 70
+    }
+   }
+  },
+  {
+   "id": "artist.rage_against_the_machine",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rage Against the Machine – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rage Against the Machine",
+   "artistAliases": [
+    "RATM"
+   ],
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "alternative_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "funky",
+    "wah-driven",
+    "dry"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 60,
+     "mids": 62,
+     "reverb": 6
+    }
+   }
+  },
+  {
+   "id": "artist.audioslave",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Audioslave – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Audioslave",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "heavy",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.the_strokes",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Strokes – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Strokes",
+   "artistAliases": [
+    "Strokes"
+   ],
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "garage_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dry",
+    "jangly",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "tightness": 50,
+     "treble": 60,
+     "reverb": 8
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "artist.the_white_stripes",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The White Stripes – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The White Stripes",
+   "artistAliases": [
+    "White Stripes"
+   ],
+   "genres": [
+    "garage_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "raw",
+    "fuzzy",
+    "lo-fi"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 66
+    },
+    "character": {
+     "fuzziness": 45
+    }
+   }
+  },
+  {
+   "id": "artist.oasis",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Oasis – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Oasis",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "wall-of-sound",
+    "anthemic",
+    "thick"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 56,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.blur",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Blur – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Blur",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "angular",
+    "quirky",
+    "bright"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "artist.the_cure",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Cure – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Cure",
+   "genres": [
+    "post_punk"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "chorused",
+    "dark",
+    "spacey"
+   ],
+   "parents": [
+    "tpl.genre.post_punk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "modulation": 34,
+     "reverb": 32
+    },
+    "character": {
+     "darkness": 55
+    }
+   }
+  },
+  {
+   "id": "artist.the_smiths",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Smiths – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Smiths",
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "post_punk"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "jangly",
+    "bright",
+    "arpeggiated"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 20,
+     "treble": 64,
+     "modulation": 18
+    },
+    "character": {
+     "clarity": 78
+    }
+   }
+  },
+  {
+   "id": "artist.u2",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "U2 – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "U2",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "post_punk"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "delay-driven",
+    "shimmering",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "delay": 42,
+     "reverb": 30
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "artist.rem",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "R.E.M. – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "R.E.M.",
+   "artistAliases": [
+    "REM"
+   ],
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "jangly",
+    "warm",
+    "arpeggiated"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "treble": 60
+    },
+    "character": {
+     "warmth": 58
+    }
+   }
+  },
+  {
+   "id": "artist.pixies",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pixies – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pixies",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "angular",
+    "raw",
+    "loud-quiet"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "loFi": 25
+    }
+   }
+  },
+  {
+   "id": "artist.sonic_youth",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sonic Youth – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sonic Youth",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "noisy",
+    "dissonant",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "saturation": 66
+    },
+    "character": {
+     "loFi": 30
+    }
+   }
+  },
+  {
+   "id": "artist.weezer",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Weezer – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Weezer",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "crunchy",
+    "bright",
+    "catchy"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 58
+    }
+   }
+  },
+  {
+   "id": "artist.placebo",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Placebo – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Placebo",
+   "genres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "edgy",
+    "dark",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "darkness": 50
+    }
+   }
+  },
+  {
+   "id": "artist.interpol",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Interpol – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Interpol",
+   "genres": [
+    "post_punk"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "cold",
+    "angular",
+    "delay-tinged"
+   ],
+   "parents": [
+    "tpl.genre.post_punk"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "delay": 18,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.kings_of_leon",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kings of Leon – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kings of Leon",
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "twangy",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "warmth": 58
+    }
+   }
+  },
+  {
+   "id": "artist.the_killers",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Killers – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Killers",
+   "artistAliases": [
+    "Killers"
+   ],
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "anthemic",
+    "bright",
+    "layered"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "delay": 20,
+     "reverb": 22
+    }
+   }
+  },
+  {
+   "id": "artist.franz_ferdinand",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Franz Ferdinand – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Franz Ferdinand",
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "post_punk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dry",
+    "angular",
+    "danceable"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "treble": 62,
+     "reverb": 10
+    }
+   }
+  },
+  {
+   "id": "artist.vampire_weekend",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Vampire Weekend – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vampire Weekend",
+   "genres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bright",
+    "clean",
+    "rhythmic"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 16,
+     "treble": 62
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "artist.tame_impala",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tame Impala – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tame Impala",
+   "genres": [
+    "psychedelic_rock"
+   ],
+   "subgenres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "phasey",
+    "warm",
+    "hazy"
+   ],
+   "parents": [
+    "tpl.genre.psychedelic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "modulation": 36,
+     "reverb": 34,
+     "delay": 26
+    }
+   }
+  },
+  {
+   "id": "artist.foals",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Foals – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Foals",
+   "genres": [
+    "indie_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "math-rock",
+    "delay-driven",
+    "bright"
+   ],
+   "parents": [
+    "tpl.style.britpop_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "delay": 30,
+     "treble": 64
+    },
+    "character": {
+     "clarity": 80
+    }
+   }
+  },
+  {
+   "id": "artist.the_black_keys",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Black Keys – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Black Keys",
+   "artistAliases": [
+    "Black Keys"
+   ],
+   "genres": [
+    "garage_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "fuzzy",
+    "raw",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 66
+    },
+    "character": {
+     "fuzziness": 50,
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.royal_blood",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Royal Blood – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Royal Blood",
+   "genres": [
+    "garage_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "bass-heavy",
+    "fuzzy",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "bass": 64
+    },
+    "character": {
+     "fuzziness": 45
+    }
+   }
+  },
+  {
+   "id": "artist.wolf_alice",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Wolf Alice – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Wolf Alice",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "dynamic",
+    "fuzzy",
+    "dreamy"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "reverb": 26
+    },
+    "character": {
+     "fuzziness": 35
+    }
+   }
+  },
+  {
+   "id": "artist.biffy_clyro",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Biffy Clyro – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Biffy Clyro",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "dynamic",
+    "angular",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 60
+    }
+   }
+  },
+  {
+   "id": "artist.coldplay",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Coldplay – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Coldplay",
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "clean_pop"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "shimmering",
+    "delay-driven",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.clean_pop"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 20,
+     "delay": 38,
+     "reverb": 32,
+     "modulation": 20
+    }
+   }
+  }
+ ]
+}

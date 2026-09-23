@@ -1,4 +1,8 @@
+import 'package:wyrmtone/screens/matribox_raw_backup_panel.dart';
 import 'package:wyrmtone/screens/verified_matribox_probe_panel.dart';
+import 'package:wyrmtone/screens/verified_p01_read_probe_panel.dart';
+import 'package:wyrmtone/screens/verified_p01_full_read_probe_panel.dart';
+import 'package:wyrmtone/screens/verified_p01_full_read_probe_v3a_panel.dart';
 import 'package:wyrmtone/app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -13,7 +17,11 @@ void main() {
     addTearDown(() => tester.binding.setSurfaceSize(null));
     await tester.pumpWidget(WyrmToneApp(usbService: service));
     await tester.pumpAndSettle();
-    await tester.tap(find.text('Gerät'));
+    await tester.tap(find.text('Profil'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('open-device-settings')));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const Key('open-advanced-diagnostics')));
     await tester.pumpAndSettle();
     await tester.tap(find.byKey(const Key('advanced-diagnostics')));
     await tester.pumpAndSettle();
@@ -111,7 +119,7 @@ void main() {
     await renderApp(tester, service);
     await tester.pumpAndSettle();
 
-    expect(find.text('Gerät'), findsWidgets);
+    expect(find.text('Geräte-Diagnose'), findsOneWidget);
     expect(
       find.textContaining('Sonicake Matribox 1 / QME-50 erkannt'),
       findsOneWidget,
@@ -155,9 +163,10 @@ void main() {
     await renderApp(tester, service);
     await tester.pumpAndSettle();
 
-    expect(find.byKey(const Key('midi-open-button')), findsOneWidget);
-    await tester.tap(find.byKey(const Key('midi-open-button')));
-    await tester.pumpAndSettle();
+    // Auto-Connect already opened the read-only MIDI transport on its own (device detected,
+    // permission already granted): no manual tap needed, and Raw USB was never touched.
+    expect(find.byKey(const Key('midi-open-button')), findsNothing);
+    expect(service.midiOpenCalls, 1);
     expect(
       service.openCalls,
       0,
@@ -193,6 +202,22 @@ void main() {
       matriboxWriteProbeEnabled != matriboxPresetP01ProbeEnabled
           ? findsOneWidget
           : findsNothing,
+    );
+    expect(
+      find.byKey(const Key('verified-p01-read-probe-panel')),
+      matriboxP01ReadProbeEnabled ? findsOneWidget : findsNothing,
+    );
+    expect(
+      find.byKey(const Key('verified-p01-full-read-probe-panel')),
+      matriboxP01FullReadProbeEnabled ? findsOneWidget : findsNothing,
+    );
+    expect(
+      find.byKey(const Key('verified-p01-full-read-probe-v3a-panel')),
+      matriboxP01FullReadProbeV3AEnabled ? findsOneWidget : findsNothing,
+    );
+    expect(
+      find.byKey(const Key('matribox-raw-backup-panel')),
+      matriboxP01RawBackupEnabled ? findsOneWidget : findsNothing,
     );
   });
 }

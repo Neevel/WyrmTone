@@ -1,0 +1,968 @@
+{
+ "pack": {
+  "id": "metal_thrash_groove",
+  "name": "Metal: Thrash und Groove",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Thrash- und Groove-Metal-Acts.",
+  "entryCount": 23,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.anthrax",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Anthrax – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Anthrax",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "punchy",
+    "rhythmic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 88,
+     "mids": 44
+    }
+   }
+  },
+  {
+   "id": "artist.testament",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Testament – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Testament",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "precise",
+    "melodic-leads",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "upperMids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.exodus",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Exodus – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Exodus",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "bay-area"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 82,
+     "saturation": 72
+    }
+   }
+  },
+  {
+   "id": "artist.kreator",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kreator – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kreator",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "aggressive",
+    "german-thrash",
+    "sharp"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.sodom",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sodom – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sodom",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "dirty",
+    "punky"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "saturation": 74,
+     "tightness": 76
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "artist.destruction",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Destruction – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Destruction",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "sharp"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 80,
+     "presence": 62
+    }
+   }
+  },
+  {
+   "id": "artist.overkill",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Overkill – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Overkill",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "gritty",
+    "bass-heavy",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "bass": 52,
+     "tightness": 80
+    }
+   }
+  },
+  {
+   "id": "artist.sepultura",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sepultura – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sepultura",
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "tribal",
+    "downtuned",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.groove_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 78,
+     "bass": 58
+    }
+   }
+  },
+  {
+   "id": "artist.death_angel",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Death Angel – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Death Angel",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "2000s"
+   ],
+   "tags": [
+    "technical",
+    "tight",
+    "sharp"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 86,
+     "upperMids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.violence",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Vio-lence – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vio-lence",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 82
+    }
+   }
+  },
+  {
+   "id": "artist.nuclear_assault",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nuclear Assault – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nuclear Assault",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "punky",
+    "raw",
+    "fast"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 78,
+     "saturation": 68
+    }
+   }
+  },
+  {
+   "id": "artist.municipal_waste",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Municipal Waste – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Municipal Waste",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "party-thrash",
+    "raw",
+    "fast"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 80
+    },
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "artist.havok",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Havok – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Havok",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "modern-thrash",
+    "tight",
+    "clear"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 86
+    },
+    "character": {
+     "clarity": 72
+    }
+   }
+  },
+  {
+   "id": "artist.power_trip",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Power Trip – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Power Trip",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "raw",
+    "crossover",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 82,
+     "saturation": 72
+    }
+   }
+  },
+  {
+   "id": "artist.annihilator",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Annihilator – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Annihilator",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "technical",
+    "precise",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "sustain": 62
+    }
+   }
+  },
+  {
+   "id": "artist.sacred_reich",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sacred Reich – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sacred Reich",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "groovy",
+    "riff-driven",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 78,
+     "bass": 50
+    }
+   }
+  },
+  {
+   "id": "artist.flotsam_and_jetsam",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Flotsam and Jetsam – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Flotsam and Jetsam",
+   "genres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "melodic",
+    "tight",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 80,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.machine_head",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Machine Head – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Machine Head",
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "thrash_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "heavy",
+    "groovy",
+    "downtuned"
+   ],
+   "parents": [
+    "tpl.genre.groove_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 80
+    }
+   }
+  },
+  {
+   "id": "artist.white_zombie",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "White Zombie – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "White Zombie",
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "industrial_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "groovy",
+    "fuzzy",
+    "dirty"
+   ],
+   "parents": [
+    "tpl.genre.groove_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "saturation": 72,
+     "bass": 58
+    },
+    "character": {
+     "fuzziness": 35
+    }
+   }
+  },
+  {
+   "id": "artist.chimaira",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Chimaira – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Chimaira",
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "aggressive",
+    "tight",
+    "modern"
+   ],
+   "parents": [
+    "tpl.genre.groove_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 84
+    }
+   }
+  },
+  {
+   "id": "artist.devildriver",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "DevilDriver – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "DevilDriver",
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "aggressive",
+    "groovy",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.groove_metal"
+   ],
+   "tuningHints": [
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 80
+    }
+   }
+  },
+  {
+   "id": "artist.down",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Down – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Down",
+   "genres": [
+    "sludge_metal"
+   ],
+   "subgenres": [
+    "groove_metal"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "southern",
+    "heavy",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 42,
+     "mids": 54
+    }
+   }
+  },
+  {
+   "id": "artist.crowbar",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Crowbar – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Crowbar",
+   "genres": [
+    "sludge_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "crushing",
+    "slow",
+    "downtuned"
+   ],
+   "parents": [
+    "tpl.genre.sludge_metal"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropB"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "tightness": 32,
+     "bass": 68
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+{
+ "pack": {
+  "id": "extreme_metal",
+  "name": "Extreme Metal",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Melodic Death und verwandte Stile.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.cob",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Children of Bodom – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Children of Bodom",
+   "artistAliases": [
+    "COB"
+   ],
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "tight",
+    "melodic",
+    "keyboard-like leads"
+   ],
+   "parents": [
+    "tpl.genre.melodic_death_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (straffe Rhythmen, singende obere Mitten, melodische Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "tightness": 84,
+     "upperMids": 66
+    }
+   }
+  },
+  {
+   "id": "artist.in_flames",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "In Flames – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "In Flames",
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "melodic",
+    "twin-lead"
+   ],
+   "parents": [
+    "tpl.genre.melodic_death_metal"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (melodisch, Twin-Leads, straff); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 82,
+     "upperMids": 66
+    }
+   }
+  },
+  {
+   "id": "artist.arch_enemy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Arch Enemy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Arch Enemy",
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "melodic",
+    "shred",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.melodic_death_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (straff, virtuose Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 86,
+     "sustain": 66
+    }
+   }
+  },
+  {
+   "id": "artist.amon_amarth",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Amon Amarth – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Amon Amarth",
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "subgenres": [
+    "death_metal"
+   ],
+   "tags": [
+    "heavy",
+    "epic",
+    "mid-tempo"
+   ],
+   "parents": [
+    "tpl.genre.melodic_death_metal"
+   ],
+   "tuningHints": [
+    "dropD",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (schwer, episch, mittleres Tempo); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 74,
+     "bass": 52,
+     "sustain": 64
+    }
+   }
+  },
+  {
+   "id": "song.children_of_bodom.downfall",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Downfall",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Children of Bodom",
+   "artistAliases": [
+    "COB"
+   ],
+   "song": "Downfall",
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "parents": [
+    "artist.cob"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "tags": [
+    "melodic",
+    "tight"
+   ],
+   "notes": "Stilorientierte Beschreibung (straffe Rhythmen, singende Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "tightness": 84
+    }
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 70,
+       "sustain": 74,
+       "delay": 22,
+       "reverb": 18
+      },
+      "kinds": {
+       "delay": "digital",
+       "reverb": "hall"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "song.children_of_bodom.angels_dont_kill",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Angels Don't Kill",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Children of Bodom",
+   "artistAliases": [
+    "COB"
+   ],
+   "song": "Angels Don't Kill",
+   "songAliases": [
+    "Angels Dont Kill"
+   ],
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "parents": [
+    "artist.cob"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropC"
+   ],
+   "legacyProfileId": "cob-angels-dont-kill",
+   "goldReference": true,
+   "tags": [
+    "tight",
+    "melodic"
+   ],
+   "notes": "Migriert aus dem kuratierten WyrmTone-Profil cob-angels-dont-kill; Drop C ist die Nutzer-Zielstimmung, keine Aussage über die Originalaufnahme.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "saturation": 70,
+     "tightness": 84,
+     "attack": 80,
+     "sustain": 65,
+     "bass": 48,
+     "lowMids": 45,
+     "mids": 60,
+     "upperMids": 65,
+     "treble": 62,
+     "presence": 60,
+     "compression": 30,
+     "gateStrength": 55,
+     "gateOpening": 86,
+     "space": 12,
+     "delay": "off",
+     "reverb": 8,
+     "modulation": "off",
+     "irBrightness": 60
+    },
+    "kinds": {
+     "drive": "boost",
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "namTags": [
+     "jcm900",
+     "marshall",
+     "high gain"
+    ],
+    "cabinet": "4x12",
+    "speaker": "V30",
+    "microphone": "SM57"
+   }
+  }
+ ]
+}

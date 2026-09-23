@@ -116,6 +116,7 @@ void main() {
   });
 
   test('Matribox permission and read-only interface 3 lifecycle', () async {
+    controller.setAutoConnect(false);
     service.devices = [matriboxDevice()];
     await controller.initialize();
     expect(controller.matriboxDevice, isNotNull);
@@ -146,11 +147,91 @@ void main() {
   });
 
   test('Matribox permission denial does not loop', () async {
+    controller.setAutoConnect(false);
     service.devices = [matriboxDevice()];
     await controller.initialize();
     await service.emit({'type': 'permissionResult', 'granted': false});
     expect(service.permissionRequests, 0);
     expect(controller.copyableLog, contains('USB-Berechtigung abgelehnt'));
+  });
+
+  group('auto-connect (Matribox 1 only, MIDI only, no writes)', () {
+    test('a freshly detected Matribox is asked for permission automatically, once', () async {
+      service.devices = [matriboxDevice()];
+      await controller.initialize();
+      expect(service.permissionRequests, 1);
+      expect(service.lastPermissionDeviceName, '/dev/bus/usb/002/002');
+      // a second refresh (e.g. another attach event) does not ask again while still pending
+      await controller.refresh();
+      expect(service.permissionRequests, 1);
+    });
+
+    test('once permission is granted, the read-only MIDI transport opens automatically, once', () async {
+      service.devices = [matriboxDevice(hasPermission: true)];
+      service.midiDevices = [matriboxMidiDevice()];
+      await controller.initialize();
+      expect(service.midiOpenCalls, 1);
+      expect(controller.midiConnection.isOpen, isTrue);
+      expect(controller.copyableLog, contains('Keine Ports verbunden'));
+      // never opens raw USB and never opens the MIDI transport twice
+      expect(service.openCalls, 0);
+      await controller.refresh();
+      expect(service.midiOpenCalls, 1);
+    });
+
+    test('denial does not loop even with auto-connect on: no repeated requests, no auto-open', () async {
+      service.devices = [matriboxDevice()];
+      await controller.initialize();
+      expect(service.permissionRequests, 1);
+      await service.emit({'type': 'permissionResult', 'granted': false});
+      expect(service.permissionRequests, 1, reason: 'a denial is never retried automatically');
+      expect(service.midiOpenCalls, 0);
+    });
+
+    test('turning auto-connect off stops further automatic action; a later re-attach needs it back on', () async {
+      service.devices = [matriboxDevice()];
+      await controller.initialize();
+      expect(service.permissionRequests, 1);
+      controller.setAutoConnect(false);
+      service.devices = [];
+      await service.emit({'type': 'detached'});
+      service.devices = [matriboxDevice()];
+      await service.emit({'type': 'attached'});
+      expect(service.permissionRequests, 1, reason: 'auto-connect is off');
+      controller.setAutoConnect(true);
+      await service.emit({'type': 'attached'});
+      expect(service.permissionRequests, 2);
+    });
+
+    test('detach clears the per-attach guards so a genuine re-attach is retried', () async {
+      service.devices = [matriboxDevice()];
+      await controller.initialize();
+      expect(service.permissionRequests, 1);
+      service.devices = [];
+      await service.emit({'type': 'detached'});
+      service.devices = [matriboxDevice()];
+      await service.emit({'type': 'attached'});
+      expect(service.permissionRequests, 2);
+    });
+
+    test('DNAfx GiT Core is diagnosed but never auto-connected (Matribox-only scope)', () async {
+      service.devices = [dnafxDevice()];
+      await controller.initialize();
+      expect(service.permissionRequests, 0);
+      expect(service.openCalls, 0);
+    });
+
+    test('connectionState reflects the unified vocabulary through the whole lifecycle', () async {
+      expect(controller.connectionState, DeviceConnectionState.disconnected);
+      service.devices = [matriboxDevice()];
+      await controller.initialize();
+      expect(controller.connectionState, DeviceConnectionState.permissionRequired);
+      service.devices = [matriboxDevice(hasPermission: true)];
+      service.midiDevices = [matriboxMidiDevice()];
+      await service.emit({'type': 'permissionResult', 'granted': true});
+      expect(controller.connectionState, DeviceConnectionState.connected);
+      expect(controller.primaryDeviceStatusLabel, 'Matribox 1 · Verbunden');
+    });
   });
 
   test('closing an already closed connection remains safe', () async {

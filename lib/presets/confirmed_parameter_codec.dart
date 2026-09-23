@@ -70,14 +70,32 @@ abstract final class ConfirmedParameterCodec {
         'Only verified Sol 100 OD Gain 40/41 references may be encoded.',
       );
     }
-    final data = ByteData(10)
-      ..setUint32(0, message.algorithmCode, Endian.little)
-      ..setUint16(4, message.parameterIndex, Endian.little)
-      ..setFloat32(6, message.value, Endian.little);
-    return List.unmodifiable([
-      ..._prefix,
-      for (final byte in data.buffer.asUint8List()) ...[byte >> 4, byte & 15],
-      0xf7,
-    ]);
+    return encodeMessageBytes(
+      message.algorithmCode,
+      message.parameterIndex,
+      message.value,
+    );
   }
+}
+
+/// The shared 34-byte QME2 single-parameter message encoding (prefix +
+/// nibble-paired algorithm code / parameter index / float32 value +
+/// terminator). Exposed so other strictly-scoped, evidence-gated callers
+/// (e.g. `MatriboxSol100OdEncoder`) can reuse the exact same byte
+/// construction without duplicating it -- this function itself performs no
+/// evidence check; every caller is responsible for restricting which
+/// algorithm/index/value combinations it ever passes in.
+List<int> encodeMessageBytes(int algorithmCode, int parameterIndex, double value) {
+  if (!value.isFinite) {
+    throw const FormatException('Non-finite parameter value.');
+  }
+  final data = ByteData(10)
+    ..setUint32(0, algorithmCode, Endian.little)
+    ..setUint16(4, parameterIndex, Endian.little)
+    ..setFloat32(6, value, Endian.little);
+  return List.unmodifiable([
+    ...ConfirmedParameterCodec._prefix,
+    for (final byte in data.buffer.asUint8List()) ...[byte >> 4, byte & 15],
+    0xf7,
+  ]);
 }

@@ -317,6 +317,42 @@ abstract final class ProtocolEvidenceRegistry {
       ],
     ),
     ProtocolCapability(
+      id: 'preset.read',
+      description:
+          'Complete 10-part User/P01 preset readback (Phase D announce/ack + parts 0-9)',
+      level: EvidenceLevel.confirmed,
+      sources: _analysis,
+      write: false,
+      productionApproved: false,
+      hardwareTestRequired: false,
+      matriboxOneTested: true,
+      hardwareTestPossible: true,
+      sourceTarget: 'matriboxOne',
+      messageFamily: 'QME2 Phase-D announce/ack + 10-part full-read cycle',
+      knownLengths: [16, 20, 17, 19, 210, 46, 18],
+      relevantOffsets: {
+        '8-9': 'QME2 class 0x12/0x13 device->host, 0x11/0x13 host->device announce',
+        '13': 'bank (confirmed 0x00 = User for this test)',
+        '14': 'slot (confirmed 0x00 = P01 for this test)',
+        '16': 'part index 0-9 (response only)',
+      },
+      direction: 'hostToDevice announce/requests; deviceToHost ack/parts',
+      nextEvidenceStep:
+          'Independent second V3A hardware run (reproduction); separate '
+          'evidence required before generalizing beyond User/Slot 0.',
+      limitations: [
+        'Confirmed only for User bank, Slot 0 (P01); not generalized to '
+            'other slots or the Factory bank.',
+        'Single successful hardware run (2026-09-15); not yet '
+            'independently reproduced.',
+        'Compile-gated experimental probe '
+            '(VerifiedPresetP01FullReadProbeV3A) only; no production reader '
+            'implemented yet.',
+        'Session-global Phase A/B/C (Ping/Capability/Enumeration) were not '
+            'sent and are not required for this confirmed path.',
+      ],
+    ),
+    ProtocolCapability(
       id: 'preset.select',
       description: 'Observed preset-selection family; confirmed targets are listed separately',
       level: EvidenceLevel.correlated,
@@ -344,7 +380,7 @@ abstract final class ProtocolEvidenceRegistry {
       level: EvidenceLevel.observed,
       sources: [
         ..._analysis,
-        'https://github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
+        'github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
       ],
       sourceTarget: 'matriboxOne and matriboxIiPro',
       write: false,
@@ -366,7 +402,7 @@ abstract final class ProtocolEvidenceRegistry {
       level: EvidenceLevel.observed,
       sources: [
         ..._analysis,
-        'https://github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
+        'github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
       ],
       sourceTarget: 'matriboxOne and matriboxIiPro',
       write: false,
@@ -384,7 +420,7 @@ abstract final class ProtocolEvidenceRegistry {
       level: EvidenceLevel.observed,
       sources: [
         ..._analysis,
-        'https://github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
+        'github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
       ],
       sourceTarget: 'matriboxOne and matriboxIiPro',
       write: false,
@@ -402,7 +438,6 @@ abstract final class ProtocolEvidenceRegistry {
       ('preset.name.read', 'Receive preset name', false),
       ('preset.name.write', 'Send preset name', false),
       ('preset.save', 'Persist preset', false),
-      ('preset.read', 'Receive complete preset state', false),
       ('preset.transfer', 'Send complete preset state', false),
       ('effect.block.toggle', 'Toggle effect block', true),
       ('effect.model.select', 'Select effect model', false),
@@ -422,7 +457,7 @@ abstract final class ProtocolEvidenceRegistry {
         description: entry.$2,
         level: EvidenceLevel.unknown,
         sources: const [
-          'https://github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
+          'github.com/hurricaneabel/Matribox_II_Pro_MidiCon',
         ],
         sourceTarget: 'matriboxIiPro',
         write: !entry.$1.endsWith('.read'),

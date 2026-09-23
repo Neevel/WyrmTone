@@ -1,0 +1,682 @@
+{
+ "pack": {
+  "id": "country",
+  "name": "Country",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Country- und Americana-Gitarrenacts.",
+  "entryCount": 16,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.brad_paisley",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Brad Paisley – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Brad Paisley",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "twangy",
+    "virtuosic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "attack": 76,
+     "treble": 66
+    }
+   }
+  },
+  {
+   "id": "artist.johnny_cash",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Johnny Cash – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Johnny Cash",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "boom-chicka",
+    "dry",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "delay": 16
+    },
+    "character": {
+     "vintage": 75
+    }
+   }
+  },
+  {
+   "id": "artist.chet_atkins",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Chet Atkins – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Chet Atkins",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "jazz"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "clean",
+    "finger-picked",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 6,
+     "attack": 60
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  },
+  {
+   "id": "artist.merle_haggard",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Merle Haggard – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Merle Haggard",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1960s",
+    "1970s"
+   ],
+   "tags": [
+    "twangy",
+    "dry",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14
+    },
+    "character": {
+     "vintage": 72
+    }
+   }
+  },
+  {
+   "id": "artist.brent_mason",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Brent Mason – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Brent Mason",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "twangy",
+    "snappy",
+    "studio"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 20,
+     "attack": 78,
+     "compression": 50
+    }
+   }
+  },
+  {
+   "id": "artist.keith_urban",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Keith Urban – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Keith Urban",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bright",
+    "delay-driven",
+    "modern"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 28,
+     "delay": 26,
+     "treble": 66
+    }
+   }
+  },
+  {
+   "id": "artist.vince_gill",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Vince Gill – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vince Gill",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "clean",
+    "twangy",
+    "smooth"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14
+    },
+    "character": {
+     "warmth": 54
+    }
+   }
+  },
+  {
+   "id": "artist.albert_lee",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Albert Lee – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Albert Lee",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "fast",
+    "twangy",
+    "dry"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "attack": 78
+    }
+   }
+  },
+  {
+   "id": "artist.james_burton",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "James Burton – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "James Burton",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "twangy",
+    "snappy",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "attack": 78
+    },
+    "character": {
+     "vintage": 78
+    }
+   }
+  },
+  {
+   "id": "artist.buck_owens",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Buck Owens – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Buck Owens",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1960s"
+   ],
+   "tags": [
+    "bright",
+    "twangy",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "treble": 66
+    },
+    "character": {
+     "vintage": 78
+    }
+   }
+  },
+  {
+   "id": "artist.waylon_jennings",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Waylon Jennings – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Waylon Jennings",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "dry",
+    "twangy",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "warmth": 58
+    }
+   }
+  },
+  {
+   "id": "artist.chris_stapleton",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Chris Stapleton – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Chris Stapleton",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "warm",
+    "gritty",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.zac_brown_band",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Zac Brown Band – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Zac Brown Band",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "clean",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22
+    },
+    "character": {
+     "warmth": 56
+    }
+   }
+  },
+  {
+   "id": "artist.jerry_reed",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jerry Reed – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jerry Reed",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "finger-picked",
+    "snappy",
+    "dry"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 8,
+     "attack": 76
+    }
+   }
+  },
+  {
+   "id": "artist.marty_stuart",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Marty Stuart – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Marty Stuart",
+   "genres": [
+    "country"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "twangy",
+    "bright",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "vintage": 72
+    }
+   }
+  },
+  {
+   "id": "artist.dwight_yoakam",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dwight Yoakam – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dwight Yoakam",
+   "genres": [
+    "country"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "twangy",
+    "dry",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.country"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "treble": 66
+    }
+   }
+  }
+ ]
+}

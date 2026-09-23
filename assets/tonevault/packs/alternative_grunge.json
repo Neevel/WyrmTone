@@ -1,0 +1,424 @@
+{
+ "pack": {
+  "id": "alternative_grunge",
+  "name": "Alternative & Grunge",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Grunge, Alternative und Indie.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.nirvana",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Nirvana – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nirvana",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "tags": [
+    "raw",
+    "loose",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (roh, locker, dynamisch); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 38,
+     "bass": 58
+    }
+   }
+  },
+  {
+   "id": "artist.alice_in_chains",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Alice in Chains – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Alice in Chains",
+   "artistAliases": [
+    "AIC"
+   ],
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "alternative_metal"
+   ],
+   "tags": [
+    "dark",
+    "heavy",
+    "slow"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "ebStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (dunkel, schwer, langsam); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 44,
+     "bass": 60,
+     "treble": 44
+    }
+   }
+  },
+  {
+   "id": "artist.soundgarden",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Soundgarden – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Soundgarden",
+   "genres": [
+    "grunge"
+   ],
+   "subgenres": [
+    "stoner_metal"
+   ],
+   "tags": [
+    "heavy",
+    "odd-tunings"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (schwer, ungewöhnliche Stimmungen); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "tightness": 42,
+     "bass": 62
+    }
+   }
+  },
+  {
+   "id": "artist.foo_fighters",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Foo Fighters – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Foo Fighters",
+   "artistAliases": [
+    "Foos"
+   ],
+   "genres": [
+    "alternative_rock"
+   ],
+   "subgenres": [
+    "grunge"
+   ],
+   "tags": [
+    "punchy",
+    "driving",
+    "dense"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "dropD",
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (treibend, dicht, punchy); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 60,
+     "mids": 58
+    }
+   }
+  },
+  {
+   "id": "artist.red_hot_chili_peppers",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Red Hot Chili Peppers – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Red Hot Chili Peppers",
+   "artistAliases": [
+    "RHCP",
+    "Chili Peppers"
+   ],
+   "genres": [
+    "alternative_rock",
+    "funk"
+   ],
+   "tags": [
+    "funky",
+    "clean-ish",
+    "rhythmic"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (funky, eher clean, rhythmisch); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "tightness": 55,
+     "treble": 58,
+     "attack": 62
+    }
+   }
+  },
+  {
+   "id": "artist.muse",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Muse – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Muse",
+   "genres": [
+    "alternative_rock",
+    "progressive_rock"
+   ],
+   "tags": [
+    "fuzzy",
+    "synth-like",
+    "big"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (fuzzig, synth-artig, groß); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "saturation": 62,
+     "sustain": 72
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  },
+  {
+   "id": "artist.radiohead",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Radiohead – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Radiohead",
+   "genres": [
+    "alternative_rock",
+    "indie_rock"
+   ],
+   "subgenres": [
+    "experimental"
+   ],
+   "tags": [
+    "textural",
+    "dynamic",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "Stilorientierte Beschreibung (texturiert, dynamisch, experimentell); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "space": 26,
+     "modulation": 22
+    }
+   }
+  },
+  {
+   "id": "artist.arctic_monkeys",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Arctic Monkeys – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Arctic Monkeys",
+   "genres": [
+    "indie_rock"
+   ],
+   "subgenres": [
+    "garage_rock"
+   ],
+   "tags": [
+    "punchy",
+    "riff-driven",
+    "dry"
+   ],
+   "parents": [
+    "tpl.genre.alt_indie"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (punchy, riffbetont, trocken); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "tightness": 58,
+     "reverb": 12
+    }
+   }
+  },
+  {
+   "id": "album.nirvana.in_utero",
+   "schemaVersion": 1,
+   "type": "ALBUM_SIGNATURE",
+   "title": "Nirvana – In Utero (Album)",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Nirvana",
+   "album": "In Utero",
+   "year": 1993,
+   "era": "1990s",
+   "genres": [
+    "grunge"
+   ],
+   "parents": [
+    "artist.nirvana"
+   ],
+   "tags": [
+    "raw",
+    "abrasive"
+   ],
+   "notes": "Stilorientierte Beschreibung (rauer, kantiger Album-Charakter); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "saturation": 66,
+     "treble": 52,
+     "presence": 50,
+     "tightness": 36
+    },
+    "character": {
+     "aggression": 70
+    }
+   }
+  },
+  {
+   "id": "song.nirvana.come_as_you_are",
+   "schemaVersion": 1,
+   "type": "SONG",
+   "title": "Come As You Are",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "LOW",
+   "artist": "Nirvana",
+   "song": "Come As You Are",
+   "genres": [
+    "grunge"
+   ],
+   "parents": [
+    "artist.nirvana"
+   ],
+   "roles": [
+    "RHYTHM",
+    "CLEAN"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "legacyProfileId": "nirvana-come-as-you-are",
+   "notes": "Migriert/verwiesen aus dem kuratierten WyrmTone-Profil nirvana-come-as-you-are; stilistische Annäherung (Chorus-Charakter), keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "modulation": 30
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   }
+  }
+ ]
+}

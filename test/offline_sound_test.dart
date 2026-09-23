@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:wyrmtone/controllers/recommendation_controller.dart';
 import 'package:wyrmtone/devices/device_profile.dart';
@@ -9,7 +8,6 @@ import 'package:wyrmtone/models/guitar_profile.dart';
 import 'package:wyrmtone/models/recommendation.dart';
 import 'package:wyrmtone/models/tone_target.dart';
 import 'package:wyrmtone/nam/local_nam_capture.dart';
-import 'package:wyrmtone/screens/offline_sound_panel.dart';
 import 'package:wyrmtone/services/local_persistence.dart';
 import 'package:wyrmtone/services/offline_sound_engine.dart';
 import 'package:wyrmtone/services/offline_sound_profiles.dart';
@@ -201,6 +199,28 @@ void main() {
       throwsArgumentError,
     );
   });
+  test(
+    'both bundled profiles resolve to Sol 100 OD (not LD) on Matribox -- '
+    'so they DO translate today, unlike the DNAfx/J900 path',
+    () {
+      final angelsDontKill = draft(); // profiles.first, device: matriboxOne
+      final genreFallback = engine.create(
+        device: TargetDeviceId.matriboxOne,
+        profile: profiles.last,
+        guitar: guitar,
+        tuning: GuitarTuning.dropC,
+        role: SoundRole.rhythm,
+        nams: const [],
+        irs: const [],
+        folderIrs: const [],
+        availableUris: const {},
+      );
+      for (final d in [angelsDontKill, genreFallback]) {
+        final amp = d.blocks.firstWhere((b) => b.slot == 'AMP');
+        expect(amp.model, 'Sol 100 OD', reason: d.profile.id);
+      }
+    },
+  );
   test('local/architecture exclusions, stable top3 and no double cabinet', () {
     final nams = [
       for (var i = 0; i < 5; i++) nam('n$i'),
@@ -320,56 +340,15 @@ void main() {
       expect(snapshot(c.offlineDraft!), original);
     },
   );
-  testWidgets('offline UI creates draft and previews explicit correction', (
-    tester,
-  ) async {
-    final c = controller();
-    addTearDown(c.dispose);
-    await tester.pumpWidget(
-      MaterialApp(
-        home: Scaffold(
-          body: SingleChildScrollView(child: OfflineSoundPanel(controller: c)),
-        ),
-      ),
-    );
-    await tester.pumpAndSettle();
-    for (var step = 0; step < 3; step++) {
-      await tester.ensureVisible(find.byKey(const Key('wizard-next')));
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const Key('wizard-next')));
-      await tester.pumpAndSettle();
-    }
-    await tester.ensureVisible(find.text('Sound erstellen'));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Sound erstellen'));
-    await tester.pumpAndSettle();
-    expect(c.offlineDraft, isNotNull);
-    expect(find.text('Offline erstellt · Keine KI verwendet'), findsOneWidget);
-    expect(find.textContaining('Rhythmus'), findsWidgets);
-    for (var step = 0; step < 2; step++) {
-      await tester.ensureVisible(find.byKey(const Key('wizard-next')));
-      await tester.pumpAndSettle();
-      await tester.tap(find.byKey(const Key('wizard-next')));
-      await tester.pumpAndSettle();
-    }
-    await tester.ensureVisible(find.text('Zu schrill'));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Zu schrill'));
-    await tester.pumpAndSettle();
-    expect(c.offlinePreview, isNotNull);
-    expect(find.textContaining('Nur nach „Anwenden“'), findsOneWidget);
-    await tester.ensureVisible(find.text('Anwenden'));
-    await tester.pumpAndSettle();
-    await tester.tap(find.text('Anwenden'));
-    await tester.pumpAndSettle();
-    expect(c.canUndoCorrection, isTrue);
-    expect(tester.takeException(), isNull);
-  });
   test('offline paths cannot access network, TONE3000 actions or probe', () {
     for (final path in [
       'lib/services/offline_sound_engine.dart',
       'lib/services/offline_sound_profiles.dart',
-      'lib/screens/offline_sound_panel.dart',
+      'lib/sounds/sound_session.dart',
+      'lib/sounds/sound_selection.dart',
+      'lib/screens/sounds_page.dart',
+      'lib/screens/sound_detail_page.dart',
+      'lib/screens/your_sound_page.dart',
     ]) {
       final source = File(path).readAsStringSync();
       for (final forbidden in [

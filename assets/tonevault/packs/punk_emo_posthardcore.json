@@ -1,0 +1,2152 @@
+{
+ "pack": {
+  "id": "punk_emo_posthardcore",
+  "name": "Punk, Pop Punk, Emo, Post-Hardcore",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Punk-, Pop-Punk-, Emo- und Post-Hardcore-Acts.",
+  "entryCount": 52,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.ramones",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ramones – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ramones",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "buzzsaw",
+    "downstroke",
+    "fast"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 64,
+     "mids": 58
+    }
+   }
+  },
+  {
+   "id": "artist.sex_pistols",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sex Pistols – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sex Pistols",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "thick",
+    "raw",
+    "loud"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "saturation": 62,
+     "mids": 62
+    }
+   }
+  },
+  {
+   "id": "artist.the_clash",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Clash – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Clash",
+   "genres": [
+    "punk_rock"
+   ],
+   "subgenres": [
+    "post_punk"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "raw",
+    "bright",
+    "rhythmic"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "artist.dead_kennedys",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dead Kennedys – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dead Kennedys",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "surfy",
+    "raw",
+    "angular"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "treble": 62
+    },
+    "character": {
+     "loFi": 25
+    }
+   }
+  },
+  {
+   "id": "artist.bad_religion",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bad Religion – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bad Religion",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "melodic",
+    "fast",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.nofx",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "NOFX – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "NOFX",
+   "genres": [
+    "punk_rock"
+   ],
+   "subgenres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "melodic",
+    "fast",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.descendents",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Descendents – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Descendents",
+   "genres": [
+    "punk_rock"
+   ],
+   "subgenres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "melodic",
+    "fast",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "treble": 60
+    }
+   }
+  },
+  {
+   "id": "artist.misfits",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Misfits – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Misfits",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "dark",
+    "raw",
+    "horror-punk"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    },
+    "character": {
+     "darkness": 45
+    }
+   }
+  },
+  {
+   "id": "artist.social_distortion",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Social Distortion – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Social Distortion",
+   "genres": [
+    "punk_rock"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "warm",
+    "rockabilly-tinged",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48
+    },
+    "character": {
+     "warmth": 58
+    }
+   }
+  },
+  {
+   "id": "artist.rancid",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rancid – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rancid",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "raw",
+    "rhythmic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 64
+    }
+   }
+  },
+  {
+   "id": "artist.the_offspring",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Offspring – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Offspring",
+   "artistAliases": [
+    "Offspring"
+   ],
+   "genres": [
+    "pop_punk"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "tight",
+    "punchy",
+    "bright"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 66,
+     "treble": 58
+    }
+   }
+  },
+  {
+   "id": "artist.rise_against",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rise Against – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rise Against",
+   "genres": [
+    "punk_rock"
+   ],
+   "subgenres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "tight",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.pennywise",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pennywise – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pennywise",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "fast",
+    "tight",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.black_flag",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Black Flag – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Black Flag",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "heavy",
+    "abrasive"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "saturation": 66
+    },
+    "character": {
+     "loFi": 35
+    }
+   }
+  },
+  {
+   "id": "artist.minor_threat",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Minor Threat – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Minor Threat",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "raw",
+    "fast",
+    "lo-fi"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    },
+    "character": {
+     "loFi": 45
+    }
+   }
+  },
+  {
+   "id": "artist.anti_flag",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Anti-Flag – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Anti-Flag",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "energetic",
+    "tight",
+    "direct"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.against_me",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Against Me! – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Against Me!",
+   "artistAliases": [
+    "Against Me"
+   ],
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "energetic",
+    "raw",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "character": {
+     "loFi": 15
+    }
+   }
+  },
+  {
+   "id": "artist.flogging_molly",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Flogging Molly – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Flogging Molly",
+   "genres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "folky",
+    "driving",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.punk_classic"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40
+    },
+    "character": {
+     "warmth": 58
+    }
+   }
+  },
+  {
+   "id": "artist.paramore",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Paramore – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Paramore",
+   "genres": [
+    "pop_punk"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "bright",
+    "tight",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 66,
+     "delay": 12
+    }
+   }
+  },
+  {
+   "id": "artist.fall_out_boy",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Fall Out Boy – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Fall Out Boy",
+   "genres": [
+    "pop_punk"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "catchy",
+    "tight",
+    "bright"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.good_charlotte",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Good Charlotte – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Good Charlotte",
+   "genres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bright",
+    "punchy",
+    "radio"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.simple_plan",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Simple Plan – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Simple Plan",
+   "genres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bright",
+    "polished",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.all_time_low",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "All Time Low – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "All Time Low",
+   "genres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "bright",
+    "catchy",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50
+    }
+   }
+  },
+  {
+   "id": "artist.yellowcard",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Yellowcard – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Yellowcard",
+   "genres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "bright",
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    }
+   }
+  },
+  {
+   "id": "artist.new_found_glory",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "New Found Glory – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "New Found Glory",
+   "genres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "tight",
+    "punchy"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.neck_deep",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Neck Deep – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Neck Deep",
+   "genres": [
+    "pop_punk"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "bright",
+    "tight",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 66
+    }
+   }
+  },
+  {
+   "id": "artist.the_wonder_years",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Wonder Years – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Wonder Years",
+   "genres": [
+    "pop_punk"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "dynamic",
+    "anthemic",
+    "thick"
+   ],
+   "parents": [
+    "tpl.style.pop_punk_modern"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff."
+  },
+  {
+   "id": "artist.angels_and_airwaves",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Angels & Airwaves – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Angels & Airwaves",
+   "genres": [
+    "emo"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "delay-driven",
+    "spacious",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "delay": 40,
+     "reverb": 30
+    }
+   }
+  },
+  {
+   "id": "artist.jimmy_eat_world",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jimmy Eat World – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jimmy Eat World",
+   "genres": [
+    "emo"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "clean-crunch",
+    "melodic",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "modulation": 14
+    }
+   }
+  },
+  {
+   "id": "artist.taking_back_sunday",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Taking Back Sunday – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Taking Back Sunday",
+   "genres": [
+    "emo"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "interlocking",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48
+    }
+   }
+  },
+  {
+   "id": "artist.dashboard_confessional",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dashboard Confessional – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dashboard Confessional",
+   "genres": [
+    "emo"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "warm",
+    "strummy",
+    "expressive"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 24
+    },
+    "character": {
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.the_used",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Used – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Used",
+   "genres": [
+    "emo"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "energetic",
+    "thick",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    }
+   }
+  },
+  {
+   "id": "artist.afi",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "AFI – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "AFI",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "dark",
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    },
+    "character": {
+     "darkness": 48
+    }
+   }
+  },
+  {
+   "id": "artist.thursday",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Thursday – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Thursday",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "angular",
+    "dark"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    }
+   }
+  },
+  {
+   "id": "artist.saosin",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Saosin – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Saosin",
+   "genres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "clean-drive",
+    "melodic",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54
+    }
+   }
+  },
+  {
+   "id": "artist.funeral_for_a_friend",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Funeral for a Friend – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Funeral for a Friend",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    }
+   }
+  },
+  {
+   "id": "artist.at_the_drive_in",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "At the Drive-In – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "At the Drive-In",
+   "artistAliases": [
+    "At the Drive In"
+   ],
+   "genres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "chaotic",
+    "angular",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "artist.the_mars_volta",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "The Mars Volta – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Mars Volta",
+   "artistAliases": [
+    "Mars Volta"
+   ],
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "chaotic",
+    "fuzzy",
+    "psychedelic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60
+    },
+    "character": {
+     "fuzziness": 45
+    }
+   }
+  },
+  {
+   "id": "artist.fugazi",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Fugazi – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Fugazi",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "angular",
+    "dry",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "reverb": 6
+    },
+    "character": {
+     "loFi": 20
+    }
+   }
+  },
+  {
+   "id": "artist.refused",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Refused – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Refused",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "punk_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "aggressive",
+    "tight",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.thrice",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Thrice – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Thrice",
+   "genres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dynamic",
+    "heavy",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58
+    }
+   }
+  },
+  {
+   "id": "artist.circa_survive",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Circa Survive – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Circa Survive",
+   "genres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "dreamy",
+    "delay-driven",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "delay": 22,
+     "reverb": 24
+    }
+   }
+  },
+  {
+   "id": "artist.coheed_and_cambria",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Coheed and Cambria – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Coheed and Cambria",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "dynamic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    }
+   }
+  },
+  {
+   "id": "artist.title_fight",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Title Fight – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Title Fight",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "shoegaze"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "wide",
+    "raw",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    },
+    "character": {
+     "width": 60
+    }
+   }
+  },
+  {
+   "id": "artist.american_football",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "American Football – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "American Football",
+   "genres": [
+    "emo"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "clean",
+    "twinkly",
+    "intricate"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "reverb": 22
+    },
+    "character": {
+     "clarity": 82
+    }
+   }
+  },
+  {
+   "id": "artist.sunny_day_real_estate",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sunny Day Real Estate – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sunny Day Real Estate",
+   "genres": [
+    "emo"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "dynamic",
+    "emotive",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44
+    }
+   }
+  },
+  {
+   "id": "artist.silverstein",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Silverstein – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Silverstein",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "metalcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "tight",
+    "dynamic",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropC",
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 74
+    }
+   }
+  },
+  {
+   "id": "artist.alexisonfire",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Alexisonfire – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Alexisonfire",
+   "genres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "raw",
+    "dynamic",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    }
+   }
+  },
+  {
+   "id": "artist.senses_fail",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Senses Fail – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Senses Fail",
+   "genres": [
+    "emo"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "energetic",
+    "tight",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    }
+   }
+  },
+  {
+   "id": "artist.hawthorne_heights",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Hawthorne Heights – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Hawthorne Heights",
+   "genres": [
+    "emo"
+   ],
+   "subgenres": [
+    "post_hardcore"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "melodic",
+    "bright",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.emo"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52
+    }
+   }
+  },
+  {
+   "id": "artist.pierce_the_veil",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pierce the Veil – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pierce the Veil",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "bright",
+    "tight",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 68
+    }
+   }
+  },
+  {
+   "id": "artist.sleeping_with_sirens",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Sleeping with Sirens – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sleeping with Sirens",
+   "genres": [
+    "post_hardcore"
+   ],
+   "subgenres": [
+    "emo"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "polished",
+    "bright",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.post_hardcore"
+   ],
+   "tuningHints": [
+    "dropD"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54
+    }
+   }
+  }
+ ]
+}

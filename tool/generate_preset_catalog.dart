@@ -41,6 +41,9 @@ Map<String, Object?> normalizePresetCatalog(String xml) {
     'step',
     'Suffix',
     'Type',
+    'valueType',
+    'SubType',
+    'bind',
   ];
   return {
     'schemaVersion': 1, 'targetDevice': 'matriboxOne',
@@ -66,6 +69,7 @@ Map<String, Object?> normalizePresetCatalog(String xml) {
                 {
                   'name': unique(parameter, 'Name'),
                   'index': unique(parameter, 'idx', numeric: true),
+                  'xmlId': unique(parameter, 'ID', numeric: true),
                   'minimum': unique(parameter, 'Dmin', numeric: true),
                   'maximum': unique(parameter, 'Dmax', numeric: true),
                   'default': unique(parameter, 'default', numeric: true),
@@ -75,6 +79,13 @@ Map<String, Object?> normalizePresetCatalog(String xml) {
                   'unit': unique(parameter, 'Suffix'),
                   'xmlControlType': parameter.name,
                   'xmlType': unique(parameter, 'Type'),
+                  'valueType': unique(parameter, 'valueType'),
+                  'subType': unique(parameter, 'SubType'),
+                  'bind': unique(parameter, 'bind'),
+                  'menus': [
+                    for (final menu in parameter.children.where((n) => n.name == 'Menu'))
+                      {'id': unique(menu, 'ID', numeric: true), 'name': unique(menu, 'Name')},
+                  ],
                   'evidenceLevel': 'observed',
                   'conflict': conflicts(parameter, parameterKeys),
                   if (conflicts(parameter, parameterKeys))

@@ -1,0 +1,1073 @@
+{
+ "pack": {
+  "id": "rock_hard_glam",
+  "name": "Rock: Hard Rock und Glam",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Hard-Rock-, Glam- und Hair-Metal-Acts.",
+  "entryCount": 25,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.bon_jovi",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Bon Jovi – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Bon Jovi",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "polished",
+    "anthemic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.def_leppard",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Def Leppard – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Def Leppard",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "layered",
+    "polished",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 64
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "artist.motley_crue",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mötley Crüe – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mötley Crüe",
+   "artistAliases": [
+    "Motley Crue"
+   ],
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "gritty",
+    "raw-glam",
+    "punchy"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 58,
+     "mids": 62
+    }
+   }
+  },
+  {
+   "id": "artist.whitesnake",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Whitesnake – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Whitesnake",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "bluesy",
+    "polished",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "sustain": 70
+    },
+    "character": {
+     "warmth": 60
+    }
+   }
+  },
+  {
+   "id": "artist.scorpions",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Scorpions – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Scorpions",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "melodic",
+    "tight",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "tightness": 62,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "artist.europe",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Europe – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Europe",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "melodic",
+    "bright",
+    "neoclassical"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "sustain": 74,
+     "delay": 14
+    }
+   }
+  },
+  {
+   "id": "artist.poison",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Poison – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Poison",
+   "genres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "bright",
+    "poppy",
+    "chorused"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "modulation": 22
+    }
+   }
+  },
+  {
+   "id": "artist.skid_row",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Skid Row – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Skid Row",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "raw",
+    "aggressive",
+    "punchy"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "mids": 62
+    }
+   }
+  },
+  {
+   "id": "artist.ratt",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Ratt – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Ratt",
+   "genres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "bright",
+    "tight",
+    "riff-driven"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 62
+    }
+   }
+  },
+  {
+   "id": "artist.twisted_sister",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Twisted Sister – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Twisted Sister",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "anthemic",
+    "punchy",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "mids": 62
+    }
+   }
+  },
+  {
+   "id": "artist.kiss",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kiss – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kiss",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "punchy",
+    "simple",
+    "anthemic"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.alice_cooper",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Alice Cooper – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Alice Cooper",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "theatrical",
+    "gritty",
+    "raw"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.cinderella",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Cinderella – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Cinderella",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "bluesy",
+    "gritty",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.warrant",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Warrant – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Warrant",
+   "genres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "polished",
+    "catchy",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "modulation": 20
+    }
+   }
+  },
+  {
+   "id": "artist.dokken",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dokken – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dokken",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "precise",
+    "melodic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "tightness": 64,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "artist.quiet_riot",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Quiet Riot – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Quiet Riot",
+   "genres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "punchy",
+    "direct",
+    "polished"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    }
+   }
+  },
+  {
+   "id": "artist.extreme",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Extreme – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Extreme",
+   "genres": [
+    "glam_metal"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "funky",
+    "virtuosic",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "tightness": 64
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "artist.winger",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Winger – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Winger",
+   "genres": [
+    "glam_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "polished",
+    "virtuosic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.glam_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 54
+    }
+   }
+  },
+  {
+   "id": "artist.slash",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Slash – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Slash",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "singing",
+    "warm",
+    "bluesy"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "sustain": 78
+    },
+    "character": {
+     "warmth": 64
+    }
+   }
+  },
+  {
+   "id": "artist.ufo",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "UFO – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "UFO",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "melodic",
+    "vintage",
+    "mid-forward"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "sustain": 68,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.black_stone_cherry",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Black Stone Cherry – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Black Stone Cherry",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "modern",
+    "thick",
+    "groovy"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "bass": 54
+    }
+   }
+  },
+  {
+   "id": "artist.airbourne",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Airbourne – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Airbourne",
+   "genres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "raw",
+    "loud",
+    "energetic"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "mids": 64
+    }
+   }
+  },
+  {
+   "id": "artist.rival_sons",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rival Sons – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rival Sons",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "gritty"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48
+    },
+    "character": {
+     "vintage": 75
+    }
+   }
+  },
+  {
+   "id": "artist.greta_van_fleet",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Greta Van Fleet – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Greta Van Fleet",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "eras": [
+    "2010s"
+   ],
+   "tags": [
+    "vintage",
+    "bright",
+    "driving"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50
+    },
+    "character": {
+     "vintage": 78
+    }
+   }
+  },
+  {
+   "id": "artist.volbeat",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Volbeat – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Volbeat",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "rockabilly"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "rockabilly-metal",
+    "punchy",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard",
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 56
+    }
+   }
+  }
+ ]
+}

@@ -7,6 +7,12 @@ import '../models/usb_models.dart';
 import '../services/usb_service.dart';
 import '../midi/midi_capture_controller.dart';
 
+/// The one connection-state vocabulary the whole app reads, derived from the existing device/MIDI
+/// state below (never a second, screen-local notion of "connected"). `detected` and `connected`
+/// are kept alongside the milestone's minimum five states because the diagnostics screen already
+/// distinguishes "seen, no permission yet" from "seen, permission granted, not opened yet".
+enum DeviceConnectionState { disconnected, connecting, permissionRequired, detected, connected, error }
+
 class UsbController extends ChangeNotifier {
   UsbController(this._service, {DateTime Function()? clock})
     : _clock = clock ?? DateTime.now {
@@ -27,6 +33,24 @@ class UsbController extends ChangeNotifier {
   final List<String> logs = [];
   bool busy = false;
   bool _disposed = false;
+
+  /// Auto-connect: identify + request permission + open the MIDI transport for a detected
+  /// Matribox 1 on its own, without the user pressing a button. It NEVER writes anything -- opening
+  /// the MIDI transport is the same read-only [openMidi] a manual tap would call, and the raw-USB
+  /// diagnostic path is never auto-opened. Settings → Geräte can turn this off.
+  bool autoConnect = true;
+  final Set<String> _autoPermissionRequestedFor = {};
+  bool _autoMidiOpenAttempted = false;
+
+  void setAutoConnect(bool value) {
+    if (autoConnect == value) return;
+    autoConnect = value;
+    if (!value) {
+      _autoPermissionRequestedFor.clear();
+      _autoMidiOpenAttempted = false;
+    }
+    notifyListeners();
+  }
 
   UsbDeviceInfo? get supportedDevice {
     if (connection.deviceName case final connectedName?) {
@@ -81,6 +105,29 @@ class UsbController extends ChangeNotifier {
         : UsbConnectionState.permissionRequired;
   }
 
+  /// The unified connection state for the primary receiving device (Matribox 1) only -- other
+  /// supported devices (DNAfx GiT Core) are diagnosed but are not part of auto-connect or the
+  /// unified device-settings UI.
+  DeviceConnectionState get connectionState {
+    if (midiConnection.isOpen || connection.isOpen) return DeviceConnectionState.connected;
+    if (rawMatriboxFailed) return DeviceConnectionState.error;
+    final device = matriboxDevice;
+    if (device == null) return DeviceConnectionState.disconnected;
+    if (!device.hasPermission) return DeviceConnectionState.permissionRequired;
+    if (busy) return DeviceConnectionState.connecting;
+    return DeviceConnectionState.detected;
+  }
+
+  /// Short, non-technical status for a global chip ("Matribox 1 · Verbunden").
+  String get primaryDeviceStatusLabel => switch (connectionState) {
+    DeviceConnectionState.connected => 'Matribox 1 · Verbunden',
+    DeviceConnectionState.connecting => 'Matribox 1 · Verbinde …',
+    DeviceConnectionState.permissionRequired => 'Matribox 1 · Verbindung erlauben',
+    DeviceConnectionState.detected => 'Matribox 1 · Erkannt',
+    DeviceConnectionState.error => 'Matribox 1 · Verbindung fehlgeschlagen',
+    DeviceConnectionState.disconnected => 'Keine Matribox verbunden',
+  };
+
   String get stateLabel {
     final device = supportedDevice;
     if (device == null) return state.label;
@@ -106,6 +153,7 @@ class UsbController extends ChangeNotifier {
     );
     _log('Diagnose gestartet; es werden keine USB-Nutzdaten gesendet.');
     await refresh();
+    await _maybeAutoConnect();
   }
 
   Future<void> refresh() => _guard(() async {
@@ -209,17 +257,45 @@ class UsbController extends ChangeNotifier {
 
   String get copyableLog => logs.join('\n');
 
+  /// Auto-connect, one step at a time, after every state refresh: request permission for a
+  /// just-seen Matribox 1 once, then open its MIDI transport once permission is granted. Both
+  /// steps run through [_guard], so a step already in progress or a manual action in flight makes
+  /// this a no-op instead of a second parallel connection. Never touches raw USB and never selects,
+  /// reads or writes a preset.
+  Future<void> _maybeAutoConnect() async {
+    if (!autoConnect || busy || _disposed) return;
+    final device = matriboxDevice;
+    if (device == null) {
+      _autoPermissionRequestedFor.clear();
+      _autoMidiOpenAttempted = false;
+      return;
+    }
+    if (!device.hasPermission) {
+      if (!_autoPermissionRequestedFor.add(device.deviceName)) return;
+      await _guard(() async {
+        await _service.requestUsbPermission(device.deviceName);
+        _log('USB-Berechtigung automatisch angefragt (Matribox 1, Auto-Connect).');
+      });
+      return;
+    }
+    if (matriboxMidiDevice == null || midiConnection.isOpen || _autoMidiOpenAttempted) return;
+    _autoMidiOpenAttempted = true;
+    await openMidi();
+  }
+
   Future<void> _handleEvent(Map<Object?, Object?> event) async {
     final type = event['type'];
     switch (type) {
       case 'attached':
         _log('USB-Gerät angeschlossen.');
         await refresh();
+        await _maybeAutoConnect();
         return;
       case 'detached':
         rawMatriboxFailed = false;
         _log('USB-Gerät getrennt; Verbindung wurde sicher geschlossen.');
         await refresh();
+        await _maybeAutoConnect();
         return;
       case 'permissionResult':
         final granted = event['granted'] == true;
@@ -229,6 +305,7 @@ class UsbController extends ChangeNotifier {
               : 'USB-Berechtigung abgelehnt. Eine erneute Anfrage ist möglich.',
         );
         await refresh();
+        await _maybeAutoConnect();
         return;
       case 'connectionClosed':
         connection = const UsbConnectionStatus(isOpen: false);
@@ -238,6 +315,7 @@ class UsbController extends ChangeNotifier {
       case 'midiDevicesChanged':
         _log('Android-MIDI-Geräteliste wurde aktualisiert.');
         await refresh();
+        await _maybeAutoConnect();
         return;
       case 'midiConnectionClosed':
         midiConnection = const MidiConnectionStatus(isOpen: false);

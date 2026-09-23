@@ -1,0 +1,1857 @@
+{
+ "schemaVersion": 1,
+ "rawRewrites": [
+  [
+   "([a-g])\\s?(?:#|♯)",
+   "\\1sharp"
+  ],
+  [
+   "\\b([a-g]) sharp\\b",
+   "\\1sharp"
+  ],
+  [
+   "\\b([a-g]) flat\\b",
+   "\\1flat"
+  ],
+  [
+   "\\b([a-g])b (standard|tuning)\\b",
+   "\\1flat \\2"
+  ]
+ ],
+ "tokenRewrites": {
+  "cis": "csharp",
+  "dis": "dsharp",
+  "fis": "fsharp"
+ },
+ "compoundSuffixes": [
+  "sound",
+  "sounds",
+  "ton",
+  "klang",
+  "gitarre",
+  "gitarren",
+  "gitarrensound"
+ ],
+ "stopwords": [
+  "mach",
+  "mir",
+  "mich",
+  "einen",
+  "einem",
+  "einer",
+  "eines",
+  "bitte",
+  "will",
+  "moechte",
+  "mochte",
+  "hatte",
+  "haben",
+  "habe",
+  "gib",
+  "gebe",
+  "zeig",
+  "create",
+  "make",
+  "give",
+  "me",
+  "i",
+  "want",
+  "need",
+  "would",
+  "like",
+  "please",
+  "some",
+  "sound",
+  "sounds",
+  "typischen",
+  "typischem",
+  "typischer",
+  "typical",
+  "klingt",
+  "klingen",
+  "wie",
+  "like",
+  "as",
+  "so",
+  "ein",
+  "eine",
+  "gitarren",
+  "gitarrensound",
+  "guitar",
+  "guitars",
+  "for",
+  "fuer",
+  "mit",
+  "with",
+  "und",
+  "and",
+  "auf",
+  "in",
+  "im",
+  "dem",
+  "den",
+  "des",
+  "zum",
+  "zur",
+  "noch",
+  "auch",
+  "nur",
+  "bisschen",
+  "the",
+  "my",
+  "meinen",
+  "meine",
+  "meinem",
+  "fur",
+  "bei",
+  "am",
+  "an",
+  "zu",
+  "von",
+  "of",
+  "to",
+  "it",
+  "is",
+  "ist",
+  "sein",
+  "be",
+  "that",
+  "dass",
+  "der",
+  "die",
+  "das",
+  "kein",
+  "keine",
+  "keinen",
+  "keiner"
+ ],
+ "directions": {
+  "more": [
+   "mehr",
+   "more",
+   "extra"
+  ],
+  "less": [
+   "weniger",
+   "less",
+   "reduced",
+   "reduziert"
+  ]
+ },
+ "intensity": {
+  "SLIGHT": [
+   "etwas",
+   "ein bisschen",
+   "bisschen",
+   "ein wenig",
+   "leicht",
+   "leichte",
+   "leichten",
+   "slightly",
+   "a bit",
+   "a little",
+   "a little bit",
+   "little",
+   "minimal",
+   "minimally",
+   "ein tick",
+   "tick",
+   "kaum",
+   "touch"
+  ],
+  "STRONG": [
+   "viel",
+   "sehr",
+   "deutlich",
+   "richtig",
+   "stark",
+   "starker",
+   "ganz viel",
+   "mega",
+   "ultra",
+   "extrem",
+   "extremely",
+   "much",
+   "lots of",
+   "lots",
+   "a lot",
+   "a lot of",
+   "very",
+   "way",
+   "way more",
+   "heavily",
+   "really",
+   "totally",
+   "krass",
+   "massiv",
+   "massive",
+   "maximum",
+   "max"
+  ]
+ },
+ "negation": [
+  "kein",
+  "keine",
+  "keinen",
+  "keiner",
+  "keinem",
+  "ohne",
+  "no",
+  "without",
+  "not",
+  "nicht",
+  "zero",
+  "null",
+  "weg mit",
+  "remove",
+  "entferne"
+ ],
+ "params": {
+  "GAIN": {
+   "more": "MORE_GAIN",
+   "less": "LESS_GAIN",
+   "words": [
+    "gain",
+    "zerre",
+    "verzerrung",
+    "distortion",
+    "saturation",
+    "sattigung",
+    "drive"
+   ]
+  },
+  "BASS": {
+   "more": "MORE_BASS",
+   "less": "LESS_BASS",
+   "words": [
+    "bass",
+    "bassanteil",
+    "basse",
+    "tiefen",
+    "tiefe",
+    "lows",
+    "low end",
+    "tiefmitten"
+   ]
+  },
+  "MIDS": {
+   "more": "MORE_MIDS",
+   "less": "LESS_MIDS",
+   "words": [
+    "mids",
+    "mid",
+    "mitten",
+    "midrange",
+    "mittenanteil"
+   ]
+  },
+  "TREBLE": {
+   "more": "MORE_TREBLE",
+   "less": "LESS_TREBLE",
+   "words": [
+    "treble",
+    "hohen",
+    "hoehen",
+    "highs",
+    "obertone"
+   ]
+  },
+  "PRESENCE": {
+   "more": "MORE_PRESENCE",
+   "less": "LESS_PRESENCE",
+   "words": [
+    "presence",
+    "prasenz",
+    "praesenz",
+    "schaerfe",
+    "scharfe"
+   ]
+  },
+  "BODY": {
+   "more": "MORE_BODY",
+   "less": "LESS_BODY",
+   "words": [
+    "body",
+    "druck",
+    "fulle",
+    "fuelle",
+    "volumen"
+   ]
+  },
+  "CLARITY": {
+   "more": "MORE_CLARITY",
+   "less": "LESS_CLARITY",
+   "words": [
+    "clarity",
+    "klarheit",
+    "definition",
+    "transparenz"
+   ]
+  },
+  "AGGRESSION": {
+   "more": "MORE_AGGRESSIVE",
+   "less": "LESS_AGGRESSIVE",
+   "words": [
+    "aggression",
+    "aggressivitat",
+    "aggressiveness",
+    "aggressiv",
+    "aggressive",
+    "biss",
+    "bite"
+   ]
+  },
+  "COMPRESSION": {
+   "more": "MORE_COMPRESSION",
+   "less": "LESS_COMPRESSION",
+   "words": [
+    "compression",
+    "kompression",
+    "sustain"
+   ]
+  },
+  "REVERB": {
+   "more": "MORE_REVERB",
+   "less": "LESS_REVERB",
+   "words": [
+    "reverb",
+    "hall",
+    "raum",
+    "hallanteil",
+    "space"
+   ]
+  },
+  "DELAY": {
+   "more": "MORE_DELAY",
+   "less": "LESS_DELAY",
+   "words": [
+    "delay",
+    "echo",
+    "echos",
+    "slapback"
+   ]
+  },
+  "MODULATION": {
+   "more": "MORE_MODULATION",
+   "less": "LESS_MODULATION",
+   "words": [
+    "modulation",
+    "modulationen"
+   ]
+  },
+  "AMBIENT": {
+   "more": "MORE_AMBIENT",
+   "less": "LESS_AMBIENT",
+   "words": [
+    "ambient",
+    "atmosphare",
+    "atmosphere",
+    "atmospharisch"
+   ]
+  },
+  "VINTAGE": {
+   "more": "MORE_VINTAGE",
+   "less": "MORE_MODERN",
+   "words": [
+    "vintage",
+    "retro"
+   ]
+  },
+  "MODERN": {
+   "more": "MORE_MODERN",
+   "less": "MORE_VINTAGE",
+   "words": [
+    "modern",
+    "modernitat"
+   ]
+  },
+  "TIGHTNESS": {
+   "more": "TIGHTER",
+   "less": "LOOSER",
+   "words": [
+    "tight",
+    "tightness",
+    "straffheit",
+    "straff"
+   ]
+  }
+ },
+ "effects": {
+  "boost": {
+   "param": null,
+   "words": [
+    "boost",
+    "booster",
+    "preamp boost",
+    "clean boost"
+   ]
+  },
+  "overdrive": {
+   "param": null,
+   "words": [
+    "overdrive",
+    "ubersteuerung",
+    "uebersteuerung",
+    "od",
+    "screamer"
+   ]
+  },
+  "distortion": {
+   "param": null,
+   "words": [
+    "distortion pedal",
+    "distortionpedal",
+    "distortion box"
+   ]
+  },
+  "fuzz": {
+   "param": null,
+   "words": [
+    "fuzz",
+    "fuzzbox",
+    "fuzz pedal"
+   ]
+  },
+  "compressor": {
+   "param": "COMPRESSION",
+   "words": [
+    "compressor",
+    "kompressor",
+    "comp"
+   ]
+  },
+  "gate": {
+   "param": null,
+   "words": [
+    "gate",
+    "noise gate",
+    "noisegate",
+    "gatter",
+    "rauschunterdruckung"
+   ]
+  },
+  "chorus": {
+   "param": "MODULATION",
+   "words": [
+    "chorus",
+    "chorus effekt"
+   ]
+  },
+  "flanger": {
+   "param": "MODULATION",
+   "words": [
+    "flanger",
+    "flanging"
+   ]
+  },
+  "phaser": {
+   "param": "MODULATION",
+   "words": [
+    "phaser",
+    "phasing"
+   ]
+  },
+  "tremolo": {
+   "param": "MODULATION",
+   "words": [
+    "tremolo"
+   ]
+  },
+  "vibrato": {
+   "param": "MODULATION",
+   "words": [
+    "vibrato"
+   ]
+  },
+  "delay": {
+   "param": "DELAY",
+   "words": [
+    "delay",
+    "echo",
+    "echos",
+    "slapback",
+    "delays"
+   ]
+  },
+  "reverb": {
+   "param": "REVERB",
+   "words": [
+    "reverb",
+    "hall",
+    "hallraum",
+    "reverbs",
+    "galaxy verb"
+   ]
+  },
+  "wah": {
+   "param": null,
+   "words": [
+    "wah",
+    "wah wah",
+    "wahwah",
+    "wah pedal",
+    "wahpedal"
+   ]
+  },
+  "octave": {
+   "param": null,
+   "words": [
+    "octave",
+    "octaver",
+    "oktave",
+    "oktaver",
+    "octave pedal",
+    "oktavpedal"
+   ]
+  },
+  "eq": {
+   "param": null,
+   "words": [
+    "eq",
+    "equalizer",
+    "equaliser",
+    "entzerrer"
+   ]
+  }
+ },
+ "adjectives": {
+  "warmer": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "wärmer": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "warmer klingen": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "kalter": {
+   "modifiers": [
+    "COLDER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "kälter": {
+   "modifiers": [
+    "COLDER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "colder": {
+   "modifiers": [
+    "COLDER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "cooler": {
+   "modifiers": [
+    "COLDER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "thicker": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "dicker": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "breiter": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "fatter": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "dunner": {
+   "modifiers": [
+    "LESS_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "dünner": {
+   "modifiers": [
+    "LESS_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "thinner": {
+   "modifiers": [
+    "LESS_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "schlanker": {
+   "modifiers": [
+    "LESS_BODY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "weicher": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "softer": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "smoother": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "sanfter": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "milder": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "geschmeidiger": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "clearer": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "klarer": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "transparenter": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "NORMAL"
+  },
+  "dreckiger": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "dirtier": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "schmutziger": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "rauer": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "rougher": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "gritty": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "grittier": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "sauberer": {
+   "modifiers": [
+    "CLEANER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "cleaner": {
+   "modifiers": [
+    "CLEANER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "reiner": {
+   "modifiers": [
+    "CLEANER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "trockener": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "drier": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "dryer": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "nasser": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "wetter": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "feuchter": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "NORMAL"
+  },
+  "atmosphärischer": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "atmospharischer": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "atmospheric": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "more atmospheric": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "ambienter": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "spacier": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "spacey": {
+   "modifiers": [
+    "MORE_AMBIENT"
+   ],
+   "intensity": "NORMAL"
+  },
+  "schärfer": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "scharfer": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "harsher": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "sharper": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "schriller": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "weniger scharf": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "weniger schrill": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "weniger harsch": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "less harsh": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "less sharp": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "less shrill": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "nicht so scharf": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "nicht so schrill": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "nicht so harsch": {
+   "modifiers": [
+    "LESS_PRESENCE"
+   ],
+   "intensity": "NORMAL"
+  },
+  "brutaler": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "brutal": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "more brutal": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "evil": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "boser": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "böser": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "bösen": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "böse": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "bose": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "boesen": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "boeser": {
+   "modifiers": [
+    "MORE_AGGRESSIVE",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "kaputt": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "kaputten": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "kaputter": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "kaputtes": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "broken": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "zerstört": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "zerstorter": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "destroyed": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "trashy": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "trashig": {
+   "modifiers": [
+    "DIRTIER",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "verzerrt": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "verzerrte": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "verzerrten": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "verzerrter": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "distorted": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "more distorted": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "verzerrter als": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "crunchy": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "crunchig": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "angecrunched": {
+   "modifiers": [
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "massive": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "massiv": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "massiver": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "huge": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "riesig": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "gewaltig": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "NORMAL"
+  },
+  "heavier": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "heavy": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "schwerer": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "schwer": {
+   "modifiers": [
+    "MORE_BODY",
+    "MORE_GAIN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dunkel": {
+   "modifiers": [
+    "DARKER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dunkle": {
+   "modifiers": [
+    "DARKER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dunklen": {
+   "modifiers": [
+    "DARKER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dunkles": {
+   "modifiers": [
+    "DARKER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "hell": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "helle": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "hellen": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "helles": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "bright": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "warm": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "warme": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "warmen": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "warmes": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "warmem": {
+   "modifiers": [
+    "WARMER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "tight": {
+   "modifiers": [
+    "TIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "straff": {
+   "modifiers": [
+    "TIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "straffe": {
+   "modifiers": [
+    "TIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "straffen": {
+   "modifiers": [
+    "TIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fat": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "thick": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fett": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fette": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fetten": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fettes": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dick": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dicke": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dicken": {
+   "modifiers": [
+    "MORE_BODY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "aggressive": {
+   "modifiers": [
+    "MORE_AGGRESSIVE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "aggressiv": {
+   "modifiers": [
+    "MORE_AGGRESSIVE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "smooth": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "weich": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "weiche": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "weichen": {
+   "modifiers": [
+    "LESS_AGGRESSIVE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "harsh": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "scharf": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "scharfe": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "schrill": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "harsch": {
+   "modifiers": [
+    "MORE_PRESENCE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "clear": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "klar": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "klare": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "klaren": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "clean und klar": {
+   "modifiers": [
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "muddy": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_BASS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "matschig": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_BASS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "muddig": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_BASS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "schlammig": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_BASS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "undefiniert": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_BASS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "scooped": {
+   "modifiers": [
+    "LESS_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "ausgeholt": {
+   "modifiers": [
+    "LESS_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "mid scooped": {
+   "modifiers": [
+    "LESS_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "mittenarm": {
+   "modifiers": [
+    "LESS_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "mid forward": {
+   "modifiers": [
+    "MORE_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "mittenbetont": {
+   "modifiers": [
+    "MORE_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "mid focused": {
+   "modifiers": [
+    "MORE_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "mittig": {
+   "modifiers": [
+    "MORE_MIDS"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dry": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "trocken": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "trockene": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "trockenen": {
+   "modifiers": [
+    "DRIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "wet": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "nass": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "nasse": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "nassen": {
+   "modifiers": [
+    "WETTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "vintage": {
+   "modifiers": [
+    "MORE_VINTAGE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "vintagig": {
+   "modifiers": [
+    "MORE_VINTAGE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "retro": {
+   "modifiers": [
+    "MORE_VINTAGE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "modern": {
+   "modifiers": [
+    "MORE_MODERN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "moderne": {
+   "modifiers": [
+    "MORE_MODERN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "modernen": {
+   "modifiers": [
+    "MORE_MODERN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "modernes": {
+   "modifiers": [
+    "MORE_MODERN"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "lo fi": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_VINTAGE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "lofi": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_VINTAGE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "lo-fi": {
+   "modifiers": [
+    "LESS_CLARITY",
+    "MORE_VINTAGE"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fuzzy": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "fuzzig": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "rotzig": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "schmutzig": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "dirty": {
+   "modifiers": [
+    "DIRTIER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "glassy": {
+   "modifiers": [
+    "BRIGHTER",
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "glasig": {
+   "modifiers": [
+    "BRIGHTER",
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "glasklar": {
+   "modifiers": [
+    "BRIGHTER",
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "shimmery": {
+   "modifiers": [
+    "BRIGHTER",
+    "MORE_CLARITY"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "jangly": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "jangle": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "klirrend": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "zirpig": {
+   "modifiers": [
+    "BRIGHTER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "sauber": {
+   "modifiers": [
+    "CLEANER"
+   ],
+   "intensity": "SLIGHT"
+  },
+  "clean sound": {
+   "modifiers": [
+    "CLEANER"
+   ],
+   "intensity": "SLIGHT"
+  }
+ },
+ "modifierPhrases": {
+  "BRIGHTER": [
+   "heller",
+   "brighter",
+   "more brilliant",
+   "heller machen",
+   "mehr brillanz"
+  ],
+  "DARKER": [
+   "darker",
+   "dunkler",
+   "dunkler machen"
+  ],
+  "TIGHTER": [
+   "straffer",
+   "tighter",
+   "strammer"
+  ],
+  "LOOSER": [
+   "lockerer",
+   "looser",
+   "lose",
+   "weniger straff"
+  ],
+  "MORE_GAIN": [
+   "mehr zerre",
+   "mehr saft",
+   "mehr biss zerre",
+   "verzerrter"
+  ],
+  "LESS_GAIN": [
+   "weniger zerre",
+   "weniger saft",
+   "cleaner gain"
+  ]
+ },
+ "modifierTags": {
+  "MORE_MODERN": "modern",
+  "MORE_VINTAGE": "vintage"
+ },
+ "tunings": {
+  "eStandard": {
+   "label": "E Standard",
+   "guitarTuning": "eStandard",
+   "phrases": [
+    "e standard",
+    "estandard",
+    "standard",
+    "standard tuning",
+    "standardstimmung",
+    "standard stimmung",
+    "e std",
+    "std",
+    "normal tuning"
+   ]
+  },
+  "ebStandard": {
+   "label": "Eb Standard",
+   "guitarTuning": "ebStandard",
+   "phrases": [
+    "eb standard",
+    "eflat standard",
+    "dsharp standard",
+    "ebstandard",
+    "half step down",
+    "halbton tiefer",
+    "halbton runter"
+   ]
+  },
+  "dStandard": {
+   "label": "D Standard",
+   "guitarTuning": "dStandard",
+   "phrases": [
+    "d standard",
+    "dstandard",
+    "d std",
+    "whole step down",
+    "ganzton tiefer"
+   ]
+  },
+  "cSharpStandard": {
+   "label": "C# Standard",
+   "guitarTuning": "cSharpStandard",
+   "phrases": [
+    "csharp standard",
+    "cis standard",
+    "dflat standard",
+    "cstandard sharp",
+    "csharpstandard"
+   ]
+  },
+  "cStandard": {
+   "label": "C Standard",
+   "guitarTuning": null,
+   "phrases": [
+    "c standard",
+    "cstandard"
+   ]
+  },
+  "dropD": {
+   "label": "Drop D",
+   "guitarTuning": "dropD",
+   "phrases": [
+    "drop d",
+    "dropd",
+    "d drop"
+   ]
+  },
+  "dropCSharp": {
+   "label": "Drop C#",
+   "guitarTuning": "dropCSharp",
+   "phrases": [
+    "drop csharp",
+    "drop cis",
+    "dropcsharp",
+    "dropcis",
+    "drop dflat",
+    "drop db",
+    "drop c sharp"
+   ]
+  },
+  "dropC": {
+   "label": "Drop C",
+   "guitarTuning": "dropC",
+   "phrases": [
+    "drop c",
+    "dropc",
+    "c drop"
+   ]
+  },
+  "dropB": {
+   "label": "Drop B",
+   "guitarTuning": "dropB",
+   "phrases": [
+    "drop b",
+    "dropb",
+    "b drop"
+   ]
+  },
+  "dropA": {
+   "label": "Drop A",
+   "guitarTuning": "dropA",
+   "phrases": [
+    "drop a",
+    "dropa",
+    "a drop"
+   ]
+  }
+ }
+}

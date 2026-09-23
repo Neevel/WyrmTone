@@ -1,0 +1,351 @@
+{
+ "pack": {
+  "id": "rock_essentials",
+  "name": "Rock Essentials",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Classic und Hard Rock.",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.acdc",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "AC/DC – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "AC/DC",
+   "artistAliases": [
+    "ACDC"
+   ],
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "classic_rock"
+   ],
+   "tags": [
+    "punchy",
+    "raw",
+    "crunchy"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (punchy, roh, Crunch statt High Gain); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 52,
+     "mids": 64
+    },
+    "character": {
+     "vintage": 70
+    }
+   }
+  },
+  {
+   "id": "artist.guns_n_roses",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Guns N' Roses – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Guns N' Roses",
+   "artistAliases": [
+    "Guns and Roses",
+    "GNR"
+   ],
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "glam_metal"
+   ],
+   "tags": [
+    "bluesy",
+    "sleazy",
+    "lead-heavy"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (bluesig, dreckig, lead-lastig); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "mids": 64,
+     "sustain": 64
+    }
+   }
+  },
+  {
+   "id": "artist.van_halen",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Van Halen – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Van Halen",
+   "genres": [
+    "hard_rock"
+   ],
+   "subgenres": [
+    "glam_metal"
+   ],
+   "tags": [
+    "bright",
+    "brown-sound",
+    "expressive"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (hell, expressive Leads, vintage-rockig); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "treble": 62,
+     "presence": 58,
+     "sustain": 64
+    }
+   }
+  },
+  {
+   "id": "artist.led_zeppelin",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Led Zeppelin – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Led Zeppelin",
+   "artistAliases": [
+    "Zeppelin"
+   ],
+   "genres": [
+    "classic_rock",
+    "hard_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "bluesy"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (warm, bluesig, vintage); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "mids": 62
+    }
+   }
+  },
+  {
+   "id": "artist.deep_purple",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Deep Purple – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Deep Purple",
+   "genres": [
+    "hard_rock",
+    "classic_rock"
+   ],
+   "tags": [
+    "vintage",
+    "mid-forward"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (mittenbetont, vintage, kernig); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "mids": 64,
+     "tightness": 50
+    }
+   }
+  },
+  {
+   "id": "artist.queen",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Queen – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Queen",
+   "genres": [
+    "classic_rock"
+   ],
+   "tags": [
+    "layered",
+    "melodic",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (geschichtet, melodisch, singend); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "treble": 60,
+     "sustain": 66
+    }
+   }
+  },
+  {
+   "id": "artist.pink_floyd",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Pink Floyd – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Pink Floyd",
+   "genres": [
+    "progressive_rock",
+    "psychedelic_rock"
+   ],
+   "tags": [
+    "spacious",
+    "atmospheric",
+    "singing-lead"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (weiträumig, atmosphärisch, singende Leads); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "sustain": 74,
+     "space": 30,
+     "delay": 30,
+     "reverb": 30,
+     "modulation": 20
+    }
+   }
+  },
+  {
+   "id": "artist.jimi_hendrix",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jimi Hendrix – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jimi Hendrix",
+   "artistAliases": [
+    "Hendrix"
+   ],
+   "genres": [
+    "psychedelic_rock",
+    "blues_rock"
+   ],
+   "tags": [
+    "fuzzy",
+    "expressive",
+    "vintage"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte Beschreibung (fuzzig, expressiv, vintage); keine Aussage über Originalequipment oder Studioeinstellungen.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 58,
+     "sustain": 70
+    },
+    "character": {
+     "fuzziness": 60
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  }
+ ]
+}

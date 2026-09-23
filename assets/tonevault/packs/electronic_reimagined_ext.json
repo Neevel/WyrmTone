@@ -1,0 +1,1156 @@
+{
+ "pack": {
+  "id": "electronic_reimagined_ext",
+  "name": "Guitar Reimagined (Erweiterung)",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Elektronische Titel als WyrmTone-Gitarreninterpretation; kein Nachbau der Originalklänge.",
+  "entryCount": 26,
+  "sourceClassification": "GUITAR_REIMAGINED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "reimagined.prodigy_firestarter",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "The Prodigy – Firestarter (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Prodigy",
+   "song": "Firestarter",
+   "songAliases": [
+    "Firestarter Guitar"
+   ],
+   "genres": [
+    "techno_inspired",
+    "industrial_electronic"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "aggressive",
+    "distorted",
+    "rhythmic"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD",
+    "SPECIAL"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "saturation": 74,
+     "tightness": 82,
+     "gateStrength": 62,
+     "modulation": 14
+    },
+    "character": {
+     "aggression": 80
+    },
+    "kinds": {
+     "drive": "distortion",
+     "modulation": "flanger"
+    }
+   }
+  },
+  {
+   "id": "reimagined.prodigy_breathe",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "The Prodigy – Breathe (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Prodigy",
+   "song": "Breathe",
+   "songAliases": [
+    "Breathe Guitar"
+   ],
+   "genres": [
+    "techno_inspired",
+    "industrial_electronic"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "gritty",
+    "riff",
+    "dark"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "saturation": 72,
+     "tightness": 78,
+     "gateStrength": 58
+    },
+    "character": {
+     "darkness": 55
+    },
+    "kinds": {
+     "drive": "distortion"
+    }
+   }
+  },
+  {
+   "id": "reimagined.daft_punk_around_the_world",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Daft Punk – Around the World (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Daft Punk",
+   "song": "Around the World",
+   "songAliases": [
+    "Around the World Guitar"
+   ],
+   "genres": [
+    "house_inspired"
+   ],
+   "parents": [
+    "tpl.genre.house_funk_guitar"
+   ],
+   "tags": [
+    "filtered",
+    "funky",
+    "repetitive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "modulation": 42,
+     "compression": 58,
+     "attack": 76
+    },
+    "kinds": {
+     "modulation": "phaser"
+    }
+   }
+  },
+  {
+   "id": "reimagined.daft_punk_one_more_time",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Daft Punk – One More Time (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Daft Punk",
+   "song": "One More Time",
+   "songAliases": [
+    "One More Time Guitar"
+   ],
+   "genres": [
+    "house_inspired"
+   ],
+   "parents": [
+    "tpl.genre.house_funk_guitar"
+   ],
+   "tags": [
+    "disco",
+    "bright",
+    "uplifting"
+   ],
+   "roles": [
+    "RHYTHM",
+    "CLEAN",
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 8,
+     "compression": 54,
+     "treble": 64
+    },
+    "kinds": {
+     "modulation": "phaser"
+    }
+   }
+  },
+  {
+   "id": "reimagined.daft_punk_harder_better_faster_stronger",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Daft Punk – Harder, Better, Faster, Stronger (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Daft Punk",
+   "song": "Harder, Better, Faster, Stronger",
+   "songAliases": [
+    "Harder Better Faster Stronger",
+    "Harder Better Faster Stronger Guitar"
+   ],
+   "genres": [
+    "house_inspired",
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "vocoder-like",
+    "rhythmic",
+    "robotic"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "modulation": 24,
+     "mids": 62,
+     "compression": 48,
+     "delay": 16
+    },
+    "kinds": {
+     "modulation": "flanger"
+    }
+   }
+  },
+  {
+   "id": "reimagined.eiffel_65_blue",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Eiffel 65 – Blue (Da Ba Dee) (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eiffel 65",
+   "song": "Blue (Da Ba Dee)",
+   "songAliases": [
+    "Blue",
+    "Da Ba Dee"
+   ],
+   "genres": [
+    "eurodance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.eurodance_guitar"
+   ],
+   "tags": [
+    "catchy",
+    "bright",
+    "poppy"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 66,
+     "treble": 66,
+     "delay": 24
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "reimagined.gigi_dagostino_lamour_toujours",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Gigi D'Agostino – L'Amour Toujours (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gigi D'Agostino",
+   "song": "L'Amour Toujours",
+   "songAliases": [
+    "L Amour Toujours",
+    "Lamour Toujours"
+   ],
+   "genres": [
+    "trance_inspired",
+    "eurodance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "melodic",
+    "uplifting",
+    "arpeggiated"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "sustain": 80,
+     "delay": 40,
+     "reverb": 38,
+     "modulation": 26
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "reimagined.atb_9_pm",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "ATB – 9 PM (Till I Come) (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "ATB",
+   "song": "9 PM (Till I Come)",
+   "songAliases": [
+    "9 PM",
+    "Nine PM",
+    "Till I Come"
+   ],
+   "genres": [
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "arpeggiated",
+    "delay-driven",
+    "melodic"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "sustain": 76,
+     "delay": 52,
+     "reverb": 36,
+     "tightness": 60
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "reimagined.scooter_hyper_hyper",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Scooter – Hyper Hyper (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Scooter",
+   "song": "Hyper Hyper",
+   "songAliases": [
+    "Hyper Hyper Guitar"
+   ],
+   "genres": [
+    "eurodance_inspired",
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.eurodance_guitar"
+   ],
+   "tags": [
+    "fast",
+    "driving",
+    "hard"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 54,
+     "saturation": 58,
+     "tightness": 72,
+     "sustain": 60
+    },
+    "kinds": {
+     "drive": "distortion"
+    }
+   }
+  },
+  {
+   "id": "reimagined.safri_duo_played_a_live",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Safri Duo – Played-A-Live (The Bongo Song) (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Safri Duo",
+   "song": "Played-A-Live (The Bongo Song)",
+   "songAliases": [
+    "Played A Live",
+    "The Bongo Song"
+   ],
+   "genres": [
+    "eurodance_inspired",
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.eurodance_guitar"
+   ],
+   "tags": [
+    "percussive",
+    "bright",
+    "rhythmic"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 28,
+     "tightness": 62,
+     "attack": 76,
+     "sustain": 50
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "reimagined.paul_van_dyk_for_an_angel",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Paul van Dyk – For an Angel (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Paul van Dyk",
+   "song": "For an Angel",
+   "songAliases": [
+    "For an Angel Guitar"
+   ],
+   "genres": [
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "epic",
+    "building",
+    "melodic"
+   ],
+   "roles": [
+    "LEAD",
+    "AMBIENT"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "sustain": 88,
+     "delay": 44,
+     "reverb": 48,
+     "modulation": 24
+    },
+    "kinds": {
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "reimagined.sash_ecuador",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Sash! – Ecuador (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Sash!",
+   "song": "Ecuador",
+   "songAliases": [
+    "Ecuador Guitar"
+   ],
+   "genres": [
+    "eurodance_inspired",
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.eurodance_guitar"
+   ],
+   "tags": [
+    "catchy",
+    "bright",
+    "latin-tinged"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 32,
+     "sustain": 68,
+     "treble": 66,
+     "delay": 26
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "reimagined.fatboy_slim_right_here_right_now",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Fatboy Slim – Right Here, Right Now (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Fatboy Slim",
+   "song": "Right Here, Right Now",
+   "songAliases": [
+    "Right Here Right Now"
+   ],
+   "genres": [
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "building",
+    "repetitive",
+    "big-beat"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 56,
+     "tightness": 70,
+     "gateStrength": 48,
+     "delay": 18
+    },
+    "kinds": {
+     "drive": "distortion"
+    }
+   }
+  },
+  {
+   "id": "reimagined.chemical_brothers_block_rockin_beats",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "The Chemical Brothers – Block Rockin' Beats (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "The Chemical Brothers",
+   "song": "Block Rockin' Beats",
+   "songAliases": [
+    "Block Rockin Beats"
+   ],
+   "genres": [
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "gritty",
+    "riff",
+    "big-beat"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "saturation": 70,
+     "gateStrength": 52
+    },
+    "character": {
+     "loFi": 25
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  },
+  {
+   "id": "reimagined.underworld_born_slippy",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Underworld – Born Slippy (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Underworld",
+   "song": "Born Slippy",
+   "songAliases": [
+    "Born Slippy Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "pulsing",
+    "building",
+    "anthemic"
+   ],
+   "roles": [
+    "LEAD",
+    "RHYTHM"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "sustain": 78,
+     "delay": 46,
+     "tightness": 66
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "reimagined.vengaboys_boom_boom_boom",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Vengaboys – Boom, Boom, Boom!! (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vengaboys",
+   "song": "Boom, Boom, Boom!!",
+   "songAliases": [
+    "Boom Boom Boom"
+   ],
+   "genres": [
+    "eurodance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.eurodance_guitar"
+   ],
+   "tags": [
+    "poppy",
+    "bouncy",
+    "bright"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "sustain": 60,
+     "treble": 68,
+     "modulation": 20
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   }
+  },
+  {
+   "id": "reimagined.basshunter_boten_anna",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Basshunter – Boten Anna (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Basshunter",
+   "song": "Boten Anna",
+   "songAliases": [
+    "Boten Anna Guitar"
+   ],
+   "genres": [
+    "eurodance_inspired",
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.eurodance_guitar"
+   ],
+   "tags": [
+    "catchy",
+    "bright",
+    "chippy"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 72,
+     "treble": 68,
+     "delay": 28
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "reimagined.modjo_lady",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Modjo – Lady (Hear Me Tonight) (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Modjo",
+   "song": "Lady (Hear Me Tonight)",
+   "songAliases": [
+    "Lady Hear Me Tonight"
+   ],
+   "genres": [
+    "house_inspired"
+   ],
+   "parents": [
+    "tpl.genre.house_funk_guitar"
+   ],
+   "tags": [
+    "disco",
+    "funky",
+    "compressed"
+   ],
+   "roles": [
+    "RHYTHM",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 8,
+     "compression": 56,
+     "modulation": 28,
+     "attack": 78
+    },
+    "kinds": {
+     "modulation": "phaser"
+    }
+   }
+  },
+  {
+   "id": "reimagined.cascada_everytime_we_touch",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Cascada – Everytime We Touch (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Cascada",
+   "song": "Everytime We Touch",
+   "songAliases": [
+    "Everytime We Touch Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "eurodance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "uplifting",
+    "bright",
+    "melodic"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 76,
+     "treble": 68,
+     "delay": 36
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "reimagined.jean_michel_jarre_oxygene_4",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Jean-Michel Jarre – Oxygène (Part IV) (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jean-Michel Jarre",
+   "song": "Oxygène (Part IV)",
+   "songAliases": [
+    "Oxygene Part 4",
+    "Oxygene 4"
+   ],
+   "genres": [
+    "cinematic",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.genre.cinematic_ambient"
+   ],
+   "tags": [
+    "floating",
+    "vintage",
+    "wide"
+   ],
+   "roles": [
+    "LEAD",
+    "AMBIENT"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "sustain": 86,
+     "modulation": 36,
+     "reverb": 66,
+     "delay": 42
+    },
+    "character": {
+     "vintage": 75
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   }
+  },
+  {
+   "id": "reimagined.kraftwerk_the_robots",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Kraftwerk – The Robots (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kraftwerk",
+   "song": "The Robots",
+   "songAliases": [
+    "The Robots Guitar"
+   ],
+   "genres": [
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "robotic",
+    "minimal",
+    "mechanical"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "saturation": 40,
+     "tightness": 76,
+     "gateStrength": 40
+    },
+    "character": {
+     "loFi": 20
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "reimagined.tiesto_adagio_for_strings",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Tiësto – Adagio for Strings (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tiësto",
+   "song": "Adagio for Strings",
+   "songAliases": [
+    "Adagio for Strings Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "cinematic"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "epic",
+    "building",
+    "emotional"
+   ],
+   "roles": [
+    "LEAD",
+    "AMBIENT"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "sustain": 90,
+     "delay": 42,
+     "reverb": 56
+    },
+    "kinds": {
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "reimagined.deadmau5_strobe",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "deadmau5 – Strobe (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "deadmau5",
+   "song": "Strobe",
+   "songAliases": [
+    "Strobe Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "progressive",
+    "evolving",
+    "pulsing"
+   ],
+   "roles": [
+    "LEAD",
+    "AMBIENT",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 26,
+     "sustain": 82,
+     "delay": 46,
+     "reverb": 44,
+     "modulation": 30
+    },
+    "kinds": {
+     "delay": "analogWarm"
+    }
+   }
+  },
+  {
+   "id": "reimagined.avicii_levels",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Avicii – Levels (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Avicii",
+   "song": "Levels",
+   "songAliases": [
+    "Levels Guitar"
+   ],
+   "genres": [
+    "trance_inspired",
+    "eurodance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "uplifting",
+    "bright",
+    "anthemic"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "sustain": 78,
+     "treble": 68,
+     "reverb": 32
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "reimagined.swedish_house_mafia_dont_you_worry_child",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Swedish House Mafia – Don't You Worry Child (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Swedish House Mafia",
+   "song": "Don't You Worry Child",
+   "songAliases": [
+    "Dont You Worry Child"
+   ],
+   "genres": [
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "anthemic",
+    "uplifting",
+    "wide"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "sustain": 80,
+     "delay": 38,
+     "reverb": 42,
+     "modulation": 20
+    },
+    "kinds": {
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "reimagined.justice_dance",
+   "schemaVersion": 1,
+   "type": "GUITAR_REIMAGINED",
+   "title": "Justice – D.A.N.C.E. (Guitar Reimagined)",
+   "source": {
+    "classification": "GUITAR_REIMAGINED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Justice",
+   "song": "D.A.N.C.E.",
+   "songAliases": [
+    "DANCE Justice"
+   ],
+   "genres": [
+    "house_inspired",
+    "industrial_electronic"
+   ],
+   "parents": [
+    "tpl.genre.house_funk_guitar"
+   ],
+   "tags": [
+    "distorted",
+    "funky",
+    "bright"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "WyrmTone-Gitarreninterpretation: beschreibt, wie sich der Eindruck mit Gitarre und Multi-FX andeuten lässt; kein Nachbau des Originalklangs oder -synthesizers.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "saturation": 60,
+     "modulation": 20,
+     "compression": 50,
+     "treble": 64
+    },
+    "kinds": {
+     "drive": "distortion"
+    }
+   }
+  }
+ ]
+}

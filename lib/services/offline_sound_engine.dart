@@ -291,7 +291,9 @@ class OfflineSoundEngine {
       throw ArgumentError('Kein kuratiertes Offline-Klangziel.');
     }
     final (adapted, guitarReasons) = adapt(base, guitar, tuning, role);
-    final tone = toneOverride ?? adapted;
+    // explicit user wishes come after the corrections (USER_OVERRIDE in the recipe)
+    final tone = toneOverride ??
+        (adapted.userAdjustments.isEmpty ? adapted : adapted.changed(adapted.userAdjustments.apply(adapted.values)));
     final adapter = toneDeviceAdapters.firstWhere((a) => a.id == device);
     final warnings = <String>[
       ...tone.uncertainties,

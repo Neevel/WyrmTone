@@ -1,0 +1,703 @@
+{
+ "schemaVersion": 1,
+ "genres": [
+  {
+   "id": "metal",
+   "name": "Metal",
+   "aliases": []
+  },
+  {
+   "id": "heavy_metal",
+   "name": "Heavy Metal",
+   "parent": "metal",
+   "aliases": [
+    "classic metal",
+    "traditional metal"
+   ]
+  },
+  {
+   "id": "thrash_metal",
+   "name": "Thrash Metal",
+   "parent": "metal",
+   "aliases": [
+    "thrash"
+   ]
+  },
+  {
+   "id": "speed_metal",
+   "name": "Speed Metal",
+   "parent": "metal",
+   "aliases": [
+    "speed"
+   ]
+  },
+  {
+   "id": "power_metal",
+   "name": "Power Metal",
+   "parent": "metal",
+   "aliases": [
+    "power"
+   ]
+  },
+  {
+   "id": "progressive_metal",
+   "name": "Progressive Metal",
+   "parent": "metal",
+   "aliases": [
+    "prog metal",
+    "progmetal"
+   ]
+  },
+  {
+   "id": "groove_metal",
+   "name": "Groove Metal",
+   "parent": "metal",
+   "aliases": [
+    "groove"
+   ]
+  },
+  {
+   "id": "nu_metal",
+   "name": "Nu Metal",
+   "parent": "metal",
+   "aliases": [
+    "nu",
+    "numetal"
+   ]
+  },
+  {
+   "id": "alternative_metal",
+   "name": "Alternative Metal",
+   "parent": "metal",
+   "aliases": [
+    "alt metal"
+   ]
+  },
+  {
+   "id": "industrial_metal",
+   "name": "Industrial Metal",
+   "parent": "metal",
+   "aliases": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "melodic_death_metal",
+   "name": "Melodic Death Metal",
+   "parent": "metal",
+   "aliases": [
+    "melodeath",
+    "melodic death"
+   ]
+  },
+  {
+   "id": "death_metal",
+   "name": "Death Metal",
+   "parent": "metal",
+   "aliases": [
+    "death"
+   ]
+  },
+  {
+   "id": "black_metal",
+   "name": "Black Metal",
+   "parent": "metal",
+   "aliases": [
+    "black"
+   ]
+  },
+  {
+   "id": "doom_metal",
+   "name": "Doom Metal",
+   "parent": "metal",
+   "aliases": [
+    "doom"
+   ]
+  },
+  {
+   "id": "stoner_metal",
+   "name": "Stoner Metal",
+   "parent": "metal",
+   "aliases": [
+    "stoner"
+   ]
+  },
+  {
+   "id": "metalcore",
+   "name": "Metalcore",
+   "parent": "metal",
+   "aliases": []
+  },
+  {
+   "id": "deathcore",
+   "name": "Deathcore",
+   "parent": "metal",
+   "aliases": []
+  },
+  {
+   "id": "djent",
+   "name": "Djent",
+   "parent": "metal",
+   "aliases": []
+  },
+  {
+   "id": "post_metal",
+   "name": "Post Metal",
+   "parent": "metal",
+   "aliases": []
+  },
+  {
+   "id": "rock",
+   "name": "Rock",
+   "aliases": []
+  },
+  {
+   "id": "classic_rock",
+   "name": "Classic Rock",
+   "parent": "rock",
+   "aliases": [
+    "classic"
+   ]
+  },
+  {
+   "id": "hard_rock",
+   "name": "Hard Rock",
+   "parent": "rock",
+   "aliases": []
+  },
+  {
+   "id": "alternative_rock",
+   "name": "Alternative Rock",
+   "parent": "rock",
+   "aliases": [
+    "alt rock",
+    "alternative"
+   ]
+  },
+  {
+   "id": "grunge",
+   "name": "Grunge",
+   "parent": "rock",
+   "aliases": []
+  },
+  {
+   "id": "punk_rock",
+   "name": "Punk Rock",
+   "parent": "rock",
+   "aliases": [
+    "punk"
+   ]
+  },
+  {
+   "id": "pop_punk",
+   "name": "Pop Punk",
+   "parent": "rock",
+   "aliases": []
+  },
+  {
+   "id": "indie_rock",
+   "name": "Indie Rock",
+   "parent": "rock",
+   "aliases": [
+    "indie"
+   ]
+  },
+  {
+   "id": "progressive_rock",
+   "name": "Progressive Rock",
+   "parent": "rock",
+   "aliases": [
+    "prog rock",
+    "prog"
+   ]
+  },
+  {
+   "id": "psychedelic_rock",
+   "name": "Psychedelic Rock",
+   "parent": "rock",
+   "aliases": [
+    "psychedelic",
+    "psych"
+   ]
+  },
+  {
+   "id": "garage_rock",
+   "name": "Garage Rock",
+   "parent": "rock",
+   "aliases": [
+    "garage"
+   ]
+  },
+  {
+   "id": "southern_rock",
+   "name": "Southern Rock",
+   "parent": "rock",
+   "aliases": []
+  },
+  {
+   "id": "glam_metal",
+   "name": "Glam / Hair Metal",
+   "parent": "rock",
+   "aliases": [
+    "glam",
+    "hair metal"
+   ]
+  },
+  {
+   "id": "other_guitar",
+   "name": "Andere Gitarrenstile",
+   "aliases": [
+    "other guitar"
+   ]
+  },
+  {
+   "id": "blues",
+   "name": "Blues",
+   "parent": "other_guitar",
+   "aliases": [
+    "bluesy",
+    "electric blues"
+   ]
+  },
+  {
+   "id": "blues_rock",
+   "name": "Blues Rock",
+   "parent": "blues",
+   "aliases": []
+  },
+  {
+   "id": "funk",
+   "name": "Funk",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "soul",
+   "name": "Soul",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "country",
+   "name": "Country",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "jazz",
+   "name": "Jazz",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "fusion",
+   "name": "Fusion",
+   "parent": "other_guitar",
+   "aliases": [
+    "jazz fusion"
+   ]
+  },
+  {
+   "id": "surf",
+   "name": "Surf",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "shoegaze",
+   "name": "Shoegaze",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "post_rock",
+   "name": "Post Rock",
+   "parent": "other_guitar",
+   "aliases": [
+    "postrock"
+   ]
+  },
+  {
+   "id": "ambient",
+   "name": "Ambient",
+   "parent": "other_guitar",
+   "aliases": [
+    "ambient guitar"
+   ]
+  },
+  {
+   "id": "clean",
+   "name": "Clean",
+   "parent": "other_guitar",
+   "aliases": [
+    "clean sound"
+   ]
+  },
+  {
+   "id": "crunch",
+   "name": "Crunch",
+   "parent": "other_guitar",
+   "aliases": [
+    "crunchy"
+   ]
+  },
+  {
+   "id": "lo_fi",
+   "name": "Lo-Fi",
+   "parent": "other_guitar",
+   "aliases": [
+    "lofi",
+    "lo-fi guitar",
+    "lofi guitar"
+   ]
+  },
+  {
+   "id": "experimental",
+   "name": "Experimental",
+   "parent": "other_guitar",
+   "aliases": []
+  },
+  {
+   "id": "electronic_guitar",
+   "name": "Elektronische Gitarre",
+   "aliases": [
+    "electronic guitar",
+    "electronic"
+   ]
+  },
+  {
+   "id": "synthwave",
+   "name": "Synthwave",
+   "parent": "electronic_guitar",
+   "aliases": []
+  },
+  {
+   "id": "retrowave",
+   "name": "Retrowave",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "outrun"
+   ]
+  },
+  {
+   "id": "darkwave",
+   "name": "Darkwave",
+   "parent": "electronic_guitar",
+   "aliases": []
+  },
+  {
+   "id": "cyberpunk",
+   "name": "Cyberpunk",
+   "parent": "electronic_guitar",
+   "aliases": []
+  },
+  {
+   "id": "techno_inspired",
+   "name": "Techno-inspired",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "techno"
+   ]
+  },
+  {
+   "id": "trance_inspired",
+   "name": "Trance-inspired",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "trance"
+   ]
+  },
+  {
+   "id": "dnb_inspired",
+   "name": "DnB-inspired",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "dnb",
+    "drum and bass"
+   ]
+  },
+  {
+   "id": "industrial_electronic",
+   "name": "Industrial Electronic",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "industrial"
+   ]
+  },
+  {
+   "id": "synth_like_guitar",
+   "name": "Synth-like Guitar",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "synth guitar"
+   ]
+  },
+  {
+   "id": "nwobhm",
+   "name": "NWOBHM",
+   "parent": "metal",
+   "aliases": [
+    "new wave of british heavy metal"
+   ]
+  },
+  {
+   "id": "technical_death_metal",
+   "name": "Technical Death Metal",
+   "parent": "metal",
+   "aliases": [
+    "tech death",
+    "technical death"
+   ]
+  },
+  {
+   "id": "symphonic_metal",
+   "name": "Symphonic Metal",
+   "parent": "metal",
+   "aliases": [
+    "symphonic"
+   ]
+  },
+  {
+   "id": "sludge_metal",
+   "name": "Sludge Metal",
+   "parent": "metal",
+   "aliases": [
+    "sludge"
+   ]
+  },
+  {
+   "id": "melodic_metalcore",
+   "name": "Melodic Metalcore",
+   "parent": "metal",
+   "aliases": [
+    "melodic metalcore"
+   ]
+  },
+  {
+   "id": "folk_metal",
+   "name": "Folk Metal",
+   "parent": "metal",
+   "aliases": [
+    "folk"
+   ]
+  },
+  {
+   "id": "viking_metal",
+   "name": "Viking Metal",
+   "parent": "metal",
+   "aliases": [
+    "viking"
+   ]
+  },
+  {
+   "id": "gothic_metal",
+   "name": "Gothic Metal",
+   "parent": "metal",
+   "aliases": [
+    "gothic",
+    "goth metal"
+   ]
+  },
+  {
+   "id": "post_grunge",
+   "name": "Post-Grunge",
+   "parent": "rock",
+   "aliases": [
+    "post grunge"
+   ]
+  },
+  {
+   "id": "post_punk",
+   "name": "Post-Punk",
+   "parent": "rock",
+   "aliases": [
+    "post punk"
+   ]
+  },
+  {
+   "id": "emo",
+   "name": "Emo",
+   "parent": "rock",
+   "aliases": [
+    "emo rock"
+   ]
+  },
+  {
+   "id": "post_hardcore",
+   "name": "Post-Hardcore",
+   "parent": "rock",
+   "aliases": [
+    "post hardcore"
+   ]
+  },
+  {
+   "id": "texas_blues",
+   "name": "Texas Blues",
+   "parent": "blues",
+   "aliases": [
+    "texas blues"
+   ]
+  },
+  {
+   "id": "chicago_blues",
+   "name": "Chicago Blues",
+   "parent": "blues",
+   "aliases": [
+    "chicago blues"
+   ]
+  },
+  {
+   "id": "rockabilly",
+   "name": "Rockabilly",
+   "parent": "other_guitar",
+   "aliases": [
+    "rockabilly"
+   ]
+  },
+  {
+   "id": "clean_pop",
+   "name": "Clean Pop Guitar",
+   "parent": "other_guitar",
+   "aliases": [
+    "clean pop",
+    "pop clean"
+   ]
+  },
+  {
+   "id": "instrumental_rock",
+   "name": "Instrumental Rock / Shred",
+   "parent": "other_guitar",
+   "aliases": [
+    "shred",
+    "instrumental",
+    "guitar hero"
+   ]
+  },
+  {
+   "id": "eurodance_inspired",
+   "name": "Eurodance-inspired",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "eurodance"
+   ]
+  },
+  {
+   "id": "house_inspired",
+   "name": "House-inspired",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "house",
+    "french house"
+   ]
+  },
+  {
+   "id": "chiptune_inspired",
+   "name": "Chiptune-inspired",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "chiptune",
+    "8 bit",
+    "8-bit"
+   ]
+  },
+  {
+   "id": "cinematic",
+   "name": "Cinematic",
+   "parent": "electronic_guitar",
+   "aliases": [
+    "film score",
+    "cinematic guitar"
+   ]
+  }
+ ],
+ "eras": [
+  {
+   "id": "1960s",
+   "name": "1960er",
+   "fromYear": 1960,
+   "toYear": 1969,
+   "aliases": [
+    "60s",
+    "sixties",
+    "60er"
+   ]
+  },
+  {
+   "id": "1970s",
+   "name": "1970er",
+   "fromYear": 1970,
+   "toYear": 1979,
+   "aliases": [
+    "70s",
+    "seventies",
+    "70er"
+   ]
+  },
+  {
+   "id": "1980s",
+   "name": "1980er",
+   "fromYear": 1980,
+   "toYear": 1989,
+   "aliases": [
+    "80s",
+    "eighties",
+    "80er"
+   ]
+  },
+  {
+   "id": "1990s",
+   "name": "1990er",
+   "fromYear": 1990,
+   "toYear": 1999,
+   "aliases": [
+    "90s",
+    "nineties",
+    "90er"
+   ]
+  },
+  {
+   "id": "2000s",
+   "name": "2000er",
+   "fromYear": 2000,
+   "toYear": 2009,
+   "aliases": [
+    "00s",
+    "noughties",
+    "2000er"
+   ]
+  },
+  {
+   "id": "2010s",
+   "name": "2010er",
+   "fromYear": 2010,
+   "toYear": 2019,
+   "aliases": [
+    "10s",
+    "2010er"
+   ]
+  },
+  {
+   "id": "2020s",
+   "name": "2020er",
+   "fromYear": 2020,
+   "toYear": 2029,
+   "aliases": [
+    "20s",
+    "2020er"
+   ]
+  },
+  {
+   "id": "modern",
+   "name": "Moderne Ära",
+   "fromYear": 2015,
+   "toYear": 2100,
+   "aliases": [
+    "modern era",
+    "modern day",
+    "contemporary",
+    "heute",
+    "aktuell"
+   ]
+  }
+ ]
+}

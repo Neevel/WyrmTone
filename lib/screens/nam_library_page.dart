@@ -39,13 +39,15 @@ class _NamLibraryPageState extends State<NamLibraryPage> {
       return WyrmScaffold(
         title: 'NAM-Bibliothek',
         embedded: widget.embedded,
+        background: true,
+        backgroundIntensity: WyrmBackgroundIntensity.dim,
         body: ListView(
           key: const Key('nam-library-list'),
           padding: const EdgeInsets.all(16),
           children: [
             const WyrmSection(
               title: 'Neural Amp Models',
-              subtitle: 'Amp-Captures · NAM · Keine Geräteübertragung',
+              subtitle: 'Amp-Captures · NAM · Geräteübertragung noch nicht verfügbar',
               child: SizedBox.shrink(),
             ),
             if (!widget.targetSupportsNam)
@@ -140,7 +142,7 @@ class _NamLibraryPageState extends State<NamLibraryPage> {
                   children: [
                     WyrmTone3000Header(controller: controller),
                     const Text(
-                      'Matribox 1: NAM A1 kompatibel · A2 unbestätigt · Keine Geräteübertragung.',
+                      'Matribox 1: NAM A1 kompatibel · A2 unbestätigt · Geräteübertragung noch nicht verfügbar.',
                     ),
                     const SizedBox(height: 12),
                     FilledButton.icon(

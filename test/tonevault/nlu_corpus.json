@@ -1,0 +1,1776 @@
+{
+ "version": 1,
+ "queries": [
+  {
+   "category": "artist",
+   "q": "typischer Metallica Sound",
+   "expect": {
+    "artist": "Metallica",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Metallica",
+   "expect": {
+    "artist": "Metallica",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "metallika",
+   "expect": {
+    "artist": "Metallica",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "metalica",
+   "expect": {
+    "artist": "Metallica",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "typical Slayer tone",
+   "expect": {
+    "artist": "Slayer"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Megadeth",
+   "expect": {
+    "artist": "Megadeth"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Iron Maiden Sound",
+   "expect": {
+    "artist": "Iron Maiden"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "maiden",
+   "expect": {
+    "artist": "Iron Maiden"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "AC/DC",
+   "expect": {
+    "artist": "AC/DC"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "ACDC Rhythmus",
+   "expect": {
+    "artist": "AC/DC",
+    "role": "RHYTHM"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Led Zeppelin",
+   "expect": {
+    "artist": "Led Zeppelin"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "BFMV",
+   "expect": {
+    "artist": "Bullet for My Valentine"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "nirvanna",
+   "expect": {
+    "artist": "Nirvana"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "childrn of bodom",
+   "expect": {
+    "artist": "Children of Bodom"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "COB Lead",
+   "expect": {
+    "artist": "Children of Bodom",
+    "role": "LEAD"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Foo Fighters Sound",
+   "expect": {
+    "artist": "Foo Fighters"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Green Day",
+   "expect": {
+    "artist": "Green Day"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "typischer Pantera Sound",
+   "expect": {
+    "artist": "Pantera"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Rammstein",
+   "expect": {
+    "artist": "Rammstein"
+   }
+  },
+  {
+   "category": "artist",
+   "q": "Guns and Roses",
+   "expect": {
+    "artist": "Guns N' Roses"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Master of Puppets",
+   "expect": {
+    "song": "master of puppets",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "song",
+   "q": "master of pupets",
+   "expect": {
+    "song": "master of puppets",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Metallica Master of Puppets",
+   "expect": {
+    "artist": "Metallica",
+    "song": "master of puppets",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "song",
+   "q": "metallika master of pupets",
+   "expect": {
+    "artist": "Metallica",
+    "song": "master of puppets",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Children of Bodom Downfall",
+   "expect": {
+    "artist": "Children of Bodom",
+    "song": "downfall",
+    "base": "song.children_of_bodom.downfall"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Downfall Lead",
+   "expect": {
+    "song": "downfall",
+    "role": "LEAD",
+    "base": "song.children_of_bodom.downfall"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Angels Don't Kill",
+   "expect": {
+    "song": "angels dont kill",
+    "base": "song.children_of_bodom.angels_dont_kill"
+   }
+  },
+  {
+   "category": "song",
+   "q": "angels dont kill",
+   "expect": {
+    "song": "angels dont kill",
+    "base": "song.children_of_bodom.angels_dont_kill"
+   }
+  },
+  {
+   "category": "song",
+   "q": "BFMV Scream Aim Fire",
+   "expect": {
+    "artist": "Bullet for My Valentine",
+    "song": "scream aim fire",
+    "base": "song.bullet_for_my_valentine.scream_aim_fire"
+   }
+  },
+  {
+   "category": "song",
+   "q": "screem aim fire",
+   "expect": {
+    "song": "scream aim fire",
+    "base": "song.bullet_for_my_valentine.scream_aim_fire"
+   }
+  },
+  {
+   "category": "song",
+   "q": "cky 96 quite bitter beings",
+   "expect": {
+    "artist": "CKY",
+    "song": "96 quite bitter beings",
+    "base": "song.cky.96_quite_bitter_beings"
+   }
+  },
+  {
+   "category": "song",
+   "q": "96 QBB",
+   "expect": {
+    "song": "96 quite bitter beings",
+    "base": "song.cky.96_quite_bitter_beings"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Come as You Are",
+   "expect": {
+    "song": "come as you are",
+    "base": "song.nirvana.come_as_you_are"
+   }
+  },
+  {
+   "category": "song",
+   "q": "Nirvana Come as You Are clean",
+   "expect": {
+    "artist": "Nirvana",
+    "song": "come as you are",
+    "role": "CLEAN",
+    "base": "song.nirvana.come_as_you_are"
+   }
+  },
+  {
+   "category": "album",
+   "q": "Nirvana In Utero",
+   "expect": {
+    "artist": "Nirvana",
+    "album": "in utero",
+    "base": "album.nirvana.in_utero"
+   }
+  },
+  {
+   "category": "album",
+   "q": "nirvanna in utero",
+   "expect": {
+    "artist": "Nirvana",
+    "album": "in utero",
+    "base": "album.nirvana.in_utero"
+   }
+  },
+  {
+   "category": "album",
+   "q": "In Utero",
+   "expect": {
+    "album": "in utero",
+    "base": "album.nirvana.in_utero"
+   }
+  },
+  {
+   "category": "album",
+   "q": "Sound wie das Album In Utero",
+   "expect": {
+    "album": "in utero",
+    "base": "album.nirvana.in_utero"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Thrash Metal",
+   "expect": {
+    "genre": "metal",
+    "subgenre": "thrash_metal"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "thrash",
+   "expect": {
+    "subgenre": "thrash_metal"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Metalcore",
+   "expect": {
+    "genre": "metal",
+    "subgenre": "metalcore"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "modern metal",
+   "expect": {
+    "genre": "metal",
+    "styleTerms": [
+     "modern"
+    ]
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Melodic Death Metal",
+   "expect": {
+    "genre": "metal",
+    "subgenre": "melodic_death_metal"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Grunge",
+   "expect": {
+    "genre": "rock",
+    "subgenre": "grunge"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Hard Rock",
+   "expect": {
+    "genre": "rock",
+    "subgenre": "hard_rock"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Blues Rock",
+   "expect": {
+    "subgenre": "blues_rock"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Pop Punk",
+   "expect": {
+    "genre": "rock",
+    "subgenre": "pop_punk"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Funk Clean",
+   "expect": {
+    "subgenre": "funk",
+    "role": "CLEAN"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Shoegaze",
+   "expect": {
+    "subgenre": "shoegaze"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Post Rock",
+   "expect": {
+    "subgenre": "post_rock"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Synthwave",
+   "expect": {
+    "genre": "electronic_guitar",
+    "subgenre": "synthwave"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Cyberpunk",
+   "expect": {
+    "subgenre": "cyberpunk"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "metal",
+   "expect": {
+    "genre": "metal",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Djent",
+   "expect": {
+    "subgenre": "djent"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Doom Metal",
+   "expect": {
+    "subgenre": "doom_metal"
+   }
+  },
+  {
+   "category": "genre",
+   "q": "Nu Metal",
+   "expect": {
+    "subgenre": "nu_metal"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Metallica Rhythmus",
+   "expect": {
+    "artist": "Metallica",
+    "role": "RHYTHM"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Metallica Lead",
+   "expect": {
+    "artist": "Metallica",
+    "role": "LEAD"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Master of Puppets rhythm guitar",
+   "expect": {
+    "song": "master of puppets",
+    "role": "RHYTHM",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Master of Puppets Solo",
+   "expect": {
+    "song": "master of puppets",
+    "role": "SOLO",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Blues Crunch",
+   "expect": {
+    "subgenre": "blues",
+    "role": "CRUNCH"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Ambient Clean",
+   "expect": {
+    "role": "CLEAN"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Slayer Rhythmus Sound",
+   "expect": {
+    "artist": "Slayer",
+    "role": "RHYTHM"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Metalsound Rhythmussound",
+   "expect": {
+    "genre": "metal",
+    "role": "RHYTHM"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Metal Lead-Sound",
+   "expect": {
+    "genre": "metal",
+    "role": "LEAD"
+   }
+  },
+  {
+   "category": "role",
+   "q": "Clean-Sound",
+   "expect": {
+    "role": "CLEAN"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "moderner Metal Sound für Drop C",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropC",
+    "modifiers": [
+     "MORE_MODERN/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Metal Drop D",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropD"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Metal in Drop-C",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropC"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "metal dropc",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropC"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "metal drop b",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropB"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "metal drop a",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropA"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Metal Drop C#",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropCSharp"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Metal drop c sharp",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropCSharp"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Blues c# standard",
+   "expect": {
+    "tuning": "cSharpStandard"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "blues cis standard",
+   "expect": {
+    "tuning": "cSharpStandard"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Blues E Standard",
+   "expect": {
+    "tuning": "eStandard"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Blues Standard",
+   "expect": {
+    "tuning": "eStandard"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Blues Eb Standard",
+   "expect": {
+    "tuning": "ebStandard"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Blues D Standard",
+   "expect": {
+    "tuning": "dStandard"
+   }
+  },
+  {
+   "category": "tuning",
+   "q": "Metal Drop-C-Sound",
+   "expect": {
+    "genre": "metal",
+    "tuning": "dropC"
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets aber weniger Gain",
+   "expect": {
+    "song": "master of puppets",
+    "base": "song.metallica.master_of_puppets",
+    "modifiers": [
+     "LESS_GAIN/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Metallica Rhythmus mit mehr Mitten und weniger Bass",
+   "expect": {
+    "artist": "Metallica",
+    "role": "RHYTHM",
+    "modifiers": [
+     "MORE_MIDS/NORMAL",
+     "LESS_BASS/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets mehr Höhen",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_TREBLE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets weniger Höhen",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_TREBLE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets brighter",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "BRIGHTER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets darker",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "DARKER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets tighter",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "TIGHTER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets lockerer",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LOOSER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets more body",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_BODY/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets less body",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_BODY/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets mehr Präsenz",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_PRESENCE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets less presence",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_PRESENCE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets mehr Klarheit",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_CLARITY/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets aggressiver",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_AGGRESSIVE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets weicher",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_AGGRESSIVE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets more compression",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_COMPRESSION/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets less modulation",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_MODULATION/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets mehr Hall",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_REVERB/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets weniger Delay",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_DELAY/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets moderner",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_MODERN/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets vintage-er",
+   "expect": {
+    "song": "master of puppets"
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets atmosphärischer",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "MORE_AMBIENT/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets dreckiger",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "DIRTIER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets cleaner",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "CLEANER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets wärmer",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "WARMER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets colder",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "COLDER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets trockener",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "DRIER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets wetter",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "WETTER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets thinner",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_BODY/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "modifier",
+   "q": "Master of Puppets softer",
+   "expect": {
+    "song": "master of puppets",
+    "modifiers": [
+     "LESS_AGGRESSIVE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets etwas weniger Gain",
+   "expect": {
+    "modifiers": [
+     "LESS_GAIN/SLIGHT"
+    ],
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets viel weniger Gain",
+   "expect": {
+    "modifiers": [
+     "LESS_GAIN/STRONG"
+    ],
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets slightly less gain",
+   "expect": {
+    "modifiers": [
+     "LESS_GAIN/SLIGHT"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets much more gain",
+   "expect": {
+    "modifiers": [
+     "MORE_GAIN/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets ein bisschen dunkler",
+   "expect": {
+    "modifiers": [
+     "DARKER/SLIGHT"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets sehr viel dunkler",
+   "expect": {
+    "modifiers": [
+     "DARKER/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets a bit brighter",
+   "expect": {
+    "modifiers": [
+     "BRIGHTER/SLIGHT"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets deutlich mehr Mitten",
+   "expect": {
+    "modifiers": [
+     "MORE_MIDS/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets richtig viel Reverb",
+   "expect": {
+    "modifiers": [
+     "MORE_REVERB/STRONG"
+    ],
+    "effects": [
+     "ON reverb"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets etwas Delay",
+   "expect": {
+    "modifiers": [
+     "MORE_DELAY/SLIGHT"
+    ],
+    "effects": [
+     "ON delay"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Master of Puppets lots of delay",
+   "expect": {
+    "modifiers": [
+     "MORE_DELAY/STRONG"
+    ],
+    "effects": [
+     "ON delay"
+    ]
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "richtig viel Reverb",
+   "expect": {
+    "modifiers": [
+     "MORE_REVERB/STRONG"
+    ],
+    "kind": "none"
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "ein bisschen dunkler",
+   "expect": {
+    "modifiers": [
+     "DARKER/SLIGHT"
+    ],
+    "kind": "none"
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Angels Don't Kill etwas weniger scharf",
+   "expect": {
+    "modifiers": [
+     "LESS_PRESENCE/SLIGHT"
+    ],
+    "base": "song.children_of_bodom.angels_dont_kill"
+   }
+  },
+  {
+   "category": "intensity",
+   "q": "Nirvana In Utero aber etwas dreckiger",
+   "expect": {
+    "modifiers": [
+     "DIRTIER/SLIGHT"
+    ],
+    "base": "album.nirvana.in_utero"
+   }
+  },
+  {
+   "category": "negation",
+   "q": "no reverb metalcore rhythm",
+   "expect": {
+    "subgenre": "metalcore",
+    "role": "RHYTHM",
+    "effects": [
+     "OFF reverb"
+    ],
+    "modifiers": []
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Metalcore ohne Delay",
+   "expect": {
+    "subgenre": "metalcore",
+    "effects": [
+     "OFF delay"
+    ],
+    "modifiers": []
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Blues Crunch no chorus",
+   "expect": {
+    "role": "CRUNCH",
+    "effects": [
+     "OFF chorus"
+    ]
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Rock without modulation",
+   "expect": {
+    "effects": []
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Metal kein Gate",
+   "expect": {
+    "genre": "metal",
+    "effects": [
+     "OFF gate"
+    ]
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Clean mit Chorus aber ohne Reverb",
+   "expect": {
+    "role": "CLEAN",
+    "effects": [
+     "ON chorus",
+     "OFF reverb"
+    ],
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Master of Puppets ohne Reverb",
+   "expect": {
+    "song": "master of puppets",
+    "effects": [
+     "OFF reverb"
+    ],
+    "modifiers": []
+   }
+  },
+  {
+   "category": "negation",
+   "q": "Master of Puppets kein Delay",
+   "expect": {
+    "song": "master of puppets",
+    "effects": [
+     "OFF delay"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Clean Sound mit Chorus und viel Reverb",
+   "expect": {
+    "effects": [
+     "ON chorus",
+     "ON reverb"
+    ],
+    "modifiers": [
+     "MORE_REVERB/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Cyberpunk Lead mit Delay",
+   "expect": {
+    "effects": [
+     "ON delay"
+    ],
+    "base": "original.cyberpunk_lead"
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Metal Lead mit Flanger",
+   "expect": {
+    "genre": "metal",
+    "role": "LEAD",
+    "effects": [
+     "ON flanger"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Blues mit Phaser",
+   "expect": {
+    "effects": [
+     "ON phaser"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Rock mit Tremolo",
+   "expect": {
+    "effects": [
+     "ON tremolo"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Clean mit Vibrato",
+   "expect": {
+    "role": "CLEAN",
+    "effects": [
+     "ON vibrato"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Metal mit Fuzz",
+   "expect": {
+    "genre": "metal",
+    "effects": [
+     "ON fuzz"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Metal mit Overdrive",
+   "expect": {
+    "genre": "metal",
+    "effects": [
+     "ON overdrive"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Metal mit Boost",
+   "expect": {
+    "genre": "metal",
+    "effects": [
+     "ON boost"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Blues mit Wah",
+   "expect": {
+    "effects": [
+     "ON wah"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Lead mit Octaver",
+   "expect": {
+    "role": "LEAD",
+    "effects": [
+     "ON octave"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Rock mit Kompressor",
+   "expect": {
+    "effects": [
+     "ON compressor"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Metal mit Noise Gate",
+   "expect": {
+    "genre": "metal",
+    "effects": [
+     "ON gate"
+    ]
+   }
+  },
+  {
+   "category": "effects",
+   "q": "Rock mit EQ",
+   "expect": {
+    "effects": [
+     "ON eq"
+    ]
+   }
+  },
+  {
+   "category": "era",
+   "q": "80er Hard Rock Lead mit viel Delay",
+   "expect": {
+    "era": "1980s",
+    "subgenre": "hard_rock",
+    "role": "LEAD",
+    "modifiers": [
+     "MORE_DELAY/STRONG"
+    ],
+    "effects": [
+     "ON delay"
+    ]
+   }
+  },
+  {
+   "category": "era",
+   "q": "80s Thrash",
+   "expect": {
+    "era": "1980s",
+    "subgenre": "thrash_metal"
+   }
+  },
+  {
+   "category": "era",
+   "q": "90er Grunge",
+   "expect": {
+    "era": "1990s",
+    "subgenre": "grunge"
+   }
+  },
+  {
+   "category": "era",
+   "q": "70s Rock",
+   "expect": {
+    "era": "1970s"
+   }
+  },
+  {
+   "category": "era",
+   "q": "60er Blues",
+   "expect": {
+    "era": "1960s"
+   }
+  },
+  {
+   "category": "era",
+   "q": "2000er Metalcore",
+   "expect": {
+    "era": "2000s",
+    "subgenre": "metalcore"
+   }
+  },
+  {
+   "category": "era",
+   "q": "2010s Metal",
+   "expect": {
+    "era": "2010s"
+   }
+  },
+  {
+   "category": "era",
+   "q": "80er-Metal",
+   "expect": {
+    "era": "1980s",
+    "genre": "metal"
+   }
+  },
+  {
+   "category": "era",
+   "q": "vintage Blues",
+   "expect": {
+    "modifiers": [
+     "MORE_VINTAGE/SLIGHT"
+    ]
+   }
+  },
+  {
+   "category": "typos",
+   "q": "metallica master of pupets",
+   "expect": {
+    "song": "master of puppets",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "typos",
+   "q": "metalica master of puppets rhythm",
+   "expect": {
+    "role": "RHYTHM",
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "typos",
+   "q": "childrn of bodom downfall",
+   "expect": {
+    "song": "downfall",
+    "base": "song.children_of_bodom.downfall"
+   }
+  },
+  {
+   "category": "typos",
+   "q": "screem aim fire",
+   "expect": {
+    "song": "scream aim fire"
+   }
+  },
+  {
+   "category": "typos",
+   "q": "nirvanna in utero",
+   "expect": {
+    "album": "in utero"
+   }
+  },
+  {
+   "category": "typos",
+   "q": "metallika master of pupets weniger gain",
+   "expect": {
+    "modifiers": [
+     "LESS_GAIN/NORMAL"
+    ],
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "typos",
+   "q": "metallica master of puppets weniger gain",
+   "expect": {
+    "modifiers": [
+     "LESS_GAIN/NORMAL"
+    ],
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "combined",
+   "q": "Metallica Master of Puppets Rhythmus Drop C etwas weniger Gain",
+   "expect": {
+    "artist": "Metallica",
+    "song": "master of puppets",
+    "role": "RHYTHM",
+    "tuning": "dropC",
+    "modifiers": [
+     "LESS_GAIN/SLIGHT"
+    ],
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "combined",
+   "q": "metallika master of pupets rhythm drop c weniger gain",
+   "expect": {
+    "artist": "Metallica",
+    "song": "master of puppets",
+    "role": "RHYTHM",
+    "tuning": "dropC",
+    "modifiers": [
+     "LESS_GAIN/NORMAL"
+    ],
+    "base": "song.metallica.master_of_puppets"
+   }
+  },
+  {
+   "category": "combined",
+   "q": "warmer Blues Crunch mit etwas Reverb",
+   "expect": {
+    "subgenre": "blues",
+    "role": "CRUNCH",
+    "modifiers": [
+     "WARMER/NORMAL",
+     "MORE_REVERB/SLIGHT"
+    ],
+    "effects": [
+     "ON reverb"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "warmer Blues Crunch",
+   "expect": {
+    "subgenre": "blues",
+    "role": "CRUNCH",
+    "modifiers": [
+     "WARMER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "fetter Metalcore Rhythm Sound",
+   "expect": {
+    "subgenre": "metalcore",
+    "role": "RHYTHM",
+    "modifiers": [
+     "MORE_BODY/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "dunkler Ambient Sound",
+   "expect": {
+    "subgenre": "ambient",
+    "modifiers": [
+     "DARKER/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "Metallica Rhythmus Drop C mit viel Delay ohne Reverb",
+   "expect": {
+    "artist": "Metallica",
+    "role": "RHYTHM",
+    "tuning": "dropC",
+    "modifiers": [
+     "MORE_DELAY/STRONG"
+    ],
+    "effects": [
+     "ON delay",
+     "OFF reverb"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "Children of Bodom Downfall Lead etwas heller",
+   "expect": {
+    "song": "downfall",
+    "role": "LEAD",
+    "modifiers": [
+     "BRIGHTER/SLIGHT"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "BFMV Scream Aim Fire Drop C viel Gain",
+   "expect": {
+    "song": "scream aim fire",
+    "tuning": "dropC",
+    "modifiers": [
+     "MORE_GAIN/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "combined",
+   "q": "modern metal rhythm in drop c mit weniger bass",
+   "expect": {
+    "genre": "metal",
+    "role": "RHYTHM",
+    "tuning": "dropC",
+    "modifiers": [
+     "MORE_MODERN/SLIGHT",
+     "LESS_BASS/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Sandstorm auf Gitarre",
+   "expect": {
+    "song": "sandstorm",
+    "base": "reimagined.darude_sandstorm",
+    "modifiers": []
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Sandstorm aber aggressiver",
+   "expect": {
+    "song": "sandstorm",
+    "base": "reimagined.darude_sandstorm",
+    "modifiers": [
+     "MORE_AGGRESSIVE/NORMAL"
+    ]
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Synthwave Lead",
+   "expect": {
+    "subgenre": "synthwave",
+    "role": "LEAD"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "dunkler Cyberpunk Lead mit Delay",
+   "expect": {
+    "modifiers": [
+     "DARKER/NORMAL"
+    ],
+    "effects": [
+     "ON delay"
+    ],
+    "base": "original.cyberpunk_lead"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Cyberpunk Lead mit Delay",
+   "expect": {
+    "base": "original.cyberpunk_lead"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Kernkraft 400 Guitar",
+   "expect": {
+    "base": "reimagined.zombie_nation_kernkraft_400"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Insomnia auf Gitarre",
+   "expect": {
+    "base": "reimagined.faithless_insomnia"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Neon Outrun",
+   "expect": {
+    "base": "original.neon_outrun_lead"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "VHS Clean",
+   "expect": {
+    "base": "original.vhs_chorus_clean"
+   }
+  },
+  {
+   "category": "electronic",
+   "q": "Darkwave",
+   "expect": {
+    "base": "original.darkwave_ambient"
+   }
+  },
+  {
+   "category": "unknown",
+   "q": "mach mir einen ultra bösen galaktischen Metallica Sound",
+   "expect": {
+    "artist": "Metallica",
+    "unresolved": [
+     "galaktischen"
+    ],
+    "modifiers": [
+     "MORE_AGGRESSIVE/STRONG",
+     "MORE_GAIN/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "unknown",
+   "q": "Metallica Rhythmus zauberhaft",
+   "expect": {
+    "artist": "Metallica",
+    "role": "RHYTHM",
+    "unresolved": [
+     "zauberhaft"
+    ]
+   }
+  },
+  {
+   "category": "unknown",
+   "q": "xqzvbnm",
+   "expect": {
+    "kind": "none",
+    "unresolved": [
+     "xqzvbnm"
+    ]
+   }
+  },
+  {
+   "category": "unknown",
+   "q": "Blues Crunch flibbertigibbet",
+   "expect": {
+    "role": "CRUNCH",
+    "unresolved": [
+     "flibbertigibbet"
+    ]
+   }
+  },
+  {
+   "category": "unknown",
+   "q": "mach mir einen richtig kaputten Industrial Sound",
+   "expect": {
+    "subgenre": "industrial_metal",
+    "modifiers": [
+     "DIRTIER/STRONG",
+     "MORE_GAIN/STRONG"
+    ]
+   }
+  },
+  {
+   "category": "unknown",
+   "q": "bitte gib mir einen Sound",
+   "expect": {
+    "kind": "none",
+    "unresolved": []
+   }
+  },
+  {
+   "category": "ambiguous",
+   "q": "Metallica",
+   "expect": {
+    "artist": "Metallica",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "ambiguous",
+   "q": "metal",
+   "expect": {
+    "genre": "metal",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "ambiguous",
+   "q": "Nirvana",
+   "expect": {
+    "artist": "Nirvana",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "ambiguous",
+   "q": "Hard Rock",
+   "expect": {
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "ambiguous",
+   "q": "Metallica Rhythmus",
+   "expect": {
+    "artist": "Metallica",
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "ambiguous",
+   "q": "Grunge Sound",
+   "expect": {
+    "kind": "choose"
+   }
+  },
+  {
+   "category": "mandatory",
+   "q": "Metallica Master of Puppets Rhythmus",
+   "expect": {}
+  },
+  {
+   "category": "mandatory",
+   "q": "Children of Bodom Downfall Lead",
+   "expect": {}
+  }
+ ]
+}

@@ -21,6 +21,23 @@ void main() {
     expect(config.redirectUri.toString(), 'wyrmtone://oauth/callback');
   });
 
+  test('every normal build ships a non-empty PUBLIC default client id (never a secret)', () {
+    final config = Tone3000Config.fromEnvironment();
+    expect(config.isConfigured, isTrue);
+    expect(config.clientId, isNotEmpty);
+    expect(config.clientId, startsWith('t3k_pub_'));
+    expect(config.clientId.toLowerCase(), isNot(contains('secret')));
+  });
+
+  test('an explicit --dart-define overrides the public default', () {
+    // Tone3000Config.fromEnvironment() reads a compile-time define; here we exercise the same
+    // resolution rule it applies (empty -> default, non-empty -> as given) directly, since a test
+    // run cannot itself pass --dart-define.
+    final overridden = Tone3000Config(clientId: 'custom_client_id');
+    expect(overridden.clientId, 'custom_client_id');
+    expect(overridden.isConfigured, isTrue);
+  });
+
   test('PKCE verifier, S256 challenge and state are secure-shaped', () {
     final first = Tone3000PkceGenerator(random: Random(7)).generate();
     final second = Tone3000PkceGenerator(random: Random(8)).generate();

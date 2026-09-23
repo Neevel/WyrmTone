@@ -1,0 +1,400 @@
+{
+ "pack": {
+  "id": "rock_progressive",
+  "name": "Rock: Progressive",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Progressive-Rock-Acts.",
+  "entryCount": 9,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.rush",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Rush – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Rush",
+   "genres": [
+    "progressive_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "layered",
+    "chorused",
+    "precise"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "modulation": 24
+    },
+    "character": {
+     "clarity": 78
+    }
+   }
+  },
+  {
+   "id": "artist.yes",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Yes – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Yes",
+   "genres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "bright",
+    "twangy",
+    "intricate"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "treble": 60
+    },
+    "character": {
+     "clarity": 76
+    }
+   }
+  },
+  {
+   "id": "artist.king_crimson",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "King Crimson – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "King Crimson",
+   "genres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s",
+    "1980s"
+   ],
+   "tags": [
+    "angular",
+    "dissonant",
+    "heavy"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "saturation": 56,
+     "tightness": 54
+    }
+   }
+  },
+  {
+   "id": "artist.porcupine_tree",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Porcupine Tree – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Porcupine Tree",
+   "genres": [
+    "progressive_rock"
+   ],
+   "subgenres": [
+    "alternative_rock"
+   ],
+   "eras": [
+    "2000s"
+   ],
+   "tags": [
+    "layered",
+    "moody",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "modulation": 22,
+     "delay": 20,
+     "reverb": 30
+    }
+   }
+  },
+  {
+   "id": "artist.genesis",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Genesis – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Genesis",
+   "genres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "layered",
+    "melodic",
+    "warm"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "modulation": 22
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  },
+  {
+   "id": "artist.gentle_giant",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Gentle Giant – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Gentle Giant",
+   "genres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "intricate",
+    "dry",
+    "clear"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "reverb": 14
+    },
+    "character": {
+     "clarity": 78
+    }
+   }
+  },
+  {
+   "id": "artist.camel",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Camel – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Camel",
+   "genres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "singing",
+    "warm",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 78
+    },
+    "character": {
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "artist.marillion",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Marillion – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Marillion",
+   "genres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "emotional",
+    "singing",
+    "spacious"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "sustain": 78,
+     "delay": 24,
+     "reverb": 32
+    }
+   }
+  },
+  {
+   "id": "artist.steven_wilson",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Steven Wilson – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Steven Wilson",
+   "genres": [
+    "progressive_rock"
+   ],
+   "subgenres": [
+    "progressive_metal"
+   ],
+   "eras": [
+    "2000s",
+    "2010s"
+   ],
+   "tags": [
+    "modern",
+    "layered",
+    "dynamic"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "reverb": 30
+    }
+   }
+  }
+ ]
+}

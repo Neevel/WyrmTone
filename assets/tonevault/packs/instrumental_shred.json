@@ -1,0 +1,846 @@
+{
+ "pack": {
+  "id": "instrumental_shred",
+  "name": "Instrumental Rock und Shred",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Instrumentale Gitarrenacts und Virtuosen.",
+  "entryCount": 19,
+  "sourceClassification": "STYLE_INSPIRED",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "artist.joe_satriani",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Joe Satriani – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Joe Satriani",
+   "artistAliases": [
+    "Satriani"
+   ],
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "singing",
+    "sustaining",
+    "smooth",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "sustain": 88,
+     "mids": 62,
+     "delay": 20
+    }
+   }
+  },
+  {
+   "id": "artist.steve_vai",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Steve Vai – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Steve Vai",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "expressive",
+    "sustaining",
+    "wide"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "sustain": 90,
+     "modulation": 18,
+     "delay": 24
+    }
+   }
+  },
+  {
+   "id": "artist.eric_johnson",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Eric Johnson – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Eric Johnson",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "singing",
+    "warm",
+    "layered"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "sustain": 84,
+     "delay": 26
+    },
+    "character": {
+     "warmth": 66
+    }
+   }
+  },
+  {
+   "id": "artist.yngwie_malmsteen",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Yngwie Malmsteen – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Yngwie Malmsteen",
+   "artistAliases": [
+    "Yngwie"
+   ],
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "neoclassical",
+    "fast",
+    "scalloped"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "tightness": 66,
+     "sustain": 84,
+     "treble": 62
+    }
+   }
+  },
+  {
+   "id": "artist.paul_gilbert",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Paul Gilbert – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Paul Gilbert",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "fast",
+    "precise",
+    "bright"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "tightness": 64,
+     "sustain": 78
+    }
+   }
+  },
+  {
+   "id": "artist.jason_becker",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Jason Becker – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Jason Becker",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "neoclassical",
+    "fast",
+    "melodic"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "sustain": 84
+    }
+   }
+  },
+  {
+   "id": "artist.marty_friedman",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Marty Friedman – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Marty Friedman",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "exotic",
+    "melodic",
+    "expressive"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "sustain": 82
+    }
+   }
+  },
+  {
+   "id": "artist.zakk_wylde",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Zakk Wylde – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Zakk Wylde",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "southern_rock"
+   ],
+   "eras": [
+    "1990s",
+    "2000s"
+   ],
+   "tags": [
+    "pinch-harmonics",
+    "thick",
+    "aggressive"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tuningHints": [
+    "dStandard",
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "sustain": 76
+    }
+   }
+  },
+  {
+   "id": "artist.randy_rhoads",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Randy Rhoads – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Randy Rhoads",
+   "genres": [
+    "heavy_metal"
+   ],
+   "subgenres": [
+    "instrumental_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "neoclassical",
+    "singing",
+    "tight"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "sustain": 78
+    }
+   }
+  },
+  {
+   "id": "artist.dimebag_darrell",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Dimebag Darrell – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Dimebag Darrell",
+   "artistAliases": [
+    "Dimebag"
+   ],
+   "genres": [
+    "groove_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "scooped",
+    "sharp",
+    "whammy"
+   ],
+   "parents": [
+    "tpl.genre.groove_metal"
+   ],
+   "tuningHints": [
+    "dStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "tightness": 78,
+     "mids": 38
+    }
+   }
+  },
+  {
+   "id": "artist.kirk_hammett",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Kirk Hammett – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Kirk Hammett",
+   "genres": [
+    "thrash_metal"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s",
+    "1990s"
+   ],
+   "tags": [
+    "wah-driven",
+    "expressive",
+    "bluesy-leads"
+   ],
+   "parents": [
+    "tpl.genre.thrash_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 68,
+     "sustain": 70
+    }
+   }
+  },
+  {
+   "id": "artist.steve_morse",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Steve Morse – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Steve Morse",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "precise",
+    "country-tinged",
+    "fluid"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "sustain": 78
+    }
+   }
+  },
+  {
+   "id": "artist.vinnie_moore",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Vinnie Moore – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Vinnie Moore",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "heavy_metal"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "neoclassical",
+    "fast",
+    "precise"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 62
+    }
+   }
+  },
+  {
+   "id": "artist.tony_macalpine",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Tony MacAlpine – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Tony MacAlpine",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "neoclassical",
+    "fast",
+    "clear"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 60
+    }
+   }
+  },
+  {
+   "id": "artist.michael_romeo",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Michael Romeo – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Michael Romeo",
+   "genres": [
+    "progressive_metal"
+   ],
+   "subgenres": [
+    "power_metal"
+   ],
+   "eras": [
+    "1990s"
+   ],
+   "tags": [
+    "neoclassical",
+    "heavy",
+    "precise"
+   ],
+   "parents": [
+    "tpl.style.progressive_metal"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 76
+    }
+   }
+  },
+  {
+   "id": "artist.frank_zappa",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Frank Zappa – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Frank Zappa",
+   "genres": [
+    "instrumental_rock"
+   ],
+   "subgenres": [
+    "progressive_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "experimental",
+    "singing",
+    "wah-driven"
+   ],
+   "parents": [
+    "tpl.genre.instrumental_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 44,
+     "sustain": 82,
+     "mids": 60
+    }
+   }
+  },
+  {
+   "id": "artist.brian_may",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Brian May – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Brian May",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "hard_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "singing",
+    "layered",
+    "harmonized"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 50,
+     "sustain": 80
+    },
+    "character": {
+     "warmth": 62
+    }
+   }
+  },
+  {
+   "id": "artist.david_gilmour",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "David Gilmour – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "David Gilmour",
+   "genres": [
+    "progressive_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1970s"
+   ],
+   "tags": [
+    "singing",
+    "expressive",
+    "spacious"
+   ],
+   "parents": [
+    "tpl.genre.progressive_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "sustain": 84,
+     "delay": 32,
+     "reverb": 34
+    }
+   }
+  },
+  {
+   "id": "artist.mark_knopfler",
+   "schemaVersion": 1,
+   "type": "ARTIST_SIGNATURE",
+   "title": "Mark Knopfler – Signature",
+   "source": {
+    "classification": "STYLE_INSPIRED"
+   },
+   "confidence": "MEDIUM",
+   "artist": "Mark Knopfler",
+   "genres": [
+    "classic_rock"
+   ],
+   "subgenres": [
+    "blues_rock"
+   ],
+   "eras": [
+    "1980s"
+   ],
+   "tags": [
+    "fingerstyle",
+    "clean-crunch",
+    "articulate"
+   ],
+   "parents": [
+    "tpl.genre.blues_rock"
+   ],
+   "tuningHints": [
+    "eStandard"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Stilorientierte WyrmTone-Beschreibung; keine Aussage über Originalequipment oder Studioeinstellungen. Der Name dient nur als Referenz- und Suchbegriff.",
+   "tone": {
+    "dimensions": {
+     "gain": 22,
+     "attack": 70
+    },
+    "character": {
+     "clarity": 82
+    }
+   }
+  }
+ ]
+}

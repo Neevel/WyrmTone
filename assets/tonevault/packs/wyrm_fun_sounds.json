@@ -1,0 +1,864 @@
+{
+ "pack": {
+  "id": "wyrm_fun_sounds",
+  "name": "WyrmTone Special- und Fun-Sounds",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Ungewöhnliche WyrmTone-Sounds (Telefon, Unterwasser, Lo-Fi, Horror, Doom Wall, ...); keine Emulation echter Geräte.",
+  "entryCount": 18,
+  "sourceClassification": "WYRM_ORIGINAL",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "original.telephone_guitar",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Telephone Guitar",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "lo_fi",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tags": [
+    "telephone",
+    "narrow",
+    "midrangey"
+   ],
+   "roles": [
+    "SPECIAL",
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Telefon Gitarre"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "bass": 8,
+     "lowMids": 20,
+     "mids": 82,
+     "upperMids": 74,
+     "treble": 30,
+     "presence": 40,
+     "irBrightness": 30,
+     "compression": 60,
+     "modulation": 0
+    },
+    "character": {
+     "loFi": 75,
+     "clarity": 40
+    },
+    "kinds": {
+     "drive": "other"
+    }
+   }
+  },
+  {
+   "id": "original.radio_guitar",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Radio Guitar",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "lo_fi",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tags": [
+    "radio",
+    "narrow",
+    "midrangey",
+    "vintage"
+   ],
+   "roles": [
+    "SPECIAL",
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Radio Gitarre"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "bass": 20,
+     "lowMids": 36,
+     "mids": 78,
+     "upperMids": 70,
+     "treble": 34,
+     "irBrightness": 36,
+     "reverb": 12
+    },
+    "character": {
+     "loFi": 60
+    },
+    "kinds": {
+     "drive": "other"
+    }
+   }
+  },
+  {
+   "id": "original.underwater_clean",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Underwater Clean",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "ambient",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tags": [
+    "underwater",
+    "dark",
+    "wobbly",
+    "muffled"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Unterwasser Clean"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "treble": 12,
+     "presence": 8,
+     "irBrightness": 12,
+     "modulation": 72,
+     "reverb": 58,
+     "delay": 30,
+     "space": 40
+    },
+    "character": {
+     "darkness": 80
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.broken_speaker",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Broken Speaker",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "lo_fi",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tags": [
+    "broken",
+    "fuzzy",
+    "crackly",
+    "lo-fi"
+   ],
+   "roles": [
+    "SPECIAL",
+    "RHYTHM"
+   ],
+   "searchAliases": [
+    "Kaputter Lautsprecher"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 84,
+     "bass": 20,
+     "treble": 62,
+     "presence": 40,
+     "irBrightness": 60,
+     "gateStrength": 30
+    },
+    "character": {
+     "fuzziness": 75,
+     "loFi": 92
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  },
+  {
+   "id": "original.eight_bit_inspired",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "8-Bit Inspired",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "chiptune_inspired"
+   ],
+   "parents": [
+    "tpl.genre.chiptune_guitar"
+   ],
+   "tags": [
+    "square-ish",
+    "arcade",
+    "retro",
+    "bright"
+   ],
+   "roles": [
+    "SPECIAL",
+    "LEAD",
+    "RHYTHM"
+   ],
+   "searchAliases": [
+    "8 Bit Guitar",
+    "Chiptune Guitar"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 52,
+     "tightness": 90,
+     "sustain": 48
+    },
+    "character": {
+     "loFi": 78
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "original.horror_ambience",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Horror Ambience",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "cinematic",
+    "ambient",
+    "experimental"
+   ],
+   "parents": [
+    "tpl.genre.cinematic_ambient"
+   ],
+   "tags": [
+    "horror",
+    "dark",
+    "eerie",
+    "dissonant"
+   ],
+   "roles": [
+    "AMBIENT",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Horror Ambient"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "treble": 26,
+     "presence": 20,
+     "reverb": 84,
+     "delay": 60,
+     "modulation": 36,
+     "space": 60
+    },
+    "character": {
+     "darkness": 88
+    },
+    "kinds": {
+     "reverb": "hall",
+     "delay": "analogWarm"
+    }
+   }
+  },
+  {
+   "id": "original.space_ambience",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Space Ambience",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "cinematic",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.genre.cinematic_ambient"
+   ],
+   "tags": [
+    "space",
+    "vast",
+    "floating",
+    "wide"
+   ],
+   "roles": [
+    "AMBIENT",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Space Ambient",
+    "Weltraum Ambient"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "treble": 56,
+     "reverb": 86,
+     "delay": 66,
+     "modulation": 40,
+     "space": 66
+    },
+    "character": {
+     "width": 100
+    },
+    "kinds": {
+     "reverb": "hall",
+     "delay": "analogWarm"
+    }
+   }
+  },
+  {
+   "id": "original.huge_arena_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Huge Arena Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "hard_rock",
+    "instrumental_rock"
+   ],
+   "parents": [
+    "tpl.genre.hard_rock"
+   ],
+   "tags": [
+    "huge",
+    "anthemic",
+    "sustaining",
+    "big"
+   ],
+   "roles": [
+    "LEAD",
+    "SOLO"
+   ],
+   "searchAliases": [
+    "Arena Lead"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 62,
+     "sustain": 90,
+     "compression": 34,
+     "delay": 34,
+     "reverb": 44,
+     "space": 30,
+     "treble": 60,
+     "presence": 60
+    },
+    "kinds": {
+     "delay": "digital",
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.tiny_practice_amp",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Tiny Practice Amp",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "classic_rock",
+    "lo_fi"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tags": [
+    "small",
+    "boxy",
+    "honky",
+    "lo-fi"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD",
+    "CLEAN"
+   ],
+   "searchAliases": [
+    "Kleiner Übungsverstärker"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "saturation": 44,
+     "bass": 26,
+     "lowMids": 44,
+     "mids": 62,
+     "upperMids": 58,
+     "treble": 50,
+     "irBrightness": 36,
+     "reverb": 0
+    },
+    "character": {
+     "loFi": 40,
+     "clarity": 45
+    },
+    "kinds": {
+     "reverb": "room"
+    }
+   }
+  },
+  {
+   "id": "original.garage_fuzz",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Garage Fuzz",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "garage_rock",
+    "lo_fi"
+   ],
+   "parents": [
+    "tpl.genre.garage_rock"
+   ],
+   "tags": [
+    "fuzzy",
+    "raw",
+    "loose",
+    "lo-fi"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Garagen Fuzz"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "saturation": 84,
+     "tightness": 30,
+     "attack": 40,
+     "reverb": 12
+    },
+    "character": {
+     "fuzziness": 85,
+     "loFi": 40
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  },
+  {
+   "id": "original.doom_wall",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Doom Wall",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "doom_metal",
+    "sludge_metal"
+   ],
+   "parents": [
+    "tpl.genre.doom_stoner"
+   ],
+   "tags": [
+    "wall",
+    "slow",
+    "massive",
+    "fuzzy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Doom Wand"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 78,
+     "saturation": 86,
+     "tightness": 20,
+     "bass": 74,
+     "lowMids": 70
+    },
+    "character": {
+     "fuzziness": 75,
+     "body": 90
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  },
+  {
+   "id": "original.chainsaw_metal",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Chainsaw Metal",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "death_metal",
+    "thrash_metal"
+   ],
+   "parents": [
+    "tpl.genre.death_metal"
+   ],
+   "tags": [
+    "buzzsaw",
+    "brutal",
+    "sharp"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "searchAliases": [
+    "Kettensäge Metal"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 86,
+     "saturation": 88,
+     "mids": 60,
+     "upperMids": 66,
+     "presence": 66,
+     "treble": 62,
+     "bass": 40,
+     "gateStrength": 70
+    },
+    "kinds": {
+     "drive": "boost"
+    }
+   }
+  },
+  {
+   "id": "original.dream_clean",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Dream Clean",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "shoegaze",
+    "clean_pop"
+   ],
+   "parents": [
+    "tpl.genre.shoegaze"
+   ],
+   "tags": [
+    "dreamy",
+    "soft",
+    "shimmering"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT"
+   ],
+   "searchAliases": [
+    "Traum Clean"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "modulation": 50,
+     "reverb": 62,
+     "delay": 44
+    },
+    "character": {
+     "clarity": 60
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.cathedral_clean",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Cathedral Clean",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "ambient",
+    "post_rock"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tags": [
+    "cathedral",
+    "huge-reverb",
+    "slow",
+    "clean"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT"
+   ],
+   "searchAliases": [
+    "Kathedralen Clean"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 6,
+     "reverb": 92,
+     "space": 70,
+     "delay": 20,
+     "irBrightness": 44,
+     "treble": 40
+    },
+    "kinds": {
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.western_tremolo",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Western Tremolo",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "surf",
+    "country"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tags": [
+    "western",
+    "tremolo",
+    "dusty",
+    "vintage"
+   ],
+   "roles": [
+    "CLEAN",
+    "LEAD",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Western Tremolo Gitarre"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 16,
+     "modulation": 66,
+     "reverb": 38,
+     "irBrightness": 60
+    },
+    "character": {
+     "vintage": 88,
+     "warmth": 60
+    },
+    "kinds": {
+     "modulation": "tremolo",
+     "reverb": "spring"
+    }
+   }
+  },
+  {
+   "id": "original.surf_spring",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Surf Spring",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "surf"
+   ],
+   "parents": [
+    "tpl.genre.surf"
+   ],
+   "tags": [
+    "spring-reverb",
+    "splashy",
+    "wet"
+   ],
+   "roles": [
+    "LEAD",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Surf Federhall"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 20,
+     "reverb": 84,
+     "modulation": 26
+    },
+    "kinds": {
+     "reverb": "spring"
+    }
+   }
+  },
+  {
+   "id": "original.lo_fi_cassette",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Lo-Fi Cassette",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "lo_fi",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tags": [
+    "cassette",
+    "tape",
+    "wobbly",
+    "dusty"
+   ],
+   "roles": [
+    "CLEAN",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Lofi Kassette"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 14,
+     "modulation": 44,
+     "irBrightness": 26,
+     "delay": 24
+    },
+    "character": {
+     "loFi": 92,
+     "darkness": 50
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "delay": "tape"
+    }
+   }
+  },
+  {
+   "id": "original.vhs_wobble",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "VHS Wobble",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "lo_fi",
+    "retrowave"
+   ],
+   "parents": [
+    "tpl.genre.lo_fi_guitar"
+   ],
+   "tags": [
+    "vhs",
+    "wobbly",
+    "retro",
+    "warped"
+   ],
+   "roles": [
+    "CLEAN",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "VHS Wackeln"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "modulation": 62,
+     "delay": 26
+    },
+    "character": {
+     "loFi": 75,
+     "vintage": 80
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   }
+  }
+ ]
+}

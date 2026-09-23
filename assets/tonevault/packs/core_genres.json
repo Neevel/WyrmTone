@@ -1,0 +1,1329 @@
+{
+ "pack": {
+  "id": "core_genres",
+  "name": "Core Genres",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Genre- und Style-Templates (Vererbungswurzeln).",
+  "license": {
+   "name": "WyrmTone Seed (eigene Beschreibungen)",
+   "note": "Nur musikalische Beschreibungen und Such-Metadaten (Namen). Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "tpl.genre.heavy_metal",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Heavy Metal (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "heavy_metal"
+   ],
+   "tags": [
+    "classic",
+    "guitar-driven"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 58,
+     "tightness": 60,
+     "attack": 58,
+     "sustain": 62,
+     "bass": 52,
+     "lowMids": 50,
+     "mids": 60,
+     "upperMids": 58,
+     "treble": 56,
+     "presence": 55,
+     "compression": 15,
+     "gateStrength": 20,
+     "gateOpening": 70,
+     "space": 8,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 8,
+     "irBrightness": 55
+    },
+    "character": {
+     "aggression": 60
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 64,
+       "sustain": 72,
+       "delay": 15,
+       "reverb": 15
+      },
+      "kinds": {
+       "delay": "digital",
+       "reverb": "hall"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.thrash_metal",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Thrash Metal (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "thrash_metal"
+   ],
+   "tags": [
+    "tight",
+    "aggressive",
+    "rhythm-focused"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 72,
+     "saturation": 70,
+     "tightness": 84,
+     "attack": 82,
+     "sustain": 55,
+     "bass": 44,
+     "lowMids": 42,
+     "mids": 42,
+     "upperMids": 62,
+     "treble": 60,
+     "presence": 58,
+     "compression": 10,
+     "gateStrength": 45,
+     "gateOpening": 82,
+     "space": 5,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 4,
+     "irBrightness": 58
+    },
+    "character": {
+     "aggression": 85,
+     "clarity": 65
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 75,
+       "sustain": 68,
+       "delay": 12,
+       "reverb": 12
+      },
+      "kinds": {
+       "delay": "digital",
+       "reverb": "room"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.melodic_death_metal",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Melodic Death Metal (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "melodic_death_metal"
+   ],
+   "tags": [
+    "tight",
+    "melodic",
+    "aggressive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "legacyProfileId": "melodic-death-tight-rhythm",
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 65,
+     "saturation": 65,
+     "tightness": 85,
+     "attack": 78,
+     "sustain": 60,
+     "bass": 45,
+     "lowMids": 45,
+     "mids": 58,
+     "upperMids": 65,
+     "treble": 58,
+     "presence": 58,
+     "compression": 25,
+     "gateStrength": 50,
+     "gateOpening": 85,
+     "space": 10,
+     "delay": "off",
+     "reverb": 5,
+     "modulation": "off",
+     "irBrightness": 55
+    },
+    "kinds": {
+     "drive": "boost",
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 70,
+       "sustain": 72,
+       "delay": 25,
+       "reverb": 20
+      },
+      "kinds": {
+       "drive": "overdrive",
+       "delay": "digital",
+       "reverb": "hall"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.modern_metal",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Modern Metal / Metalcore (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "metalcore",
+    "alternative_metal"
+   ],
+   "tags": [
+    "modern",
+    "tight",
+    "aggressive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 74,
+     "saturation": 72,
+     "tightness": 86,
+     "attack": 80,
+     "sustain": 64,
+     "bass": 46,
+     "lowMids": 40,
+     "mids": 50,
+     "upperMids": 60,
+     "treble": 60,
+     "presence": 58,
+     "compression": 20,
+     "gateStrength": 60,
+     "gateOpening": 84,
+     "space": 6,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 5,
+     "irBrightness": 58
+    },
+    "character": {
+     "aggression": 75,
+     "clarity": 70
+    },
+    "kinds": {
+     "drive": "boost",
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 72,
+       "sustain": 74,
+       "delay": 18,
+       "reverb": 14
+      },
+      "kinds": {
+       "delay": "digital",
+       "reverb": "hall"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.nu_metal",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Nu Metal (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "nu_metal"
+   ],
+   "tags": [
+    "downtuned",
+    "scooped",
+    "heavy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 66,
+     "saturation": 66,
+     "tightness": 70,
+     "attack": 68,
+     "sustain": 58,
+     "bass": 62,
+     "lowMids": 55,
+     "mids": 38,
+     "upperMids": 50,
+     "treble": 52,
+     "presence": 50,
+     "compression": 20,
+     "gateStrength": 35,
+     "gateOpening": 75,
+     "space": 8,
+     "delay": "off",
+     "modulation": 12,
+     "reverb": 8,
+     "irBrightness": 50
+    },
+    "character": {
+     "body": 70
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.death_metal",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Death Metal (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "death_metal"
+   ],
+   "tags": [
+    "brutal",
+    "tight",
+    "downtuned"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 78,
+     "saturation": 78,
+     "tightness": 88,
+     "attack": 84,
+     "sustain": 55,
+     "bass": 50,
+     "lowMids": 45,
+     "mids": 44,
+     "upperMids": 55,
+     "treble": 54,
+     "presence": 54,
+     "compression": 5,
+     "gateStrength": 65,
+     "gateOpening": 88,
+     "space": 3,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 3,
+     "irBrightness": 52
+    },
+    "character": {
+     "aggression": 95
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.doom_stoner",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Doom / Stoner (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "doom_metal",
+    "stoner_metal"
+   ],
+   "tags": [
+    "heavy",
+    "slow",
+    "fuzzy",
+    "warm"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "saturation": 70,
+     "tightness": 40,
+     "attack": 45,
+     "sustain": 75,
+     "bass": 66,
+     "lowMids": 62,
+     "mids": 48,
+     "upperMids": 45,
+     "treble": 45,
+     "presence": 42,
+     "compression": 25,
+     "gateStrength": 5,
+     "gateOpening": 50,
+     "space": 12,
+     "delay": "off",
+     "modulation": 10,
+     "reverb": 14,
+     "irBrightness": 42
+    },
+    "character": {
+     "fuzziness": 60,
+     "vintage": 60,
+     "warmth": 60
+    },
+    "kinds": {
+     "drive": "fuzz",
+     "reverb": "plate"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.progressive_djent",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Progressive Metal / Djent (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "progressive_metal",
+    "djent"
+   ],
+   "tags": [
+    "precise",
+    "tight",
+    "modern"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 76,
+     "saturation": 68,
+     "tightness": 92,
+     "attack": 88,
+     "sustain": 58,
+     "bass": 42,
+     "lowMids": 38,
+     "mids": 50,
+     "upperMids": 62,
+     "treble": 58,
+     "presence": 60,
+     "compression": 12,
+     "gateStrength": 70,
+     "gateOpening": 90,
+     "space": 6,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 5,
+     "irBrightness": 58
+    },
+    "character": {
+     "clarity": 80,
+     "aggression": 70
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "high gain"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.hard_rock",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Hard Rock (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "hard_rock"
+   ],
+   "tags": [
+    "mid-focused",
+    "punchy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 55,
+     "saturation": 55,
+     "tightness": 55,
+     "attack": 55,
+     "sustain": 58,
+     "bass": 50,
+     "lowMids": 52,
+     "mids": 62,
+     "upperMids": 58,
+     "treble": 56,
+     "presence": 54,
+     "compression": 15,
+     "gateStrength": 8,
+     "gateOpening": 60,
+     "space": 10,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 10,
+     "irBrightness": 52
+    },
+    "character": {
+     "vintage": 60
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 62,
+       "sustain": 68,
+       "delay": 14,
+       "reverb": 16
+      },
+      "kinds": {
+       "delay": "analogWarm",
+       "reverb": "plate"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.classic_rock",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Classic Rock (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "classic_rock",
+    "blues_rock"
+   ],
+   "tags": [
+    "vintage",
+    "warm",
+    "crunchy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD",
+    "CRUNCH"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 42,
+     "saturation": 45,
+     "tightness": 42,
+     "attack": 50,
+     "sustain": 50,
+     "bass": 50,
+     "lowMids": 52,
+     "mids": 60,
+     "upperMids": 56,
+     "treble": 55,
+     "presence": 52,
+     "compression": 12,
+     "gateStrength": "off",
+     "space": 12,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 15,
+     "irBrightness": 50
+    },
+    "character": {
+     "vintage": 75,
+     "warmth": 65
+    },
+    "kinds": {
+     "reverb": "spring"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 55,
+       "sustain": 66,
+       "delay": 14,
+       "reverb": 20
+      },
+      "kinds": {
+       "delay": "analogWarm"
+      }
+     }
+    },
+    {
+     "kind": "CRUNCH",
+     "tone": {
+      "dimensions": {
+       "gain": 38,
+       "tightness": 38
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.grunge",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Grunge (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "grunge"
+   ],
+   "tags": [
+    "raw",
+    "loose",
+    "heavy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 60,
+     "saturation": 62,
+     "tightness": 40,
+     "attack": 50,
+     "sustain": 62,
+     "bass": 58,
+     "lowMids": 58,
+     "mids": 52,
+     "upperMids": 52,
+     "treble": 48,
+     "presence": 46,
+     "compression": 18,
+     "gateStrength": "off",
+     "space": 10,
+     "delay": "off",
+     "modulation": 8,
+     "reverb": 10,
+     "irBrightness": 45
+    },
+    "character": {
+     "fuzziness": 45,
+     "vintage": 50
+    },
+    "kinds": {
+     "drive": "distortion",
+     "modulation": "chorus",
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.punk_pop_punk",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Punk / Pop Punk (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "punk_rock",
+    "pop_punk"
+   ],
+   "tags": [
+    "fast",
+    "bright",
+    "punchy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "saturation": 58,
+     "tightness": 62,
+     "attack": 66,
+     "sustain": 45,
+     "bass": 48,
+     "lowMids": 48,
+     "mids": 55,
+     "upperMids": 62,
+     "treble": 60,
+     "presence": 58,
+     "compression": 12,
+     "gateStrength": 15,
+     "gateOpening": 70,
+     "space": 6,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 6,
+     "irBrightness": 60
+    },
+    "character": {
+     "clarity": 65,
+     "aggression": 60
+    },
+    "kinds": {
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.alt_indie",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Alternative / Indie Rock (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "alternative_rock",
+    "indie_rock"
+   ],
+   "tags": [
+    "open",
+    "dynamic"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "saturation": 45,
+     "tightness": 48,
+     "attack": 55,
+     "sustain": 55,
+     "bass": 48,
+     "lowMids": 48,
+     "mids": 54,
+     "upperMids": 58,
+     "treble": 58,
+     "presence": 55,
+     "compression": 22,
+     "gateStrength": "off",
+     "space": 18,
+     "delay": 15,
+     "modulation": 15,
+     "reverb": 18,
+     "irBrightness": 55
+    },
+    "character": {
+     "clarity": 60
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "delay": "analogWarm",
+     "reverb": "room"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "cabinet": "4x12"
+   }
+  },
+  {
+   "id": "tpl.genre.blues_rock",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Blues Rock (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "blues_rock",
+    "blues"
+   ],
+   "tags": [
+    "warm",
+    "crunchy",
+    "expressive"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD",
+    "CLEAN",
+    "CRUNCH"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 38,
+     "saturation": 42,
+     "tightness": 35,
+     "attack": 48,
+     "sustain": 55,
+     "bass": 50,
+     "lowMids": 54,
+     "mids": 62,
+     "upperMids": 54,
+     "treble": 52,
+     "presence": 48,
+     "compression": 20,
+     "gateStrength": "off",
+     "space": 14,
+     "delay": "off",
+     "modulation": "off",
+     "reverb": 16,
+     "irBrightness": 50
+    },
+    "character": {
+     "vintage": 80,
+     "warmth": 75
+    },
+    "kinds": {
+     "drive": "overdrive",
+     "reverb": "spring"
+    },
+    "ampFamilies": [
+     "british",
+     "crunch"
+    ],
+    "cabinet": "4x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 48,
+       "sustain": 68,
+       "delay": 12
+      },
+      "kinds": {
+       "delay": "analogWarm"
+      }
+     }
+    },
+    {
+     "kind": "CLEAN",
+     "tone": {
+      "dimensions": {
+       "gain": 15,
+       "saturation": 20
+      }
+     }
+    },
+    {
+     "kind": "CRUNCH",
+     "tone": {
+      "dimensions": {
+       "gain": 36
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.genre.ambient_clean",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Ambient / Post-Rock Clean (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "ambient",
+    "post_rock",
+    "shoegaze",
+    "clean"
+   ],
+   "tags": [
+    "atmospheric",
+    "spacious",
+    "clean"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 12,
+     "saturation": 20,
+     "tightness": 30,
+     "attack": 40,
+     "sustain": 70,
+     "bass": 46,
+     "lowMids": 48,
+     "mids": 50,
+     "upperMids": 52,
+     "treble": 55,
+     "presence": 48,
+     "compression": 30,
+     "gateStrength": "off",
+     "space": 55,
+     "delay": 38,
+     "modulation": 25,
+     "reverb": 55,
+     "irBrightness": 52
+    },
+    "character": {
+     "width": 75,
+     "warmth": 60
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "delay": "analogWarm",
+     "reverb": "hall"
+    },
+    "ampFamilies": [
+     "clean"
+    ],
+    "cabinet": "2x12"
+   }
+  },
+  {
+   "id": "tpl.genre.synthwave",
+   "schemaVersion": 1,
+   "type": "GENRE_TEMPLATE",
+   "title": "Synthwave / Retrowave (Basis)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synthwave",
+    "retrowave"
+   ],
+   "tags": [
+    "neon",
+    "retro",
+    "80s"
+   ],
+   "roles": [
+    "LEAD",
+    "CLEAN"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 30,
+     "saturation": 40,
+     "tightness": 55,
+     "attack": 50,
+     "sustain": 70,
+     "bass": 52,
+     "lowMids": 46,
+     "mids": 58,
+     "upperMids": 62,
+     "treble": 60,
+     "presence": 55,
+     "compression": 35,
+     "gateStrength": "off",
+     "space": 40,
+     "delay": 30,
+     "modulation": 35,
+     "reverb": 38,
+     "irBrightness": 58
+    },
+    "character": {
+     "width": 70,
+     "vintage": 65
+    },
+    "kinds": {
+     "drive": "overdrive",
+     "modulation": "chorus",
+     "delay": "digital",
+     "reverb": "hall"
+    },
+    "ampFamilies": [
+     "clean",
+     "crunch"
+    ],
+    "cabinet": "2x12"
+   },
+   "variants": [
+    {
+     "kind": "LEAD",
+     "tone": {
+      "dimensions": {
+       "gain": 42,
+       "sustain": 82,
+       "delay": 34
+      }
+     }
+    },
+    {
+     "kind": "CLEAN",
+     "tone": {
+      "dimensions": {
+       "gain": 14,
+       "saturation": 18
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "tpl.style.tight_downtuned_rhythm",
+   "schemaVersion": 1,
+   "type": "STYLE_TEMPLATE",
+   "title": "Tight Downtuned Rhythm (Style)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "metalcore"
+   ],
+   "parents": [
+    "tpl.genre.modern_metal"
+   ],
+   "tags": [
+    "tight",
+    "downtuned"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "tightness": 90,
+     "bass": 42,
+     "lowMids": 38,
+     "gateStrength": 65
+    }
+   }
+  },
+  {
+   "id": "tpl.style.vintage_crunch",
+   "schemaVersion": 1,
+   "type": "STYLE_TEMPLATE",
+   "title": "Vintage Crunch (Style)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "classic_rock",
+    "crunch"
+   ],
+   "parents": [
+    "tpl.genre.classic_rock"
+   ],
+   "tags": [
+    "vintage",
+    "crunchy"
+   ],
+   "roles": [
+    "RHYTHM",
+    "CRUNCH"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 36,
+     "tightness": 35,
+     "compression": 10
+    },
+    "character": {
+     "vintage": 85,
+     "warmth": 70
+    }
+   }
+  },
+  {
+   "id": "tpl.style.scooped_modern",
+   "schemaVersion": 1,
+   "type": "STYLE_TEMPLATE",
+   "title": "Scooped Modern (Style)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "nu_metal",
+    "alternative_metal"
+   ],
+   "parents": [
+    "tpl.genre.nu_metal"
+   ],
+   "tags": [
+    "scooped",
+    "modern"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "mids": 36,
+     "upperMids": 52,
+     "treble": 56,
+     "bass": 60
+    }
+   }
+  },
+  {
+   "id": "tpl.style.ambient_wash",
+   "schemaVersion": 1,
+   "type": "STYLE_TEMPLATE",
+   "title": "Ambient Wash (Style)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "ambient",
+    "post_rock"
+   ],
+   "parents": [
+    "tpl.genre.ambient_clean"
+   ],
+   "tags": [
+    "wash",
+    "spacious"
+   ],
+   "roles": [
+    "AMBIENT",
+    "CLEAN"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "space": 65,
+     "reverb": 65,
+     "delay": 45
+    },
+    "character": {
+     "width": 85
+    }
+   }
+  },
+  {
+   "id": "tpl.style.synth_lead",
+   "schemaVersion": 1,
+   "type": "STYLE_TEMPLATE",
+   "title": "Synth-like Lead (Style)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synth_like_guitar",
+    "synthwave"
+   ],
+   "parents": [
+    "tpl.genre.synthwave"
+   ],
+   "tags": [
+    "synth-like",
+    "lead"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 45,
+     "sustain": 85,
+     "delay": 35
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   }
+  },
+  {
+   "id": "tpl.style.fuzz_wall",
+   "schemaVersion": 1,
+   "type": "STYLE_TEMPLATE",
+   "title": "Fuzz Wall (Style)",
+   "source": {
+    "classification": "CURATED"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "doom_metal",
+    "grunge"
+   ],
+   "parents": [
+    "tpl.genre.grunge"
+   ],
+   "tags": [
+    "fuzzy",
+    "wall"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "notes": "Von WyrmTone gebaute, stilistische Ausgangsbasis; keine Aussage über Originalequipment.",
+   "tone": {
+    "dimensions": {
+     "gain": 70,
+     "saturation": 80,
+     "tightness": 30
+    },
+    "character": {
+     "fuzziness": 80
+    },
+    "kinds": {
+     "drive": "fuzz"
+    }
+   }
+  }
+ ]
+}

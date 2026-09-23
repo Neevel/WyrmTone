@@ -1,0 +1,536 @@
+{
+ "pack": {
+  "id": "wyrm_originals",
+  "name": "WyrmTone Originals",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Eigene WyrmTone-Klangkreationen (Synthwave, Cyber, Retro); keine Referenz auf Originale.",
+  "entryCount": 12,
+  "sourceClassification": "WYRM_ORIGINAL",
+  "license": {
+   "name": "WyrmTone Katalog (eigene Beschreibungen)",
+   "note": "Nur Such-Metadaten (Namen) und eigene musikalische Beschreibungen. Keine Tabs, Noten, Lyrics oder fremden Presets."
+  }
+ },
+ "entries": [
+  {
+   "id": "original.dark_cyber_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Dark Cyber Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "cyberpunk",
+    "synth_like_guitar"
+   ],
+   "parents": [
+    "tpl.genre.cyberpunk_synth"
+   ],
+   "tags": [
+    "dark",
+    "cold",
+    "lead"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Dark Cyberpunk Lead"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 58,
+     "treble": 46,
+     "presence": 50,
+     "reverb": 28
+    },
+    "character": {
+     "darkness": 80
+    },
+    "kinds": {
+     "drive": "distortion",
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "original.arcade_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Arcade Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "chiptune_inspired",
+    "synthwave"
+   ],
+   "parents": [
+    "tpl.genre.chiptune_guitar"
+   ],
+   "tags": [
+    "arcade",
+    "bright",
+    "retro",
+    "lead"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Retro Arcade Lead"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "tightness": 86,
+     "sustain": 60,
+     "delay": 14
+    },
+    "kinds": {
+     "drive": "octave"
+    }
+   }
+  },
+  {
+   "id": "original.industrial_machine",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Industrial Machine Rhythm",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "industrial_electronic",
+    "industrial_metal"
+   ],
+   "parents": [
+    "tpl.style.industrial_electronic_guitar"
+   ],
+   "tags": [
+    "machine",
+    "gated",
+    "mechanical"
+   ],
+   "roles": [
+    "RHYTHM",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Industrial Machine"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 64,
+     "tightness": 94,
+     "gateStrength": 82,
+     "modulation": 14,
+     "delay": 6
+    },
+    "kinds": {
+     "drive": "distortion"
+    }
+   }
+  },
+  {
+   "id": "original.trance_gate_guitar",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Trance Gate Guitar",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "trance_inspired"
+   ],
+   "parents": [
+    "tpl.genre.trance_guitar"
+   ],
+   "tags": [
+    "gated",
+    "pulsing",
+    "rhythmic"
+   ],
+   "roles": [
+    "RHYTHM",
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Trance Gate"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 48,
+     "tightness": 72,
+     "sustain": 44,
+     "gateStrength": 70,
+     "delay": 36
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "original.acid_inspired_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Acid-Inspired Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "techno_inspired"
+   ],
+   "parents": [
+    "tpl.genre.techno_guitar"
+   ],
+   "tags": [
+    "squelchy",
+    "resonant",
+    "wah-like"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Acid Lead"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 56,
+     "saturation": 66,
+     "mids": 66,
+     "upperMids": 68,
+     "sustain": 70
+    },
+    "kinds": {
+     "drive": "wah"
+    }
+   }
+  },
+  {
+   "id": "original.dreamwave_clean",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Dreamwave Clean",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synthwave",
+    "retrowave"
+   ],
+   "parents": [
+    "tpl.genre.synthwave"
+   ],
+   "tags": [
+    "dreamy",
+    "chorused",
+    "soft"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT"
+   ],
+   "searchAliases": [
+    "Dreamwave"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "modulation": 52,
+     "reverb": 56,
+     "delay": 36,
+     "treble": 52
+    },
+    "character": {
+     "warmth": 60
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.night_drive_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Night Drive Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synthwave",
+    "retrowave"
+   ],
+   "parents": [
+    "tpl.style.synth_lead"
+   ],
+   "tags": [
+    "smooth",
+    "neon",
+    "sustaining"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "Night Drive"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "sustain": 86,
+     "delay": 38,
+     "reverb": 42,
+     "modulation": 28
+    },
+    "character": {
+     "warmth": 55
+    },
+    "kinds": {
+     "delay": "analogWarm",
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.sci_fi_noir_ambient",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Sci-Fi Noir Ambient",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "cinematic",
+    "cyberpunk",
+    "ambient"
+   ],
+   "parents": [
+    "tpl.genre.cinematic_ambient"
+   ],
+   "tags": [
+    "noir",
+    "rainy",
+    "dark",
+    "cinematic"
+   ],
+   "roles": [
+    "AMBIENT",
+    "SPECIAL"
+   ],
+   "searchAliases": [
+    "Blade Runner Inspired Ambient"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "reverb": 80,
+     "delay": 54,
+     "modulation": 32,
+     "treble": 34
+    },
+    "character": {
+     "darkness": 78
+    },
+    "kinds": {
+     "reverb": "hall",
+     "delay": "analogWarm"
+    }
+   }
+  },
+  {
+   "id": "original.eighties_movie_lead",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "80s Movie Lead",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synthwave",
+    "retrowave"
+   ],
+   "parents": [
+    "tpl.genre.synthwave"
+   ],
+   "tags": [
+    "heroic",
+    "chorused",
+    "bright"
+   ],
+   "roles": [
+    "LEAD"
+   ],
+   "searchAliases": [
+    "80er Film Lead",
+    "Eighties Movie Lead"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 46,
+     "sustain": 82,
+     "modulation": 36,
+     "delay": 32,
+     "reverb": 34,
+     "treble": 62
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "delay": "digital"
+    }
+   }
+  },
+  {
+   "id": "original.space_chorus_clean",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Space Chorus Clean",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "ambient",
+    "synthwave"
+   ],
+   "parents": [
+    "tpl.genre.ambient_guitar"
+   ],
+   "tags": [
+    "spacey",
+    "chorused",
+    "wide"
+   ],
+   "roles": [
+    "CLEAN",
+    "AMBIENT"
+   ],
+   "searchAliases": [
+    "Space Clean"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 10,
+     "modulation": 58,
+     "reverb": 58,
+     "delay": 40
+    },
+    "character": {
+     "width": 92
+    },
+    "kinds": {
+     "modulation": "chorus",
+     "reverb": "hall"
+    }
+   }
+  },
+  {
+   "id": "original.darkwave_rhythm",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Darkwave Rhythm",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "darkwave",
+    "post_punk"
+   ],
+   "parents": [
+    "tpl.genre.darkwave"
+   ],
+   "tags": [
+    "dark",
+    "cold",
+    "chorused",
+    "driving"
+   ],
+   "roles": [
+    "RHYTHM",
+    "CLEAN"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 34,
+     "tightness": 54,
+     "modulation": 34,
+     "delay": 20,
+     "reverb": 26
+    },
+    "character": {
+     "darkness": 68
+    },
+    "kinds": {
+     "modulation": "chorus"
+    }
+   }
+  },
+  {
+   "id": "original.synthwave_pulse_rhythm",
+   "schemaVersion": 1,
+   "type": "ORIGINAL_WYRMTONE",
+   "title": "Synthwave Pulse Rhythm",
+   "source": {
+    "classification": "WYRM_ORIGINAL"
+   },
+   "confidence": "MEDIUM",
+   "genres": [
+    "synthwave"
+   ],
+   "parents": [
+    "tpl.genre.synthwave"
+   ],
+   "tags": [
+    "pulsing",
+    "tight",
+    "retro"
+   ],
+   "roles": [
+    "RHYTHM"
+   ],
+   "searchAliases": [
+    "Synthwave Rhythm"
+   ],
+   "notes": "Eigene WyrmTone-Kreation; keine Referenz auf ein Original und keine Emulation eines echten Geräts.",
+   "tone": {
+    "dimensions": {
+     "gain": 40,
+     "tightness": 72,
+     "sustain": 44,
+     "gateStrength": 36,
+     "modulation": 20,
+     "delay": 26
+    },
+    "kinds": {
+     "delay": "digital"
+    }
+   }
+  }
+ ]
+}
