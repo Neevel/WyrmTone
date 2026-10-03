@@ -1,0 +1,279 @@
+{
+ "signals": {
+  "wyrmtone-rhythm-v1": {
+   "originalSha256": "f526393c00eba41e478a1880a523bac65dc038aae9835f74b7cbaa0aa3c6725e",
+   "derivedPcmSha256": "adb70cff0a2b85d687e5d378354e93e0bf0d1c4bd8ff1a0f8ae40064c7a1ea81",
+   "samples48k": 1397825,
+   "decodeMs": 77,
+   "resampleMs": 65
+  },
+  "wyrmtone-lead-v1": {
+   "originalSha256": "f08fcc64d0a1c3a4a3a5e25bef3266d3f9adaac3b6b9af01617d8c95a2073bbd",
+   "derivedPcmSha256": "94461f7fdc63f9cd331f0b60373d09db170f2c4e5bc585b3a8e9817456a45fc2",
+   "samples48k": 1159259,
+   "decodeMs": 58,
+   "resampleMs": 54
+  },
+  "wyrmtone-clean-v1": {
+   "originalSha256": "1b3dafb9c9922ae2ceeb65f7487f8b6df1dfd466adbefba45159138128fb5ac8",
+   "derivedPcmSha256": "8b43e2550d4c424ccbfdf7f8291714e45f36b5e3e1e80aae673644ddf60a7fa0",
+   "samples48k": 685259,
+   "decodeMs": 30,
+   "resampleMs": 28
+  }
+ },
+ "analyses": {
+  "CLEAN  Fender Pano-Verb Clean2 | wyrmtone-rhythm-v1": {
+   "tone": {
+    "tone.centroidHz": 847.0567649469274,
+    "tone.bandwidthHz": 841.5546710680155,
+    "tone.rolloff85Hz": 1898.4375,
+    "tone.band.LOW": 0.4566563888833191,
+    "tone.band.LOW_MID": 0.08067745939626628,
+    "tone.band.MID": 0.21149295625668793,
+    "tone.band.HIGH_MID": 0.24954039892445307,
+    "tone.band.HIGH": 0.001632796539273487,
+    "tone.crestDb": 17.407006828659668,
+    "tone.envelopeRangeDb": 22.15106920265987,
+    "tone.onsetCount": 25.0,
+    "tone.attackMs": 17.333333333333332,
+    "tone.transientPeakToBodyDb": 11.798853132688553,
+    "tone.decayDbPerSec": -63.00021161039491,
+    "tone.sat.flatness1to8k": 0.011215418169481451,
+    "tone.sat.hfGenerationDb": 6.784009316830062,
+    "tone.sat.crestReductionDb": 3.9760674727579683,
+    "tone.sat.envelopeCompressionDb": 5.498509886711286,
+    "tone.sat.composite": 0.2520559209260979
+   },
+   "level": {
+    "level.rmsDb": -25.90838418864454,
+    "level.peakDb": -8.50137735998487,
+    "level.gainDbVsInput": 5.101474585814632
+   }
+  },
+  "CLEAN  Fender Pano-Verb Clean2 | wyrmtone-lead-v1": {
+   "tone": {
+    "tone.centroidHz": 1654.7861518982504,
+    "tone.bandwidthHz": 958.0735782489251,
+    "tone.rolloff85Hz": 2507.8125,
+    "tone.band.LOW": 0.18599061936776362,
+    "tone.band.LOW_MID": 0.04499232783823642,
+    "tone.band.MID": 0.1511049422999134,
+    "tone.band.HIGH_MID": 0.6161012407864386,
+    "tone.band.HIGH": 0.0018108697076479375,
+    "tone.crestDb": 18.410147603292526,
+    "tone.envelopeRangeDb": 31.047825413204286,
+    "tone.onsetCount": 26.0,
+    "tone.attackMs": 10.0,
+    "tone.transientPeakToBodyDb": 3.3887165148508096,
+    "tone.decayDbPerSec": -11.553890353477925,
+    "tone.sat.flatness1to8k": 0.012574562608595036,
+    "tone.sat.hfGenerationDb": 6.921306475901742,
+    "tone.sat.crestReductionDb": 3.079605158268901,
+    "tone.sat.envelopeCompressionDb": -6.313458562424962,
+    "tone.sat.composite": 0.148321885760416
+   },
+   "level": {
+    "level.rmsDb": -27.63416629717722,
+    "level.peakDb": -9.224018693884695,
+    "level.gainDbVsInput": 7.794907890125582
+   }
+  },
+  "CLEAN  Fender Pano-Verb Clean2 | wyrmtone-clean-v1": {
+   "tone": {
+    "tone.centroidHz": 677.3841557256751,
+    "tone.bandwidthHz": 769.9264739669698,
+    "tone.rolloff85Hz": 1593.75,
+    "tone.band.LOW": 0.5459807889117553,
+    "tone.band.LOW_MID": 0.0863140881169352,
+    "tone.band.MID": 0.19419391690327067,
+    "tone.band.HIGH_MID": 0.17248912205429878,
+    "tone.band.HIGH": 0.0010220840137399334,
+    "tone.crestDb": 16.079549050970584,
+    "tone.envelopeRangeDb": 12.35465556063798,
+    "tone.onsetCount": 8.0,
+    "tone.attackMs": 26.666666666666668,
+    "tone.transientPeakToBodyDb": 3.1242798406383976,
+    "tone.decayDbPerSec": -5.498818927299579,
+    "tone.sat.flatness1to8k": 0.006270991930114608,
+    "tone.sat.hfGenerationDb": 7.304900203911275,
+    "tone.sat.crestReductionDb": 5.325975583046741,
+    "tone.sat.envelopeCompressionDb": 2.8291110644939685,
+    "tone.sat.composite": 0.23245518994966494
+   },
+   "level": {
+    "level.rmsDb": -25.35963178272774,
+    "level.peakDb": -9.280082731757155,
+    "level.gainDbVsInput": 5.118924127940868
+   }
+  },
+  "CRUNCH Marshall JVM410 crunch | wyrmtone-rhythm-v1": {
+   "tone": {
+    "tone.centroidHz": 1683.2968632848574,
+    "tone.bandwidthHz": 1879.7514811494693,
+    "tone.rolloff85Hz": 3000.0,
+    "tone.band.LOW": 0.19240853855887405,
+    "tone.band.LOW_MID": 0.1392949479646233,
+    "tone.band.MID": 0.27123536027898637,
+    "tone.band.HIGH_MID": 0.2925809276131109,
+    "tone.band.HIGH": 0.10448022558440538,
+    "tone.crestDb": 12.787434649667674,
+    "tone.envelopeRangeDb": 11.29934563850545,
+    "tone.onsetCount": 24.0,
+    "tone.attackMs": 45.33333333333333,
+    "tone.transientPeakToBodyDb": 7.520689326811652,
+    "tone.decayDbPerSec": -29.62887891804327,
+    "tone.sat.flatness1to8k": 0.12011128377930863,
+    "tone.sat.hfGenerationDb": 8.772850404852074,
+    "tone.sat.crestReductionDb": 8.595639651749963,
+    "tone.sat.envelopeCompressionDb": 16.350233450865705,
+    "tone.sat.composite": 0.6030140274059075
+   },
+   "level": {
+    "level.rmsDb": -30.577236345852388,
+    "level.peakDb": -17.789801696184714,
+    "level.gainDbVsInput": 0.4326224286067841
+   }
+  },
+  "CRUNCH Marshall JVM410 crunch | wyrmtone-lead-v1": {
+   "tone": {
+    "tone.centroidHz": 1620.4147111907737,
+    "tone.bandwidthHz": 1844.7659441191374,
+    "tone.rolloff85Hz": 2953.125,
+    "tone.band.LOW": 0.18867931035914054,
+    "tone.band.LOW_MID": 0.19365015242749667,
+    "tone.band.MID": 0.245481443961504,
+    "tone.band.HIGH_MID": 0.2723391834596,
+    "tone.band.HIGH": 0.09984990979225876,
+    "tone.crestDb": 12.65344373442294,
+    "tone.envelopeRangeDb": 13.240142115263897,
+    "tone.onsetCount": 26.0,
+    "tone.attackMs": 64.0,
+    "tone.transientPeakToBodyDb": 1.357496497014333,
+    "tone.decayDbPerSec": -5.470199544505801,
+    "tone.sat.flatness1to8k": 0.07378527434106498,
+    "tone.sat.hfGenerationDb": 4.719675828072103,
+    "tone.sat.crestReductionDb": 8.836309027138487,
+    "tone.sat.envelopeCompressionDb": 11.494224735515427,
+    "tone.sat.composite": 0.4593259058460207
+   },
+   "level": {
+    "level.rmsDb": -31.012943245102328,
+    "level.peakDb": -18.359499510679388,
+    "level.gainDbVsInput": 4.416130942200475
+   }
+  },
+  "CRUNCH Marshall JVM410 crunch | wyrmtone-clean-v1": {
+   "tone": {
+    "tone.centroidHz": 1355.00111170372,
+    "tone.bandwidthHz": 1762.8061678719132,
+    "tone.rolloff85Hz": 2648.4375,
+    "tone.band.LOW": 0.3169805608843172,
+    "tone.band.LOW_MID": 0.1574751974235643,
+    "tone.band.MID": 0.22525968174097014,
+    "tone.band.HIGH_MID": 0.21459557480768773,
+    "tone.band.HIGH": 0.08568898514346066,
+    "tone.crestDb": 11.22386520374818,
+    "tone.envelopeRangeDb": 4.453346105851793,
+    "tone.onsetCount": 8.0,
+    "tone.attackMs": 48.666666666666664,
+    "tone.transientPeakToBodyDb": 1.7287686740650745,
+    "tone.decayDbPerSec": -2.270629887517064,
+    "tone.sat.flatness1to8k": 0.18714597265832286,
+    "tone.sat.hfGenerationDb": 9.686954940271052,
+    "tone.sat.crestReductionDb": 10.181659430269146,
+    "tone.sat.envelopeCompressionDb": 10.730420519280155,
+    "tone.sat.composite": 0.6255765797944789
+   },
+   "level": {
+    "level.rmsDb": -29.623322147787615,
+    "level.peakDb": -18.399456944039436,
+    "level.gainDbVsInput": 0.8552337628809923
+   }
+  },
+  "HIGHGAIN Bugera 6262 | wyrmtone-rhythm-v1": {
+   "tone": {
+    "tone.centroidHz": 1484.9954870960948,
+    "tone.bandwidthHz": 2565.5567372341916,
+    "tone.rolloff85Hz": 2226.5625,
+    "tone.band.LOW": 0.17654145077596198,
+    "tone.band.LOW_MID": 0.3370189234462462,
+    "tone.band.MID": 0.29605601953649807,
+    "tone.band.HIGH_MID": 0.12442935760866378,
+    "tone.band.HIGH": 0.06595424863263002,
+    "tone.crestDb": 9.373764463489355,
+    "tone.envelopeRangeDb": 2.5539078706706384,
+    "tone.onsetCount": 21.0,
+    "tone.attackMs": 13.333333333333334,
+    "tone.transientPeakToBodyDb": 2.3962560679003992,
+    "tone.decayDbPerSec": -1.637117666730812,
+    "tone.sat.flatness1to8k": 0.26034792800339746,
+    "tone.sat.hfGenerationDb": 5.580571898552872,
+    "tone.sat.crestReductionDb": 12.009309837928281,
+    "tone.sat.envelopeCompressionDb": 25.095671218700517,
+    "tone.sat.composite": 0.7368689193668801
+   },
+   "level": {
+    "level.rmsDb": -13.925339149737338,
+    "level.peakDb": -4.551574686247983,
+    "level.gainDbVsInput": 17.084519624721835
+   }
+  },
+  "HIGHGAIN Bugera 6262 | wyrmtone-lead-v1": {
+   "tone": {
+    "tone.centroidHz": 1125.093046300732,
+    "tone.bandwidthHz": 2222.7883619719405,
+    "tone.rolloff85Hz": 1476.5625,
+    "tone.band.LOW": 0.17763546195117846,
+    "tone.band.LOW_MID": 0.5083848672068454,
+    "tone.band.MID": 0.18837559459985637,
+    "tone.band.HIGH_MID": 0.07956509007994834,
+    "tone.band.HIGH": 0.04603898616217144,
+    "tone.crestDb": 8.565145395476133,
+    "tone.envelopeRangeDb": 3.0594786791039876,
+    "tone.onsetCount": 26.0,
+    "tone.attackMs": 16.666666666666664,
+    "tone.transientPeakToBodyDb": 1.015724898036428,
+    "tone.decayDbPerSec": 2.385582173962524,
+    "tone.sat.flatness1to8k": 0.2174286253896034,
+    "tone.sat.hfGenerationDb": 0.002076743640603263,
+    "tone.sat.crestReductionDb": 12.924607366085294,
+    "tone.sat.envelopeCompressionDb": 21.674888171675335,
+    "tone.sat.composite": 0.6466266032215986
+   },
+   "level": {
+    "level.rmsDb": -13.14540242119006,
+    "level.peakDb": -4.580257025713926,
+    "level.gainDbVsInput": 22.283671766112743
+   }
+  },
+  "HIGHGAIN Bugera 6262 | wyrmtone-clean-v1": {
+   "tone": {
+    "tone.centroidHz": 1173.7583832019511,
+    "tone.bandwidthHz": 2330.468187930295,
+    "tone.rolloff85Hz": 1570.3125,
+    "tone.band.LOW": 0.23525660819863295,
+    "tone.band.LOW_MID": 0.42568060921937084,
+    "tone.band.MID": 0.2066515725973494,
+    "tone.band.HIGH_MID": 0.08375881414479877,
+    "tone.band.HIGH": 0.04865239583984789,
+    "tone.crestDb": 8.409382886019776,
+    "tone.envelopeRangeDb": 3.1892786047484236,
+    "tone.onsetCount": 8.0,
+    "tone.attackMs": 39.333333333333336,
+    "tone.transientPeakToBodyDb": 1.4999878193899576,
+    "tone.decayDbPerSec": 1.310317119449198,
+    "tone.sat.flatness1to8k": 0.32291063448727797,
+    "tone.sat.hfGenerationDb": 6.13087246033064,
+    "tone.sat.crestReductionDb": 12.99614174799755,
+    "tone.sat.envelopeCompressionDb": 11.994488020383525,
+    "tone.sat.composite": 0.7431464018938175
+   },
+   "level": {
+    "level.rmsDb": -13.092809206316913,
+    "level.peakDb": -4.683426320297137,
+    "level.gainDbVsInput": 17.385746704351696
+   }
+  }
+ }
+}
