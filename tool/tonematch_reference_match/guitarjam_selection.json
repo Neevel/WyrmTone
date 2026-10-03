@@ -1,0 +1,313 @@
+{
+ "dataset": "https://huggingface.co/datasets/Julian-br/GuitarJam",
+ "revision": "2d467bfec90af19301b01123494f4b2ba64c5a3a",
+ "license": "cc0-1.0",
+ "acquired": "2026-10-03",
+ "filesAvailable": 580,
+ "splits": "test/train/val (all WAV, sorted by full path)",
+ "selection": "sorted list of all 580 WAV paths at the pinned revision; clip k (k=0..29) = sorted[int((k+0.5)*580/30)]; frozen before any result",
+ "pairs": "reference clip i vs candidate clip (i+5)%30, (i+11)%30, (i+17)%30 for i=0..29 -> 90 cross-performance pairs",
+ "exclusions": [],
+ "clips": [
+  {
+   "path": "guitar_jam/test/105.wav",
+   "file": "test_105.wav",
+   "sha256": "1828321b9b347ebf43c31c0e6a3ac4a7ff0f802b3f8d8e02c80f162d2146443b",
+   "bytes": 1786094,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 20.25
+  },
+  {
+   "path": "guitar_jam/test/292.wav",
+   "file": "test_292.wav",
+   "sha256": "5f4cef01bc7ea61ae8c7a90dc5e541cfa69cf6aaf5f80ccddea1591a8ee25f64",
+   "bytes": 2289046,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 25.95
+  },
+  {
+   "path": "guitar_jam/test/474.wav",
+   "file": "test_474.wav",
+   "sha256": "40d532ef117ff506471409e6759d14743c1166180e8aac1c949ac03525a4eb66",
+   "bytes": 1300994,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 14.75
+  },
+  {
+   "path": "guitar_jam/train/016.wav",
+   "file": "train_016.wav",
+   "sha256": "2a12c1d8b0ed8b832548adf378b2b938625f00a396e38a5e43e796a51de6621e",
+   "bytes": 1389194,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 15.75
+  },
+  {
+   "path": "guitar_jam/train/038.wav",
+   "file": "train_038.wav",
+   "sha256": "a868e79336edaec884908dfc5d0556e728160b65229ebfd09834cc27f621062f",
+   "bytes": 882044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 10.0
+  },
+  {
+   "path": "guitar_jam/train/063.wav",
+   "file": "train_063.wav",
+   "sha256": "bc21e313c11b97233222a17b6e61a66142e275f088dcaad7271727014c204fa5",
+   "bytes": 2247044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 25.48
+  },
+  {
+   "path": "guitar_jam/train/086.wav",
+   "file": "train_086.wav",
+   "sha256": "5d1f7fb28740c223616d978172800a859815e3ed45f6a41041e4184ad27d1102",
+   "bytes": 1201408,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 13.62
+  },
+  {
+   "path": "guitar_jam/train/115.wav",
+   "file": "train_115.wav",
+   "sha256": "a6c16829bfe933d7f44f7b1107ae145f282ff0fa94006436ac912b8a98caca25",
+   "bytes": 1296584,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 14.7
+  },
+  {
+   "path": "guitar_jam/train/137.wav",
+   "file": "train_137.wav",
+   "sha256": "ac2be4245d42eb20ea9ccdc1434989d6f8d143a6d35720723c7b7adecaaff467",
+   "bytes": 1270124,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 14.4
+  },
+  {
+   "path": "guitar_jam/train/163.wav",
+   "file": "train_163.wav",
+   "sha256": "b39b7f011a0d496f2bd9268cd59c15b985f21c0222f94f4042f9301af1d76371",
+   "bytes": 1533046,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 17.38
+  },
+  {
+   "path": "guitar_jam/train/191.wav",
+   "file": "train_191.wav",
+   "sha256": "c636cce70cf7ec63e332447a20486a0104e8ef07db7fb7126b128b9ca001deb8",
+   "bytes": 815894,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 9.25
+  },
+  {
+   "path": "guitar_jam/train/218.wav",
+   "file": "train_218.wav",
+   "sha256": "d3d148118b00140417be79d10b0133298b23b23adeea5674b4ffa90573ac7090",
+   "bytes": 1896344,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 21.5
+  },
+  {
+   "path": "guitar_jam/train/239.wav",
+   "file": "train_239.wav",
+   "sha256": "a29d447b747f66f616c60e4a60db8e2104f641ef913dc08b185f487bdd8842ec",
+   "bytes": 1974046,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 22.38
+  },
+  {
+   "path": "guitar_jam/train/266.wav",
+   "file": "train_266.wav",
+   "sha256": "fd9dfcb1d8a02a498f0b62eaac172a5ea4e57d3f1e41f6d67890ccb7fe4e85a6",
+   "bytes": 2352044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 26.67
+  },
+  {
+   "path": "guitar_jam/train/287.wav",
+   "file": "train_287.wav",
+   "sha256": "c16b43ba4db9647059f98904cd37a2cee6003b619e8c00941002ae1b7b22ca7c",
+   "bytes": 1212794,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 13.75
+  },
+  {
+   "path": "guitar_jam/train/308.wav",
+   "file": "train_308.wav",
+   "sha256": "ee3afb6be73e5cd3edbcd21e53260fd254da69755beb9ed2374096b6e75d849b",
+   "bytes": 1890046,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 21.43
+  },
+  {
+   "path": "guitar_jam/train/332.wav",
+   "file": "train_332.wav",
+   "sha256": "0051f474bf53a6633cd7bebb040016faa577de8ede1fd13661f4e80ed6c01998",
+   "bytes": 661544,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 7.5
+  },
+  {
+   "path": "guitar_jam/train/354.wav",
+   "file": "train_354.wav",
+   "sha256": "88fa8f096e1c6ba989ff1e565199a582b931c5f10c35e8312027cb49f286e39b",
+   "bytes": 1146644,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 13.0
+  },
+  {
+   "path": "guitar_jam/train/376.wav",
+   "file": "train_376.wav",
+   "sha256": "a7a915f8b50d4bc49b252f7068a8f1886dacee9a8558ce90a77cb8d3b6ddf4d4",
+   "bytes": 1617044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 18.33
+  },
+  {
+   "path": "guitar_jam/train/398.wav",
+   "file": "train_398.wav",
+   "sha256": "e11162e754e39d33fb63a74b1d50e37e50a43de7f8836a75bcf5173f02986ddc",
+   "bytes": 1386046,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 15.71
+  },
+  {
+   "path": "guitar_jam/train/424.wav",
+   "file": "train_424.wav",
+   "sha256": "3494109fc1eab40f89d425eb088386baf9d85debee2255d582fe762221bdde29",
+   "bytes": 1411244,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 16.0
+  },
+  {
+   "path": "guitar_jam/train/447.wav",
+   "file": "train_447.wav",
+   "sha256": "03a29eb2cbc0aa8bb963f709165fdd65109077ab8ea693342d343e7bf53a53e6",
+   "bytes": 1491044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 16.9
+  },
+  {
+   "path": "guitar_jam/train/473.wav",
+   "file": "train_473.wav",
+   "sha256": "86877a388a23c9f65ef5d4fe8a522e781679919d8c2a5061428e768ae5c7e554",
+   "bytes": 2016044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 22.86
+  },
+  {
+   "path": "guitar_jam/train/500.wav",
+   "file": "train_500.wav",
+   "sha256": "7562b2dc8026960599649726db2e93df75fa475259fc65bcf48a09d1fe925775",
+   "bytes": 2352044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 26.67
+  },
+  {
+   "path": "guitar_jam/train/523.wav",
+   "file": "train_523.wav",
+   "sha256": "5194aca0656fdf4f9e15c2d8496a14f2fe97c0346f8cfd6e70080ef7c5ee486a",
+   "bytes": 1029044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 11.67
+  },
+  {
+   "path": "guitar_jam/train/550.wav",
+   "file": "train_550.wav",
+   "sha256": "0c6c334021ea051c9d07cb3ba9419059f7c93cfcd913fad03c52459dba18ba42",
+   "bytes": 1270124,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 14.4
+  },
+  {
+   "path": "guitar_jam/train/571.wav",
+   "file": "train_571.wav",
+   "sha256": "d94e9eab95cfbf19367c204612509098f41a8680b782f627e5b174b1e3b72757",
+   "bytes": 1940444,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 22.0
+  },
+  {
+   "path": "guitar_jam/val/106.wav",
+   "file": "val_106.wav",
+   "sha256": "c69d97be5a258598a7d52dc9d172e96c230220c959cabbc66f918946dd6c80a3",
+   "bytes": 1869046,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 21.19
+  },
+  {
+   "path": "guitar_jam/val/257.wav",
+   "file": "val_257.wav",
+   "sha256": "f5dc40089e9eb3bee581aedf3dfd624da1e287b91b08190625852df331922b3c",
+   "bytes": 1256894,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 14.25
+  },
+  {
+   "path": "guitar_jam/val/504.wav",
+   "file": "val_504.wav",
+   "sha256": "4287087003d3d852059002a58a7a17f3c91985fc2a304a4423afa0598ac7a41a",
+   "bytes": 1617044,
+   "rate": 44100,
+   "ch": 1,
+   "bits": 16,
+   "sec": 18.33
+  }
+ ]
+}

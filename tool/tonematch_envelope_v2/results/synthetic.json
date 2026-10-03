@@ -1,0 +1,107 @@
+{
+ "decay tau=0.15": {
+  "expected": -57.906666666666666,
+  "v1": -57.89861403415962,
+  "v2": -57.8943472234927
+ },
+ "decay tau=0.3": {
+  "expected": -28.953333333333333,
+  "v1": -28.955775307685013,
+  "v2": -28.955639896793258
+ },
+ "decay tau=0.6": {
+  "expected": -14.476666666666667,
+  "v1": -14.480786128215216,
+  "v2": -14.51936465628508
+ },
+ "attack instantaneous": {
+  "referenceHop1Ms": 6.541666666666667,
+  "physicalAnalyticMs": 0.0,
+  "v1": 9.333333333333334,
+  "v2": 9.333333333333334,
+  "v1ErrorVsRef": 2.791666666666667,
+  "v2ErrorVsRef": 2.791666666666667
+ },
+ "attack linear 5 ms": {
+  "referenceHop1Ms": 10.333333333333334,
+  "physicalAnalyticMs": -5.0,
+  "v1": 10.666666666666666,
+  "v2": 10.666666666666666,
+  "v1ErrorVsRef": 0.33333333333333215,
+  "v2ErrorVsRef": 0.33333333333333215
+ },
+ "attack linear 20 ms": {
+  "referenceHop1Ms": 21.229166666666668,
+  "physicalAnalyticMs": 10.0,
+  "v1": 24.0,
+  "v2": 24.0,
+  "v1ErrorVsRef": 2.770833333333332,
+  "v2ErrorVsRef": 2.770833333333332
+ },
+ "attack linear 40 ms": {
+  "referenceHop1Ms": 39.229166666666664,
+  "physicalAnalyticMs": 30.0,
+  "v1": 38.666666666666664,
+  "v2": 39.33333333333333,
+  "v1ErrorVsRef": -0.5625,
+  "v2ErrorVsRef": 0.1041666666666643
+ },
+ "attack exponential tau 10 ms": {
+  "referenceHop1Ms": 36.6875,
+  "physicalAnalyticMs": 27.150000000000002,
+  "v1": 40.0,
+  "v2": 38.66666666666667,
+  "v1ErrorVsRef": 3.3125,
+  "v2ErrorVsRef": 1.9791666666666714
+ },
+ "attack exponential tau 30 ms": {
+  "referenceHop1Ms": 76.5625,
+  "physicalAnalyticMs": 69.9,
+  "v1": 80.0,
+  "v2": 73.33333333333334,
+  "v1ErrorVsRef": 3.4375,
+  "v2ErrorVsRef": -3.229166666666657
+ },
+ "attack accuracy vs hop-1 reference": {
+  "meanAbsErrorV1Ms": 2.201388888888889,
+  "meanAbsErrorV2Ms": 1.8680555555555542,
+  "maxAbsErrorV1Ms": 3.4375,
+  "maxAbsErrorV2Ms": 3.229166666666657
+ },
+ "attack+sustain+decay": {
+  "expected": "sustained decay slope much closer to 0 than plain tau=0.2 (-43.43 dB/s)",
+  "sustainedV1": -0.10846146948683316,
+  "sustainedV2": -0.05287606308803051,
+  "plainV1": -43.456528885719244,
+  "plainV2": -43.45109422130207
+ },
+ "transient spike (body 1.0, spike +3.0 decaying 12 ms)": {
+  "expected": "flat body ~0 dB, spiked >> flat (analytic peak/body ~ 12.041199826559247 dB)",
+  "flatV2": 0.4134736612943577,
+  "spikeV2": 9.270866985973484,
+  "flatV1": 0.4169658025173426,
+  "spikeV1": 9.244919332587346
+ },
+ "multiple transients (alternating tau 0.15 / 0.6)": {
+  "expectedOnsets": 6,
+  "expectedDecayMedian": -36.19166666666666,
+  "v1": {
+   "attack": 9.333333333333334,
+   "decay": -36.22970123178311,
+   "transient": 3.999920944251693,
+   "onsets": 6.0
+  },
+  "v2": {
+   "attack": 9.333333333333334,
+   "decay": -36.2175387766158,
+   "transient": 4.0130054573861615,
+   "onsets": 6.0
+  }
+ },
+ "grid-shift CV% (known signal, shifts 0/5/11/24/37/53)": {
+  "attackV1": 11.664236870396083,
+  "attackV2": 3.2141217326661216,
+  "decayV1": 0.07483435019427745,
+  "decayV2": 0.05508781679440382
+ }
+}

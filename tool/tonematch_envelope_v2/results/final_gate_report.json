@@ -1,0 +1,168 @@
+{
+ "results": {
+  "v1/attack": {
+   "cv": 14.477452309875229,
+   "minRho": 0.49399126558977063,
+   "maeHold": 4.731770833333333,
+   "maxHold": 24.854166666666664,
+   "mae0": 4.888541666666667
+  },
+  "v2_4/attack": {
+   "cv": 6.627407873537431,
+   "minRho": 0.8303030303030302,
+   "maeHold": 3.165335648148148,
+   "maxHold": 12.541666666666664,
+   "mae0": 3.3531249999999995
+  },
+  "v2_8/attack": {
+   "cv": 3.519568966907977,
+   "minRho": 0.9240164263936982,
+   "maeHold": 3.148379629629629,
+   "maxHold": 10.208333333333332,
+   "mae0": 3.2906249999999986
+  },
+  "v2_16/attack": {
+   "cv": 1.1123470522803136,
+   "minRho": 0.9240164263936982,
+   "maeHold": 2.9874999999999994,
+   "maxHold": 10.208333333333332,
+   "mae0": 2.994791666666665
+  },
+  "v1/decay": {
+   "cv": 20.868587711939313,
+   "minRho": 0.8787878787878788,
+   "maeHold": 1.6706613572928597,
+   "maxHold": 22.32074618884986,
+   "mae0": 2.4674173145106617
+  },
+  "v2_4/decay": {
+   "cv": 5.8795129350765265,
+   "minRho": 0.9515151515151514,
+   "maeHold": 1.0612105624381458,
+   "maxHold": 8.63970667327662,
+   "mae0": 1.2902125364285078
+  },
+  "v2_8/decay": {
+   "cv": 2.311939040503815,
+   "minRho": 0.9878787878787878,
+   "maeHold": 0.9232223260481962,
+   "maxHold": 8.62694315405826,
+   "mae0": 0.9665197591863643
+  },
+  "v2_16/decay": {
+   "cv": 0.9227683650268158,
+   "minRho": 0.9878787878787878,
+   "maeHold": 0.8747587226567417,
+   "maxHold": 8.626943154058303,
+   "mae0": 0.9437529926349381
+  },
+  "v1/transient": {
+   "cv": 5.093491050833734,
+   "minRho": 0.8545454545454544,
+   "maeHold": 0.43987858753108466,
+   "maxHold": 4.297762149493893,
+   "mae0": 0.36522674760676366
+  },
+  "v2_4/transient": {
+   "cv": 1.5804081341904284,
+   "minRho": 0.9515151515151514,
+   "maeHold": 0.3886624112186086,
+   "maxHold": 2.059325189753906,
+   "mae0": 0.3900426961232869
+  },
+  "v2_8/transient": {
+   "cv": 0.851559872749952,
+   "minRho": 0.9515151515151514,
+   "maeHold": 0.3768639516409823,
+   "maxHold": 1.180550333177079,
+   "mae0": 0.3807196350029529
+  },
+  "v2_16/transient": {
+   "cv": 0.2161708036228125,
+   "minRho": 0.9636363636363635,
+   "maeHold": 0.38178423342386086,
+   "maxHold": 1.1761245579771842,
+   "mae0": 0.38426314732315886
+  }
+ },
+ "passing": {
+  "v2_4": {
+   "attack": false,
+   "decay": false,
+   "transientNotWorse": true,
+   "transientPreferred": true,
+   "attackAccuracyNotWorseThanV1": true
+  },
+  "v2_8": {
+   "attack": false,
+   "decay": true,
+   "transientNotWorse": true,
+   "transientPreferred": true,
+   "attackAccuracyNotWorseThanV1": true
+  },
+  "v2_16": {
+   "attack": false,
+   "decay": true,
+   "transientNotWorse": true,
+   "transientPreferred": true,
+   "attackAccuracyNotWorseThanV1": true
+  }
+ },
+ "winner": null,
+ "perf": {
+  "rhythm": {
+   "inferenceMs": 1949.0,
+   "v1": {
+    "extractionMs": 94.20110000000001,
+    "medianMs": 86.515,
+    "totalMs": 2043.2011,
+    "overheadVsV1Pct": 0.0
+   },
+   "v2_4": {
+    "extractionMs": 117.23410000000001,
+    "medianMs": 104.247,
+    "totalMs": 2066.2341,
+    "overheadVsV1Pct": 1.1272997063284667
+   },
+   "v2_8": {
+    "extractionMs": 150.99689999999998,
+    "medianMs": 133.045,
+    "totalMs": 2099.9969,
+    "overheadVsV1Pct": 2.779745958437472
+   },
+   "v2_16": {
+    "extractionMs": 206.71970000000002,
+    "medianMs": 192.178,
+    "totalMs": 2155.7197,
+    "overheadVsV1Pct": 5.506976283440725
+   }
+  },
+  "lead": {
+   "inferenceMs": 1958.4,
+   "v1": {
+    "extractionMs": 108.4655,
+    "medianMs": 98.6905,
+    "totalMs": 2066.8655,
+    "overheadVsV1Pct": 0.0
+   },
+   "v2_4": {
+    "extractionMs": 136.6671,
+    "medianMs": 120.71,
+    "totalMs": 2095.0671,
+    "overheadVsV1Pct": 1.3644622739118728
+   },
+   "v2_8": {
+    "extractionMs": 168.217,
+    "medianMs": 147.4405,
+    "totalMs": 2126.617,
+    "overheadVsV1Pct": 2.8909234780879554
+   },
+   "v2_16": {
+    "extractionMs": 233.2141,
+    "medianMs": 212.5785,
+    "totalMs": 2191.6141000000002,
+    "overheadVsV1Pct": 6.03564189348557
+   }
+  }
+ }
+}

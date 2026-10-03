@@ -1,0 +1,45 @@
+# Hold-out offsets: [1, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61]
+
+# Stability on hold-out offsets (median CV%% over NAM x role / minimum Spearman rho vs offset 0)  | accuracy vs hop-1 reference: mean abs / max abs error (all hold-out offsets) | mean abs at offset 0
+attack     v1     CV  14.48%  min rho 0.494  | MAE 4.73 ms  max 24.85 ms | MAE@0 4.89 ms
+attack     v2_4   CV   6.63%  min rho 0.830  | MAE 3.17 ms  max 12.54 ms | MAE@0 3.35 ms
+attack     v2_8   CV   3.52%  min rho 0.924  | MAE 3.15 ms  max 10.21 ms | MAE@0 3.29 ms
+attack     v2_16  CV   1.11%  min rho 0.924  | MAE 2.99 ms  max 10.21 ms | MAE@0 2.99 ms
+
+decay      v1     CV  20.87%  min rho 0.879  | MAE 1.67 dB/s  max 22.32 dB/s | MAE@0 2.47 dB/s
+decay      v2_4   CV   5.88%  min rho 0.952  | MAE 1.06 dB/s  max 8.64 dB/s | MAE@0 1.29 dB/s
+decay      v2_8   CV   2.31%  min rho 0.988  | MAE 0.92 dB/s  max 8.63 dB/s | MAE@0 0.97 dB/s
+decay      v2_16  CV   0.92%  min rho 0.988  | MAE 0.87 dB/s  max 8.63 dB/s | MAE@0 0.94 dB/s
+
+transient  v1     CV   5.09%  min rho 0.855  | MAE 0.44 dB  max 4.30 dB | MAE@0 0.37 dB
+transient  v2_4   CV   1.58%  min rho 0.952  | MAE 0.39 dB  max 2.06 dB | MAE@0 0.39 dB
+transient  v2_8   CV   0.85%  min rho 0.952  | MAE 0.38 dB  max 1.18 dB | MAE@0 0.38 dB
+transient  v2_16  CV   0.22%  min rho 0.964  | MAE 0.38 dB  max 1.18 dB | MAE@0 0.38 dB
+
+# Primary criteria per candidate (section 9.3)
+v2_4   attack FAIL | decay FAIL | transient not worse PASS (preferred yes) | attack accuracy <= V1 PASS
+v2_8   attack FAIL | decay PASS | transient not worse PASS (preferred yes) | attack accuracy <= V1 PASS
+v2_16  attack FAIL | decay PASS | transient not worse PASS (preferred yes) | attack accuracy <= V1 PASS
+
+# Information retained (offset 0): Spearman across the 20 NAM x role values vs the hop-1 reference, and between-NAM std
+attack     v1     rho vs reference 0.888   std 15.286   distinct values 19/20
+attack     v2_4   rho vs reference 0.928   std 15.377   distinct values 19/20
+attack     v2_8   rho vs reference 0.925   std 14.993   distinct values 18/20
+attack     v2_16  rho vs reference 0.910   std 14.276   distinct values 20/20
+decay      v1     rho vs reference 0.991   std 19.325   distinct values 20/20
+decay      v2_4   rho vs reference 0.991   std 16.897   distinct values 20/20
+decay      v2_8   rho vs reference 0.995   std 15.931   distinct values 20/20
+decay      v2_16  rho vs reference 0.995   std 15.816   distinct values 20/20
+transient  v1     rho vs reference 0.991   std 3.570   distinct values 20/20
+transient  v2_4   rho vs reference 0.952   std 3.550   distinct values 20/20
+transient  v2_8   rho vs reference 0.952   std 3.569   distinct values 20/20
+transient  v2_16  rho vs reference 0.949   std 3.575   distinct values 20/20
+
+# Unaffected features identical to V1 (all NAM x role x offsets, exact equality)
+compared 17100 values, differing 0
+
+# Extraction cost on T15 (desktop; mean over the 10 NAMs of the mean of 5 runs after a warm-up), ms
+rhythm (15.5 s audio): inference 1949 | v1 94 (median 87, total overhead vs V1 +0.0%) | v2_4 117 (median 104, total overhead vs V1 +1.1%) | v2_8 151 (median 133, total overhead vs V1 +2.8%) | v2_16 207 (median 192, total overhead vs V1 +5.5%) | 
+lead (15.5 s audio): inference 1958 | v1 108 (median 99, total overhead vs V1 +0.0%) | v2_4 137 (median 121, total overhead vs V1 +1.4%) | v2_8 168 (median 147, total overhead vs V1 +2.9%) | v2_16 233 (median 213, total overhead vs V1 +6.0%) | 
+
+SMALLEST PASSING CANDIDATE (primary criteria, before synthetic/golden checks): NONE

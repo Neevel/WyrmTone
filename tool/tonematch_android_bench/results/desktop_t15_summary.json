@@ -1,0 +1,126 @@
+{
+ "rhythm": {
+  "01": {
+   "tone.centroidHz": 810.8955595543774,
+   "tone.crestDb": 17.5368198315484,
+   "tone.sat.composite": 0.24868187991619922,
+   "tone.attackMs": 25.333333333333332
+  },
+  "02": {
+   "tone.centroidHz": 871.894836647209,
+   "tone.crestDb": 13.24260472744582,
+   "tone.sat.composite": 0.43232906887368344,
+   "tone.attackMs": 25.333333333333336
+  },
+  "03": {
+   "tone.centroidHz": 1606.393409986851,
+   "tone.crestDb": 12.852001433771548,
+   "tone.sat.composite": 0.603349246500282,
+   "tone.attackMs": 33.333333333333336
+  },
+  "04": {
+   "tone.centroidHz": 1175.9510341990776,
+   "tone.crestDb": 13.439899969974784,
+   "tone.sat.composite": 0.5120273860402789,
+   "tone.attackMs": 34.66666666666667
+  },
+  "05": {
+   "tone.centroidHz": 1444.6157028950342,
+   "tone.crestDb": 9.374943253859112,
+   "tone.sat.composite": 0.7440575062385592,
+   "tone.attackMs": 18.666666666666668
+  },
+  "06": {
+   "tone.centroidHz": 1816.0121414719476,
+   "tone.crestDb": 11.018470806885142,
+   "tone.sat.composite": 0.7438110712553349,
+   "tone.attackMs": 37.333333333333336
+  },
+  "07": {
+   "tone.centroidHz": 1031.7794497457155,
+   "tone.crestDb": 5.666340398938351,
+   "tone.sat.composite": 0.7354454454529062,
+   "tone.attackMs": 17.333333333333332
+  },
+  "08": {
+   "tone.centroidHz": 1326.6310295774115,
+   "tone.crestDb": 11.729865499477135,
+   "tone.sat.composite": 0.5620394873817302,
+   "tone.attackMs": 30.666666666666668
+  },
+  "09": {
+   "tone.centroidHz": 1271.4660121001816,
+   "tone.crestDb": 9.99454578224419,
+   "tone.sat.composite": 0.6522149996946572,
+   "tone.attackMs": 22.0
+  },
+  "10": {
+   "tone.centroidHz": 507.7866532027712,
+   "tone.crestDb": 19.450859315516183,
+   "tone.sat.composite": 0.057459177419195206,
+   "tone.attackMs": 24.0
+  }
+ },
+ "lead": {
+  "01": {
+   "tone.centroidHz": 1609.1572843792842,
+   "tone.crestDb": 18.588935595848852,
+   "tone.sat.composite": 0.14722383164144934,
+   "tone.attackMs": 22.0
+  },
+  "02": {
+   "tone.centroidHz": 1532.331012869284,
+   "tone.crestDb": 15.07153986817904,
+   "tone.sat.composite": 0.3074317380959003,
+   "tone.attackMs": 16.0
+  },
+  "03": {
+   "tone.centroidHz": 1519.142640751037,
+   "tone.crestDb": 12.549848717870589,
+   "tone.sat.composite": 0.448538894495196,
+   "tone.attackMs": 61.333333333333336
+  },
+  "04": {
+   "tone.centroidHz": 966.9758474004998,
+   "tone.crestDb": 12.821710953628926,
+   "tone.sat.composite": 0.4528294378642769,
+   "tone.attackMs": 37.333333333333336
+  },
+  "05": {
+   "tone.centroidHz": 1075.0222729070456,
+   "tone.crestDb": 8.460844953889154,
+   "tone.sat.composite": 0.6546922476933992,
+   "tone.attackMs": 10.666666666666668
+  },
+  "06": {
+   "tone.centroidHz": 1422.3020769449997,
+   "tone.crestDb": 9.925050795906925,
+   "tone.sat.composite": 0.655296925650757,
+   "tone.attackMs": 4.0
+  },
+  "07": {
+   "tone.centroidHz": 821.108478742135,
+   "tone.crestDb": 4.928545251565351,
+   "tone.sat.composite": 0.6499860943726923,
+   "tone.attackMs": 16.666666666666664
+  },
+  "08": {
+   "tone.centroidHz": 1061.833335086566,
+   "tone.crestDb": 11.264806886994656,
+   "tone.sat.composite": 0.49720103958111883,
+   "tone.attackMs": 11.333333333333334
+  },
+  "09": {
+   "tone.centroidHz": 1028.099946728951,
+   "tone.crestDb": 9.182954629743522,
+   "tone.sat.composite": 0.5694869412604588,
+   "tone.attackMs": 31.333333333333332
+  },
+  "10": {
+   "tone.centroidHz": 682.3710854444462,
+   "tone.crestDb": 19.43851345774402,
+   "tone.sat.composite": 0.06614735210513076,
+   "tone.attackMs": 16.0
+  }
+ }
+}

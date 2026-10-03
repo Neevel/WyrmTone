@@ -1,0 +1,168 @@
+# FULL: composite and key tone features per NAM
+## rhythm
+id  composite  comp3(noHF) centroid  rolloff   crest  attack  transient  envRange  flat   hfGen  crestRed envComp  | probeTilt-30 probeTilt-20
+01  0.252      0.223         847    1898   17.4    17.3    11.8    22.2  0.011    6.8    4.0    5.5   |    4.1     3.9
+02  0.442      0.478         940    1922   13.2    24.0    10.0    21.8  0.151    6.7    8.2    5.8   |   10.8    12.1
+03  0.603      0.658        1683    3000   12.8    45.3     7.5    11.3  0.120    8.8    8.6   16.4   |    2.2     2.3
+04  0.503      0.529        1204    2508   13.8    48.0     5.3     4.6  0.024    8.5    7.6   23.1   |   -5.4    -4.3
+05  0.737      0.889        1485    2227    9.4    13.3     2.4     2.6  0.260    5.6   12.0   25.1   |  -10.8   -10.6
+06  0.737      0.857        1874    3445   11.0    44.7     2.2     2.5  0.264    7.6   10.4   25.2   |   -3.2    -2.6
+07  0.735      0.896        1062    1781    5.7    30.7     1.9     2.2  0.206    5.1   15.6   25.4   |   -5.2    -4.7
+08  0.558      0.602        1350    2391   11.7    26.7     2.4     2.9  0.049    8.5    9.7   24.7   |  -10.2   -10.1
+09  0.649      0.763        1316    2039   10.0    41.3     4.0     3.3  0.159    6.1   11.4   24.3   |   -5.1    -2.9
+10  0.056      0.074         529     938   19.2    20.7    12.9    28.4  0.023   -1.1    2.2   -0.8   |   -0.3    -0.4
+## lead
+id  composite  comp3(noHF) centroid  rolloff   crest  attack  transient  envRange  flat   hfGen  crestRed envComp  | probeTilt-30 probeTilt-20
+01  0.148      0.082        1655    2508   18.4    10.0     3.4    31.0  0.013    6.9    3.1   -6.3   |    4.1     3.9
+02  0.306      0.309        1550    2508   14.7    16.0     2.6    25.4  0.143    5.9    6.8   -0.7   |   10.8    12.1
+03  0.459      0.534        1620    2953   12.7    64.0     1.4    13.2  0.074    4.7    8.8   11.5   |    2.2     2.3
+04  0.453      0.544        1022    2367   12.9    10.7     2.3     4.5  0.019    3.6    8.5   20.3   |   -5.4    -4.3
+05  0.647      0.862        1125    1477    8.6    16.7     1.0     3.1  0.217    0.0   12.9   21.7   |  -10.8   -10.6
+06  0.651      0.827        1500    2648   10.1    14.7     1.3     4.2  0.217    2.5   11.4   20.5   |   -3.2    -2.6
+07  0.650      0.866         849    1312    5.0    13.3     1.2     2.4  0.180   -0.3   16.5   22.3   |   -5.2    -4.7
+08  0.491      0.600        1108    2273   11.6     8.7     2.2     3.9  0.043    3.3    9.9   20.8   |  -10.2   -10.1
+09  0.569      0.741        1082    1758    9.3    35.3     0.6     2.4  0.123    1.0   12.2   22.3   |   -5.1    -2.9
+10  0.066      0.088         676    1242   19.0    14.0     3.0    25.1  0.029   -1.1    2.5   -0.4   |   -0.3    -0.4
+## clean
+id  composite  comp3(noHF) centroid  rolloff   crest  attack  transient  envRange  flat   hfGen  crestRed envComp  | probeTilt-30 probeTilt-20
+01  0.232      0.188         677    1594   16.1    26.7     3.1    12.4  0.006    7.3    5.3    2.8   |    4.1     3.9
+02  0.396      0.411         696    1570   11.8    48.0     3.9    11.7  0.109    7.1    9.6    3.5   |   10.8    12.1
+03  0.626      0.673        1355    2648   11.2    48.7     1.7     4.5  0.187    9.7   10.2   10.7   |    2.2     2.3
+04  0.461      0.461         957    2250   13.1    28.0     3.2     4.3  0.031    9.2    8.3   10.9   |   -5.4    -4.3
+05  0.743      0.889        1174    1570    8.4    39.3     1.5     3.2  0.323    6.1   13.0   12.0   |  -10.8   -10.6
+06  0.739      0.845        1517    2719   10.3    23.3     1.9     3.3  0.323    8.4   11.1   11.9   |   -3.2    -2.6
+07  0.773      0.938         850    1266    5.1    59.3     1.1     1.9  0.279    5.5   16.3   13.2   |   -5.2    -4.7
+08  0.513      0.530        1080    2227   11.8    35.3     2.1     3.9  0.060    9.2    9.6   11.3   |  -10.2   -10.1
+09  0.722      0.849        1080    1594    8.9    51.3     1.0     1.1  0.231    6.9   12.5   14.1   |   -5.1    -2.9
+10  0.064      0.085         449     703   18.3    53.3     4.0    15.9  0.014   -1.0    3.1   -0.8   |   -0.3    -0.4
+
+# Length ablation (vs FULL)
+rhythm SPAN  (19.9s audio) distSpearman=0.983  maxDeltaComposite=0.003  features<0.90: ['tone.attackMs', 'tone.transientPeakToBodyDb']  -> fail
+    spearman: composite 1.00 centroid 1.00 crest 1.00 flat 1.00 hfGen 0.99 crestRed 1.00 envComp 1.00 | maxDeltaComposite3(noHF)=0.003 | new failures beyond SPAN noise floor: none
+    largest median relative deltas: attackMs 16.9%, transientPeakToBodyDb 11.8%, decayDbPerSec 7.9%, envelopeRangeDb 0.5%
+rhythm T15   (15.5s audio) distSpearman=0.978  maxDeltaComposite=0.010  features<0.90: ['tone.attackMs', 'tone.transientPeakToBodyDb']  -> fail
+    spearman: composite 0.99 centroid 1.00 crest 1.00 flat 0.99 hfGen 1.00 crestRed 1.00 envComp 0.99 | maxDeltaComposite3(noHF)=0.014 | new failures beyond SPAN noise floor: none
+    largest median relative deltas: decayDbPerSec 37.1%, transientPeakToBodyDb 27.9%, attackMs 27.1%, band.LOW 5.2%
+rhythm T10   (10.5s audio) distSpearman=0.909  maxDeltaComposite=0.063  features<0.90: ['tone.centroidHz', 'tone.band.LOW', 'tone.band.MID', 'tone.band.HIGH_MID', 'tone.attackMs', 'tone.sat.hfGenerationDb']  -> fail
+    spearman: composite 1.00 centroid 0.83 crest 0.99 flat 0.98 hfGen 0.79 crestRed 0.99 envComp 0.99 | maxDeltaComposite3(noHF)=0.049 | new failures beyond SPAN noise floor: ['tone.centroidHz', 'tone.band.LOW', 'tone.band.MID', 'tone.band.HIGH_MID', 'tone.sat.hfGenerationDb']
+    largest median relative deltas: attackMs 35.0%, decayDbPerSec 34.2%, sat.hfGenerationDb 26.7%, band.LOW_MID 18.6%
+rhythm T5    (5.5s audio) distSpearman=0.857  maxDeltaComposite=0.131  features<0.90: ['tone.rolloff85Hz', 'tone.band.MID', 'tone.band.HIGH_MID', 'tone.attackMs', 'tone.decayDbPerSec', 'tone.transientPeakToBodyDb', 'tone.envelopeRangeDb', 'tone.sat.hfGenerationDb', 'tone.sat.envelopeCompressionDb', 'tone.sat.composite']  -> fail
+    spearman: composite 0.89 centroid 0.95 crest 0.90 flat 0.99 hfGen 0.73 crestRed 0.90 envComp 0.83 | maxDeltaComposite3(noHF)=0.265 | new failures beyond SPAN noise floor: ['tone.rolloff85Hz', 'tone.band.MID', 'tone.band.HIGH_MID', 'tone.decayDbPerSec', 'tone.envelopeRangeDb', 'tone.sat.hfGenerationDb', 'tone.sat.envelopeCompressionDb', 'tone.sat.composite']
+    largest median relative deltas: decayDbPerSec 100.6%, sat.envelopeCompressionDb 71.7%, sat.hfGenerationDb 67.5%, attackMs 58.0%
+lead SPAN  (23.6s audio) distSpearman=0.990  maxDeltaComposite=0.001  features<0.90: ['tone.attackMs']  -> fail
+    spearman: composite 1.00 centroid 1.00 crest 1.00 flat 1.00 hfGen 1.00 crestRed 1.00 envComp 1.00 | maxDeltaComposite3(noHF)=0.002 | new failures beyond SPAN noise floor: none
+    largest median relative deltas: decayDbPerSec 32.4%, attackMs 17.1%, transientPeakToBodyDb 2.4%, envelopeRangeDb 0.3%
+lead T15   (15.5s audio) distSpearman=0.975  maxDeltaComposite=0.011  features<0.90: ['tone.attackMs']  -> fail
+    spearman: composite 0.98 centroid 0.99 crest 1.00 flat 0.99 hfGen 1.00 crestRed 1.00 envComp 1.00 | maxDeltaComposite3(noHF)=0.019 | new failures beyond SPAN noise floor: none
+    largest median relative deltas: decayDbPerSec 66.3%, attackMs 27.9%, sat.hfGenerationDb 20.7%, transientPeakToBodyDb 15.8%
+lead T10   (10.5s audio) distSpearman=0.955  maxDeltaComposite=0.076  features<0.90: ['tone.band.LOW', 'tone.attackMs']  -> fail
+    spearman: composite 0.95 centroid 0.99 crest 1.00 flat 1.00 hfGen 0.99 crestRed 1.00 envComp 0.99 | maxDeltaComposite3(noHF)=0.085 | new failures beyond SPAN noise floor: ['tone.band.LOW']
+    largest median relative deltas: attackMs 65.7%, sat.hfGenerationDb 40.3%, sat.crestReductionDb 29.4%, decayDbPerSec 22.1%
+lead T5    (5.5s audio) distSpearman=0.856  maxDeltaComposite=0.083  features<0.90: ['tone.centroidHz', 'tone.rolloff85Hz', 'tone.band.LOW', 'tone.band.HIGH', 'tone.attackMs', 'tone.decayDbPerSec', 'tone.transientPeakToBodyDb']  -> fail
+    spearman: composite 0.96 centroid 0.88 crest 0.98 flat 0.95 hfGen 0.96 crestRed 0.98 envComp 0.94 | maxDeltaComposite3(noHF)=0.107 | new failures beyond SPAN noise floor: ['tone.centroidHz', 'tone.rolloff85Hz', 'tone.band.LOW', 'tone.band.HIGH', 'tone.decayDbPerSec', 'tone.transientPeakToBodyDb']
+    largest median relative deltas: decayDbPerSec 208.9%, attackMs 52.6%, band.HIGH 38.3%, band.LOW 36.2%
+clean SPAN  (13.5s audio) distSpearman=1.000  maxDeltaComposite=0.004  features<0.90: none  -> PASS
+    spearman: composite 1.00 centroid 1.00 crest 1.00 flat 0.99 hfGen 1.00 crestRed 1.00 envComp 1.00 | maxDeltaComposite3(noHF)=0.005 | new failures beyond SPAN noise floor: none
+    largest median relative deltas: sat.envelopeCompressionDb 1.4%, envelopeRangeDb 0.8%, sat.composite 0.4%, sat.flatness1to8k 0.1%
+clean T10   (10.5s audio) distSpearman=0.972  maxDeltaComposite=0.058  features<0.90: ['tone.attackMs', 'tone.decayDbPerSec']  -> fail
+    spearman: composite 0.99 centroid 0.99 crest 0.99 flat 1.00 hfGen 1.00 crestRed 0.99 envComp 0.99 | maxDeltaComposite3(noHF)=0.072 | new failures beyond SPAN noise floor: ['tone.attackMs', 'tone.decayDbPerSec']
+    largest median relative deltas: decayDbPerSec 40.5%, attackMs 19.0%, sat.crestReductionDb 18.0%, transientPeakToBodyDb 10.4%
+clean T5    (5.5s audio) distSpearman=0.909  maxDeltaComposite=0.052  features<0.90: ['tone.attackMs', 'tone.decayDbPerSec']  -> fail
+    spearman: composite 0.96 centroid 1.00 crest 0.93 flat 1.00 hfGen 0.95 crestRed 0.93 envComp 1.00 | maxDeltaComposite3(noHF)=0.078 | new failures beyond SPAN noise floor: ['tone.attackMs', 'tone.decayDbPerSec']
+    largest median relative deltas: decayDbPerSec 168.9%, attackMs 53.5%, transientPeakToBodyDb 36.6%, band.HIGH 26.2%
+
+# HF metrics vs cab/voicing filtering (probe tilt) and vs the other saturation components (FULL)
+## rhythm
+metric                      rho(tilt-30)  rho(tilt-20)  rho(non-HF sat. components)
+A hfGenerationDb (V1)           0.04          0.12         -0.10
+B hfOverMidDeltaDb             -0.14         -0.18          0.76
+B hfOverMidOutDb               -0.14         -0.18          0.76
+C slopeDeltaDbPerOct           -0.35         -0.41          0.91
+C slopeOutDbPerOct             -0.35         -0.41          0.91
+D valleyFillDb                 -0.59         -0.52          0.33
+E midOverLowMidDb              -0.19         -0.14         -0.09
+E highMidOverMidDb              0.28          0.36         -0.32
+  hfGenerationDb by NAM: 01=6.8, 02=6.7, 03=8.8, 04=8.5, 05=5.6, 06=7.6, 07=5.1, 08=8.5, 09=6.1, 10=-1.1
+  probeTilt-30 by NAM  : 01=4.1, 02=10.8, 03=2.2, 04=-5.4, 05=-10.8, 06=-3.2, 07=-5.2, 08=-10.2, 09=-5.1, 10=-0.3
+## lead
+metric                      rho(tilt-30)  rho(tilt-20)  rho(non-HF sat. components)
+A hfGenerationDb (V1)           0.52          0.58         -0.53
+B hfOverMidDeltaDb             -0.32         -0.35          0.70
+B hfOverMidOutDb               -0.32         -0.35          0.70
+C slopeDeltaDbPerOct           -0.35         -0.41          0.88
+C slopeOutDbPerOct             -0.35         -0.41          0.88
+D valleyFillDb                 -0.59         -0.52          0.27
+E midOverLowMidDb               0.35          0.41         -0.73
+E highMidOverMidDb              0.49          0.54         -0.48
+  hfGenerationDb by NAM: 01=6.9, 02=5.9, 03=4.7, 04=3.6, 05=0.0, 06=2.5, 07=-0.3, 08=3.3, 09=1.0, 10=-1.1
+  probeTilt-30 by NAM  : 01=4.1, 02=10.8, 03=2.2, 04=-5.4, 05=-10.8, 06=-3.2, 07=-5.2, 08=-10.2, 09=-5.1, 10=-0.3
+
+# Composite: 4 components vs 3 (without HF)
+rhythm: spearman(comp4,comp3)=0.952  rho(comp4,tilt)=-0.50  rho(comp3,tilt)=-0.55  spread4=0.682 spread3=0.822
+   ranks comp4: [2, 3, 6, 4, 9, 10, 8, 5, 7, 1]
+   ranks comp3: [2, 3, 6, 4, 9, 8, 10, 5, 7, 1]
+   pairs separated by >0.05: comp4=40/45  comp3=42/45
+lead: spearman(comp4,comp3)=0.939  rho(comp4,tilt)=-0.54  rho(comp3,tilt)=-0.71  spread4=0.585 spread3=0.784
+   ranks comp4: [2, 3, 5, 4, 8, 10, 9, 6, 7, 1]
+   ranks comp3: [1, 3, 4, 5, 9, 8, 10, 6, 7, 2]
+   pairs separated by >0.05: comp4=39/45  comp3=40/45
+clean: spearman(comp4,comp3)=0.988  rho(comp4,tilt)=-0.55  rho(comp3,tilt)=-0.56  spread4=0.709 spread3=0.853
+   ranks comp4: [2, 3, 6, 4, 9, 8, 10, 5, 7, 1]
+   ranks comp3: [2, 3, 6, 4, 9, 7, 10, 5, 8, 1]
+   pairs separated by >0.05: comp4=40/45  comp3=40/45
+
+# Pairwise distance matrices (FULL, z-scored tone features, euclidean)
+## rhythm
+        01    02    03    04    05    06    07    08    09    10
+01     0.0   3.4   6.6   5.4   8.1   8.7   7.9   6.5   7.7   5.6
+02     3.4   0.0   5.3   4.7   6.1   6.9   5.6   5.9   6.2   5.7
+03     6.6   5.3   0.0   3.8   5.2   3.4   5.8   3.6   4.2   9.1
+04     5.4   4.7   3.8   0.0   6.3   5.2   5.6   3.6   5.2   8.6
+05     8.1   6.1   5.2   6.3   0.0   4.1   3.0   4.6   3.2   9.0
+06     8.7   6.9   3.4   5.2   4.1   0.0   5.1   4.9   4.2  10.7
+07     7.9   5.6   5.8   5.6   3.0   5.1   0.0   4.9   3.4   8.7
+08     6.5   5.9   3.6   3.6   4.6   4.9   4.9   0.0   3.4   9.0
+09     7.7   6.2   4.2   5.2   3.2   4.2   3.4   3.4   0.0   8.5
+10     5.6   5.7   9.1   8.6   9.0  10.7   8.7   9.0   8.5   0.0
+  closest pairs: 05-07 3.0, 05-09 3.2, 07-09 3.4, 08-09 3.4
+  farthest pairs: 08-10 9.0, 03-10 9.1, 06-10 10.7
+  mean distance per NAM (outlier z): 01 6.7(0.9), 02 5.5(-0.3), 03 5.2(-0.7), 04 5.4(-0.5), 05 5.5(-0.3), 06 5.9(0.1), 07 5.6(-0.3), 08 5.2(-0.7), 09 5.1(-0.8), 10 8.3(2.7)
+  dominating features (mean share of squared distance): attackMs 8%, band.MID 8%, sat.flatness1to8k 7%, band.LOW 7%, band.HIGH_MID 7%, band.LOW_MID 6%
+  3 clusters (average linkage): 01,02 | 03,06,04,08,05,07,09 | 10
+## lead
+        01    02    03    04    05    06    07    08    09    10
+01     0.0   3.9   7.1   6.8   9.4   8.5   9.7   6.7   8.8   6.8
+02     3.9   0.0   5.2   4.7   6.7   5.3   7.0   5.0   6.7   6.9
+03     7.1   5.2   0.0   6.0   6.5   4.9   7.3   5.1   5.1   8.1
+04     6.8   4.7   6.0   0.0   5.9   4.7   5.4   3.1   5.8   6.6
+05     9.4   6.7   6.5   5.9   0.0   3.9   2.4   4.5   2.7   7.6
+06     8.5   5.3   4.9   4.7   3.9   0.0   4.8   4.4   4.6   8.4
+07     9.7   7.0   7.3   5.4   2.4   4.8   0.0   4.7   3.7   7.6
+08     6.7   5.0   5.1   3.1   4.5   4.4   4.7   0.0   3.7   5.9
+09     8.8   6.7   5.1   5.8   2.7   4.6   3.7   3.7   0.0   6.9
+10     6.8   6.9   8.1   6.6   7.6   8.4   7.6   5.9   6.9   0.0
+  closest pairs: 05-07 2.4, 05-09 2.7, 04-08 3.1, 07-09 3.7
+  farthest pairs: 01-09 8.8, 01-05 9.4, 01-07 9.7
+  mean distance per NAM (outlier z): 01 7.5(2.0), 02 5.7(-0.2), 03 6.1(0.3), 04 5.5(-0.6), 05 5.5(-0.5), 06 5.5(-0.5), 07 5.8(-0.1), 08 4.8(-1.4), 09 5.3(-0.7), 10 7.2(1.6)
+  dominating features (mean share of squared distance): band.LOW 9%, band.MID 7%, sat.flatness1to8k 7%, attackMs 7%, bandwidthHz 7%, rolloff85Hz 6%
+  3 clusters (average linkage): 01,02 | 03,04,08,05,07,09,06 | 10
+
+# Desktop timings (cold, ms; mean over 10 NAMs: load / inference / extraction / total)
+rhythm FULL  audio 29.1s :   36 /  5983 /  184 =  6203 ms   (inference x realtime 0.205)
+rhythm SPAN  audio 19.9s :   34 /  4230 /  169 =  4434 ms   (inference x realtime 0.213)
+rhythm T15   audio 15.5s :   35 /  3302 /  135 =  3472 ms   (inference x realtime 0.213)
+rhythm T10   audio 10.5s :   36 /  2253 /   89 =  2377 ms   (inference x realtime 0.215)
+rhythm T5    audio 5.5s :   35 /  1176 /   37 =  1248 ms   (inference x realtime 0.214)
+lead FULL  audio 24.2s :   34 /  5168 /  257 =  5459 ms   (inference x realtime 0.214)
+lead SPAN  audio 23.6s :   35 /  5071 /  268 =  5374 ms   (inference x realtime 0.215)
+lead T15   audio 15.5s :   35 /  3334 /  180 =  3549 ms   (inference x realtime 0.215)
+lead T10   audio 10.5s :   35 /  2248 /  114 =  2396 ms   (inference x realtime 0.214)
+lead T5    audio 5.5s :   35 /  1190 /   58 =  1283 ms   (inference x realtime 0.216)
+clean FULL  audio 14.3s :   35 /  3121 /  151 =  3307 ms   (inference x realtime 0.219)
+clean SPAN  audio 13.5s :   34 /  2958 /  150 =  3141 ms   (inference x realtime 0.218)
+clean T10   audio 10.5s :   34 /  2287 /  113 =  2434 ms   (inference x realtime 0.218)
+clean T5    audio 5.5s :   35 /  1207 /   56 =  1298 ms   (inference x realtime 0.220)
+
+# Cache (10 NAMs x RHYTHM+LEAD = 20 analyses, wall ms)
+FULL: cold 121851 ms, warm 1351 ms (hits 20, misses 20)
+T10: cold 49337 ms, warm 533 ms (hits 20, misses 20)

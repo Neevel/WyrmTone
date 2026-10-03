@@ -1,0 +1,1570 @@
+{
+ "afterTheRun": "STOP: no tuning, no other levels, no other pairs, no new features; PASS -> frozen method may be run once on the sealed ToneTwist holdout; FAIL -> exact-NAM research branch frozen, ToneTwist stays sealed",
+ "baseline": {
+  "medianRank": 2,
+  "mrr": 0.573,
+  "name": "IDMT single performance D2 blind",
+  "obviouslyWrong": 0.174,
+  "top1": 0.386,
+  "top3": 0.696
+ },
+ "clips": {
+  "AR_E_fret_0-20": {
+   "group": "single",
+   "guitar": "Aristides 010",
+   "sha256": "37ae5c5f099289b127e7d5bf33afe97237702b9e5e7d4ee1517137cdecf17097"
+  },
+  "AR_Lick11_KN": {
+   "group": "picked",
+   "guitar": "Aristides 010",
+   "sha256": "36d1301a469a4421f8c0e099369cbbba8ccf42d4c00c307124741c0ae64bb333"
+  },
+  "AR_Lick2_MN": {
+   "group": "muted",
+   "guitar": "Aristides 010",
+   "sha256": "2c3a597cbda8f2179fd6fa0a679fc1da9dfcc10fdd889420843a3bec0623d922"
+  },
+  "AR_Lick4_KBSH": {
+   "group": "lead",
+   "guitar": "Aristides 010",
+   "sha256": "0be1e5ab678b91b82bf4ce693c1ad94c678551ee8e92076d2c1629d459e60cf0"
+  },
+  "AR_Lick5_KBVDN": {
+   "group": "lead",
+   "guitar": "Aristides 010",
+   "sha256": "b587336d386a33d623f04251b2f2bae8634ccd10f10d51b76de1c05a350e2905"
+  },
+  "AR_Lick5_KN": {
+   "group": "picked",
+   "guitar": "Aristides 010",
+   "sha256": "b5b95fd17f6828cf0f8936945744227d5772d97a97877f83c011f905af16ba59"
+  },
+  "AR_Lick8_MN": {
+   "group": "muted",
+   "guitar": "Aristides 010",
+   "sha256": "93f506a7441fdb973aa4ff0c31b42de984935a2ee1e4f0c6fc3e67bfcd09a7c3"
+  },
+  "D3_pathetique_poly": {
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "sha256": "f4611abb9be67b67a4cf80c5e0225bb4a129e12a5c4278d90b648b92b922d854"
+  },
+  "D4_Career_fast_rock_blues_rock_1_120BPM": {
+   "group": "poly",
+   "guitar": "Career SG",
+   "sha256": "43b4806d5485f91ae82ca9dc41dea1e87f31a35754d3a58f86108496d40d6440"
+  },
+  "D4_Career_slow_metal_metal_1_160BPM": {
+   "group": "poly",
+   "guitar": "Career SG",
+   "sha256": "314e2d90aadef15875fee1563814b64c07ee1515d86717b8b87213f844391681"
+  },
+  "D4_Career_slow_pop_pop_1_130BPM": {
+   "group": "poly",
+   "guitar": "Career SG",
+   "sha256": "eeddd5db22947c0f9e0801945544cdc6b41d0b49986afe2c51691b260eaf23b1"
+  },
+  "D4_Ibanez_fast_rock_blues_rock_1_100BPM": {
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "sha256": "1b19165da4b00126f458327fe7e944a3957c376f58cd0d54c8dd43a2a9833e0f"
+  },
+  "D4_Ibanez_slow_metal_metal_1_160BPM": {
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "sha256": "71649cf3046d6555baac88fdc302cb00eac1b52da520fc41f16813af77d32112"
+  },
+  "D4_Ibanez_slow_pop_pop_1_130BPM": {
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "sha256": "1e40493c9829fcf7ce3b51013d4ff229d8ecb2379d5c044bfb53033886f20d67"
+  },
+  "FS_E_fret_0-20": {
+   "group": "single",
+   "guitar": "Fender Stratocaster",
+   "sha256": "123b748766a562a2eab1a43f90d9c4cd13e6ef2ac83d6099328d43a7a08b605e"
+  },
+  "FS_Lick11_KN": {
+   "group": "picked",
+   "guitar": "Fender Stratocaster",
+   "sha256": "6edd07b31805e5b07b01eecc9770953a0f7e33855377f2d0d94c2838aa978446"
+  },
+  "FS_Lick2_MN": {
+   "group": "muted",
+   "guitar": "Fender Stratocaster",
+   "sha256": "ba2ac94079d212f6099455637a66bb0e8f70eec4c9777fb44e8c527166790eb0"
+  },
+  "FS_Lick4_KBSH": {
+   "group": "lead",
+   "guitar": "Fender Stratocaster",
+   "sha256": "de378b91fbb012be68f35d5e692593d77cbca0cc02812d53b3c73934eb2dc813"
+  },
+  "FS_Lick5_KBVDN": {
+   "group": "lead",
+   "guitar": "Fender Stratocaster",
+   "sha256": "134abade4c48cd2af34c48f6c5715fd606c688470078e9912a208ace389eeff7"
+  },
+  "FS_Lick5_KN": {
+   "group": "picked",
+   "guitar": "Fender Stratocaster",
+   "sha256": "c6efc9f393dc91751872736c7cb49d42f869b3061b90f0610b41abd19f6e18cd"
+  },
+  "FS_Lick8_MN": {
+   "group": "muted",
+   "guitar": "Fender Stratocaster",
+   "sha256": "436cfdf7b516aa04da1d7e0ecb05b992e584ef4bc3ca6395fa0897179c3b0385"
+  },
+  "LP_E_fret_0-20": {
+   "group": "single",
+   "guitar": "Gibson Les Paul",
+   "sha256": "1cc3ddd099099a1be9ebfca05e2189cb19d48bd6d6897c7af904d24bab0854c9"
+  },
+  "LP_Lick11_KN": {
+   "group": "picked",
+   "guitar": "Gibson Les Paul",
+   "sha256": "0fb7124c8a0f09af65db83cc1a7d67eee348f3a0b06bfc82b4eb842a4147ba23"
+  },
+  "LP_Lick2_MN": {
+   "group": "muted",
+   "guitar": "Gibson Les Paul",
+   "sha256": "312320da9cd3162c780188647772ca6a0e9116263fb0876a5ac8bf2c48797157"
+  },
+  "LP_Lick4_KBSH": {
+   "group": "lead",
+   "guitar": "Gibson Les Paul",
+   "sha256": "c863d4ed9dff85fa5ea0e639792eb22974fe97f94b88580d8b214c93d320a38f"
+  },
+  "LP_Lick5_KBVDN": {
+   "group": "lead",
+   "guitar": "Gibson Les Paul",
+   "sha256": "141414b93a3dc5adf1698667358bc08075279ac1ed11f0a1388bcc29b1f71734"
+  },
+  "LP_Lick5_KN": {
+   "group": "picked",
+   "guitar": "Gibson Les Paul",
+   "sha256": "9eb74f20cfd0815c72ad00f55d14610f2451e4ac244108206e021304aeb0ded1"
+  },
+  "LP_Lick8_MN": {
+   "group": "muted",
+   "guitar": "Gibson Les Paul",
+   "sha256": "bc76dee59655a57344506bc5bf0300de8fc53d00163bdf4a89d225ab4deafdce"
+  }
+ },
+ "contentGroups": {
+  "LEAD": [
+   "LP_Lick4_KBSH",
+   "LP_Lick5_KBVDN",
+   "FS_Lick4_KBSH",
+   "FS_Lick5_KBVDN",
+   "AR_Lick4_KBSH",
+   "AR_Lick5_KBVDN"
+  ],
+  "MUTED": [
+   "LP_Lick2_MN",
+   "LP_Lick8_MN",
+   "FS_Lick2_MN",
+   "FS_Lick8_MN",
+   "AR_Lick2_MN",
+   "AR_Lick8_MN"
+  ],
+  "POLYPHONIC": [
+   "D4_Career_slow_metal_metal_1_160BPM",
+   "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "D4_Career_slow_pop_pop_1_130BPM",
+   "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "D3_pathetique_poly"
+  ],
+  "SINGLE_NOTE_PICKED": [
+   "LP_Lick5_KN",
+   "LP_Lick11_KN",
+   "LP_E_fret_0-20",
+   "FS_Lick5_KN",
+   "FS_Lick11_KN",
+   "FS_E_fret_0-20",
+   "AR_Lick5_KN",
+   "AR_Lick11_KN",
+   "AR_E_fret_0-20"
+  ]
+ },
+ "dataset": {
+  "doi": "10.5281/zenodo.7544110",
+  "license": "CC BY-NC-ND 4.0",
+  "name": "IDMT-SMT-GUITAR",
+  "onlyAlreadyFrozenClipsOf": "tool/tonematch_reference_match/idmt_selection.json",
+  "url": "https://zenodo.org/records/7544110",
+  "version": "1.0.0 (file IDMT-SMT-GUITAR_V2.zip, dataset description v2.0 2016-01-20)",
+  "zipMd5": "06796e08731bccffaed6ae59361486e4"
+ },
+ "distance": {
+  "definitions": "tool/tonematch_reference_match/spike.dart, unchanged (z over the candidate set of the case; D2 = (sqrt((db^2+dm^2)/2) + |dc|)/2)",
+  "primary": "D2",
+  "secondary": [
+   "D1",
+   "D3"
+  ]
+ },
+ "excludedClips": {
+  "AR_Lick2_FN": "finger-style: only one lick on three guitars, not enough independent clips for a hard group",
+  "D3_quintfall": "monophonic dataset-3 piece: a single clip, no same-group partner",
+  "FS_Lick2_FN": "finger-style: only one lick on three guitars, not enough independent clips for a hard group",
+  "LP_Lick2_FN": "finger-style: only one lick on three guitars, not enough independent clips for a hard group"
+ },
+ "excludedFeatures": [
+  "attackMs",
+  "decayDbPerSec",
+  "transientPeakToBody",
+  "saturation composite",
+  "HF generation"
+ ],
+ "exclusionRules": "only clips whose content group is not suitable (see excludedClips); no result-based exclusion; a NAM that cannot be loaded makes the gate BLOCKED, it is never dropped",
+ "features": [
+  "ln(spectral centroid)",
+  "ln(rolloff85)",
+  "logit(MID + HIGH_MID share)",
+  "crest dB"
+ ],
+ "inputLevel": {
+  "activeRms": "exactly the production definition (StftFeatureExtractor): frames ToneAnalysisParams.frameSize / hopSize, a frame is active if its mean square is within ToneAnalysisParams.activeGateDbBelowInputPeak dB of the loudest input frame; active RMS = 10*log10(mean over active frames of the frame mean squares)",
+  "method": "linear gain only, applied to the dry 48 kHz DI (after the production 44.1->48 kHz resampler) BEFORE NAM inference; no limiter, no compression, no EQ; the output tone normalisation of the extractor stays unchanged",
+  "primaryTargetIndependentOfControl": true,
+  "targetActiveRmsDbfs": -30.0
+ },
+ "levelSensitivityControl": {
+  "clips": [
+   "LP_Lick2_MN",
+   "FS_Lick5_KN",
+   "AR_Lick4_KBSH",
+   "D4_Ibanez_slow_pop_pop_1_130BPM"
+  ],
+  "levelsDbfs": [
+   -33.0,
+   -30.0,
+   -27.0
+  ],
+  "nams": [
+   "01",
+   "03",
+   "06"
+  ],
+  "purpose": "document only how much the four features change with +/-3 dB input; NOT used to choose a level"
+ },
+ "mode": {
+  "control": "DI-gated reference, never used for pass/fail",
+  "primary": "blind (reference gate from the reference output itself, no original DI)"
+ },
+ "name": "Hoer-Match IDMT final controlled gate (pre-registration)",
+ "nams": {
+  "01": {
+   "category": "clean",
+   "file": "FNDR PANO Clean2 BAL 6V6 CAB.nam",
+   "sha256": "ee7a370810b71cdad793c31093d4db9f680c9e0c00ef82785de267e129006bdb"
+  },
+  "02": {
+   "category": "crunch",
+   "file": "S-[AMP] 100W BOLD CLEAN Clean-Pushed #01 (Factory).nam",
+   "sha256": "e82cce6b8fe140ece1e6bc67355bab0ba57fb7d2b47420bd945f857492211f80"
+  },
+  "03": {
+   "category": "crunch",
+   "file": "JVM410_crunch_green_sd1.nam",
+   "sha256": "fc31144d0ec3a9e8974af1d3476d67f1da990bc373bdfa10504707e3467f4442"
+  },
+  "04": {
+   "category": "highgain",
+   "file": "Marshall JVM410H Boosted - Full Rig (Standard).nam",
+   "sha256": "ed1cca5091baa6bb7945814fd5107382a5ca4a56948b7328d057878c7061ec3b"
+  },
+  "05": {
+   "category": "highgain",
+   "file": "Bugera 6262 1 Hit Quitter.nam",
+   "sha256": "5317db991837474c45a76a36e56768e20eb3ca95ad3c39efb3018feac017f807"
+  },
+  "06": {
+   "category": "highgain",
+   "file": "EVH 5150 III (Amp Only) Boosted (Overdrive 0 - Tone 5 - Volume 5).nam",
+   "sha256": "1060a12aa70ab4103a5e0b2a6efce7d4d0aa6055e6a300e942770890f447c910"
+  },
+  "07": {
+   "category": "highgain",
+   "file": "S-[AMP] 100W BOLD CRUSH Heavy-Solo #02 (Factory).nam",
+   "sha256": "99c518dc592ae0866f98bd273b95eec03b41c9648a553e4958631b3b7d15ef5b"
+  },
+  "08": {
+   "category": "highgain",
+   "file": "GOJIRA - JOE DUPLANTIER.nam",
+   "sha256": "7d70a61abe0c74c280906de2a57882a6f6e988b462f513e06f41882703b82b85"
+  },
+  "09": {
+   "category": "highgain",
+   "file": "JP2C Capture 12 JP Lead CH3 G9 T6 M3 B3 P6 - Emil Rohbe.nam",
+   "sha256": "f9be8c6015221b17d7731069816cc7c75af1c8df02617fd6f56f77cc04554d35"
+  },
+  "10": {
+   "category": "",
+   "file": "JP2C Capture 20 Power Amp Only No EQ - Emil Rohbe.nam",
+   "sha256": "5e17483fed693766d3bbc21428d959ef58a343de349b45d305b7e710449b525a"
+  },
+  "FenderSR": {
+   "category": "clean",
+   "file": "Fender Super Reverb_ EQ Flat, Volume 3, sm57.nam",
+   "sha256": "8884e937d08d62072721f579b6dc6fc8cbaae4b96402c1ff4bd4450eda4aca8a"
+  },
+  "MkV-Clean": {
+   "category": "clean",
+   "file": "Clean.nam",
+   "sha256": "39488d9298895dfc5472cae152982f9fc4157c2d1564e941eb8794ed3272b77d"
+  },
+  "MkV-Lead": {
+   "category": "",
+   "file": "Lead.nam",
+   "sha256": "c18221463e72a56caaf78859dcb683ed63fa8b06cddffd7fa09400c427ed5a83"
+  },
+  "MkV-Rhythm": {
+   "category": "",
+   "file": "Rythm.nam",
+   "sha256": "34d66f608c398d676c5fee289d097701a177faae020da2bc4ae9e273136cbebc"
+  }
+ },
+ "obviouslyWrong": "unchanged definition: on leave-one-out cases of labelled reference NAMs (clean/crunch/highgain): a clean reference with a highgain NAM in the top 3, or a highgain reference with a clean NAM in the top 3; crunch references are labelled but cannot be wrong; rate = wrong / labelled leave-one-out cases",
+ "pairRule": "all ordered pairs (reference clip, candidate clip) of different WAV files inside one content group; tags SAME/CROSS_GUITAR from the dataset guitar names and SAME/DIFFERENT_MATERIAL from the lick id / fret sweep / genre slot (descriptive only, never a gate)",
+ "pairs": [
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KN"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick11_KN"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_E_fret_0-20"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KN"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick11_KN"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_E_fret_0-20"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KN"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "AR_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick11_KN"
+  },
+  {
+   "cand": "LP_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "LP_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "LP_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "FS_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "FS_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "FS_E_fret_0-20",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "AR_Lick5_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "AR_Lick11_KN",
+   "group": "SINGLE_NOTE_PICKED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_E_fret_0-20"
+  },
+  {
+   "cand": "LP_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick2_MN"
+  },
+  {
+   "cand": "FS_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick2_MN"
+  },
+  {
+   "cand": "FS_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick2_MN"
+  },
+  {
+   "cand": "AR_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick2_MN"
+  },
+  {
+   "cand": "AR_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick2_MN"
+  },
+  {
+   "cand": "LP_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick8_MN"
+  },
+  {
+   "cand": "FS_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick8_MN"
+  },
+  {
+   "cand": "FS_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick8_MN"
+  },
+  {
+   "cand": "AR_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick8_MN"
+  },
+  {
+   "cand": "AR_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick8_MN"
+  },
+  {
+   "cand": "LP_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick2_MN"
+  },
+  {
+   "cand": "LP_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick2_MN"
+  },
+  {
+   "cand": "FS_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick2_MN"
+  },
+  {
+   "cand": "AR_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick2_MN"
+  },
+  {
+   "cand": "AR_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick2_MN"
+  },
+  {
+   "cand": "LP_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick8_MN"
+  },
+  {
+   "cand": "LP_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick8_MN"
+  },
+  {
+   "cand": "FS_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick8_MN"
+  },
+  {
+   "cand": "AR_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick8_MN"
+  },
+  {
+   "cand": "AR_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick8_MN"
+  },
+  {
+   "cand": "LP_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick2_MN"
+  },
+  {
+   "cand": "LP_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick2_MN"
+  },
+  {
+   "cand": "FS_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick2_MN"
+  },
+  {
+   "cand": "FS_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick2_MN"
+  },
+  {
+   "cand": "AR_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick2_MN"
+  },
+  {
+   "cand": "LP_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick8_MN"
+  },
+  {
+   "cand": "LP_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick8_MN"
+  },
+  {
+   "cand": "FS_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick8_MN"
+  },
+  {
+   "cand": "FS_Lick8_MN",
+   "group": "MUTED",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick8_MN"
+  },
+  {
+   "cand": "AR_Lick2_MN",
+   "group": "MUTED",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick8_MN"
+  },
+  {
+   "cand": "LP_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick4_KBSH"
+  },
+  {
+   "cand": "FS_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick4_KBSH"
+  },
+  {
+   "cand": "FS_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick4_KBSH"
+  },
+  {
+   "cand": "AR_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick4_KBSH"
+  },
+  {
+   "cand": "AR_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick4_KBSH"
+  },
+  {
+   "cand": "LP_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KBVDN"
+  },
+  {
+   "cand": "FS_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KBVDN"
+  },
+  {
+   "cand": "FS_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick5_KBVDN"
+  },
+  {
+   "cand": "AR_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "LP_Lick5_KBVDN"
+  },
+  {
+   "cand": "AR_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "LP_Lick5_KBVDN"
+  },
+  {
+   "cand": "LP_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick4_KBSH"
+  },
+  {
+   "cand": "LP_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick4_KBSH"
+  },
+  {
+   "cand": "FS_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick4_KBSH"
+  },
+  {
+   "cand": "AR_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick4_KBSH"
+  },
+  {
+   "cand": "AR_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick4_KBSH"
+  },
+  {
+   "cand": "LP_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KBVDN"
+  },
+  {
+   "cand": "LP_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick5_KBVDN"
+  },
+  {
+   "cand": "FS_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KBVDN"
+  },
+  {
+   "cand": "AR_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "FS_Lick5_KBVDN"
+  },
+  {
+   "cand": "AR_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "FS_Lick5_KBVDN"
+  },
+  {
+   "cand": "LP_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick4_KBSH"
+  },
+  {
+   "cand": "LP_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick4_KBSH"
+  },
+  {
+   "cand": "FS_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick4_KBSH"
+  },
+  {
+   "cand": "FS_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick4_KBSH"
+  },
+  {
+   "cand": "AR_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick4_KBSH"
+  },
+  {
+   "cand": "LP_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KBVDN"
+  },
+  {
+   "cand": "LP_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick5_KBVDN"
+  },
+  {
+   "cand": "FS_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KBVDN"
+  },
+  {
+   "cand": "FS_Lick5_KBVDN",
+   "group": "LEAD",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "AR_Lick5_KBVDN"
+  },
+  {
+   "cand": "AR_Lick4_KBSH",
+   "group": "LEAD",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "AR_Lick5_KBVDN"
+  },
+  {
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D3_pathetique_poly",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cand": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cand": "D3_pathetique_poly",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cand": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D3_pathetique_poly",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D3_pathetique_poly",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cand": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cand": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cand": "D3_pathetique_poly",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cand": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "SAME_MATERIAL",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D3_pathetique_poly",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cand": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D3_pathetique_poly"
+  },
+  {
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D3_pathetique_poly"
+  },
+  {
+   "cand": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "CROSS_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D3_pathetique_poly"
+  },
+  {
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D3_pathetique_poly"
+  },
+  {
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D3_pathetique_poly"
+  },
+  {
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "POLYPHONIC",
+   "guitar": "SAME_GUITAR",
+   "material": "DIFFERENT_MATERIAL",
+   "ref": "D3_pathetique_poly"
+  }
+ ],
+ "rankingRules": "candidates are the 14 NAMs analysed on the candidate clip the production way (DI-gated); ranked nearest first, ties by NAM id; reference NAM rank = 1-based position; leave-one-out cases remove the reference NAM from the candidates",
+ "status": "frozen before any final-gate rendering or evaluation; ToneTwist sealed and not used",
+ "successCriteria": {
+  "contentGroupRule": "every content group with >= 100 ranking cases must reach Top-3 >= 0.50; groups with fewer cases are descriptive only",
+  "medianRank": "<= 2",
+  "mrr": ">= 0.60",
+  "notGates": [
+   "D1",
+   "D3",
+   "DI-gated control",
+   "SAME/CROSS_GUITAR split",
+   "SAME/DIFFERENT_MATERIAL split",
+   "per-NAM and per-category numbers"
+  ],
+  "obviouslyWrong": "<= 0.10",
+  "primary": "D2 BLIND, all pairs, ALL must hold, no near-pass",
+  "top3": ">= 0.70"
+ }
+}

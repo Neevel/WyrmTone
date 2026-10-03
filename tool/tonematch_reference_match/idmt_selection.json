@@ -1,0 +1,1782 @@
+{
+ "dataset": "IDMT-SMT-GUITAR V2",
+ "url": "https://zenodo.org/records/7544110",
+ "doi": "10.5281/zenodo.7544110",
+ "version": "1.0.0 (file IDMT-SMT-GUITAR_V2.zip, dataset description v2.0 2016-01-20)",
+ "license": "CC BY-NC-ND 4.0",
+ "acquired": "2026-10-03",
+ "zipMd5": "06796e08731bccffaed6ae59361486e4",
+ "zipExpectedMd5": "06796e08731bccffaed6ae59361486e4",
+ "filesAvailable": {
+  "wav": 1173
+ },
+ "exclusions": [],
+ "rule": " (deterministic, no result-based choices):\n clips (electric, dry DI only; dataset 1 is skipped because its files are 1-3 s single events, acoustic parts of dataset 4 are skipped):\n  dataset2, per guitar LP (Gibson Les Paul), FS (Fender Stratocaster), AR (Aristides 010):\n    muted   Lick2_MN, Lick8_MN      picked  Lick5_KN, Lick11_KN     finger  Lick2_FN\n    lead    Lick4_KBSH, Lick5_KBVDN single  E_fret_0-20\n  dataset4, per electric guitar (Career SG, Ibanez RG2820): first file (sorted) of slow/metal, fast/rock_blues, slow/pop\n  dataset3 (Ibanez RG2820): pathetique_poly (polyphonic), quintfall (monophonic)\n pairs A same group / different performance, B cross technique, C cross guitar (see PAIRS below).\n signatures: for every reference clip r, pool = frozen clip order without clips of the same guitar as r;\n   signature clips for N = [pool[int((k + 0.5) * len(pool) / N)] for k in range(N)], N in (3, 5, 10).\n",
+ "clips": [
+  {
+   "id": "LP_Lick2_MN",
+   "group": "muted",
+   "guitar": "Gibson Les Paul",
+   "technique": "muted, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick2_MN.wav",
+   "slot": 2,
+   "sha256": "312320da9cd3162c780188647772ca6a0e9116263fb0876a5ac8bf2c48797157",
+   "bytes": 1911326,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.44,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "LP_Lick8_MN",
+   "group": "muted",
+   "guitar": "Gibson Les Paul",
+   "technique": "muted, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick8_MN.wav",
+   "slot": 8,
+   "sha256": "bc76dee59655a57344506bc5bf0300de8fc53d00163bdf4a89d225ab4deafdce",
+   "bytes": 1905834,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.4,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "LP_Lick5_KN",
+   "group": "picked",
+   "guitar": "Gibson Les Paul",
+   "technique": "picked, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick5_KN.wav",
+   "slot": 5,
+   "sha256": "9eb74f20cfd0815c72ad00f55d14610f2451e4ac244108206e021304aeb0ded1",
+   "bytes": 1158762,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 8.75,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "LP_Lick11_KN",
+   "group": "picked",
+   "guitar": "Gibson Les Paul",
+   "technique": "picked, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick11_KN.wav",
+   "slot": 11,
+   "sha256": "0fb7124c8a0f09af65db83cc1a7d67eee348f3a0b06bfc82b4eb842a4147ba23",
+   "bytes": 3207252,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 24.23
+  },
+  {
+   "id": "LP_Lick2_FN",
+   "group": "finger",
+   "guitar": "Gibson Les Paul",
+   "technique": "finger-style, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick2_FN.wav",
+   "slot": 2,
+   "sha256": "327e582b0cdaf5543b9b0a5eaed7d463cb7ace9aff473cd3a5406e84afdc60db",
+   "bytes": 1911326,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.44,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "LP_Lick4_KBSH",
+   "group": "lead",
+   "guitar": "Gibson Les Paul",
+   "technique": "picked, bending/slide/harmonics",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick4_KBSH.wav",
+   "slot": 4,
+   "sha256": "c863d4ed9dff85fa5ea0e639792eb22974fe97f94b88580d8b214c93d320a38f",
+   "bytes": 848790,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 6.41,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "LP_Lick5_KBVDN",
+   "group": "lead",
+   "guitar": "Gibson Les Paul",
+   "technique": "picked, bending/vibrato/dead notes",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_Lick5_KBVDN.wav",
+   "slot": 5,
+   "sha256": "141414b93a3dc5adf1698667358bc08075279ac1ed11f0a1388bcc29b1f71734",
+   "bytes": 1223198,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 9.24,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "LP_E_fret_0-20",
+   "group": "single",
+   "guitar": "Gibson Les Paul",
+   "technique": "single notes (plain), E string frets 0-20",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/LP_E_fret_0-20.wav",
+   "slot": null,
+   "sha256": "1cc3ddd099099a1be9ebfca05e2189cb19d48bd6d6897c7af904d24bab0854c9",
+   "bytes": 3144782,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 23.76,
+   "instrumentModel": "Gibson Les Paul",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_Lick2_MN",
+   "group": "muted",
+   "guitar": "Fender Stratocaster",
+   "technique": "muted, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick2_MN.wav",
+   "slot": 2,
+   "sha256": "ba2ac94079d212f6099455637a66bb0e8f70eec4c9777fb44e8c527166790eb0",
+   "bytes": 1862174,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.07,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_Lick8_MN",
+   "group": "muted",
+   "guitar": "Fender Stratocaster",
+   "technique": "muted, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick8_MN.wav",
+   "slot": 8,
+   "sha256": "436cfdf7b516aa04da1d7e0ecb05b992e584ef4bc3ca6395fa0897179c3b0385",
+   "bytes": 1914318,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.46,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_Lick5_KN",
+   "group": "picked",
+   "guitar": "Fender Stratocaster",
+   "technique": "picked, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick5_KN.wav",
+   "slot": 5,
+   "sha256": "c6efc9f393dc91751872736c7cb49d42f869b3061b90f0610b41abd19f6e18cd",
+   "bytes": 1174046,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 8.87,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_Lick11_KN",
+   "group": "picked",
+   "guitar": "Fender Stratocaster",
+   "technique": "picked, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick11_KN.wav",
+   "slot": 11,
+   "sha256": "6edd07b31805e5b07b01eecc9770953a0f7e33855377f2d0d94c2838aa978446",
+   "bytes": 3146018,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 23.77
+  },
+  {
+   "id": "FS_Lick2_FN",
+   "group": "finger",
+   "guitar": "Fender Stratocaster",
+   "technique": "finger-style, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick2_FN.wav",
+   "slot": 2,
+   "sha256": "e52f66c892ce8e95421e9b8b0abb3d744a95486e6764356f4d896b80b2c938f6",
+   "bytes": 1960478,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.81,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_Lick4_KBSH",
+   "group": "lead",
+   "guitar": "Fender Stratocaster",
+   "technique": "picked, bending/slide/harmonics",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick4_KBSH.wav",
+   "slot": 4,
+   "sha256": "de378b91fbb012be68f35d5e692593d77cbca0cc02812d53b3c73934eb2dc813",
+   "bytes": 1008794,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 7.62,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_Lick5_KBVDN",
+   "group": "lead",
+   "guitar": "Fender Stratocaster",
+   "technique": "picked, bending/vibrato/dead notes",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_Lick5_KBVDN.wav",
+   "slot": 5,
+   "sha256": "134abade4c48cd2af34c48f6c5715fd606c688470078e9912a208ace389eeff7",
+   "bytes": 1227690,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 9.27,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "FS_E_fret_0-20",
+   "group": "single",
+   "guitar": "Fender Stratocaster",
+   "technique": "single notes (plain), E string frets 0-20",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/FS_E_fret_0-20.wav",
+   "slot": null,
+   "sha256": "123b748766a562a2eab1a43f90d9c4cd13e6ef2ac83d6099328d43a7a08b605e",
+   "bytes": 3438050,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 25.98,
+   "instrumentModel": "Fender Stratocaster",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_Lick2_MN",
+   "group": "muted",
+   "guitar": "Aristides 010",
+   "technique": "muted, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick2_MN.wav",
+   "slot": 2,
+   "sha256": "2c3a597cbda8f2179fd6fa0a679fc1da9dfcc10fdd889420843a3bec0623d922",
+   "bytes": 1960478,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.81,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_Lick8_MN",
+   "group": "muted",
+   "guitar": "Aristides 010",
+   "technique": "muted, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick8_MN.wav",
+   "slot": 8,
+   "sha256": "93f506a7441fdb973aa4ff0c31b42de984935a2ee1e4f0c6fc3e67bfcd09a7c3",
+   "bytes": 1963630,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.83,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_Lick5_KN",
+   "group": "picked",
+   "guitar": "Aristides 010",
+   "technique": "picked, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick5_KN.wav",
+   "slot": 5,
+   "sha256": "b5b95fd17f6828cf0f8936945744227d5772d97a97877f83c011f905af16ba59",
+   "bytes": 1174046,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 8.87,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_Lick11_KN",
+   "group": "picked",
+   "guitar": "Aristides 010",
+   "technique": "picked, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick11_KN.wav",
+   "slot": 11,
+   "sha256": "36d1301a469a4421f8c0e099369cbbba8ccf42d4c00c307124741c0ae64bb333",
+   "bytes": 3232040,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 24.42
+  },
+  {
+   "id": "AR_Lick2_FN",
+   "group": "finger",
+   "guitar": "Aristides 010",
+   "technique": "finger-style, normal",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick2_FN.wav",
+   "slot": 2,
+   "sha256": "9499976a2934f9d2540dba4d3c2ac935415654e8f502e52b72a6d887920ab7a2",
+   "bytes": 1960478,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 14.81,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_Lick4_KBSH",
+   "group": "lead",
+   "guitar": "Aristides 010",
+   "technique": "picked, bending/slide/harmonics",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick4_KBSH.wav",
+   "slot": 4,
+   "sha256": "0be1e5ab678b91b82bf4ce693c1ad94c678551ee8e92076d2c1629d459e60cf0",
+   "bytes": 977438,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 7.38,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_Lick5_KBVDN",
+   "group": "lead",
+   "guitar": "Aristides 010",
+   "technique": "picked, bending/vibrato/dead notes",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_Lick5_KBVDN.wav",
+   "slot": 5,
+   "sha256": "b587336d386a33d623f04251b2f2bae8634ccd10f10d51b76de1c05a350e2905",
+   "bytes": 1065204,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 8.04,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "AR_E_fret_0-20",
+   "group": "single",
+   "guitar": "Aristides 010",
+   "technique": "single notes (plain), E string frets 0-20",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset2/audio/AR_E_fret_0-20.wav",
+   "slot": null,
+   "sha256": "37ae5c5f099289b127e7d5bf33afe97237702b9e5e7d4ee1517137cdecf17097",
+   "bytes": 3142862,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 24,
+   "seconds": 23.75,
+   "instrumentModel": "Aristides 010",
+   "pickUpSetting": "unknown",
+   "recordingArtist": "Christian Kehling"
+  },
+  {
+   "id": "D4_Career_slow_metal_metal_1_160BPM",
+   "group": "poly",
+   "guitar": "Career SG",
+   "technique": "polyphonic piece, metal slow",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset4/Career SG/slow/metal/audio/metal_1_160BPM.wav",
+   "slot": "slow/metal",
+   "sha256": "314e2d90aadef15875fee1563814b64c07ee1515d86717b8b87213f844391681",
+   "bytes": 1588336,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 18.0
+  },
+  {
+   "id": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "group": "poly",
+   "guitar": "Career SG",
+   "technique": "polyphonic piece, rock_blues fast",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset4/Career SG/fast/rock_blues/audio/rock_1_120BPM.wav",
+   "slot": "fast/rock_blues",
+   "sha256": "43b4806d5485f91ae82ca9dc41dea1e87f31a35754d3a58f86108496d40d6440",
+   "bytes": 2117536,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 24.0
+  },
+  {
+   "id": "D4_Career_slow_pop_pop_1_130BPM",
+   "group": "poly",
+   "guitar": "Career SG",
+   "technique": "polyphonic piece, pop slow",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset4/Career SG/slow/pop/audio/pop_1_130BPM.wav",
+   "slot": "slow/pop",
+   "sha256": "eeddd5db22947c0f9e0801945544cdc6b41d0b49986afe2c51691b260eaf23b1",
+   "bytes": 2443198,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 27.69
+  },
+  {
+   "id": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "technique": "polyphonic piece, metal slow",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset4/Ibanez 2820/slow/metal/audio/metal_1_160BPM.wav",
+   "slot": "slow/metal",
+   "sha256": "71649cf3046d6555baac88fdc302cb00eac1b52da520fc41f16813af77d32112",
+   "bytes": 1588336,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 18.0
+  },
+  {
+   "id": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "technique": "polyphonic piece, rock_blues fast",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset4/Ibanez 2820/fast/rock_blues/audio/rock_1_100BPM.wav",
+   "slot": "fast/rock_blues",
+   "sha256": "1b19165da4b00126f458327fe7e944a3957c376f58cd0d54c8dd43a2a9833e0f",
+   "bytes": 2117536,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 24.0
+  },
+  {
+   "id": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "technique": "polyphonic piece, pop slow",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset4/Ibanez 2820/slow/pop/audio/pop_1_130BPM.wav",
+   "slot": "slow/pop",
+   "sha256": "1e40493c9829fcf7ce3b51013d4ff229d8ecb2379d5c044bfb53033886f20d67",
+   "bytes": 2443198,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 27.69
+  },
+  {
+   "id": "D3_pathetique_poly",
+   "group": "poly",
+   "guitar": "Ibanez RG2820",
+   "technique": "polyphonic piece (dataset 3)",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset3/audio/pathetique_poly.wav",
+   "slot": "d3",
+   "sha256": "f4611abb9be67b67a4cf80c5e0225bb4a129e12a5c4278d90b648b92b922d854",
+   "bytes": 2687264,
+   "rate": 44100,
+   "channels": 2,
+   "bits": 16,
+   "seconds": 15.23,
+   "instrumentModel": "Ibanez RG 2820",
+   "pickUpSetting": "neck",
+   "recordingArtist": "Arndt Eppler"
+  },
+  {
+   "id": "D3_quintfall",
+   "group": "mono",
+   "guitar": "Ibanez RG2820",
+   "technique": "monophonic piece (dataset 3)",
+   "zip": "IDMT-SMT-GUITAR_V2/dataset3/audio/quintfall.wav",
+   "slot": "d3",
+   "sha256": "0863de6b236f12d1d2d82131132939d6bbe2bc8f126e7c2aadb71d962c58586b",
+   "bytes": 1654486,
+   "rate": 44100,
+   "channels": 1,
+   "bits": 16,
+   "seconds": 18.75,
+   "instrumentModel": "Ibanez RG 2820",
+   "pickUpSetting": "middle",
+   "recordingArtist": "Arndt Eppler"
+  }
+ ],
+ "pairs": [
+  {
+   "cond": "A",
+   "group": "muted",
+   "ref": "LP_Lick2_MN",
+   "cand": "LP_Lick8_MN"
+  },
+  {
+   "cond": "A",
+   "group": "muted",
+   "ref": "LP_Lick8_MN",
+   "cand": "LP_Lick2_MN"
+  },
+  {
+   "cond": "A",
+   "group": "picked",
+   "ref": "LP_Lick5_KN",
+   "cand": "LP_Lick11_KN"
+  },
+  {
+   "cond": "A",
+   "group": "picked",
+   "ref": "LP_Lick11_KN",
+   "cand": "LP_Lick5_KN"
+  },
+  {
+   "cond": "A",
+   "group": "lead",
+   "ref": "LP_Lick4_KBSH",
+   "cand": "LP_Lick5_KBVDN"
+  },
+  {
+   "cond": "A",
+   "group": "lead",
+   "ref": "LP_Lick5_KBVDN",
+   "cand": "LP_Lick4_KBSH"
+  },
+  {
+   "cond": "A",
+   "group": "muted",
+   "ref": "FS_Lick2_MN",
+   "cand": "FS_Lick8_MN"
+  },
+  {
+   "cond": "A",
+   "group": "muted",
+   "ref": "FS_Lick8_MN",
+   "cand": "FS_Lick2_MN"
+  },
+  {
+   "cond": "A",
+   "group": "picked",
+   "ref": "FS_Lick5_KN",
+   "cand": "FS_Lick11_KN"
+  },
+  {
+   "cond": "A",
+   "group": "picked",
+   "ref": "FS_Lick11_KN",
+   "cand": "FS_Lick5_KN"
+  },
+  {
+   "cond": "A",
+   "group": "lead",
+   "ref": "FS_Lick4_KBSH",
+   "cand": "FS_Lick5_KBVDN"
+  },
+  {
+   "cond": "A",
+   "group": "lead",
+   "ref": "FS_Lick5_KBVDN",
+   "cand": "FS_Lick4_KBSH"
+  },
+  {
+   "cond": "A",
+   "group": "muted",
+   "ref": "AR_Lick2_MN",
+   "cand": "AR_Lick8_MN"
+  },
+  {
+   "cond": "A",
+   "group": "muted",
+   "ref": "AR_Lick8_MN",
+   "cand": "AR_Lick2_MN"
+  },
+  {
+   "cond": "A",
+   "group": "picked",
+   "ref": "AR_Lick5_KN",
+   "cand": "AR_Lick11_KN"
+  },
+  {
+   "cond": "A",
+   "group": "picked",
+   "ref": "AR_Lick11_KN",
+   "cand": "AR_Lick5_KN"
+  },
+  {
+   "cond": "A",
+   "group": "lead",
+   "ref": "AR_Lick4_KBSH",
+   "cand": "AR_Lick5_KBVDN"
+  },
+  {
+   "cond": "A",
+   "group": "lead",
+   "ref": "AR_Lick5_KBVDN",
+   "cand": "AR_Lick4_KBSH"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM",
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM",
+   "cand": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "cand": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "cand": "D4_Career_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM",
+   "cand": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM",
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "A",
+   "group": "poly",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cond": "B",
+   "group": "single->muted",
+   "ref": "LP_E_fret_0-20",
+   "cand": "LP_Lick2_MN"
+  },
+  {
+   "cond": "B",
+   "group": "single->picked",
+   "ref": "LP_E_fret_0-20",
+   "cand": "LP_Lick5_KN"
+  },
+  {
+   "cond": "B",
+   "group": "single->lead",
+   "ref": "LP_E_fret_0-20",
+   "cand": "LP_Lick4_KBSH"
+  },
+  {
+   "cond": "B",
+   "group": "finger->picked",
+   "ref": "LP_Lick2_FN",
+   "cand": "LP_Lick5_KN"
+  },
+  {
+   "cond": "B",
+   "group": "muted->picked",
+   "ref": "LP_Lick2_MN",
+   "cand": "LP_Lick11_KN"
+  },
+  {
+   "cond": "B",
+   "group": "single->muted",
+   "ref": "FS_E_fret_0-20",
+   "cand": "FS_Lick2_MN"
+  },
+  {
+   "cond": "B",
+   "group": "single->picked",
+   "ref": "FS_E_fret_0-20",
+   "cand": "FS_Lick5_KN"
+  },
+  {
+   "cond": "B",
+   "group": "single->lead",
+   "ref": "FS_E_fret_0-20",
+   "cand": "FS_Lick4_KBSH"
+  },
+  {
+   "cond": "B",
+   "group": "finger->picked",
+   "ref": "FS_Lick2_FN",
+   "cand": "FS_Lick5_KN"
+  },
+  {
+   "cond": "B",
+   "group": "muted->picked",
+   "ref": "FS_Lick2_MN",
+   "cand": "FS_Lick11_KN"
+  },
+  {
+   "cond": "B",
+   "group": "single->muted",
+   "ref": "AR_E_fret_0-20",
+   "cand": "AR_Lick2_MN"
+  },
+  {
+   "cond": "B",
+   "group": "single->picked",
+   "ref": "AR_E_fret_0-20",
+   "cand": "AR_Lick5_KN"
+  },
+  {
+   "cond": "B",
+   "group": "single->lead",
+   "ref": "AR_E_fret_0-20",
+   "cand": "AR_Lick4_KBSH"
+  },
+  {
+   "cond": "B",
+   "group": "finger->picked",
+   "ref": "AR_Lick2_FN",
+   "cand": "AR_Lick5_KN"
+  },
+  {
+   "cond": "B",
+   "group": "muted->picked",
+   "ref": "AR_Lick2_MN",
+   "cand": "AR_Lick11_KN"
+  },
+  {
+   "cond": "B",
+   "group": "mono->poly",
+   "ref": "D3_quintfall",
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "B",
+   "group": "mono->poly",
+   "ref": "D3_quintfall",
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cond": "B",
+   "group": "mono->poly",
+   "ref": "D3_quintfall",
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cond": "B",
+   "group": "mono->poly",
+   "ref": "D3_quintfall",
+   "cand": "D3_pathetique_poly"
+  },
+  {
+   "cond": "C",
+   "group": "muted",
+   "ref": "LP_Lick2_MN",
+   "cand": "FS_Lick2_MN"
+  },
+  {
+   "cond": "C",
+   "group": "muted",
+   "ref": "LP_Lick2_MN",
+   "cand": "AR_Lick2_MN"
+  },
+  {
+   "cond": "C",
+   "group": "muted",
+   "ref": "FS_Lick2_MN",
+   "cand": "LP_Lick2_MN"
+  },
+  {
+   "cond": "C",
+   "group": "muted",
+   "ref": "FS_Lick2_MN",
+   "cand": "AR_Lick2_MN"
+  },
+  {
+   "cond": "C",
+   "group": "muted",
+   "ref": "AR_Lick2_MN",
+   "cand": "LP_Lick2_MN"
+  },
+  {
+   "cond": "C",
+   "group": "muted",
+   "ref": "AR_Lick2_MN",
+   "cand": "FS_Lick2_MN"
+  },
+  {
+   "cond": "C",
+   "group": "picked",
+   "ref": "LP_Lick5_KN",
+   "cand": "FS_Lick5_KN"
+  },
+  {
+   "cond": "C",
+   "group": "picked",
+   "ref": "LP_Lick5_KN",
+   "cand": "AR_Lick5_KN"
+  },
+  {
+   "cond": "C",
+   "group": "picked",
+   "ref": "FS_Lick5_KN",
+   "cand": "LP_Lick5_KN"
+  },
+  {
+   "cond": "C",
+   "group": "picked",
+   "ref": "FS_Lick5_KN",
+   "cand": "AR_Lick5_KN"
+  },
+  {
+   "cond": "C",
+   "group": "picked",
+   "ref": "AR_Lick5_KN",
+   "cand": "LP_Lick5_KN"
+  },
+  {
+   "cond": "C",
+   "group": "picked",
+   "ref": "AR_Lick5_KN",
+   "cand": "FS_Lick5_KN"
+  },
+  {
+   "cond": "C",
+   "group": "lead",
+   "ref": "LP_Lick4_KBSH",
+   "cand": "FS_Lick4_KBSH"
+  },
+  {
+   "cond": "C",
+   "group": "lead",
+   "ref": "LP_Lick4_KBSH",
+   "cand": "AR_Lick4_KBSH"
+  },
+  {
+   "cond": "C",
+   "group": "lead",
+   "ref": "FS_Lick4_KBSH",
+   "cand": "LP_Lick4_KBSH"
+  },
+  {
+   "cond": "C",
+   "group": "lead",
+   "ref": "FS_Lick4_KBSH",
+   "cand": "AR_Lick4_KBSH"
+  },
+  {
+   "cond": "C",
+   "group": "lead",
+   "ref": "AR_Lick4_KBSH",
+   "cand": "LP_Lick4_KBSH"
+  },
+  {
+   "cond": "C",
+   "group": "lead",
+   "ref": "AR_Lick4_KBSH",
+   "cand": "FS_Lick4_KBSH"
+  },
+  {
+   "cond": "C",
+   "group": "poly",
+   "ref": "D4_Career_slow_metal_metal_1_160BPM",
+   "cand": "D4_Ibanez_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "C",
+   "group": "poly",
+   "ref": "D4_Ibanez_slow_metal_metal_1_160BPM",
+   "cand": "D4_Career_slow_metal_metal_1_160BPM"
+  },
+  {
+   "cond": "C",
+   "group": "poly",
+   "ref": "D4_Career_fast_rock_blues_rock_1_120BPM",
+   "cand": "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+  },
+  {
+   "cond": "C",
+   "group": "poly",
+   "ref": "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+   "cand": "D4_Career_fast_rock_blues_rock_1_120BPM"
+  },
+  {
+   "cond": "C",
+   "group": "poly",
+   "ref": "D4_Career_slow_pop_pop_1_130BPM",
+   "cand": "D4_Ibanez_slow_pop_pop_1_130BPM"
+  },
+  {
+   "cond": "C",
+   "group": "poly",
+   "ref": "D4_Ibanez_slow_pop_pop_1_130BPM",
+   "cand": "D4_Career_slow_pop_pop_1_130BPM"
+  }
+ ],
+ "signatures": {
+  "AR_E_fret_0-20": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick11_KN": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick2_FN": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick2_MN": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick4_KBSH": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick5_KBVDN": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick5_KN": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "AR_Lick8_MN": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "FS_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "D3_quintfall": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KBVDN"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KN",
+    "D4_Career_slow_metal_metal_1_160BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick8_MN",
+    "FS_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick8_MN",
+    "AR_Lick2_FN",
+    "AR_Lick5_KBVDN",
+    "D4_Career_fast_rock_blues_rock_1_120BPM"
+   ]
+  },
+  "D4_Career_fast_rock_blues_rock_1_120BPM": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "D4_Ibanez_slow_metal_metal_1_160BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_E_fret_0-20",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "D4_Ibanez_slow_metal_metal_1_160BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "D4_Career_slow_metal_metal_1_160BPM": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "D4_Ibanez_slow_metal_metal_1_160BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_E_fret_0-20",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "D4_Ibanez_slow_metal_metal_1_160BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "D4_Career_slow_pop_pop_1_130BPM": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "D4_Ibanez_slow_metal_metal_1_160BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_E_fret_0-20",
+    "FS_Lick5_KN",
+    "FS_Lick4_KBSH",
+    "FS_E_fret_0-20",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "D4_Ibanez_slow_metal_metal_1_160BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "D4_Ibanez_fast_rock_blues_rock_1_100BPM": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KBVDN"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KN",
+    "D4_Career_slow_metal_metal_1_160BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick8_MN",
+    "FS_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick8_MN",
+    "AR_Lick2_FN",
+    "AR_Lick5_KBVDN",
+    "D4_Career_fast_rock_blues_rock_1_120BPM"
+   ]
+  },
+  "D4_Ibanez_slow_metal_metal_1_160BPM": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KBVDN"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KN",
+    "D4_Career_slow_metal_metal_1_160BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick8_MN",
+    "FS_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick8_MN",
+    "AR_Lick2_FN",
+    "AR_Lick5_KBVDN",
+    "D4_Career_fast_rock_blues_rock_1_120BPM"
+   ]
+  },
+  "D4_Ibanez_slow_pop_pop_1_130BPM": {
+   "3": [
+    "LP_Lick2_FN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KBVDN"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "FS_Lick2_MN",
+    "FS_Lick4_KBSH",
+    "AR_Lick5_KN",
+    "D4_Career_slow_metal_metal_1_160BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick2_FN",
+    "LP_Lick5_KBVDN",
+    "FS_Lick8_MN",
+    "FS_Lick2_FN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick8_MN",
+    "AR_Lick2_FN",
+    "AR_Lick5_KBVDN",
+    "D4_Career_fast_rock_blues_rock_1_120BPM"
+   ]
+  },
+  "FS_E_fret_0-20": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick11_KN": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick2_FN": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick2_MN": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick4_KBSH": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick5_KBVDN": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick5_KN": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "FS_Lick8_MN": {
+   "3": [
+    "LP_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "LP_Lick5_KN",
+    "LP_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "LP_Lick8_MN",
+    "LP_Lick11_KN",
+    "LP_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_E_fret_0-20": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick11_KN": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick2_FN": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick2_MN": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick4_KBSH": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick5_KBVDN": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick5_KN": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  },
+  "LP_Lick8_MN": {
+   "3": [
+    "FS_Lick2_FN",
+    "AR_Lick2_FN",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM"
+   ],
+   "5": [
+    "FS_Lick5_KN",
+    "FS_E_fret_0-20",
+    "AR_Lick2_FN",
+    "D4_Career_slow_metal_metal_1_160BPM",
+    "D4_Ibanez_slow_pop_pop_1_130BPM"
+   ],
+   "10": [
+    "FS_Lick8_MN",
+    "FS_Lick11_KN",
+    "FS_Lick5_KBVDN",
+    "AR_Lick2_MN",
+    "AR_Lick5_KN",
+    "AR_Lick4_KBSH",
+    "AR_E_fret_0-20",
+    "D4_Career_slow_pop_pop_1_130BPM",
+    "D4_Ibanez_fast_rock_blues_rock_1_100BPM",
+    "D3_pathetique_poly"
+   ]
+  }
+ }
+}

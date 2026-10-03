@@ -1,0 +1,2270 @@
+{
+ "length": {
+  "rhythm": {
+   "SPAN": {
+    "criteria": {
+     "distSpearman": 0.983399209486166,
+     "a": true,
+     "b": false,
+     "failingFeatures": [
+      "tone.attackMs",
+      "tone.transientPeakToBodyDb"
+     ],
+     "maxDeltaComposite": 0.002539288138052098,
+     "c": true,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [],
+     "maxDeltaComposite3": 0.003382525695362376
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.6413797475377123,
+      "maxAbs": 2.853282160069739,
+      "medRel": 0.0004089135025295579,
+      "maxRel": 0.0016055027118752451
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0,
+      "maxAbs": 23.4375,
+      "medRel": 0.0,
+      "maxRel": 0.011494252873563218
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.2216470795664236,
+      "maxAbs": 2.294956502227251,
+      "medRel": 0.00019094223736974668,
+      "maxRel": 0.0009687256883977558
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00019271507261509058,
+      "maxAbs": 0.0011397033594003347,
+      "medRel": 0.001388945995547636,
+      "maxRel": 0.004416421697201229
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00030970088033558524,
+      "maxAbs": 0.0008213411456888253,
+      "medRel": 0.0013677219446571174,
+      "maxRel": 0.003673151628093495
+     },
+     "tone.band.MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00010448154819578392,
+      "maxAbs": 0.00047295393669022356,
+      "medRel": 0.0003986730486975383,
+      "maxRel": 0.0015975150156739757
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00011462359616196127,
+      "maxAbs": 0.0005630749371815513,
+      "medRel": 0.0006188245903464005,
+      "maxRel": 0.0018175399535381568
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 5.802440482870902e-05,
+      "maxAbs": 0.00016724172738202814,
+      "medRel": 0.00094708951419348,
+      "maxRel": 0.0019162791516209529
+     },
+     "tone.crestDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0037992689823767023,
+      "maxAbs": 0.007471785509878259,
+      "medRel": 0.0003465193236774345,
+      "maxRel": 0.0005843068382814718
+     },
+     "tone.attackMs": {
+      "spearman": 0.8666666666666665,
+      "medAbs": 3.666666666666667,
+      "maxAbs": 17.999999999999993,
+      "medRel": 0.1688804554079698,
+      "maxRel": 0.40298507462686545
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.880395210964767,
+      "maxAbs": 16.286204438780373,
+      "medRel": 0.07873905482721633,
+      "maxRel": 0.5325749449965561
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.8545454545454544,
+      "medAbs": 0.7069380532008118,
+      "maxAbs": 3.4732071902054127,
+      "medRel": 0.11832126036887818,
+      "maxRel": 0.6694835506429995
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.06434373904137303,
+      "maxAbs": 0.14731047524429997,
+      "medRel": 0.005363698938410161,
+      "maxRel": 0.050080894564942524
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00025351358987021205,
+      "maxAbs": 0.00065556168404865,
+      "medRel": 0.0026426745470398425,
+      "maxRel": 0.022073311468267725
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.0023735570075298362,
+      "maxAbs": 0.007895869422208435,
+      "medRel": 0.0003468859575139354,
+      "maxRel": 0.0015628287455366845
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0038142230407194333,
+      "maxAbs": 0.010529088380351936,
+      "medRel": 0.00032405580677897865,
+      "maxRel": 0.001060894579960211
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.056935864714139583,
+      "maxAbs": 0.17075412104424004,
+      "medRel": 0.003885540120742468,
+      "maxRel": 0.13834834934703796
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0003134925082916573,
+      "maxAbs": 0.002539288138052098,
+      "medRel": 0.0004628484925057905,
+      "maxRel": 0.010074304657166178
+     }
+    },
+    "seconds": 19.871354166666666
+   },
+   "T15": {
+    "criteria": {
+     "distSpearman": 0.9783926218708826,
+     "a": true,
+     "b": false,
+     "failingFeatures": [
+      "tone.attackMs",
+      "tone.transientPeakToBodyDb"
+     ],
+     "maxDeltaComposite": 0.009621611413879128,
+     "c": true,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [],
+     "maxDeltaComposite3": 0.014158035476069641
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 38.27049479680528,
+      "maxAbs": 76.9034532980063,
+      "medRel": 0.0325802861423911,
+      "maxRel": 0.07276829985098698
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9969650916353059,
+      "medAbs": 46.875,
+      "maxAbs": 117.1875,
+      "medRel": 0.028289473684210528,
+      "maxRel": 0.05747126436781609
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 35.76532030226349,
+      "maxAbs": 44.776531644429724,
+      "medRel": 0.015589753663358592,
+      "maxRel": 0.030869657945399205
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.009831382621231455,
+      "maxAbs": 0.030814596552698248,
+      "medRel": 0.05176200759253906,
+      "maxRel": 0.09691007282875608
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0063002394454539715,
+      "maxAbs": 0.009969706535828404,
+      "medRel": 0.03073271233452976,
+      "maxRel": 0.06184131446857975
+     },
+     "tone.band.MID": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.006502478165998499,
+      "maxAbs": 0.023450021059998938,
+      "medRel": 0.020400906217303526,
+      "maxRel": 0.11087849673602257
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.006607121282931602,
+      "maxAbs": 0.021887922331500637,
+      "medRel": 0.03415906866599118,
+      "maxRel": 0.10327711391319061
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.002094766483142378,
+      "maxAbs": 0.007157776428250745,
+      "medRel": 0.047280903795924284,
+      "maxRel": 0.0882599575290185
+     },
+     "tone.crestDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.041170072934502144,
+      "maxAbs": 0.35253739505677295,
+      "medRel": 0.0034153553959157335,
+      "maxRel": 0.025560195469915507
+     },
+     "tone.attackMs": {
+      "spearman": 0.6,
+      "medAbs": 7.666666666666668,
+      "maxAbs": 19.333333333333336,
+      "medRel": 0.2712418300653594,
+      "maxRel": 0.467741935483871
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9030303030303028,
+      "medAbs": 2.397232126376747,
+      "maxAbs": 33.98443085092962,
+      "medRel": 0.3712024683032607,
+      "maxRel": 0.7416806194565214
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.8181818181818182,
+      "medAbs": 2.108444870931507,
+      "maxAbs": 6.169714338463894,
+      "medRel": 0.2786499832200907,
+      "maxRel": 0.727342108166765
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.09984763937283159,
+      "maxAbs": 0.4384538209539599,
+      "medRel": 0.018565360946397446,
+      "maxRel": 0.09319397048766487
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.0011272492426209618,
+      "maxAbs": 0.0049696536913146905,
+      "medRel": 0.012312579990784549,
+      "maxRel": 0.06470351875250435
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.11792147006100384,
+      "maxAbs": 0.4312866065316552,
+      "medRel": 0.018388207562137028,
+      "maxRel": 0.06455647264643596
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.26668325794482506,
+      "maxAbs": 0.6269557184931447,
+      "medRel": 0.025558409716178874,
+      "maxRel": 0.0825959301897055
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.6158874885820413,
+      "maxAbs": 0.883039080719012,
+      "medRel": 0.03294258647974325,
+      "maxRel": 0.2418230019707979
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.0037247836312385707,
+      "maxAbs": 0.009621611413879128,
+      "medRel": 0.009232185280186891,
+      "maxRel": 0.034441051703928895
+     }
+    },
+    "seconds": 15.5
+   },
+   "T10": {
+    "criteria": {
+     "distSpearman": 0.909090909090909,
+     "a": false,
+     "b": false,
+     "failingFeatures": [
+      "tone.centroidHz",
+      "tone.band.LOW",
+      "tone.band.MID",
+      "tone.band.HIGH_MID",
+      "tone.attackMs",
+      "tone.sat.hfGenerationDb"
+     ],
+     "maxDeltaComposite": 0.06310793342883103,
+     "c": false,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [
+      "tone.centroidHz",
+      "tone.band.LOW",
+      "tone.band.MID",
+      "tone.band.HIGH_MID",
+      "tone.sat.hfGenerationDb"
+     ],
+     "maxDeltaComposite3": 0.04857148629947794
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.8303030303030302,
+      "medAbs": 127.91590597553034,
+      "maxAbs": 559.5825717082421,
+      "medRel": 0.09645669248195801,
+      "maxRel": 0.5950978002508065
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9695302189773756,
+      "medAbs": 164.0625,
+      "maxAbs": 468.75,
+      "medRel": 0.07970356926799757,
+      "maxRel": 0.45
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 89.7354984416794,
+      "maxAbs": 213.40226631721953,
+      "medRel": 0.04266712500336967,
+      "maxRel": 0.21993163565136511
+     },
+     "tone.band.LOW": {
+      "spearman": 0.6484848484848483,
+      "medAbs": 0.015025524935435887,
+      "maxAbs": 0.21922747984879887,
+      "medRel": 0.09023827455838544,
+      "maxRel": 0.48007097937441534
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.03948867958614614,
+      "maxAbs": 0.09583393960159506,
+      "medRel": 0.18582670614107916,
+      "maxRel": 0.3748451999042236
+     },
+     "tone.band.MID": {
+      "spearman": 0.8545454545454544,
+      "medAbs": 0.025807956487438236,
+      "maxAbs": 0.14076143388938644,
+      "medRel": 0.08699371480903295,
+      "maxRel": 0.6144746867976647
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.8181818181818182,
+      "medAbs": 0.03556544808844833,
+      "maxAbs": 0.1774185808750457,
+      "medRel": 0.15238930511867474,
+      "maxRel": 0.9263470619685129
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9151515151515152,
+      "medAbs": 0.0042436150595072004,
+      "maxAbs": 0.027543316891555945,
+      "medRel": 0.08935975440697153,
+      "maxRel": 0.9416501609545096
+     },
+     "tone.crestDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.3329474005341799,
+      "maxAbs": 0.7798746619903412,
+      "medRel": 0.03903129091507833,
+      "maxRel": 0.060747433559523126
+     },
+     "tone.attackMs": {
+      "spearman": 0.6727272727272726,
+      "medAbs": 5.999999999999999,
+      "maxAbs": 28.000000000000004,
+      "medRel": 0.3504962779156328,
+      "maxRel": 0.782608695652174
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9151515151515152,
+      "medAbs": 1.5396749631987134,
+      "maxAbs": 27.538254997907288,
+      "medRel": 0.34248696458110955,
+      "maxRel": 1.7391703536078034
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9151515151515152,
+      "medAbs": 0.43034918379557574,
+      "maxAbs": 1.4072969616856241,
+      "medRel": 0.12852634767367427,
+      "maxRel": 0.31571614581655555
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.8014443095861123,
+      "maxAbs": 2.4682366250143914,
+      "medRel": 0.10019023239237182,
+      "maxRel": 0.28568326666065796
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.02082974139570007,
+      "maxAbs": 0.04195712305853655,
+      "medRel": 0.14733027453470385,
+      "maxRel": 0.2630377816090237
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.7939393939393938,
+      "medAbs": 2.137640715247897,
+      "maxAbs": 2.3565600851443316,
+      "medRel": 0.26700067612789746,
+      "maxRel": 0.4237552625735656
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.330550973825817,
+      "maxAbs": 1.0007304208983783,
+      "medRel": 0.03505906980612254,
+      "maxRel": 0.1255866607438141
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.6109143967513031,
+      "maxAbs": 1.665172588816425,
+      "medRel": 0.04045446052635658,
+      "maxRel": 0.5075989022728756
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.04067587812231438,
+      "maxAbs": 0.06310793342883103,
+      "medRel": 0.07551684299495794,
+      "maxRel": 0.09054264642139846
+     }
+    },
+    "seconds": 10.5
+   },
+   "T5": {
+    "criteria": {
+     "distSpearman": 0.8573122529644268,
+     "a": false,
+     "b": false,
+     "failingFeatures": [
+      "tone.rolloff85Hz",
+      "tone.band.MID",
+      "tone.band.HIGH_MID",
+      "tone.attackMs",
+      "tone.decayDbPerSec",
+      "tone.transientPeakToBodyDb",
+      "tone.envelopeRangeDb",
+      "tone.sat.hfGenerationDb",
+      "tone.sat.envelopeCompressionDb",
+      "tone.sat.composite"
+     ],
+     "maxDeltaComposite": 0.1306487722665961,
+     "c": false,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [
+      "tone.rolloff85Hz",
+      "tone.band.MID",
+      "tone.band.HIGH_MID",
+      "tone.decayDbPerSec",
+      "tone.envelopeRangeDb",
+      "tone.sat.hfGenerationDb",
+      "tone.sat.envelopeCompressionDb",
+      "tone.sat.composite"
+     ],
+     "maxDeltaComposite3": 0.2654755016028552
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 353.0089549945869,
+      "maxAbs": 660.4643987067092,
+      "medRel": 0.26840714934527987,
+      "maxRel": 0.6190273402035436
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.8545454545454544,
+      "medAbs": 691.40625,
+      "maxAbs": 1523.4375,
+      "medRel": 0.3515625,
+      "maxRel": 0.7926829268292683
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9151515151515152,
+      "medAbs": 266.27399880695543,
+      "maxAbs": 583.2726602568744,
+      "medRel": 0.15476502771899264,
+      "maxRel": 0.46466468917828396
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.09440909618639054,
+      "maxAbs": 0.2870110229280303,
+      "medRel": 0.3759547058707364,
+      "maxRel": 0.7702433029094526
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.08227323664591907,
+      "maxAbs": 0.1072177926728759,
+      "medRel": 0.3274372087812718,
+      "maxRel": 0.6614820911984942
+     },
+     "tone.band.MID": {
+      "spearman": 0.8909090909090909,
+      "medAbs": 0.06487043452376516,
+      "maxAbs": 0.09557041239709518,
+      "medRel": 0.23980130835023666,
+      "maxRel": 0.5586427737091195
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.6969696969696969,
+      "medAbs": 0.08637196190899395,
+      "maxAbs": 0.21407232090636227,
+      "medRel": 0.4227946514885944,
+      "maxRel": 0.8578663888854784
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.014169683868932914,
+      "maxAbs": 0.04924930419607004,
+      "medRel": 0.28419818681301157,
+      "maxRel": 0.7409522414686046
+     },
+     "tone.crestDb": {
+      "spearman": 0.9030303030303028,
+      "medAbs": 1.1642175507428174,
+      "maxAbs": 4.555910233530945,
+      "medRel": 0.1217799938116025,
+      "maxRel": 0.2616880303866582
+     },
+     "tone.attackMs": {
+      "spearman": 0.6687619998624351,
+      "medAbs": 19.333333333333332,
+      "maxAbs": 58.66666666666668,
+      "medRel": 0.5801282051282052,
+      "maxRel": 1.91304347826087
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.28484848484848485,
+      "medAbs": 5.5225172917286285,
+      "maxAbs": 60.48161256518006,
+      "medRel": 1.0055124876798733,
+      "maxRel": 5.335869811681799
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.6363636363636362,
+      "medAbs": 1.795393001243999,
+      "maxAbs": 7.749690669932943,
+      "medRel": 0.3332866392745761,
+      "maxRel": 0.7830895000647351
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.8303030303030302,
+      "medAbs": 1.732117558161864,
+      "maxAbs": 19.112743574632134,
+      "medRel": 0.4839066893906586,
+      "maxRel": 0.7300867700565545
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.06376498956862608,
+      "maxAbs": 0.12955031559883318,
+      "medRel": 0.5251540932147019,
+      "maxRel": 0.8155803994688436
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.7333333333333332,
+      "medAbs": 5.496519591068351,
+      "maxAbs": 6.090227515561876,
+      "medRel": 0.6751938117513275,
+      "maxRel": 1.091862721456362
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9030303030303028,
+      "medAbs": 3.7013789394267693,
+      "maxAbs": 4.610106754684843,
+      "medRel": 0.3624738348566493,
+      "maxRel": 0.6011270850526103
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.8303030303030302,
+      "medAbs": 16.701551647902008,
+      "maxAbs": 18.40709182197985,
+      "medRel": 0.7173330885894418,
+      "maxRel": 0.8719780280264644
+     },
+     "tone.sat.composite": {
+      "spearman": 0.8909090909090909,
+      "medAbs": 0.10349514022499373,
+      "maxAbs": 0.1306487722665961,
+      "medRel": 0.16491991463724864,
+      "maxRel": 0.4340213915017227
+     }
+    },
+    "seconds": 5.5
+   }
+  },
+  "lead": {
+   "SPAN": {
+    "criteria": {
+     "distSpearman": 0.9895915678524374,
+     "a": true,
+     "b": false,
+     "failingFeatures": [
+      "tone.attackMs"
+     ],
+     "maxDeltaComposite": 0.0014003995428065186,
+     "c": true,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [],
+     "maxDeltaComposite3": 0.0018660123384033334
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.2541369646915541,
+      "maxAbs": 0.6200099632962974,
+      "medRel": 0.0002432482090553716,
+      "maxRel": 0.0005510743892115139
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 1.0,
+      "medAbs": 0.0,
+      "maxAbs": 0.0,
+      "medRel": 0.0,
+      "maxRel": 0.0
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.12873687666035494,
+      "maxAbs": 0.6967547909243876,
+      "medRel": 9.311732121861164e-05,
+      "maxRel": 0.00031345979799276235
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 1.6086741820922623e-05,
+      "maxAbs": 5.472684487112245e-05,
+      "medRel": 5.1449519883937036e-05,
+      "maxRel": 0.00028397506804266645
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00017348262314799412,
+      "maxAbs": 0.0003497911959103872,
+      "medRel": 0.0004247727301927665,
+      "maxRel": 0.001343197161576252
+     },
+     "tone.band.MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 8.112879136051854e-05,
+      "maxAbs": 0.0002085655073851833,
+      "medRel": 0.0004145810078283131,
+      "maxRel": 0.0008945742637974656
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 3.808727964412645e-05,
+      "maxAbs": 0.00014784147099947131,
+      "medRel": 0.0003096735547903037,
+      "maxRel": 0.0007017322633863578
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 1.4235480355690583e-05,
+      "maxAbs": 4.031302062049158e-05,
+      "medRel": 0.00030833616121698733,
+      "maxRel": 0.0007845146100576543
+     },
+     "tone.crestDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0010567031033374974,
+      "maxAbs": 0.002058085862966408,
+      "medRel": 0.00011400576574489377,
+      "maxRel": 0.00015710772500441157
+     },
+     "tone.attackMs": {
+      "spearman": 0.6969696969696969,
+      "medAbs": 2.6666666666666647,
+      "maxAbs": 10.666666666666666,
+      "medRel": 0.17142857142857143,
+      "maxRel": 0.7272727272727273
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.3532555831614683,
+      "maxAbs": 4.313435337374411,
+      "medRel": 0.3240546189116792,
+      "maxRel": 5.794850277319652
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.03920292623988919,
+      "maxAbs": 0.21681295063685013,
+      "medRel": 0.024337408245910783,
+      "maxRel": 0.09550434666842206
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.018958131448555626,
+      "maxAbs": 0.10978274065987037,
+      "medRel": 0.0034082491927789034,
+      "maxRel": 0.009733679382302967
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 6.824626141636869e-05,
+      "maxAbs": 0.000437462179843251,
+      "medRel": 0.0007142153879679014,
+      "maxRel": 0.0051105474201558945
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0013481325022283164,
+      "maxAbs": 0.003183687114576586,
+      "medRel": 0.0006610695350664889,
+      "maxRel": 1.5330188340684037
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0013415243328704918,
+      "maxAbs": 0.003087475749005364,
+      "medRel": 0.0001213294021249793,
+      "maxRel": 0.00030131493826076466
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.028554394427168006,
+      "maxAbs": 0.0952223946503743,
+      "medRel": 0.002085151849047115,
+      "maxRel": 0.03200527930820085
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 4.412256769237288e-05,
+      "maxAbs": 0.0014003995428065186,
+      "medRel": 0.00012542609292334528,
+      "maxRel": 0.0030488146324496074
+     }
+    },
+    "seconds": 23.561229166666667
+   },
+   "T15": {
+    "criteria": {
+     "distSpearman": 0.9745718050065876,
+     "a": true,
+     "b": false,
+     "failingFeatures": [
+      "tone.attackMs"
+     ],
+     "maxDeltaComposite": 0.01078701135082466,
+     "c": true,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [],
+     "maxDeltaComposite3": 0.018684886280440738
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 48.31572875373263,
+      "maxAbs": 101.27207043973658,
+      "medRel": 0.0432555065254277,
+      "maxRel": 0.06249762467616457
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9694234932794651,
+      "medAbs": 35.15625,
+      "maxAbs": 234.375,
+      "medRel": 0.027291105121293797,
+      "maxRel": 0.07936507936507936
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 43.28231886529295,
+      "maxAbs": 72.74965617204475,
+      "medRel": 0.02999136592481713,
+      "maxRel": 0.05272318549082623
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.022914073174248484,
+      "maxAbs": 0.060964336648740264,
+      "medRel": 0.09717630307633066,
+      "maxRel": 0.2660775884799742
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.015458308611538393,
+      "maxAbs": 0.0397155867936036,
+      "medRel": 0.05282889306724717,
+      "maxRel": 0.1596357045251448
+     },
+     "tone.band.MID": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.02196751590557882,
+      "maxAbs": 0.03270539834117403,
+      "medRel": 0.09801253891090764,
+      "maxRel": 0.2152678283859492
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.007358204189306217,
+      "maxAbs": 0.018234012555154805,
+      "medRel": 0.046913155151962725,
+      "maxRel": 0.11706685417584202
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9151515151515152,
+      "medAbs": 0.001687903995443437,
+      "maxAbs": 0.009740449500156914,
+      "medRel": 0.056010677191672104,
+      "maxRel": 0.2581561011320082
+     },
+     "tone.crestDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.14835031804642806,
+      "maxAbs": 0.48108534263676717,
+      "medRel": 0.011605699543746023,
+      "maxRel": 0.03198538267474363
+     },
+     "tone.attackMs": {
+      "spearman": 0.16413449679361744,
+      "medAbs": 3.6666666666666634,
+      "maxAbs": 26.666666666666668,
+      "medRel": 0.2788461538461537,
+      "maxRel": 2.5
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.6736971144281725,
+      "maxAbs": 2.900669904458052,
+      "medRel": 0.6627632979853859,
+      "maxRel": 13.019426561786124
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9030303030303028,
+      "medAbs": 0.2798156268478209,
+      "maxAbs": 0.6605279042713263,
+      "medRel": 0.1583708882813078,
+      "maxRel": 0.3488725679727811
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.17254218875129723,
+      "maxAbs": 0.6685772059348984,
+      "medRel": 0.02556518953161226,
+      "maxRel": 0.09321756721418238
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.0010556811941217336,
+      "maxAbs": 0.008120488334448672,
+      "medRel": 0.012335572192846995,
+      "maxRel": 0.10526026978430371
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.6783295237416931,
+      "maxAbs": 0.7937659165787139,
+      "medRel": 0.20720940334854476,
+      "maxRel": 339.15227359759905
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.5506794321815134,
+      "maxAbs": 0.8198684905412481,
+      "medRel": 0.04957889379132782,
+      "maxRel": 0.08730531973809673
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.18638917593043125,
+      "maxAbs": 0.4207393922002609,
+      "medRel": 0.01888168063666261,
+      "maxRel": 0.1295111573303547
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.0014233135131170999,
+      "maxAbs": 0.01078701135082466,
+      "medRel": 0.0059566924419363265,
+      "maxRel": 0.023484439291435868
+     }
+    },
+    "seconds": 15.5
+   },
+   "T10": {
+    "criteria": {
+     "distSpearman": 0.9550724637681158,
+     "a": true,
+     "b": false,
+     "failingFeatures": [
+      "tone.band.LOW",
+      "tone.attackMs"
+     ],
+     "maxDeltaComposite": 0.07630543583482957,
+     "c": false,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [
+      "tone.band.LOW"
+     ],
+     "maxDeltaComposite3": 0.08453838988608825
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 23.94087793780932,
+      "maxAbs": 302.8103024340703,
+      "medRel": 0.02248609074552193,
+      "maxRel": 0.1953292923463844
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9969465577574308,
+      "medAbs": 46.875,
+      "maxAbs": 187.5,
+      "medRel": 0.02800839339476325,
+      "maxRel": 0.12698412698412698
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 33.2896996483658,
+      "maxAbs": 127.10376826764877,
+      "medRel": 0.02357190909374812,
+      "maxRel": 0.15758774351933133
+     },
+     "tone.band.LOW": {
+      "spearman": 0.8787878787878788,
+      "medAbs": 0.008282385093971584,
+      "maxAbs": 0.049139415424188454,
+      "medRel": 0.044390420392426896,
+      "maxRel": 0.26420373022697413
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.006839496353364255,
+      "maxAbs": 0.08425555081323116,
+      "medRel": 0.02493092107175765,
+      "maxRel": 0.3802631247693263
+     },
+     "tone.band.MID": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.014031628330468053,
+      "maxAbs": 0.0681823413351968,
+      "medRel": 0.08732227372076128,
+      "maxRel": 0.23364784488922236
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.009275301615669647,
+      "maxAbs": 0.09227851531368092,
+      "medRel": 0.07146314323422101,
+      "maxRel": 0.32179786696281804
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.001601873283244376,
+      "maxAbs": 0.011566097681790573,
+      "medRel": 0.07727600354415895,
+      "maxRel": 0.7912368927586504
+     },
+     "tone.crestDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.14415581595462834,
+      "maxAbs": 1.5942596578408725,
+      "medRel": 0.014381465092545929,
+      "maxRel": 0.08659678847744547
+     },
+     "tone.attackMs": {
+      "spearman": 0.8787878787878788,
+      "medAbs": 8.0,
+      "maxAbs": 32.0,
+      "medRel": 0.6571428571428571,
+      "maxRel": 2.0
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.4889355741819994,
+      "maxAbs": 1.496737935659116,
+      "medRel": 0.2211039198751944,
+      "maxRel": 22.91424822612791
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.109776409843521,
+      "maxAbs": 0.37387749456959796,
+      "medRel": 0.06285434573756808,
+      "maxRel": 0.29380077613545824
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.2711474241538916,
+      "maxAbs": 1.5699382104131985,
+      "medRel": 0.040261901584515994,
+      "maxRel": 0.14976234142232372
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.007887255623630728,
+      "maxAbs": 0.020530742478587743,
+      "medRel": 0.061441059109980475,
+      "maxRel": 0.30079754884781396
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 1.0263774601824271,
+      "maxAbs": 1.440652870948107,
+      "medRel": 0.40265603665831895,
+      "maxRel": 444.4980835732903
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 2.7773011275799977,
+      "maxAbs": 2.911381695059397,
+      "medRel": 0.2942199378675854,
+      "maxRel": 0.7694151169383743
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.2591601827609491,
+      "maxAbs": 1.6414259913084592,
+      "medRel": 0.01366394252523365,
+      "maxRel": 1.2817563895175073
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.059655564101697145,
+      "maxAbs": 0.07630543583482957,
+      "medRel": 0.1333239290762468,
+      "maxRel": 0.6002490737353811
+     }
+    },
+    "seconds": 10.5
+   },
+   "T5": {
+    "criteria": {
+     "distSpearman": 0.8559947299077733,
+     "a": false,
+     "b": false,
+     "failingFeatures": [
+      "tone.centroidHz",
+      "tone.rolloff85Hz",
+      "tone.band.LOW",
+      "tone.band.HIGH",
+      "tone.attackMs",
+      "tone.decayDbPerSec",
+      "tone.transientPeakToBodyDb"
+     ],
+     "maxDeltaComposite": 0.08334953646616988,
+     "c": false,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [
+      "tone.centroidHz",
+      "tone.rolloff85Hz",
+      "tone.band.LOW",
+      "tone.band.HIGH",
+      "tone.decayDbPerSec",
+      "tone.transientPeakToBodyDb"
+     ],
+     "maxDeltaComposite3": 0.10687053759338314
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.8787878787878788,
+      "medAbs": 177.88507476142286,
+      "maxAbs": 438.87863658155015,
+      "medRel": 0.18709473693120726,
+      "maxRel": 0.3026841708494017
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.8206724839680872,
+      "medAbs": 269.53125,
+      "maxAbs": 960.9375,
+      "medRel": 0.11080780975293791,
+      "maxRel": 0.49206349206349204
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9393939393939393,
+      "medAbs": 87.75698813378614,
+      "maxAbs": 339.3642821295689,
+      "medRel": 0.07328300124182235,
+      "maxRel": 0.15267503102657187
+     },
+     "tone.band.LOW": {
+      "spearman": 0.8787878787878788,
+      "medAbs": 0.07602818104153683,
+      "maxAbs": 0.13741054173639114,
+      "medRel": 0.3615062371842597,
+      "maxRel": 0.43666955653579986
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.01925092001074212,
+      "maxAbs": 0.04861482428345412,
+      "medRel": 0.0690870540632713,
+      "maxRel": 0.18668078199656232
+     },
+     "tone.band.MID": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.03297224119613269,
+      "maxAbs": 0.05797364555795417,
+      "medRel": 0.21446878740935482,
+      "maxRel": 0.4026130146114117
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.02984425845054863,
+      "maxAbs": 0.08795144108579817,
+      "medRel": 0.24193061345673345,
+      "maxRel": 0.3976796383463831
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.7212121212121211,
+      "medAbs": 0.012166038800537543,
+      "maxAbs": 0.032258527915757035,
+      "medRel": 0.3834067762763034,
+      "maxRel": 0.5375123957111904
+     },
+     "tone.crestDb": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.31002643200416546,
+      "maxAbs": 1.2322941328126724,
+      "medRel": 0.033621916809725524,
+      "maxRel": 0.1314701865142931
+     },
+     "tone.attackMs": {
+      "spearman": 0.2682976706604058,
+      "medAbs": 9.66666666666667,
+      "maxAbs": 98.0,
+      "medRel": 0.5256410256410258,
+      "maxRel": 7.0
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.8424242424242423,
+      "medAbs": 3.4828085111751594,
+      "maxAbs": 5.928017620055404,
+      "medRel": 2.08915402354257,
+      "maxRel": 131.6128020215733
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.8303030303030302,
+      "medAbs": 0.2792311113782251,
+      "maxAbs": 1.1910818720375396,
+      "medRel": 0.2846690385072084,
+      "maxRel": 0.6656096610156521
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9393939393939393,
+      "medAbs": 1.7852095091311977,
+      "maxAbs": 9.504543267867966,
+      "medRel": 0.3155298982800304,
+      "maxRel": 0.7125378371998999
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.028422755910486746,
+      "maxAbs": 0.09194063554731796,
+      "medRel": 0.23814451679080384,
+      "maxRel": 0.8568553830928956
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.702094111851215,
+      "maxAbs": 0.9947682165228748,
+      "medRel": 0.2509021260748645,
+      "maxRel": 311.30804373666916
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.37328157007270857,
+      "maxAbs": 1.7776423280863547,
+      "medRel": 0.04596014801523253,
+      "maxRel": 0.20117475776670737
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9393939393939393,
+      "medAbs": 6.270984699979595,
+      "maxAbs": 7.5079022075594555,
+      "medRel": 0.31967870244486,
+      "maxRel": 2.430599187275981
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.02293449105360494,
+      "maxAbs": 0.08334953646616988,
+      "medRel": 0.06529138116915226,
+      "maxRel": 0.2726664270658676
+     }
+    },
+    "seconds": 5.5
+   }
+  },
+  "clean": {
+   "SPAN": {
+    "criteria": {
+     "distSpearman": 0.9999999999999999,
+     "a": true,
+     "b": true,
+     "failingFeatures": [],
+     "maxDeltaComposite": 0.0038745471134170595,
+     "c": true,
+     "pass": true,
+     "newFailingVsSpanNoiseFloor": [],
+     "maxDeltaComposite3": 0.005129894686917491
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.22324961085530504,
+      "maxAbs": 0.6704364112003987,
+      "medRel": 0.00021294803612533446,
+      "maxRel": 0.0004418639101915621
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 1.0,
+      "medAbs": 0.0,
+      "maxAbs": 0.0,
+      "medRel": 0.0,
+      "maxRel": 0.0
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.12191300867584687,
+      "maxAbs": 0.7427345629839692,
+      "medRel": 0.00010856068047374338,
+      "maxRel": 0.00031870615820059616
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 3.266891655542836e-05,
+      "maxAbs": 0.0001224157942044113,
+      "medRel": 0.0001137160466529806,
+      "maxRel": 0.0003531476388662772
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 2.6925040466196926e-05,
+      "maxAbs": 9.780368682787977e-05,
+      "medRel": 0.00014475248636717695,
+      "maxRel": 0.0002490595037535223
+     },
+     "tone.band.MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 6.246605192272714e-06,
+      "maxAbs": 4.676694226804501e-05,
+      "medRel": 3.8720465457996096e-05,
+      "maxRel": 0.00022514802735318723
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 3.365942027391128e-05,
+      "maxAbs": 7.49219331593054e-05,
+      "medRel": 0.00031614154645078255,
+      "maxRel": 0.00048335882744333567
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 1.6725785328085968e-05,
+      "maxAbs": 4.593269467335903e-05,
+      "medRel": 0.0003574864970179409,
+      "maxRel": 0.0006226260529843405
+     },
+     "tone.crestDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.001602706400067433,
+      "maxAbs": 0.0035356885211328404,
+      "medRel": 0.00018762636249982688,
+      "maxRel": 0.00029689017443694244
+     },
+     "tone.attackMs": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0,
+      "maxAbs": 0.0,
+      "medRel": 0.0,
+      "maxRel": 0.0
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 1.1479706074624119e-13,
+      "maxAbs": 1.0063616606714731e-12,
+      "medRel": 1.8890166558097258e-13,
+      "maxRel": 3.4169213710749278e-12
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 2.220446049250313e-15,
+      "maxAbs": 5.329070518200751e-15,
+      "medRel": 1.1547913089834184e-15,
+      "maxRel": 3.552742528514715e-15
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.03748939577486965,
+      "maxAbs": 0.1448141075746303,
+      "medRel": 0.008316665852039714,
+      "maxRel": 0.0315587554037056
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.0001244408127634971,
+      "maxAbs": 0.0004683539220921018,
+      "medRel": 0.001225905657663391,
+      "maxRel": 0.006800047542114364
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0014290956278752986,
+      "maxAbs": 0.002249876234566628,
+      "medRel": 0.00015487665847195928,
+      "maxRel": 0.0004054520964164181
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0019135620157477717,
+      "maxAbs": 0.002714219514698968,
+      "medRel": 0.00014198761531164289,
+      "maxRel": 0.00027239834985380253
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.1686542686579635,
+      "maxAbs": 0.2334356501648891,
+      "medRel": 0.014345391112088865,
+      "maxRel": 0.07966963922561926
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.00280357319605469,
+      "maxAbs": 0.0038745471134170595,
+      "medRel": 0.0042350697242267655,
+      "maxRel": 0.012712774601047083
+     }
+    },
+    "seconds": 13.536229166666667
+   },
+   "T10": {
+    "criteria": {
+     "distSpearman": 0.9715415019762844,
+     "a": true,
+     "b": false,
+     "failingFeatures": [
+      "tone.attackMs",
+      "tone.decayDbPerSec"
+     ],
+     "maxDeltaComposite": 0.05761987273992858,
+     "c": false,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [
+      "tone.attackMs",
+      "tone.decayDbPerSec"
+     ],
+     "maxDeltaComposite3": 0.07190376751475547
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 7.643375369955606,
+      "maxAbs": 22.686007113440382,
+      "medRel": 0.0069622936366127396,
+      "maxRel": 0.01674242693787607
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9938650306748469,
+      "medAbs": 0.0,
+      "maxAbs": 164.0625,
+      "medRel": 0.0,
+      "maxRel": 0.10294117647058823
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 8.89513257066514,
+      "maxAbs": 29.604459148373508,
+      "medRel": 0.005296522290743561,
+      "maxRel": 0.02827041736123036
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.007629963964419617,
+      "maxAbs": 0.012938468316496476,
+      "medRel": 0.023356919141988966,
+      "maxRel": 0.054793381280117896
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.006196682642147927,
+      "maxAbs": 0.018816919796089626,
+      "medRel": 0.03018419126423538,
+      "maxRel": 0.08560073366938867
+     },
+     "tone.band.MID": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.003131245958372872,
+      "maxAbs": 0.010205316069068104,
+      "medRel": 0.014682387230892234,
+      "maxRel": 0.07108898756044345
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.0012724196677874645,
+      "maxAbs": 0.009379009857157616,
+      "medRel": 0.007762036755511504,
+      "maxRel": 0.07015999769492222
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0002092998492370865,
+      "maxAbs": 0.0019503573259674611,
+      "medRel": 0.011458392206535096,
+      "maxRel": 0.17089636759491136
+     },
+     "tone.crestDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.09789754833434472,
+      "maxAbs": 0.7567408780400555,
+      "medRel": 0.007990103044398442,
+      "maxRel": 0.07372146961123015
+     },
+     "tone.attackMs": {
+      "spearman": 0.29696969696969694,
+      "medAbs": 5.000000000000002,
+      "maxAbs": 26.666666666666668,
+      "medRel": 0.19047619047619047,
+      "maxRel": 1.0
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.8545454545454544,
+      "medAbs": 0.3444102557704953,
+      "maxAbs": 1.3565332124254346,
+      "medRel": 0.40479665521011177,
+      "maxRel": 26.868494945930106
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9272727272727272,
+      "medAbs": 0.255361519708837,
+      "maxAbs": 1.0786986262724483,
+      "medRel": 0.10441241787700575,
+      "maxRel": 0.34156027219113516
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.22325079340589138,
+      "maxAbs": 0.9545097923491941,
+      "medRel": 0.058123868466302464,
+      "maxRel": 0.221592218484862
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.0029343849806518696,
+      "maxAbs": 0.008044595886702935,
+      "medRel": 0.014586645553620822,
+      "maxRel": 0.17064501348558173
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.29752548796046296,
+      "maxAbs": 0.3720711100537599,
+      "medRel": 0.036107311538720266,
+      "maxRel": 0.05580027908081877
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 1.7608887853184907,
+      "maxAbs": 2.5722604233006763,
+      "medRel": 0.1803232866882321,
+      "maxRel": 0.3719816734811874
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.5182784846740116,
+      "maxAbs": 1.5048924565331578,
+      "medRel": 0.05391423094486229,
+      "maxRel": 0.13836487529654865
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.03556764912440527,
+      "maxAbs": 0.05761987273992858,
+      "medRel": 0.08236757899500916,
+      "maxRel": 0.33545069098546904
+     }
+    },
+    "seconds": 10.5
+   },
+   "T5": {
+    "criteria": {
+     "distSpearman": 0.9093544137022398,
+     "a": false,
+     "b": false,
+     "failingFeatures": [
+      "tone.attackMs",
+      "tone.decayDbPerSec"
+     ],
+     "maxDeltaComposite": 0.05166306676183818,
+     "c": false,
+     "pass": false,
+     "newFailingVsSpanNoiseFloor": [
+      "tone.attackMs",
+      "tone.decayDbPerSec"
+     ],
+     "maxDeltaComposite3": 0.07834670672942312
+    },
+    "perFeature": {
+     "tone.centroidHz": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 185.77207213477925,
+      "maxAbs": 356.82537146356503,
+      "medRel": 0.1937378061732484,
+      "maxRel": 0.23517257006991407
+     },
+     "tone.rolloff85Hz": {
+      "spearman": 0.9357841922508401,
+      "medAbs": 316.40625,
+      "maxAbs": 796.875,
+      "medRel": 0.1614122418879056,
+      "maxRel": 0.3582089552238806
+     },
+     "tone.bandwidthHz": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 98.87361811049198,
+      "maxAbs": 301.4543695957018,
+      "medRel": 0.06647113464824361,
+      "maxRel": 0.1332420071952496
+     },
+     "tone.band.LOW": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.04687575912837266,
+      "maxAbs": 0.0881010224161484,
+      "medRel": 0.10697185428561579,
+      "maxRel": 0.2779382501260103
+     },
+     "tone.band.LOW_MID": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.032621378653254256,
+      "maxAbs": 0.06869280793143417,
+      "medRel": 0.11655644107195788,
+      "maxRel": 0.31955101938658337
+     },
+     "tone.band.MID": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.03696281677859542,
+      "maxAbs": 0.054745915531858425,
+      "medRel": 0.17095488178885945,
+      "maxRel": 0.26491893985500026
+     },
+     "tone.band.HIGH_MID": {
+      "spearman": 0.9757575757575757,
+      "medAbs": 0.027689085247318987,
+      "maxAbs": 0.0695776312737304,
+      "medRel": 0.23219684842375576,
+      "maxRel": 0.30664923349211337
+     },
+     "tone.band.HIGH": {
+      "spearman": 0.9878787878787878,
+      "medAbs": 0.011253095239651276,
+      "maxAbs": 0.023648190591827198,
+      "medRel": 0.2623131093499349,
+      "maxRel": 0.29330630166168564
+     },
+     "tone.crestDb": {
+      "spearman": 0.9272727272727272,
+      "medAbs": 0.4356098592409321,
+      "maxAbs": 1.5942943860050285,
+      "medRel": 0.03929260969946355,
+      "maxRel": 0.10465434047600237
+     },
+     "tone.attackMs": {
+      "spearman": -0.006060606060606061,
+      "medAbs": 26.333333333333336,
+      "maxAbs": 38.666666666666664,
+      "medRel": 0.5345104333868379,
+      "maxRel": 1.0714285714285716
+     },
+     "tone.decayDbPerSec": {
+      "spearman": 0.5272727272727272,
+      "medAbs": 1.3507666820411697,
+      "maxAbs": 4.733939712467286,
+      "medRel": 1.6888509164267975,
+      "maxRel": 7.942903555243857
+     },
+     "tone.transientPeakToBodyDb": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.7080659388038137,
+      "maxAbs": 1.6566167486718513,
+      "medRel": 0.3655821758201584,
+      "maxRel": 0.7202690448429728
+     },
+     "tone.envelopeRangeDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.5605709674444963,
+      "maxAbs": 0.8990663955363694,
+      "medRel": 0.11599990481953917,
+      "maxRel": 0.5046534512669737
+     },
+     "tone.sat.flatness1to8k": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.009821217658143082,
+      "maxAbs": 0.04018639267010099,
+      "medRel": 0.08299159994435552,
+      "maxRel": 0.5878913671653515
+     },
+     "tone.sat.hfGenerationDb": {
+      "spearman": 0.9515151515151514,
+      "medAbs": 0.44739016516253205,
+      "maxAbs": 0.6515357587805006,
+      "medRel": 0.06605850617468083,
+      "maxRel": 0.10665381574747884
+     },
+     "tone.sat.crestReductionDb": {
+      "spearman": 0.9272727272727272,
+      "medAbs": 2.30368882700526,
+      "maxAbs": 3.029076745049572,
+      "medRel": 0.21105709275494994,
+      "maxRel": 0.37992691096682935
+     },
+     "tone.sat.envelopeCompressionDb": {
+      "spearman": 0.9999999999999999,
+      "medAbs": 0.1168376710896748,
+      "maxAbs": 0.4965250577744591,
+      "medRel": 0.023468978391964254,
+      "maxRel": 0.18495610137598328
+     },
+     "tone.sat.composite": {
+      "spearman": 0.9636363636363635,
+      "medAbs": 0.024857366331014902,
+      "maxAbs": 0.05166306676183818,
+      "medRel": 0.05814048933816926,
+      "maxRel": 0.4176604559123232
+     }
+    },
+    "seconds": 5.5
+   }
+  }
+ },
+ "altHF": {
+  "rhythm": {
+   "A hfGenerationDb (V1)": {
+    "rhoTilt30": 0.04242424242424241,
+    "rhoTilt20": 0.11515151515151514,
+    "rhoNonHf": -0.10334394242561099
+   },
+   "B hfOverMidDeltaDb": {
+    "rhoTilt30": -0.13939393939393938,
+    "rhoTilt20": -0.17575757575757575,
+    "rhoNonHf": 0.7598819296000807
+   },
+   "B hfOverMidOutDb": {
+    "rhoTilt30": -0.13939393939393938,
+    "rhoTilt20": -0.17575757575757575,
+    "rhoNonHf": 0.7598819296000807
+   },
+   "C slopeDeltaDbPerOct": {
+    "rhoTilt30": -0.34545454545454546,
+    "rhoTilt20": -0.406060606060606,
+    "rhoNonHf": 0.9118583155200968
+   },
+   "C slopeOutDbPerOct": {
+    "rhoTilt30": -0.34545454545454546,
+    "rhoTilt20": -0.406060606060606,
+    "rhoNonHf": 0.9118583155200968
+   },
+   "D valleyFillDb": {
+    "rhoTilt30": -0.5878787878787878,
+    "rhoTilt20": -0.5151515151515151,
+    "rhoNonHf": 0.33434804902403553
+   },
+   "E midOverLowMidDb": {
+    "rhoTilt30": -0.18787878787878787,
+    "rhoTilt20": -0.13939393939393938,
+    "rhoNonHf": -0.09118583155200968
+   },
+   "E highMidOverMidDb": {
+    "rhoTilt30": 0.28484848484848485,
+    "rhoTilt20": 0.35757575757575755,
+    "rhoNonHf": -0.32218993815043423
+   }
+  },
+  "lead": {
+   "A hfGenerationDb (V1)": {
+    "rhoTilt30": 0.5151515151515151,
+    "rhoTilt20": 0.5757575757575757,
+    "rhoNonHf": -0.5272727272727272
+   },
+   "B hfOverMidDeltaDb": {
+    "rhoTilt30": -0.32121212121212117,
+    "rhoTilt20": -0.34545454545454546,
+    "rhoNonHf": 0.6969696969696969
+   },
+   "B hfOverMidOutDb": {
+    "rhoTilt30": -0.32121212121212117,
+    "rhoTilt20": -0.34545454545454546,
+    "rhoNonHf": 0.6969696969696969
+   },
+   "C slopeDeltaDbPerOct": {
+    "rhoTilt30": -0.34545454545454546,
+    "rhoTilt20": -0.406060606060606,
+    "rhoNonHf": 0.8787878787878788
+   },
+   "C slopeOutDbPerOct": {
+    "rhoTilt30": -0.34545454545454546,
+    "rhoTilt20": -0.406060606060606,
+    "rhoNonHf": 0.8787878787878788
+   },
+   "D valleyFillDb": {
+    "rhoTilt30": -0.5878787878787878,
+    "rhoTilt20": -0.5151515151515151,
+    "rhoNonHf": 0.2727272727272727
+   },
+   "E midOverLowMidDb": {
+    "rhoTilt30": 0.34545454545454546,
+    "rhoTilt20": 0.406060606060606,
+    "rhoNonHf": -0.7333333333333332
+   },
+   "E highMidOverMidDb": {
+    "rhoTilt30": 0.49090909090909085,
+    "rhoTilt20": 0.5393939393939393,
+    "rhoNonHf": -0.4787878787878787
+   }
+  }
+ },
+ "composite": {
+  "rhythm": {
+   "rho43": 0.9515151515151514,
+   "rhoC4Tilt": -0.5030303030303029,
+   "rhoC3Tilt": -0.5515151515151515,
+   "rank4": [
+    2,
+    3,
+    6,
+    4,
+    9,
+    10,
+    8,
+    5,
+    7,
+    1
+   ],
+   "rank3": [
+    2,
+    3,
+    6,
+    4,
+    9,
+    8,
+    10,
+    5,
+    7,
+    1
+   ],
+   "spread4": 0.6818431944742006,
+   "spread3": 0.8217112034541114,
+   "sep4": 40,
+   "sep3": 42
+  },
+  "lead": {
+   "rho43": 0.9393939393939393,
+   "rhoC4Tilt": -0.5393939393939393,
+   "rhoC3Tilt": -0.709090909090909,
+   "rank4": [
+    2,
+    3,
+    5,
+    4,
+    8,
+    10,
+    9,
+    6,
+    7,
+    1
+   ],
+   "rank3": [
+    1,
+    3,
+    4,
+    5,
+    9,
+    8,
+    10,
+    6,
+    7,
+    2
+   ],
+   "spread4": 0.5852154631990145,
+   "spread3": 0.7840364462355246,
+   "sep4": 39,
+   "sep3": 40
+  },
+  "clean": {
+   "rho43": 0.9878787878787878,
+   "rhoC4Tilt": -0.5515151515151515,
+   "rhoC3Tilt": -0.5636363636363636,
+   "rank4": [
+    2,
+    3,
+    6,
+    4,
+    9,
+    8,
+    10,
+    5,
+    7,
+    1
+   ],
+   "rank3": [
+    2,
+    3,
+    6,
+    4,
+    9,
+    7,
+    10,
+    5,
+    8,
+    1
+   ],
+   "spread4": 0.708759014183301,
+   "spread3": 0.852527758565143,
+   "sep4": 40,
+   "sep3": 40
+  }
+ },
+ "distance": {
+  "rhythm": [
+   [
+    0.0,
+    3.426490814944813,
+    6.577916094322849,
+    5.449363017195846,
+    8.124913629450884,
+    8.653609072472717,
+    7.927893559749736,
+    6.509324552422296,
+    7.739383902051952,
+    5.610989719163249
+   ],
+   [
+    3.426490814944813,
+    0.0,
+    5.327864064207997,
+    4.702981309474016,
+    6.140883109116557,
+    6.888394509584286,
+    5.60690428350135,
+    5.867570519808922,
+    6.205740990458175,
+    5.685566935739074
+   ],
+   [
+    6.577916094322849,
+    5.327864064207997,
+    0.0,
+    3.7670229981928034,
+    5.237745106336393,
+    3.444745284180279,
+    5.778687728097085,
+    3.6499420830989253,
+    4.168418651758613,
+    9.075858438116306
+   ],
+   [
+    5.449363017195846,
+    4.702981309474016,
+    3.7670229981928034,
+    0.0,
+    6.280986892781962,
+    5.2272323463932455,
+    5.581005787658435,
+    3.6398049395862486,
+    5.194625698536983,
+    8.591353855586927
+   ],
+   [
+    8.124913629450884,
+    6.140883109116557,
+    5.237745106336393,
+    6.280986892781962,
+    0.0,
+    4.111123404239367,
+    3.040245612542307,
+    4.588808981916505,
+    3.157242673418424,
+    8.964138683227114
+   ],
+   [
+    8.653609072472717,
+    6.888394509584286,
+    3.444745284180279,
+    5.2272323463932455,
+    4.111123404239367,
+    0.0,
+    5.098832826758684,
+    4.863599700169592,
+    4.224122897613938,
+    10.687556507609804
+   ],
+   [
+    7.927893559749736,
+    5.60690428350135,
+    5.778687728097085,
+    5.581005787658435,
+    3.040245612542307,
+    5.098832826758684,
+    0.0,
+    4.880762605579222,
+    3.387924609193836,
+    8.654581087196368
+   ],
+   [
+    6.509324552422296,
+    5.867570519808922,
+    3.6499420830989253,
+    3.6398049395862486,
+    4.588808981916505,
+    4.863599700169592,
+    4.880762605579222,
+    0.0,
+    3.4122177804409364,
+    8.966051367092584
+   ],
+   [
+    7.739383902051952,
+    6.205740990458175,
+    4.168418651758613,
+    5.194625698536983,
+    3.157242673418424,
+    4.224122897613938,
+    3.387924609193836,
+    3.4122177804409364,
+    0.0,
+    8.48674541305614
+   ],
+   [
+    5.610989719163249,
+    5.685566935739074,
+    9.075858438116306,
+    8.591353855586927,
+    8.964138683227114,
+    10.687556507609804,
+    8.654581087196368,
+    8.966051367092584,
+    8.48674541305614,
+    0.0
+   ]
+  ],
+  "rhythm_share": {
+   "tone.centroidHz": 0.05387947678476603,
+   "tone.rolloff85Hz": 0.058112875028829516,
+   "tone.bandwidthHz": 0.060276946358184265,
+   "tone.band.LOW": 0.06724441454826872,
+   "tone.band.LOW_MID": 0.06277017485551044,
+   "tone.band.MID": 0.083035062082635,
+   "tone.band.HIGH_MID": 0.06547152202160647,
+   "tone.band.HIGH": 0.05673286353674412,
+   "tone.crestDb": 0.05150175332560315,
+   "tone.attackMs": 0.08363877248460959,
+   "tone.decayDbPerSec": 0.050204330917087384,
+   "tone.transientPeakToBodyDb": 0.049748672458602615,
+   "tone.envelopeRangeDb": 0.0458156519908746,
+   "tone.sat.flatness1to8k": 0.0692632612084402,
+   "tone.sat.hfGenerationDb": 0.04498681708176008,
+   "tone.sat.crestReductionDb": 0.05150175332560316,
+   "tone.sat.envelopeCompressionDb": 0.04581565199087459
+  },
+  "rhythm_clusters": [
+   [
+    "01",
+    "02"
+   ],
+   [
+    "03",
+    "06",
+    "04",
+    "08",
+    "05",
+    "07",
+    "09"
+   ],
+   [
+    "10"
+   ]
+  ],
+  "lead": [
+   [
+    0.0,
+    3.865709719889832,
+    7.140372518977794,
+    6.750011068118072,
+    9.410901357861185,
+    8.507662864071337,
+    9.668417068989054,
+    6.734435547312005,
+    8.81187362867524,
+    6.768044794797863
+   ],
+   [
+    3.865709719889832,
+    0.0,
+    5.1862522532465585,
+    4.6944888700802245,
+    6.699691171394901,
+    5.332562183026371,
+    7.0486222738581015,
+    5.04314792190421,
+    6.740778050499129,
+    6.914018127700961
+   ],
+   [
+    7.140372518977794,
+    5.1862522532465585,
+    0.0,
+    6.006632813499379,
+    6.454415521501233,
+    4.9118104759635735,
+    7.3212355064826795,
+    5.098280424398747,
+    5.053068557199033,
+    8.058693188949789
+   ],
+   [
+    6.750011068118072,
+    4.6944888700802245,
+    6.006632813499379,
+    0.0,
+    5.93309850703604,
+    4.745870785160266,
+    5.4406816022315825,
+    3.1452363074693763,
+    5.805706099866176,
+    6.5780472495659446
+   ],
+   [
+    9.410901357861185,
+    6.699691171394901,
+    6.454415521501233,
+    5.93309850703604,
+    0.0,
+    3.8573769389437875,
+    2.407122852700757,
+    4.541050045223174,
+    2.696051459330222,
+    7.591381327018415
+   ],
+   [
+    8.507662864071337,
+    5.332562183026371,
+    4.9118104759635735,
+    4.745870785160266,
+    3.8573769389437875,
+    0.0,
+    4.795011669431106,
+    4.389230807419862,
+    4.557891933145379,
+    8.40837104318641
+   ],
+   [
+    9.668417068989054,
+    7.0486222738581015,
+    7.3212355064826795,
+    5.4406816022315825,
+    2.407122852700757,
+    4.795011669431106,
+    0.0,
+    4.71259439763499,
+    3.652707923333331,
+    7.553472932262664
+   ],
+   [
+    6.734435547312005,
+    5.04314792190421,
+    5.098280424398747,
+    3.1452363074693763,
+    4.541050045223174,
+    4.389230807419862,
+    4.71259439763499,
+    0.0,
+    3.7227348823511166,
+    5.918074967780714
+   ],
+   [
+    8.81187362867524,
+    6.740778050499129,
+    5.053068557199033,
+    5.805706099866176,
+    2.696051459330222,
+    4.557891933145379,
+    3.652707923333331,
+    3.7227348823511166,
+    0.0,
+    6.864298923656693
+   ],
+   [
+    6.768044794797863,
+    6.914018127700961,
+    8.058693188949789,
+    6.5780472495659446,
+    7.591381327018415,
+    8.40837104318641,
+    7.553472932262664,
+    5.918074967780714,
+    6.864298923656693,
+    0.0
+   ]
+  ],
+  "lead_share": {
+   "tone.centroidHz": 0.05757315467862519,
+   "tone.rolloff85Hz": 0.0619450088241237,
+   "tone.bandwidthHz": 0.06781371706315915,
+   "tone.band.LOW": 0.08797248170863436,
+   "tone.band.LOW_MID": 0.056062618910255144,
+   "tone.band.MID": 0.07443429049822856,
+   "tone.band.HIGH_MID": 0.04679089983341559,
+   "tone.band.HIGH": 0.05523294159434297,
+   "tone.crestDb": 0.05069746835921077,
+   "tone.attackMs": 0.07054646481084204,
+   "tone.decayDbPerSec": 0.04935554835462353,
+   "tone.transientPeakToBodyDb": 0.05260405632277532,
+   "tone.envelopeRangeDb": 0.047974137854048166,
+   "tone.sat.flatness1to8k": 0.07071508403937385,
+   "tone.sat.hfGenerationDb": 0.051610520935082706,
+   "tone.sat.crestReductionDb": 0.05069746835921077,
+   "tone.sat.envelopeCompressionDb": 0.047974137854048166
+  },
+  "lead_clusters": [
+   [
+    "01",
+    "02"
+   ],
+   [
+    "03",
+    "04",
+    "08",
+    "05",
+    "07",
+    "09",
+    "06"
+   ],
+   [
+    "10"
+   ]
+  ]
+ },
+ "perf": {
+  "rhythm/FULL": {
+   "load": 35.6,
+   "inference": 5983.2,
+   "extraction": 184.0,
+   "total": 6202.8,
+   "seconds": 29.121354166666666
+  },
+  "rhythm/SPAN": {
+   "load": 34.5,
+   "inference": 4230.2,
+   "extraction": 169.1,
+   "total": 4433.8,
+   "seconds": 19.871354166666666
+  },
+  "rhythm/T15": {
+   "load": 35.0,
+   "inference": 3301.9,
+   "extraction": 135.0,
+   "total": 3471.9,
+   "seconds": 15.5
+  },
+  "rhythm/T10": {
+   "load": 36.1,
+   "inference": 2252.7,
+   "extraction": 88.6,
+   "total": 2377.3999999999996,
+   "seconds": 10.5
+  },
+  "rhythm/T5": {
+   "load": 35.4,
+   "inference": 1175.9,
+   "extraction": 36.7,
+   "total": 1248.0,
+   "seconds": 5.5
+  },
+  "lead/FULL": {
+   "load": 34.3,
+   "inference": 5168.1,
+   "extraction": 256.6,
+   "total": 5459.0,
+   "seconds": 24.151229166666667
+  },
+  "lead/SPAN": {
+   "load": 34.6,
+   "inference": 5071.2,
+   "extraction": 268.1,
+   "total": 5373.9,
+   "seconds": 23.561229166666667
+  },
+  "lead/T15": {
+   "load": 34.8,
+   "inference": 3334.0,
+   "extraction": 180.1,
+   "total": 3548.9,
+   "seconds": 15.5
+  },
+  "lead/T10": {
+   "load": 34.6,
+   "inference": 2247.7,
+   "extraction": 113.7,
+   "total": 2396.0,
+   "seconds": 10.5
+  },
+  "lead/T5": {
+   "load": 34.6,
+   "inference": 1190.2,
+   "extraction": 58.2,
+   "total": 1283.0,
+   "seconds": 5.5
+  },
+  "clean/FULL": {
+   "load": 35.4,
+   "inference": 3121.3,
+   "extraction": 150.7,
+   "total": 3307.4,
+   "seconds": 14.276229166666667
+  },
+  "clean/SPAN": {
+   "load": 34.0,
+   "inference": 2957.6,
+   "extraction": 149.5,
+   "total": 3141.1,
+   "seconds": 13.536229166666667
+  },
+  "clean/T10": {
+   "load": 34.1,
+   "inference": 2286.9,
+   "extraction": 113.3,
+   "total": 2434.3,
+   "seconds": 10.5
+  },
+  "clean/T5": {
+   "load": 35.2,
+   "inference": 1207.3,
+   "extraction": 55.9,
+   "total": 1298.3999999999999,
+   "seconds": 5.5
+  }
+ },
+ "cache": {
+  "FULL": {
+   "coldMs": 121851,
+   "warmMs": 1351,
+   "hits": 20,
+   "misses": 20,
+   "analyses": 20
+  },
+  "T10": {
+   "coldMs": 49337,
+   "warmMs": 533,
+   "hits": 20,
+   "misses": 20,
+   "analyses": 20
+  }
+ }
+}

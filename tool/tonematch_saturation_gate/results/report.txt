@@ -1,0 +1,121 @@
+# PROBE: valid harmonics per frequency
+     82.4 Hz: H2..H8 valid (k*f0 <= 21.6 kHz)
+    110.0 Hz: H2..H8 valid (k*f0 <= 21.6 kHz)
+    220.0 Hz: H2..H8 valid (k*f0 <= 21.6 kHz)
+    440.0 Hz: H2..H8 valid (k*f0 <= 21.6 kHz)
+    880.0 Hz: H2..H8 valid (k*f0 <= 21.6 kHz)
+   1760.0 Hz: H2..H8 valid (k*f0 <= 21.6 kHz)
+
+# PER-NAM SATURATION CURVES (median over the 6 probe frequencies)
+id rig       gain@-36  chg@-12  chg@-9  onset(-dBFS)  THD@-36(dB) THD@-9(dB) growth(dB/dB) odd/even@-12(dB)  notReachedAt
+01 full-rig      7.3    -8.84  -11.83      -23.6       -38.2      -16.1      0.99         3.7     none
+02 unknown      14.6   -12.21  -15.32      -24.8       -33.0      -10.1      0.87        -3.6     none
+03 unknown       8.7   -23.22  -26.15      -34.9       -12.2       -7.5      0.20        13.7     none
+04 unknown      21.1   -24.23  -27.22      -35.0       -11.2       -6.7      0.08        -1.2     none
+05 unknown      25.4   -24.34  -27.45      -35.0       -11.9       -4.9      0.02         9.0     none
+06 amp-only     17.8   -24.07  -27.16      -35.0        -9.7       -9.7     -0.00         8.0     none
+07 unknown      28.5   -24.34  -27.61      -35.0       -11.7       -6.1      0.04        -0.7     none
+08 full-rig     20.6   -24.09  -27.04      -35.0        -7.3       -7.4     -0.01         5.4     none
+09 unknown      18.8   -23.88  -27.08      -35.0        -9.1       -8.6     -0.01        16.4     none
+10 amp-only     -6.8    -0.68   -1.34      -10.5       -43.7      -15.2      1.06       -20.6     82.4,1760
+
+# Per frequency (THD@-9 dBFS in dB / gain change@-9 dB)
+id           82.4           110           220           440           880          1760
+01   -18.8/-12.1  -20.4/-11.5  -17.6/ -6.7   -6.7/ -8.7  -10.0/-13.8  -14.6/-17.5
+02   -17.1/-11.1  -15.7/-14.0  -18.4/-12.7   -4.6/-16.7    4.0/-22.1   10.5/-34.5
+03   -15.8/-19.0  -21.5/-21.9  -10.5/-25.7   -1.8/-26.6   -0.8/-26.6   -4.6/-26.8
+04   -10.4/-25.8  -17.5/-27.2  -15.2/-27.2   -0.3/-27.4    3.0/-27.2   -2.9/-27.6
+05    17.4/-43.1   -0.5/-32.6  -14.7/-27.3   -7.6/-27.6   -5.1/-26.9   -4.7/-26.8
+06   -13.5/-27.2  -17.1/-27.3  -13.5/-26.9   -5.9/-26.8   -3.2/-27.1   -4.8/-27.4
+07    -2.5/-29.9  -14.2/-27.7  -13.4/-27.2   -7.7/-27.5   -4.1/-27.7   -4.6/-27.4
+08    -4.3/-25.8  -16.8/-26.8  -16.2/-27.1   -3.0/-27.1   -0.4/-27.3  -10.5/-26.9
+09    -7.5/-26.3   -8.9/-26.7  -10.7/-26.9   -8.9/-27.2   -6.7/-27.3   -8.4/-27.2
+10   -14.1/ -0.8  -14.9/ -1.2  -15.3/ -1.5  -15.4/ -1.7  -15.8/ -1.6  -15.1/ -1.0
+
+# Residual (non-harmonic energy) vs THD at -9 dBFS: 20log10(THD+N / THD) per NAM (median over f); large = non-harmonic content (noise/alias/H9+)
+  01=0.0, 02=0.2, 03=0.8, 04=0.1, 05=1.0, 06=1.0, 07=0.9, 08=0.3, 09=0.7, 10=0.0
+  at 1760 Hz: 01=0.0, 02=0.0, 03=0.2, 04=0.0, 05=0.6, 06=0.5, 07=0.3, 08=0.0, 09=0.5, 10=0.0
+
+# DIMENSIONALITY of the independent probe metrics (z-scored PCA, 10 NAMs)
+  explained variance PC1..PC3: 88% 9% 2%
+  PC1 loadings: thdLow 0.43, thdHigh 0.39, thdGrowthSlope -0.42, gainChange12 -0.43, gainChange9 -0.43, oddEvenDb 0.33
+  PC2 loadings: thdLow 0.07, thdHigh 0.49, thdGrowthSlope -0.15, gainChange12 -0.02, gainChange9 0.02, oddEvenDb -0.86
+  Spearman among core metrics:
+            thdLow      thdHigh thdGrowthSlo gainChange12  gainChange9    oddEvenDb
+  thdLow              1.00         0.50        -0.95        -0.62        -0.59         0.50
+  thdHigh             0.50         1.00        -0.55        -0.93        -0.87         0.30
+  thdGrowthSlo       -0.95        -0.55         1.00         0.65         0.61        -0.62
+  gainChange12       -0.62        -0.93         0.65         1.00         0.96        -0.25
+  gainChange9        -0.59        -0.87         0.61         0.96         1.00        -0.31
+  oddEvenDb           0.50         0.30        -0.62        -0.25        -0.31         1.00
+  rho(thdHigh, gainChange9) = -0.87 (distortion vs compression)
+  SINGLE SATURATION DIMENSION JUSTIFIED (rule 7.2): YES
+
+# V1 vs independent probe, rhythm FULL (Spearman / Pearson over 10 NAMs)
+                       thdLow        thdHigh       thdGrowthSlop gainChange12  gainChange9   oddEvenDb     onset         PC1          
+flatness1to8k           0.44/ 0.48    0.48/ 0.54   -0.59/-0.52   -0.58/-0.52   -0.68/-0.53    0.47/ 0.43   -0.45/-0.50    0.60/ 0.54  
+hfGenerationDb          0.37/ 0.63    0.04/ 0.48   -0.25/-0.53   -0.02/-0.70    0.07/-0.73    0.33/ 0.73   -0.16/-0.79    0.15/ 0.67  
+crestReductionDb        0.59/ 0.78    0.70/ 0.82   -0.73/-0.80   -0.77/-0.82   -0.81/-0.83    0.58/ 0.54   -0.70/-0.80    0.81/ 0.82  
+envelopeCompressionDb   0.71/ 0.97    0.72/ 0.84   -0.78/-0.98   -0.88/-0.96   -0.89/-0.95    0.42/ 0.66   -0.85/-0.93    0.66/ 0.96  
+composite4              0.60/ 0.89    0.61/ 0.85   -0.72/-0.89   -0.71/-0.93   -0.79/-0.94    0.66/ 0.73   -0.61/-0.92    0.73/ 0.93  
+composite3(noHF)        0.55/ 0.87    0.73/ 0.84   -0.67/-0.88   -0.81/-0.90   -0.87/-0.90    0.59/ 0.68   -0.71/-0.87    0.76/ 0.90  
+
+# V1 vs independent probe, lead FULL (Spearman / Pearson over 10 NAMs)
+                       thdLow        thdHigh       thdGrowthSlop gainChange12  gainChange9   oddEvenDb     onset         PC1          
+flatness1to8k           0.26/ 0.41    0.45/ 0.50   -0.45/-0.45   -0.50/-0.45   -0.59/-0.46    0.36/ 0.34   -0.36/-0.42    0.55/ 0.46  
+hfGenerationDb         -0.13/-0.19   -0.36/-0.26    0.22/ 0.30    0.33/ 0.09    0.37/ 0.05    0.03/ 0.24    0.26/-0.05   -0.24/-0.12  
+crestReductionDb        0.64/ 0.83    0.76/ 0.84   -0.76/-0.86   -0.83/-0.85   -0.87/-0.84    0.59/ 0.53   -0.76/-0.80    0.82/ 0.85  
+envelopeCompressionDb   0.71/ 0.94    0.76/ 0.85   -0.78/-0.97   -0.81/-0.90   -0.82/-0.88    0.47/ 0.51   -0.78/-0.82    0.77/ 0.91  
+composite4              0.68/ 0.92    0.61/ 0.86   -0.78/-0.94   -0.76/-0.93   -0.82/-0.93    0.58/ 0.66   -0.71/-0.90    0.70/ 0.93  
+composite3(noHF)        0.65/ 0.90    0.78/ 0.85   -0.75/-0.93   -0.88/-0.90   -0.92/-0.89    0.43/ 0.60   -0.81/-0.85    0.72/ 0.90  
+
+# DECISION per pre-registered rule 7.2
+  rhythm: rho(composite4, PC1)=0.73; component rho(PC1): 0.60, 0.15, 0.81, 0.66
+  lead: rho(composite4, PC1)=0.70; component rho(PC1): 0.55, -0.24, 0.82, 0.77
+  one dimension: YES, rule-A satisfied: False, best composite3-vs-composite4 improvement: 0.02 -> DECISION D
+
+# CAB / VOICING INFLUENCE (earlier noise-probe tilt = cab/voicing filtering; groups by inferred rig type)
+  Spearman(probe metric, tilt-30): thdLow -0.64, thdHigh -0.83, thdGrowthSlope 0.68, gainChange12 0.82, gainChange9 0.73, oddEvenDb -0.26, onset 0.79, gain0 -0.81
+  low-f (82.4-220 Hz)    rho(thdHigh,tilt)=-0.60  rho(gainChange9,tilt)=0.77
+  high-f (880-1760 Hz)   rho(thdHigh,tilt)=0.09  rho(gainChange9,tilt)=0.10
+  group means (amp-only 06,10 / full-rig 01,08 / unknown):
+    thdHigh        amp-only -12.4  full-rig -11.8  unknown -7.3
+    gainChange9    amp-only -14.2  full-rig -19.4  unknown -25.1
+    onset          amp-only -22.7  full-rig -29.3  unknown -33.3
+    oddEvenDb      amp-only -6.3  full-rig 4.5  unknown 5.6
+    thdGrowthSlope amp-only 0.5  full-rig 0.5  unknown 0.2
+  THD@-9 dB at 1760 Hz minus THD@-9 dB at 110 Hz per NAM (cab/EQ weights higher harmonics): 01 5.8, 02 26.2, 03 16.9, 04 14.6, 05 -4.2, 06 12.3, 07 9.6, 08 6.2, 09 0.5, 10 -0.2
+  rho(that difference, tilt-30) = 0.43
+
+# FRAME-OFFSET VARIANCE (same NAM output, only the analysis grid shifts; 10 NAMs x RHYTHM+LEAD)
+feature                            median CV%% all / mult-of-64 / sub-hop | min rank-stability rho vs offset 0 (all) | onsets(attack) 
+attackMs                            11.41 /   0.00 /  14.12 |  0.64
+decayDbPerSec                       14.11 /   0.00 /  15.77 |  0.92
+transientPeakToBodyDb                2.87 /   0.00 /   3.32 |  0.85
+centroidHz                           0.02 /   0.02 /   0.00 |  1.00
+crestDb                              0.02 /   0.02 /   0.00 |  1.00
+envelopeRangeDb                      0.41 /   0.42 /   0.22 |  0.99
+band.MID                             0.02 /   0.02 /   0.00 |  1.00
+sat.flatness1to8k                    0.09 /   0.11 /   0.04 |  1.00
+sat.hfGenerationDb                   0.03 /   0.03 /   0.00 |  1.00
+sat.crestReductionDb                 0.01 /   0.01 /   0.00 |  1.00
+sat.envelopeCompressionDb            0.38 /   0.41 /   0.19 |  0.99
+sat.composite                        0.02 /   0.02 /   0.01 |  1.00
+
+# EXPLORATORY (post-hoc): ceiling effect. NAMs whose compression onset is already at/below the lowest probe level
+  saturated at -36 dBFS already: ['03', '04', '05', '06', '07', '08', '09'] (7 of 10); probe levels cannot resolve their linear region
+  gain change @-9 dB among them: 03 -26.1, 04 -27.2, 05 -27.4, 06 -27.2, 07 -27.6, 08 -27.0, 09 -27.1
+  Spearman WITHIN these NAMs (n=7), V1 feature vs probe metric:
+    rhythm flatness1to8k          thdHigh -0.11  gainChange9 -0.39  PC1  0.21
+    rhythm hfGenerationDb         thdHigh -0.43  gainChange9  0.86  PC1 -0.21
+    rhythm crestReductionDb       thdHigh  0.32  gainChange9 -0.61  PC1  0.46
+    rhythm envelopeCompressionDb  thdHigh  0.21  gainChange9 -0.68  PC1  0.00
+    rhythm composite4             thdHigh -0.11  gainChange9 -0.39  PC1  0.21
+    rhythm composite3(noHF)       thdHigh  0.25  gainChange9 -0.61  PC1  0.29
+    lead   flatness1to8k          thdHigh  0.11  gainChange9 -0.46  PC1  0.39
+    lead   hfGenerationDb         thdHigh -0.39  gainChange9  0.75  PC1 -0.36
+    lead   crestReductionDb       thdHigh  0.32  gainChange9 -0.61  PC1  0.46
+    lead   envelopeCompressionDb  thdHigh  0.32  gainChange9 -0.57  PC1  0.43
+    lead   composite4             thdHigh -0.11  gainChange9 -0.46  PC1  0.11
+    lead   composite3(noHF)       thdHigh  0.36  gainChange9 -0.79  PC1  0.21
+  the 3 less-saturated NAMs: ['01', '02', '10'] ; the PC1 split is mainly ['01', '02', '10'] vs ['03', '04', '05', '06', '07', '08', '09']

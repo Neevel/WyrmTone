@@ -1,0 +1,62 @@
+# Cold runs: wall time in s (min / median / max over 3 runs); includes signal preparation
+rhythm   x5  wall  13.7 /  14.5 /  15.7 s   runs: 13.7, 14.5, 15.7   signal prep 0.33 s
+rhythm   x10 wall  45.9 /  47.4 /  47.9 s   runs: 47.4, 47.9, 45.9   signal prep 0.46 s
+lead     x5  wall  20.1 /  20.2 /  20.6 s   runs: 20.2, 20.6, 20.1   signal prep 0.40 s
+lead     x10 wall  48.6 /  51.3 /  59.5 s   runs: 51.3, 48.6, 59.5   signal prep 0.32 s
+
+# Per candidate (cold runs only, ms; median [min-max] over all cold analyses)
+namLoadMs          41.0 [  25.0 -     79.0]  (n=90)
+inferenceMs      4938.0 [ 944.0 -   7096.0]  (n=90)
+extractionMs      215.5 [ 138.0 -    386.0]  (n=90)
+cacheWriteMs        3.2 [   1.9 -     34.8]  (n=90)
+totalMs          5239.7 [1130.4 -   7526.3]  (n=90)
+per NAM total (median ms): 01 4739, 02 5461, 03 5702, 04 5342, 05 6137, 06 1541, 07 5837, 08 1571, 09 5969, 10 5566
+share of inference in candidate total: 94.2%
+
+# Signal preparation per run (ms): decode / resample / derive T15
+rhythm  decode 131 / 144 / 201 | resample 124 / 145 / 199 | derive 45 / 55 / 72
+lead    decode 124 / 148 / 194 | resample 111 / 148 / 191 | derive 46 / 64 / 88
+
+# Warm runs (all candidates from cache), wall ms
+rhythm  x5  wall 5 / 5 / 6 ms; engines created [0, 0, 0]; analyze calls [0, 0, 0]; cache hits [5, 5, 5]
+          per-candidate cache read: median 0.79 ms max 1.84 ms
+rhythm  x10 wall 5 / 9 / 17 ms; engines created [0, 0, 0]; analyze calls [0, 0, 0]; cache hits [10, 10, 10]
+          per-candidate cache read: median 0.42 ms max 1.82 ms
+lead    x5  wall 2 / 3 / 4 ms; engines created [0, 0, 0]; analyze calls [0, 0, 0]; cache hits [5, 5, 5]
+          per-candidate cache read: median 0.40 ms max 0.89 ms
+lead    x10 wall 10 / 11 / 16 ms; engines created [0, 0, 0]; analyze calls [0, 0, 0]; cache hits [10, 10, 10]
+          per-candidate cache read: median 0.80 ms max 3.51 ms
+
+# Memory (process RSS, MB)
+baseline before any run: 219 MB; idle after suite: 259 MB
+x5  cold: before 219-267 | peak 266-288 (max growth over before 47 MB) | after 247-257
+x10 cold: before 254-268 | peak 281-289 (max growth over before 28 MB) | after 266-269
+RSS after each cold run in order (MB): 247 249 254 267 266 268 257 255 254 266 268 269
+VmHWM at end: 297 MB; Pss after last run: 141 MB
+  rhythm x5 after-run RSS run1->run3: 247 -> 254 MB
+  rhythm x10 after-run RSS run1->run3: 267 -> 268 MB
+  lead x5 after-run RSS run1->run3: 257 -> 254 MB
+  lead x10 after-run RSS run1->run3: 266 -> 269 MB
+
+# Run 1 vs run 3 (cold wall time, s) and per-candidate inference (ms, median)
+rhythm x5 : 13.7 -> 15.7 s (+15%) ; median inference 3086 -> 3612 ms
+rhythm x10: 47.4 -> 45.9 s (-3%) ; median inference 4970 -> 5004 ms
+lead x5 : 20.2 -> 20.1 s (-1%) ; median inference 4400 -> 4946 ms
+lead x10: 51.3 -> 59.5 s (+16%) ; median inference 5596 -> 6600 ms
+run after cancel (rhythm x5): 24.9 s vs 14.5 s median of the first three (+72%)
+
+# Main isolate while the worker computes (cold runs)
+heartbeat (10 ms timer) max lateness over all cold runs: 12.9 ms (median of run maxima 8.2); p99 lateness max 2.0 ms
+frames: 48260 total in cold runs; > 33 ms: 0; > 100 ms: 0; worst frame 28.2 ms (note: UI is mostly static + spinner)
+
+# Cancel (LEAD x10 cold, cancel requested 1 s after candidate 3 started)
+end event: cancelled (during candidate index 2), candidates completed before: 2, latency cancel->stop: 413 ms, engines created 3, analyze calls 3
+candidates started: [0, 1, 2] (no start after the cancelled one: True)
+events after cancel end: none (loop broke on cancelled); RSS after cancel 269 MB
+run after cancel produced identical feature summaries to the first cold rhythm x5 run: True
+three cold rhythm x5 runs identical: True
+
+# Thermal (host sampling every ~5 s)
+samples 100 over 7.7 min; thermal status values seen: ['0']
+battery temp: start 32.0 -> end 36.1 C (max 36.1); AP: start 38.7 -> max 47.6 C; skin: start 33.6 -> max 38.0 C
+battery C / AP C at start of runs: rhythmx5#1: 32.0/38.7; rhythmx5#2: 32.1/44.7; rhythmx5#3: 32.5/46.9; rhythmx10#1: 33.2/47.6; rhythmx10#2: 33.7/42.5; rhythmx10#3: 34.1/43.0; leadx5#1: 34.5/43.8; leadx5#2: 34.7/43.9; leadx5#3: 34.8/43.6; leadx10#1: 35.0/43.9; leadx10#2: 35.5/44.5; leadx10#3: 35.8/45.0; cancel leadx10 (after candidate 3 started +1 s): 35.9/43.5; run after cancel rhythmx5: 36.0/43.4

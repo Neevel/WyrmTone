@@ -1,0 +1,64 @@
+{
+ "mode": "perf",
+ "set5": [
+  "01",
+  "03",
+  "04",
+  "06",
+  "08"
+ ],
+ "set10": [
+  "01",
+  "02",
+  "03",
+  "04",
+  "05",
+  "06",
+  "07",
+  "08",
+  "09",
+  "10"
+ ],
+ "nams": {
+  "01": {
+   "file": "nams/nam_01.nam",
+   "sha": "ee7a370810b71cdad793c31093d4db9f680c9e0c00ef82785de267e129006bdb"
+  },
+  "02": {
+   "file": "nams/nam_02.nam",
+   "sha": "e82cce6b8fe140ece1e6bc67355bab0ba57fb7d2b47420bd945f857492211f80"
+  },
+  "03": {
+   "file": "nams/nam_03.nam",
+   "sha": "fc31144d0ec3a9e8974af1d3476d67f1da990bc373bdfa10504707e3467f4442"
+  },
+  "04": {
+   "file": "nams/nam_04.nam",
+   "sha": "ed1cca5091baa6bb7945814fd5107382a5ca4a56948b7328d057878c7061ec3b"
+  },
+  "05": {
+   "file": "nams/nam_05.nam",
+   "sha": "5317db991837474c45a76a36e56768e20eb3ca95ad3c39efb3018feac017f807"
+  },
+  "06": {
+   "file": "nams/nam_06.nam",
+   "sha": "1060a12aa70ab4103a5e0b2a6efce7d4d0aa6055e6a300e942770890f447c910"
+  },
+  "07": {
+   "file": "nams/nam_07.nam",
+   "sha": "99c518dc592ae0866f98bd273b95eec03b41c9648a553e4958631b3b7d15ef5b"
+  },
+  "08": {
+   "file": "nams/nam_08.nam",
+   "sha": "7d70a61abe0c74c280906de2a57882a6f6e988b462f513e06f41882703b82b85"
+  },
+  "09": {
+   "file": "nams/nam_09.nam",
+   "sha": "f9be8c6015221b17d7731069816cc7c75af1c8df02617fd6f56f77cc04554d35"
+  },
+  "10": {
+   "file": "nams/nam_10.nam",
+   "sha": "5e17483fed693766d3bbc21428d959ef58a343de349b45d305b7e710449b525a"
+  }
+ }
+}

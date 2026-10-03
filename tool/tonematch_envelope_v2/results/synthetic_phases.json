@@ -1,0 +1,122 @@
+{
+ "4 phases: decay tau=0.15": {
+  "expected": -57.906666666666666,
+  "measured": -57.8943472234927
+ },
+ "4 phases: decay tau=0.3": {
+  "expected": -28.953333333333333,
+  "measured": -28.955639896793258
+ },
+ "4 phases: decay tau=0.6": {
+  "expected": -14.476666666666667,
+  "measured": -14.51936465628508
+ },
+ "4 phases: attack accuracy": {
+  "meanAbsErrV1": 2.201388888888889,
+  "meanAbsErrCandidate": 1.8680555555555542,
+  "maxAbsErrCandidate": 3.229166666666657,
+  "values": {
+   "instantaneous": 9.333333333333334,
+   "linear 5 ms": 10.666666666666666,
+   "linear 20 ms": 24.0,
+   "linear 40 ms": 39.33333333333333,
+   "exponential tau 10 ms": 38.66666666666667,
+   "exponential tau 30 ms": 73.33333333333334
+  }
+ },
+ "4 phases: transient strength (spike 0/1/3)": [
+  0.4134736612943577,
+  4.255467188256171,
+  9.270866985973484
+ ],
+ "4 phases: synthetic hold-out CV% attack/decay (V1 -> candidate)": {
+  "attack": [
+   11.169126527683405,
+   4.705659544251124
+  ],
+  "decay": [
+   0.12466570481195398,
+   0.06884308713290394
+  ]
+ },
+ "8 phases: decay tau=0.15": {
+  "expected": -57.906666666666666,
+  "measured": -57.90110259438164
+ },
+ "8 phases: decay tau=0.3": {
+  "expected": -28.953333333333333,
+  "measured": -28.99939145352169
+ },
+ "8 phases: decay tau=0.6": {
+  "expected": -14.476666666666667,
+  "measured": -14.553991997627346
+ },
+ "8 phases: attack accuracy": {
+  "meanAbsErrV1": 2.201388888888889,
+  "meanAbsErrCandidate": 1.4305555555555542,
+  "maxAbsErrCandidate": 2.791666666666667,
+  "values": {
+   "instantaneous": 9.333333333333334,
+   "linear 5 ms": 10.666666666666666,
+   "linear 20 ms": 24.0,
+   "linear 40 ms": 40.0,
+   "exponential tau 10 ms": 36.0,
+   "exponential tau 30 ms": 75.33333333333334
+  }
+ },
+ "8 phases: transient strength (spike 0/1/3)": [
+  0.41289284646678404,
+  4.2665861262364,
+  9.27428981639438
+ ],
+ "8 phases: synthetic hold-out CV% attack/decay (V1 -> candidate)": {
+  "attack": [
+   11.169126527683405,
+   3.448275862068962
+  ],
+  "decay": [
+   0.12466570481195398,
+   0.062102083351294454
+  ]
+ },
+ "16 phases: decay tau=0.15": {
+  "expected": -57.906666666666666,
+  "measured": -57.90253080655615
+ },
+ "16 phases: decay tau=0.3": {
+  "expected": -28.953333333333333,
+  "measured": -28.987958131996436
+ },
+ "16 phases: decay tau=0.6": {
+  "expected": -14.476666666666667,
+  "measured": -14.554399780287806
+ },
+ "16 phases: attack accuracy": {
+  "meanAbsErrV1": 2.201388888888889,
+  "meanAbsErrCandidate": 1.3125000000000004,
+  "maxAbsErrCandidate": 2.791666666666667,
+  "values": {
+   "instantaneous": 9.333333333333334,
+   "linear 5 ms": 10.666666666666666,
+   "linear 20 ms": 24.0,
+   "linear 40 ms": 40.0,
+   "exponential tau 10 ms": 37.333333333333336,
+   "exponential tau 30 ms": 76.0
+  }
+ },
+ "16 phases: transient strength (spike 0/1/3)": [
+  0.41289284646678404,
+  4.259172386352168,
+  9.273405600727221
+ ],
+ "16 phases: synthetic hold-out CV% attack/decay (V1 -> candidate)": {
+  "attack": [
+   11.169126527683405,
+   3.448275862068962
+  ],
+  "decay": [
+   0.12466570481195398,
+   0.03289142839257801
+  ]
+ }
+}

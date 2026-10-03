@@ -1,0 +1,112 @@
+[
+ {
+  "id": "01",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Fender Pano-Verb\\FNDR PANO Clean2 BAL 6V6 CAB.nam",
+  "sha": "ee7a370810b71cdad793c31093d4db9f680c9e0c00ef82785de267e129006bdb",
+  "arch": "WaveNet",
+  "ver": "0.5.4",
+  "gear_type": "amp_cab",
+  "tone_type": "overdrive",
+  "name": "FNDR PANO Clean2 BAL 6V6 CAB FREE",
+  "kb": 276
+ },
+ {
+  "id": "02",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Mesa Boogie Badlander Rectifier 100W EL34 (SignalArt reamp)\\S-[AMP] 100W BOLD CLEAN Clean-Pushed #01 (Factory).nam",
+  "sha": "e82cce6b8fe140ece1e6bc67355bab0ba57fb7d2b47420bd945f857492211f80",
+  "arch": "WaveNet",
+  "ver": "0.5.4",
+  "gear_type": "amp",
+  "tone_type": "hi_gain",
+  "name": "",
+  "kb": 289
+ },
+ {
+  "id": "03",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Marshall JVM410H with c83 mod\\JVM410_crunch_green_sd1.nam",
+  "sha": "fc31144d0ec3a9e8974af1d3476d67f1da990bc373bdfa10504707e3467f4442",
+  "arch": "WaveNet",
+  "ver": "0.5.4",
+  "gear_type": "amp",
+  "tone_type": "overdrive",
+  "name": "JVM410_crunch_green_sd1",
+  "kb": 276
+ },
+ {
+  "id": "04",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Marshall JVM410H - 100 Watt Head Boosted (Full Rig_Head)\\Marshall JVM410H Boosted - Full Rig (Standard).nam",
+  "sha": "ed1cca5091baa6bb7945814fd5107382a5ca4a56948b7328d057878c7061ec3b",
+  "arch": "WaveNet",
+  "ver": "0.5.4",
+  "gear_type": "amp",
+  "tone_type": "overdrive",
+  "name": "Marshall JVM410H Boosted - Full Rig (Standard)",
+  "kb": 276
+ },
+ {
+  "id": "05",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Bugera 6262 1 Hit Quitter.nam",
+  "sha": "5317db991837474c45a76a36e56768e20eb3ca95ad3c39efb3018feac017f807",
+  "arch": "WaveNet",
+  "ver": "0.5.2",
+  "gear_type": null,
+  "tone_type": null,
+  "name": null,
+  "kb": 289
+ },
+ {
+  "id": "06",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\EVH 5150 III 6L6 (Amp Only). Moderate Boost\\EVH 5150 III (Amp Only) Boosted (Overdrive 0 - Tone 5 - Volume 5).nam",
+  "sha": "1060a12aa70ab4103a5e0b2a6efce7d4d0aa6055e6a300e942770890f447c910",
+  "arch": "SlimmableContainer",
+  "ver": "0.7.0",
+  "gear_type": "amp",
+  "tone_type": "high-gain",
+  "name": null,
+  "kb": 287
+ },
+ {
+  "id": "07",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Mesa Boogie Badlander Rectifier 100W EL34 (SignalArt reamp)\\S-[AMP] 100W BOLD CRUSH Heavy-Solo #02 (Factory).nam",
+  "sha": "99c518dc592ae0866f98bd273b95eec03b41c9648a553e4958631b3b7d15ef5b",
+  "arch": "WaveNet",
+  "ver": "0.5.4",
+  "gear_type": "amp",
+  "tone_type": "hi_gain",
+  "name": "",
+  "kb": 288
+ },
+ {
+  "id": "08",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\Gojira (Joe Duplantier)\\GOJIRA - JOE DUPLANTIER.nam",
+  "sha": "7d70a61abe0c74c280906de2a57882a6f6e988b462f513e06f41882703b82b85",
+  "arch": "SlimmableContainer",
+  "ver": "0.7.0",
+  "gear_type": "full-rig",
+  "tone_type": "t3k-unset",
+  "name": "GOJIRA NDSP_JD RTHM1_1000e",
+  "kb": 287
+ },
+ {
+  "id": "09",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Mesa Boogie JP-2C Pack!\\JP2C Capture 12 JP Lead CH3 G9 T6 M3 B3 P6 - Emil Rohbe.nam",
+  "sha": "f9be8c6015221b17d7731069816cc7c75af1c8df02617fd6f56f77cc04554d35",
+  "arch": "WaveNet",
+  "ver": "0.5.0",
+  "gear_type": null,
+  "tone_type": null,
+  "name": null,
+  "kb": 412
+ },
+ {
+  "id": "10",
+  "path": "D:\\Desktop 3d sachen\\Desktop\\AMP Presets\\Mesa Boogie JP-2C Pack!\\JP2C Capture 20 Power Amp Only No EQ - Emil Rohbe.nam",
+  "sha": "5e17483fed693766d3bbc21428d959ef58a343de349b45d305b7e710449b525a",
+  "arch": "WaveNet",
+  "ver": "0.5.0",
+  "gear_type": null,
+  "tone_type": null,
+  "name": null,
+  "kb": 412
+ }
+]

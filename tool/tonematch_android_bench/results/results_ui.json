@@ -1,0 +1,148 @@
+{
+ "role": "lead",
+ "n": 10,
+ "warm": false,
+ "startEpochMs": 1790985497312,
+ "endEpochMs": 1790985516745,
+ "wallMs": 19432,
+ "end": {
+  "type": "cancelled",
+  "during": 4,
+  "enginesCreated": 5,
+  "analyzeCalls": 5,
+  "totalMs": 19431
+ },
+ "cancelRequestedAtMs": null,
+ "cancelLatencyMs": null,
+ "rssBeforeKb": 214376,
+ "rssPeakKb": 260940,
+ "rssAfterKb": 260000,
+ "vmHwmKb": 265552,
+ "pssAfterKb": 140651,
+ "main": {
+  "heartbeatMaxLateMs": 11.192,
+  "heartbeatP99LateMs": 1.7149999999999999,
+  "heartbeatTicks": 1942,
+  "frames": 2298,
+  "frames>16.7ms": 0,
+  "frames>33ms": 0,
+  "frames>100ms": 0,
+  "worstFrameMs": 16.408
+ },
+ "events": [
+  {
+   "type": "signal",
+   "decodeMs": 107,
+   "resampleMs": 106,
+   "deriveMs": 51,
+   "samples": 744000,
+   "derivedId": "wyrmtone-lead-v1#T15",
+   "derivedSha256": "c21ae35c2045bfe2511e635122860648c55acc06bcd36a71fde2c6e320ff1a7d"
+  },
+  {
+   "type": "candidateStart",
+   "index": 0,
+   "id": "01"
+  },
+  {
+   "type": "candidate",
+   "index": 0,
+   "id": "01",
+   "cacheHit": false,
+   "cacheReadMs": 0.14,
+   "namLoadMs": 36,
+   "inferenceMs": 3058,
+   "extractionMs": 183,
+   "cacheWriteMs": 2.522,
+   "totalMs": 3284.316,
+   "tone": {
+    "tone.centroidHz": 1609.1572815629486,
+    "tone.crestDb": 18.588935554552812,
+    "tone.sat.composite": 0.14722396881827793,
+    "tone.attackMs": 22.0
+   }
+  },
+  {
+   "type": "candidateStart",
+   "index": 1,
+   "id": "02"
+  },
+  {
+   "type": "candidate",
+   "index": 1,
+   "id": "02",
+   "cacheHit": false,
+   "cacheReadMs": 0.059,
+   "namLoadMs": 31,
+   "inferenceMs": 4862,
+   "extractionMs": 247,
+   "cacheWriteMs": 3.247,
+   "totalMs": 5146.041,
+   "tone": {
+    "tone.centroidHz": 1532.3310055548734,
+    "tone.crestDb": 15.071539813378584,
+    "tone.sat.composite": 0.3074317084774886,
+    "tone.attackMs": 16.0
+   }
+  },
+  {
+   "type": "candidateStart",
+   "index": 2,
+   "id": "03"
+  },
+  {
+   "type": "candidate",
+   "index": 2,
+   "id": "03",
+   "cacheHit": false,
+   "cacheReadMs": 0.13,
+   "namLoadMs": 43,
+   "inferenceMs": 5039,
+   "extractionMs": 247,
+   "cacheWriteMs": 44.545,
+   "totalMs": 5377.28,
+   "tone": {
+    "tone.centroidHz": 1519.1426421938081,
+    "tone.crestDb": 12.549849281689003,
+    "tone.sat.composite": 0.44853881919841343,
+    "tone.attackMs": 61.333333333333336
+   }
+  },
+  {
+   "type": "candidateStart",
+   "index": 3,
+   "id": "04"
+  },
+  {
+   "type": "candidate",
+   "index": 3,
+   "id": "04",
+   "cacheHit": false,
+   "cacheReadMs": 0.199,
+   "namLoadMs": 50,
+   "inferenceMs": 4781,
+   "extractionMs": 215,
+   "cacheWriteMs": 2.31,
+   "totalMs": 5051.924,
+   "tone": {
+    "tone.centroidHz": 966.9758792080152,
+    "tone.crestDb": 12.82171214147811,
+    "tone.sat.composite": 0.4528294348205712,
+    "tone.attackMs": 37.333333333333336
+   }
+  },
+  {
+   "type": "candidateStart",
+   "index": 4,
+   "id": "05"
+  },
+  {
+   "type": "cancelled",
+   "during": 4,
+   "enginesCreated": 5,
+   "analyzeCalls": 5,
+   "totalMs": 19431
+  }
+ ],
+ "label": "ui run leadx10"
+}
