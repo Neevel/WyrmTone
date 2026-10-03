@@ -7,13 +7,14 @@ import java.util.concurrent.atomic.AtomicBoolean
  * the exact same sequence already CONFIRMED and REPRODUCED (byte-identical
  * across two independent hardware connections, see
  * docs/MATRIBOX_OFFLINE_ANALYSIS.md, "V3A Reproduktion") by the
- * experimental [VerifiedPresetP01FullReadProbeV3A] probe -- Phase-D
- * announce/ack for Bank=User Slot=0 ([VerifiedPresetP01PhaseDReference]),
- * followed by the ten fixed part requests already confirmed for V2
- * ([VerifiedPresetP01FullReadReference]). Neither reference is duplicated
- * here; both are reused unchanged. [VerifiedPresetP01FullReadProbeV3A]
- * itself is untouched by this file and remains the historical,
- * independently verifiable diagnostic path.
+ * historical `VerifiedPresetP01FullReadProbeV3A` probe -- a Dart-side
+ * evidence record (`lib/presets/protocol_evidence.dart`,
+ * `test/support/matribox_p01_readback_fixtures.dart`), not a Kotlin class
+ * in this file tree -- its own probe runner/port were removed once this
+ * production reader superseded it. Phase-D announce/ack for Bank=User
+ * Slot=0 ([VerifiedPresetP01PhaseDReference]), followed by the ten fixed
+ * part requests already confirmed for V2 ([VerifiedPresetP01FullReadReference]).
+ * Neither reference is duplicated here; both are reused unchanged.
  *
  * Deliberately UI-independent: this class knows nothing about Flutter, the
  * diagnostics panel, or any compile-gated probe's status map.

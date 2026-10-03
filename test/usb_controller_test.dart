@@ -342,6 +342,54 @@ void main() {
     expect(service.midiReceiveSource.active, isFalse);
   });
 
+  group('reconnectMatriboxIfNeeded (connection-lifecycle fix: active rediscovery, no push event needed)', () {
+    test('is a no-op when already connected', () async {
+      service.devices = [matriboxDevice(hasPermission: true)];
+      service.midiDevices = [matriboxMidiDevice()];
+      await controller.initialize();
+      expect(service.midiOpenCalls, 1);
+      expect(controller.midiConnection.isOpen, isTrue);
+
+      await controller.reconnectMatriboxIfNeeded();
+      expect(service.midiOpenCalls, 1, reason: 'already connected -- nothing to reopen');
+    });
+
+    test(
+      'reopens a still-attached, already-permitted Matribox whose MIDI session was silently '
+      'torn down, WITHOUT any attach/detach/midiDevicesChanged event -- the exact real-hardware '
+      'gap (second sequential NAM transfer needing a USB unplug/replug) this fix closes',
+      () async {
+        service.devices = [matriboxDevice(hasPermission: true)];
+        service.midiDevices = [matriboxMidiDevice()];
+        await controller.initialize();
+        expect(service.midiOpenCalls, 1);
+        expect(controller.midiConnection.isOpen, isTrue);
+
+        // Simulate the native side's MIDI session having gone stale (e.g. a
+        // transparent reset the OS never reported as attach/detach) without
+        // delivering ANY event to Dart -- the scenario a purely push-driven
+        // model cannot recover from on its own.
+        service.midiConnection = const MidiConnectionStatus(isOpen: false);
+        expect(controller.midiConnection.isOpen, isTrue, reason: 'cached state is still stale until queried');
+
+        await controller.reconnectMatriboxIfNeeded();
+
+        expect(service.midiOpenCalls, 2, reason: 'actively reopened, not just waited for an event');
+        expect(controller.midiConnection.isOpen, isTrue);
+      },
+    );
+
+    test('does nothing harmful when the device is genuinely gone (no stale reopen, no crash)', () async {
+      await controller.initialize();
+      expect(controller.midiConnection.isOpen, isFalse);
+
+      await controller.reconnectMatriboxIfNeeded();
+
+      expect(controller.midiConnection.isOpen, isFalse);
+      expect(service.midiOpenCalls, 0);
+    });
+  });
+
   test(
     'switching DNAfx to Matribox closes before opening new device',
     () async {

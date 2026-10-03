@@ -21,6 +21,11 @@ class UsbController extends ChangeNotifier {
   late final MidiCaptureController capture;
   bool rawMatriboxFailed = false;
 
+  /// The underlying transport, for product flows (e.g. the NAM → Matribox
+  /// transfer) that need it directly rather than through this controller's
+  /// own connection-state/device-list surface.
+  UsbService get service => _service;
+
   final UsbService _service;
   final DateTime Function() _clock;
   StreamSubscription<Map<Object?, Object?>>? _eventSubscription;
@@ -237,6 +242,26 @@ class UsbController extends ChangeNotifier {
         'Keine Ports verbunden und keine MIDI-Daten gesendet.',
       );
     });
+  }
+
+  /// Product NAM transfer V1.1 connection-lifecycle fix: actively re-checks
+  /// USB/MIDI device state and retries auto-connect, instead of relying only
+  /// on push events (USB attach/detach broadcasts, MIDI device callbacks).
+  /// The passive model assumes every state change that matters is delivered
+  /// as an event; if the Matribox's MIDI session was torn down for a reason
+  /// this controller observed before the current screen existed (or the
+  /// physical device recovers in a way that does not reliably produce a
+  /// fresh event this app can act on in time), nothing retries on its own.
+  /// The product NAM transfer flow calls this when it reaches its "Matribox
+  /// verbinden" step for a new transfer; a no-op if already connected.
+  Future<void> reconnectMatriboxIfNeeded() async {
+    // The cached midiConnection may itself be the stale value this method
+    // exists to correct -- refresh() re-queries the native side first, the
+    // check against a possibly-outdated flag comes only after.
+    await refresh();
+    if (midiConnection.isOpen) return;
+    _autoMidiOpenAttempted = false;
+    await _maybeAutoConnect();
   }
 
   Future<void> closeMidi() => _guard(() async {

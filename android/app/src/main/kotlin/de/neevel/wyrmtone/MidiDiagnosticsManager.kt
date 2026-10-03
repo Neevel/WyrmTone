@@ -19,6 +19,8 @@ class MidiDiagnosticsManager(
     context: Context,
     private val emitEvent: (Map<String, Any?>) -> Unit,
     private val emitCapture: (Map<String, Any?>) -> Unit,
+    /** Product NAM transfer V1: real per-ACK progress, see [executeNamCloneTransferSession]. */
+    private val emitNamTransferProgress: (Map<String, Any?>) -> Unit = {},
 ) {
     private val midiManager = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
         context.getSystemService(Context.MIDI_SERVICE) as? MidiManager
@@ -83,6 +85,16 @@ class MidiDiagnosticsManager(
             })
         },
     )
+
+    // V5B.2a: the dedicated bidirectional NAM-transfer session. A fresh
+    // instance per executeNamCloneTransferSession call (one-shot per
+    // instance, mirrors V5WriteBudget); the reference here exists ONLY so
+    // startCapture() can refuse to start the passive monitor while a
+    // session is active (mutual exclusion in BOTH directions -- the
+    // other direction already comes for free from ProbeEligibility.check()
+    // requiring !monitoring, which every session run goes through too).
+    private var currentNamTransferSession: MatriboxNamTransferSession? = null
+
     private val batchBuffer = MidiCaptureBatchBuffer()
     private val monitor = PassiveMidiMonitor(
         openOutput = { number ->
@@ -212,13 +224,162 @@ class MidiDiagnosticsManager(
         ++openGeneration
         presetReader.cancel()
         toneTransferSession.cancel()
+        currentNamTransferSession?.cancel()
         stopCapture()
         session.close()
         openedMidiDevice = null
         openedInfo = null
     }
 
+    /**
+     * Product NAM transfer V1 hardware-certification fix: cancels ONLY an
+     * active NAM Clone-transfer session, if one exists -- unlike
+     * [closeDevice] this never touches the USB connection, the passive
+     * monitor, the preset reader or the tone-transfer session. This is what
+     * the product UI's "Abbrechen" button during a transfer must call; it
+     * previously called the platform channel's `closeDevice`, which only
+     * reaches [UsbConnectionManager] and never this manager at all -- so
+     * cancelling from the UI silently did nothing. No-op if no session is
+     * active (never throws).
+     */
+    fun cancelNamCloneTransferSession() {
+        currentNamTransferSession?.cancel()
+    }
+
+    /**
+     * V5B.1: sends exactly [bytes] on the Matribox input port 0, opening it
+     * on first use. This is the ONE place raw bytes from Dart are accepted
+     * -- they are validated into an opaque [NamCloneTransferFrame]
+     * (structure, Clone-5 slot, checksum) via
+     * [MatriboxNamCloneTransferReference.parseValidated] BEFORE the port
+     * ever sees them, exactly like [MatriboxFullLiveCodec.validate] guards
+     * the tone-transfer sender. No slot, no NAM path, no protocol type is
+     * accepted -- only the frame bytes; the protocol decision (which
+     * frame, what order) was made entirely upstream, offline, by
+     * `v5_transfer_plan.dart`. Also refuses unless the device is uniquely,
+     * currently the Matribox (same eligibility shape
+     * [MatriboxToneTransferSession] uses) and, inside the port itself,
+     * unless [BuildConfig.REAL_MATRIBOX_WRITE] is enabled.
+     */
+    fun sendNamCloneTransferFrame(bytes: ByteArray): Map<String, Any?> {
+        val frame = MatriboxNamCloneTransferReference.parseValidated(bytes)
+        val current = probeEligibility(BuildConfig.REAL_MATRIBOX_WRITE)
+        current.check()
+        val port = openNamCloneSendPort()
+        try {
+            port.sendFrame(frame)
+        } finally {
+            port.close()
+        }
+        return mapOf("sent" to true, "byteCount" to bytes.size)
+    }
+
+    /**
+     * The ONE place `MidiInputPort` is opened for the NAM Clone-transfer
+     * family, shared by [sendNamCloneTransferFrame] and
+     * [executeNamCloneTransferSession] -- a single frame's send closes its
+     * port immediately after (see [sendNamCloneTransferFrame]); a session
+     * keeps its port open for the run's whole duration and closes it
+     * itself ([MatriboxNamTransferSession]'s own cleanup).
+     */
+    private fun openNamCloneSendPort(): MatriboxNamCloneSendPort = MatriboxNamCloneSendPortImpl(
+        requireNotNull(openedMidiDevice?.openInputPort(0)) {
+            "Matribox-Input-Port 0 konnte nicht geöffnet werden."
+        },
+    )
+
+    /**
+     * Product NAM transfer V1.1: [executeNamCloneTransferSession] no longer
+     * carries a process-lifetime write budget (removed -- see below). This
+     * is the narrower, correct per-attempt guard: refuses a NEW call while
+     * a PREVIOUS session this manager started is still [MatriboxNamTransferSession.isActive],
+     * mirroring the existing passive-monitor mutual-exclusion pattern (see
+     * [startCapture]). A session that has already finished (success, fail
+     * or cancel) is never active, so this never blocks a later, freshly
+     * user-confirmed attempt.
+     */
+    private fun requireNoActiveNamTransferSession() {
+        check(currentNamTransferSession?.isActive != true) {
+            "Eine NAM-Clone-Transfer-Sitzung läuft bereits; kein zweiter gleichzeitiger Versuch."
+        }
+    }
+
+    /**
+     * V5B.2a: the real, strict stop-and-wait NAM Clone-transfer path.
+     * Validates every frame BEFORE opening anything (nothing is sent if
+     * even one frame is malformed), then runs the dedicated
+     * [MatriboxNamTransferSession], which owns the send AND receive ports
+     * for the whole run. Refuses while the passive monitor is active (via
+     * [ProbeEligibility.check]'s existing `!monitoring` requirement) and
+     * itself blocks the passive monitor from starting for its duration
+     * (see [startCapture]).
+     *
+     * Product NAM transfer V1.1: this used to additionally refuse any
+     * SECOND call for the whole lifetime of the app process (a
+     * certification-only safety rail from the first real-hardware
+     * milestone, "V5B.2d: a process-lifetime write budget"). That guard is
+     * REMOVED here -- it is not desired product behaviour: the finished
+     * product must support multiple sequential NAM transfers in one
+     * session. Per-attempt safety is unchanged and unweakened: each call
+     * still builds a brand new, one-shot [MatriboxNamTransferSession]
+     * (its own `used` flag refuses a second [MatriboxNamTransferSession.execute]
+     * on the SAME instance), still validates every frame before opening
+     * anything, still requires [ProbeEligibility.check] to pass, and
+     * [requireNoActiveNamTransferSession] still refuses two sessions
+     * running at once.
+     */
+    fun executeNamCloneTransferSession(rawFrames: List<ByteArray>): Map<String, Any?> {
+        requireNoActiveNamTransferSession()
+        val frames = rawFrames.map { MatriboxNamCloneTransferReference.parseValidated(it) }
+        val output = requireNotNull(
+            openedInfo?.ports?.singleOrNull { it.type == MidiDeviceInfo.PortInfo.TYPE_OUTPUT },
+        ) { "Kein eindeutiger Matribox-Output-Port vorhanden." }
+        val session = MatriboxNamTransferSession(
+            eligibility = { probeEligibility(BuildConfig.REAL_MATRIBOX_WRITE) },
+            openSendPort = ::openNamCloneSendPort,
+            openReceivePort = {
+                val port = requireNotNull(openedMidiDevice?.openOutputPort(output.portNumber)) {
+                    "Matribox-Output-Port konnte nicht geöffnet werden."
+                }
+                object : ReceiveOnlyMidiPort {
+                    private var receiver: MidiReceiver? = null
+                    override fun connect(receive: (ByteArray, Long) -> Unit) {
+                        val receiving = object : MidiReceiver() {
+                            override fun onSend(data: ByteArray, offset: Int, count: Int, timestamp: Long) {
+                                if (count in 1..4096 && offset >= 0 && offset <= data.size - count) {
+                                    receive(data.copyOfRange(offset, offset + count), timestamp)
+                                }
+                            }
+                        }
+                        receiver = receiving
+                        port.connect(receiving)
+                    }
+                    override fun disconnect() { receiver?.let { port.disconnect(it) }; receiver = null }
+                    override fun close() { port.close() }
+                }
+            },
+            onProgress = { confirmedCount, lastConfirmedBlock, totalFrames ->
+                emitNamTransferProgress(
+                    mapOf(
+                        "confirmedCount" to confirmedCount,
+                        "lastConfirmedBlock" to lastConfirmedBlock,
+                        "totalFrames" to totalFrames,
+                    ),
+                )
+            },
+        )
+        currentNamTransferSession = session
+        return try {
+            session.execute(frames)
+        } finally {
+            currentNamTransferSession = null
+        }
+    }
+
     fun startCapture(): Int {
+        require(currentNamTransferSession?.isActive != true) {
+            "NAM-Transfer-Sitzung läuft; passiver Monitor bleibt deaktiviert, bis sie beendet ist."
+        }
         require(session.isOpen && openedMidiDevice != null) { "Matribox-MIDI-Gerät ist nicht geöffnet." }
         require(usbManager.deviceList[session.usbDeviceName] != null) { "Matribox-USB-Gerät wurde getrennt." }
         val info = requireNotNull(openedInfo)
@@ -259,6 +420,7 @@ class MidiDiagnosticsManager(
     fun onUsbDetached(deviceName: String?) {
         presetReader.cancel()
         toneTransferSession.detached(deviceName)
+        currentNamTransferSession?.cancel()
         ++openGeneration
         if (deviceName != null && session.usbDeviceName == deviceName) {
             closeDevice(); connectionClosed("usbDetached")

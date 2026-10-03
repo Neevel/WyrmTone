@@ -37,3 +37,5 @@ A passive USB/MIDI capture of an official Sonicake editor actually uploading an 
 analysed the same way the preset-transfer evidence was (`docs/MATRIBOX_OFFLINE_ANALYSIS.md`,
 `docs/MIDI_CAPTURE.md`): the exact message framing, any chunking, and the acknowledgement/commit
 step. Until that capture exists, `supportsIrTransfer`/`supportsNamTransfer` stay `notImplemented`.
+
+Stand der NAM-Protokollrecherche (Offline-Analyse, noch kein Capture eines NAM-Imports): [MATRIBOX_NAM_TRANSFER_RESEARCH.md](MATRIBOX_NAM_TRANSFER_RESEARCH.md).

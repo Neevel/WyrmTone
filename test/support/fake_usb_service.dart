@@ -29,6 +29,11 @@ class FakeUsbService implements UsbService {
   @override
   Stream<Map<Object?, Object?>> get events => eventController.stream;
 
+  final StreamController<Map<Object?, Object?>> namTransferProgressController = StreamController.broadcast();
+
+  @override
+  Stream<Map<Object?, Object?>> get namTransferProgress => namTransferProgressController.stream;
+
   @override
   Future<List<UsbDeviceInfo>> listUsbDevices() async => devices;
 
@@ -81,6 +86,68 @@ class FakeUsbService implements UsbService {
   Future<MidiConnectionStatus> getMidiConnectionStatus() async =>
       midiConnection;
 
+  /// V5B.1: every frame passed to [sendNamCloneTransferFrame], in call
+  /// order, exactly as received -- for byte-integrity assertions in tests.
+  final List<List<int>> sentNamCloneFrames = [];
+  PlatformException? sendNamCloneTransferFrameError;
+
+  @override
+  Future<void> sendNamCloneTransferFrame(List<int> bytes) async {
+    if (sendNamCloneTransferFrameError case final error?) throw error;
+    sentNamCloneFrames.add(List<int>.unmodifiable(bytes));
+  }
+
+  /// V5B.2a/b: every session execution's frames, in call order.
+  final List<List<List<int>>> namCloneSessionCalls = [];
+  Map<Object?, Object?> namCloneSessionResult = const {'outcome': 'SUCCESS'};
+  PlatformException? namCloneSessionError;
+
+  /// Every [executeNamCloneTransferSession] invocation, whether it throws
+  /// [namCloneSessionError] or succeeds -- unlike [namCloneSessionCalls]
+  /// (which only records calls that got past the error check), this counts
+  /// the method-channel call itself, for asserting "no automatic retry"
+  /// even when every attempt fails before being recorded as sent.
+  int namCloneSessionInvocations = 0;
+
+  /// Product NAM transfer V1: when true (the default), [executeNamCloneTransferSession]
+  /// emits one [namTransferProgress] event per frame before returning, simulating a
+  /// real transfer's per-ACK progress -- set false for tests that drive
+  /// [namTransferProgressController] manually (partial progress, out-of-order, etc.).
+  bool autoEmitNamTransferProgress = true;
+
+  @override
+  Future<Map<Object?, Object?>> executeNamCloneTransferSession(List<List<int>> frames) async {
+    namCloneSessionInvocations++;
+    if (namCloneSessionError case final error?) throw error;
+    namCloneSessionCalls.add(frames.map((f) => List<int>.unmodifiable(f)).toList());
+    // A real session always takes real wall-clock time; a deliberate delay
+    // here (independent of autoEmitNamTransferProgress) gives tests a real
+    // window to emit progress events manually before this resolves, instead
+    // of racing a same-microtask completion.
+    await Future<void>.delayed(const Duration(milliseconds: 5));
+    if (autoEmitNamTransferProgress) {
+      for (var i = 0; i < frames.length; i++) {
+        namTransferProgressController.add({
+          'confirmedCount': i + 1,
+          'lastConfirmedBlock': i,
+          'totalFrames': frames.length,
+        });
+        await Future<void>.microtask(() {});
+      }
+    }
+    return namCloneSessionResult;
+  }
+
+  /// Product NAM transfer V1 hardware-certification fix: every
+  /// [cancelNamCloneTransferSession] call, in order -- for asserting the
+  /// product cancel action reaches the right, narrow native call.
+  int cancelNamCloneTransferSessionCalls = 0;
+
+  @override
+  Future<void> cancelNamCloneTransferSession() async {
+    cancelNamCloneTransferSessionCalls++;
+  }
+
   Future<void> emit(Map<Object?, Object?> event) async {
     eventController.add(event);
     // Let the controller's asynchronous event handler and both service reads
@@ -92,6 +159,7 @@ class FakeUsbService implements UsbService {
 
   Future<void> dispose() async {
     await eventController.close();
+    await namTransferProgressController.close();
     await midiReceiveSource.dispose();
   }
 }

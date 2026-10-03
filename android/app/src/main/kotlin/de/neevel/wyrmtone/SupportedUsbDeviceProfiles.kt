@@ -40,7 +40,7 @@ object MatriboxUsbDeviceProfile : SupportedUsbDeviceProfile {
     override val type = SupportedUsbDeviceType.SONICAKE_MATRIBOX_ONE
     override val vendorId = 0x84EF
     override val productId = 0x0054
-    override val displayName = "Sonicake Matribox 1 – Kandidat"
+    override val displayName = "Sonicake Matribox 1"
     override val forceClaim = false
     override val expectedDescription =
         "Interface 3/Alt 0, Klasse 1/Subklasse 3, Bulk-IN 0x83 (64 Byte) und Bulk-OUT 0x03 (256 Byte)"

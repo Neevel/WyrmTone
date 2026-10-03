@@ -8,19 +8,30 @@ class MethodChannelUsbService implements UsbService {
   MethodChannelUsbService({
     MethodChannel? methodChannel,
     EventChannel? eventChannel,
+    EventChannel? namTransferProgressChannel,
   }) : _methods = methodChannel ?? const MethodChannel(_methodChannelName),
-       _events = eventChannel ?? const EventChannel(_eventChannelName);
+       _events = eventChannel ?? const EventChannel(_eventChannelName),
+       _namTransferProgress =
+           namTransferProgressChannel ?? const EventChannel(_namTransferProgressChannelName);
 
   static const _methodChannelName = 'de.neevel.wyrmtone/usb_methods';
   static const _eventChannelName = 'de.neevel.wyrmtone/usb_events';
+  static const _namTransferProgressChannelName = 'de.neevel.wyrmtone/nam_transfer_progress';
 
   final MethodChannel _methods;
   final EventChannel _events;
+  final EventChannel _namTransferProgress;
   @override
   final MidiReceiveSource midiReceiveSource = MethodChannelMidiReceiveSource();
 
   @override
   Stream<Map<Object?, Object?>> get events => _events
+      .receiveBroadcastStream()
+      .where((event) => event is Map<Object?, Object?>)
+      .cast<Map<Object?, Object?>>();
+
+  @override
+  Stream<Map<Object?, Object?>> get namTransferProgress => _namTransferProgress
       .receiveBroadcastStream()
       .where((event) => event is Map<Object?, Object?>)
       .cast<Map<Object?, Object?>>();
@@ -88,4 +99,22 @@ class MethodChannelUsbService implements UsbService {
     );
     return MidiConnectionStatus.fromMap(result ?? const {});
   }
+
+  @override
+  Future<void> sendNamCloneTransferFrame(List<int> bytes) => _methods.invokeMethod(
+    'sendNamCloneTransferFrame',
+    <String, Object?>{'bytes': Uint8List.fromList(bytes)},
+  );
+
+  @override
+  Future<Map<Object?, Object?>> executeNamCloneTransferSession(List<List<int>> frames) async {
+    final result = await _methods.invokeMapMethod<Object?, Object?>(
+      'executeNamCloneTransferSession',
+      <String, Object?>{'frames': [for (final f in frames) Uint8List.fromList(f)]},
+    );
+    return result ?? const {};
+  }
+
+  @override
+  Future<void> cancelNamCloneTransferSession() => _methods.invokeMethod('cancelNamCloneTransferSession');
 }

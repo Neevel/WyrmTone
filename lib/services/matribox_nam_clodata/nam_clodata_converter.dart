@@ -1,0 +1,252 @@
+import 'dart:typed_data';
+
+import 'clone_data.dart';
+import 'engine/r8b_resampler.dart';
+import 'engine/stages.dart';
+
+/// Offline NAM → CloData converter -- the frozen, hardware-validated
+/// estimator the product NAM preparation pipeline runs on-device.
+///
+/// Reproduces the official editor's conversion of the reference recording
+/// (`48000.wav`) and the NAM model output (`nam_output_wav.wav`) into the
+/// 8,232-byte CloData block, byte for byte. The editor's identification
+/// engine (non-linearity fit, spectral estimation, iterative FIR fit, 48 kHz →
+/// 44.1 kHz resampling) is re-implemented in `engine/`, including the exact
+/// operation order of its single-precision arithmetic and of the Windows UCRT
+/// math routines it calls. The result depends on the platform `sin`, `cos`,
+/// `exp`, `pow` for doubles (verified on Windows).
+///
+/// Nothing here talks to hardware; the output is only a byte buffer.
+class MatriboxNamCloDataConverter {
+  const MatriboxNamCloDataConverter();
+
+  /// Observed reference run: 70 s at 48 kHz.
+  static const referenceSampleRate = 48000;
+  static const referenceFrames = 3360000;
+
+  // 0x20..0x87: `VTSI`, 0x1288, zeros, 0x1200 and the constant filter block.
+  static final Uint8List _headerAndConstants = _hex(
+    '565453498812000000000000000000000000000000120000'
+    '000000000000f03f00000000000000000000000000000000'
+    '00000000000000000000000000000000000000c0b9e1ef3f'
+    '000000c0b9e1ffbf000000c0b9e1ef3f00000060abe1ffbf'
+    '0000004090c3ef3f',
+  );
+
+  /// Converts the reference/model-output pair for [fileName]. Both WAVs are
+  /// validated (48 kHz, 3,360,000 frames, no NaN/Inf); invalid input throws
+  /// [FormatException] and never yields a buffer. The first channel of each
+  /// file is used. [log] receives coarse progress messages (about 10 s run).
+  MatriboxCloDataConversion convert({
+    required Uint8List referenceWav,
+    required Uint8List modelOutputWav,
+    required String fileName,
+    void Function(String message)? log,
+  }) {
+    final reference = MatriboxNamWav.parse(referenceWav);
+    final output = MatriboxNamWav.parse(modelOutputWav);
+    for (final wav in [reference, output]) {
+      if (wav.sampleRate != referenceSampleRate) {
+        throw FormatException(
+          'WAV sample rate must be $referenceSampleRate Hz, got ${wav.sampleRate}.',
+        );
+      }
+      if (wav.frames != referenceFrames) {
+        throw FormatException(
+          'WAV must have $referenceFrames frames, got ${wav.frames}.',
+        );
+      }
+    }
+    final x = Float32List(engineLength)..setAll(0, reference.samples);
+    final y = Float32List(engineLength)..setAll(0, output.samples);
+    final engine = runEngine(x, y, log: log);
+    final bytes = Uint8List(MatriboxCloneData.totalLength);
+    bytes.setRange(0, 16, nameBytes(fileName));
+    bytes.setRange(
+      0x20,
+      0x20 + _headerAndConstants.length,
+      _headerAndConstants,
+    );
+    final view = ByteData.sublistView(bytes);
+    for (var i = 0; i < 4; i++) {
+      view.setFloat32(0x88 + 4 * i, engine.params.values[i], Endian.little);
+    }
+    view.setUint32(0x98, 0, Endian.little);
+    view.setUint32(0x9c, 128, Endian.little);
+    view.setUint32(0xa0, MatriboxCloneData.firFirstPartition, Endian.little);
+    view.setUint32(0xa4, MatriboxCloneData.firSecondPartition, Endian.little);
+    final first = resample48to44(engine.fir1);
+    final second = resample48to44(engine.fir2x4);
+    for (var i = 0; i < first.length; i++) {
+      view.setFloat32(0xa8 + 4 * i, first[i], Endian.little);
+    }
+    for (var i = 0; i < 1024; i++) {
+      view.setFloat32(0xa8 + 4 * (128 + i), second[i], Endian.little);
+    }
+    bytes.fillRange(bytes.length - 8, bytes.length, 0xff);
+    return MatriboxCloDataConversion._(bytes, const []);
+  }
+
+  /// File name without `.nam`, at most 16 units, one byte per unit (the
+  /// editor stores the low byte of each code point; behaviour beyond ASCII is
+  /// UNKNOWN), NUL padded.
+  static Uint8List nameBytes(String fileName) {
+    final stem = fileName.toLowerCase().endsWith('.nam')
+        ? fileName.substring(0, fileName.length - 4)
+        : fileName;
+    final units = stem.codeUnits;
+    final out = Uint8List(MatriboxCloneData.nameLength);
+    for (var i = 0; i < units.length && i < out.length; i++) {
+      out[i] = units[i] & 0xff;
+    }
+    return out;
+  }
+
+  static Uint8List _hex(String hex) => Uint8List.fromList([
+    for (var i = 0; i < hex.length; i += 2)
+      int.parse(hex.substring(i, i + 2), radix: 16),
+  ]);
+}
+
+class MatriboxCloDataRange {
+  const MatriboxCloDataRange({
+    required this.start,
+    required this.end,
+    required this.reason,
+  });
+
+  final int start;
+  final int end;
+  final String reason;
+
+  int get length => end - start;
+}
+
+class MatriboxCloDataIncompleteError extends StateError {
+  MatriboxCloDataIncompleteError(int bytes)
+    : super('CloData has $bytes ungenerated bytes; converter is not complete.');
+}
+
+class MatriboxCloDataConversion {
+  MatriboxCloDataConversion._(this.bytes, this.unsolved);
+
+  /// 8,232 bytes. Every byte inside [unsolved] (currently none) is zero and
+  /// NOT a valid value.
+  final Uint8List bytes;
+  final List<MatriboxCloDataRange> unsolved;
+
+  int get unsolvedByteCount =>
+      unsolved.fold(0, (sum, range) => sum + range.length);
+  bool get isComplete => unsolved.isEmpty;
+
+  Uint8List requireComplete() {
+    if (!isComplete) throw MatriboxCloDataIncompleteError(unsolvedByteCount);
+    return bytes;
+  }
+
+  /// Number of bytes (outside [unsolved]) that equal [official].
+  int matchingGeneratedBytes(Uint8List official) {
+    var count = 0;
+    for (var i = 0; i < bytes.length; i++) {
+      if (unsolved.any((range) => i >= range.start && i < range.end)) continue;
+      if (bytes[i] == official[i]) count++;
+    }
+    return count;
+  }
+}
+
+/// WAV reader for the converter: RIFF/WAVE, PCM 16/24 or IEEE float 32,
+/// mono or stereo. Only the first channel is decoded (PCM scaled by
+/// 1/2^(bits-1)).
+class MatriboxNamWav {
+  MatriboxNamWav._(
+    this.sampleRate,
+    this.channels,
+    this.bitsPerSample,
+    this.frames,
+    this.samples,
+  );
+
+  final int sampleRate;
+  final int channels;
+  final int bitsPerSample;
+  final int frames;
+
+  /// First channel as float32.
+  final Float32List samples;
+
+  static MatriboxNamWav parse(Uint8List bytes) {
+    if (bytes.length < 12 ||
+        String.fromCharCodes(bytes.sublist(0, 4)) != 'RIFF' ||
+        String.fromCharCodes(bytes.sublist(8, 12)) != 'WAVE') {
+      throw const FormatException('Not a RIFF/WAVE file.');
+    }
+    final view = ByteData.sublistView(bytes);
+    int? format;
+    var channels = 0, rate = 0, bits = 0;
+    var offset = 12;
+    while (offset + 8 <= bytes.length) {
+      final id = String.fromCharCodes(bytes.sublist(offset, offset + 4));
+      final size = view.getUint32(offset + 4, Endian.little);
+      final body = offset + 8;
+      if (id == 'fmt ') {
+        if (size < 16 || body + 16 > bytes.length) {
+          throw const FormatException('Truncated fmt chunk.');
+        }
+        format = view.getUint16(body, Endian.little);
+        channels = view.getUint16(body + 2, Endian.little);
+        rate = view.getUint32(body + 4, Endian.little);
+        bits = view.getUint16(body + 14, Endian.little);
+        if (format == 0xfffe && size >= 26 && body + 26 <= bytes.length) {
+          format = view.getUint16(body + 24, Endian.little);
+        }
+      } else if (id == 'data') {
+        if (format == null) {
+          throw const FormatException('data chunk before fmt chunk.');
+        }
+        final isFloat = format == 3;
+        if (!(format == 1 && (bits == 16 || bits == 24)) &&
+            !(isFloat && bits == 32)) {
+          throw FormatException('Unsupported WAV format $format/$bits bit.');
+        }
+        if (channels < 1 || channels > 2) {
+          throw FormatException('Unsupported channel count $channels.');
+        }
+        if (body + size > bytes.length) {
+          throw const FormatException('Truncated data chunk.');
+        }
+        final frameBytes = channels * bits ~/ 8;
+        if (size % frameBytes != 0) {
+          throw const FormatException(
+            'data chunk is not a whole number of frames.',
+          );
+        }
+        final frames = size ~/ frameBytes;
+        if (isFloat) {
+          for (var i = body; i < body + size; i += 4) {
+            final v = view.getFloat32(i, Endian.little);
+            if (v.isNaN || v.isInfinite) {
+              throw const FormatException('WAV contains NaN or Inf.');
+            }
+          }
+        }
+        final samples = Float32List(frames);
+        for (var i = 0; i < frames; i++) {
+          final at = body + i * frameBytes;
+          if (isFloat) {
+            samples[i] = view.getFloat32(at, Endian.little);
+          } else if (bits == 16) {
+            samples[i] = view.getInt16(at, Endian.little) / 32768.0;
+          } else {
+            var v = bytes[at] | (bytes[at + 1] << 8) | (bytes[at + 2] << 16);
+            if (v >= 0x800000) v -= 0x1000000;
+            samples[i] = v / 8388608.0;
+          }
+        }
+        return MatriboxNamWav._(rate, channels, bits, frames, samples);
+      }
+      offset = body + size + (size & 1);
+    }
+    throw const FormatException('No data chunk.');
+  }
+}
