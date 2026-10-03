@@ -1,3 +1,7 @@
+import 'dart:convert';
+
+import 'package:flutter/services.dart' show rootBundle;
+
 import 'canonical_preset.dart';
 import 'protocol_evidence.dart';
 
@@ -74,3 +78,11 @@ class DevicePresetCatalog {
     return EvidenceLevel.observed;
   }
 }
+
+Future<DevicePresetCatalog>? _catalogFuture;
+
+/// The bundled Matribox preset catalog, loaded once.
+Future<DevicePresetCatalog> loadDevicePresetCatalog() =>
+    _catalogFuture ??= rootBundle
+        .loadString('assets/catalog/matribox_preset_catalog.json')
+        .then((text) => DevicePresetCatalog(objectMap(jsonDecode(text))));

@@ -264,7 +264,7 @@ class Tone3000Controller extends ChangeNotifier {
       );
       await _reloadNamCaptures();
       message =
-          'NAM-A1-Capture lokal gespeichert und für Matribox 1 vorgemerkt.';
+          'NAM heruntergeladen. Tippe in der Bibliothek auf das NAM, um es auf die Matribox zu übertragen.';
       return true;
     } on ExistingNamFileException catch (error) {
       message = 'NAM_EXISTS:${error.fileName}';

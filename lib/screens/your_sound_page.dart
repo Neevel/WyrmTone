@@ -12,7 +12,7 @@ import '../sounds/sound_session.dart';
 import '../ui/preset_slot_picker.dart';
 import '../ui/wyrm_components.dart';
 import '../ui/wyrm_design.dart';
-import 'preset_workspace_page.dart';
+import 'matribox_channel_clients.dart' show matriboxToneTransferEnabled;
 import 'sound_detail_page.dart';
 import '../presets/device_catalog.dart';
 import 'device_prepare_page.dart';
@@ -43,7 +43,15 @@ Future<void> openYourSound(
 /// The result of the sound flow: the sound for this guitar and tuning, what was adjusted, how it
 /// sounds in words and bars, and (separately) what can be done with a device.
 class YourSoundPage extends StatefulWidget {
-  const YourSoundPage({required this.controller, required this.session, this.usbController, this.openProfile, this.loadCatalog, super.key});
+  const YourSoundPage({
+    required this.controller,
+    required this.session,
+    this.usbController,
+    this.openProfile,
+    this.loadCatalog,
+    this.presetTransferAvailable = matriboxToneTransferEnabled,
+    super.key,
+  });
   final RecommendationController controller;
   final SoundSession session;
 
@@ -53,6 +61,10 @@ class YourSoundPage extends StatefulWidget {
 
   /// Loads the device catalog (tests inject a file-based loader).
   final Future<DevicePresetCatalog> Function()? loadCatalog;
+
+  /// Whether a sound plan can really be sent to the Matribox. Only a developer build with the
+  /// explicit compile-time gate can; a normal build must never offer what it cannot do.
+  final bool presetTransferAvailable;
 
   @override
   State<YourSoundPage> createState() => _YourSoundPageState();
@@ -65,6 +77,42 @@ class _YourSoundPageState extends State<YourSoundPage> {
   /// anything by itself -- see [MatriboxTransferSlots]. There is deliberately no default: the user
   /// chooses a P11..P99 slot consciously.
   int? _selectedSlot;
+
+  @override
+  void initState() {
+    super.initState();
+    widget.usbController?.addListener(_adoptConnectedDevice);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _adoptConnectedDevice());
+  }
+
+  @override
+  void dispose() {
+    widget.usbController?.removeListener(_adoptConnectedDevice);
+    super.dispose();
+  }
+
+  /// A supported device that is actually connected is the sound's target, unless a device was
+  /// already chosen. Never replaces an existing choice.
+  void _adoptConnectedDevice() {
+    final id = widget.usbController?.supportedDevice?.deviceAdapter?.id;
+    if (!mounted || widget.controller.hasTargetDevice || id == null) return;
+    _chooseDevice(id);
+  }
+
+  Future<void> _chooseDevice(TargetDeviceId id) async {
+    final c = widget.controller;
+    if (c.hasTargetDevice && id == c.selectedTargetDevice) return;
+    final namId = c.offlineDraft?.selectedNamId;
+    c.selectTargetDevice(id);
+    final selection = widget.session.current;
+    if (selection != null) await widget.session.use(selection, remember: false, selectedNamId: namId);
+  }
+
+  ToneDeviceAdapter? _chosenAdapter() {
+    final c = widget.controller;
+    if (!c.hasTargetDevice) return null;
+    return toneDeviceAdapters.firstWhere((a) => a.id == c.selectedTargetDevice);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +174,11 @@ class _YourSoundPageState extends State<YourSoundPage> {
                               ],
                             ),
                             const SizedBox(height: WyrmTokens.space12),
-                            const Text('Dieser Sound ist auf deinem Gerät nur vorbereitet und noch nicht übertragen.'),
+                            Text(
+                              _chosenAdapter() == null
+                                  ? 'Dieser Sound ist nur vorbereitet und noch nicht übertragen.'
+                                  : 'Dieser Sound ist für ${_chosenAdapter()!.shortName} nur vorbereitet und noch nicht übertragen.',
+                            ),
                           ],
                         ),
                       ),
@@ -182,10 +234,11 @@ class _YourSoundPageState extends State<YourSoundPage> {
                       const WyrmSectionHeader('Gerät', subtitle: 'Sound erstellen ist nicht dasselbe wie senden'),
                       WyrmCard(child: _device(context, draft)),
                       const WyrmSectionHeader('Mehr Optionen'),
-                      _fineTune(context),
-                      _sources(context, draft),
-                      _chain(context, draft),
-                      _origin(context, draft),
+                      wyrmStoredTile('fine-tune', _fineTune(context)),
+                      wyrmStoredTile('sources', _sources(context, draft)),
+                      // The signal chain is device-specific: without a chosen device there is none to show.
+                      if (c.hasTargetDevice) wyrmStoredTile('chain', _chain(context, draft)),
+                      wyrmStoredTile('origin', _origin(context, draft)),
                       const SizedBox(height: WyrmTokens.space24),
                     ],
                   ),
@@ -217,30 +270,36 @@ class _YourSoundPageState extends State<YourSoundPage> {
 
   Widget _device(BuildContext context, PresetDraft draft) {
     final c = widget.controller;
-    final session = widget.session;
     final usb = widget.usbController;
-    final isMatribox = draft.device == TargetDeviceId.matriboxOne;
+    final chosen = _chosenAdapter();
+    final isMatribox = chosen?.id == TargetDeviceId.matriboxOne;
+    final canTransfer = isMatribox && widget.presetTransferAvailable;
     final slot = MatriboxTransferSlots.slot(_selectedSlot);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         DropdownButtonFormField<TargetDeviceId>(
-          key: ValueKey('device-${c.selectedTargetDevice.name}'),
+          key: ValueKey('device-${chosen?.id.name ?? 'none'}'),
           isExpanded: true,
-          initialValue: c.selectedTargetDevice,
+          initialValue: chosen?.id,
+          hint: const Text('Gerät wählen'),
           decoration: const InputDecoration(labelText: 'Gerät'),
           items: [
             for (final d in toneDeviceAdapters) DropdownMenuItem(value: d.id, child: Text(d.displayName, maxLines: 2, overflow: TextOverflow.ellipsis)),
           ],
           onChanged: c.offlineBusy
               ? null
-              : (v) async {
-                  if (v == null || v == c.selectedTargetDevice) return;
-                  c.selectTargetDevice(v);
-                  final sel = session.current;
-                  if (sel != null) await session.use(sel, remember: false, selectedNamId: draft.selectedNamId);
+              : (v) {
+                  if (v != null) _chooseDevice(v);
                 },
         ),
+        if (chosen == null) ...[
+          const SizedBox(height: WyrmTokens.space12),
+          const Text(
+            'Wähle das Gerät, für das du den Sound vorbereiten möchtest. Bis dahin siehst du nur den Klang.',
+            key: Key('your-sound-device-neutral'),
+          ),
+        ],
         if (isMatribox) ...[
           const SizedBox(height: WyrmTokens.space16),
           Text('Empfangsgerät', style: Theme.of(context).textTheme.labelLarge),
@@ -253,17 +312,19 @@ class _YourSoundPageState extends State<YourSoundPage> {
                 color: usb?.connectionState == DeviceConnectionState.connected ? WyrmTokens.success : WyrmTokens.muted,
               ),
               const SizedBox(width: WyrmTokens.space8),
-              Expanded(child: Text(usb?.primaryDeviceStatusLabel ?? 'Matribox 1', key: const Key('your-sound-device-status'))),
+              Expanded(child: Text(usb?.primaryDeviceStatusLabel ?? chosen!.shortName, key: const Key('your-sound-device-status'))),
             ],
           ),
+        ],
+        if (canTransfer) ...[
           const SizedBox(height: WyrmTokens.space12),
           Text('Speicherplatz', style: Theme.of(context).textTheme.labelLarge),
           const SizedBox(height: WyrmTokens.space4),
           OutlinedButton(
             key: const Key('your-sound-slot-picker'),
             onPressed: () async {
-              final chosen = await PresetSlotPicker.pick(context, selected: _selectedSlot);
-              if (chosen != null) setState(() => _selectedSlot = chosen);
+              final chosenSlot = await PresetSlotPicker.pick(context, selected: _selectedSlot);
+              if (chosenSlot != null) setState(() => _selectedSlot = chosenSlot);
             },
             child: Row(
               children: [
@@ -280,27 +341,28 @@ class _YourSoundPageState extends State<YourSoundPage> {
             key: const Key('your-sound-slot-note'),
             style: Theme.of(context).textTheme.bodySmall,
           ),
-        ],
-        const SizedBox(height: WyrmTokens.space12),
-        FilledButton.icon(
-          key: const Key('open-tone-transfer'),
-          onPressed: c.offlineBusy ? null : () => _prepareForDevice(context),
-          icon: const Icon(Icons.swap_horiz),
-          label: Text(isMatribox ? 'Auf Matribox übertragen' : 'Für Gerät vorbereiten'),
-        ),
-        const SizedBox(height: WyrmTokens.space4),
-        const Text('Zeigt dir zuerst, was auf der Matribox 1 daraus wird. Dabei wird noch nichts gesendet.', style: TextStyle(fontSize: 12)),
-        if (!isMatribox)
-          const Text('Für dieses Gerät gibt es nur eine Vorschau mit manuellen Einstellungen. Übertragen kannst du auf die Matribox 1.'),
-        const SizedBox(height: WyrmTokens.space8),
-        WyrmSecondaryButton(
-          key: const Key('open-preset-workspace'),
-          label: 'Speichern, vergleichen & planen',
-          icon: Icons.rule_folder_outlined,
-          onPressed: () => Navigator.of(context).push(
-            MaterialPageRoute<void>(builder: (_) => PresetWorkspacePage(controller: c, library: session.tone3000)),
+          const SizedBox(height: WyrmTokens.space12),
+          FilledButton.icon(
+            key: const Key('open-tone-transfer'),
+            onPressed: c.offlineBusy ? null : () => _prepareForDevice(context),
+            icon: const Icon(Icons.swap_horiz),
+            label: Text('Auf ${chosen!.shortName} übertragen'),
           ),
-        ),
+          const SizedBox(height: WyrmTokens.space4),
+          Text(
+            'Zeigt dir zuerst, was auf ${chosen.shortName} daraus wird. Dabei wird noch nichts gesendet.',
+            style: const TextStyle(fontSize: 12),
+          ),
+        ] else if (chosen != null) ...[
+          const SizedBox(height: WyrmTokens.space12),
+          Text(
+            isMatribox
+                ? 'Sound-Pläne lassen sich in dieser Version noch nicht direkt auf die ${chosen.shortName} übertragen. '
+                    'NAM-Modelle überträgst du über Bibliothek → NAM.'
+                : 'Für ${chosen.shortName} gibt es nur eine Vorschau mit manuellen Einstellungen.',
+            key: const Key('your-sound-transfer-note'),
+          ),
+        ],
       ],
     );
   }

@@ -10,6 +10,7 @@ import 'package:wyrmtone/ui/transfer_pulse_animation.dart';
 import 'support/matribox_big_capture_snapshots.dart';
 import 'support/matribox_full_live_helpers.dart';
 import 'support/matribox_tone_transfer_support.dart';
+import 'support/settle_real_io.dart';
 
 /// The transfer page's visual redesign: a Sound → Matribox hero with an animation that only ever
 /// reflects the real product state (never a timer of its own), a friendlier success/failure
@@ -44,6 +45,16 @@ void main() {
     if (tempDir.existsSync()) tempDir.deleteSync(recursive: true);
   });
 
+  // Everything observable in the backup directory: a write still in progress keeps this changing.
+  String dirState() {
+    try {
+      if (!tempDir.existsSync()) return '';
+      return tempDir.listSync(recursive: true).whereType<File>().map((f) => '${f.path}:${f.lengthSync()}').join(',');
+    } on FileSystemException {
+      return 'changing';
+    }
+  }
+
   Future<void> show(WidgetTester tester, {bool reducedMotion = false}) async {
     tester.view.physicalSize = const Size(800, 6000);
     tester.view.devicePixelRatio = 1;
@@ -66,21 +77,31 @@ void main() {
           ),
         ),
       );
-      await Future<void>.delayed(const Duration(milliseconds: 150));
-      await tester.pump();
+      await settleRealIo(tester, state: dirState, reason: 'the initial record load');
     });
   }
 
   // Real File I/O: every tap that leads to it runs inside one runAsync block. The async chain
   // stays "tainted" by that real zone for its whole lifetime (including later dialog taps), so
   // every subsequent tap in the same flow is wrapped the same way.
+  // What each action leaves on screen once it has really finished. Waiting for that outcome -- not
+  // for a fixed number of milliseconds -- keeps these tests independent of machine load.
+  bool Function()? outcomeOf(Key key) {
+    if (key == const Key('tt-send-confirm')) {
+      return () => anyKeyShown(const [Key('tt-live-complete'), Key('tt-run-stopped'), Key('tt-run-nothing'), Key('tt-message')]);
+    }
+    if (key == const Key('tt-manual-save-done') || key == const Key('tt-readback-confirm')) {
+      return () => anyKeyShown(const [Key('tt-readback-certified'), Key('tt-readback-failed'), Key('tt-message')]);
+    }
+    return null;
+  }
+
   Future<void> taps(WidgetTester tester, List<Key> keys) async {
     await tester.runAsync(() async {
       for (final key in keys) {
         await tester.tap(find.byKey(key));
         await tester.pump();
-        await Future<void>.delayed(const Duration(milliseconds: 250));
-        await tester.pump();
+        await settleRealIo(tester, until: outcomeOf(key), state: dirState, reason: 'the effect of tapping $key');
       }
     });
     await tester.pumpAndSettle();
@@ -137,8 +158,7 @@ void main() {
             ),
           ),
         );
-        await Future<void>.delayed(const Duration(milliseconds: 150));
-        await tester.pump();
+        await settleRealIo(tester, state: dirState, reason: 'the initial record load');
       });
       await taps(tester, [send, sendConfirm]);
       expect(tester.widget<TransferPulseAnimation>(find.byType(TransferPulseAnimation)).phase, TransferVisualPhase.failed);
@@ -152,6 +172,11 @@ void main() {
       await taps(tester, [manualSave]);
       expect(tester.widget<TransferPulseAnimation>(find.byType(TransferPulseAnimation)).phase, TransferVisualPhase.failed);
       expect(find.text('Der gespeicherte Sound stimmt noch nicht vollständig mit dem Ziel überein.'), findsOneWidget);
+      expect(find.textContaining('TARGET_MISMATCH'), findsNothing, reason: 'the code is a detail, collapsed by default');
+      final tile = find.byKey(const Key('tt-readback-technical'));
+      await tester.ensureVisible(tile);
+      await tester.tap(tile);
+      await tester.pumpAndSettle();
       expect(find.textContaining('Prüfergebnis: TARGET_MISMATCH'), findsOneWidget);
     });
   });

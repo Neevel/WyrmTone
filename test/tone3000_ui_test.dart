@@ -1,5 +1,6 @@
 import 'package:wyrmtone/controllers/recommendation_controller.dart';
 import 'package:wyrmtone/controllers/tone3000_controller.dart';
+import 'package:wyrmtone/controllers/usb_controller.dart';
 import 'package:wyrmtone/screens/ir_library_page.dart';
 import 'package:wyrmtone/screens/library_page.dart';
 import 'package:wyrmtone/nam/local_nam_capture.dart';
@@ -13,6 +14,7 @@ import 'package:wyrmtone/tone3000/tone3000_oauth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import 'support/fake_usb_service.dart';
 import 'support/recommendation_fakes.dart';
 import 'support/tone3000_fakes.dart';
 
@@ -26,8 +28,10 @@ void main() {
       addTearDown(tester.view.resetDevicePixelRatio);
       final recommendation = _recommendationController();
       final tone = _toneController(clientId: '');
+      final usb = UsbController(FakeUsbService());
       addTearDown(recommendation.dispose);
       addTearDown(tone.dispose);
+      addTearDown(usb.dispose);
       tone.namCaptures = [
         LocalNamCapture(
           localId: 'nam',
@@ -57,7 +61,7 @@ void main() {
       ];
       await tester.pumpWidget(
         MaterialApp(
-          home: LibraryPage(controller: recommendation, tone3000: tone),
+          home: LibraryPage(controller: recommendation, usbController: usb, tone3000: tone),
         ),
       );
       await tester.pumpAndSettle();
@@ -75,11 +79,12 @@ void main() {
         scrollable: scroll,
       );
       await tester.pumpAndSettle();
-      expect(find.textContaining('Lizenz: unbekannt'), findsOneWidget);
-      expect(
-        find.textContaining('Zielgerät nicht unterstützt'),
-        findsOneWidget,
-      );
+      // The list card answers "which NAM, and can I use it" in plain language;
+      // license/architecture/attribution live under "Weitere Angaben" on the detail page.
+      expect(find.text('Marcel · Lokaler Import'), findsOneWidget);
+      expect(find.text('Kompatibel'), findsOneWidget);
+      expect(find.text('100 Byte'), findsOneWidget);
+      expect(find.textContaining('Lizenz'), findsNothing);
       final search = find.widgetWithText(TextField, 'NAM durchsuchen');
       await tester.scrollUntilVisible(search, -150, scrollable: scroll);
       await tester.pumpAndSettle();

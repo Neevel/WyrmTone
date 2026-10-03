@@ -10,8 +10,11 @@ import 'home_page.dart';
 /// separate "Gerät" bottom-navigation tab; the diagnostic tools themselves are not removed, only
 /// moved one step further from the normal flow.
 class DeviceSettingsPage extends StatelessWidget {
-  const DeviceSettingsPage({required this.controller, super.key});
+  const DeviceSettingsPage({required this.controller, this.presetWorkshop, super.key});
   final UsbController controller;
+
+  /// Forwarded to the advanced diagnostics, where the developer preset workshop lives.
+  final WidgetBuilder? presetWorkshop;
 
   @override
   Widget build(BuildContext context) => AnimatedBuilder(
@@ -103,7 +106,7 @@ class DeviceSettingsPage extends StatelessWidget {
               label: 'Erweiterte Diagnose',
               icon: Icons.build_outlined,
               onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute<void>(builder: (_) => HomePage(controller: controller)),
+                MaterialPageRoute<void>(builder: (_) => HomePage(controller: controller, presetWorkshop: presetWorkshop)),
               ),
             ),
             const SizedBox(height: WyrmTokens.space24),

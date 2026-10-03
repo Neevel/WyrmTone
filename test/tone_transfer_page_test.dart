@@ -14,6 +14,7 @@ import 'package:wyrmtone/screens/tone_transfer_page.dart';
 import 'support/matribox_big_capture_snapshots.dart';
 import 'support/matribox_full_live_helpers.dart';
 import 'support/matribox_tone_transfer_support.dart';
+import 'support/settle_real_io.dart';
 
 /// The One-Tap flow: "An Matribox senden" runs the whole prepare pipeline (fresh read, backup,
 /// hash, diff, evidence/preflight) automatically and silently, then asks for exactly ONE
@@ -50,6 +51,16 @@ void main() {
     if (tempDir.existsSync()) tempDir.deleteSync(recursive: true);
   });
 
+  // Everything observable in the backup directory: a write still in progress keeps this changing.
+  String dirState() {
+    try {
+      if (!tempDir.existsSync()) return '';
+      return tempDir.listSync(recursive: true).whereType<File>().map((f) => '${f.path}:${f.lengthSync()}').join(',');
+    } on FileSystemException {
+      return 'changing';
+    }
+  }
+
   Future<void> show(
     WidgetTester tester, {
     MatriboxToneTransferChannel? channel,
@@ -72,19 +83,29 @@ void main() {
           ),
         ),
       );
-      await Future<void>.delayed(const Duration(milliseconds: 150));
-      await tester.pump();
+      await settleRealIo(tester, state: dirState, reason: 'the initial record load');
     });
   }
 
   // Real File I/O: every tap that leads to it runs inside one runAsync block.
+  // What each action leaves on screen once it has really finished. Waiting for that outcome -- not
+  // for a fixed number of milliseconds -- keeps these tests independent of machine load.
+  bool Function()? outcomeOf(Key key) {
+    if (key == const Key('tt-send-confirm')) {
+      return () => anyKeyShown(const [Key('tt-live-complete'), Key('tt-run-stopped'), Key('tt-run-nothing'), Key('tt-message')]);
+    }
+    if (key == const Key('tt-manual-save-done') || key == const Key('tt-readback-confirm')) {
+      return () => anyKeyShown(const [Key('tt-readback-certified'), Key('tt-readback-failed'), Key('tt-message')]);
+    }
+    return null;
+  }
+
   Future<void> taps(WidgetTester tester, List<Key> keys) async {
     await tester.runAsync(() async {
       for (final key in keys) {
         await tester.tap(find.byKey(key));
         await tester.pump();
-        await Future<void>.delayed(const Duration(milliseconds: 250));
-        await tester.pump();
+        await settleRealIo(tester, until: outcomeOf(key), state: dirState, reason: 'the effect of tapping $key');
       }
     });
     await tester.pumpAndSettle();
@@ -95,6 +116,14 @@ void main() {
   const manualSave = Key('tt-manual-save-done');
   const readback = Key('tt-readback');
   const readbackConfirm = Key('tt-readback-confirm');
+
+  Future<void> expandReadbackDetails(WidgetTester tester) async {
+    final tile = find.byKey(const Key('tt-readback-technical'));
+    await tester.ensureVisible(tile);
+    await tester.tap(tile);
+    await tester.pumpAndSettle();
+  }
+
 
   testWidgets('offline preview shows the real recommendation, reads nothing, one primary CTA', (tester) async {
     await show(tester);
@@ -128,8 +157,12 @@ void main() {
     await tester.runAsync(() async {
       await tester.tap(find.text('Abbrechen'));
       await tester.pump();
-      await Future<void>.delayed(const Duration(milliseconds: 250));
-      await tester.pump();
+      await settleRealIo(
+        tester,
+        until: () => find.byKey(send).evaluate().isNotEmpty,
+        state: dirState,
+        reason: 'the cancelled prepare to hand the primary action back',
+      );
     });
     await tester.pumpAndSettle();
     expect(transfer.executions, isEmpty);
@@ -199,6 +232,8 @@ void main() {
     expect(find.byKey(const Key('tt-readback-certified')), findsOneWidget);
     expect(find.text('Preset erfolgreich gespeichert'), findsOneWidget);
     expect(find.textContaining('Das Speichern erfolgte manuell an der Matribox'), findsOneWidget);
+    expect(find.textContaining('MANUAL_SAVE_PERSISTENCE_VERIFIED'), findsNothing, reason: 'internal status code stays collapsed');
+    await expandReadbackDetails(tester);
     expect(find.textContaining('MANUAL_SAVE_PERSISTENCE_VERIFIED'), findsOneWidget);
     expect(transfer.executions, hasLength(1)); // verification never writes
   });
@@ -285,6 +320,8 @@ void main() {
     await taps(tester, [send, sendConfirm]);
     // forgot to save: the read still returns the old saved preset
     await taps(tester, [manualSave]);
+    expect(find.textContaining('TARGET_MISMATCH'), findsNothing, reason: 'raw code only under Technische Details');
+    await expandReadbackDetails(tester);
     expect(find.textContaining('TARGET_MISMATCH'), findsOneWidget);
     expect(find.text('Transfer nicht verifiziert'), findsOneWidget);
     expect(find.text('Erneut lesen'), findsOneWidget);
@@ -311,6 +348,7 @@ void main() {
 
     // the stored state is still the OLD preset: not verified
     await taps(tester, [readback, readbackConfirm]);
+    await expandReadbackDetails(tester);
     expect(find.textContaining('TARGET_MISMATCH'), findsOneWidget);
     expect(find.byKey(const Key('tt-success')), findsNothing);
     expect(transfer.executions, hasLength(1));
@@ -323,7 +361,7 @@ void main() {
     expect(failing.executions, hasLength(1));
     expect(failing.requests, hasLength(3));
     expect(find.text('⚠ Übertragung gestoppt'), findsOneWidget);
-    expect(find.textContaining('Prüfprotokoll: completed: 2 · failed: 1 · notSent: 8'), findsOneWidget);
+    expect(find.textContaining('Übertragen: 2 · Fehlgeschlagen: 1 · Nicht gesendet: 8'), findsOneWidget);
     expect(find.byKey(send), findsNothing);
   });
 
@@ -342,8 +380,12 @@ void main() {
       await tester.tap(find.byKey(send));
       await tester.tap(find.byKey(send));
       await tester.pump();
-      await Future<void>.delayed(const Duration(milliseconds: 250));
-      await tester.pump();
+      await settleRealIo(
+        tester,
+        until: () => find.byKey(sendConfirm).evaluate().isNotEmpty,
+        state: dirState,
+        reason: 'the single prepare to ask for its confirmation',
+      );
     });
     await tester.pumpAndSettle();
     expect(read.reads, 1, reason: 'only one prepare ran despite two taps');
@@ -390,9 +432,15 @@ void main() {
       navigatorKey.currentState!.pop();
       await tester.pump();
       // Let the in-flight prepare() actually finish so its late setState calls run against a
-      // disposed State -- this is exactly the scenario that must not crash or write.
-      await Future<void>.delayed(const Duration(milliseconds: 300));
-      await tester.pump();
+      // disposed State -- this is exactly the scenario that must not crash or write. With the page
+      // gone there is no widget to watch, so the evidence is the read it made and the backup it
+      // wrote: wait until both exist and nothing in the directory changes any more.
+      await settleRealIo(
+        tester,
+        until: () => read.reads >= 1 && dirState().isNotEmpty,
+        state: () => '${read.reads}|${dirState()}',
+        reason: 'the abandoned prepare to finish its read and backup',
+      );
     });
     await tester.pumpAndSettle();
     expect(tester.takeException(), isNull, reason: 'a late setState after the page was popped must be a no-op, not a crash');

@@ -17,7 +17,7 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.byKey(const Key('dashboard-create')), findsOneWidget);
-      expect(find.byType(NavigationDestination), findsNWidgets(4));
+      expect(find.byType(NavigationDestination), findsNWidgets(5));
       await tester.tap(find.text('Profil'));
       await tester.pumpAndSettle();
       await tester.tap(find.byKey(const Key('add-profile-button')));

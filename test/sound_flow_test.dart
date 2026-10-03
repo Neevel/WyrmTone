@@ -328,7 +328,7 @@ void main() {
   group('Navigation, Startseite, Gerät bleibt getrennt', () {
     testWidgets('fünf Ziele, Sound finden führt zur Suche, kein toter Eintrag', (tester) async {
       await pumpShell(tester);
-      expect(find.byType(NavigationDestination), findsNWidgets(4));
+      expect(find.byType(NavigationDestination), findsNWidgets(5));
       expect(find.byKey(const Key('dashboard-create')), findsOneWidget);
       expect(find.text('Sound finden'), findsWidgets);
       await tester.tap(find.byKey(const Key('dashboard-create')));
@@ -358,9 +358,15 @@ void main() {
       await tester.scrollUntilVisible(find.byKey(const Key('dashboard-current-sound')), 300, scrollable: find.byType(Scrollable).first);
       await tester.tap(find.byKey(const Key('dashboard-current-sound')));
       await tester.pumpAndSettle();
-      expect(find.text('Dieser Sound ist auf deinem Gerät nur vorbereitet und noch nicht übertragen.'), findsOneWidget);
+      // No device was chosen and none is connected: neutral wording, never a device the user did not pick.
+      expect(find.text('Dieser Sound ist nur vorbereitet und noch nicht übertragen.'), findsOneWidget);
       await tester.scrollUntilVisible(find.text('Gerät').last, 300, scrollable: find.byType(Scrollable).first);
       expect(find.textContaining('Sound erstellen ist nicht dasselbe wie senden'), findsOneWidget);
+      await tester.scrollUntilVisible(find.byKey(const Key('your-sound-device-neutral')), 300, scrollable: find.byType(Scrollable).first);
+      expect(find.byKey(const Key('your-sound-device-neutral')), findsOneWidget);
+      expect(find.textContaining('DNAfx'), findsNothing);
+      expect(find.byKey(const Key('open-tone-transfer')), findsNothing);
+      expect(find.byKey(const Key('sound-chain')), findsNothing, reason: 'the signal chain is device-specific');
       expect(rig.usbService.openCalls, 0);
       expect(rig.usbService.midiOpenCalls, 0);
     });

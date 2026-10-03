@@ -79,6 +79,9 @@ class DeviceCapabilities {
 abstract interface class ToneDeviceAdapter {
   TargetDeviceId get id;
   String get displayName;
+
+  /// The short name used inside sentences ("... was auf der Matribox 1 daraus wird").
+  String get shortName;
   DeviceCapabilities get capabilities;
   UsbDeviceProfile get usbProfile;
 }
@@ -89,6 +92,8 @@ class DnafxGitCoreAdapter implements ToneDeviceAdapter {
   TargetDeviceId get id => TargetDeviceId.dnafxGitCore;
   @override
   String get displayName => 'Harley Benton DNAfx GiT Core';
+  @override
+  String get shortName => 'DNAfx GiT Core';
   @override
   UsbDeviceProfile get usbProfile => const UsbDeviceProfile(
     vendorId: 0x0483,
@@ -139,6 +144,8 @@ class MatriboxOneAdapter implements ToneDeviceAdapter {
   TargetDeviceId get id => TargetDeviceId.matriboxOne;
   @override
   String get displayName => 'Sonicake Matribox 1 / QME-50';
+  @override
+  String get shortName => 'Matribox 1';
   @override
   UsbDeviceProfile get usbProfile => const UsbDeviceProfile(
     vendorId: 0x84EF,

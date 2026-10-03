@@ -25,7 +25,18 @@ enum ToneDimension {
 
 enum SoundProfileKind { song, artist, genre, fallback }
 
-enum SoundRole { rhythm, lead, clean }
+enum SoundRole {
+  rhythm,
+  lead,
+  clean;
+
+  /// The one German label for a role, shared by the UI and by every generated preset name.
+  String get label => switch (this) {
+    SoundRole.rhythm => 'Rhythmus',
+    SoundRole.lead => 'Lead',
+    SoundRole.clean => 'Clean',
+  };
+}
 
 /// Optional, device-independent block-type hints of a profile (e.g. a fuzz in the
 /// drive position, a flanger). Null = the profile says nothing; the generic

@@ -20,6 +20,7 @@ import 'package:wyrmtone/screens/tone_transfer_page.dart';
 import 'support/matribox_big_capture_snapshots.dart';
 import 'support/matribox_full_live_helpers.dart';
 import 'support/matribox_tone_transfer_support.dart';
+import 'support/settle_real_io.dart';
 
 /// Multi-slot transfer: P01..P10 are protected play presets (zero reads, zero sends), P11..P99 are
 /// product writable, and the chosen slot is bound through read -> backup -> diff -> plan -> native
@@ -449,8 +450,7 @@ void main() {
             ),
           ),
         );
-        await Future<void>.delayed(const Duration(milliseconds: 150));
-        await tester.pump();
+        await settleRealIo(tester, reason: 'the initial record load');
       });
     }
 

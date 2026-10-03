@@ -99,7 +99,7 @@ class DraftPresetAdapter {
     }
     return CanonicalPreset(
       id: 'draft-${draft.profile.id}-${draft.guitar.id}-${draft.role.name}',
-      name: '${draft.profile.song} · ${draft.role.name}',
+      name: '${draft.profile.song} · ${draft.role.label}',
       artist: draft.profile.artist,
       song: draft.profile.song,
       genre: draft.profile.style,

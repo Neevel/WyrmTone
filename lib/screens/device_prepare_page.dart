@@ -183,15 +183,18 @@ class _DevicePreparePageState extends State<DevicePreparePage> {
                         key: const Key('prepare-blocked-note'),
                       ),
                     ),
-                  ExpansionTile(
-                    key: const Key('prepare-details'),
-                    title: const Text('Technische Details'),
-                    childrenPadding: const EdgeInsets.all(WyrmTokens.space12),
-                    expandedCrossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      for (final b in result.blocks)
-                        if (rec.target[b.slot].report != null) Text('${b.slot.label}: ${rec.target[b.slot].report!.why.join(' ')}\n${rec.target[b.slot].report!.notRepresented.join('\n')}'),
-                    ],
+                  wyrmStoredTile(
+                    'prepare-details',
+                    ExpansionTile(
+                      key: const Key('prepare-details'),
+                      title: const Text('Technische Details'),
+                      childrenPadding: const EdgeInsets.all(WyrmTokens.space12),
+                      expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        for (final b in result.blocks)
+                          if (rec.target[b.slot].report != null) Text('${b.slot.label}: ${rec.target[b.slot].report!.why.join(' ')}\n${rec.target[b.slot].report!.notRepresented.join('\n')}'),
+                      ],
+                    ),
                   ),
                   const SizedBox(height: WyrmTokens.space24),
                 ],

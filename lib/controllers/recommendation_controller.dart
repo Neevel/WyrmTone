@@ -39,7 +39,19 @@ class RecommendationController extends ChangeNotifier {
   final IrFilenameParser parser;
   final RecommendationEngine engine;
   final NamRecommendationEngine namEngine;
-  TargetDeviceId selectedTargetDevice = TargetDeviceId.dnafxGitCore;
+  TargetDeviceId? _targetDeviceChoice;
+
+  /// Whether the user (or a connected supported device) has actually chosen a target device.
+  /// Until then the UI shows a neutral state instead of pretending a device was picked.
+  bool get hasTargetDevice => _targetDeviceChoice != null;
+
+  /// The device every engine computes with. When nothing was chosen yet this is only the
+  /// device-independent preview fallback ([previewFallbackDevice]) -- never presented to the user
+  /// as their choice; check [hasTargetDevice] before showing it.
+  TargetDeviceId get selectedTargetDevice => _targetDeviceChoice ?? previewFallbackDevice;
+  set selectedTargetDevice(TargetDeviceId id) => _targetDeviceChoice = id;
+
+  static const previewFallbackDevice = TargetDeviceId.dnafxGitCore;
 
   List<GuitarProfile> profiles = const [];
   List<IrCatalogEntry> referenceCatalog = const [];

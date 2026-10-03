@@ -8,11 +8,20 @@ import '../sounds/sound_selection.dart';
 import '../sounds/sound_session.dart';
 import '../ui/wyrm_design.dart';
 import 'device_settings_page.dart';
+import 'preset_workspace_page.dart';
 import 'guitars_page.dart';
 import 'library_page.dart';
 import 'sounds_page.dart';
 import 'your_sound_page.dart';
 import 'dashboard_page.dart';
+import 'tone_match_page.dart';
+import '../devices/device_profile.dart';
+import '../models/guitar_profile.dart';
+import '../tonematch/tone_knowledge_provider.dart';
+import '../tonematch/tone_match_controller.dart';
+import '../tonematch/tone_analysis_runner.dart';
+import '../tonematch/analysis_interfaces.dart' show ToneMatchCache;
+import '../tonematch/tone_match_models.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({
@@ -20,6 +29,8 @@ class AppShell extends StatefulWidget {
     required this.recommendationController,
     this.tone3000Controller,
     this.soundSession,
+    this.toneMatchRunner,
+    this.toneMatchCache,
     super.key,
   });
 
@@ -30,6 +41,11 @@ class AppShell extends StatefulWidget {
   /// The sound flow state. Created here (without persistence) when a test does not provide one.
   final SoundSession? soundSession;
 
+  /// Acoustic check of NAMs for Tone Match (runner + cache). Without them Tone Match shows only the
+  /// description-based pre-selection.
+  final ToneAnalysisRunner? toneMatchRunner;
+  final ToneMatchCache? toneMatchCache;
+
   @override
   State<AppShell> createState() => _AppShellState();
 }
@@ -38,6 +54,7 @@ class _AppShellState extends State<AppShell> {
   int index = 0;
   late final SoundSession _session;
   late final bool _ownsSession;
+  late final ToneMatchController _toneMatch;
 
   @override
   void initState() {
@@ -51,10 +68,43 @@ class _AppShellState extends State<AppShell> {
           tone3000: widget.tone3000Controller,
         );
     _session.ensureLoaded();
+    final runner = widget.toneMatchRunner, cache = widget.toneMatchCache;
+    _toneMatch = ToneMatchController(
+      coordinator: runner == null || cache == null
+          ? null
+          : ToneAnalysisCoordinator(runner: runner, cache: cache),
+      knowledge: () async {
+        await _session.ensureLoaded();
+        final vault = _session.vault;
+        return vault == null ? null : LocalToneKnowledgeProvider(vault);
+      },
+      captures: () => widget.tone3000Controller?.namCaptures ?? const [],
+      device: _toneMatchDevice,
+      guitar: () {
+        final g = widget.recommendationController.selectedProfile;
+        return g == null ? null : (name: g.name, pickups: g.pickupType.label);
+      },
+    );
+  }
+
+  /// Capabilities of the chosen target device, only if the user (or a connected device) chose one.
+  ToneDeviceCapabilities? _toneMatchDevice() {
+    final c = widget.recommendationController;
+    if (!c.hasTargetDevice) return null;
+    final a = toneDeviceAdapters.firstWhere(
+      (a) => a.id == c.selectedTargetDevice,
+    );
+    return ToneDeviceCapabilities(
+      name: a.shortName,
+      namTransfer: a.capabilities.supportsNam,
+      // A Tone Match plan is not wired into the preset pipeline yet: do not pretend otherwise.
+      presetTransfer: false,
+    );
   }
 
   @override
   void dispose() {
+    _toneMatch.dispose();
     if (_ownsSession) _session.dispose();
     super.dispose();
   }
@@ -64,8 +114,18 @@ class _AppShellState extends State<AppShell> {
     index = value;
   });
 
+  Widget _presetWorkshop(BuildContext _) => PresetWorkspacePage(
+    controller: widget.recommendationController,
+    library: widget.tone3000Controller,
+  );
+
   void _openDeviceSettings(BuildContext context) => Navigator.of(context).push(
-    MaterialPageRoute<void>(builder: (_) => DeviceSettingsPage(controller: widget.usbController)),
+    MaterialPageRoute<void>(
+      builder: (_) => DeviceSettingsPage(
+        controller: widget.usbController,
+        presetWorkshop: _presetWorkshop,
+      ),
+    ),
   );
 
   @override
@@ -76,8 +136,8 @@ class _AppShellState extends State<AppShell> {
         recommendations: widget.recommendationController,
         library: widget.tone3000Controller,
         openDevice: () => _openDeviceSettings(context),
-        openProfile: () => _navigate(3),
-        openLibrary: () => _navigate(2),
+        openProfile: () => _navigate(4),
+        openLibrary: () => _navigate(3),
         createSound: _findSound,
         sounds: _session,
         openSound: (context) => openYourSound(
@@ -85,37 +145,60 @@ class _AppShellState extends State<AppShell> {
           controller: widget.recommendationController,
           session: _session,
           usbController: widget.usbController,
-          openProfile: () => _navigate(3),
+          openProfile: () => _navigate(4),
         ),
       ),
       SoundsPage(
         controller: widget.recommendationController,
         session: _session,
-        openProfile: () => _navigate(3),
+        openProfile: () => _navigate(4),
+      ),
+      ToneMatchPage(
+        controller: _toneMatch,
+        usbController: widget.usbController,
+        openLibrary: () => _navigate(3),
       ),
       LibraryPage(
         controller: widget.recommendationController,
+        usbController: widget.usbController,
         tone3000: widget.tone3000Controller,
       ),
       GuitarsPage(
         controller: widget.recommendationController,
         usbController: widget.usbController,
+        presetWorkshop: _presetWorkshop,
       ),
     ];
     return Scaffold(
       body: Column(
         children: [
-          _GlobalDeviceStatusBar(controller: widget.usbController, onTap: () => _openDeviceSettings(context)),
+          _GlobalDeviceStatusBar(
+            controller: widget.usbController,
+            onTap: () => _openDeviceSettings(context),
+          ),
           Expanded(
             child: MediaQuery.removeViewInsets(
               context: context,
               removeBottom: true,
-              child: IndexedStack(
-                index: index,
-                children: [
-                  for (var i = 0; i < pages.length; i++)
-                    TickerMode(enabled: i == index, child: pages[i]),
-                ],
+              // The NavigationBar below already respects the system navigation inset; the tab
+              // pages must not subtract it a second time (that left a dead band above the bar
+              // and cut cards off mid-way).
+              // Builder: the second MediaQuery must be derived from the context BELOW the first one.
+              // With the outer context it re-introduced the keyboard inset, so every page's own Scaffold
+              // shrank a second time and a page with a text field collapsed to a sliver (Tone Match on a
+              // real phone: no button visible while typing).
+              child: Builder(
+                builder: (context) => MediaQuery.removePadding(
+                  context: context,
+                  removeBottom: true,
+                  child: IndexedStack(
+                    index: index,
+                    children: [
+                      for (var i = 0; i < pages.length; i++)
+                        TickerMode(enabled: i == index, child: pages[i]),
+                    ],
+                  ),
+                ),
               ),
             ),
           ),
@@ -130,6 +213,10 @@ class _AppShellState extends State<AppShell> {
             label: 'Start',
           ),
           NavigationDestination(icon: Icon(Icons.music_note), label: 'Sounds'),
+          NavigationDestination(
+            icon: Icon(Icons.auto_fix_high),
+            label: 'Tone Match',
+          ),
           NavigationDestination(
             icon: Icon(Icons.library_music_outlined),
             label: 'Bibliothek',
@@ -167,7 +254,10 @@ class _GlobalDeviceStatusBar extends StatelessWidget {
           child: SafeArea(
             bottom: false,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: WyrmTokens.space12, vertical: 6),
+              padding: const EdgeInsets.symmetric(
+                horizontal: WyrmTokens.space12,
+                vertical: 6,
+              ),
               child: Row(
                 children: [
                   Icon(Icons.circle, size: 8, color: color),
@@ -179,7 +269,11 @@ class _GlobalDeviceStatusBar extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const Icon(Icons.chevron_right, size: 16, color: WyrmTokens.muted),
+                  const Icon(
+                    Icons.chevron_right,
+                    size: 16,
+                    color: WyrmTokens.muted,
+                  ),
                 ],
               ),
             ),

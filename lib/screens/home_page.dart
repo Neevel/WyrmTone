@@ -10,9 +10,13 @@ import '../midi/midi_capture_controller.dart';
 import '../ui/wyrm_design.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({required this.controller, super.key});
+  const HomePage({required this.controller, this.presetWorkshop, super.key});
 
   final UsbController controller;
+
+  /// Opens the developer preset workshop (offline preset planning, local backup, .wyrmtone.json
+  /// exchange). It transfers nothing to a device, so it lives here and not in the product flow.
+  final WidgetBuilder? presetWorkshop;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +32,32 @@ class HomePage extends StatelessWidget {
               _StatusCard(controller: controller),
               const SizedBox(height: 12),
               _Actions(controller: controller),
+              if (presetWorkshop != null) ...[
+                const SizedBox(height: 12),
+                WyrmCard(
+                  key: const Key('diagnostics-preset-workshop'),
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: presetWorkshop!)),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.rule_folder_outlined),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Preset-Werkstatt', style: Theme.of(context).textTheme.titleMedium),
+                            const Text(
+                              'Entwurf planen, lokal sichern und als .wyrmtone.json austauschen. '
+                              'Überträgt nichts an ein Gerät; nur für Entwicklung und Diagnose.',
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Icon(Icons.chevron_right),
+                    ],
+                  ),
+                ),
+              ],
               if (matriboxP01RawBackupEnabled) ...[
                 const SizedBox(height: 12),
                 MatriboxRawBackupPanel(
@@ -146,8 +176,8 @@ class _StatusCard extends StatelessWidget {
       UsbConnectionState.open => WyrmTokens.success,
       UsbConnectionState.detected => WyrmTokens.muted,
       UsbConnectionState.permissionRequired => WyrmTokens.ember,
-      UsbConnectionState.unknownDevice => Colors.blueGrey,
-      UsbConnectionState.noDevice => Colors.grey,
+      UsbConnectionState.unknownDevice => WyrmTokens.warning,
+      UsbConnectionState.noDevice => WyrmTokens.muted,
     };
     return Card(
       child: ListTile(

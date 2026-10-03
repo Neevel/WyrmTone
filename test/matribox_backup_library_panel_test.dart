@@ -7,6 +7,7 @@ import 'package:wyrmtone/presets/raw_preset_snapshot.dart';
 import 'package:wyrmtone/screens/matribox_backup_library_panel.dart';
 
 import 'support/matribox_p01_readback_fixtures.dart';
+import 'support/settle_real_io.dart';
 
 // Verify/delete interaction (tapping into the per-entry ExpansionTile) is
 // deliberately not covered at the widget level here: the underlying
@@ -50,8 +51,7 @@ void main() {
       ),
     );
     await tester.pump();
-    await Future<void>.delayed(const Duration(milliseconds: 200));
-    await tester.pump();
+    await settleRealIo(tester, reason: 'the backup list to load');
   }
 
   Future<void> run(WidgetTester tester, Future<void> Function() body) async {

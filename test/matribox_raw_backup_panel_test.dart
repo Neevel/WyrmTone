@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:wyrmtone/screens/matribox_raw_backup_panel.dart';
 
 import 'support/matribox_p01_readback_fixtures.dart';
+import 'support/settle_real_io.dart';
 
 void main() {
   const channel = MethodChannel('de.neevel.wyrmtone/usb_methods');
@@ -73,8 +74,11 @@ void main() {
       await tester.pump();
       await tester.tap(find.byKey(const Key('matribox-raw-backup-confirm')));
       await tester.pump();
-      await Future<void>.delayed(const Duration(milliseconds: 200));
-      await tester.pump();
+      await settleRealIo(
+        tester,
+        until: () => anyKeyShown(const [Key('matribox-raw-backup-message')]),
+        reason: 'the backup to report its result',
+      );
     });
     await tester.pumpAndSettle();
   }

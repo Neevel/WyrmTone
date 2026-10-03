@@ -8,11 +8,14 @@ import '../ui/wyrm_components.dart';
 import 'device_settings_page.dart';
 
 class GuitarsPage extends StatelessWidget {
-  const GuitarsPage({required this.controller, this.usbController, super.key});
+  const GuitarsPage({required this.controller, this.usbController, this.presetWorkshop, super.key});
   final RecommendationController controller;
 
   /// Settings → Geräte lives here; null only in tests that do not exercise it.
   final UsbController? usbController;
+
+  /// Forwarded to Geräte → Erweiterte Diagnose, where the developer preset workshop lives.
+  final WidgetBuilder? presetWorkshop;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +35,7 @@ class GuitarsPage extends StatelessWidget {
                 builder: (context, _) => WyrmCard(
                   key: const Key('open-device-settings'),
                   onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute<void>(builder: (_) => DeviceSettingsPage(controller: usbController!)),
+                    MaterialPageRoute<void>(builder: (_) => DeviceSettingsPage(controller: usbController!, presetWorkshop: presetWorkshop)),
                   ),
                   child: Row(
                     children: [
@@ -65,7 +68,6 @@ class GuitarsPage extends StatelessWidget {
               const WyrmSection(
                 title: 'Deine Gitarren',
                 subtitle: 'Pickup-Pegel, Stimmung und Klangcharakter passen den Offline-Entwurf an. Unbestätigte Eigenschaften bleiben Hinweise.',
-                child: SizedBox.shrink(),
               ),
               for (final profile in controller.profiles)
                 Card(
@@ -77,12 +79,14 @@ class GuitarsPage extends StatelessWidget {
                           ? Icons.radio_button_checked
                           : Icons.radio_button_unchecked,
                     ),
-                    title: Text(profile.name),
+                    title: Text(profile.name, maxLines: 2, overflow: TextOverflow.ellipsis),
                     subtitle: Text(
                       '${profile.guitarType.label} · ${profile.pickupType.label} · '
                       '${profile.tuning.label} · ${profile.playbackPath.label}\n'
                       '${profile.stringGauge == null ? '' : 'Saiten: ${profile.stringGauge} · '}Klang: ${profile.toneCharacter.label}\n'
                       '${controller.selectedProfileId == profile.id ? 'Aktuell ausgewählt' : 'Zum Auswählen antippen'}',
+                      maxLines: 6,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     trailing: IconButton(
                       tooltip: 'Bearbeiten',

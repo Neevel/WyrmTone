@@ -77,6 +77,10 @@ void main() {
     expect(a.song, contains('Angels'));
     expect(a.guitarName, 'HB Fusion 4');
     expect(a.tuning, GuitarTuning.dropC.name);
+    // The preset name carries the one shared German role label -- never the raw enum name.
+    expect(a.name, endsWith(' · ${SoundRole.rhythm.label}'));
+    expect(a.name, isNot(contains('rhythm')));
+    expect(a.role, SoundRole.rhythm.name, reason: 'the serialized key stays the enum name');
     final gain = const PresetDiffEngine()
         .compare(a, b)
         .firstWhere((change) => change.path.endsWith('/gain'));

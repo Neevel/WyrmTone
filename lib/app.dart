@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
 
 import 'controllers/usb_controller.dart';
@@ -10,6 +11,10 @@ import 'services/local_persistence.dart';
 import 'services/usb_service.dart';
 import 'sounds/sound_selection.dart';
 import 'sounds/sound_session.dart';
+import 'tonematch/isolate_tone_analysis_runner.dart';
+import 'tonematch/tone_match_cache.dart';
+import 'tonematch/tone_match_runtime_signals.dart';
+import 'tonematch/tone_match_signal_location.dart';
 import 'ui/wyrm_design.dart';
 
 class WyrmToneApp extends StatefulWidget {
@@ -34,6 +39,8 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
   late final UsbController controller;
   late final RecommendationController recommendationController;
   late final SoundSession soundSession;
+  late final IsolateToneAnalysisRunner toneMatchRunner;
+  late final StringStoreToneMatchCache toneMatchCache;
 
   @override
   void initState() {
@@ -52,6 +59,14 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
       repository: SoundSelectionRepository(store),
       tone3000: widget.tone3000Controller,
     )..ensureLoaded();
+    toneMatchRunner = IsolateToneAnalysisRunner(
+      bundled: BundledToneMatchSignalProvider(),
+      // A folder with the research recordings may override the bundled signals while developing; a release build never looks there.
+      developmentOverrideDirectory: kReleaseMode
+          ? null
+          : toneMatchSignalDirectory,
+    );
+    toneMatchCache = StringStoreToneMatchCache(store);
     widget.tone3000Controller?.initialize();
   }
 
@@ -85,6 +100,8 @@ class _WyrmToneAppState extends State<WyrmToneApp> with WidgetsBindingObserver {
         recommendationController: recommendationController,
         tone3000Controller: widget.tone3000Controller,
         soundSession: soundSession,
+        toneMatchRunner: toneMatchRunner,
+        toneMatchCache: toneMatchCache,
       ),
     );
   }

@@ -17,6 +17,10 @@ abstract final class WyrmTokens {
   static const success = Color(0xff80cbb4);
   static const danger = Color(0xffffb4ab);
 
+  /// Distinct from [danger]: "needs attention/conversion, not yet verified"
+  /// must not look identical to an actual failure (Release Hardening V1).
+  static const warning = Color(0xfff2c94c);
+
   // --- spacing / shape / size tokens (use these instead of ad-hoc numbers)
   static const space4 = 4.0;
   static const space8 = 8.0;
@@ -119,6 +123,8 @@ abstract final class WyrmTokens {
       style: IconButton.styleFrom(minimumSize: const Size(48, 48)),
     ),
     navigationBarTheme: const NavigationBarThemeData(
+      // Five tabs: a smaller label keeps "Bibliothek" on one line with a larger system font.
+      labelTextStyle: WidgetStatePropertyAll(TextStyle(fontSize: 11, overflow: TextOverflow.ellipsis)),
       backgroundColor: surface,
       surfaceTintColor: Colors.transparent,
       indicatorColor: raised,
@@ -187,6 +193,7 @@ class WyrmScaffold extends StatelessWidget {
     required this.title,
     required this.body,
     this.actions,
+    this.bottom,
     this.floatingActionButton,
     this.embedded = false,
     this.background = false,
@@ -196,6 +203,11 @@ class WyrmScaffold extends StatelessWidget {
   final String title;
   final Widget body;
   final List<Widget>? actions;
+
+  /// Passed straight through to the app bar (e.g. a [TabBar]) -- lets a
+  /// screen that needs tabs still go through this shared scaffold instead
+  /// of reimplementing its own Scaffold/AppBar/background.
+  final PreferredSizeWidget? bottom;
   final Widget? floatingActionButton;
   final bool embedded;
 
@@ -206,7 +218,14 @@ class WyrmScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     backgroundColor: background ? Colors.transparent : null,
-    appBar: embedded ? null : AppBar(title: Text(title), actions: actions, backgroundColor: background ? Colors.transparent : null),
+    appBar: embedded
+        ? null
+        : AppBar(
+            title: Text(title, overflow: TextOverflow.ellipsis, maxLines: 1),
+            actions: actions,
+            bottom: bottom,
+            backgroundColor: background ? Colors.transparent : null,
+          ),
     body: Stack(
       children: [
         if (background) Positioned.fill(child: WyrmBackground(intensity: backgroundIntensity)),
@@ -254,16 +273,23 @@ class WyrmCard extends StatelessWidget {
   );
 }
 
+/// Gives an [ExpansionTile] its own PageStorage slot. Inside a ListView that carries a
+/// PageStorageKey, a tile without one shares the list's own entry (its scroll offset, a double), and
+/// a tile that is built later -- after the first scroll -- then fails to read it as its bool state.
+Widget wyrmStoredTile(String id, Widget tile) => KeyedSubtree(key: PageStorageKey<String>('tile-$id'), child: tile);
+
 class WyrmSection extends StatelessWidget {
   const WyrmSection({
     required this.title,
     this.subtitle,
-    required this.child,
+    this.child,
     super.key,
   });
   final String title;
   final String? subtitle;
-  final Widget child;
+
+  /// Optional: a pure heading needs no body.
+  final Widget? child;
   @override
   Widget build(BuildContext context) => Padding(
     padding: const EdgeInsets.symmetric(vertical: 10),
@@ -274,7 +300,7 @@ class WyrmSection extends StatelessWidget {
         if (subtitle != null)
           Text(subtitle!, style: const TextStyle(color: WyrmTokens.muted)),
         const SizedBox(height: WyrmTokens.gap),
-        child,
+        ?child,
       ],
     ),
   );
@@ -302,7 +328,7 @@ class WyrmStatusBadge extends StatelessWidget {
         color: positive
             ? WyrmTokens.success
             : warning
-            ? WyrmTokens.danger
+            ? WyrmTokens.warning
             : WyrmTokens.muted,
       ),
     ),
@@ -337,11 +363,7 @@ class WyrmEmptyState extends StatelessWidget {
 }
 
 // Presentation only: no engine, data or wire changes.
-String roleLabel(SoundRole role) => switch (role) {
-  SoundRole.rhythm => 'Rhythmus',
-  SoundRole.lead => 'Lead',
-  SoundRole.clean => 'Clean',
-};
+String roleLabel(SoundRole role) => role.label;
 
 String deviceStatusLabel(UsbController controller) {
   if (controller.midiConnection.isOpen) return 'MIDI-Verbindung geöffnet';
@@ -429,6 +451,16 @@ String compatibilityLabel(NamCompatibility status) => switch (status) {
   NamCompatibility.invalid => 'Ungültig',
   NamCompatibility.missingLocalFile => 'Datei fehlt',
 };
+/// "Autor · Quelle" for a NAM, without ever repeating the same word twice
+/// (TONE3000 downloads can carry "TONE3000" as the creator too).
+String namSourceSummary(LocalNamCapture capture) {
+  final creator = capture.creatorName.trim().isEmpty ? 'Unbekannter Autor' : capture.creatorName.trim();
+  final source = capture.source == 'local' ? 'Lokaler Import' : 'TONE3000';
+  return creator.toLowerCase() == source.toLowerCase() ? creator : '$creator · $source';
+}
+
+String namSizeLabel(int bytes) => bytes < 1024 ? '$bytes Byte' : '${(bytes / 1024).round()} KB';
+
 String toneLabel(ToneDimension dimension) => switch (dimension) {
   ToneDimension.gain => 'Gain',
   ToneDimension.saturation => 'Sättigung',

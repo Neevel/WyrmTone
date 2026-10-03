@@ -21,7 +21,6 @@ import '../ui/transfer_pulse_animation.dart';
 import '../ui/wyrm_design.dart';
 import 'matribox_channel_clients.dart';
 import 'matribox_raw_backup_panel.dart' show defaultMatriboxRawBackupDirectory;
-import 'preset_workspace_page.dart' show loadDevicePresetCatalog;
 
 /// What real, in-flight step is currently running -- a rendering hint only,
 /// never itself a source of truth for the transfer's safety state.
@@ -907,7 +906,7 @@ class _ToneTransferPageState extends State<ToneTransferPage> {
       return Padding(
         padding: const EdgeInsets.only(top: 12),
         child: Text(
-          'Es wurde nichts an die Matribox gesendet: ${run.error ?? run.outcome.name}',
+          'Es wurde nichts an die Matribox gesendet${run.error == null ? '.' : ': ${run.error}'}',
           key: const Key('tt-run-nothing'),
           style: TextStyle(color: theme.colorScheme.error),
         ),
@@ -916,7 +915,7 @@ class _ToneTransferPageState extends State<ToneTransferPage> {
     return Padding(
       padding: const EdgeInsets.only(top: 12),
       child: Text(
-        'Prüfprotokoll: completed: ${run.completed.length} · failed: ${run.failed.length} · notSent: ${run.notSent.length}'
+        'Übertragen: ${run.completed.length} · Fehlgeschlagen: ${run.failed.length} · Nicht gesendet: ${run.notSent.length}'
         '${run.error == null ? '' : '\n${run.error}'}',
         key: Key(run.isSuccess ? 'tt-live-complete' : 'tt-run-stopped'),
       ),
@@ -954,14 +953,32 @@ class _ToneTransferPageState extends State<ToneTransferPage> {
             children: [
               Text(label, style: theme.textTheme.titleSmall),
               if (r.isCertified)
-                Text(
-                  'Das Speichern erfolgte manuell an der Matribox. Status: ${_record?.persistence ?? 'MANUAL_SAVE_PERSISTENCE_VERIFIED'}',
-                  style: theme.textTheme.bodySmall,
-                ),
-              Text('Prüfergebnis: $code', style: theme.textTheme.bodySmall),
+                Text('Das Speichern erfolgte manuell an der Matribox.', style: theme.textTheme.bodySmall),
               if (r.detail != null) Text(r.detail!),
-              for (final c in r.checks)
-                Text('${c.matched ? '✓' : '✗'} ${c.slot.label} ${c.subject}: ${c.expected} (Gerät: ${c.actual})'),
+              ExpansionTile(
+                key: const Key('tt-readback-technical'),
+                tilePadding: EdgeInsets.zero,
+                childrenPadding: EdgeInsets.zero,
+                title: const Text('Technische Details'),
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Prüfergebnis: $code', style: theme.textTheme.bodySmall),
+                        if (r.isCertified)
+                          Text(
+                            'Status: ${_record?.persistence ?? 'MANUAL_SAVE_PERSISTENCE_VERIFIED'}',
+                            style: theme.textTheme.bodySmall,
+                          ),
+                        for (final c in r.checks)
+                          Text('${c.matched ? '✓' : '✗'} ${c.slot.label} ${c.subject}: ${c.expected} (Gerät: ${c.actual})'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

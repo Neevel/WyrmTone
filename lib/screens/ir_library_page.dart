@@ -63,7 +63,6 @@ class _IrLibraryPageState extends State<IrLibraryPage> {
               const WyrmSection(
                 title: 'Impulse Responses',
                 subtitle: 'Cabinet & Mikrofon · WAV · Geräteübertragung noch nicht verfügbar',
-                child: SizedBox.shrink(),
               ),
               TextField(
                 key: const Key('ir-search-field'),
@@ -384,7 +383,7 @@ class _IrCard extends StatelessWidget {
     String value(String? item) => item ?? 'unbekannt';
     final color = switch (entry.status) {
       IrAvailabilityStatus.present => WyrmTokens.success,
-      IrAvailabilityStatus.missing => Colors.grey,
+      IrAvailabilityStatus.missing => WyrmTokens.warning,
       IrAvailabilityStatus.unknown => WyrmTokens.ember,
       IrAvailabilityStatus.duplicate => WyrmTokens.muted,
     };

@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -7,6 +6,7 @@ import 'package:path_provider/path_provider.dart';
 
 import '../controllers/recommendation_controller.dart';
 import '../controllers/tone3000_controller.dart';
+import '../models/tone_target.dart';
 import '../presets/canonical_preset.dart';
 import '../presets/device_catalog.dart';
 import '../presets/draft_preset_adapter.dart';
@@ -18,11 +18,43 @@ import '../presets/preset_validation.dart';
 import '../presets/preset_write_plan.dart';
 import '../ui/wyrm_design.dart';
 
-Future<DevicePresetCatalog>? _catalogFuture;
-Future<DevicePresetCatalog> loadDevicePresetCatalog() =>
-    _catalogFuture ??= rootBundle
-        .loadString('assets/catalog/matribox_preset_catalog.json')
-        .then((text) => DevicePresetCatalog(objectMap(jsonDecode(text))));
+String _blockTypeLabel(PresetBlockType type) => switch (type) {
+  PresetBlockType.gate => 'Noise Gate',
+  PresetBlockType.compressor => 'Kompressor',
+  PresetBlockType.drive => 'Drive',
+  PresetBlockType.amp => 'Verstärker',
+  PresetBlockType.nam => 'NAM',
+  PresetBlockType.cab => 'Boxensimulation',
+  PresetBlockType.eq => 'Equalizer',
+  PresetBlockType.modulation => 'Modulation',
+  PresetBlockType.delay => 'Delay',
+  PresetBlockType.reverb => 'Hall',
+};
+
+/// "dStandard" -> "D Standard", "dropC" -> "Drop C".
+String _humanize(String raw) {
+  final spaced = raw.replaceAllMapped(RegExp(r'(?<=[a-z])(?=[A-Z])'), (_) => ' ');
+  return spaced.isEmpty ? spaced : '${spaced[0].toUpperCase()}${spaced.substring(1)}';
+}
+
+/// `preset.role` is the serialized enum name; the label comes from the one shared source.
+String _roleLabel(String raw) => SoundRole.values.asNameMap()[raw]?.label ?? _humanize(raw);
+
+/// The same hint repeated for twelve parameters reads as noise: one line with a count.
+List<String> _groupedIssues(List<PresetIssue> issues) {
+  final counts = <String, int>{};
+  for (final issue in issues) {
+    final line = '${_severityLabel(issue.severity)}: ${issue.message}';
+    counts[line] = (counts[line] ?? 0) + 1;
+  }
+  return [for (final e in counts.entries) e.value > 1 ? '${e.key} (${e.value}×)' : e.key];
+}
+
+String _severityLabel(IssueSeverity severity) => switch (severity) {
+  IssueSeverity.error => 'Fehler',
+  IssueSeverity.warning => 'Hinweis',
+  IssueSeverity.information => 'Info',
+};
 
 class PresetWorkspacePage extends StatefulWidget {
   const PresetWorkspacePage({
@@ -148,11 +180,19 @@ class _PresetWorkspacePageState extends State<PresetWorkspacePage> {
       builder: (context, _) {
         final preset = _current(), baseline = _baseline();
         if (catalog == null || preset == null) {
+          // "Loading" only while the catalog is really loading; with no active sound there is
+          // nothing to plan, and saying so beats waiting forever.
+          final noSound = catalog != null && imported == null && widget.controller.offlineDraft == null;
           return ListView(
             padding: WyrmTokens.pagePadding,
             children: [
               if (message != null) Text(message!),
-              const Text('Presetdaten werden lokal geladen …'),
+              Text(
+                noSound
+                    ? 'Gerade ist kein Sound aktiv. Wähle zuerst einen Sound und tippe auf „Sound verwenden“.'
+                    : 'Presetdaten werden lokal geladen …',
+                key: Key(noSound ? 'preset-workshop-no-sound' : 'preset-workshop-loading'),
+              ),
             ],
           );
         }
@@ -211,7 +251,7 @@ class _PresetWorkspacePageState extends State<PresetWorkspacePage> {
             WyrmSection(
               title: preset.name,
               subtitle:
-                  '${preset.artist} · ${preset.song}\n${preset.guitarName} · ${preset.tuning} · ${preset.role}',
+                  '${preset.artist} · ${preset.song}\n${preset.guitarName} · ${_humanize(preset.tuning)} · ${_roleLabel(preset.role)}',
               child: WyrmCard(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -219,25 +259,56 @@ class _PresetWorkspacePageState extends State<PresetWorkspacePage> {
                     for (final block in preset.blocks)
                       ExpansionTile(
                         title: Text(
-                          '${block.order + 1}. ${block.type.name} · ${block.model ?? 'manuell'}',
+                          '${block.order + 1}. ${_blockTypeLabel(block.type)} · ${block.model ?? 'manuell einstellen'}',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                         ),
-                        subtitle: Text(
-                          '${block.enabled ? 'an' : 'aus'} · ${block.evidence.name} · ${validation.blocks[block.id]?.name}',
-                        ),
+                        subtitle: Text(block.enabled ? 'an' : 'aus'),
                         children: [
                           for (final p in block.parameters)
                             ListTile(
                               title: Text(
                                 '${p.name}: ${p.value}${p.unit ?? ''}',
                               ),
-                              subtitle: Text(
-                                'Index ${p.deviceIndex ?? 'unbekannt'} · ${p.evidence.name} · nur manuell',
-                              ),
                             ),
+                          // Evidence level, device index and readiness are internal bookkeeping,
+                          // not something a guitarist needs while planning a preset.
+                          ExpansionTile(
+                            key: Key('preset-block-technical-${block.id}'),
+                            title: const Text('Technische Details'),
+                            children: [
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Nachweisstufe: ${block.evidence.name} · Bereitschaft: ${validation.blocks[block.id]?.name}'),
+                                    for (final p in block.parameters)
+                                      Text('${p.name}: Index ${p.deviceIndex ?? 'unbekannt'} · ${p.evidence.name} · nur manuell'),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
-                    for (final issue in validation.issues)
-                      Text('${issue.severity.name}: ${issue.message}'),
+                    if (validation.issues.isNotEmpty)
+                      ExpansionTile(
+                        key: const Key('preset-issues'),
+                        tilePadding: EdgeInsets.zero,
+                        title: Text('Prüfhinweise (${validation.issues.length})'),
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                for (final line in _groupedIssues(validation.issues)) Text(line),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                   ],
                 ),
               ),
@@ -247,31 +318,35 @@ class _PresetWorkspacePageState extends State<PresetWorkspacePage> {
               child: WyrmCard(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: diff
-                      .map(
-                        (d) => Text(
-                          '${d.path}: ${d.before ?? '—'} → ${d.after ?? '—'}',
-                        ),
-                      )
-                      .toList(),
+                  children: diff.where((d) => d.before != d.after).isEmpty
+                      ? const [Text('Keine Änderungen gegenüber dem Vorschlag.')]
+                      : diff
+                            .where((d) => d.before != d.after)
+                            .map(
+                              (d) => Text(
+                                '${d.path}: ${d.before ?? '—'} → ${d.after ?? '—'}',
+                              ),
+                            )
+                            .toList(),
                 ),
               ),
             ),
             WyrmSection(
               title: 'Lokaler Austausch & Sicherung',
-              child: Wrap(
-                spacing: 8,
-                runSpacing: 8,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   FilledButton(
                     onPressed: busy ? null : () => _run(_save),
                     child: const Text('Entwurf sichern'),
                   ),
+                  const SizedBox(height: 8),
                   OutlinedButton(
                     key: const Key('preset-export'),
                     onPressed: busy ? null : () => _run(_export),
                     child: const Text('.wyrmtone.json exportieren'),
                   ),
+                  const SizedBox(height: 8),
                   OutlinedButton(
                     key: const Key('preset-import'),
                     onPressed: busy ? null : () => _run(_import),
@@ -324,7 +399,21 @@ class _PresetWorkspacePageState extends State<PresetWorkspacePage> {
                           ? null
                           : (v) => setState(() => slotConfirmed = v == true),
                     ),
-                    ...plan.blockers.take(6).map(Text.new),
+                    if (plan.blockers.isNotEmpty)
+                      ExpansionTile(
+                        key: const Key('preset-blockers'),
+                        tilePadding: EdgeInsets.zero,
+                        title: const Text('Technische Details'),
+                        children: [
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [for (final blocker in plan.blockers.take(6)) Text(blocker)],
+                            ),
+                          ),
+                        ],
+                      ),
                     const SizedBox(height: 8),
                     FilledButton(
                       key: const Key('preset-transfer-disabled'),

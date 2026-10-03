@@ -15,6 +15,7 @@ import 'package:wyrmtone/tone3000/tone3000_config.dart';
 import 'package:wyrmtone/ui/preset_slot_picker.dart';
 
 import 'support/fake_usb_service.dart';
+import 'support/settle_real_io.dart';
 import 'support/matribox_tone_transfer_support.dart';
 
 void main() {
@@ -173,7 +174,7 @@ void main() {
             ),
           ),
         );
-        await Future<void>.delayed(const Duration(milliseconds: 150));
+        await settleRealIo(tester, until: () => anyKeyShown(const [Key('tt-phase-live')]), reason: 'the saved live-write record to load');
       });
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('tt-phase-stale')), findsNothing, reason: 'still connected');
@@ -181,7 +182,7 @@ void main() {
       await tester.runAsync(() async {
         service.devices = [];
         await service.emit({'type': 'detached'});
-        await Future<void>.delayed(const Duration(milliseconds: 100));
+        await settleRealIo(tester, until: () => anyKeyShown(const [Key('tt-phase-stale')]), reason: 'the detach to mark the session stale');
       });
       await tester.pumpAndSettle();
       expect(find.byKey(const Key('tt-phase-stale')), findsOneWidget);
