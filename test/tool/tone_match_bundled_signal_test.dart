@@ -32,7 +32,11 @@ void main() {
   final have =
       File(_dll).existsSync() &&
       nams.isNotEmpty &&
-      nams.every((n) => File(n['path']! as String).existsSync());
+      nams.every((n) => File(n['path']! as String).existsSync()) &&
+      // the git-ignored original recordings serve as the external development override in this test
+      EvaluationRole.values.every(
+        (r) => File(EvaluationSignalRegistry.forRole(r)!.file).existsSync(),
+      );
 
   test(
     'bundled runtime signal == external validated path: key, analysis, similarity input and ranking',
@@ -139,7 +143,7 @@ void main() {
         );
       }
     },
-    skip: have ? false : 'native DLL or local NAM files not available',
+    skip: have ? false : 'native DLL, local NAM files or local evaluation recordings not available',
     timeout: const Timeout(Duration(minutes: 15)),
   );
 }

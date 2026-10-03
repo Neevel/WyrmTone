@@ -96,6 +96,19 @@ class GuitarsPage extends StatelessWidget {
                   ),
                 ),
             ],
+            const SizedBox(height: WyrmTokens.gap),
+            WyrmCard(
+              key: const Key('open-source-licenses'),
+              onTap: () => showLicensePage(context: context, applicationName: 'WyrmTone'),
+              child: Row(
+                children: [
+                  const Icon(Icons.description_outlined, color: WyrmTokens.muted),
+                  const SizedBox(width: WyrmTokens.space12),
+                  Expanded(child: Text('Open-Source-Lizenzen', style: Theme.of(context).textTheme.titleMedium)),
+                  const Icon(Icons.chevron_right),
+                ],
+              ),
+            ),
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(

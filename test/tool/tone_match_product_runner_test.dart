@@ -45,6 +45,10 @@ void main() {
       : <Map<String, Object?>>[];
   final have = File(_dll).existsSync() && nams.isNotEmpty && nams.every((n) => File(n['path']! as String).existsSync());
   final skip = have ? false : 'native DLL or local NAM files not available';
+  // The original evaluation recordings are local, git-ignored research files: tests that need them run only with the
+  // explicit gate (like test/tool/tone_match_runtime_source_identity_test.dart) or, for the runner test, when they exist.
+  final haveEvaluation = EvaluationRole.values.every((r) => File(EvaluationSignalRegistry.forRole(r)!.file).existsSync());
+  final identityGate = Platform.environment['WYRMTONE_RUN_SOURCE_IDENTITY'] == '1';
 
   test('product T15 derivation is byte-identical to the validated gate derivation', () async {
     const loader = FileEvaluationSignalLoader(_read);
@@ -55,7 +59,7 @@ void main() {
       expect(product.length, gate.length, reason: role.name);
       expect(product.buffer.asUint8List(product.offsetInBytes, product.lengthInBytes), gate.buffer.asUint8List(gate.offsetInBytes, gate.lengthInBytes), reason: role.name);
     }
-  });
+  }, skip: identityGate ? (haveEvaluation ? false : 'local evaluation recordings missing') : 'set WYRMTONE_RUN_SOURCE_IDENTITY=1 (needs the local evaluation WAVs)');
 
   test('worker isolate: cold run equals the benchmarked analysis, second run is served from the cache without any engine, cancel leaves a usable state', () async {
     final dir = Directory.systemTemp.createTempSync('tonematch_signals');
@@ -118,7 +122,7 @@ void main() {
     final again = await ToneAnalysisCoordinator(runner: runner, cache: freshCache).analyze(EvaluationRole.lead, candidates(['06']));
     expect(again.cancelled, isFalse);
     expect(again.analyses.keys, ['06']);
-  }, skip: skip, timeout: const Timeout(Duration(minutes: 10)));
+  }, skip: skip != false ? skip : (haveEvaluation ? false : 'local evaluation recordings missing'), timeout: const Timeout(Duration(minutes: 10)));
 }
 
 Future<Uint8List> _read(String p) => File(p).readAsBytes();
