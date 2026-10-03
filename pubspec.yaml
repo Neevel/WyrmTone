@@ -71,6 +71,7 @@ flutter:
     - assets/tonevault/
     - assets/tonevault/packs/
     - assets/images/wyrmtone_amp_wall.webp
+    - assets/tonematch/runtime/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
