@@ -35,6 +35,11 @@ migrate_working_dir/
 
 # IR audio stays external and must never be committed or packaged.
 *.[wW][aA][vV]
+# ...except the three shipped Tone Match runtime signals (own recordings, exact file names only;
+# evaluation/research/dataset WAVs stay ignored).
+!assets/tonematch/runtime/wyrmtone-rhythm-v1-t15.wav
+!assets/tonematch/runtime/wyrmtone-lead-v1-t15.wav
+!assets/tonematch/runtime/wyrmtone-clean-v1-full.wav
 
 # External models, raw device captures, packages and private credentials.
 *.[nN][aA][mM]
@@ -61,3 +66,19 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+# Only the pinned NeuralAmpModelerCore git submodule lives in third_party/; any other local content stays ignored.
+third_party/*
+!third_party/NeuralAmpModelerCore
+
+# Native NAM bridge (V4a): CMake build output and generated test artifacts.
+# The C++ source itself (native/nam_bridge/{include,src,tools,CMakeLists.txt})
+# is not excluded.
+native/*/build/
+native/*/out/
+
+# Tone Match research: device review screenshots (private content) and large raw/cache outputs stay local.
+tool/tonematch_android_bench/results/review/
+tool/tonematch_android_bench/results/ui_screen_*.png
+tool/tonematch_*/results/raw.json
+tool/tonematch_*/results/*_raw.json
+tool/tonematch_reference_match/results/*_features_cache.json
